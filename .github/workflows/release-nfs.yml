@@ -274,6 +274,6 @@ jobs:
           cp engine-candidate/*/autobyteus-nfs-ganesha-source-*.tar.gz artifacts/
           cp engine-candidate/*/engine-build-*.txt artifacts/
           cp engine-candidate/engine-manifest.json artifacts/autobyteus-nfs-engine-manifest.json
-          (cd artifacts && sha256sum *.tar.gz > SHA256SUMS-nfs)
+          (cd artifacts && sha256sum -- *.tar.gz > SHA256SUMS-nfs)
           gh release view "$TAG" >/dev/null
           gh release upload "$TAG" artifacts/* --clobber
