@@ -56,11 +56,12 @@ amd64 artifact or reuse old source qualification. No engine rebuild is needed
 when unchanged verified artifacts suffice. Distribution gates are in
 [packaging/RELEASE.md](packaging/RELEASE.md).
 
-When updating a producer contract, compare the consumer snapshot with
-`git show <recorded-producer-commit>:testdata/attachment.json`, then run actual Go
-producer and app-owned TS parser/launcher checks. Keep both commits/hashes in the
-paired evidence. Each repository's ordinary tests run offline on its own fixture.
-Consumer checks and their tooling live in the app repository, not this one.
+Host-only fixtures cover incompatible active/pending records, refusal before
+resource/binary effects, exact current writes, engine-only Docker operations,
+source/pending/permission/mount/busy-detach preservation and removed CLI rejection.
+Consumer checks live independently in their app repository: ordinary paths,
+registered resolution/errors, process lifecycles and private execution profiles.
+No public attachment fixture, consumer commit pin or paired equality check exists.
 
 Fix demonstrated in-scope failures; disclose failed attempts and environmental
 limits. New behavior/design needs return to its owner. Do not silently weaken
