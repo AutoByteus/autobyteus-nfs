@@ -6,12 +6,14 @@ import (
 
 	"github.com/AutoByteus/autobyteus-nfs/internal/backend"
 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
-	"github.com/AutoByteus/autobyteus-nfs/internal/docker"
 	"github.com/AutoByteus/autobyteus-nfs/internal/platform"
 	"github.com/AutoByteus/autobyteus-nfs/internal/service"
 )
 
-func (s *Service) Reconnect(retryConsumed bool) error {
+func (s *Service) Reconnect() error {
+	if err := config.CheckStandaloneState(s.Store); err != nil {
+		return err
+	}
 	var pending Plan
 	if err := s.Store.Read("pending-setup.json", &pending); err == nil {
 		return errors.New("setup incomplete; run reconnect interactively to review/resume")
@@ -51,23 +53,13 @@ func (s *Service) Reconnect(retryConsumed bool) error {
 			}
 		}
 	}
-	var published config.Connection
-	if e := s.Public.Read("attachment.json", &published); os.IsNotExist(e) {
-		if e = s.Public.Write("attachment.json", a.Connection); e != nil {
-			return e
-		}
-	} else if e != nil {
-		return e
-	} else if published != a.Connection {
-		return errors.New("public descriptor was changed externally; refusing silent overwrite")
-	}
 	if err = platform.EnsureMount(s.Runner, a.Connection); err != nil {
 		return err
 	}
 	if err = service.NonrootProbe(s.Binary, a.MountRoot, a.StorageID, a.UserUID, a.UserGID, false, s.Lock); err != nil {
 		return err
 	}
-	return s.reconnectNodes(a, retryConsumed)
+	return nil
 }
 func (s *Service) Detach(consented bool) error {
 	if !consented {
@@ -94,11 +86,8 @@ func (s *Service) Detach(consented bool) error {
 			return err
 		}
 	}
-	if (len(a.Nodes) > 0 || (h != nil && h.Backend == "ganesha-docker")) && s.Docker == nil {
-		return errors.New("selected Docker daemon unavailable; cannot safely detach nodes")
-	}
-	if err = s.detachNodes(a); err != nil {
-		return err
+	if h != nil && h.Backend == "ganesha-docker" && s.Docker == nil {
+		return errors.New("storage Docker daemon unavailable; cannot safely detach")
 	}
 	// No force/unmount-as-cleanup. Busy means source/service/config remain available.
 	if err = platform.Unmount(s.Runner, a.Connection); err != nil {
@@ -145,19 +134,11 @@ func (s *Service) Detach(consented bool) error {
 			}
 		}
 	}
-	if err = s.Public.Remove("attachment.json"); err != nil {
-		return err
-	}
 	for _, name := range []string{"attachment.json", "hosted-filesystem.json", "apple-resource.json", "docker-endpoint.json", "pending-setup.json"} {
 		if err = s.Store.Remove(name); err != nil {
 			return err
 		}
 	}
-	for _, node := range a.Nodes {
-		if err = docker.RemoveStartAttempt(s.Store, node); err != nil {
-			return err
-		}
-	}
-	// Source, marker, named volumes, recovery state and private recreation receipts are preserved.
+	// Source, marker and private recovery state are preserved.
 	return nil
 }

@@ -1,7 +1,8 @@
 # Source extraction provenance
 
 Date: 2026-10-16. Task: project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8,
-`extract-autobyteus-nfs`. Approved R1/SR001, design SR002, ARCH-REV-001.
+`extract-autobyteus-nfs`. Initial relocation: R1/SR001, SR002, ARCH-REV-001 (historical).
+Current runtime boundary: Approved R2/SR003, SR004, ARCH-REV-002.
 
 Original repository: https://github.com/AutoByteus/autobyteus-workspace
 Exact source commit: **3712cd9bf0db998501d162db7f8655f169e3def6**.
@@ -14,18 +15,24 @@ rewrite. Copyright/license/CLA and third-party attribution are retained.
 | autobyteus-nfs/{cmd,internal,go.mod,testdata,packaging,README.md,LICENSE,THIRD_PARTY_NOTICES,.gitignore} | Root same names; Go module/import prefix github.com/AutoByteus/autobyteus-nfs |
 | scripts/public/nfs/install.sh | Same path; future download repository changed to AutoByteus/autobyteus-nfs; unqualified placeholder unchanged |
 | scripts/tests/test_nfs_engine_packaging.py, test_nfs_installer_fixture.py, test_nfs_release_workflow.py | Same names; root-local packaging paths |
-| scripts/tests/test_nfs_packaging_and_launcher.py | Service cases in scripts/tests/test_nfs_packaging.py; launcher cases remain app-owned as test_nfs_launcher.py |
+| scripts/tests/test_nfs_packaging_and_launcher.py | Service cases in scripts/tests/test_nfs_packaging.py; generic launcher cases remain app-owned; retired NFS adapter cases removed |
 | .github/workflows/release-nfs.yml | Same path; NFS-owned manual-only version/candidate workflow, paths rebased, gates retained |
 | CLA.md | Verbatim |
 | LICENSING.md, NOTICE, CONTRIBUTING.md | Repository/component references adapted; copyright/contact/contribution terms and section7 additional permission retained |
 
-Runtime files differ only by Go import namespace. The Go-to-Python bootstrap test
-uses the new root. Packaging source identity is now local NFS plus declared
-integration contract, not a digest of arbitrary application code. New policies,
-CI and integration-contract documentation establish independent maintenance.
-No installed path, serialized schema, runtime algorithm or engine recipe/pin is
-changed. Exact engine source/patch/COPYRIGHT obligations remain in packaging/engine
-and THIRD_PARTY_NOTICES. No license change or Apache predecessor claim.
+Initial extraction commits 353dd2c17a59dead97c900a327f78a2bb21f46ce and
+0c9fd27a77d65504b8eef41ece8972badb31778c mechanically relocated Go imports and
+build paths. The final R2 implementation is **not** a byte-identical runtime move:
+app-node CLI/control/probes/public descriptors are removed, host-only lifecycle
+retained, and incompatible active/pending node obligations refuse without migration.
+The service Connection fixture is named testdata/connection.json, not an app API.
+Packaging source identity covers local NFS inputs and filesystem-usage.md only.
+
+In the source app, NFS admission/terminal/Git/launcher coupling and paired fixtures
+are removed. Registered workspace errors remain; private configured-skill profiles
+are used independent of filesystem for Claude/Codex/Grok. No automatic Git trust
+or generated workspace-link fallback replaces the removed selectors.
+Engine source/patch/COPYRIGHT obligations and license/CLA remain unchanged.
 
 Generated/ignored outputs, old binaries/debs/engine candidates, PM task-plans,
 application source and historical ticket trees were not imported. A retained
@@ -34,9 +41,6 @@ packaging checks, never promoted to current runtime/publication qualification.
 The qualification lock remains empty; no tag, release, image push or deployment
 is authorized. Historical filesystem/editor Tasks remain closed.
 
-The app owns its installed-CLI/descriptor consumers and an exact local fixture
-with real producer commit/path/SHA provenance. Paired equality is checked at
-integration, without requiring a sibling checkout for ordinary app tests.
-Delivery records both actual finalized commits; this file intentionally contains
-no fabricated or self-referential destination commit. Finalization order and
-partial-completion policy are in RELEASE.md.
+Both repositories are independently maintained. Delivery records both exact
+finalized revisions, not a consumer protocol pin. Finalization order and truthful
+partial-completion policy are in RELEASE.md. Historical tickets are not rewritten.

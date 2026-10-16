@@ -17,7 +17,7 @@ LOCK = ROOT / 'packaging/release-lock.json'
 SOURCES = ['internal', 'cmd/autobyteus-nfs/main.go', 'go.mod',
            'scripts/public/nfs', 'packaging/Dockerfile', 'packaging/engine',
            'packaging/release.py', '.github/workflows/release-nfs.yml',
-           'testdata/attachment.json', 'docs/integration-contract.md',
+           'testdata/connection.json', 'docs/filesystem-usage.md',
            'LICENSE', 'THIRD_PARTY_NOTICES']
 
 

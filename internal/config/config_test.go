@@ -100,7 +100,7 @@ func TestSourceMarkerConfined(t *testing.T) {
 }
 
 func TestSharedDescriptorFixture(t *testing.T) {
-	b, err := os.ReadFile("../../testdata/attachment.json")
+	b, err := os.ReadFile("../../testdata/connection.json")
 	if err != nil {
 		t.Fatal(err)
 	}

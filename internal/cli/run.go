@@ -51,16 +51,13 @@ func Run(args []string, release setup.Release) error {
 		fmt.Fprintln(os.Stdout, release.Version)
 		return nil
 	}
-	if o.Action == "launcher-attachment" {
-		return launcherAttachment(o.Nodes)
-	}
 	if err = CheckHost(); err != nil {
 		return err
 	}
 	terminal := OpenTerminal()
 	defer terminal.Close()
 	if os.Geteuid() != 0 {
-		if !o.Yes && !terminal.Confirm("Install/use the root-owned AutoByteus NFS control binary and request OS administrator approval? Storage/node changes get a separate plan") {
+		if !o.Yes && !terminal.Confirm("Install/use the root-owned AutoByteus NFS control binary and request OS administrator approval? Storage changes get a separate plan") {
 			return errors.New("administrator setup declined")
 		}
 		return Elevate(args)
@@ -71,21 +68,21 @@ func Run(args []string, release setup.Release) error {
 	if err = platform.RootDirectory(config.PrivateDirectory(), 0700); err != nil {
 		return err
 	}
-	if err = platform.RootDirectory(config.PublicDirectory, 0755); err != nil {
-		return err
-	}
-	s := setup.Service{Store: config.Store{Directory: config.PrivateDirectory(), Owner: 0}, Public: config.Store{Directory: config.PublicDirectory, Owner: 0, Public: true}, Binary: config.BinaryPath(), Release: release}
+	s := setup.Service{Store: config.Store{Directory: config.PrivateDirectory(), Owner: 0}, Binary: config.BinaryPath(), Release: release}
 	if o.Action == "service" {
 		ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 		defer stop()
 		return service.Supervise(ctx, s.Store.Directory, os.Stderr, func(lock *os.File) error {
+			if err := config.CheckStandaloneState(s.Store); err != nil {
+				return err
+			}
 			s.Runner = platform.Commands{Lock: lock}
 			s.Lock = lock
 			openSavedDocker(&s)
 			if s.Docker != nil {
 				defer s.Docker.Close()
 			}
-			return s.Reconnect(false)
+			return s.Reconnect()
 		})
 	}
 	lock, err := platform.Lock(s.Store.Directory)
@@ -93,6 +90,9 @@ func Run(args []string, release setup.Release) error {
 		return err
 	}
 	defer lock.Close()
+	if err = config.CheckStandaloneState(s.Store); err != nil {
+		return err
+	}
 	s.Runner = platform.Commands{Lock: lock}
 	s.Lock = lock
 	var pending setup.Plan
@@ -122,12 +122,6 @@ func Run(args []string, release setup.Release) error {
 		case "reconnect":
 			if pendingErr == nil {
 				fmt.Fprintln(os.Stderr, "Resuming the same source/UUID. Any recovery restores configuration only, NOT storage bytes.")
-				if len(pending.Attachment.Nodes) > 0 && !o.Drained && !terminal.Confirm("Drain the selected nodes again and approve recovery/recreation?") {
-					return errors.New("renewed drain required")
-				}
-				if err = s.RecoverPendingNodes(true); err != nil {
-					return err
-				}
 				p, e := s.PendingPlan()
 				if e != nil {
 					return e
@@ -143,10 +137,10 @@ func Run(args []string, release setup.Release) error {
 				return e
 			}
 			fmt.Fprintln(os.Stderr, "Checking saved source and reconnecting; hard NFS may wait for storage.")
-			if !o.Yes && !terminal.Confirm("Reconnect saved storage and complete eligible selected-node failed starts, including one retry of consumed attempts? Current restart=no remains a veto") {
+			if !o.Yes && !terminal.Confirm("Reconnect saved host storage?") {
 				return errors.New("reconnect declined; no changes")
 			}
-			if err = s.Reconnect(true); err != nil {
+			if err = s.Reconnect(); err != nil {
 				return err
 			}
 			if err = platform.InstallJob(s.Runner); err != nil {
@@ -155,7 +149,7 @@ func Run(args []string, release setup.Release) error {
 		case "detach":
 			consent := o.Yes && o.Drained
 			if !consent {
-				consent = terminal.Confirm("Drain all users of this export/attachment and selected nodes, permit their interruption and safe detach? Source, marker, private data and volumes remain")
+				consent = terminal.Confirm("Drain all users of this export/attachment and permit their interruption and safe detach? Source, marker and private data remain")
 			}
 			if err = s.Detach(consent); err != nil {
 				return err
@@ -166,10 +160,10 @@ func Run(args []string, release setup.Release) error {
 			if s.Store.Read("apple-detach-receipt.json", &receipt) == nil {
 				fmt.Fprintln(os.Stderr, receipt.Retained)
 			}
-			fmt.Fprintln(os.Stderr, "Detached; source, marker, named volumes and private receipts preserved.")
+			fmt.Fprintln(os.Stderr, "Detached; source, marker, private receipts preserved.")
 			return nil
 		}
-		fmt.Fprintln(os.Stderr, "Checking actual host and selected-node readiness; this may wait for storage.")
+		fmt.Fprintln(os.Stderr, "Checking actual host readiness; this may wait for storage.")
 		result, err := s.Status()
 		printJSON(result)
 		return err

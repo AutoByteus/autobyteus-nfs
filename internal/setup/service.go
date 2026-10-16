@@ -17,14 +17,12 @@ type Request struct {
 	Source       string
 	Backend      string
 	Allowlist    []string
-	Nodes        []string
 	DockerSocket string
 }
 type Plan struct {
 	Attachment   config.Attachment
 	Hosted       *config.HostedFilesystem
 	Apple        *backend.ApplePlan
-	Nodes        []docker.Snapshot `json:"-"`
 	DockerSocket string
 	NewSource    bool
 	Summary      []string
@@ -40,7 +38,6 @@ type Release struct {
 type Service struct {
 	Lock    *os.File
 	Store   config.Store
-	Public  config.Store
 	Runner  platform.Runner
 	Binary  string
 	Release Release

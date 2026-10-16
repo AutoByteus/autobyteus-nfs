@@ -37,8 +37,8 @@ class SourceIdentityTest(unittest.TestCase):
         self.assertEqual(set(release.SOURCES), {
             'internal', 'cmd/autobyteus-nfs/main.go', 'go.mod', 'scripts/public/nfs',
             'packaging/Dockerfile', 'packaging/engine', 'packaging/release.py',
-            '.github/workflows/release-nfs.yml', 'testdata/attachment.json',
-            'docs/integration-contract.md', 'LICENSE', 'THIRD_PARTY_NOTICES'})
+            '.github/workflows/release-nfs.yml', 'testdata/connection.json',
+            'docs/filesystem-usage.md', 'LICENSE', 'THIRD_PARTY_NOTICES'})
         lock = json.loads(release.LOCK.read_text())
         self.assertEqual([lock[k] for k in ['qualifiedTargets', 'qualifiedSourceHash',
                          'physicalEvidence', 'userVerified', 'engine']], [[], '', [], False, None])

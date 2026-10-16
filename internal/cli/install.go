@@ -39,15 +39,37 @@ func InstallRoot(args []string) error {
 		return err
 	}
 	target := config.BinaryPath()
-	parent := filepath.Dir(target)
 	if err := platform.RootDirectory(config.PrivateDirectory(), 0700); err != nil {
 		return err
 	}
-	store := config.Store{Directory: config.PrivateDirectory(), Owner: 0}
+	if err := installRootBinary(config.Store{Directory: config.PrivateDirectory(), Owner: 0}, target); err != nil {
+		return err
+	}
+	env := []string{"PATH=/usr/sbin:/usr/bin:/sbin:/bin", "HOME=/var/empty", "LANG=C", "LC_ALL=C"}
+	for _, key := range []string{"SUDO_UID", "SUDO_GID", "SUDO_USER"} {
+		if value := os.Getenv(key); value != "" {
+			env = append(env, key+"="+value)
+		}
+	}
+	// Dispatch reacquires and rechecks under its own administrative lock.
+	return syscall.Exec(target, append([]string{target}, args...), env)
+}
+
+// installRootBinary serializes admission and replacement together. Paths come
+// only from InstallRoot; tests use owned temporary state without root effects.
+func installRootBinary(store config.Store, target string) error {
 	if err := store.Check(); err != nil {
 		return err
 	}
-	if err := platform.RootDirectory(parent, 0755); err != nil {
+	lock, err := platform.Lock(store.Directory)
+	if err != nil {
+		return err
+	}
+	defer lock.Close()
+	if err = config.CheckStandaloneState(store); err != nil {
+		return err
+	}
+	if err := platform.RootDirectory(filepath.Dir(target), 0755); err != nil {
 		return err
 	}
 	source, err := os.Executable()
@@ -88,14 +110,9 @@ func InstallRoot(args []string) error {
 	if err = platform.TrustedPath(target, false); err != nil {
 		return err
 	}
-	env := []string{"PATH=/usr/sbin:/usr/bin:/sbin:/bin", "HOME=/var/empty", "LANG=C", "LC_ALL=C"}
-	for _, key := range []string{"SUDO_UID", "SUDO_GID", "SUDO_USER"} {
-		if value := os.Getenv(key); value != "" {
-			env = append(env, key+"="+value)
-		}
-	}
-	return syscall.Exec(target, append([]string{target}, args...), env)
+	return nil
 }
+
 func CheckHost() error {
 	if runtime.GOOS != "darwin" && runtime.GOOS != "linux" {
 		return errors.New("supported computers are macOS and Ubuntu Linux")

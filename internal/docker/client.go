@@ -1,4 +1,4 @@
-// Package docker manages exact selected local-daemon resources without invoking the general launcher.
+// Package docker manages the owned NFS storage engine through a local daemon.
 package docker
 
 import (
@@ -17,8 +17,6 @@ import (
 )
 
 const apiPrefix = "/v1.47"
-const launcherLabel = "com.autobyteus.launcher"
-const nodeLabel = "com.autobyteus.nodeName"
 const storageLabel = "com.autobyteus.nfs.storageId"
 
 type Client struct {
@@ -92,38 +90,11 @@ func (c *Client) Inspect(id string) (Snapshot, error) {
 	err := c.Call("GET", "/containers/"+url.PathEscape(id)+"/json", nil, &s)
 	return s, err
 }
-func (c *Client) Discover() ([]Snapshot, error) {
-	filters := url.QueryEscape(`{"label":["` + launcherLabel + `=server-docker"]}`)
-	var entries []struct {
-		ID string `json:"Id"`
-	}
-	if err := c.Call("GET", "/containers/json?all=1&filters="+filters, nil, &entries); err != nil {
-		return nil, err
-	}
-	result := []Snapshot{}
-	names := map[string]bool{}
-	for _, e := range entries {
-		s, err := c.Inspect(e.ID)
-		if err != nil {
-			return nil, err
-		}
-		name := s.Node()
-		if names[name] {
-			return nil, errors.New("ambiguous managed node labels; nothing will be stopped")
-		}
-		names[name] = true
-		result = append(result, s)
-	}
-	return result, nil
-}
 func (c *Client) Start(id string) error {
 	return c.Call("POST", "/containers/"+url.PathEscape(id)+"/start", nil, nil)
 }
 func (c *Client) Stop(id string) error {
 	return c.Call("POST", "/containers/"+url.PathEscape(id)+"/stop?t=30", nil, nil)
-}
-func (c *Client) Rename(id, name string) error {
-	return c.Call("POST", "/containers/"+url.PathEscape(id)+"/rename?name="+url.QueryEscape(name), nil, nil)
 }
 func (c *Client) Remove(id string) error {
 	return c.Call("DELETE", "/containers/"+url.PathEscape(id)+"?v=false&force=false", nil, nil)

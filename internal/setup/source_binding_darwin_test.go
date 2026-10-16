@@ -280,7 +280,7 @@ func TestCompletedBindingValidationAndReconnectNoEffects(t *testing.T) {
 			s.Store.Write("hosted-filesystem.json", p.Hosted)
 			before := readRecord(t, s, "hosted-filesystem.json")
 			r.queries = 0
-			if err := s.Reconnect(false); err == nil {
+			if err := s.Reconnect(); err == nil {
 				t.Fatal("invalid source reconnected")
 			}
 			if kind == "old" || kind == "zero" {

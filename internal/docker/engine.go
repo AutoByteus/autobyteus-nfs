@@ -46,7 +46,7 @@ func (c *Client) EnsureEngine(h config.HostedFilesystem, root string, create boo
 	if !create {
 		return errors.New("owned storage engine is missing; explicit setup repair required")
 	}
-	// Setup may pull the exact release digest after consent. Node recreation never pulls.
+	// Setup may pull only the exact release digest after consent.
 	if err = c.Call("POST", "/images/create?fromImage="+url.QueryEscape(h.EngineImage), nil, nil); err != nil {
 		return fmt.Errorf("cannot fetch immutable storage engine: %w", err)
 	}

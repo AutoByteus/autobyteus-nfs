@@ -12,11 +12,13 @@ import (
 
 	"github.com/AutoByteus/autobyteus-nfs/internal/backend"
 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
-	"github.com/AutoByteus/autobyteus-nfs/internal/docker"
 	"github.com/AutoByteus/autobyteus-nfs/internal/platform"
 )
 
 func (s *Service) Plan(req Request) (Plan, error) {
+	if err := config.CheckStandaloneState(s.Store); err != nil {
+		return Plan{}, err
+	}
 	var p Plan
 	if s.User.UID == 0 || s.User.GID == 0 || !config.AbsolutePath(s.User.Home) {
 		return p, errors.New("an identified nonroot initiating user is required")
@@ -46,9 +48,6 @@ func (s *Service) Plan(req Request) (Plan, error) {
 		return p, err
 	}
 	c.MountRoot = canonicalRoot
-	if len(req.Nodes) > 0 && strings.Contains(c.MountRoot, ",") {
-		return p, errors.New("selected Docker launcher mount root cannot contain a comma")
-	}
 	if req.Source != "" {
 		if err = platform.ValidateSourcePath(req.Source, c.MountRoot, s.User.Home); err != nil {
 			return p, err
@@ -135,49 +134,12 @@ func (s *Service) Plan(req Request) (Plan, error) {
 	if err = platform.PreflightTarget(s.Runner, c); err != nil {
 		return p, err
 	}
-	p.Attachment = config.Attachment{Connection: c, InstallationID: installation, UserUID: s.User.UID, UserGID: s.User.GID, Nodes: req.Nodes}
+	p.Attachment = config.Attachment{Connection: c, InstallationID: installation, UserUID: s.User.UID, UserGID: s.User.GID}
 	if err = p.Attachment.Validate(); err != nil {
 		return p, err
 	}
 	p.DockerSocket = req.DockerSocket
-	if len(req.Nodes) > 0 {
-		if s.Docker == nil {
-			return p, errors.New("selected nodes require a local Docker daemon")
-		}
-		available, err := s.Docker.Discover()
-		if err != nil {
-			return p, err
-		}
-		for _, name := range req.Nodes {
-			found := false
-			for _, node := range available {
-				if node.Node() != name {
-					continue
-				}
-				found = true
-				if err = node.Validate(c.MountRoot); err != nil {
-					return p, err
-				}
-				if err = s.Docker.QualifyImage(node); err != nil {
-					return p, err
-				}
-				// Do not overwrite an incomplete exact-resource receipt from a prior attempt.
-				receipt, e := docker.ReadReceipt(s.Store, name)
-				if e == nil && !receipt.Complete {
-					return p, errors.New("incomplete selected-node receipt requires explicit recovery/drain before new setup")
-				}
-				if e != nil && !os.IsNotExist(e) {
-					return p, e
-				}
-				p.Nodes = append(p.Nodes, node)
-				p.Summary = append(p.Summary, fmt.Sprintf("Drain/recreate ONLY node %s (%s), immutable image %s; preserve private mounts, ports, aliases and running state (container ID/dynamic IP may change; status reports actual mappings)", name, node.ID, node.Image))
-			}
-			if !found {
-				return p, fmt.Errorf("selected managed node %s is unavailable", name)
-			}
-		}
-	}
-	p.Summary = append(p.Summary, "Attach "+c.Endpoint+":"+c.Export+" at "+c.MountRoot, "Install fixed root-owned launchd/systemd service; publish nonsecret binding descriptor", "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed", "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline")
+	p.Summary = append(p.Summary, "Attach "+c.Endpoint+":"+c.Export+" at "+c.MountRoot, "Install fixed root-owned launchd/systemd service", "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed", "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline")
 	if runtime.GOOS == "linux" {
 		p.Summary = append(p.Summary, "Install exact Ubuntu NFS package versions from this release, if needed")
 	}

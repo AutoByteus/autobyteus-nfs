@@ -15,7 +15,6 @@ import (
 type Store struct {
 	Directory string
 	Owner     uint32
-	Public    bool
 }
 
 func (s Store) Check() error {
@@ -27,7 +26,7 @@ func (s Store) Check() error {
 	if !ok || !info.IsDir() || stat.Uid != s.Owner || info.Mode().Perm()&0022 != 0 {
 		return fmt.Errorf("unsafe configuration directory: %s", s.Directory)
 	}
-	if !s.Public && info.Mode().Perm()&0077 != 0 {
+	if info.Mode().Perm()&0077 != 0 {
 		return errors.New("private state directory must be mode 0700")
 	}
 	return nil
@@ -57,7 +56,7 @@ func (s Store) Read(name string, target any) error {
 		return err
 	}
 	stat := info.Sys().(*syscall.Stat_t)
-	if !info.Mode().IsRegular() || stat.Uid != s.Owner || info.Mode().Perm()&0022 != 0 || (!s.Public && info.Mode().Perm()&0077 != 0) {
+	if !info.Mode().IsRegular() || stat.Uid != s.Owner || info.Mode().Perm()&0022 != 0 || (info.Mode().Perm()&0077 != 0) {
 		return errors.New("unsafe record ownership or permissions")
 	}
 	b, err := io.ReadAll(io.LimitReader(f, MaxRecordBytes+1))
@@ -79,9 +78,6 @@ func (s Store) Write(name string, value any) error {
 		return errors.New("oversized record")
 	}
 	mode := os.FileMode(0600)
-	if s.Public {
-		mode = 0644
-	}
 	return AtomicFile(p, append(b, '\n'), mode)
 }
 func (s Store) Remove(name string) error {

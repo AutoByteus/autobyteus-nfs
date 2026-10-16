@@ -17,8 +17,8 @@ import (
 )
 
 type Options struct {
-	Action, Source, Endpoint, Allow, Nodes, Root, Backend, Connection, Socket string
-	Yes, Drained, JSON                                                        bool
+	Action, Source, Endpoint, Allow, Root, Backend, Connection, Socket string
+	Yes, Drained, JSON                                                 bool
 }
 
 func Parse(args []string) (Options, error) {
@@ -31,13 +31,12 @@ func Parse(args []string) (Options, error) {
 	f.StringVar(&o.Source, "source", "", "chosen source folder (existing files stay in place)")
 	f.StringVar(&o.Endpoint, "endpoint", "", "private IPv4 reachable by all clients")
 	f.StringVar(&o.Allow, "allow", "", "comma-separated trusted private hosts/subnets")
-	f.StringVar(&o.Nodes, "nodes", "", "comma-separated exact local managed nodes, or none")
 	f.StringVar(&o.Root, "mount-root", "", "actual client root")
 	f.StringVar(&o.Backend, "backend", "", "apple, ganesha-native, ganesha-docker")
 	f.StringVar(&o.Connection, "connection", "", "nonsecret printed connection JSON")
 	f.StringVar(&o.Socket, "docker-socket", "", "selected local Unix daemon socket")
 	f.BoolVar(&o.Yes, "yes", false, "explicit setup administration consent")
-	f.BoolVar(&o.Drained, "drained", false, "selected nodes/work are drained and interruption approved")
+	f.BoolVar(&o.Drained, "drained", false, "export/mount users are drained and interruption approved")
 	f.BoolVar(&o.JSON, "json", false, "structured result")
 	if err := f.Parse(args); err != nil {
 		return o, err
@@ -46,7 +45,7 @@ func Parse(args []string) (Options, error) {
 		return o, errors.New("unexpected arguments")
 	}
 	switch o.Action {
-	case "", "create", "connect", "status", "reconnect", "detach", "version", "service", "launcher-attachment":
+	case "", "create", "connect", "status", "reconnect", "detach", "version", "service":
 	default:
 		return o, errors.New("unknown action")
 	}

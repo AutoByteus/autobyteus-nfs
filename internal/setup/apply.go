@@ -4,21 +4,22 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"path/filepath"
 	"runtime"
 
 	"github.com/AutoByteus/autobyteus-nfs/internal/backend"
 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
-	"github.com/AutoByteus/autobyteus-nfs/internal/docker"
 	"github.com/AutoByteus/autobyteus-nfs/internal/platform"
 	"github.com/AutoByteus/autobyteus-nfs/internal/service"
 )
 
 // Apply accepts only the exact plan displayed by this process; caller holds the administrative lock.
-// It never claims atomicity across the filesystem, NFS daemon and containers.
+// It never claims atomicity across the filesystem, NFS daemon and storage engine.
 func (s *Service) Apply(p Plan, consented bool) error {
 	if !consented {
 		return errors.New("setup declined; no resources changed")
+	}
+	if err := config.CheckStandaloneState(s.Store); err != nil {
+		return err
 	}
 	if err := p.Attachment.Validate(); err != nil {
 		return err
@@ -39,15 +40,6 @@ func (s *Service) Apply(p Plan, consented bool) error {
 	}
 	if err := platform.PreflightTarget(s.Runner, p.Attachment.Connection); err != nil {
 		return err
-	}
-	for _, node := range p.Nodes {
-		now, err := s.Docker.Inspect(node.ID)
-		if err != nil {
-			return err
-		}
-		if now.Fingerprint() != node.Fingerprint() {
-			return errors.New("selected node changed after consent; re-plan")
-		}
 	}
 	if err := s.SaveIntent(p); err != nil {
 		return err
@@ -93,9 +85,6 @@ func (s *Service) Apply(p Plan, consented bool) error {
 		}{p.DockerSocket}); err != nil {
 			return err
 		}
-		if err := s.Public.Write("attachment.json", p.Attachment.Connection); err != nil {
-			return err
-		}
 		if p.Apple != nil {
 			if err := s.Store.Write("apple-resource.json", p.Apple); err != nil {
 				return err
@@ -127,9 +116,6 @@ func (s *Service) Apply(p Plan, consented bool) error {
 		}{p.DockerSocket}); err != nil {
 			return err
 		}
-		if err := s.Public.Write("attachment.json", p.Attachment.Connection); err != nil {
-			return err
-		}
 	}
 	if err := platform.EnsureMount(s.Runner, p.Attachment.Connection); err != nil {
 		return err
@@ -137,46 +123,17 @@ func (s *Service) Apply(p Plan, consented bool) error {
 	if err := service.NonrootProbe(s.Binary, p.Attachment.MountRoot, p.Attachment.StorageID, p.Attachment.UserUID, p.Attachment.UserGID, false, s.Lock); err != nil {
 		return err
 	}
-	for _, node := range p.Nodes {
-		a := docker.NodeAttachment(p.Attachment.Connection, node.Node())
-		var info struct{ ID string }
-		if err := s.Docker.Call("GET", "/info", nil, &info); err != nil {
-			return err
-		}
-		if info.ID == "" {
-			return errors.New("Docker daemon identity is missing")
-		}
-		a.DaemonID = info.ID
-		if err := s.Docker.EnsureVolume(p.Attachment.Connection, a); err != nil {
-			return err
-		}
-		if err := s.Docker.Probe(node, a, s.Store); err != nil {
-			return err
-		}
-		if !alreadyAttached(node, a) {
-			if err := s.Docker.Recreate(node, a, false, docker.ReceiptFile(s.Store, node.Node()), func(id string) error { return s.Docker.VerifyStarted(id, a.MountRoot, true) }); err != nil {
-				return err
-			}
-		}
-		if err := s.publishNode(a); err != nil {
-			return err
-		}
-	}
 	if err := platform.InstallJob(s.Runner); err != nil {
 		return err
 	}
 	return s.Store.Remove("pending-setup.json")
 }
-func (s *Service) publishNode(a config.NodeAttachment) error {
-	directory := filepath.Join(s.Public.Directory, "nodes")
-	if err := platform.RootDirectory(directory, 0755); err != nil {
-		return err
-	}
-	return (config.Store{Directory: directory, Owner: s.Public.Owner, Public: true}).Write(a.Node+".json", a)
-}
 
 // CheckConfiguration does not enumerate application workspaces or active runs.
 func (s *Service) CheckConfiguration() (config.Attachment, *config.HostedFilesystem, error) {
+	if err := config.CheckStandaloneState(s.Store); err != nil {
+		return config.Attachment{}, nil, err
+	}
 	var a config.Attachment
 	if err := s.Store.Read("attachment.json", &a); err != nil {
 		return a, nil, err

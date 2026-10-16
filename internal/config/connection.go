@@ -15,11 +15,9 @@ import (
 )
 
 const DefaultMountRoot = "/Volumes/autobyteus-shared"
-const PublicDirectory = "/etc/autobyteus-nfs"
 const MaxRecordBytes = 16384
 
 var uuid = regexp.MustCompile(`^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$`)
-var nodeName = regexp.MustCompile(`^[a-z0-9][a-z0-9_-]{0,62}$`)
 
 // Connection is deliberately not an access token. AUTH_SYS trusts allowed hosts.
 type Connection struct {
@@ -43,8 +41,7 @@ func NewID() (string, error) {
 	b[8] = b[8]&63 | 128
 	return fmt.Sprintf("%x-%x-%x-%x-%x", b[:4], b[4:6], b[6:8], b[8:10], b[10:]), nil
 }
-func ValidID(id string) bool     { return uuid.MatchString(id) }
-func ValidNode(name string) bool { return nodeName.MatchString(name) }
+func ValidID(id string) bool { return uuid.MatchString(id) }
 
 func AbsolutePath(p string) bool {
 	return filepath.IsAbs(p) && filepath.Clean(p) == p && p != "/" &&

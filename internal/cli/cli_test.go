@@ -11,7 +11,7 @@ import (
 )
 
 func TestExplicitNoTTYInputsAndNoShellEvaluation(t *testing.T) {
-	o, err := Parse([]string{"create", "--source", "/srv/projects", "--endpoint", "192.168.1.5", "--allow", "192.168.1.0/24", "--backend", "ganesha-native", "--nodes", "none", "--yes"})
+	o, err := Parse([]string{"create", "--source", "/srv/projects", "--endpoint", "192.168.1.5", "--allow", "192.168.1.0/24", "--backend", "ganesha-native", "--yes"})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,5 +49,13 @@ func TestReleaseManifestMustMatchAndQualifyActualArchitecture(t *testing.T) {
 	metadata.Version = "v2.0.0"
 	if err := VerifyRelease(p, metadata); err == nil {
 		t.Fatal("manifest/binary mismatch accepted")
+	}
+}
+
+func TestRemovedNodeInterfaceRefuses(t *testing.T) {
+	for _, args := range [][]string{{"create", "--nodes", "none"}, {"launcher-attachment"}, {"reconnect", "--nodes", "node-one"}} {
+		if _, err := Parse(args); err == nil {
+			t.Fatal("accepted removed interface", args)
+		}
 	}
 }

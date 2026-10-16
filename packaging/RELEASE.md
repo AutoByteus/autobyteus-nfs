@@ -17,10 +17,10 @@ requires current production-source hash, committed independent physical evidence
 and explicit user verification before publishing. Delivery owns replacing these
 fields from actual evidence and syncing related docs/Guide. To calculate the source
 hash: `python3 packaging/release.py --source-hash` from the root.
-The local digest covers NFS-owned inputs and the declared integration contract,
-not arbitrary app source. Future physical/managed-node receipts must name the
-NFS sourceHash/commit, exact engine identities and tested AutoByteus consumer
-commit/image identities. The app separately owns its release/Guide decision.
+The local digest covers NFS-owned inputs and the declared filesystem usage boundary,
+not application source. Future service qualification names exact service source,
+engine identities and independently tested host platforms; it is not application
+acceptance or an authorization to publish.
 Evidence paths alone do not establish those receipts' semantic sufficiency.
 The extraction retains empty qualifiedTargets/qualifiedSourceHash/physicalEvidence,
 userVerified=false and engine=null; old qualification cannot be imported.

@@ -69,13 +69,11 @@ func TestInstallerDirectoryModeChild(t *testing.T) {
 			trusted := fixtureDirectoryTrust(root)
 			private := filepath.Join(root, layout.private)
 			binary := filepath.Join(root, layout.binary)
-			public := filepath.Join(root, "etc/autobyteus-nfs")
-			nodes := filepath.Join(public, "nodes")
 			for _, d := range []struct {
 				path string
 				mode os.FileMode
 			}{
-				{private, 0700}, {filepath.Dir(binary), 0755}, {public, 0755}, {nodes, 0755},
+				{private, 0700}, {filepath.Dir(binary), 0755},
 			} {
 				if err := rootDirectory(d.path, d.mode, trusted); err != nil {
 					t.Fatal(err)
@@ -83,36 +81,30 @@ func TestInstallerDirectoryModeChild(t *testing.T) {
 				assertMode(t, d.path, d.mode)
 			}
 			// Every newly created intermediate parent matters, not just the leaves.
-			for _, leaf := range []string{filepath.Dir(private), filepath.Dir(binary), nodes} {
+			for _, leaf := range []string{filepath.Dir(private), filepath.Dir(binary)} {
 				for p := leaf; p != root; p = filepath.Dir(p) {
 					assertMode(t, p, 0755)
 				}
 			}
 			owner := uint32(os.Geteuid())
-			for _, dir := range []string{public, nodes} {
-				if err := (config.Store{Directory: dir, Owner: owner, Public: true}).Write("attachment.json", map[string]string{"storageId": "fixture"}); err != nil {
-					t.Fatal(err)
-				}
-				assertMode(t, filepath.Join(dir, "attachment.json"), 0644)
-			}
 			if err := (config.Store{Directory: private, Owner: owner}).Write("receipt.json", map[string]bool{"private": true}); err != nil {
 				t.Fatal(err)
 			}
 			assertMode(t, filepath.Join(private, "receipt.json"), 0600)
 			// Actual nonroot fixture exec/read plus mode assertions above. This does
 			// not claim an actual root install followed by a different-UID probe.
-			if err := config.AtomicFile(binary, []byte("#!/bin/sh\nexec /bin/cat \"$1\" \"$2\"\n"), 0755); err != nil {
+			if err := config.AtomicFile(binary, []byte("#!/bin/sh\nexec /bin/cat \"$1\"\n"), 0755); err != nil {
 				t.Fatal(err)
 			}
-			out, err := exec.Command(binary, filepath.Join(public, "attachment.json"), filepath.Join(nodes, "attachment.json")).CombinedOutput()
-			if err != nil || strings.Count(string(out), "fixture") != 2 {
+			out, err := exec.Command(binary, filepath.Join(private, "receipt.json")).CombinedOutput()
+			if err != nil || !strings.Contains(string(out), "private") {
 				t.Fatalf("nonroot fixture traversal/read: %v %s", err, out)
 			}
 			current := syscall.Umask(077)
 			if current != 077 {
 				t.Fatalf("directory creation altered the process umask: %03o", current)
 			}
-			t.Log("private=0700 public/exec/parents=0755 descriptor=0644")
+			t.Log("private=0700 exec/parents=0755 receipt=0600")
 		})
 	}
 }

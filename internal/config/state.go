@@ -3,7 +3,6 @@ package config
 import (
 	"errors"
 	"runtime"
-	"strings"
 )
 
 type Identity struct {
@@ -25,20 +24,9 @@ type HostedFilesystem struct {
 }
 type Attachment struct {
 	Connection
-	InstallationID string   `json:"installationId"`
-	UserUID        uint32   `json:"userUid"`
-	UserGID        uint32   `json:"userGid"`
-	Nodes          []string `json:"nodes"`
-}
-
-// NodeAttachment is nonsecret and published only for an explicitly opted-in node.
-type NodeAttachment struct {
-	DaemonID            string `json:"daemonId"`
-	StorageID           string `json:"storageId"`
-	Node                string `json:"node"`
-	MountRoot           string `json:"mountRoot"`
-	Volume              string `json:"volume"`
-	DescriptorDirectory string `json:"descriptorDirectory"`
+	InstallationID string `json:"installationId"`
+	UserUID        uint32 `json:"userUid"`
+	UserGID        uint32 `json:"userGid"`
 }
 
 // Validate checks metadata, including plans whose new source is not yet bound.
@@ -56,19 +44,6 @@ func (a Attachment) Validate() error {
 	if !ValidID(a.InstallationID) || a.UserUID == 0 || a.UserGID == 0 {
 		return errors.New("attachment requires installation identity and nonroot user")
 	}
-	if len(a.Nodes) > 32 {
-		return errors.New("select at most 32 managed nodes")
-	}
-	seen := map[string]bool{}
-	for _, node := range a.Nodes {
-		if seen[node] {
-			return errors.New("duplicate selected node")
-		}
-		seen[node] = true
-		if !ValidNode(node) {
-			return errors.New("invalid selected node")
-		}
-	}
 	return a.Connection.Validate()
 }
 func PrivateDirectory() string {
@@ -82,11 +57,4 @@ func BinaryPath() string {
 		return "/Library/AutoByteusNFS/libexec/autobyteus-nfs"
 	}
 	return "/usr/libexec/autobyteus-nfs/autobyteus-nfs"
-}
-
-func (a NodeAttachment) Validate() error {
-	if a.DaemonID == "" || strings.ContainsAny(a.DaemonID, "\r\n") || !ValidNode(a.Node) || !ValidID(a.StorageID) || !AbsolutePath(a.MountRoot) || strings.Contains(a.MountRoot, ",") || a.Volume != "autobyteus-nfs-"+a.StorageID || a.DescriptorDirectory != PublicDirectory {
-		return errors.New("invalid selected-node attachment")
-	}
-	return nil
 }

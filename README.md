@@ -13,10 +13,10 @@ claim that this product has passed the physical/runtime matrix.
 ## Validation boundary
 
 This is the independently maintained source repository. Extraction checks prove
-standalone development/packaging paths and preserved contracts, not new runtime
-or platform qualification. See [EXTRACTION.md](EXTRACTION.md) for exact original
+standalone development/packaging and the host-only boundary, not physical
+platform qualification. See [EXTRACTION.md](EXTRACTION.md) for exact original
 source and attribution, [TESTING.md](TESTING.md) for local checks and
-[the integration contract](docs/integration-contract.md) for app consumption.
+[filesystem usage](docs/filesystem-usage.md) for ordinary directory consumption.
 
 Historical command-only filesystem evidence used two generic containers sharing
 one Ubuntu VM's real NFS mount/kernel/cache, with native-Linux and Docker-Linux
@@ -35,10 +35,10 @@ this repository extraction. Public qualification remains separate under
 | Native Ubuntu 24.04 | corrected Ganesha 4.3/VFS | local ext4 | NFSv4.1/TCP |
 | Docker on a Linux computer | same Ganesha/VFS image, host networking | explicitly selected ext4 bind | NFSv4.1/TCP |
 
-Native Mac/Linux clients and **managed Docker agent clients on both Mac and
-Linux** are included. Docker Desktop on Mac is not a storage-server option; use
+Native Mac/Linux host clients are included. Consumers use ordinary directories;
+container bind mappings are configured separately by their operator. Docker Desktop on Mac is not a storage-server option; use
 native Mac hosting instead. Windows, public/multi-tenant service, offline sync,
-HA, automatic remote notifications and arbitrary custom Docker nodes are not
+HA, automatic remote notifications and application-node management are not
 included. Release metadata advertises only independently qualified CPU/OS targets;
 compilation for a target is not qualification.
 
@@ -59,8 +59,8 @@ bootstrap does not change the invoking shell's PATH; it installs the user CLI at
 The command offers **Create** or **Connect**. Create asks for the ordinary source
 folder, deployment and selected private hosts/subnet. Existing files remain in
 place. Connect consumes bounded JSON printed by the storage computer, not shell
-commands or an access token. Both flows select local launcher-managed Docker
-nodes and display their exact interruption/preservation plan before applying it.
+commands or an access token. Both flows display the host storage/mount plan
+before applying it. They never discover or recreate application containers.
 Necessary administrator and drain approvals are part of that invocation.
 
 The default project root is `/Volumes/autobyteus-shared` on both operating systems.
@@ -71,8 +71,8 @@ own connection flow. Closing AutoByteus does not stop this service.
 
 Installed commands: `create`, `connect`, `status`, `reconnect`, `detach`, `version`.
 No arguments selects first-use setup or configured status/actions. Noninteractive
-setup requires explicit inputs, administration consent (`--yes`) and, when nodes
-are selected, explicit `--drained`. Connection input is never evaluated as shell.
+setup requires explicit inputs and administration consent (`--yes`). Detach
+requires drained export/mount users (`--drained` with `--yes`). Connection input is never evaluated as shell.
 
 ## Data, trust and limitations
 
@@ -114,25 +114,21 @@ The separately traversable root-owned executable is at
 execute it without opening private configuration. Fixed launchd/systemd jobs do
 not read user-writable shell state or depend on the desktop application.
 
-`/etc/autobyteus-nfs/attachment.json` is a nonsecret descriptor, directory-bound
-read-only into selected nodes. Per-node opt-in references under `nodes/` are
-published only after apply and consumed by the Docker launcher's desired config
-and recreation arguments. Unselected local-only Docker sharing stays unchanged.
+Private `attachment.json` describes only the host mount. No public application
+attachment descriptor is produced, read or repaired. The Docker API is used only
+for this service's owned Ganesha storage engine, never for application nodes.
 
-The service uses the local Docker API, not launcher `start_node`: no node image
-pull, port reassignment, private-volume deletion or credential replacement. It
-retains the exact original stopped container until replacement is verified. It
-keeps image identity, Config, HostConfig, private/anonymous mounts, ports, restart
-policy, requested network addresses and meaningful aliases. Unsupported startup/
-network configurations fail before stopping. A fresh image probe has no user
-private/auth mounts or published ports.
+Pending setup is explicit, not a persisted READY flag. Resume requires a fresh
+plan and consent; the supervisor does not resume an incomplete setup. Healthy
+repeat/reconnect preserves source UUID. Safe drained detach retains source/marker
+and private recovery evidence; a busy unmount fails without force/lazy unmount.
 
-A pre-start failure can restore the original configuration. Once replacement
-startup may have accepted work, the receipt is retained and a **new operator drain**
-is required; automatic rollback is forbidden. Pending setup is explicit, not a
-persisted READY flag. Healthy repeat/reconnect preserves the source UUID. Safe
-detach retains source/marker, named volumes and private recovery evidence; busy
-unmounts fail without force/lazy unmount.
+Existing active or pending predecessor node-management obligations refuse before
+root binary replacement and administrative/supervisor resource effects, under the
+administrative lock. Empty/null old node lists are harmless; nonempty or malformed
+ones are not silently discarded. Use the matching predecessor tool for explicit
+operator drain/recovery before installing this host-only tool. This task neither
+migrates live installations nor deletes old descriptors or node receipts.
 
 Owned native Linux and Linux Docker Ganesha exports set
 `Attr_Expiration_Time = 0` at EXPORT level so fresh source attributes are not
@@ -143,7 +139,7 @@ not instant watcher notification or visibility through an already-open handle.
 
 Status verifies the hosted Ganesha configuration before reporting host readiness;
 it does not rewrite configuration or restart an engine. Detach checks an existing
-configuration before touching nodes, mounts, jobs or engines. Different or
+configuration before touching mounts, jobs or engines. Different or
 unreadable bytes are retained and refused. Missing configuration permits retry
 of an already-partial owned detach, but never readiness. Exact unit/container
 ownership checks and source/marker/recovery preservation still apply.
@@ -156,12 +152,12 @@ get past refusal. Matching disk bytes alone do not prove a running daemon loaded
 a changed policy. Reuse of retained supported deployments would require a
 separately established transition, not this test-fixture procedure.
 
-Configured shared-workspace skills for Claude/Codex/Grok use execution-private
-**directory links**, not snapshots. Closing a peer removes only its own wrappers/
-links after native process close. Existing user-confirmed source Update/Remove
-remains independent and can make links unavailable. AGY keeps its existing capsule
-manifest and missing-source warn/skip restore. Ordinary local materialization and
-runtime tool permissions are unchanged.
+Consumers, including AutoByteus, use ordinary filesystem APIs. This service does
+not inspect their workspaces, skills, credentials, processes, APIs or runtime
+modules. Consumers do not use NFS metadata to admit workspaces. Provision paths
+outside the app: an ordinary directory that remains after mount loss is still a
+directory to the app, and OS I/O can block or fail. No app wrong-mount safeguard
+is promised by this repository.
 
 ### Mac source identity and interrupted setup
 
@@ -201,7 +197,7 @@ shape. One Mac test reads installed diskutil metadata for its own directory; thi
 is not whole-host reboot or mounted NFS qualification.
 
 Unit tests use temporary owned files and fake Docker HTTP responses; they do not
-mount/export/recreate real nodes. Cross-compilation and `version` smoke do not
+mount/export storage or alter real containers. Cross-compilation and `version` smoke do not
 prove native NFS or installer behavior. Root [TESTING.md](TESTING.md) applies. The historical command-only
 increment and local extraction checks are distinct from broader publication qualification:
 clean-machine installation, healthy application previews and native skill tool
@@ -213,21 +209,3 @@ or provider calls merely because a design review passed.
 
 See [packaging/RELEASE.md](packaging/RELEASE.md) for distribution gates and
 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES) for backend/runtime notices.
-
-### Selected Docker clients after an ordinary host restart
-
-The existing reconnect service completes only a recognized pre-process NFS
-connection-refused start failure on a currently selected, attached client with
-current `unless-stopped` or `always` policy. After fresh daemon-side UUID/access
-proof it starts the **same container ID**, once per failed process incarnation,
-then checks its actual API/shared binding. It does not recreate, pull, change
-policy or restart an unhealthy running process. Unknown startup diagnostics stay
-incomplete. Status does not start clients. A confirmed public `reconnect` (or
-`--yes`) can retry a consumed eligible attempt; background ticks cannot.
-
-A normal Stop of a successfully running `unless-stopped` node remains stopped.
-Docker Stop on an **already-failed, non-running** node (including through the
-launcher) is a no-op and supplies no new stop intent. To durably veto pending
-failed-start completion in that case use `docker update --restart=no <node>`.
-Reconnect never overrides this policy. Docker `always` retains its own restart
-semantics. No private stop-veto file or Docker-private state is used.

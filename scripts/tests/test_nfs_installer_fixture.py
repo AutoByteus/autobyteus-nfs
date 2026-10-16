@@ -60,7 +60,7 @@ exec "$NFS_DIRECTORY_TEST_BINARY" -test.run '^TestInstallerDirectoryModeChild$' 
                 self.assertEqual((home/'invocations').read_text(),'verify-release\n'+action+'\n')
                 self.assertTrue((home/'.local/bin/autobyteus-nfs').is_symlink())
                 if variant=='permissions':
-                    self.assertIn('private=0700 public/exec/parents=0755 descriptor=0644',result.stdout)
+                    self.assertIn('private=0700 exec/parents=0755 receipt=0600',result.stdout)
                     self.assertEqual((home/'.local/lib').stat().st_mode & 0o777,0o700)
                     print(result.stdout)
             else:
