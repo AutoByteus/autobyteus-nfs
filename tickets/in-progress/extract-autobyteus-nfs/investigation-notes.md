@@ -8,15 +8,17 @@
 - **D0** user canonical destination `/Users/normy/autobyteus_org/autobyteus-nfs`: `.git` plus untracked PM `task-plans/`; local main unborn; ls-remote/fetch succeed with no refs. Reconfirmed after requirements approval. No existing project policies. Do not touch PM files.
 - Canonical source `/Users/normy/autobyteus_org/autobyteus-workspace-superrepo` is on personal with unrelated tracked/untracked work; not used for task authoring. Existing finalized shared-network-workspaces checkout/archive read-only.
 - Bootstrap succeeded using normal non-force worktree creation. Source task worktree remains clean. Initial requirements/investigation drafts created in N before discovery. No production copy, build, test, runtime, mount, container or publication operation by Solution Designer.
-- Current revision SR-002 (design follows approved R1/SR-001). Investigation complete for extraction design, not implementation validation.
+- Current revision SR-004 follows approved R2/SR-003. E01–E11/A01–A05 below are preserved R1 observations/rationale; their claims that app integration must remain and persisted state is entirely unaffected are superseded by E12–E20 and R2. They are not current design authority. No fresh runtime validation by Solution Designer.
 
-## Authorities Read (2026-10-16)
+## Initial Authorities Read (2026-10-16; recovery additions below)
 Solution-designer SKILL; references/requirements-engineering.md; references/architecture-design.md; references/design-principles.md (including symlinked references opened directly); references/handoff-references.md; all four requirements/investigation/design/history templates. Root source AGENTS.md, DESIGN.md, TESTING.md and RELEASE.md, package autobyteus-server-ts/AGENTS.md and autobyteus-web/AGENTS.md. No nearer policy in embedded NFS, scripts or .github. No destination project DESIGN.md found. Applicable root design principles remain constraints for source integration; new NFS policy is to be established under them. No conflicts found. Persisted-data transformation convention is not activated: no schema/store change proposed.
 
-## Initial Request And Product Understanding
+## Historical R1 Investigation (preserved, not current intent)
+
+### Initial Request And Product Understanding
 User wants the Go NFS setup service independent from the superrepo with one maintained home, necessary tools/docs and retained integration. Exact extraction boundaries are engineering-owned. The previous filesystem Task and editor follow-up are DONE; they are not reopened. No new release, tag, capabilities, deployment or live-resource mutation. Repository separation concerns contributors and maintainers, not new end-user UI. Requirements R1 captures current decisions; no Product Design request/supplement.
 
-## Source Log (all paths relative to S unless otherwise stated)
+## R1 historical — Source Log (all paths relative to S unless otherwise stated)
 | ID | Source / exact command or files | Observed fact | Implication / uncertainty |
 | --- | --- | --- | --- |
 | E01 | `git fetch origin personal`; `git rev-parse HEAD`; `git status --short`; D0 `git remote -v`, `git ls-remote --symref origin HEAD refs/heads/main`, `git fetch origin`, `git status --short`; `git worktree add --orphan` | Base3712cd9b (latest editor delivery receipt); empty destination remote/unborn main with PM metadata. Two isolated branches established; source S clean | Safe task authoring; recheck races before integration/finalization |
@@ -31,7 +33,7 @@ User wants the Go NFS setup service independent from the superrepo with one main
 | E10 | NFS LICENSE, THIRD_PARTY_NOTICES; root LICENSING.md, NOTICE, CONTRIBUTING.md, CLA.md; scripts/check_licensing.py; source RELEASE.md; web utils/nfsLauncherCommands.ts | AGPL3-only/commercial service; exact license text; root additional permission and CLA apply; Go/Apple/Ganesha/Ubuntu attribution. No qualified release, nfsPublishedRelease=null. Root license checker has no embedded-NFS explicit list dependency | Preserve terms, attribution and source obligations; tailored standalone docs must not invent a relicense. No app Guide enabling |
 | E11 | Historical archived implementation-evidence/ir-009/build-result.json/checks-and-limits.md; read-only `test -f .../autobyteus-nfs/out/ir005-local-candidate/engine-candidate/engine-manifest.json` | Existing arm64 corrected-engine candidate manifest still present; old build report declares build-only and arm64 package/source inventory. No new artifact validity/runtime proof performed | May copy immutable candidate into owned scratch and verify fresh for packaging-path check; do not modify old files, imply amd64 artifact exists, or reuse old service sourceHash |
 
-## Existing Supported Behavior / Product Paths
+## R1 historical — Existing Supported Behavior / Product Paths
 | Behavior | Trigger and path | Outcome/invariants | Evidence / confidence |
 | --- | --- | --- | --- |
 | BEH-001 | Contributor checks out superrepo → enters module → Go build/tests → packaging/fixture helpers outside module | Development works only with accidental repository coupling in affected checks | E02,04,06; source-inspected |
@@ -39,27 +41,27 @@ User wants the Go NFS setup service independent from the superrepo with one main
 | BEH-003 | User selects supported shared node → CLI plan/consent/owned state → app launcher or service Docker operations → public descriptor/mount admission | Source/UUID/nonroot identity/private state preserved; optional app-aware integration remains | E08–09; preserved source, historical bounded delivery evidence only |
 | BEH-004 | Maintainer finishes ticket → verified merge/push → durable receipts/owned cleanup | Source personal rules, no release by default; new repo policy absent at intake | E01,10 / Task |
 
-## Structural And Payload Surface Inventory
+## R1 historical — Structural And Payload Surface Inventory
 Payload: 101 tracked embedded files (not all mere content), descriptor fixture, attribution/provenance/docs, archived proof links. Do not copy ignored engine/deb/out, app dist, PM metadata or old ticket history.
 Structural: Go module import identity; Python root/source-hash boundaries; installer download repository; workflow CI/tag/build inputs; optional app producer/consumer contract; cross-repo finalization. Runtime lifecycle/state/concurrency internals are moved, not redesigned. High ownership/distribution impact is independent of file count.
 
-## Runtime, Probe Or Reproduction Findings
+## R1 historical — Runtime, Probe Or Reproduction Findings
 No fresh behavior validation executed by Solution Designer. Only repository/file discovery and safe Git worktree bootstrap. `cat internal/config/config.go`/`types.go` found no such files; actual state owners located in state.go, store.go and remaining config files. This discovery miss is not a test failure. Old delivery's Linux command-only proof is historical, one VM/shared kernel, not broadened.
 
-## Persisted Data / State Facts
+## R1 historical — Persisted Data / State Facts
 - Public descriptor: five fields storageId, endpoint, export, protocol, mountRoot in testdata/attachment.json; private Attachment adds installation/user/node identity; HostedFilesystem holds source, identity, backend, nonroot IDs, allowlist and immutable engineImage.
 - Locations: /etc/autobyteus-nfs; /Library/Application Support/AutoByteusNFS or /var/lib/autobyteus-nfs; root executable /Library/AutoByteusNFS/libexec or /usr/libexec/autobyteus-nfs; persistent source marker .autobyteus-nfs/storage.json. config.Store enforces owner/mode/no-follow/bounded decode and atomic write.
 - Readers/writers E08–09; no serialized field, semantics, physical location or runtime read/write change required by import/repository relocation. Installed volume/record count not inspected (unnecessary and unauthorized); no acceptable runtime data loss/reset.
 - Result for architecture: evidence supports Not Affected, no migration/admission change. No need to enumerate or mutate users' live data.
 
-## Architecture Investigation Findings (after R1 approval)
+## R1 historical — Architecture Investigation Findings (after R1 approval)
 A01: Production entry main embeds release.json → cli.Run dispatches version/verify-release/launcher before host/setup flow; ordinary setup uses platform trust/lock and setup.Service → backends/Docker → source and attachment state. Imports can be mechanically renamed without changing these semantics. Runtime Docker app-module paths are intentionally fixed installed contract strings and must survive.
 A02: Distribution spine currently mixes repository concerns: desktop package version and app source hashes are not Go runtime dependencies. Split identity to self-contained NFS inputs; future consumer acceptance must name exact service and app revisions, not falsely imply app code is covered by a service-only hash. No qualified hash/targets exist to preserve; existing lock remains empty.
 A03: Actual producer fixture already exists and is parsed by Go. Copying its exact bytes as a pinned consumer test fixture (not production service copy) plus provenance and an equality check during integration removes the only TS test sibling dependency without a new contract package or network-dependent tests.
 A04: Existing engine recipe is parent-path independent. Move without editing its byte-sensitive recipe files unless required; preserve recipe/source identities. README external historic proof link must become immutable source-repository link. Source root publication note becomes link to independent NFS policy, not a second owner.
 A05: Destination main is unborn; normal initial root history can be created on task branch then pushed main only after validation and fresh empty-remote check. Source finalization remains normal --no-ff into personal. This is not an atomic two-repo transaction; order and partial-completion reporting matter. Canonical D0 can be initially populated after finalization only if still unborn/no new owner changes, preserving task-plans. Do not use canonical source for finalization.
 
-## Supplemental Artifact Inventory
+## R1 historical — Supplemental Artifact Inventory
 No newly authored supplements. Own canonical requirements/design/history/handoff link here. Historical context (read-only):
 - `/Users/normy/.autobyteus/server-data/projects/project_6416db5b-926a-4865-8705-d8ebb2425780/tasks/project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8/context/ctx_d876e1ff5eb3__handoff-summary.md`: incoming DR002 handoff, read before action; bounded old delivery/provenance, all REQ preservation context, no new approval authority.
 - Same context directory `ctx_ce76cd4b4f51__shared-network-workspaces-dr002-terminal-receipt.md`, `ctx_d533a713fd8d__requirements-doc.md`, `ctx_7824833c9413__design-spec.md`: inherited history available if needed, not competing current extraction requirements.
@@ -67,12 +69,53 @@ No newly authored supplements. Own canonical requirements/design/history/handoff
 - Engine candidate location for E11: `/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate`; existing retained artifact owner, read-only; new extraction must not adopt/delete it.
 Product artifacts, new independent review reports, implementation and validation results: **N/A — not applicable yet**.
 
-## Assumptions, Unknowns And Risks
+## R1 historical — Assumptions, Unknowns And Risks
 - RISK-01 stale paths/module/package-version checks: bounded inventory and fresh independent archive tests required.
 - RISK-02 qualification dilution: no carry of old hash/targets; separate service identity from explicitly revision-bound consumer evidence; fail-closed tests remain.
 - RISK-03 repository race/partial delivery: implementation/delivery refresh both refs, preserve other work, report actual identities. Current snapshot is not exclusive ownership forever.
 - RISK-04 platform/build-tool availability: local/CI matrix validation is downstream, not inferred from files. Historical arm64 engine input does not establish amd64/signing/publication readiness.
 - No unresolved scope/product decision. Task design ready; actual build/check results intentionally pending implementation/API roles.
 
-## Requirement Implications / Architecture Inputs
+## R1 historical — Requirement Implications / Architecture Inputs
 E02–07 shape independent development/distribution REQ-001,002,005; E08–09 protect integration REQ-003,006 and data Not Affected; E10 drives REQ-004; E01/E11 protect preservation/truthful evidence REQ-007,008. SCN-001–004 approved in R1. Final target decisions are exclusively in design-spec.md, not this evidence authority.
+
+
+## Current Recovery Investigation — E12–E20 (2026-10-16)
+Current workspaces N/S are unchanged isolated branches, at N0c9fd27a77d65504b8eef41ece8972badb31778c and S390e0c76dda56c206ed8cabd65fc3564caaf1804 before designer recovery edits. E01's source base3712cd9b remains extraction provenance. R1 authoring/review/extraction commits are preserved, not reset. The canonical source, D0 PM board and old delivery checkout remain outside authoring.
+
+Additional authorities read in full: current solution-designer SKILL; N/AGENTS.md, DESIGN.md, TESTING.md, RELEASE.md (created during implementation); source `autobyteus-server-ts/docs/design/data_migration_guideline.md` (including sections 7–10). Requirements/architecture/general design gates and templates had already been read in this conversation; reopened architecture standard during recovery. Source root/package policy gates remain applicable. N's new policies describe R1's app attachment contract: this is an identified discrepancy with newer explicit user direction, to be corrected during implementation, not a reason to override the user.
+
+| ID | Exact source / command (S/N aliases above) | Observed fact | Implication / uncertainty |
+| --- | --- | --- | --- |
+| E12 | Direct user messages in this conversation; `user-filesystem-boundary-correction.md` | User explicitly says app logic must not care what filesystem it is or whether it is mounted; attachment-file coupling challenged | Material intended-behavior correction, not just rename/extraction. Old R1 preservation interpretation is invalid |
+| E13 | `implementation-evidence/ir-001/hold-checkpoint.json`; received implementation-owner checkpoint | N extraction commits353dd2c/0c9fd27 and S390e0c76 preserved. Only implementer dirty area is ir-001. Preparation session exited1 on Python tarfile unsupported filter keyword after verified Go archive download. Owner reports no running processes/resources, no tests/builds reached, no live actions | Safe authoring recovery without implementation races. Retained owned scratch is implementer's cleanup responsibility, not SD's. Mechanical comparison is not qualification |
+| E14 | S `rg -n 'configuredSharedWorkspace|checkSharedWorkspaceForRun|admitSharedRunWorkspace|scopedProjectGitEnvironment' autobyteus-server-ts/src`; full `workspaces/shared-workspace-binding.ts`, mount observation, `agent-execution/services/shared-run-workspace-admission.ts`; manager prepare wrapper; terminal `pty-session-manager.ts` | Descriptor/mount/marker checks gate activation and terminals; unrelated paths return null. Child Git trust can be injected based on those checks | Actual runtime coupling, not just test fixture. Removing producer descriptor alone would bypass some behavior and strand other callers |
+| E15 | S `agent-execution/backends/shared/{prepare-private-runtime-skills,runtime-skill-profile,workspace-skill-collision-policy}.ts`; Claude bootstrap/query/cleanup, Codex bootstrap/thread/client manager, ACP factory, Grok factory, AGY factory | Private profiles selected by NFS binding; ownSkillProfile called before async staging, per-run UUID directory, mode0700, project collision policy, source-preserving symlinks and close-before-release. Codex has profile-specific client leases. Multiple provider launch sites separately inject safe.directory. Grok declares a private adapter; not every ACP adapter does. AGY already uses a private capsule | Uniform app-private exposure can reuse actual owner, but requires all callers/cleanup/test branches—not only deleting binding helper. No proof of native/provider execution in this investigation |
+| E16 | S `scripts/public/docker/autobyteus-docker.sh`, `.d/bash/{core,container-config,docker-runtime,nfs-attachment,commands}.sh` | Entry downloads/sources NFS module; hashing/start/run call CLI and descriptor/volume checks. Existing generic env AUTOBYTEUS_DOCKER_SHARED_WORKSPACE_DIR supplies root; node path root/nodes/name and shared root/shared bind normally. Private data/root-home/browser volumes separate | Generic mapping already exists; no replacement storage registry or NFS adapter needed. Bind mapping does not promise live remount propagation or special mount-loss behavior |
+| E17 | S Claude/Codex workspace resolvers, native-shared-workspace.ts, native factory; workspace-manager.ts and filesystem-workspace.ts | Registered roots can be resolved on demand; shared-only branch prevents silent fallback in Claude/Codex; native shared helper restores registered workspace. FileSystemWorkspace is metadata-only; actual filesystem access is elsewhere | Keep registered-path identity without mount classification; do not add whole-app startup scan or filesystem readiness gate |
+| E18 | N `internal/{cli,setup,config,docker}` source reads; `config/{state,connection,store}.go`; setup service/plan/apply/status/lifecycle/pending; Docker attachment/exec/recreate/snapshot/client/engine | Private Attachment stores Nodes; Plan contains attachment and source binding. SaveIntent occurs before resources, attachment saved before node recreation. Public descriptors read/written by setup/status/reconnect/detach. Docker package mixes app node machinery and own pinned Ganesha engine lifecycle | Remove app machinery without deleting engine hosting. Nonempty active nodes means an outstanding external control obligation; cannot simply tolerate/drop it as obsolete data |
+| E19 | N `internal/cli/install.go`, setup lifecycle/source binding tests, source data migration guideline; `rg` of config/pending writers | Root installer replaces binary before normal Run; must consider safety before replacement, not only setup. Config store bounded, nofollow, owner/mode-checked and atomic. Previous new-source binding keeps zero/unbound pending source distinct; partially completed setup supported. Detach retains node receipts even after active config removed. No registered NFS migration framework/released public NFS version found; lock empty, CLI development-unqualified | No automatic data migration justified. Read only targeted active/pending envelopes to detect unsupported obligations; retained completed old receipts are not proof of live nodes. No live installed state inspected (not authorized/needed) |
+| E20 | After R2 approval: reread N apply/status/checkconfiguration/installer/engine; S provisioning service:222, FileSystemWorkspace, Grok adapter and split `scripts/tests/test_nfs_launcher.py`; `rg` core src for NFS terms | Production standalone provisioning supplies memoryDir; workspace object does not check mounts. Grok adapter already supports private profiles. Split launcher test also contains generic stop/no-op/restart-policy coverage, which must survive. Core TS src search found no matching NFS integration symbols | Target may reuse existing memory/private profile boundaries; keep generic launcher test when deleting NFS suite. Compilation/executable coverage remains downstream, not inferred from inspection |
+
+### Present authorities, facts and decisions
+R2 requirements are Approved, user informed in the message recorded there. Target decisions are in SR004 design, not old A01–05. Direct source inspection establishes feasibility and ownership, not successful build/runtime evidence. No commands were run against mounts, live Docker, provider accounts or user profiles. Some discovery reads used nonexistent guessed paths; subsequent exact file search/read corrected them; these are discovery misses, not test failures.
+
+### Persisted Data / Migration Investigation
+- Governing source convention: S/autobyteus-server-ts/docs/design/data_migration_guideline.md; tolerant known-field readers, exact writers, no speculative transforms/journals or whole-app lockout. N has no registered migration convention; its actual mechanism is config.Store plus pending source intents. N DESIGN must document this bounded current-state approach under the same principles.
+- App workspace registry, credentials/history, project source skills are not transformed. Existing runtime profile directories are per-execution and their exact owner cleans them; historical leftovers are not scanned/adopted/deleted here. No app migration or predecessor app-migration replay is needed because no persistent app schema/meaning changes.
+- N host-only Attachment/HostedFilesystem/Connection and partial source bindings keep their meanings and paths. Additive obsolete fields are not themselves migration triggers. Representative source shapes are current config structs, testdata/attachment.json, source-binding and pending tests; no released public NFS dataset is claimed.
+- N active node-bearing private attachment/pending states are a supported predecessor operation state but incompatible with the host-only owner. SaveIntent ordering establishes reachability before node effects. Preserve/refuse them at the NFS installation/administrative boundary; do not execute legacy logic, transform/drop obligations, enumerate old node receipts or probe apps. Prior completed/detached node receipts are inert because active/pending intent has been removed by successful detach. Malformed active config remains a scoped NFS error, never an AutoByteus admission gate.
+- Public /etc attachment/node files become unused by both current products. They are not task-owned cleanup. No new public writer and no dependency on their presence. Physical mounts/source bytes/markers retain their owners and are never moved by extraction.
+- No volume/cost measurements for real installation claimed. The proposed boundary needs only the existing bounded active/pending records, not history scan/extra backup/ledger. Details and tests in design.
+
+### Current supplement inventory
+| Artifact | Owner / purpose | Status and approval applicability |
+| --- | --- | --- |
+| user-filesystem-boundary-correction.md | SD; exact user intent and recovery checkpoint context; REQ003/006/009/010 | Input to approved R2; replaces R1 coupling interpretation, not competing design |
+| implementation-evidence/ir-001/hold-checkpoint.json and prepare-console.log | Implementation; source/dirty/process/scratch checkpoint | Current coordination evidence, no implementation-ready or successful test result |
+| design-review-report.md + architecture-review-revision-record.md | Architecture Reviewer; ARCH-REV-001 | Historical Pass for R1/SR002 only; unchanged, needs replacement review for R2 |
+| Existing prior context/archive/retained engine inputs listed above | Prior owners | Read-only provenance; no renewed Task acceptance/qualification |
+Product artifacts: N/A — no Product request. New code/API/delivery results for R2: N/A — not yet produced. No cumulative forwarding manifest.
+
+### Remaining uncertainties / limits
+No unresolved design prerequisite from investigation. Runtime/native provider capability, source compilation, tooling/platform availability and test outcomes still require downstream evidence. The Go bootstrap failed before checks and is not a product failure. No claim the generic app can detect an unmounted-but-existing directory or guarantee independent-client caching. Remote freshness must be rechecked at finalization. All prior out-of-scope deferred Tasks remain unchanged.
