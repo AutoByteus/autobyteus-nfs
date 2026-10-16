@@ -3,8 +3,8 @@
 A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
-**Release status:** this source increment has bounded command-only Linux filesystem
-validation, not full product or platform qualification. No qualified public
+**Release status:** historical source provenance includes bounded command-only
+Linux filesystem evidence, not fresh extraction/platform qualification. No qualified public
 NFS installer/command is published. The Nodes NFS Guide intentionally disables
 command copy/download. Do not substitute a prototype command or invent a release
 URL. `packaging/release-lock.json` contains architecture-reference pins, not a
@@ -202,13 +202,13 @@ is not whole-host reboot or mounted NFS qualification.
 
 Unit tests use temporary owned files and fake Docker HTTP responses; they do not
 mount/export/recreate real nodes. Cross-compilation and `version` smoke do not
-prove native NFS or installer behavior. Root [TESTING.md](TESTING.md) applies. The bounded command-only
-increment above is distinct from broader product and publication qualification:
+prove native NFS or installer behavior. Root [TESTING.md](TESTING.md) applies. The historical command-only
+increment and local extraction checks are distinct from broader publication qualification:
 clean-machine installation, healthy application previews and native skill tool
 reads/peer-stop/restore, independent physical Mac/Linux/Docker topology and
 explicit publication user verification are not established by those checks.
-They are not additional acceptance gates for the user-selected command-only
-increment; the publication guide's gates remain unchanged. Do not run privileged setup
+They are not new acceptance gates for repository extraction; the publication
+guide's gates remain unchanged. Do not run privileged setup
 or provider calls merely because a design review passed.
 
 See [packaging/RELEASE.md](packaging/RELEASE.md) for distribution gates and
