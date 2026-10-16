@@ -1,0 +1,26 @@
+name: NFS Developer Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      matrix:
+        runner: [ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.2'
+          cache: false
+      - name: Native checks (no live mounts or nodes)
+        run: |
+          go test -race ./...
+          go vet ./...
+          go build -o out/autobyteus-nfs ./cmd/autobyteus-nfs
+          out/autobyteus-nfs version
+          python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v
+          bash -n scripts/public/nfs/install.sh

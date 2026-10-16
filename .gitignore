@@ -1,0 +1,8 @@
+/internal/backend/engine-assets/*.deb
+/out/
+/packaging/engine/__pycache__/
+/autobyteus-nfs
+/engine-candidate/
+/engine-parts/
+/artifacts/
+/scripts/tests/__pycache__/
