@@ -2,255 +2,288 @@
 
 ## Review Round Meta
 
-- Date / reviewer: 2026-10-16 / architecture reviewer; personal review, no delegation.
-- Upstream Requirements Doc: [requirements-doc.md](requirements-doc.md), **R1 Approved / SR-001**.
-- Upstream Investigation Notes: [investigation-notes.md](investigation-notes.md), E01–E11 / A01–A05.
-- Upstream Solution Revision Record: [solution-revision-record.md](solution-revision-record.md).
-- Reviewed Design Spec: [design-spec.md](design-spec.md), **SR-002** at destination input commit `381231ee90d1dc3e494e06768e18d082c6cd46d2`.
-- Supplemental Task Artifacts Reviewed: [solution-design-handoff.md](solution-design-handoff.md); historical DR-002 handoff summary indexed in investigation. Historical raw campaigns were not re-audited or adopted as new acceptance results.
-- Relevant Solution Revision IDs: **SR-001, SR-002**.
+- Date / reviewer: 2026-10-16 / architecture reviewer; personal execution, no delegation.
+- Upstream Requirements Doc: [requirements-doc.md](requirements-doc.md), **R2 Approved / SR-003**, user informed within explicit corrected direction.
+- Upstream Investigation Notes: [investigation-notes.md](investigation-notes.md), current E12–E20; E01–E11 explicitly historical where superseded.
+- Upstream Solution Revision Record: [solution-revision-record.md](solution-revision-record.md), **SR-003 / SR-004**.
+- Reviewed Design Spec: [design-spec.md](design-spec.md), **SR-004 Ready**, destination input commit **983812e8b4fe3363909e44cc905285fc800ca19a**.
+- Supplemental Task Artifacts Reviewed: [user correction](user-filesystem-boundary-correction.md), [held implementation checkpoint](implementation-evidence/ir-001/hold-checkpoint.json), [handoff](solution-design-handoff.md), prior canonical review and history.
 - Architecture Review Revision Record: [architecture-review-revision-record.md](architecture-review-revision-record.md).
-- Current Architecture Review Revision ID / round: **ARCH-REV-001 / 1**.
-- Trigger: new repository-separation Task `project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8`, Architecture Design Complete / Large / High.
-- Prior Review Round Reviewed: **N/A**; neither review artifact existed. No result inherited from the completed filesystem/editor Tasks.
-- Latest Authoritative Round: this report, ARCH-REV-001.
-- Workspace aliases: **N** = `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs`; **S** = `/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs`; **D0** = `/Users/normy/autobyteus_org/autobyteus-nfs`. Both task branches are `codex/extract-autobyteus-nfs`.
-- Current-State Evidence Basis: independent local reads at S commit **`3712cd9bf0db998501d162db7f8655f169e3def6`**. N and S were clean before reviewer edits. D0 remains unborn main with untracked `task-plans/`; its shared Git database contains N's task commit. No remote freshness claim is made by this review; Delivery must refresh both remotes.
+- Current Architecture Review Revision ID / round: **ARCH-REV-002 / 2**.
+- Trigger: replacement review following the user's explicit filesystem-only application boundary; Task `project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8`.
+- Prior Review Round Reviewed: **ARCH-REV-001**, Pass only for superseded R1/SR-002, retained in history and Git `5d354b91616c431a358f6024993ef1d52e682dc3`. No unresolved prior finding; prior coupling-preservation verdicts do not authorize current work.
+- Latest Authoritative Round: **this report, ARCH-REV-002**.
+- Workspaces: **N** `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs`; **S** `/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs`; both branches `codex/extract-autobyteus-nfs`. N contains held extraction commits `353dd2c` / `0c9fd27` followed by SD recovery docs. S is clean at **390e0c76dda56c206ed8cabd65fc3564caaf1804**, extraction provenance **3712cd9bf0db998501d162db7f8655f169e3def6**.
+- Current-State Evidence Basis: focused independent source reads below plus prior unaffected extraction review. N's preexisting untracked `implementation-evidence/` belongs to Implementation Engineer and is untouched. No production code, upstream design, scratch or live resource was changed by this review.
 
-Evidence used below (source paths relative to S):
-
-| Key | Independent inspection | Architectural relevance |
+| Evidence | Independently inspected source / context | What it establishes |
 | --- | --- | --- |
-| V1 | All five current package documents; source root AGENTS/DESIGN/TESTING/RELEASE, server/web AGENTS; architecture-reviewer skill, shared principles and full report/revision templates | Approval, scope, separation of authorities, applicable finalization/testing policies |
-| V2 | `autobyteus-nfs/go.mod`, `cmd/autobyteus-nfs/main.go`; `internal/platform/directory_modes_test.go`; three service Python suites and mixed `scripts/tests/test_nfs_packaging_and_launcher.py` | Actual module/root dependencies and ownership split, including Go-to-Python fixture |
-| V3 | Full `autobyteus-nfs/packaging/release.py`, `release-lock.json`, Dockerfile and full `.github/workflows/release-nfs.yml`; engine `source.py` / `build.py`; workflow gate tests | Source identity, candidate reuse, packaging paths, refusal/signing gates and parent-independent recipe |
-| V4 | `internal/cli/launcher.go:12–45`; `internal/config/{state.go,store.go,connection.go,config_test.go}`; `testdata/attachment.json`; installed app import in `internal/docker/exec.go` | Producer, persisted identities/paths and intentional deployed app integration |
-| V5 | `scripts/public/docker/autobyteus-docker.d/bash/nfs-attachment.sh:3–35`; `autobyteus-server-ts/src/workspaces/shared-workspace-binding.ts:14–78`; full binding unit test | Seven-line consumer checks, actual descriptor parser/admission, sibling fixture dependency |
-| V6 | `scripts/public/nfs/install.sh:5–45`; NFS LICENSE/THIRD_PARTY_NOTICES; root LICENSING/NOTICE/CONTRIBUTING/CLA; tracked active-reference search excluding historical tickets and `.codex` | Installer repository ownership, inherited terms, license equality, removal coverage |
-| V7 | Read-only Git HEAD/status/ref observations for N/S/D0; historical DR-002 summary explicitly indexed by investigation | Safe initial-history and two-repository sequencing; bounded old evidence, not new qualification |
+| V1 | R2, SR-003/004, current handoff/investigation/correction/checkpoint; N AGENTS/DESIGN/TESTING/RELEASE; S root design and package rules, server migration guideline; reviewer skill/principles/templates and reachability Example 9 | New approved basis; old policy clauses identified for correction, not precedence over R2; bounded state admission versus migration |
+| V2 | S `agent-execution/services/{agent-run-manager,shared-run-workspace-admission}.ts`; `services/terminal-streaming/pty-session-manager.ts`; prior inspected binding/mount observer; current import search | Real activation and terminal gates, not merely unused fixture coupling |
+| V3 | S `workspaces/{workspace-manager,filesystem-workspace}.ts`; Claude/Codex workspace resolvers; native shared helper and factory call sites | Registered workspace ownership and metadata-only workspace path; mount classification is removable without new path owner |
+| V4 | S shared `prepare-private-runtime-skills.ts`, full `runtime-skill-profile.ts`; Claude bootstrap/cleanup and SDK plugin call sites; Codex bootstrap/factory/thread/client owner; ACP factory/release and Grok private adapter; provisioning `prepareFreshRun` | Existing private exposure, exact pre-await ownership, capability checks and close-before-release; production supplies execution memoryDir |
+| V5 | S scoped Git-environment helper and all located callers; Docker entry/core/config/runtime/commands | Child safe.directory injection is actual behavior; generic bind roots/private volumes already exist independently of NFS attachment module |
+| V6 | N `internal/cli/{run,install}.go`, `setup/{service,plan,apply,pending,lifecycle}.go`, config state/store and platform lock, service supervisor | Selected-node intent is persisted before node effects; installer currently replaces binary before administrative dispatch; correct new guard boundaries are concrete |
+| V7 | N `internal/docker/{client,engine,snapshot}.go` and engine-used helper references | Docker engine identity/capability/config checks share types with app-node recreation; deletion must retain engine-used pieces |
+| V8 | Prior ARCH-REV-001 distribution/license/file inspection and current extracted policies; current held checkpoint and Git state | Reuse unaffected extraction decisions only; no build/test readiness carried forward; R1 integration docs must be rewritten |
 
-Review consisted of document/code/reference inspection and read-only Git checks, not executable validation. No build, runtime test, VM/container, installed CLI, live mount, release/tag, network publication or cleanup action was performed. Source and historical artifacts were not modified.
+No product tests/builds, provider requests, VM/container/mount actions, release/tag, deployment, remote push or cleanup were executed. Failed bootstrap is the implementer's reported preparation failure, not a reviewer test result. Discovery misses for guessed source filenames were corrected by source search; they establish no defect.
 
 ## Routing Classification Review
 
-- Task size: **Large**. Independent development, distribution, consumer test ownership, removal and two-repository finalization are distinct coordinated workstreams, not simply a large file move.
-- Architectural risk: **High**. Build attestation and privileged-service distribution ownership change while public interfaces must remain intact.
-- Classification rationale reviewed: design §§Task Size And Architectural Risk / Change Scope, corroborated by V2–V6.
-- Independent Architecture Review required: **Yes**.
-- Classification correction required: **None**.
+- **Large / High**, confirmed. The delta now changes runtime admission, configured-skill preparation, Git policy and privileged host/node ownership as well as extraction/distribution/finalization. This is not a mechanical relocation or content-volume classification.
+- Independent review required: **Yes**. No classification correction.
 
 ## Upstream Behavior And Production-Path Basis Confirmation
 
-- Overall Basis Status: **Confirmed**.
-- Approved intent: R1/SR-001 authorizes one independent maintained NFS home, intact installed integration, preserved licensing/qualification and safe finalization; approval is recorded as Solution Designer within explicit user direction, user informed.
-- Scope guardrail: UC-001–004 in scope. Live deployment/upgrade, new runtime policy/schema, new platform qualification, old UI/VM/editor campaigns and unrelated cleanup are excluded. Review does not reopen those business decisions.
-- Relevant existing behavior: module/build/fixture dependencies actually cross repository boundaries; production consumers already use installed interfaces (V2–V6).
-- Every prospective blocking Design Impact finding traceable to approved authority: **Yes — no blockers raised**.
-- Remaining material ambiguity: **None for this design decision**. Pending execution is not missing approved intent.
+- Overall Basis Status: **Confirmed**. R2 explicitly replaces prior protocol preservation; it is not an unapproved reviewer relaxation of R1.
+- Approved change: AutoByteus consumes directory paths/ordinary filesystem results; NFS owns host sharing only. Removed app wrong-mount/UUID admission and automatic node management are no longer guarantees.
+- Preserved boundaries: NFS host source/mount/permission/engine/pending safety, app identity/private state/project skills, licensing, closed publication and safe two-repo completion.
+- Scope guardrail: UC-001–006 only. No live upgrade/migration, new provider/backend, mounted-path classification elsewhere, outage isolation, editor repair, old acceptance campaign or general framework.
+- Prospective blocking Design Impact traceability: **Yes — none raised**. No remaining material ambiguity for architecture readiness.
+- Design uses compact BEH001–006 / DS1–6 labels; these refer to requirements BEH-001–006 and the same stable subjects.
 
-| Behavior ID | Kind | Design Alignment With Approved Intent | Approved Trigger / Contract And Current-State Evidence | Target Outcome / Path / Spine Coherence | Status | Required Action |
+| Behavior ID | Kind | Design Alignment | Approved Trigger / Contract And Current Evidence | Target Path / Spine Coherence | Status | Required Action |
 | --- | --- | --- | --- | --- | --- | --- |
-| BEH-001 | Operational | Pass | Pass — SCN-001 contributor clone/build action; Go module, mixed repository roots and fixture invocation in V2 | Pass — DS-001 root module and moved local tests; independent archive check makes independence observable | Confirmed | Execute AC-001/002 downstream |
-| BEH-002 | Contract | Pass | Pass — SCN-002 maintainer candidate command / separately authorized future publication; actual release tool, job graph and installer in V3/V6 | Pass — DS-002/003 local owned source hash, explicit consumer evidence, empty qualification, manual-only publish input and preserved gates | Confirmed | Execute packaging/refusal checks; no publication now |
-| BEH-003 | System | Pass | Pass — SCN-003 selected-node setup/recreation/new-run admission; CLI → seven-line shell checks and descriptor → mount/marker parser in V4/V5 | Pass — DS-004 unchanged installed production boundary; DS-005 pinned test data replaces sibling source access | Confirmed | Prove normalized-source preservation and producer/consumer equality |
-| BEH-004 | Operational | Pass | Pass — SCN-004 requested repository move and preservation contract; distinct source target, unborn destination and PM data in V7 | Pass — DS-006 validates paired candidates, establishes N main, pins S, integrates personal, reports partial success without force | Confirmed | Refresh/integrate/record both targets at Delivery |
+| BEH-001 | Operational | Pass | Pass — contributor independently clones/builds; extracted Go/local tooling and prior V2/V3 review | Pass — DS1 remains standalone | Confirmed | Fresh independent archive checks downstream |
+| BEH-002 | Contract | Pass | Pass — maintainer candidate command; closed qualification/installer/workflow baseline | Pass — DS2 service-only inputs, no consumer pin, same closed release gates | Confirmed | Recheck changed hash paths and refusal controls |
+| BEH-003 | System | Pass | Pass — user selects registered workspace, activates/restores run or opens terminal; V2/V3/V5 traces | Pass — DS3 uses WorkspaceManager and normal cwd/file APIs; generic launcher binds remain | Confirmed | Remove callers and prove ordinary paths/registered error handling |
+| BEH-004 | Operational | Pass | Pass — explicit two-repo request and preservation; held checkpoint and current Git state | Pass — DS6 preserves partial commits, integrates N main then S personal, no longer pins a protocol fixture | Confirmed | Fresh refs and exact receipts at Delivery |
+| BEH-005 | System | Pass | Pass — operator host create/connect/reconnect/drained detach and predecessor-state preservation contract; V6/V7 | Pass — DS4 keeps host checks; bounded refusal protects active/pending node obligations before replacement/effects | Confirmed | Execute host-only, engine and incompatible-state controls |
+| BEH-006 | System | Pass | Pass — configured skills during ordinary new/restore preparation and cancellation/termination; V4 | Pass — DS5 existing private profiles independent of filesystem, exact ownership/release and no project fallback | Confirmed | Actual profile/caller/process-fixture coverage, not just mocks of removed selector |
+
+Prior unresolved findings checked after establishing this basis: **None**. The earlier Pass's preservation conclusions are superseded by changed requirements, not evidence of an implementation defect.
 
 ## Supplemental Artifact Coherence Verdict
 
-No new behavior-defining supplements. Investigation is the canonical inventory; old proof is historical context only.
-
-| Artifact | Purpose And Scope Clear? | Linked To Core? | Internally Complete? | Consistent? | Status / Approval Applicability Clear? | Required Action |
+| Artifact | Purpose / Scope Clear? | Linked To Core? | Internally Complete? | Consistent? | Status / Approval Applicability Clear? | Required Action |
 | --- | --- | --- | --- | --- | --- | --- |
-| Current solution-design-handoff.md | Pass | Pass | Pass | Pass | Pass | None; identifies both worktrees and next review stage |
-| Historical DR-002 summary / archive references | Pass | Pass | Pass for provenance use | Pass | Pass | Keep read-only; do not import old acceptance gates or treat historical test results as extraction proof |
-| E11 retained engine candidate reference | Pass | Pass | Pass as input location, not validity proof | Pass | Pass | Copy only into owned scratch and freshly verify when used; no historical source-hash promotion |
+| User correction | Pass | Pass | Pass | Pass | Pass | Its initial hold language is explicitly historical; R2/SR-004 now govern |
+| Held checkpoint | Pass | Pass | Pass for coordination | Pass | Pass | Existing owner retains failed preparation/scratch; no reset, new copy or success claim |
+| Prior review/history | Pass | Pass | Pass | Pass as historical | Pass | ARCH-REV-002 replaces current result; retain ARCH-REV-001 history |
+| Historical delivery/engine references | Pass | Pass | Pass for provenance | Pass | Pass | Not new qualification, not a renewed test campaign |
 
 ## Task Design Health Assessment Verdict
 
 | Assessment Area | Result | Evidence | Required Action |
 | --- | --- | --- | --- |
-| Current task posture present | Pass | Design identifies Refactor, not runtime defect repair | None |
-| Root cause explicit and evidence-backed | Pass | Boundary/ownership and file placement: app-inclusive source hash, desktop version assertion, mixed tests and TS sibling fixture (V2/V3/V5) | None |
-| Refactor decision explicit | Pass | Refactor now for repository coupling; retain healthy service internals | None |
-| Decision reflected concretely | Pass | Named file moves/split, local hash inputs, fixture provenance, removal and ordered finalization | None |
+| Current posture present | Pass | Behavior Change + ownership refactor, not merely move | None |
+| Root cause explicit/evidenced | Pass | App admits by NFS metadata; service controls app nodes; skill privacy/Git selected by descriptor | None |
+| Refactor decision explicit | Pass | Remove coupling now, retain host owners and existing private profile support | None |
+| Concrete response supports decision | Pass | Caller/removal map, engine retention, state admission ordering and focused validation | None |
 
 ## Spine Inventory Verdict
 
-| Spine ID | Scope | Readable? | Narrative Clear? | Facade Vs Governing Owner Clear? | Domain Subject Naming Clear? | Ownership Clear? | Off-Spine Concerns Separate? | Verdict |
+| Spine | Scope | Readable? | Narrative Clear? | Facade / Owner Clear? | Naming Clear? | Ownership Clear? | Off-Spine Separation? | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DS-001 | Contributor independent build/check | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS-002 | Manual candidate identity/build/archive | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS-003 | Future gated publication/verified installation, not executed now | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS-004 | Preserved setup/attachment/app admission | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS-005 | Producer fixture → pinned consumer → integration verdict | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS-006 | Paired integration/finalization/receipt | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS1 | Standalone development | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS2 | Candidate/distribution gates | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS3 | Workspace selection through ordinary operation/cwd | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS4 | Host setup and bounded supervisor reconciliation | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS5 | Runtime preparation through process/client close and profile release | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS6 | Two-repo finalization/receipt | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
 
-The release workflow orchestrates six bounded jobs; release.py governs identity/refusal, not application versioning. Installer transfer does not own setup consent. Existing supervisor/recovery loops and CLI errors are retained, not turned into new asynchronous spines.
+DS5 is not just a filesystem helper: the preparation factory owns acquisition before awaits, native client/process uses the profile, and cleanup proves close before release. DS4 preserves the existing serial administrative lock/reconciliation owner rather than adding a second coordinator. Existing error/event surfaces suffice.
 
 ## Boundary Encapsulation Verdict
 
-| Boundary / Owner | Public Entry Clear? | Owned Mechanisms Internal? | Bypass Controlled? | Verdict | Notes |
+| Boundary / Owner | Public Entry Clear? | Mechanisms Internal? | Bypass Controlled? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| NFS CLI/setup/config/backend/docker | Pass | Pass | Pass | Pass | Installed CLI and public descriptor remain the app boundary; private stores are not consumer APIs |
-| Packaging/workflow/installer | Pass | Pass | Pass | Pass | Manual workflow delegates source/engine qualification; installer verifies archive/embedded metadata before existing CLI consent |
-| App launcher and TS admission | Pass | Pass | Pass | Pass | Seven lines, daemon/volume identity and observed mount/marker checks preserved (V4/V5) |
-| Fixture provenance | Pass | Pass | Pass | Pass | Consumer owns local data/pin, not Go implementation; integration verifies real producer commit |
+| App WorkspaceManager / filesystem APIs | Pass | Pass | Pass | Pass | Registered IDs resolve through existing manager; no private NFS state or mount observer |
+| Runtime preparation/profile/native process | Pass | Pass | Pass | Pass | Exact preparation owner receives profile before staging; no source/credential ownership transfer |
+| NFS CLI/setup/config | Pass | Pass | Pass | Pass | Host resources only; trusted private admission before installation/administrative effects |
+| NFS Docker engine adapter | Pass | Pass | Pass | Pass | Retain engine inspect/start/stop/remove/validation; remove app discovery/recreation/HTTP/JS probes |
+| Generic launcher | Pass | Pass | Pass | Pass | Directory mapping and private volumes, no hidden replacement attachment bridge |
 
 ## Dependency Direction / Forbidden Shortcut Verdict
 
 | Boundary | Allowed Dependencies Clear? | Forbidden Shortcuts Explicit? | Direction Coherent? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| N developer/distribution | Pass | Pass | Pass | Pass | Local declared inputs/toolchains; no app checkout, pnpm, package.json or sibling Go replace |
-| S ordinary tests | Pass | Pass | Pass | Pass | Local pinned snapshot; no mutable-main fetch or required neighboring checkout |
-| Optional deployed app integration | Pass | Pass | Pass | Pass | Installed `/app/.../shared-workspace-binding.js`, supervisor and selected-node checks intentionally remain; independence is not removal of the integration contract |
-| Source ownership removal | Pass | Pass | Pass | Pass | No second implementation, embedded symlink, forwarding installer or submodule |
+| S ordinary file/run/terminal | Pass | Pass | Pass | Pass | No descriptor/CLI/UUID/mount-table dependency; no renamed generic mount checker |
+| N service | Pass | Pass | Pass | Pass | No app API/module/node dependency; NFS's own source marker/connection remain internal |
+| Runtime skills | Pass | Pass | Pass | Pass | Existing app-private execution path and source service; no filesystem classifier or project-exposure fallback |
+| Build/test/docs | Pass | Pass | Pass | Pass | Independent roots, no sibling replace/submodule/paired fixture; factual cross-repository docs are not a runtime dependency |
 
 ## Interface Boundary Verdict
 
-| Interface | Subject Clear? | Singular Responsibility? | Identity Shape Explicit? | Generic Boundary Risk | Verdict |
+| Interface | Subject Clear? | Singular Responsibility? | Identity Explicit? | Generic Boundary Risk | Verdict |
 | --- | --- | --- | --- | --- | --- |
-| launcher-attachment --nodes / seven-line output | Pass | Pass | Pass — selected node, storage UUID, daemon ID, volume and options retain their distinct roles | Low | Pass |
-| Public five-field descriptor / TS parser | Pass | Pass | Pass — endpoint/export/protocol/mountRoot/storageId unchanged | Low | Pass |
-| source_hash / release qualification | Pass | Pass | Pass — local source + declared contract + exact engine; consumer revision separately identified | Low | Pass |
-| Consumer provenance repository/commit/path/sha256 | Pass | Pass | Pass — real committed producer, not mutable branch or placeholder | Low | Pass |
+| Workspace ID → registered path | Pass | Pass | Pass | Low | Pass |
+| RuntimeSkillProfile / preparation guard | Pass | Pass | Pass — execution-owned profile and source skills distinct | Low | Pass |
+| Host Connection / Attachment / HostedFilesystem | Pass | Pass | Pass — source and installation identity retained, Nodes removed | Low | Pass |
+| CheckStandaloneState(Store) | Pass | Pass | Pass — bounded active/pending obligation admission, not node interpretation | Low | Pass |
+| Docker engine Snapshot/Object | Pass | Pass | Pass — only retained engine uses shape | Low | Pass |
 
 ## Existing Capability / Subsystem Reuse Verdict
 
-| Need | Existing Capability Checked? | Reuse Decision Sound? | New Support Justified? | Verdict | Notes |
+| Need | Existing Capability Checked? | Reuse Sound? | New Support Justified? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Runtime service and app integration | Pass | Pass | N/A | Pass | Move existing owners; no new coordinator/parser/schema library |
-| Release identity/engine verification | Pass | Pass | N/A | Pass | Rebase established release.py and manifest logic; preserve byte-sensitive recipe |
-| Independent checks | Pass | Pass | Pass | Pass | Split mixed tests and add local CI/policies, not a new generic test framework |
-| Cross-repo contract evidence | Pass | Pass | Pass | Pass | Tiny pinned fixture and producer equality reuse real Go/TS parsers |
+| Ordinary workspace/cwd | Pass | Pass | N/A | Pass | Manager and metadata-only FileSystemWorkspace already provide it |
+| Private configured skills | Pass | Pass | N/A | Pass | RuntimeSkillProfile plus existing Claude/Codex/Grok adapters and exact cleanup |
+| Generic container workspace | Pass | Pass | N/A | Pass | Existing root/shared and root/nodes/name mappings/private volumes |
+| Host lifecycle and state safety | Pass | Pass | Pass | Pass | Existing lock/store/pending owner; small read-only refusal check is justified by REQ-009, not a migration framework |
+| Distribution | Pass | Pass | N/A | Pass | Existing extracted packaging and engine manifest logic |
 
 ## Subsystem / Capability-Area Allocation Verdict
 
-| Area | Allocation Clear? | Reuse / Extend / New Sound? | Supports Spine Owner? | Verdict | Notes |
+| Area | Allocation Clear? | Reuse / Extend / New Sound? | Supports Spine Owners? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| cmd/cli/setup/config/platform/backend/docker/service | Pass | Pass | Pass | Pass | Existing runtime allocation retained |
-| packaging + service installer/tests + release workflow | Pass | Pass | Pass | Pass | One NFS-owned distribution chain |
-| S launcher/admission tests/docs | Pass | Pass | Pass | Pass | Consumer-side responsibility remains in S |
-| Delivery | Pass | Pass | Pass | Pass | Explicit two-repo sequencing; no atomicity claim |
+| N config/setup/backend/platform/service | Pass | Pass | Pass | Pass | Host administration and persisted host semantics remain together |
+| N docker | Pass | Pass | Pass | Pass | Reduce mixed module to actual storage-engine responsibilities |
+| S workspace/runtime/preparation/terminal | Pass | Pass | Pass | Pass | Remove storage policy, retain operation/cancellation ownership |
+| S launcher / N distribution | Pass | Pass | Pass | Pass | Each maintains its own product, not counterpart protocol |
 
 ## Reusable Owned Structures Verdict
 
-| Repeated Structure | Extraction Need Evaluated? | Shared File Choice Sound? | Shared Ownership Clear? | Verdict | Notes |
+| Structure / Logic | Extraction Evaluated? | Shared File Choice Sound? | Ownership Clear? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Engine source/manifest recipe | Pass | Pass | Pass | Pass | Move one existing implementation, avoid copying it into app |
-| Descriptor fixture | Pass | Pass | Pass | Pass | Producer fixture plus explicitly pinned consumer data; not two independently maintained schemas |
-| Mixed packaging/launcher test file | Pass | Pass | Pass | Pass | Split by service vs app responsibility, no cross-repo helper import |
+| Engine-used Snapshot/Object/label helpers | Pass | Pass | Pass | Pass | Explicit retain/move before app-only file deletion |
+| Private profile and preparation guard | Pass | Pass | Pass | Pass | One existing generic preparation helper, not per-runtime filesystem selectors |
+| Node/public attachment protocol and fixture | Pass | N/A — remove | Pass | Pass | No new shared DTO or bridge replaces retired protocol |
+| Generic skill materializers | Pass | Pass | Pass | Pass | Remove newly unreachable touched helpers; retain only actual remaining callers such as non-private ACP adapters |
 
 ## Shared Structure / Data Model Tightness Verdict
 
-| Structure | One Meaning Per Field? | Redundancy Controlled? | Overlapping Representations Controlled? | Core Vs Variant Sound? | Verdict | Notes |
+| Structure | Clear Fields? | Redundancy Controlled? | Overlap Controlled? | Core / Variant Choice Sound? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Connection / NodeAttachment / TS binding | Pass | Pass | Pass | Pass | Pass | Preserved specialized consumers; no universal DTO or extra persisted fields |
-| Qualification lock and evidence | Pass | Pass | Pass | Pass | Pass | Source hash no longer claims app bytes; separate explicit consumer commit/image evidence, all qualification fields remain empty |
-| Consumer provenance | Pass | Pass | Pass | Pass | Pass | Digest proves snapshot bytes, pinned commit/path supplies producer provenance; neither substitutes for parser/equality checks |
+| Host Attachment/Plan/Status | Pass | Pass | Pass | Pass | Pass | No Nodes/Public/retryConsumed; existing source-binding meanings retained |
+| Private profile / runtime context | Pass | Pass | Pass | Pass | Pass | Existing per-execution roots/exposures, no new persisted registry or copied credentials |
+| Connection fixture | Pass | Pass | Pass | Pass | Pass | Renamed for NFS client subject, not a cross-language application schema |
+| Admission projection | Pass | Pass | Pass | Pass | Pass | Retired obligation presence only; empty/null harmless, incompatible/malformed active state refuses, exact current writes |
 
 ## File Responsibility Mapping Verdict
 
-| File / group | Responsibility Clear? | Correct Owner? | Re-Tightened After Split? | Verdict | Notes |
+| File / Group | Singular/Clear? | Correct Owner? | Re-Tightened After Split? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| N go.mod / cmd / internal | Pass | Pass | N/A | Pass | Only module/import relocation; preserve runtime semantics |
-| N packaging/release.py / Dockerfile / workflow | Pass | Pass | Pass | Pass | Local roots/source inputs and independent version owner; detailed mapping covers archive/signing/COPYRIGHT paths |
-| N test_nfs_packaging.py / S test_nfs_launcher.py | Pass | Pass | Pass | Pass | Service refusal vs installed consumer controls separated |
-| N directory_modes_test.go | Pass | Pass | N/A | Pass | `../..` reaches new root; preserve actual Go/Python fixture and honest prerequisites/skips |
-| S binding test / fixture provenance | Pass | Pass | Pass | Pass | Offline local snapshot + actual parser, explicit paired producer check |
-| N policies/licensing/EXTRACTION/integration-contract; S active docs | Pass | Pass | Pass | Pass | Clear authority rather than duplicated release ownership or imported unrelated policies |
+| N cli inputs/run/install; deleted launcher.go | Pass | Pass | Pass | Pass | Thin host commands and pre-replacement admission; no app CLI |
+| N config installation_state.go and host structs | Pass | Pass | Pass | Pass | Bounded safety read under existing trust/lock; no transformation or legacy execution |
+| N setup apply/pending/lifecycle/status | Pass | Pass | Pass | Pass | Preserve host ordering/partial binding; remove node branches/public writes |
+| N docker retained files vs app-only removals | Pass | Pass | Pass | Pass | Named engine helpers are retained before deleting mixed machinery |
+| S run manager/resolvers/native/PTY | Pass | Pass | Pass | Pass | Ordinary registered path/preparation lifecycle; no replacement storage selector |
+| S private skills/bootstrap/native launch/cleanup | Pass | Pass | Pass | Pass | Uniform existing capable-runtime exposure, no-bindings path explicit; remove implicit Git injection |
+| S launcher entry/config/runtime, fixtures and tests | Pass | Pass | Pass | Pass | Remove download/source slots as well as callers, retain generic stop/mapping controls |
+| N/S policies, documentation, Guide copy, source hash | Pass | Pass | Pass | Pass | Correct superseded R1 promises; no UI redesign or enabled release |
 
 ## Subsystem / Folder / File Placement Verdict
 
-| Path / Item | Placement Clear? | Owning Boundary Matches? | Mixed-Layer / Over-Split Risk | Verdict | Notes |
+| Path / Item | Placement Clear? | Correct Boundary? | Mixed-Layer / Over-Split Risk | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| N root Go module / internal folders | Pass | Pass | Low | Pass | Existing compact concern layout retained |
-| N scripts/tests and scripts/public/nfs | Pass | Pass | Low | Pass | Local service tooling; stable relative layout minimizes fixture churn |
-| S tests/fixtures/shared-network-workspaces | Pass | Pass | Low | Pass | Consumer-owned test data, not production service source |
-| N RELEASE vs packaging/RELEASE | Pass | Pass | Low | Pass | Root finalization authority links detailed distribution contract, no conflicting owners |
+| N internal/config/installation_state.go | Pass | Pass | Low | Pass | Small state admission concern; no migration subsystem |
+| N existing runtime folders | Pass | Pass | Low | Pass | Retain host architecture, shrink Docker mixed owner |
+| S existing workspace/runtime/launcher folders | Pass | Pass | Low | Pass | No new generic storage module or infrastructure policy in app |
+| N filesystem-usage docs / connection fixture | Pass | Pass | Low | Pass | Actual standalone subject, no paired consumer fixture |
 
 ## Removal / Decommission Completeness Verdict
 
 | Item | Obsolete Piece Named? | Replacement Clear? | Scope Explicit? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| S tracked autobyteus-nfs tree | Pass | Pass | Pass | Pass | N becomes maintained source; ignored outputs are not blindly copied/deleted |
-| S service workflow/installer/Python suites | Pass | Pass | Pass | Pass | Move service ownership, retain launcher cases under new test name |
-| S sibling fixture and same-repo distribution claims | Pass | Pass | Pass | Pass | Pinned fixture and external owner links |
-| Old workflow tag trigger / desktop version assertion / app source hash inputs | Pass | Pass | Pass | Pass | Manual explicit input, NFS version ownership and separate consumer evidence replace repository coupling, not safety checks |
+| S binding/mount observer/admission/native-shared helper | Pass | Pass | Pass | Pass | Remove production imports/wrappers/test hooks, use ordinary owners |
+| S Git injection helper/callers | Pass | Pass | Pass | Pass | Remove automatic scoped trust, preserve operator environment; no wildcard trust |
+| S configured-skill workspace fallback in capable runtimes | Pass | Pass | Pass | Pass | Private profile or no acquisition for no bindings; retain other real materializer callers |
+| S NFS launcher module/list slot/hash/run/start and fixture/pin | Pass | Pass | Pass | Pass | Generic mapping/stop retained; protocol fully removed |
+| N nodes/launcher CLI/public stores/app Docker methods and tests | Pass | Pass | Pass | Pass | Host lifecycle + engine adapter remain; unsupported obligations refused |
+| R1 integration docs/policies/hash entries | Pass | Pass | Pass | Pass | Explicit rewrite to R2; historic tickets remain historical |
 
-V6's active tracked references match the named owner/removal set. No newly dead runtime branch was identified in the inspected relocation boundary; this is not a whole-code dead-code audit. Historical ticket paths and actual installed-path references are intentionally retained, not obsolete code. Implementation must verify the final active-reference inventory rather than mechanically delete every `autobyteus-nfs` string.
+These paths are reachable today: their retirement is the approved behavior change, not a claim that the current source is already dead. After caller rewiring, newly unreachable touched helpers/tests must be deleted and confirmed by imports/builds. Static inventory is not executable completion evidence.
 
 ## Legacy / Backward-Compatibility Verdict
 
-| Area | Wrapper / Dual-Path / Legacy Retention? | Clean Cut Explicit? | Verdict | Notes |
+| Area | Wrapper / Dual Path / Legacy Runtime? | Clean Cut Explicit? | Verdict | Notes |
 | --- | --- | --- | --- | --- |
-| Repository extraction | No | Pass | Pass | No symlink, forwarding installer, submodule, replace or dual source home |
-| Installed CLI/state/descriptor/app paths | No new compatibility path | Pass | Pass | These are current public contracts, not legacy shims |
-| Historical provenance | No runtime legacy | Pass | Pass | Immutable references do not keep an obsolete runtime implementation active |
+| Cross-product runtime protocol | No target retention | Pass | Pass | No optional bridge, renamed mount detector or old node execution |
+| Incompatible active state admission | No legacy execution | Pass | Pass | Narrow preserved-obligation refusal, not fallback interpretation/rewriting |
+| Public descriptors / detached receipts | No current dependency | Pass | Pass | Inert external residue preserved, not scanned/deleted to infer readiness |
+| Unaffected host state | No version branch | Pass | Pass | Same meanings, tolerant irrelevant fields, exact current writes |
 
 ## Persisted-Data Transition Verdict (When Applicable)
 
-| Stored Subject | Approved Decision | Reader / Semantic / Invariant Evidence Sufficient? | Choice Proportionate? | Migration Safety If Required | Verdict | Notes |
+| Stored Subject | Decision | Reader / Invariant Evidence Sufficient? | Proportionate? | Migration Safety If Required | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Private hosted/attachment state, public descriptor, source marker and node references | Not Affected | Pass — config state/store/paths and both installed readers in V4/V5; design changes no fields or deployed paths | Pass | N/A | Pass | Go import identity and release build root are not persisted addresses; no migration/reset/live enumeration warranted |
-| PM task-plans / old evidence / unrelated owner data | Preserve unchanged | Pass — scope, D0 observation and V7 | Pass | N/A | Pass | Non-force checkout only after recheck; no broad clean/prune |
+| App registry/history/credentials/project source skills | Not Affected | Pass — existing path/profile owners, no schema rewrite | Pass | N/A | Pass | No scan or cleanup of historical project links/profiles |
+| Current per-execution generated profiles | Existing exact ownership/release | Pass — V4 pre-await receipt and close-before-release | Pass | N/A | Pass | Future configured exposure uses private execution storage, not project fallback |
+| Node-free NFS host config/pending source binding | Directly Usable — No Migration | Pass — V6, unchanged connection/source/installation semantics | Pass | N/A | Pass | Keep partial/unbound source rules; omit retired field on normal new writes |
+| Active/pending node obligations | Preserve and refuse automatic adoption | Pass — V6 and MP-001/002 below | Pass | N/A — no conversion authorized | Pass | Before root binary replacement and administrative resource changes; old matching operator tool needed for recovery |
+| Old public descriptor/completed receipts | Inert/preserved | Pass — detach removes active intent after owned effects | Pass | N/A | Pass | Not task-owned cleanup and not evidence of active obligation by themselves |
+
+No new migration runner, versioned execution branch, journal, historical scan or backup-copy choreography. Refusal is capability-scoped to NFS administration; app/version/help/verify-release must not depend on old installation state. The proposed check cannot silently drop malformed active content, infer completion from residue, or replace the root binary before refusal. CLI installer and supervisor each require the existing lock at their respective admission boundary; this ordering needs executable controls, not only parser tests.
 
 ## Change / Refactor Safety Verdict
 
 | Area | Sequence Realistic? | Temporary Seams Explicit? | Cleanup / Removal Explicit? | Verdict |
 | --- | --- | --- | --- | --- |
-| Tracked extraction and mechanical namespace/path edits | Pass | Pass — compare normalized runtime source, not blanket semantic rewriting | Pass | Pass |
-| Standalone and paired consumer verification | Pass | Pass — temporary producer checkout only for explicit equality, not ordinary test dependency | Pass | Pass |
-| N main then S pinned integration/personal | Pass | Pass — partial finalization is reported, no false transaction/force rollback | Pass | Pass |
-| Canonical D0 population and task cleanup | Pass | Pass — recheck unborn state/owner conflicts; preserve PM data | Pass | Pass |
+| Resume held extraction | Pass | Pass — existing owner/commits/scratch, replacement dispatch only | Pass | Pass |
+| N admission then host-only removal | Pass | Pass — retain engine-used types first and source/pending semantics | Pass | Pass |
+| S caller/profile/launcher decoupling | Pass | Pass — no final bridge/fallback; exact async ownership retained | Pass | Pass |
+| Tests/docs/independent builds | Pass | Pass — failed preparation remains evidence; R1 mechanical diff no longer sufficient | Pass | Pass |
+| Two-repo finalization | Pass | Pass — fresh refs, ordered non-atomic completion, no paired fixture pin | Pass | Pass |
 
-No claim that local ref observations guarantee future remote state. Design requires refresh and safe reconciliation at each actual finalization boundary.
+No live deployment transition is claimed. Old specially attached containers require explicit operator drain/reconfiguration outside this Task; generic mapping is not a promise of automatic transition or mount propagation.
 
 ## Example Adequacy Verdict
 
-| Topic | Example Needed? | Present And Clear? | Avoided Shape Explained? | Verdict | Notes |
+| Topic | Example Needed? | Present / Clear? | Avoided Shape Clear? | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Standalone roots/hash and fixture paths | Yes | Pass | Pass | Pass | Concrete ROOT/SOURCES list, Go fixture root and provenance fields are actionable |
-| Workflow and version ownership | Yes | Pass | Pass | Pass | Manual-only inputs, default false and preserved six-job gates; no auto tag/release |
-| Runtime migration/recovery | No | N/A | Pass | Pass | No runtime change; inventing a new migration/recovery example would widen scope |
-| Two-repo initial finalization | Yes | Pass | Pass | Pass | Ordered N/S/D0 steps and partial-failure handling named |
+| Ordinary directory semantics | Yes | Pass | Pass | Pass | Existing-but-unmounted directory remains ordinary; absent/malformed NFS metadata irrelevant |
+| Private profile no-bindings/invalid parent | Yes | Pass | Pass | Pass | No acquisition for no bindings; invalid private path fails run, no project fallback; symlink aliases included |
+| Old active/pending vs residue | Yes | Pass | Pass | Pass | Explicit supported/disallowed dispositions and pre-effect boundaries |
+| Generic Docker mapping | Yes | Pass | Pass | Pass | Root/shared and root/nodes/name, not arbitrary mount-root identity |
+| New framework/migration | No | N/A | Pass | Pass | Explicitly rejected; concrete existing owners suffice |
 
 ## Material Premise Validation (Only When Needed)
 
-**None.** No finding or new mechanism depends on a material scenario outside the established BEH-001–004 basis. Candidate refusal and concurrent-owner preservation already have independent SCN-002/004 governing contracts and forward paths. No hypothetical runtime failure is used to demand new validation, migration or recovery machinery.
+The following records confirm the revised guard's preservation basis; they do not add scenarios or a live upgrade campaign. Example 9's independent-origin rule was applied.
+
+### MP-001 — Completed predecessor setup retains active selected-node obligations
+
+- Authority / behavior: R2 REQ-009, AC-009 / BEH-005; retain unsupported active obligations rather than silently adopting them.
+- Initiating kind / trigger: **User**; predecessor public create/connect with selected `--nodes`, approved setup consent, coherent goal of sharing that source with selected nodes.
+- Evidence / forward path: N cli inputs/run/setup → setup.Plan copies requested node names into Attachment → Apply validates and SaveIntent → writes private attachment before EnsureVolume/Probe/Recreate/publishNode → successful setup removes pending intent but keeps active Attachment.Nodes. Source V6, not a synthetic JSON mutation, produces this state.
+- Lifecycle / consequence: the configured installation still contains an obligation to those nodes until supported drained detach removes it. A later installation/administrative invocation of the new host-only tool cannot safely pretend it only owns a host mount. Existing InstallRoot replaces the root binary before normal Run, so checking only late setup code would be insufficient.
+- Scenario validity / reachability: **Supported Normal Scenario plus explicit preservation contract / Reachable**. No claim such a live installation was inspected or upgrade executed.
+- Review consequence: approve the bounded trusted-state refusal before binary replacement/effects, retaining matching-old-tool recovery externally. Do not keep old execution machinery or add automatic migration.
+
+### MP-002 — Supported incomplete predecessor setup retains pending node intent
+
+- Authority / behavior: REQ-009 / AC-009 and existing saved-setup retry contract, BEH-005.
+- Initiating kind / governing contract: **Contract**; predecessor setup explicitly persists intended resources and exposes reconnect to review/resume incomplete setup. Preservation applies to that committed pending intent, not just completed active state.
+- Evidence / forward path: operator consents to selected-node create/connect → Apply.SaveIntent writes pending Plan.Attachment.Nodes before package/source/export/mount/node effects → subsequent setup error returns without erasing intent → public reconnect reads pending plan and offers review/recovery. Source Apply/pending/Run implement that contract. No invented manual deletion, external corruption or arbitrary concurrent workflow is needed.
+- Lifecycle / consequence: active attachment need not yet exist at the saved-intent boundary; inspecting only active attachment could miss an unresolved selected-node plan. Existing partial source binding separately constrains host recovery and must remain intact.
+- Scenario validity / reachability: **Supported Explicit Edge Scenario / Reachable**, established by the governing saved-setup contract and production ordering; not a claim of a fresh reproduction.
+- Review consequence: include the bounded pending envelope in the same refusal boundary. No receipt/workspace/history enumeration and no transformation/legacy recovery path.
 
 ## Unresolved Approved-Behavior Or Current-State Gaps
 
-**None for architecture readiness.** Independent builds, executable packaging controls, consumer equality and final remote receipts are required downstream evidence, not results claimed by this review.
+**None for the architecture decision.** Native provider operation, bootstrap/toolchain availability and executable candidate behavior remain downstream evidence obligations. Existing native adapter code establishes a reusable architecture, not fresh provider qualification. A demonstrated inability to honor R2 must return upstream, not trigger a silent project-file fallback.
 
 ## Review Decision
 
-**Pass — ARCH-REV-001, R1/SR-001 and SR-002.** Approved behavior is confirmed; ownership, spines, dependency removal, qualification boundary and no-data-transition decision are coherent and actionable. Ready for implementation of the approved extraction. This is not source-review acceptance, test Pass, platform qualification, Delivery Completed or authorization to publish/deploy.
+**Pass — ARCH-REV-002 / R2-SR-003 / SR-004.** The revised basis is confirmed and the design is actionable. This replaces the current ARCH-REV-001 result; it does not carry forward the rejected attachment contract. Resume the existing held implementation under this replacement basis only.
 
 ## Findings
 
-**None.** No Design Impact or Requirement Gap requiring upstream revision was established. No unrelated follow-up is created.
+**None.** No blocking Design Impact, Requirement Gap or Unclear issue established. No unrelated follow-up or old Task campaign created.
 
 ## Classification
 
-**Pass; failure classification N/A.** Preserve **Large / High / independently reviewed**.
+**Pass; failure classification N/A. Large / High / independently reviewed.** This is a material behavior/ownership revision, not a docs-only acceptance adjustment or completed implementation.
 
 ## Recommended Recipient
 
-Fresh handoff rules select **`/software_engineering_team/implementation_engineer`**: architecture review passes and the cumulative package is ready for implementation. Fail/Blocked does not apply; the informational-after-primary condition is not the current work handoff. Send the single primary recipient this paired-repository extraction result and both authoritative review artifacts plus current requirements/design/investigation/history/workspace context. No duplicate dispatch, bulk historical manifest or old campaign restart.
+Fresh rules select **`/software_engineering_team/implementation_engineer`** for architecture Pass / cumulative package ready for implementation. Send the replacement basis to that existing owner, not a new copy. Carry this report/history, R2 requirements, SR-004 design and current investigation/handoff/correction; checkpoint remains in the canonical ticket. Preserve existing scratch/evidence. Fail/Blocked does not apply; no duplicate dispatch or bulk evidence manifest.
 
 ## Residual Risks
 
-1. **Mechanical drift:** ROOT/import/workflow/archive paths can break despite sound design. Fresh independent archive checks, normalized runtime comparison and moved negative controls remain required, not yet executed.
-2. **Qualification meaning:** N's source hash attests owned inputs plus declared integration contract, not arbitrary app revisions. Future publication must retain explicit service/engine/consumer commit or image evidence, current-source/physical/user/candidate/signing gates. Existing evidence-path checks alone are not semantic validation of those receipts; extraction starts unqualified and does not claim otherwise. No new receipt schema is imposed here.
-3. **Consumer drift:** pinned fixture equality and actual parser/launcher tests protect this paired candidate; they do not promise all future service/app combinations. Pin changes need explicit review/checks as designed.
-4. **Artifact/platform limits:** retained arm64 engine bytes must be freshly verified in owned scratch. Synthetic fixtures, cross-compilation and old bounded runtime proof are not native amd64/Mac/physical/hosted-Actions/signing qualification. Availability is downstream execution evidence, not inferred from this report.
-5. **Two-repo completion is non-atomic:** refreshed refs and actual producer identity are required. A successful N push followed by a blocked S integration is partial completion, not permission to force rollback or erase another owner's work. Preserve D0 task-plans and old retained assets.
-6. **Licensing/provenance transcription:** exact LICENSE/CLA/additional permission and recipe attribution must survive implementation. This review confirms the preservation design against repository texts, not new legal advice or relicensing authority.
+1. **Removal completeness:** all actual admission/terminal/Git/profile/launcher call sites and dynamic module slots must disappear coherently. Ordinary registered workspace failure must not become a fallback to a different path. Compilation plus actual ordinary-path/caller fixtures are required.
+2. **Private exposure behavior:** new ordinary-directory coverage expands use of existing native adapters. Validate no-bindings, unresolved/collision policy, symlink alias rejection, failed/cancelled preparation, concurrent profile ownership and close-before-release. Unsupported provider capability remains a truthful run failure, not permission to restore project materialization.
+3. **Privileged reduction:** retain Docker engine-used helpers and identity/security checks, source/pending ordering and busy-detach refusal. Verify state admission at installation, CLI and supervisor boundaries before effects, including binary replacement; helper-only tests are insufficient.
+4. **Intentional lost promises:** app cannot detect an unmounted-but-existing directory, wrong NFS source or mounted-state changes. It may receive ordinary Git ownership/I/O errors. No outage isolation, automatic container transition or global filesystem equivalence is implied.
+5. **Policy/proof drift:** N's extracted R1 policy clauses and old review are not current authority. Correct source-hash inputs/docs/Guide claims; all qualification fields remain closed. No source/compile/fixture result can substitute for native/physical/signing/publication evidence.
+6. **Execution/finalization pending:** failed Python bootstrap must be repaired in owned setup with its failed evidence retained. Fresh standalone and affected S checks and actual integrated identities remain required. Preserve D0 PM data, untracked implementation evidence, old assets and partial completion; do not reset/force/release/deploy.
 
 ## Latest Authoritative Result
 
 - Review Decision: **Pass**.
-- Material-Premise Gate: **Pass**.
-- Current review: **ARCH-REV-001**, first baseline; prior decision **N/A**.
-- Applicable solution: **R1 / SR-001 approved; SR-002 design**.
-- Notes: design review only; no execution/finalization/publication claim. Required implementation, independent source review, executable validation and Delivery remain with their owners under fresh routes.
+- Material-Premise Gate: **Pass**, MP-001/MP-002 independently grounded.
+- Current review: **ARCH-REV-002**, superseding ARCH-REV-001 only as current result; baseline history preserved.
+- Applicable authority: **R2 / SR-003 Approved; SR-004 Ready**.
+- Notes: replacement design review, no product tests or implementation acceptance. Source review, executable validation and Delivery remain with their owners. No new approval questionnaire, live-resource authorization, public qualification or completion claim.
