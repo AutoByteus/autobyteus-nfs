@@ -1,0 +1,724 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts[39m
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-private-profile-process.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-private-profile-process.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 93[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m   Start at [22m 16:02:49
+[2m   Duration [22m 2.48s[2m (transform 1.16s, setup 22ms, import 1.88s, tests 93ms, environment 0ms)[22m
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts[39m
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+(node:60198) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-skills-data-wmwFf3
+Config file not found in new data directory: Error: Configuration file not found: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-skills-data-wmwFf3/.env
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mpasses imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+[22m[39mResolved skill 'autobyteus_single_1792159379508_0755b28191e56' to path: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379508_0755b28191e56-g94ZKd/agents/autobyteus-single-agent-1792159379508_0755b28191e56/skills/autobyteus_single_1792159379508_0755b28191e56
+
+[90mstderr[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mpasses imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+[22m[39mTool 'run_bash' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'read_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'edit_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'write_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+
+[90mstderr[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mpasses imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+[22m[39mTool 'run_bash' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'read_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'edit_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'write_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mpasses imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+[22m[39mResolved skill 'autobyteus_tone_1792159379508_0755b28191e56' to path: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379508_0755b28191e56-g94ZKd/agents/autobyteus-multi-agent-1792159379508_0755b28191e56/skills/autobyteus_tone_1792159379508_0755b28191e56
+Resolved skill 'autobyteus_outline_1792159379508_0755b28191e56' to path: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379508_0755b28191e56-g94ZKd/agents/autobyteus-multi-agent-1792159379508_0755b28191e56/skills/autobyteus_outline_1792159379508_0755b28191e56
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+[22m[39mStarting directory traversal for: '/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1' with max_depth=null
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+[22m[39mCreating on-demand SkillWorkspace for: single_private_1792159379545_a1da36d905dd1
+Creating on-demand SkillWorkspace for: single_private_1792159379545_a1da36d905dd1
+Creating on-demand SkillWorkspace for: tone_1792159379545_a1da36d905dd1
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1.
+Initialized SkillWorkspace for skill 'single_private_1792159379545_a1da36d905dd1' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1.
+Initialized SkillWorkspace for skill 'single_private_1792159379545_a1da36d905dd1' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-multi-1792159379545_a1da36d905dd1/skills/tone_1792159379545_a1da36d905dd1.
+Initialized SkillWorkspace for skill 'tone_1792159379545_a1da36d905dd1' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-multi-1792159379545_a1da36d905dd1/skills/tone_1792159379545_a1da36d905dd1
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+[22m[39mCreated WorkspaceFileExplorer for skill_ws_single_private_1792159379545_a1da36d905dd1 (graphql-folder-children).
+Created WorkspaceFileExplorer for skill_ws_single_private_1792159379545_a1da36d905dd1 (graphql-file-content).
+Created WorkspaceFileExplorer for skill_ws_tone_1792159379545_a1da36d905dd1 (graphql-file-content).
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+[22m[39mDirectory traversal for '/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379545_a1da36d905dd1-HVry4e/agents/shared-single-1792159379545_a1da36d905dd1/skills/single_private_1792159379545_a1da36d905dd1' completed in 0.0110 seconds.
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+[22m[39mStarting directory traversal for: '/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424' with max_depth=null
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+[22m[39mCreating on-demand SkillWorkspace for: team_shared_1792159379609_6ac678e37e424
+Creating on-demand SkillWorkspace for: team_shared_1792159379609_6ac678e37e424
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424.
+Initialized SkillWorkspace for skill 'team_shared_1792159379609_6ac678e37e424' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424.
+Initialized SkillWorkspace for skill 'team_shared_1792159379609_6ac678e37e424' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+[22m[39mCreated WorkspaceFileExplorer for skill_ws_team_shared_1792159379609_6ac678e37e424 (graphql-folder-children).
+Created WorkspaceFileExplorer for skill_ws_team_shared_1792159379609_6ac678e37e424 (graphql-file-content).
+
+[90mstdout[2m | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22m[2mAgent package private skills GraphQL e2e[2m > [22m[2mimports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+[22m[39mDirectory traversal for '/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379609_6ac678e37e424-W2OQPU/agent-teams/team-1792159379609_6ac678e37e424/skills/team_shared_1792159379609_6ac678e37e424' completed in 0.0110 seconds.
+
+ [31m❯[39m tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 297[2mms[22m[39m
+[31m     [31m×[31m materializes imported shared-agent canonical single-skill and multi-skill layouts for Codex runtime[39m[32m 53[2mms[22m[39m
+     [32m✓[39m passes imported canonical single-skill and multi-skill paths to the AutoByteus runtime config[32m 37[2mms[22m[39m
+     [32m✓[39m imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility[32m 64[2mms[22m[39m
+     [32m✓[39m imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards[32m 67[2mms[22m[39m
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+(node:60819) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mimports root/support files, reuses equivalent URLs, and retains all fields on query and Reload
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-0IAVbs/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-0IAVbs/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mchecks without replacement, retains offline availability, and updates a collection with disabled choices
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-M2Qdeu/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-M2Qdeu/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mmaps conflicts with both paths and rejects the whole source without partial publication
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-24jotU/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-24jotU/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mretains REMOVING after deletion fault and retries through the API after owner reconstruction
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-h0WZPg/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-h0WZPg/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mkeeps local mutations and Reload usable with a malformed managed registry without rewriting it
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-2pP13w/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-2pP13w/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mkeeps local mutations and Reload usable with a malformed managed registry without rewriting it
+[22m[39mInitialized server settings service with 19 predefined settings
+Added new custom server setting: AUTOBYTEUS_SKILLS_PATHS
+Server setting 'AUTOBYTEUS_SKILLS_PATHS' updated
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mkeeps local mutations and Reload usable with a malformed managed registry without rewriting it
+[22m[39mServer setting 'AUTOBYTEUS_SKILLS_PATHS' updated
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'CONFIGURED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-GAtZJF/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-GAtZJF/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'CONFIGURED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-DUHdSw/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-DUHdSw/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'CONFIGURED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-HjvZHP/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-HjvZHP/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'CONFIGURED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-WhqTr0/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-WhqTr0/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-4I1YpH/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-4I1YpH/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-h28XhY/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-h28XhY/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-5vs255/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-5vs255/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-iHHxjy/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-iHHxjy/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'CONFIGURED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-ZJV8n3/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-ZJV8n3/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'CONFIGURED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-sHa7dY/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-sHa7dY/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'CONFIGURED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Oo1R1L/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Oo1R1L/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'CONFIGURED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-cDH41j/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-cDH41j/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Fcr1j2/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Fcr1j2/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-ErEkMg/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-ErEkMg/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-80fzGF/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-80fzGF/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-2zMTE9/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-2zMTE9/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-8XMXpj/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-8XMXpj/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-YYIEtL/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-YYIEtL/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-8MsWlb/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-8MsWlb/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-lBwayk/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-lBwayk/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-yRL0yK/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-yRL0yK/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Xe5CJ2/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-Xe5CJ2/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=false
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-t7EXIT/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-t7EXIT/data/.env
+
+[90mstdout[2m | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts[2m > [22m[2mGitHub skill sources through production GraphQL documents[2m > [22m[2mprepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=true
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-BqDVyK/data
+Updated config file path to /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/github-skill-api-BqDVyK/data/.env
+
+ [32m✓[39m tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts [2m([22m[2m29 tests[22m[2m)[22m[33m 4182[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=false [33m 393[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=true [33m 443[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=false [33m 347[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=true [33m 405[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=false [33m 371[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=true [33m 410[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=false [33m 324[2mms[22m[39m
+     [33m[2m✓[22m[39m prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=true [33m 585[2mms[22m[39m
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+(node:60895) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+Custom app data directory set to: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv
+Updated config file path to /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/.env
+Loading environment from: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/.env
+[dotenv@17.3.1] injecting env (2) from ../../../../../../../../../var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Environment variables loaded successfully
+Server public base URL configured to: http://localhost:8000
+=== Starting logging configuration ===
+Logging config file is ignored in Node.js: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/logging_config.ini
+============================================================
+SERVER PUBLIC URL: http://localhost:8000
+APP ROOT DIRECTORY: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+APP DATA DIRECTORY: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv
+DB DIRECTORY: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/db
+LOGS DIRECTORY: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/logs
+DOWNLOAD DIRECTORY: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/download
+MEMORY DIRECTORY: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/memory
+============================================================
+Initialized server settings service with 19 predefined settings
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mAgentRunManager initialized.
+AgentRunManager initialized.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mLoading workspace packages to trigger registration...
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully loaded workspace packages.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/temp_workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/temp_workspace.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/workspace-rest-appdata-gUVBIv/temp_workspace with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistering agent customization processors...
+Input processor definition 'WorkspacePathSanitizationProcessor' (class: 'WorkspacePathSanitizationProcessor') registered successfully.
+Registered input processor 'WorkspacePathSanitizationProcessor'.
+Input processor definition 'UserInputContextBuildingProcessor' (class: 'UserInputContextBuildingProcessor') registered successfully.
+Registered input processor 'UserInputContextBuildingProcessor'.
+LLM response processor definition 'MediaUrlTransformerProcessor' (class: 'MediaUrlTransformerProcessor') registered successfully.
+Registered LLM response processor 'MediaUrlTransformerProcessor'.
+Agent customization processor registration complete.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Core Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'delegate_task'
+Successfully registered tool definition: 'list_available_agents'
+Successfully registered tool definition: 'generate_image'
+Successfully registered tool definition: 'edit_image'
+Successfully registered tool definition: 'generate_speech'
+Successfully registered tool definition: 'generate_video'
+Registered required tool unit: Task Delegation Tools
+Registered required tool unit: Agent Discovery Tools
+Registered required tool unit: Media Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Agent Communication Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'publish_artifacts'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Published Artifact Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Project Task Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Browser Tools
+
+[90mstderr[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mOverwriting existing tool definition for name: 'search_web'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mSuccessfully registered tool definition: 'search_web'
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mRegistered required tool unit: Search Tools
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e
+[22m[39mServer setting 'AUTOBYTEUS_RETROSPECTIVE_SKILL_IMPROVER_AGENT_DEFINITION_ID' updated
+Initialized 'AUTOBYTEUS_RETROSPECTIVE_SKILL_IMPROVER_AGENT_DEFINITION_ID' with 'autobyteus-retrospective-skill-improver'.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mreopens HTML and relative media over HTTP after external replacement and deletion
+[22m[39mGraphQL mutation to create workspace metadata
+Creating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-MIZKyb/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-MIZKyb/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mreopens HTML and relative media over HTTP after external replacement and deletion
+[22m[39mCreated and registered workspace ID: agent_ws_346211d358198ca47c58e20eb046af37b70f4b856d16999a64250e848350d430
+
+[90mstderr[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mreopens HTML and relative media over HTTP after external replacement and deletion
+[22m[39mFile not found in workspace agent_ws_346211d358198ca47c58e20eb046af37b70f4b856d16999a64250e848350d430: docs/assets/diagram one.png
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mreopens HTML and relative media over HTTP after external replacement and deletion
+[22m[39mClosing FileSystemWorkspace agent_ws_346211d358198ca47c58e20eb046af37b70f4b856d16999a64250e848350d430
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves encoded image paths through a real FileSystemWorkspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-tWToPA/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-tWToPA/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves encoded image paths through a real FileSystemWorkspace
+[22m[39mCreated and registered workspace ID: agent_ws_2ae21dae4de988684576b74ccac526074b8026936affa8f8f2e9aa43a9148764
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves encoded image paths through a real FileSystemWorkspace
+[22m[39mClosing FileSystemWorkspace agent_ws_2ae21dae4de988684576b74ccac526074b8026936affa8f8f2e9aa43a9148764
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-OwNB5f/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-OwNB5f/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+[22m[39mCreated and registered workspace ID: agent_ws_8f2372ecd4897ee737fcd9ea904f5ba3a53425069adc31cc1ed95a705023d9aa
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mserves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+[22m[39mClosing FileSystemWorkspace agent_ws_8f2372ecd4897ee737fcd9ea904f5ba3a53425069adc31cc1ed95a705023d9aa
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects a same-prefix sibling traversal through FileSystemWorkspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-RqW4Wg/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-RqW4Wg/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects a same-prefix sibling traversal through FileSystemWorkspace
+[22m[39mCreated and registered workspace ID: agent_ws_49406069358fd8c2fd892b6741c6980b8531877aa02233a01da0e06008767b12
+
+[90mstderr[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects a same-prefix sibling traversal through FileSystemWorkspace
+[22m[39mSecurity error accessing path ../workspace-sibling/leak.png in workspace agent_ws_49406069358fd8c2fd892b6741c6980b8531877aa02233a01da0e06008767b12: Access denied: Path resolves outside the workspace boundary.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects a same-prefix sibling traversal through FileSystemWorkspace
+[22m[39mClosing FileSystemWorkspace agent_ws_49406069358fd8c2fd892b6741c6980b8531877aa02233a01da0e06008767b12
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through FileSystemWorkspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-t1GwUL/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-t1GwUL/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through FileSystemWorkspace
+[22m[39mCreated and registered workspace ID: agent_ws_dfac97783ee1e1d1f5353f14e31f2310bd260ba486ee81082e68abb6d7777ab7
+
+[90mstderr[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through FileSystemWorkspace
+[22m[39mSecurity error accessing path /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-t1GwUL/absolute.png in workspace agent_ws_dfac97783ee1e1d1f5353f14e31f2310bd260ba486ee81082e68abb6d7777ab7: Access denied: Path resolves outside the workspace boundary.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through FileSystemWorkspace
+[22m[39mClosing FileSystemWorkspace agent_ws_dfac97783ee1e1d1f5353f14e31f2310bd260ba486ee81082e68abb6d7777ab7
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through the static workspace route
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-eLBZ4c/workspace
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-eLBZ4c/workspace.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through the static workspace route
+[22m[39mCreated and registered workspace ID: agent_ws_2453c1db88026b772eaf849375e86485aa911981346aad7106a97d6a76e6f43c
+
+[90mstderr[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through the static workspace route
+[22m[39mSecurity error accessing path /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-workspace-rest-e2e-eLBZ4c/absolute.html in workspace agent_ws_2453c1db88026b772eaf849375e86485aa911981346aad7106a97d6a76e6f43c: Access denied: Path resolves outside the workspace boundary.
+
+[90mstdout[2m | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts[2m > [22m[2mworkspace content REST boundary e2e[2m > [22m[2mrejects an absolute candidate through the static workspace route
+[22m[39mClosing FileSystemWorkspace agent_ws_2453c1db88026b772eaf849375e86485aa911981346aad7106a97d6a76e6f43c
+
+ [32m✓[39m tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 282[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts[2m > [22mAgent package private skills GraphQL e2e[2m > [22mmaterializes imported shared-agent canonical single-skill and multi-skill layouts for Codex runtime
+[31m[1mAssertionError[22m: expected '/private/var/folders/7w/9r4_s1_s42z3f…' to be '/var/folders/7w/9r4_s1_s42z3f7c136bpj…' // Object.is equality[39m
+
+Expected: [32m"/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379455_643e2e2753f95-uI6Ylm/agents/codex-single-agent-1792159379455_643e2e2753f95/skills/codex_single_1792159379455_643e2e2753f95"[39m
+Received: [31m"[7m/private[27m/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/agent-package-private-local-1792159379455_643e2e2753f95-uI6Ylm/agents/codex-single-agent-1792159379455_643e2e2753f95/skills/codex_single_1792159379455_643e2e2753f95"[39m
+
+[36m [2m❯[22m expectMaterializedSkillSymlink tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts:[2m287:35[22m[39m
+    [90m285| [39m  [35mconst[39m materialized [33m=[39m input[33m.[39mmaterialized[33m![39m[33m;[39m
+    [90m286| [39m  [34mexpect[39m(materialized[33m.[39mskill[33m.[39mname)[33m.[39m[34mtoBe[39m(input[33m.[39mexpectedName)[33m;[39m
+    [90m287| [39m  expect(materialized.sourceRoot).toBe(path.resolve(input.expectedSour…
+    [90m   | [39m                                  [31m^[39m
+    [90m288| [39m
+    [90m289| [39m  [35mconst[39m stats [33m=[39m [35mawait[39m fs[33m.[39m[34mlstat[39m(materialized[33m.[39mlinkRoot)[33m;[39m
+[90m [2m❯[22m tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts:[2m503:11[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m38 passed[39m[22m[90m (39)[39m
+[2m   Start at [22m 16:02:52
+[2m   Duration [22m 16.92s[2m (transform 6.16s, setup 71ms, import 11.39s, tests 4.76s, environment 0ms)[22m
+

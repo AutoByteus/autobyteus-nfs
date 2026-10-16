@@ -1,0 +1,6 @@
+$ pnpm -C autobyteus-server-ts exec tsc --noEmit
+tests/e2e/runtime/codex-interrupted-compaction.e2e.test.ts(94,8): error TS1005: ',' expected.
+tests/e2e/runtime/codex-interrupted-compaction.e2e.test.ts(97,21): error TS1005: ',' expected.
+tests/e2e/runtime/codex-interrupted-compaction.e2e.test.ts(98,30): error TS1005: ',' expected.
+tests/e2e/runtime/codex-interrupted-compaction.e2e.test.ts(99,40): error TS1005: ',' expected.
+tests/e2e/runtime/codex-interrupted-compaction.e2e.test.ts(100,5): error TS1135: Argument expression expected.

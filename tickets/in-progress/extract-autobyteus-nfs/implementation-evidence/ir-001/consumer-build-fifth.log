@@ -1,0 +1,102 @@
+Scope: all 13 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1243
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1243, reused 1, downloaded 44, added 46
+Progress: resolved 1243, reused 1, downloaded 125, added 105
+Progress: resolved 1243, reused 1, downloaded 225, added 155
+Progress: resolved 1243, reused 1, downloaded 296, added 247
+Progress: resolved 1243, reused 1, downloaded 381, added 370
+Progress: resolved 1243, reused 1, downloaded 489, added 471
+Progress: resolved 1243, reused 1, downloaded 615, added 602
+Progress: resolved 1243, reused 1, downloaded 723, added 723
+Progress: resolved 1243, reused 1, downloaded 827, added 825
+Progress: resolved 1243, reused 1, downloaded 931, added 931
+Progress: resolved 1243, reused 1, downloaded 1042, added 1044
+Progress: resolved 1243, reused 1, downloaded 1154, added 1151
+Progress: resolved 1243, reused 1, downloaded 1232, added 1233
+Progress: resolved 1243, reused 1, downloaded 1237, added 1239
+Progress: resolved 1243, reused 1, downloaded 1239, added 1241
+Progress: resolved 1243, reused 1, downloaded 1240, added 1242
+Progress: resolved 1243, reused 1, downloaded 1241, added 1242
+Progress: resolved 1243, reused 1, downloaded 1241, added 1243, done
+.../node_modules/@parcel/watcher install$ node scripts/build-from-source.js
+.../sharp@0.33.5/node_modules/sharp install$ node install/check
+.../node_modules/vue-demi postinstall$ node -e "try{require('./scripts/postinstall.js')}catch(e){}"
+.../node_modules/@parcel/watcher install: Done
+.../node_modules/vue-demi postinstall: Done
+.../sharp@0.33.5/node_modules/sharp install: Done
+
+autobyteus-ts postinstall$ node ./scripts/fix-node-pty-permissions.mjs
+autobyteus-ts postinstall: [node-pty-fix] ok: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/node-pty@1.1.0/node_modules/node-pty/prebuilds/darwin-arm64/spawn-helper
+autobyteus-ts postinstall: Done
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @google/genai@2.24.0.                               │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Done in 26.1s using pnpm v10.28.2
+
+> autobyteus-server-ts@0.1.1 test:integration:prepare /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> node ./scripts/integration-test-prerequisites.mjs prepare
+
+
+[integration prerequisites] server build (with shared packages)
+
+> autobyteus-server-ts@0.1.1 prebuild /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm prepare:shared && pnpm exec prisma generate --schema ./prisma/schema.prisma
+
+
+> autobyteus-server-ts@0.1.1 prepare:shared /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm -C .. --filter autobyteus-ts --filter @autobyteus/application-sdk-contracts --filter @autobyteus/application-backend-sdk build
+
+Scope: 3 of 13 workspace projects
+autobyteus-ts build$ node ./scripts/clean-dist.mjs && tsc -p tsconfig.build.json && node ./scripts/verify-runtime-dependencies.mjs
+autobyteus-application-sdk-contracts build$ tsc -p tsconfig.build.json
+autobyteus-application-sdk-contracts build: Done
+autobyteus-ts build: [verify:runtime-deps] OK
+autobyteus-ts build: Done
+autobyteus-application-backend-sdk build$ tsc -p tsconfig.build.json
+autobyteus-application-backend-sdk build: Done
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v5.22.0) to ./../node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client in 104ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
+
+
+> autobyteus-server-ts@0.1.1 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm run build:full
+
+
+> autobyteus-server-ts@0.1.1 build:full /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> node ./scripts/clean-build-output.mjs && tsc -p tsconfig.build.json && node ./scripts/copy-build-assets.mjs && node ./scripts/run-sanitized-built-in-agents-bootstrap-smoke.mjs
+
+AgentFactory (Singleton) initialized.
+Built-in agents bootstrap smoke check passed.
+Sanitized built-module/bootstrap smoke passed without DATABASE_URL.
+
+[integration prerequisites] application frontend SDK
+
+> @autobyteus/application-frontend-sdk@0.1.0 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-application-frontend-sdk
+> tsc -p tsconfig.build.json
+
+
+[integration prerequisites] application devkit
+
+> @autobyteus/application-devkit@0.1.0 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-application-devkit
+> tsc -p tsconfig.build.json
+
+
+[integration prerequisites] Brief Studio importable package
+AgentFactory (Singleton) initialized.
+(node:32837) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Generated importable package at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/applications/brief-studio/dist/importable-package
+Generated application root at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/applications/brief-studio/dist/importable-package/applications/brief-studio
+Integration test prerequisites are present.

@@ -1,0 +1,74 @@
+
+> autobyteus-server-ts@0.1.1 pretypecheck /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm prepare:shared
+
+
+> autobyteus-server-ts@0.1.1 prepare:shared /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm -C .. --filter autobyteus-ts --filter @autobyteus/application-sdk-contracts --filter @autobyteus/application-backend-sdk build
+
+Scope: 3 of 13 workspace projects
+autobyteus-ts build$ node ./scripts/clean-dist.mjs && tsc -p tsconfig.build.json && node ./scripts/verify-runtime-dependencies.mjs
+autobyteus-application-sdk-contracts build$ tsc -p tsconfig.build.json
+autobyteus-application-sdk-contracts build: Done
+autobyteus-ts build: [verify:runtime-deps] OK
+autobyteus-ts build: Done
+autobyteus-application-backend-sdk build$ tsc -p tsconfig.build.json
+autobyteus-application-backend-sdk build: Done
+
+> autobyteus-server-ts@0.1.1 typecheck /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> tsc -p tsconfig.build.json --noEmit
+
+[log] isElectronBuild false
+[log] [Electron Module] Skipping electron module setup: BUILD_TARGET is not electron
+[90m│[39m
+[32m◆[39m  Types generated in .nuxt.
+
+> autobyteus@1.5.4 test:nuxt /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-web
+> cross-env NUXT_TEST=true vitest components/settings/__tests__/NfsGuideCard.spec.ts components/settings/__tests__/NodeManager.spec.ts components/settings/__tests__/DockerNodeStartGuideCard.spec.ts utils/__tests__/nfsLauncherCommands.spec.ts --run --maxWorkers=2
+
+isElectronBuild false
+[Electron Module] Skipping electron module setup: BUILD_TARGET is not electron
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-web[39m
+
+[90mstderr[2m | components/settings/__tests__/DockerNodeStartGuideCard.spec.ts
+[22m[39mWarning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+[90mstderr[2m | components/settings/__tests__/NodeManager.spec.ts
+[22m[39mWarning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+[90mstdout[2m | components/settings/__tests__/NodeManager.spec.ts
+[22m[39mserverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+[90mstdout[2m | components/settings/__tests__/DockerNodeStartGuideCard.spec.ts
+[22m[39mserverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+ [32m✓[39m components/settings/__tests__/DockerNodeStartGuideCard.spec.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m components/settings/__tests__/NodeManager.spec.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+[90mstderr[2m | components/settings/__tests__/NfsGuideCard.spec.ts
+[22m[39mWarning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+[90mstderr[2m | utils/__tests__/nfsLauncherCommands.spec.ts
+[22m[39mWarning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+[90mstdout[2m | components/settings/__tests__/NfsGuideCard.spec.ts
+[22m[39mserverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+[90mstdout[2m | utils/__tests__/nfsLauncherCommands.spec.ts
+[22m[39mserverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+ [32m✓[39m components/settings/__tests__/NfsGuideCard.spec.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m utils/__tests__/nfsLauncherCommands.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m24 passed[39m[22m[90m (24)[39m
+[2m   Start at [22m 16:01:01
+[2m   Duration [22m 8.87s[2m (transform 3.59s, setup 15.63s, collect 191ms, tests 104ms, environment 738ms, prepare 459ms)[22m
+

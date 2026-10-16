@@ -1,0 +1,11 @@
+# github.com/AutoByteus/autobyteus-nfs/internal/setup
+internal/setup/status.go:7:2: "github.com/AutoByteus/autobyteus-nfs/internal/config" imported and not used
+FAIL	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs [build failed]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	0.946s
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/cli [build failed]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	0.502s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	0.878s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.836s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.306s
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup [build failed]
+FAIL

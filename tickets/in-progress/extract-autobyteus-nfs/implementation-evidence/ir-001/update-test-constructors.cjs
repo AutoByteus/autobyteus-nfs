@@ -1,0 +1,6 @@
+const fs=require('fs'),path=require('path');
+const root='/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/tests';
+const scratch=fs.readFileSync(path.join(__dirname,'consumer-scratch-path.txt'),'utf8').trim();
+const ts=require(path.join(scratch,'repo/autobyteus-server-ts/node_modules/typescript'));
+const removed={ClaudeSessionBootstrapper:[1],CodexThreadBootstrapper:[1,5],ClaudeSessionManager:[3],CodexThreadManager:[1],CodexAgentRunBackendFactory:[2]};
+function walk(dir){for(const f of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,f.name);if(f.isDirectory())walk(p);else if(p.endsWith('.ts')){let s=fs.readFileSync(p,'utf8'),edits=[];const tree=ts.createSourceFile(p,s,ts.ScriptTarget.Latest,true);function visit(n){if(ts.isNewExpression(n)&&removed[n.expression.getText(tree)]&&n.arguments?.length){const args=n.arguments;const keep=args.filter((_,i)=>!removed[n.expression.getText(tree)].includes(i));edits.push([args.pos,args.end,keep.map(x=>x.getText(tree)).join(', ')]);}ts.forEachChild(n,visit);}visit(tree);for(const [a,b,t] of edits.sort((a,b)=>b[0]-a[0]))s=s.slice(0,a)+t+s.slice(b);if(edits.length)fs.writeFileSync(p,s);}}}walk(root);

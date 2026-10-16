@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-16T14:14:13.070701+00:00",
+  "ownedActiveBefore": [],
+  "resources": "No VM/container/mount/export/credential/provider actions; owned Guide browser and Nuxt already stopped",
+  "roots": [
+    {
+      "path": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn",
+      "removed": true
+    },
+    {
+      "path": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5",
+      "removed": true
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/nfs-extract-ir001-archive-7reza0f3",
+      "removed": true
+    }
+  ],
+  "temporaryEditors": [
+    {
+      "path": "/tmp/r2-tests.py",
+      "sha256": "bfb71a7296b223681d5e6db8259a06dea08471adf203743ad238b63fb60cfbf3",
+      "removed": true
+    },
+    {
+      "path": "/tmp/r2-test-cleanup.py",
+      "sha256": "f9aaed5cbbd34f692cee855b6f162bffe9e88afc2a9d49a21f01fef9142def2e",
+      "removed": true
+    },
+    {
+      "path": "/tmp/r2-fixture-docs.py",
+      "sha256": "6213f0e4d04c792b2bbf07412031c8fa4b1a8e6e9c6bee37c7f476adb0842955",
+      "removed": true
+    }
+  ],
+  "protected": {
+    "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/COPYRIGHT": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/SHA256SUMS": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-build-arm64.txt": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-manifest.json": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb": true,
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/engine-manifest.json": true
+  },
+  "D0Status": "?? task-plans/\n",
+  "result": "Complete for enumerated task-owned resources; unrelated scratch/assets/worktrees preserved"
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "pnpm",
+      "test:integration:prepare"
+    ],
+    "exit": 254,
+    "seconds": 0.384
+  }
+]

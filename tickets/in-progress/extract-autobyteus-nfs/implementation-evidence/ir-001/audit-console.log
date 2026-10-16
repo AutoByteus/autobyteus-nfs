@@ -1,0 +1,19 @@
+fatal: path 'internal/config/installation_state.go' exists on disk, but not in 'fc5d2ff3f404de3a683994766dfd47c258efb374'
+{
+  "comparisonCounts": {
+    "removed": 15,
+    "normalized-equal": 45,
+    "R2-changed": 23
+  },
+  "preservedProduction": 28,
+  "sizeSignals": [],
+  "pm": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md",
+      "sha256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1",
+      "bytes": 2042,
+      "currentSHA256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1",
+      "unchanged": true
+    }
+  ]
+}

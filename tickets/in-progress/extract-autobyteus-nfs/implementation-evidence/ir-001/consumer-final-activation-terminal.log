@@ -1,0 +1,255 @@
+
+ RUN  v4.0.18 /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts
+AgentFactory (Singleton) initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > keeps a new run private until synchronous candidate publication
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > claims the run id before the first backend await and rejects overlapping preparation
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > allows retry only after candidate abort confirms inactivity
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > quarantines an uncertain candidate cleanup and rejects same-process replacement
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > strictly restores codex_app_server from the exact provider identity
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > strictly restores claude_agent_sdk from the exact provider identity
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > aborts a mismatched platform restore privately and leaves confirmed cleanup retryable
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > rolls back already-attached run resources when a later attachment fails
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > deactivates exactly once when a post-activation backend identity mismatch fails before attachment
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > quarantines attachment rollback when exact-run session deactivation fails
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > deactivates pre-attachment sessions after a post-activation create failure
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > deactivates pre-attachment sessions after a post-activation restore failure
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > quarantines with primary then deactivation cleanup evidence
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > rejects another candidate after publication without replacing the active run
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager candidate lifecycle > detaches run resources and invokes exact-run MCP cleanup after accepted termination
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > allows only one non-waiting quiescence preparation attempt per exact run
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > cancels through the exact run without releasing it and permits a fresh preparation
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > retries only after a rejected finish and releases once after acceptance
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > coalesces one committed finish attempt and caches successful finalization
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > retains accepted-but-active failure without removing the exact run
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > retries exact retained component cleanup after physical release without stopping twice
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > treats exact-current removal not_found as terminal without resource cleanup
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > treats exact-current removal identity_mismatch as terminal without resource cleanup
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > rejects a missing or different exact instance before lower-level preparation
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > releaseRetiredRun > does nothing for an unknown id or a live published run
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > releaseRetiredRun > exact-releases a run that went offline so its replacement can be claimed (AC-003)
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > releaseRetiredRun > keeps the release owed and retryable when the previous runtime's stop throws (AC-008)
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > releaseRetiredRun > keeps the release owed and retryable when the previous runtime's stop is not accepted (AC-008)
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > releaseRetiredRun > joins an in-flight release instead of stopping the previous runtime twice (AC-005)
+AgentRunManager initialized.
+
+stdout | tests/unit/agent-execution/agent-run-manager.test.ts > AgentRunManager published-run termination > routes stop-all active runs through the managed prepared boundary
+AgentRunManager initialized.
+
+ ✓ tests/unit/agent-execution/agent-run-manager.test.ts (30 tests) 31ms
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts
+AgentFactory (Singleton) initialized.
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > creates session and stores it
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > rejects duplicate session IDs
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > tracks session count
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > tracks session count
+Created terminal session s2 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > tracks session count
+Closed PTY session s1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions
+Closed PTY session s1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes a session while startup is still pending
+Closed PTY session s1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions by target key
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions by target key
+Created terminal session s2 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions by target key
+Created terminal session s3 using backend MockPtySession for target target-2
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions by target key
+Closed PTY session s1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes sessions by target key
+Closed PTY session s2
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes all sessions
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes all sessions
+Created terminal session s2 using backend MockPtySession for target target-2
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes all sessions
+Closed PTY session s1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > closes all sessions
+Closed PTY session s2
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > lists sessions
+Created terminal session s1 using backend MockPtySession for target target-1
+
+stdout | tests/unit/services/terminal/pty-session-manager.test.ts > PtySessionManager > lists sessions
+Created terminal session s2 using backend MockPtySession for target target-2
+
+ ✓ tests/unit/services/terminal/pty-session-manager.test.ts (10 tests) 5ms
+
+ Test Files  2 passed (2)
+      Tests  40 passed (40)
+   Start at  16:12:02
+   Duration  5.14s (transform 2.70s, setup 33ms, import 4.45s, tests 36ms, environment 0ms)
+

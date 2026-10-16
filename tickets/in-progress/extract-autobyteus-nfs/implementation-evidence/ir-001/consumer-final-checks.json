@@ -1,0 +1,65 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "test:integration:prepare"
+    ],
+    "exit": 0,
+    "seconds": 23.778
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "tsc",
+      "-p",
+      "tsconfig.build.json",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 8.011
+  },
+  {
+    "name": "unit",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/unit/agent-execution/backends",
+      "tests/unit/agent-execution/services",
+      "tests/unit/agent-execution/agent-provider-factory-builder.test.ts",
+      "tests/unit/workspaces",
+      "tests/unit/services/terminal-streaming",
+      "tests/unit/runtime-management/codex",
+      "--maxWorkers=2"
+    ],
+    "exit": 0,
+    "seconds": 72.674
+  },
+  {
+    "name": "local-routes",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts",
+      "tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts",
+      "tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 14.455
+  }
+]

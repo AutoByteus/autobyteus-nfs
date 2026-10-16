@@ -1,0 +1,4 @@
+.github/workflows/release-nfs.yml:264:9: shellcheck reported issue in this script: SC2035:info:13:28: Use ./*glob* or -- *glob* so names with dashes won't become options [shellcheck]
+    |
+264 |         run: |
+    |         ^~~~

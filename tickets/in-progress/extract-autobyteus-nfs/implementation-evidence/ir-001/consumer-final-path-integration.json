@@ -1,0 +1,17 @@
+{
+  "command": [
+    "pnpm",
+    "-C",
+    "autobyteus-server-ts",
+    "exec",
+    "vitest",
+    "run",
+    "tests/integration/agent-execution/agent-run-manager.integration.test.ts",
+    "tests/integration/agent-execution/agent-run-manager.memory-layout.real.integration.test.ts",
+    "tests/e2e/terminal/terminal-websocket-lifecycle.e2e.test.ts",
+    "--maxWorkers=1"
+  ],
+  "exit": 1,
+  "seconds": 7.686332941055298,
+  "layer": "Local implementation path/PTY check; not API/E2E signoff"
+}

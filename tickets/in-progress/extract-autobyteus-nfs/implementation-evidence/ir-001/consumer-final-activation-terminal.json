@@ -1,0 +1,15 @@
+{
+  "command": [
+    "pnpm",
+    "-C",
+    "autobyteus-server-ts",
+    "exec",
+    "vitest",
+    "run",
+    "tests/unit/agent-execution/agent-run-manager.test.ts",
+    "tests/unit/services/terminal/pty-session-manager.test.ts",
+    "--maxWorkers=2"
+  ],
+  "exit": 0,
+  "seconds": 5.945842981338501
+}

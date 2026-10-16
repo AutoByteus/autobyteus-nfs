@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-source.py", line 33, in <module>
+    assert not hits,hits
+AssertionError: [{'path': 'scripts/public/docker/autobyteus-docker.d/bash/container-config.sh', 'token': '/app/autobyteus-server'}, {'path': 'scripts/public/docker/autobyteus-docker.d/bash/docker-runtime.sh', 'token': '/app/autobyteus-server'}, {'path': 'scripts/public/docker/autobyteus-docker.d/powershell/DockerRuntime.ps1', 'token': '/app/autobyteus-server'}]

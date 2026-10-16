@@ -1,0 +1,42 @@
+{
+  "layer": "implementation rendered component, not live app/storage qualification",
+  "events": [],
+  "states": [
+    {
+      "locale": "en",
+      "width": 1408,
+      "text": "SHARED NETWORK WORKSPACES\n\nAutoByteus NFS\n\nAutoByteus NFS is an independent host storage service. AutoByteus uses ordinary filesystem paths and does not detect or manage the underlying storage.\n\nInstall and start on each participating computer\n\nRun the command in a terminal on the computer you want to configure—not inside an agent container. Copying a command does not execute it.\n\nmacOS\n\nNative Mac storage hosting and host connections.\n\nCopy\n\nCommand not yet available\n\nLinux\n\nNative or Docker storage hosting and host connections.\n\nCopy\n\nCommand not yet available\n\nNo compatible, verified release is published for these computers yet. Command copying and downloads become available after release qualification.\n\nCreate storage once\n\nChoose the ordinary folder you want to share. Existing files stay in place. Setup asks for the trusted computers or private subnet and explains administrator changes before applying them.\n\nConnect each other computer\n\nChoose Connect and use the storage connection details to mount storage on this computer. Application and container setup remains separate.\n\nUse the printed mount path as an ordinary directory. AutoByteus does not check its mount type or storage identity. For the Docker launcher, choose an operator-managed shared root with shared/ and nodes/<name>/ subdirectories.\n\nUse only on a trusted private network\n\nNFS traffic is unencrypted. Access trusts the allowed computers, not individual users; writes map to the selected nonroot source owner. Connection details are not an access token. Do not expose this service to the public internet.\n\nIf storage or the network goes offline, file operations, previews and unrelated work may stall. Restore connectivity before retrying; there is no offline copy or local fallback.\n\nMac Docker storage hosting and Windows are not supported. The service does not attach or restart application containers. The Docker Guide configures ordinary directory binds separately.",
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    {
+      "locale": "en",
+      "width": 358,
+      "text": "SHARED NETWORK WORKSPACES\n\nAutoByteus NFS\n\nAutoByteus NFS is an independent host storage service. AutoByteus uses ordinary filesystem paths and does not detect or manage the underlying storage.\n\nInstall and start on each participating computer\n\nRun the command in a terminal on the computer you want to configure—not inside an agent container. Copying a command does not execute it.\n\nmacOS\n\nNative Mac storage hosting and host connections.\n\nCopy\n\nCommand not yet available\n\nLinux\n\nNative or Docker storage hosting and host connections.\n\nCopy\n\nCommand not yet available\n\nNo compatible, verified release is published for these computers yet. Command copying and downloads become available after release qualification.\n\nCreate storage once\n\nChoose the ordinary folder you want to share. Existing files stay in place. Setup asks for the trusted computers or private subnet and explains administrator changes before applying them.\n\nConnect each other computer\n\nChoose Connect and use the storage connection details to mount storage on this computer. Application and container setup remains separate.\n\nUse the printed mount path as an ordinary directory. AutoByteus does not check its mount type or storage identity. For the Docker launcher, choose an operator-managed shared root with shared/ and nodes/<name>/ subdirectories.\n\nUse only on a trusted private network\n\nNFS traffic is unencrypted. Access trusts the allowed computers, not individual users; writes map to the selected nonroot source owner. Connection details are not an access token. Do not expose this service to the public internet.\n\nIf storage or the network goes offline, file operations, previews and unrelated work may stall. Restore connectivity before retrying; there is no offline copy or local fallback.\n\nMac Docker storage hosting and Windows are not supported. The service does not attach or restart application containers. The Docker Guide configures ordinary directory binds separately.",
+      "scroll": 390,
+      "viewport": 390
+    },
+    {
+      "locale": "zh",
+      "width": 1408,
+      "text": "共享网络工作区\n\nAutoByteus NFS\n\nAutoByteus NFS 是独立的主机存储服务。AutoByteus 只使用普通文件系统路径，不检测或管理底层存储。\n\n在每台参与的电脑上安装并启动\n\n请在要配置的电脑终端中运行命令，而不是在智能体容器内运行。复制命令不会执行命令。\n\nmacOS\n\nMac 原生存储托管和主机连接。\n\n复制\n\n命令尚不可用\n\nLinux\n\n原生或 Docker 存储托管和主机连接。\n\n复制\n\n命令尚不可用\n\n尚未为这些电脑发布兼容且经过验证的版本。完成版本验证并发布后，才可复制命令或下载。\n\n只需创建一次存储\n\n选择要共享的普通文件夹。现有文件保留在原处。设置会询问可信计算机或私有子网，并在应用前说明管理员权限变更。\n\n连接其他每台电脑\n\n选择“连接”并使用存储连接信息，将存储挂载到此计算机。应用和容器需要单独配置。\n\n将输出的挂载路径用作普通目录。AutoByteus 不检查挂载类型或存储标识。Docker 启动器使用操作员管理的共享根目录，其中包含 shared/ 和 nodes/<name>/ 子目录。\n\n仅用于受信任的私有网络\n\nNFS 流量不加密。访问权限信任获准的电脑，而非单个用户；写入映射到所选的非 root 源文件夹所有者。连接信息不是访问令牌。请勿将此服务暴露到公共互联网。\n\n如果存储或网络离线，文件操作、预览以及其他无关工作都可能停滞。请恢复连接后重试；不提供离线副本或本地回退。\n\n不支持 Mac Docker 存储托管和 Windows。此服务不会连接或重启应用容器。Docker 指南单独配置普通目录绑定。",
+      "scroll": 1440,
+      "viewport": 1440
+    },
+    {
+      "locale": "zh",
+      "width": 358,
+      "text": "共享网络工作区\n\nAutoByteus NFS\n\nAutoByteus NFS 是独立的主机存储服务。AutoByteus 只使用普通文件系统路径，不检测或管理底层存储。\n\n在每台参与的电脑上安装并启动\n\n请在要配置的电脑终端中运行命令，而不是在智能体容器内运行。复制命令不会执行命令。\n\nmacOS\n\nMac 原生存储托管和主机连接。\n\n复制\n\n命令尚不可用\n\nLinux\n\n原生或 Docker 存储托管和主机连接。\n\n复制\n\n命令尚不可用\n\n尚未为这些电脑发布兼容且经过验证的版本。完成版本验证并发布后，才可复制命令或下载。\n\n只需创建一次存储\n\n选择要共享的普通文件夹。现有文件保留在原处。设置会询问可信计算机或私有子网，并在应用前说明管理员权限变更。\n\n连接其他每台电脑\n\n选择“连接”并使用存储连接信息，将存储挂载到此计算机。应用和容器需要单独配置。\n\n将输出的挂载路径用作普通目录。AutoByteus 不检查挂载类型或存储标识。Docker 启动器使用操作员管理的共享根目录，其中包含 shared/ 和 nodes/<name>/ 子目录。\n\n仅用于受信任的私有网络\n\nNFS 流量不加密。访问权限信任获准的电脑，而非单个用户；写入映射到所选的非 root 源文件夹所有者。连接信息不是访问令牌。请勿将此服务暴露到公共互联网。\n\n如果存储或网络离线，文件操作、预览以及其他无关工作都可能停滞。请恢复连接后重试；不提供离线副本或本地回退。\n\n不支持 Mac Docker 存储托管和 Windows。此服务不会连接或重启应用容器。Docker 指南单独配置普通目录绑定。",
+      "scroll": 390,
+      "viewport": 390
+    }
+  ],
+  "nuxtPid": 58223,
+  "port": 56095,
+  "result": "Pass",
+  "cleanup": {
+    "browserClosed": true,
+    "routeRemoved": true,
+    "nuxtStopped": true
+  }
+}

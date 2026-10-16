@@ -1,0 +1,8 @@
+{
+  "source": "3712cd9bf0db998501d162db7f8655f169e3def6:LICENSING.md",
+  "destination": "N:LICENSING.md",
+  "section7EqualIgnoringWrapping": true,
+  "CLAExact": true,
+  "serviceLicenseExact": true,
+  "scope": "Text integrity, not a legal opinion"
+}

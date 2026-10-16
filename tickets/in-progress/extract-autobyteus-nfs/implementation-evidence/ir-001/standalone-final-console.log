@@ -1,0 +1,13 @@
+standalone-go-race 0
+standalone-go-vet 0
+standalone-python 0
+standalone-actionlint 0
+standalone-shell 0
+standalone-source-hash 0
+standalone-publish-refusal 1
+standalone-build-darwin-arm64 0
+standalone-build-darwin-amd64 0
+standalone-build-linux-arm64 0
+standalone-build-linux-amd64 0
+standalone-version 0
+standalone-build-linux-arm64-embedded 0

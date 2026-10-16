@@ -1,0 +1,123 @@
+{
+  "timestampUTC": "2026-10-16T13:24:00.404125+00:00",
+  "task": "project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8",
+  "status": "Held \u2014 material user requirement change; coordination checkpoint, not completed implementation handoff",
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High",
+    "oldReview": "ARCH-REV-001 covers superseded R1/SR-002 only"
+  },
+  "trigger": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/user-filesystem-boundary-correction.md",
+  "N": {
+    "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "branch": "codex/extract-autobyteus-nfs",
+    "head": "0c9fd27a77d65504b8eef41ece8972badb31778c",
+    "implementationCommits": [
+      "353dd2c17a59dead97c900a327f78a2bb21f46ce",
+      "0c9fd27a77d65504b8eef41ece8972badb31778c"
+    ],
+    "statusBeforeCheckpoint": "M tickets/in-progress/extract-autobyteus-nfs/design-spec.md\n M tickets/in-progress/extract-autobyteus-nfs/requirements-doc.md\n?? tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/\n?? tickets/in-progress/extract-autobyteus-nfs/user-filesystem-boundary-correction.md",
+    "delta": "Standalone extraction, module namespace, release/hash/workflow ownership, licensing/docs, split Python tests; old-basis public integration contract retained in this checkpoint."
+  },
+  "S": {
+    "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "branch": "codex/extract-autobyteus-nfs",
+    "head": "390e0c76dda56c206ed8cabd65fc3564caaf1804",
+    "status": "",
+    "delta": "Removed embedded service owners; preserved app production; local attachment fixture/provenance pinned to N 353dd2, actual parser test switched to local fixture; launcher tests retained; docs updated. Coupling provisions now superseded."
+  },
+  "dirtyOwnership": {
+    "implementation": [
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001"
+    ],
+    "designerRecoveryUntouched": [
+      "tickets/in-progress/extract-autobyteus-nfs/design-spec.md",
+      "tickets/in-progress/extract-autobyteus-nfs/requirements-doc.md",
+      "tickets/in-progress/extract-autobyteus-nfs/user-filesystem-boundary-correction.md"
+    ]
+  },
+  "preparation": {
+    "session": 63121,
+    "exitCode": 1,
+    "reason": "Host Python tarfile.extractall does not accept filter='data'",
+    "log": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-console.log",
+    "completed": "Official Go archive downloaded and SHA assertion passed before extraction call failed; no toolchain metadata receipt was written.",
+    "notReached": [
+      "toolchain extraction",
+      "standalone source archive",
+      "consumer scratch/archive",
+      "Go tests/builds",
+      "Python fixture tests",
+      "consumer tests",
+      "actionlint"
+    ]
+  },
+  "checks": "Only mechanical normalized Go-source comparison performed before commit; no executable validation or readiness claim. Inherited pinned engine patch whitespace diagnostics retained, not normalized.",
+  "ownedProcesses": "Preparation exited 1, collected via write_stdin; targeted ps scan found no prepare-checks.py or owned scratch process. No owned running resources remain.",
+  "retainedScratch": {
+    "path": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn",
+    "entries": [
+      "home",
+      "tmp",
+      "tools",
+      "tools/go1.27.2.darwin-arm64.tar.gz"
+    ],
+    "files": [
+      {
+        "path": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/tools/go1.27.2.darwin-arm64.tar.gz",
+        "bytes": 68195916,
+        "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5"
+      }
+    ],
+    "disposition": "Preserved; no retry or cleanup during hold."
+  },
+  "liveResources": "None created: no app, VM, Docker, mounts, provider resources or credential actions.",
+  "preservation": "No reset, cleanup, target finalization, push, tag, release or deployment. D0 remains unborn main with task-plans; canonical source and old shared-network-workspaces retained assets untouched. Engine candidate only read/hashed, not copied or rebuilt.",
+  "evidenceBeforeCheckpoint": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/destination-fetch.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/extract.py",
+      "bytes": 4262,
+      "sha256": "d59470d78f9866e95291152a49fe4bd2445755c06ab4a440183da58f66f625f0"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/fresh-refs.json",
+      "bytes": 150,
+      "sha256": "838d867df0f9c3c189a2cc9cb2aee9dbcb6eaad442a9e4aa22a0296d96930d10"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/input-audit.json",
+      "bytes": 4232,
+      "sha256": "56405964b6ade96d27dd2bb7f0a8db924ec6d8b9070975397d56f877878b776a"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-checks.py",
+      "bytes": 2257,
+      "sha256": "c3bcf5ca1c0aa9e7485c0062ee9bbaf20cc2065da1b3bd20b5df23a5eb1f5e31"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-console.log",
+      "bytes": 376,
+      "sha256": "e87326f0129db325f012679e5b056d7c25b28e4560944c33ed99d094e9136bd8"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/scratch-path.txt",
+      "bytes": 76,
+      "sha256": "4bf079303af07d5136dfd09b21a43f1c152f44b5e830cda12ef49f3032a8a7ba"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/source-fetch.log",
+      "bytes": 105,
+      "sha256": "e77843f813a0e367edf47bbf8290693fbe2c280973d2f41499885cabc39fa655"
+    }
+  ],
+  "routing": {
+    "reason": "Requirement Gap / material intended-behavior change requires replacement approved design before continuing; explicit Designer checkpoint request",
+    "recipient_address": "/software_engineering_team/solution_designer"
+  },
+  "next": "Designer may revise without implementation races. No further implementation/checks until replacement reviewed dispatch."
+}

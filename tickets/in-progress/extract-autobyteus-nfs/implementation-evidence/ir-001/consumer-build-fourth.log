@@ -1,0 +1,153 @@
+Scope: 2 of 13 workspace projects
+Lockfile is up to date, resolution step is skipped
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @google/genai@2.24.0.                               │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Done in 349ms using pnpm v10.28.2
+
+> autobyteus-server-ts@0.1.1 test:integration:prepare /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> node ./scripts/integration-test-prerequisites.mjs prepare
+
+
+[integration prerequisites] server build (with shared packages)
+
+> autobyteus-server-ts@0.1.1 prebuild /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm prepare:shared && pnpm exec prisma generate --schema ./prisma/schema.prisma
+
+
+> autobyteus-server-ts@0.1.1 prepare:shared /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm -C .. --filter autobyteus-ts --filter @autobyteus/application-sdk-contracts --filter @autobyteus/application-backend-sdk build
+
+Scope: 3 of 13 workspace projects
+autobyteus-ts build$ node ./scripts/clean-dist.mjs && tsc -p tsconfig.build.json && node ./scripts/verify-runtime-dependencies.mjs
+autobyteus-application-sdk-contracts build$ tsc -p tsconfig.build.json
+autobyteus-application-sdk-contracts build: Done
+autobyteus-ts build: [verify:runtime-deps] OK
+autobyteus-ts build: Done
+autobyteus-application-backend-sdk build$ tsc -p tsconfig.build.json
+autobyteus-application-backend-sdk build: Done
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v5.22.0) to ./../node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client in 113ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+┌─────────────────────────────────────────────────────────┐
+│  Update available 5.22.0 -> 8.0.0-rc.23                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+> autobyteus-server-ts@0.1.1 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> pnpm run build:full
+
+
+> autobyteus-server-ts@0.1.1 build:full /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+> node ./scripts/clean-build-output.mjs && tsc -p tsconfig.build.json && node ./scripts/copy-build-assets.mjs && node ./scripts/run-sanitized-built-in-agents-bootstrap-smoke.mjs
+
+AgentFactory (Singleton) initialized.
+Built-in agents bootstrap smoke check passed.
+Sanitized built-module/bootstrap smoke passed without DATABASE_URL.
+
+[integration prerequisites] application frontend SDK
+
+> @autobyteus/application-frontend-sdk@0.1.0 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-application-frontend-sdk
+> tsc -p tsconfig.build.json
+
+
+[integration prerequisites] application devkit
+
+> @autobyteus/application-devkit@0.1.0 build /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-application-devkit
+> tsc -p tsconfig.build.json
+
+src/cli.ts(2,30): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+src/cli.ts(3,31): error TS2307: Cannot find module 'node:url' or its corresponding type declarations.
+src/cli.ts(15,47): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/cli.ts(47,26): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/cli.ts(48,32): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/cli.ts(53,5): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/commands/dev.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/commands/dev.ts(14,48): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/commands/pack.ts(7,61): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/commands/start.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/commands/start.ts(2,48): error TS2307: Cannot find module 'autobyteus-server-ts' or its corresponding type declarations.
+src/commands/start.ts(17,48): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/commands/validate.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/commands/validate.ts(7,54): error TS2307: Cannot find module 'autobyteus-server-ts' or its corresponding type declarations.
+src/commands/validate.ts(11,79): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/commands/validate.ts(25,5): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/config/application-devkit-config.ts(1,59): error TS2307: Cannot find module '@autobyteus/application-sdk-contracts' or its corresponding type declarations.
+src/config/load-application-devkit-config.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/config/load-application-devkit-config.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/config/load-application-devkit-config.ts(3,31): error TS2307: Cannot find module 'node:url' or its corresponding type declarations.
+src/development/application-development-project-state.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/development/application-project-watch.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/development/application-project-watch.ts(2,39): error TS2307: Cannot find module 'chokidar' or its corresponding type declarations.
+src/development/application-project-watch.ts(19,15): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/application-project-watch.ts(73,28): error TS7006: Parameter '_eventName' implicitly has an 'any' type.
+src/development/application-project-watch.ts(73,40): error TS7006: Parameter 'changedPath' implicitly has an 'any' type.
+src/development/application-project-watch.ts(105,22): error TS7006: Parameter '_eventName' implicitly has an 'any' type.
+src/development/application-project-watch.ts(105,34): error TS7006: Parameter 'changedPath' implicitly has an 'any' type.
+src/development/atomic-application-pack.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/development/atomic-application-pack.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/development/atomic-application-pack.ts(3,28): error TS2307: Cannot find module 'node:crypto' or its corresponding type declarations.
+src/development/atomic-application-pack.ts(27,19): error TS2503: Cannot find namespace 'NodeJS'.
+src/development/development-browser-session.ts(6,8): error TS2307: Cannot find module 'playwright-core' or its corresponding type declarations.
+src/development/development-browser-session.ts(99,31): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-browser-session.ts(100,31): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-process-lifetime.ts(13,16): error TS2503: Cannot find namespace 'NodeJS'.
+src/development/development-process-lifetime.ts(36,5): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-process-lifetime.ts(37,5): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-process-lifetime.ts(41,9): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-process-lifetime.ts(46,3): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/development-process-lifetime.ts(47,3): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+src/development/standalone-development-session.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/development/standalone-development-session.ts(5,8): error TS2307: Cannot find module 'autobyteus-server-ts' or its corresponding type declarations.
+src/development/studio-application-client.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/development/studio-development-session.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/package/backend-builder.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/package/backend-builder.ts(2,32): error TS2307: Cannot find module 'node:module' or its corresponding type declarations.
+src/package/backend-builder.ts(3,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/package/backend-builder.ts(4,23): error TS2307: Cannot find module 'esbuild' or its corresponding type declarations.
+src/package/backend-builder.ts(8,58): error TS7006: Parameter 'name' implicitly has an 'any' type.
+src/package/backend-bundle-manifest-writer.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/package/backend-bundle-manifest-writer.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/package/backend-bundle-manifest-writer.ts(9,8): error TS2307: Cannot find module '@autobyteus/application-sdk-contracts' or its corresponding type declarations.
+src/package/frontend-builder.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/package/frontend-builder.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/package/frontend-builder.ts(3,23): error TS2307: Cannot find module 'esbuild' or its corresponding type declarations.
+src/package/package-assembler.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/package/package-assembler.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/package/package-assembler.ts(12,54): error TS2307: Cannot find module 'autobyteus-server-ts' or its corresponding type declarations.
+src/package/resource-copier.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/package/resource-copier.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/paths/application-project-paths.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/template/template-materializer.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/template/template-materializer.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/template/template-materializer.ts(3,31): error TS2307: Cannot find module 'node:url' or its corresponding type declarations.
+src/validation/application-root-validator.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/validation/application-root-validator.ts(6,8): error TS2307: Cannot find module '@autobyteus/application-sdk-contracts' or its corresponding type declarations.
+src/validation/backend-manifest-validator.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/validation/backend-manifest-validator.ts(6,8): error TS2307: Cannot find module '@autobyteus/application-sdk-contracts' or its corresponding type declarations.
+src/validation/manifest-paths.ts(1,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/validation/package-validator.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/validation/package-validator.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/validation/package-validator.ts(29,46): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+src/validation/validation-helpers.ts(1,16): error TS2307: Cannot find module 'node:fs/promises' or its corresponding type declarations.
+src/validation/validation-helpers.ts(2,18): error TS2307: Cannot find module 'node:path' or its corresponding type declarations.
+src/validation/validation-helpers.ts(3,59): error TS2307: Cannot find module '@autobyteus/application-sdk-contracts' or its corresponding type declarations.
+ ELIFECYCLE  Command failed with exit code 2.
+ WARN   Local package.json exists, but node_modules missing, did you mean to install?
+[integration prerequisites] failed: application devkit
+ ELIFECYCLE  Command failed with exit code 2.

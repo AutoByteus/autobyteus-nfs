@@ -1,0 +1,8 @@
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	(cached)
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	0.339s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	0.701s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	(cached)
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	(cached)
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	(cached)
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	2.239s

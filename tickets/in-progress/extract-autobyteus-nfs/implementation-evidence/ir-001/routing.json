@@ -1,0 +1,10 @@
+{
+  "queriedAt": "2026-10-16T14:16:17.295066+00:00",
+  "selectedWhen": "When implementation is complete and the carried classification is task_size=Large or architectural_risk=High, implementation-scoped validation is complete, and the cumulative implementation package is ready for independent source review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "outcome": "IR-001 Initial Baseline / Ready for independent source review",
+  "task_size": "Large",
+  "architectural_risk": "High",
+  "otherRules": "Local Fix rules do not apply to initial baseline; direct low-risk and design-gap rules do not match",
+  "primaryRecipients": 1
+}

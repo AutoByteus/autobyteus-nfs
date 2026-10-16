@@ -1,0 +1,1374 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts[39m
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession streaming lifecycle[2m > [22m[2mcloses the opened process and fails the turn when system-instruction persistence fails
+[22m[39mClaude input for run 'run-1' failed before send: Error: persist failed
+    at Object.<anonymous> (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:277:36)
+    at Object.Mock [as capture] (file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+spy@4.0.18/node_modules/@vitest/spy/dist/index.js:285:34)
+    at captureClaudeSystemInstructions (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-system-instruction-capture.ts:14:75)
+    at ClaudeSession.handleProcessOpened (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:361:5)
+    at Object.onOpened (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:127:34)
+    at ClaudeSessionProcess.open (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:75:18)
+    at ClaudeSession.submitInput (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:233:7)
+    at start (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:159:20)
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:284:20
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession streaming lifecycle[2m > [22m[2menriches a failed process open with bounded redacted stderr diagnostics
+[22m[39mClaude input for run 'run-1' failed before send: Error: Claude Code process exited with code 1
+Claude Code diagnostics:
+Authorization: Bearer [redacted]
+ANTHROPIC_API_KEY=[redacted]
+--dangerously-skip-permissions cannot be used with root/sudo privileges for security reasons
+    at enrichClaudeRuntimeErrorWithDiagnostics (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-process-diagnostics.ts:79:10)
+    at ClaudeSessionProcess.open (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:82:13)
+    at ClaudeSession.submitInput (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:233:7)
+    at start (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:159:20)
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:439:5
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mfails the active turn visibly on an unexpected exit and reopens with resume on the next input (AC-009)
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:900:16
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mtreats a conflicting provider UUID as fatal for the process and fails the active turn
+[22m[39mClaude process for run 'run-1' exited: Error: CLAUDE_PROVIDER_SESSION_ID_CONFLICT: Claude returned a different provider session identity.
+    at ClaudeProviderSessionLifecycle.confirmProviderSessionId (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-provider-session-lifecycle.ts:82:13)
+    at ClaudeSession.handleFrame (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:386:37)
+    at Object.onFrame (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:128:32)
+    at ClaudeSessionProcess.runPump (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:91:26)
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mmarks still-running background tasks stopped on unexpected exit (REQ-009, AC-011)
+[22m[39mClaude process for run 'run-1' exited: Error: killed
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:952:112
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:961:11
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession token usage[2m > [22m[2mmarks the first observation after a reopen following an unexpected exit, but never a create generation
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:1070:16
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession compaction (real SDK frame shapes)[2m > [22m[2mrecords one operation for an auto compaction with 30 s keepalives (AC-023)
+[22m[39mClaude compaction 7a12debe-56a1-4b84-ba8d-c69fd6973df9 suppressed 3 repeated compacting status frame(s).
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession compaction (real SDK frame shapes)[2m > [22m[2mcloses an open operation as process_exited before the terminal turn error (SCN-020)
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:1559:15
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session.test.ts [2m([22m[2m54 tests[22m[2m)[22m[33m 599[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-thread-event-converter.test.ts[2m > [22m[2mCodexThreadEventConverter through CodexThread[2m > [22m[2mdoes not map token-usage telemetry into AGENT_STATUS
+[22m[39mRun 'run-1': Codex token-usage update arrived without a turn id. Skipping persistence.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-thread-event-converter.test.ts [2m([22m[2m64 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/workspace-skill-materializer.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-tool-gating.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-tool-gating.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/events/autobyteus-stream-event-converter.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/autobyteus/events/autobyteus-stream-event-converter.test.ts[2m > [22m[2mAutoByteusStreamEventConverter[2m > [22m[2mdrops unknown segment variants and rejects missing canonical segment identity at provider ingress
+[22m[39m[ProviderSegmentAdmissionRejected] {
+  runtimeKind: [32m'autobyteus'[39m,
+  runId: [32m'run-1'[39m,
+  nativeEventName: [32m'start'[39m,
+  reasonCode: [32m'AUTOBYTEUS_SEGMENT_IDENTITY_INVALID'[39m
+}
+
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/events/autobyteus-stream-event-converter.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [31m❯[39m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 13[2mms[22m[39m
+[31m     [31m×[31m ends each call at rawResponse/completed and excludes the tool, live sample 1 (API-L03/L04)[39m[32m 4[2mms[22m[39m
+[31m     [31m×[31m does the same on live sample 2[39m[32m 0[2mms[22m[39m
+     [32m✓[39m uses the server's approval reply as a request boundary[32m 4[2mms[22m[39m
+     [32m✓[39m gives null on a token mismatch or without rawResponse/completed, and never uses usage arrival[32m 0[2mms[22m[39m
+     [32m✓[39m gives every call of the recorded 0.161.0 probe (no raw events) no reading (P5)[32m 2[2mms[22m[39m
+     [32m✓[39m leaves the pending reading untouched across a compaction frame (P6), then pairs it[32m 2[2mms[22m[39m
+     [32m✓[39m clears the pending reading at turn end[32m 0[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-input-terminal-release.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-input-terminal-release.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 432[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-thread.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [31m❯[39m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts [2m([22m[2m79 tests[22m[2m | [22m[31m8 failed[39m[2m)[22m[32m 22[2mms[22m[39m
+       [32m✓[39m emits one base-excludes-cache model call per DONE agent_response step and none for the result[32m 1[2mms[22m[39m
+     [32m✓[39m shows native image parameters, redacts native image denial, and does not classify an MCP image call as native[32m 1[2mms[22m[39m
+     [32m✓[39m enriches native image DONE with AGY's step output text and resolved file_path[32m 1[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (OUTPUT_MISSING)[32m 1[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (OUTPUT_UNSAFE)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (OUTPUT_TOO_LARGE)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (PATH_NOT_FOUND_IN_OUTPUT)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (PATH_OUTSIDE_CONVERSATION)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (IMAGE_MISSING)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (READ_FAILED)[32m 0[2mms[22m[39m
+     [32m✓[39m keeps native image DONE successful with output null and a content-free warning when unresolved (INVALID_IDENTITY)[32m 0[2mms[22m[39m
+     [32m✓[39m never lets a throwing resolver escape convert[32m 1[2mms[22m[39m
+     [32m✓[39m resolves distinct paths for parallel native image steps[32m 0[2mms[22m[39m
+     [32m✓[39m reports distinct native image steps without duplicating terminal events[32m 0[2mms[22m[39m
+     [32m✓[39m declares AGY step usage as base input that excludes cache reads, carrying only the raw counts[32m 1[2mms[22m[39m
+     [32m✓[39m leaves gross input at the reported input and the cache state not reported when AGY omits cache reads[32m 2[2mms[22m[39m
+       [32m✓[39m closes an unfinished daemon step as a succeeded background task before TURN_COMPLETED[32m 0[2mms[22m[39m
+       [32m✓[39m reports unfinished steps as background tool steps at result, and nothing when every step finished[32m 0[2mms[22m[39m
+       [32m✓[39m does not report steps closed by an interrupt as background steps[32m 0[2mms[22m[39m
+       [32m✓[39m closes every unfinished step in ascending step order[32m 0[2mms[22m[39m
+       [32m✓[39m closes an unfinished step as background before the turn error on a non-SUCCESS result[32m 0[2mms[22m[39m
+       [32m✓[39m adds no background closure for steps AGY finished as DONE, ERROR or denied[32m 0[2mms[22m[39m
+       [32m✓[39m keeps interruption semantics for an unfinished step and does not leak it into the next turn[32m 0[2mms[22m[39m
+     [32m✓[39m redacts credentials in failed terminal result with status ERROR, even without a tool[32m 0[2mms[22m[39m
+     [32m✓[39m redacts credentials in failed terminal result with status UNKNOWN, even without a tool[32m 0[2mms[22m[39m
+     [32m✓[39m redacts credentials in failed terminal result with status undefined, even without a tool[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ("Individual quota reached for this model. Resets in 3h28m50s.")[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ("  Workspace unavailable.  ")[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ({"message":"Workspace service temporarily unavailable. Try again later.","code":"UNFAMILIAR"})[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ("Read limit reached. token=PRIVATE_AGY_SECRET Authorization: Bearer PRIVATE_BEARER")[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ("<script>alert('runtime')</script> Workspace unavailable.")[32m 0[2mms[22m[39m
+     [32m✓[39m preserves useful terminal error text without exposing the response ("Workspace unavailable. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. Provider explanation. ")[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error undefined[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error null[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error ""[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error "   "[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error 42[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error [][32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error {"message":42}[32m 0[2mms[22m[39m
+     [32m✓[39m uses only the generic fallback for unusable terminal error {"message":"  ","response":"private"}[32m 0[2mms[22m[39m
+     [32m✓[39m treats SUCCESS with an explicit error as a failed terminal turn and keeps prior tool DONE factual[32m 0[2mms[22m[39m
+     [32m✓[39m fails a undefined status without an explicit error and leaves canonical status error[32m 0[2mms[22m[39m
+     [32m✓[39m fails a UNKNOWN status without an explicit error and leaves canonical status error[32m 0[2mms[22m[39m
+     [32m✓[39m fails a ERROR status without an explicit error and leaves canonical status error[32m 0[2mms[22m[39m
+[31m     [31m×[31m keeps multi-turn text/tool order without repeating result.response[39m[32m 3[2mms[22m[39m
+[31m     [31m×[31m keeps headless denial failed despite result SUCCESS[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m maps exit0 DONE to provider-step success without inventing shell exit[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m maps exit8_empty DONE to provider-step success without inventing shell exit[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m maps not_found DONE to provider-step success without inventing shell exit[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m does not mark headless denial green when the turn reports SUCCESS[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m prioritizes an explicit tool error even when AGY labels the step DONE[39m[32m 0[2mms[22m[39m
+         [32m✓[39m emits canonical object with unchanged identity and exactly one start/terminal[32m 0[2mms[22m[39m
+         [32m✓[39m emits canonical JSON text with unchanged identity and exactly one start/terminal[32m 0[2mms[22m[39m
+         [32m✓[39m emits canonical structured content with unchanged identity and exactly one start/terminal[32m 0[2mms[22m[39m
+         [32m✓[39m emits canonical MCP text content with unchanged identity and exactly one start/terminal[32m 0[2mms[22m[39m
+         [32m✓[39m emits canonical reused tab with unchanged identity and exactly one start/terminal[32m 0[2mms[22m[39m
+         [32m✓[39m does not fabricate a tab identity for output null[32m 0[2mms[22m[39m
+         [32m✓[39m does not fabricate a tab identity for output undefined[32m 0[2mms[22m[39m
+         [32m✓[39m does not fabricate a tab identity for output "not JSON"[32m 0[2mms[22m[39m
+         [32m✓[39m does not fabricate a tab identity for output {"status":"opened"}[32m 0[2mms[22m[39m
+         [32m✓[39m preserves ERROR with explicit navigation failed instead of canonicalizing success[32m 0[2mms[22m[39m
+         [32m✓[39m preserves DONE with explicit navigation failed instead of canonicalizing success[32m 0[2mms[22m[39m
+         [32m✓[39m preserves ERROR with explicit permission denied instead of canonicalizing success[32m 0[2mms[22m[39m
+         [32m✓[39m preserves DONE with explicit permission denied instead of canonicalizing success[32m 0[2mms[22m[39m
+         [32m✓[39m preserves the generic envelope for third-party open_tab[32m 0[2mms[22m[39m
+         [32m✓[39m preserves the generic envelope for other browser tool[32m 0[2mms[22m[39m
+         [32m✓[39m preserves the generic envelope for non-browser MCP tool[32m 0[2mms[22m[39m
+         [32m✓[39m preserves the generic envelope for incomplete MCP identity[32m 0[2mms[22m[39m
+         [32m✓[39m does not normalize a native tool named open_tab[32m 0[2mms[22m[39m
+       [32m✓[39m presents an AutoByteus agent tool under its bare name and own arguments on start and success[32m 0[2mms[22m[39m
+       [32m✓[39m presents send_message_to with no arguments as an empty argument object[32m 0[2mms[22m[39m
+       [32m✓[39m presents a third-party tool as mcp__<server>__<tool> and keeps plain text output unchanged[32m 0[2mms[22m[39m
+       [32m✓[39m reports a failed MCP call under the real tool name with the provider's error message[32m 0[2mms[22m[39m
+       [32m✓[39m reports a denied MCP call under the real tool name[32m 0[2mms[22m[39m
+       [32m✓[39m falls back to the provider presentation for a wrapper with missing ServerName and lets the turn continue[32m 0[2mms[22m[39m
+       [32m✓[39m falls back to the provider presentation for a wrapper with blank ToolName and lets the turn continue[32m 0[2mms[22m[39m
+       [32m✓[39m never treats an AutoByteus MCP generate_image call as AGY's native image tool[32m 0[2mms[22m[39m
+       [32m✓[39m leaves native tool names, parameters and JSON-looking output untouched[32m 0[2mms[22m[39m
+[31m     [31m×[31m emits assistant text that satisfies the canonical segment lifecycle contract[39m[32m 0[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mpasses raw run llmConfig to LLMFactory without wrapping it as extraParams
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mpasses raw run llmConfig to LLMFactory without wrapping it as extraParams
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mcomposes the selected application-owned tool through the real AutoByteus provider factory
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mcomposes the selected application-owned tool through the real AutoByteus provider factory
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mwires one subject-scoped API-key resolver into the core factory
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mwires one subject-scoped API-key resolver into the core factory
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mcomposes server team prompts, and injects primitive team context
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mcomposes server team prompts, and injects primitive team context
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2madvertises the strict filesystem-like logical protocol without a flat roster
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2madvertises the strict filesystem-like logical protocol without a flat roster
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mkeeps task-management tools for standalone AutoByteus runs without member team context
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mkeeps task-management tools for standalone AutoByteus runs without member team context
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mroutes mixed AutoByteus send_message_to through server delivery and reports rejected delivery
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mroutes mixed AutoByteus send_message_to through server delivery and reports rejected delivery
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mkeeps the exact-run send_message_to selector on the canonical Team binding
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mkeeps the exact-run send_message_to selector on the canonical Team binding
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mbinds the exact AutoByteus task Agent identity and root capability into the task tool
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2mbinds the exact AutoByteus task Agent identity and root capability into the task tool
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2menables policy-only compaction: the core summarizer always uses the agent's own model
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'assign_task_to'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts[2m > [22m[2mAutoByteusAgentRunBackendFactory[2m > [22m[2menables policy-only compaction: the core summarizer always uses the agent's own model
+[22m[39mUsing temp workspace (ID: workspace-1) for agent.
+
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/acp/acp-agent-session.test.ts [2m([22m[2m16 tests[22m[2m)[22m[33m 1296[2mms[22m[39m
+     [33m[2m✓[22m[39m fails an idle turn but not while a tool call is pending [33m 494[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts[2m > [22m[2mCodex reasoning block conversion[2m > [22m[2mrejects a completed reasoning snapshot without exact turn identity
+[22m[39m[CodexSegmentTurnAdmissionRejected] {
+  runtimeKind: [32m'codex_app_server'[39m,
+  runId: [32m'run-1'[39m,
+  nativeEventName: [32m'item/completed'[39m,
+  reasonCode: [32m'CODEX_SEGMENT_TURN_INACTIVE'[39m
+}
+
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts[2m > [22m[2mCodex reasoning block conversion[2m > [22m[2mpreserves for in-place or no-effect event: thread tokens
+[22m[39mRun 'run-1': Codex token-usage update for turn 'turn-1' did not include usable token counts.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/application-agent-tools/application-agent-tool.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/workspace-skill-materializer-collision-policy.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mclaude ordinary filesystem configured skills[2m > [22m[2mexposes resolved sources privately, skips unresolved, and leaves the project unchanged
+[22m[39mclaude private configured skill 'missing': source unavailable.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mclaude ordinary filesystem configured skills[2m > [22m[2mpreserves ALL_INSTALLED project-owned collision semantics without writing project files
+[22m[39mclaude private configured skill 'writer': project-owned skill preferred.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mcodex ordinary filesystem configured skills[2m > [22m[2mexposes resolved sources privately, skips unresolved, and leaves the project unchanged
+[22m[39mcodex private configured skill 'missing': source unavailable.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mcodex ordinary filesystem configured skills[2m > [22m[2mpreserves ALL_INSTALLED project-owned collision semantics without writing project files
+[22m[39mcodex private configured skill 'writer': project-owned skill preferred.
+
+ [32m✓[39m tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts[2m > [22m[2mREQ-007/009/013 exact Codex input outcome before Task-owned release[2m > [22m[2mretains the exact reader/router/lease through idle and awaits the genuine native terminal
+[22m[39mtest-owned idle boundary receipt {"receipt":null,"backendReceipts":[],"threadRetained":true,"activeTurn":"owned-thread-1-turn","lastTerminal":null,"input":[{"state":"forwarded","turn":"owned-thread-1-turn"}]}
+
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts[2m > [22m[2mREQ-007/009/013 exact Codex input outcome before Task-owned release[2m > [22m[2mretains missing-terminal proof, then retries only the same fenced exact generation
+[22m[39mtest-owned exact retry receipt {"first":{"accepted":false,"code":"RUNTIME_COMMAND_FAILED","message":"Failed to terminate run for runtime 'codex_app_server': AggregateError: Codex exact thread cleanup failed."},"retry":{"accepted":true},"sameThread":"owned-thread-1","sameTurn":"owned-thread-1-turn","facts":[{"kind":"admitted"},{"kind":"forwarded","dispatchKind":"start_turn","turnId":"owned-thread-1-turn"},{"kind":"turn_associated","turnId":"owned-thread-1-turn"},{"kind":"interrupted","turnId":"owned-thread-1-turn"}]}
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 21131[2mms[22m[39m
+     [33m[2m✓[22m[39m retains timed-out async delivery proof and retries the same backend after provider release [33m 10178[2mms[22m[39m
+     [33m[2m✓[22m[39m retains missing-terminal proof, then retries only the same fenced exact generation [33m 10154[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/runtime-skill-profile.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 68[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-compaction-abandon.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/private-skill-discovery.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/prepare-private-runtime-skills.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-agent-run-backend.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-tool-log-correlation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-turn-tracker.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-turn-tracker.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/events/claude-session-event-converter.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-run-capsule.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 99[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-manager.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-manager.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-background-task-registry.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mAutoByteusAgentRunBackend[2m > [22m[2mpublishes the committed system instruction after listener binding and before the first input exactly once
+[22m[39mAgentEventStream for 'agent-1': Notifier not available. No events will be streamed.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mkeeps the producer while stopping, drains FIFO including awaited listeners, then forbids resubscription
+[22m[39mAgentEventStream (ID: 472642ac-5849-4782-a1d0-60a8d200f654) initialized for agent_id 'agent-1'. Subscribed to notifier.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mkeeps the producer while stopping, drains FIFO including awaited listeners, then forbids resubscription
+[22m[39mAgentEventStream (ID: 472642ac-5849-4782-a1d0-60a8d200f654) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mkeeps the producer while stopping, drains FIFO including awaited listeners, then forbids resubscription
+[22m[39mAgentEventStream (ID: 472642ac-5849-4782-a1d0-60a8d200f654) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2muses only the remainder of one ten-second deadline for a hung listener without undoing resource success
+[22m[39mAgentEventStream (ID: 1e66ff0f-2655-4435-82bd-a9342692ca9c) initialized for agent_id 'agent-1'. Subscribed to notifier.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2muses only the remainder of one ten-second deadline for a hung listener without undoing resource success
+[22m[39mAgentEventStream (ID: 1e66ff0f-2655-4435-82bd-a9342692ca9c) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2muses only the remainder of one ten-second deadline for a hung listener without undoing resource success
+[22m[39mNative event drain deadline exceeded for 'agent-1'.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2muses only the remainder of one ten-second deadline for a hung listener without undoing resource success
+[22m[39mAgentEventStream (ID: 1e66ff0f-2655-4435-82bd-a9342692ca9c) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mold pump disposal cannot close a replacement stream, and unsubscribe alone emits no stopped
+[22m[39mAgentEventStream (ID: 5d36ee35-59b4-4119-853a-9bfdee1b4a6d) initialized for agent_id 'agent-1'. Subscribed to notifier.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mold pump disposal cannot close a replacement stream, and unsubscribe alone emits no stopped
+[22m[39mAgentEventStream (ID: 5d36ee35-59b4-4119-853a-9bfdee1b4a6d) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+AgentEventStream (ID: 368c5250-d2a5-4da4-bce4-eacd1a52d836) initialized for agent_id 'agent-1'. Subscribed to notifier.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mold pump disposal cannot close a replacement stream, and unsubscribe alone emits no stopped
+[22m[39mAgentEventStream (ID: 368c5250-d2a5-4da4-bce4-eacd1a52d836) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mcontinues draining other listeners when one observer fails
+[22m[39mAgentEventStream (ID: 31427674-65c4-45d9-b007-38520448ba28) initialized for agent_id 'agent-1'. Subscribed to notifier.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mcontinues draining other listeners when one observer fails
+[22m[39mAgentEventStream (ID: 31427674-65c4-45d9-b007-38520448ba28) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mcontinues draining other listeners when one observer fails
+[22m[39mNative event listener failed for 'agent-1'. Error: projection failed
+    at [90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/[39mtests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts:378:65
+    at [90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/[39msrc/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.ts:300:25
+    at [90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/[39msrc/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.ts:267:27
+    at [90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/[39mtests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts:380:5
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/[4m.pnpm[24m/@vitest+runner@4.0.18/node_modules/[4m@vitest/runner[24m/dist/index.js:915:20
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts[2m > [22m[2mnative shutdown event drain[2m > [22m[2mcontinues draining other listeners when one observer fails
+[22m[39mAgentEventStream (ID: 31427674-65c4-45d9-b007-38520448ba28) for 'agent-1': close() called. Unsubscribing all listeners and signaling.
+
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-run-backend.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 142[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/acp/acp-agent-run-backend-factory.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/acp/acp-agent-run-backend-factory.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 395[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-agent-run-backend-factory.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-agent-run-backend-factory.test.ts [2m([22m[2m21 tests[22m[2m)[22m[33m 320[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-turn-lifecycle.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-turn-lifecycle.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 167[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/grok/grok-build-compaction.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 451[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-native-argument-lifecycle.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-native-argument-lifecycle.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 109[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-configured-skill-linker.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 219[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-failure-cli-routing.test.ts [2m([22m[2m17 tests[22m[2m)[22m[33m 3752[2mms[22m[39m
+     [33m[2m✓[22m[39m retains new native capture and exact resumed conversation binding with monotonically new step indices [33m 1783[2mms[22m[39m
+     [33m[2m✓[22m[39m retains ambiguous native plans and their normal summary stream/completion [33m 721[2mms[22m[39m
+     [33m[2m✓[22m[39m linked_skills BACKGROUND_STEP leaves a daemon step open at turn end, then writes an exit message the production reader parses [33m 391[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreads registered roots without activation, temp cleanup, existence checks or registry writes
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mcreates and registers a workspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-7uqpEu
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-7uqpEu.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mcreates and registers a workspace
+[22m[39mCreated and registered workspace ID: agent_ws_7ca4f0e980aaa0deb7854a7abb5a951907a0f59a7f520d33749f6ae85fba943f
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mcreates and registers a workspace
+[22m[39mClosing FileSystemWorkspace agent_ws_7ca4f0e980aaa0deb7854a7abb5a951907a0f59a7f520d33749f6ae85fba943f
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace with the same config
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-hJ00SY
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-hJ00SY.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace with the same config
+[22m[39mCreated and registered workspace ID: agent_ws_0c2d522fd8c78a0a389b74a27e22c36abbd3f5f82e146a6f033e9fb42d94631f
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace with the same config
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-hJ00SY
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-hJ00SY.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace with the same config
+[22m[39mReusing registered workspace ID: agent_ws_0c2d522fd8c78a0a389b74a27e22c36abbd3f5f82e146a6f033e9fb42d94631f
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace with the same config
+[22m[39mClosing FileSystemWorkspace agent_ws_0c2d522fd8c78a0a389b74a27e22c36abbd3f5f82e146a6f033e9fb42d94631f
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace when equivalent root paths normalize to the same workspace ID
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-b1TffE
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-b1TffE.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace when equivalent root paths normalize to the same workspace ID
+[22m[39mCreated and registered workspace ID: agent_ws_b0c04e468b6eab662273b2be768534454c07ea94226bd3b6ce6ce0139db3f9ad
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace when equivalent root paths normalize to the same workspace ID
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-b1TffE/.
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-b1TffE.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace when equivalent root paths normalize to the same workspace ID
+[22m[39mReusing registered workspace ID: agent_ws_b0c04e468b6eab662273b2be768534454c07ea94226bd3b6ce6ce0139db3f9ad
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreuses an existing workspace when equivalent root paths normalize to the same workspace ID
+[22m[39mClosing FileSystemWorkspace agent_ws_b0c04e468b6eab662273b2be768534454c07ea94226bd3b6ce6ce0139db3f9ad
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mroutes the configured temp root to TempWorkspace instead of registering a filesystem workspace
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-Z3B2pZ/.
+Resolved configured temp workspace root to TempWorkspace.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mroutes the configured temp root to TempWorkspace instead of registering a filesystem workspace
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-Z3B2pZ
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-Z3B2pZ.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-Z3B2pZ with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mroutes the configured temp root to TempWorkspace instead of registering a filesystem workspace
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mdecommissions persisted filesystem entries for the configured temp root
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-RcCEGj.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mdecommissions persisted filesystem entries for the configured temp root
+[22m[39mRemoved 1 persisted filesystem registry entry for the configured temp workspace root.
+Closing FileSystemWorkspace agent_ws_51ef9926d36173c96d7862b49006d8944a328430c283082f957ddf9554ef3f72
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mdecommissions persisted filesystem entries for the configured temp root
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-RcCEGj
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-RcCEGj.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-RcCEGj with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mdecommissions persisted filesystem entries for the configured temp root
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-wjFsnH.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mdecommissions persisted filesystem entries for the configured temp root
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-fFdRBg
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-fFdRBg.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mCreated and registered workspace ID: agent_ws_b3d8c46240800fe4795f593dbe8a90bd9e0fbe856e10c4fb479cb647d296788a
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-AfKvIp
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-AfKvIp.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mCreated and registered workspace ID: agent_ws_1cb210f0783c8acf080799a26390b8dd5fd79e03ef38e54313da3ee04f154174
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mClosing FileSystemWorkspace agent_ws_b3d8c46240800fe4795f593dbe8a90bd9e0fbe856e10c4fb479cb647d296788a
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns all active workspaces
+[22m[39mClosing FileSystemWorkspace agent_ws_1cb210f0783c8acf080799a26390b8dd5fd79e03ef38e54313da3ee04f154174
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mcreates the temp workspace on first call
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-7btyXc
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-7btyXc.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-7btyXc with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mcreates the temp workspace on first call
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns cached temp workspace on subsequent calls
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-APXAoA
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-APXAoA.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-APXAoA with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mreturns cached temp workspace on subsequent calls
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-J6wIjD
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-J6wIjD.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mCreated and registered workspace ID: agent_ws_9b291df1cea99594561a37cdc958599878b272f42750fe97d198cde6a3aa32ce
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mClosing FileSystemWorkspace agent_ws_9b291df1cea99594561a37cdc958599878b272f42750fe97d198cde6a3aa32ce
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-J6wIjD
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-J6wIjD.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mCreated and registered workspace ID: agent_ws_9b291df1cea99594561a37cdc958599878b272f42750fe97d198cde6a3aa32ce
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates an ordinary filesystem workspace from its deterministic ID after restart
+[22m[39mClosing FileSystemWorkspace agent_ws_9b291df1cea99594561a37cdc958599878b272f42750fe97d198cde6a3aa32ce
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mremoves a registered workspace entry without deleting workspace files
+[22m[39mCreating new workspace for rootPath: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-xQDp8g
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-xQDp8g.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mremoves a registered workspace entry without deleting workspace files
+[22m[39mCreated and registered workspace ID: agent_ws_621ad64e4753aa365570bdfa680d693d91e7827de51aaecaf0663b7aa09974c6
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mremoves a registered workspace entry without deleting workspace files
+[22m[39mClosing FileSystemWorkspace agent_ws_621ad64e4753aa365570bdfa680d693d91e7827de51aaecaf0663b7aa09974c6
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates the temp workspace from its stable workspace ID
+[22m[39mCreating temp workspace at: /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-M6ecYq
+Created metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-M6ecYq.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-M6ecYq with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrecreates the temp workspace from its stable workspace ID
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mCreating on-demand SkillWorkspace for: writer
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-ON1iIY/g1.
+Initialized SkillWorkspace for skill 'writer' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-ON1iIY/g1
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mClosing FileSystemWorkspace skill_ws_writer
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mCreating on-demand SkillWorkspace for: writer
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-ON1iIY/g2.
+Initialized SkillWorkspace for skill 'writer' at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-ws-ON1iIY/g2
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mClosing FileSystemWorkspace skill_ws_writer
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mCreating on-demand SkillWorkspace for: writer
+
+[90mstderr[2m | tests/unit/workspaces/workspace-manager.test.ts[2m > [22m[2mWorkspaceManager[2m > [22m[2mrebinds a cached skill workspace after generation publication and rejects a removed skill
+[22m[39mFailed to create skill workspace skill_ws_writer: Error: SkillWorkspace creation failed for 'writer': Error: Skill 'writer' not found
+
+ [32m✓[39m tests/unit/workspaces/workspace-manager.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/acp/acp-session-update-converter.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/agent-provider-factory-builder.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [31m❯[39m tests/unit/agent-execution/agent-provider-factory-builder.test.ts [2m([22m[2m22 tests[22m[2m | [22m[31m5 failed[39m[2m)[22m[32m 13[2mms[22m[39m
+     [32m✓[39m requires the root-selected workspace for process composition[32m 1[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf workspaceManager[32m 1[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf skillService[32m 1[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.agentFactory[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.createLlm[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.processorRegistries.input[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.processorRegistries.llmResponse[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.processorRegistries.toolExecutionResult[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.processorRegistries.toolInvocationPreprocessor[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.processorRegistries.lifecycle[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf autoByteus.waitForIdle[32m 0[2mms[22m[39m
+[31m     [31m×[31m requires the exact process leaf codex.workspaceSkillMaterializer[39m[32m 3[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf codex.workspaceResolver[32m 0[2mms[22m[39m
+[31m     [31m×[31m requires the exact process leaf codex.clientManager[39m[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf codex.threadManager[32m 0[2mms[22m[39m
+[31m     [31m×[31m requires the exact process leaf codex.threadCleanup[39m[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf claude.workspaceResolver[32m 0[2mms[22m[39m
+[31m     [31m×[31m requires the exact process leaf claude.workspaceSkillMaterializer[39m[32m 0[2mms[22m[39m
+     [32m✓[39m requires the exact process leaf claude.sdkClient[32m 0[2mms[22m[39m
+     [32m✓[39m requires both execution inputs before provider construction[32m 0[2mms[22m[39m
+[31m     [31m×[31m maps all collaborators exactly while sharing process leaves and isolating executions[39m[32m 2[2mms[22m[39m
+     [32m✓[39m keeps general execution application capability explicitly null[32m 0[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-compaction-checkpoint.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-compaction-checkpoint.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-native-tool-arguments-reader.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 148[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-stream-process.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-task-exit-message-reader.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mskips a stale removed name without changing the configured names or blocking a retained tool
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mmaterializes the native foundation baseline through the existing registry
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a standalone Agent-root host that selected no task tool neither create_task nor update_task (AC-001)
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a standalone Agent-root host that selected no task tool neither create_task nor update_task (AC-001)
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a Team member that selected no task tool neither create_task nor update_task (AC-001)
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a Team member that selected no task tool neither create_task nor update_task (AC-001)
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a standalone Agent-root host that selected create_task and update_task both native tools (ARCH-F-001)
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a standalone Agent-root host that selected create_task and update_task both native tools (ARCH-F-001)
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a Team member that selected create_task and update_task both native tools (ARCH-F-001)
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mgives a Team member that selected create_task and update_task both native tools (ARCH-F-001)
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'delegate_task'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mlaunches an agent that still selects the removed create_or_update_task with no task tools and a warning (AC-007)
+[22m[39mSuccessfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+[90mstdout[2m | tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts[2m > [22m[2mresolveAutoByteusAgentTools[2m > [22m[2mlaunches an agent that still selects the removed create_or_update_task with no task tools and a warning (AC-007)
+[22m[39mSuccessfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'get_handoff_rules'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'delegate_task'
+
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/autobyteus-agent-tool-resolver.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-app-server-model-normalizer.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-brain-file.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-background-task-monitor.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-restore-live.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [2m[90m↓[39m[22m tests/unit/agent-execution/backends/antigravity/agy-restore-live.test.ts [2m([22m[2m1 test[22m[2m | [22m[33m1 skipped[39m[2m)[22m
+ [2m[90m↓[39m[22m tests/unit/agent-execution/backends/antigravity/agy-production-live.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-step-output-reader.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-native-argument-persistence.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-native-argument-persistence.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-client.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-client-manager.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/claude-agent-run-backend.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-token-usage.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-launch-config.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-tool-use-coordinator.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/grok/grok-build-tool-projection.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/grok/grok-build-session-profile.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-call-usage-tracker-throughput.test.ts[2m > [22m[2mClaudeCallUsageTracker per-call TPS (DEC-002 generation speed)[2m > [22m[2mgives no reading without a paired main-loop message_start, and ignores subagent frames
+[22m[39mClaude run 'run' dropped a message_delta without a paired message_start or usage.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-call-usage-tracker-throughput.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-client-thread-router.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-compaction-operation-tracker.test.ts[2m > [22m[2mClaudeCompactionOperationTracker[2m > [22m[2mcollapses 30 s compacting keepalives into the open operation (AC-023)
+[22m[39mClaude compaction 7a12debe-56a1-4b84-ba8d-c69fd6973df9 suppressed 3 repeated compacting status frame(s).
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-compaction-operation-tracker.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-mcp-team-live.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [2m[90m↓[39m[22m tests/unit/agent-execution/backends/antigravity/agy-mcp-team-live.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+[90mstdout[2m | tests/unit/agent-execution/backends/grok/grok-build-runtime-registration.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/grok/grok-build-runtime-registration.test.ts[2m > [22m[2mgrok_build runtime registration[2m > [22m[2mrestores from the stored Grok session id and references it as the run session
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+ [32m✓[39m tests/unit/agent-execution/backends/grok/grok-build-runtime-registration.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-call-throughput.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-call-throughput.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/antigravity/agy-native-argument-converter.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-native-argument-converter.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/workspace-registry-store.test.ts[2m > [22m[2mWorkspaceRegistryStore[2m > [22m[2mpreserves existing registry entries when load and upsert overlap
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+ [32m✓[39m tests/unit/workspaces/workspace-registry-store.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [2m[90m↓[39m[22m tests/unit/agent-execution/backends/antigravity/agy-image-input-live.test.ts [2m([22m[2m1 test[22m[2m | [22m[33m1 skipped[39m[2m)[22m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-user-message-builder.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-output-events.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-output-events.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-item-event-payload-parser.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-user-message-text.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/history/codex-thread-history-item-normalizer.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-tracker.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-mcp-tool-call.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/acp/acp-permission-bridge-and-prompt.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-cleanup.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-user-input-mapper.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/backend/codex-configured-tool-gating.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/agent-tools-mcp/codex-agent-tools-mcp-materializer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/agent-tools-mcp/claude-agent-tools-mcp-materializer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-ordered-tool-boundary-tracker.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-background-process-groups.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/workspace-removal-guard.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/workspaces/workspace-removal-guard.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstdout[2m | tests/unit/skills/github/private-profile-source-lifecycle.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/skills/github/private-profile-source-lifecycle.test.ts[2m > [22m[2mSR019 source publication is independent of private runtime profiles[2m > [22m[2mclaude peer-stop preserves sources; real Update/Remove retire bytes without waiting
+[22m[39mclaude private configured skill 'writer': source unavailable.
+
+[90mstderr[2m | tests/unit/skills/github/private-profile-source-lifecycle.test.ts[2m > [22m[2mSR019 source publication is independent of private runtime profiles[2m > [22m[2mcodex peer-stop preserves sources; real Update/Remove retire bytes without waiting
+[22m[39mcodex private configured skill 'writer': source unavailable.
+
+[90mstderr[2m | tests/unit/skills/github/private-profile-source-lifecycle.test.ts[2m > [22m[2mSR019 source publication is independent of private runtime profiles[2m > [22m[2mgrok peer-stop preserves sources; real Update/Remove retire bytes without waiting
+[22m[39mgrok private configured skill 'writer': source unavailable.
+
+ [32m✓[39m tests/unit/skills/github/private-profile-source-lifecycle.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 196[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-provider-diagnostic-sink.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/workspace-manager-skill-integration.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager-skill-integration.test.ts[2m > [22m[2mWorkspaceManager skill integration[2m > [22m[2mcreates and caches a SkillWorkspace for skill_ws_ IDs
+[22m[39mCreating on-demand SkillWorkspace for: MySkill
+
+[90mstdout[2m | tests/unit/workspaces/workspace-manager-skill-integration.test.ts[2m > [22m[2mWorkspaceManager skill integration[2m > [22m[2mthrows for unknown workspace IDs
+[22m[39mPlatform detection: Windows=false
+App root directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+App data directory: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts
+
+ [32m✓[39m tests/unit/workspaces/workspace-manager-skill-integration.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/acp/acp-call-throughput.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 120[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/autobyteus-runtime-tool-exposure.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2muses the fixed TEMP_WORKSPACE_ID
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-9Kh6r6.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-9Kh6r6 with fixed ID 'temp_ws_default'
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2mreturns a friendly name
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-NB2cG8.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-NB2cG8 with fixed ID 'temp_ws_default'
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2minherits from FileSystemWorkspace
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-UBZUdF.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-UBZUdF with fixed ID 'temp_ws_default'
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2mstores rootPath in config
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-ERurSq.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-ERurSq with fixed ID 'temp_ws_default'
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2minitializes metadata only and acquires file explorer explicitly
+[22m[39mCreated metadata-only FileSystemWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-B0gyDq.
+Initialized TempWorkspace at /var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp/autobyteus-temp-ws-B0gyDq with fixed ID 'temp_ws_default'
+
+[90mstderr[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2minitializes metadata only and acquires file explorer explicitly
+[22m[39mFileSystemWorkspace.initialize() is metadata-only for temp_ws_default; file explorer acquisition is explicit.
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2minitializes metadata only and acquires file explorer explicitly
+[22m[39mCreated WorkspaceFileExplorer for temp_ws_default (unit-test).
+
+[90mstdout[2m | tests/unit/workspaces/temp-workspace.test.ts[2m > [22m[2mTempWorkspace[2m > [22m[2minitializes metadata only and acquires file explorer explicitly
+[22m[39mClosing FileSystemWorkspace temp_ws_default
+
+ [32m✓[39m tests/unit/workspaces/temp-workspace.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/autobyteus/events/autobyteus-status-projector.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/build-claude-session-mcp-servers.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/model-call-request-boundary.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 1[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-process-diagnostics.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/codex-sandbox-mode-setting.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-config.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/filesystem-workspace-id.test.ts[2m > [22m[2mFileSystemWorkspace ID[2m > [22m[2mderives a deterministic workspaceId from the normalized root path
+[22m[39mCreated metadata-only FileSystemWorkspace at /tmp/autobyteus-workspace.
+Created metadata-only FileSystemWorkspace at /tmp/autobyteus-workspace.
+
+[90mstdout[2m | tests/unit/workspaces/filesystem-workspace-id.test.ts[2m > [22m[2mFileSystemWorkspace ID[2m > [22m[2mcanonicalizes the root path before deriving the workspaceId
+[22m[39mCreated metadata-only FileSystemWorkspace at /tmp/autobyteus-workspace.
+
+[90mstdout[2m | tests/unit/workspaces/filesystem-workspace-id.test.ts[2m > [22m[2mFileSystemWorkspace ID[2m > [22m[2maccepts an explicit workspaceId when provided
+[22m[39mCreated metadata-only FileSystemWorkspace at /tmp/autobyteus-workspace.
+
+ [32m✓[39m tests/unit/workspaces/filesystem-workspace-id.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstdout[2m | tests/unit/workspaces/skill-workspace.test.ts[2m > [22m[2mSkillWorkspace[2m > [22m[2mcreates a workspace for an existing skill
+[22m[39mCreated metadata-only FileSystemWorkspace at /opt/skills/TestSkill.
+Initialized SkillWorkspace for skill 'TestSkill' at /opt/skills/TestSkill
+
+ [32m✓[39m tests/unit/workspaces/skill-workspace.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/workspaces/workspace-path-utils.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/antigravity/agy-native-tool-policy.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 15 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/agent-provider-factory-builder.test.ts[2m > [22mAgentProviderFactoryBuilder[2m > [22mrequires the exact process leaf codex.workspaceSkillMaterializer
+[31m[1mAssertionError[22m: codex.workspaceSkillMaterializer omitted: expected [Function] to throw an error[39m
+
+[32m- Expected:[39m 
+null
+
+[31m+ Received:[39m 
+undefined
+
+[36m [2m❯[22m tests/unit/agent-execution/agent-provider-factory-builder.test.ts:[2m102:30[22m[39m
+    [90m100| [39m      [34mexpect[39m(() [33m=>[39m [34mcreateAgentProviderFactoryBuilder[39m(
+    [90m101| [39m        [34mwithLeaf[39m([34mcreateProcessInput[39m()[33m,[39m path[33m,[39m value[33m,[39m omit)[33m,[39m
+    [90m102| [39m      ), `${path} ${label}`).toThrow(`Agent provider factory builder $…
+    [90m   | [39m                             [31m^[39m
+    [90m103| [39m    }
+    [90m104| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/agent-provider-factory-builder.test.ts[2m > [22mAgentProviderFactoryBuilder[2m > [22mrequires the exact process leaf codex.clientManager
+[31m[1mAssertionError[22m: codex.clientManager omitted: expected [Function] to throw an error[39m
+
+[32m- Expected:[39m 
+null
+
+[31m+ Received:[39m 
+undefined
+
+[36m [2m❯[22m tests/unit/agent-execution/agent-provider-factory-builder.test.ts:[2m102:30[22m[39m
+    [90m100| [39m      [34mexpect[39m(() [33m=>[39m [34mcreateAgentProviderFactoryBuilder[39m(
+    [90m101| [39m        [34mwithLeaf[39m([34mcreateProcessInput[39m()[33m,[39m path[33m,[39m value[33m,[39m omit)[33m,[39m
+    [90m102| [39m      ), `${path} ${label}`).toThrow(`Agent provider factory builder $…
+    [90m   | [39m                             [31m^[39m
+    [90m103| [39m    }
+    [90m104| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/agent-provider-factory-builder.test.ts[2m > [22mAgentProviderFactoryBuilder[2m > [22mrequires the exact process leaf codex.threadCleanup
+[31m[1mAssertionError[22m: codex.threadCleanup omitted: expected [Function] to throw an error[39m
+
+[32m- Expected:[39m 
+null
+
+[31m+ Received:[39m 
+undefined
+
+[36m [2m❯[22m tests/unit/agent-execution/agent-provider-factory-builder.test.ts:[2m102:30[22m[39m
+    [90m100| [39m      [34mexpect[39m(() [33m=>[39m [34mcreateAgentProviderFactoryBuilder[39m(
+    [90m101| [39m        [34mwithLeaf[39m([34mcreateProcessInput[39m()[33m,[39m path[33m,[39m value[33m,[39m omit)[33m,[39m
+    [90m102| [39m      ), `${path} ${label}`).toThrow(`Agent provider factory builder $…
+    [90m   | [39m                             [31m^[39m
+    [90m103| [39m    }
+    [90m104| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/agent-provider-factory-builder.test.ts[2m > [22mAgentProviderFactoryBuilder[2m > [22mrequires the exact process leaf claude.workspaceSkillMaterializer
+[31m[1mAssertionError[22m: claude.workspaceSkillMaterializer omitted: expected [Function] to throw an error[39m
+
+[32m- Expected:[39m 
+null
+
+[31m+ Received:[39m 
+undefined
+
+[36m [2m❯[22m tests/unit/agent-execution/agent-provider-factory-builder.test.ts:[2m102:30[22m[39m
+    [90m100| [39m      [34mexpect[39m(() [33m=>[39m [34mcreateAgentProviderFactoryBuilder[39m(
+    [90m101| [39m        [34mwithLeaf[39m([34mcreateProcessInput[39m()[33m,[39m path[33m,[39m value[33m,[39m omit)[33m,[39m
+    [90m102| [39m      ), `${path} ${label}`).toThrow(`Agent provider factory builder $…
+    [90m   | [39m                             [31m^[39m
+    [90m103| [39m    }
+    [90m104| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/agent-provider-factory-builder.test.ts[2m > [22mAgentProviderFactoryBuilder[2m > [22mmaps all collaborators exactly while sharing process leaves and isolating executions
+[31m[1mAssertionError[22m: expected undefined to be { marker: 'codex-client' } // Object.is equality[39m
+
+[32m- Expected:[39m 
+{
+  "marker": "codex-client",
+}
+
+[31m+ Received:[39m 
+undefined
+
+[36m [2m❯[22m tests/unit/agent-execution/agent-provider-factory-builder.test.ts:[2m185:45[22m[39m
+    [90m183| [39m    [34mexpect[39m(codexBootstrapper[33m.[39magentDefinitionService)[33m.[39m[34mtoBe[39m(definitionA)[33m;[39m
+    [90m184| [39m    [34mexpect[39m(codexBootstrapper[33m.[39mskillService)[33m.[39m[34mtoBe[39m(process[33m.[39mskillService)[33m;[39m
+    [90m185| [39m    expect(codexBootstrapper.clientManager).toBe(process.codex.clientM…
+    [90m   | [39m                                            [31m^[39m
+    [90m186| [39m    expect(codexBootstrapper.agentToolMcpRunSessions).toBe(runSessions…
+    [90m187| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mkeeps multi-turn text/tool order without repeating result.response
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/multi_turn.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m403:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mkeeps headless denial failed despite result SUCCESS
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_denied.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m410:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mmaps exit0 DONE to provider-step success without inventing shell exit
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit0.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m416:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mmaps exit8_empty DONE to provider-step success without inventing shell exit
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit8_empty.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m416:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mmaps not_found DONE to provider-step success without inventing shell exit
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/not_found.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m416:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mdoes not mark headless denial green when the turn reports SUCCESS
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/denied.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m424:20[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22mprioritizes an explicit tool error even when AGY labels the step DONE
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit0.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m429:22[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts[2m > [22mAGY canonical stream conversion[2m > [22memits assistant text that satisfies the canonical segment lifecycle contract
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_nonzero.stdout.jsonl'[39m
+[36m [2m❯[22m fixture tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m14:76[22m[39m
+
+[90m [2m❯[22m convert tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m18:20[22m[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/antigravity/agy-stream-event-converter.test.ts:[2m635:29[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mends each call at rawResponse/completed and excludes the tool, live sample 1 (API-L03/L04)
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/output-tps-precision/evidence/api-e2e/live/codex/codex-wire.jsonl'[39m
+[36m [2m❯[22m replayLiveWire tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m58:25[22m[39m
+    [90m 56| [39m[35mconst[39m replayLiveWire [33m=[39m (file[33m:[39m string) [33m=>[39m {
+    [90m 57| [39m  [35mconst[39m harness [33m=[39m [34mcreateThread[39m()[33m;[39m
+    [90m 58| [39m  for (const line of fs.readFileSync(file, "utf8").split("\n").filter(…
+    [90m   | [39m                        [31m^[39m
+    [90m 59| [39m    [35mconst[39m frame [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(line) [35mas[39m { t[33m:[39m number[33m;[39m line[33m?[39m[33m:[39m string }[33m;[39m
+    [90m 60| [39m    [35mif[39m ([33m![39mframe[33m.[39mline) [35mcontinue[39m[33m;[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m76:21[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/15]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mdoes the same on live sample 2
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/output-tps-precision/evidence/api-e2e/live/codex-repeat/codex-wire.jsonl'[39m
+[36m [2m❯[22m replayLiveWire tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m58:25[22m[39m
+    [90m 56| [39m[35mconst[39m replayLiveWire [33m=[39m (file[33m:[39m string) [33m=>[39m {
+    [90m 57| [39m  [35mconst[39m harness [33m=[39m [34mcreateThread[39m()[33m;[39m
+    [90m 58| [39m  for (const line of fs.readFileSync(file, "utf8").split("\n").filter(…
+    [90m   | [39m                        [31m^[39m
+    [90m 59| [39m    [35mconst[39m frame [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(line) [35mas[39m { t[33m:[39m number[33m;[39m line[33m?[39m[33m:[39m string }[33m;[39m
+    [90m 60| [39m    [35mif[39m ([33m![39mframe[33m.[39mline) [35mcontinue[39m[33m;[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m90:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/15]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m3 failed[39m[22m[2m | [22m[1m[32m96 passed[39m[22m[2m | [22m[33m4 skipped[39m[90m (103)[39m
+[2m      Tests [22m [1m[31m15 failed[39m[22m[2m | [22m[1m[32m1143 passed[39m[22m[2m | [22m[33m6 skipped[39m[90m (1164)[39m
+[2m   Start at [22m 15:56:16
+[2m   Duration [22m 74.43s[2m (transform 4.87s, setup 955ms, import 32.61s, tests 30.84s, environment 7ms)[22m
+

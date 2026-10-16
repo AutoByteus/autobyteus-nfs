@@ -1,0 +1,19 @@
+{
+  "command": [
+    "pnpm",
+    "-C",
+    "autobyteus-server-ts",
+    "exec",
+    "vitest",
+    "run",
+    "tests/integration/agent-execution/agent-run-manager.integration.test.ts",
+    "tests/integration/agent-execution/agent-run-manager.memory-layout.real.integration.test.ts",
+    "tests/e2e/terminal/terminal-websocket-lifecycle.e2e.test.ts",
+    "--maxWorkers=1"
+  ],
+  "exit": 0,
+  "seconds": 7.749352931976318,
+  "HOME": "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/home",
+  "TMPDIR": "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp",
+  "layer": "Local implementation path/PTY check; not API/E2E signoff"
+}

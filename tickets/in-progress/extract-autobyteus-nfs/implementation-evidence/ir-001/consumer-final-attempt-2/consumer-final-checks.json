@@ -1,0 +1,26 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "test:integration:prepare"
+    ],
+    "exit": 0,
+    "seconds": 22.504
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "tsc",
+      "--noEmit"
+    ],
+    "exit": 2,
+    "seconds": 3.573
+  }
+]

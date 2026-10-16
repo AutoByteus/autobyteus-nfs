@@ -1,0 +1,179 @@
+[
+  {
+    "name": "standalone-go-race",
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "-count=1",
+      "./..."
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 8.797
+  },
+  {
+    "name": "standalone-go-vet",
+    "command": [
+      "go",
+      "vet",
+      "./..."
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.633
+  },
+  {
+    "name": "standalone-python",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 2.706
+  },
+  {
+    "name": "standalone-actionlint",
+    "command": [
+      "actionlint",
+      ".github/workflows/release-nfs.yml"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.171
+  },
+  {
+    "name": "standalone-shell",
+    "command": [
+      "bash",
+      "-n",
+      "scripts/public/nfs/install.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.006
+  },
+  {
+    "name": "standalone-source-hash",
+    "command": [
+      "python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.072
+  },
+  {
+    "name": "standalone-publish-refusal",
+    "command": [
+      "python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass": true,
+    "seconds": 0.068
+  },
+  {
+    "name": "standalone-build-darwin-arm64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-darwin-arm64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.143
+  },
+  {
+    "name": "standalone-build-darwin-amd64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-darwin-amd64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.171
+  },
+  {
+    "name": "standalone-build-linux-arm64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-linux-arm64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.156
+  },
+  {
+    "name": "standalone-build-linux-amd64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-linux-amd64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.146
+  },
+  {
+    "name": "standalone-version",
+    "command": [
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-darwin-arm64",
+      "version"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.133
+  },
+  {
+    "name": "standalone-build-linux-arm64-embedded",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir001-ro_1oipn/nfs-linux-arm64-embedded",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true,
+    "seconds": 0.143
+  }
+]

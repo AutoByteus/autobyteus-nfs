@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-checks.py", line 11, in <module>
+    with tarfile.open(p) as t:t.extractall(scratch/'tools',filter='data')
+TypeError: extractall() got an unexpected keyword argument 'filter'

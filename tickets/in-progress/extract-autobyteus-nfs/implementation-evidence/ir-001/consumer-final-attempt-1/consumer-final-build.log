@@ -1,0 +1,5 @@
+$ pnpm test:integration:prepare
+undefined
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "test:integration:prepare" not found
+
+Did you mean "pnpm test:e2e:real"?

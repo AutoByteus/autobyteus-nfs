@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-16T14:16:19.090059+00:00",
+  "NSource": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "SSource": "d3f7f67015587b4c8aa26824786be807793485d1",
+  "NArchiveInputsUnchanged": true,
+  "SInputsUnchanged": true,
+  "NSourceHash": "348046594b470f7b294aa2162f78ec349eb57c4edf74aa2db32112a9dc9da90e",
+  "qualified": false,
+  "SWorkingTreeClean": true,
+  "NWorkingTreeBeforeEvidenceCommit": "?? tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/\n?? tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md\n?? tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+  "NRemoteRefs": "",
+  "STarget": "3712cd9bf0db998501d162db7f8655f169e3def6",
+  "finalization": "Not done; Delivery owns AC007",
+  "cleanup": "Complete for enumerated task-owned resources; unrelated scratch/assets/worktrees preserved"
+}

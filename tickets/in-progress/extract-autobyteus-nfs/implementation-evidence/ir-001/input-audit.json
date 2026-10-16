@@ -1,0 +1,86 @@
+{
+  "sourceHead": "3712cd9bf0db998501d162db7f8655f169e3def6",
+  "destinationHead": "5d354b91616c431a358f6024993ef1d52e682dc3",
+  "sourceBranch": "codex/extract-autobyteus-nfs",
+  "destinationBranch": "codex/extract-autobyteus-nfs",
+  "canonicalStatus": "?? task-plans/",
+  "pm": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md",
+      "sha256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1",
+      "bytes": 2042
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/architecture-review-revision-record.md",
+      "sha256": "fe6e2d016615e40bde4fbd8029b1c595c16cff97c02d527500c94334d6015b9a"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/design-review-report.md",
+      "sha256": "9b79f8dd98a201846f10c8b1bd861fd43d2901e254a6927fb956f5201dedf4e1"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/design-spec.md",
+      "sha256": "f7e2073e35419f7007fabb6eec40b49f5b3434a2a6cac8d907411078fcbc5d95"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/investigation-notes.md",
+      "sha256": "1e2ded445d809febd8c4bbf8c7621dd0e18930f73914ec1b3f1c5eab326e1a2c"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/requirements-doc.md",
+      "sha256": "5d19364216302fda379684641a0ad92db9e450e70afd55c957e7daf08f2126ef"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/solution-design-handoff.md",
+      "sha256": "8e8cb8d6b79b8c76ddc4f4ac6d73d926530eb2332213cc03f3ac8a6b4bc70a69"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/solution-revision-record.md",
+      "sha256": "7d1656724495c2389dc325adc2010f41e784cde9d4767bdb6bfa1cf026a88b1c"
+    }
+  ],
+  "retainedEngine": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/COPYRIGHT",
+      "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7",
+      "bytes": 30807
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/SHA256SUMS",
+      "sha256": "59100b94a86df4f03d3720daf4c65466b4f10ad447ab41d91163023001a63735",
+      "bytes": 453
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+      "sha256": "eed35ab4b732ac05d2afc3531e70cdc27031fb414fdb52a0daf093f33daaec0a",
+      "bytes": 1930105
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-build-arm64.txt",
+      "sha256": "56fad63c43f85091d84df347564dfd962a9afaafe519539849860b1807695761",
+      "bytes": 57836
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-manifest.json",
+      "sha256": "4488fccf14574d27931429d4c2529c34620de575bacce63383254808f97c39a5",
+      "bytes": 2134
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb",
+      "sha256": "3bf06769646d93ea85f0277fe0726eb42d0d29a70c0108505706954e5e8d2ac6",
+      "bytes": 48626
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb",
+      "sha256": "0b5c78911cfc1b299e9894e1f841e74176fbb2cb45b158008e4530713549ebc8",
+      "bytes": 613976
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/engine-manifest.json",
+      "sha256": "4488fccf14574d27931429d4c2529c34620de575bacce63383254808f97c39a5",
+      "bytes": 2134
+    }
+  ]
+}

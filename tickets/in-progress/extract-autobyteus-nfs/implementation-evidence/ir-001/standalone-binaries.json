@@ -1,0 +1,27 @@
+[
+  {
+    "name": "nfs-darwin-amd64",
+    "sha256": "703e62bdecd5375232119277bb7cb1af877df5f2a47f15b9d91aa3855d213bb7",
+    "bytes": 11261632
+  },
+  {
+    "name": "nfs-darwin-arm64",
+    "sha256": "85ca4827a388a32fe5f5c6ac40ac47c18a7d47318b90b3417a542782f713a102",
+    "bytes": 10508018
+  },
+  {
+    "name": "nfs-linux-amd64",
+    "sha256": "f53ae9a6bd593203936746f9a04f21c7acd5f26ffe4fbafaaca6071b3557faeb",
+    "bytes": 11051680
+  },
+  {
+    "name": "nfs-linux-arm64",
+    "sha256": "7e1635f5ae89f57cfc1c10450f229002f44c4a1664de3729491ffccfe8ec46f5",
+    "bytes": 10222612
+  },
+  {
+    "name": "nfs-linux-arm64-embedded",
+    "sha256": "555021ad0600698a695bf8d604344667a6c06312733a42eea0ef18c34ad84510",
+    "bytes": 10878044
+  }
+]

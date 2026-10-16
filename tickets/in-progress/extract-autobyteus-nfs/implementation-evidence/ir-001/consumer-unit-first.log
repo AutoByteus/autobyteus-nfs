@@ -1,0 +1,372 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts[39m
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession streaming lifecycle[2m > [22m[2mcloses the opened process and fails the turn when system-instruction persistence fails
+[22m[39mClaude input for run 'run-1' failed before send: Error: persist failed
+    at Object.<anonymous> (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:277:36)
+    at Object.Mock [as capture] (file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+spy@4.0.18/node_modules/@vitest/spy/dist/index.js:285:34)
+    at captureClaudeSystemInstructions (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-system-instruction-capture.ts:14:75)
+    at ClaudeSession.handleProcessOpened (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:361:5)
+    at Object.onOpened (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:127:34)
+    at ClaudeSessionProcess.open (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:75:18)
+    at ClaudeSession.submitInput (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:233:7)
+    at start (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:159:20)
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:284:20
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession streaming lifecycle[2m > [22m[2menriches a failed process open with bounded redacted stderr diagnostics
+[22m[39mClaude input for run 'run-1' failed before send: Error: Claude Code process exited with code 1
+Claude Code diagnostics:
+Authorization: Bearer [redacted]
+ANTHROPIC_API_KEY=[redacted]
+--dangerously-skip-permissions cannot be used with root/sudo privileges for security reasons
+    at enrichClaudeRuntimeErrorWithDiagnostics (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-process-diagnostics.ts:79:10)
+    at ClaudeSessionProcess.open (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:82:13)
+    at ClaudeSession.submitInput (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:233:7)
+    at start (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:159:20)
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:439:5
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mfails the active turn visibly on an unexpected exit and reopens with resume on the next input (AC-009)
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:900:16
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mtreats a conflicting provider UUID as fatal for the process and fails the active turn
+[22m[39mClaude process for run 'run-1' exited: Error: CLAUDE_PROVIDER_SESSION_ID_CONFLICT: Claude returned a different provider session identity.
+    at ClaudeProviderSessionLifecycle.confirmProviderSessionId (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-provider-session-lifecycle.ts:82:13)
+    at ClaudeSession.handleFrame (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:386:37)
+    at Object.onFrame (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session.ts:128:32)
+    at ClaudeSessionProcess.runPump (/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-process.ts:91:26)
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession process lifetime[2m > [22m[2mmarks still-running background tasks stopped on unexpected exit (REQ-009, AC-011)
+[22m[39mClaude process for run 'run-1' exited: Error: killed
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:952:112
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:961:11
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession token usage[2m > [22m[2mmarks the first observation after a reopen following an unexpected exit, but never a create generation
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:1070:16
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession compaction (real SDK frame shapes)[2m > [22m[2mrecords one operation for an auto compaction with 30 s keepalives (AC-023)
+[22m[39mClaude compaction 7a12debe-56a1-4b84-ba8d-c69fd6973df9 suppressed 3 repeated compacting status frame(s).
+
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-session.test.ts[2m > [22m[2mClaudeSession compaction (real SDK frame shapes)[2m > [22m[2mcloses an open operation as process_exited before the terminal turn error (SCN-020)
+[22m[39mClaude process for run 'run-1' exited: Error: Claude Code process terminated by signal SIGKILL
+    at /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/session/claude-session.test.ts:1559:15
+    at file:///private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/node_modules/.pnpm/@vitest+runner@4.0.18/node_modules/@vitest/runner/dist/index.js:915:20
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session.test.ts [2m([22m[2m54 tests[22m[2m)[22m[33m 587[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-thread-event-converter.test.ts[2m > [22m[2mCodexThreadEventConverter through CodexThread[2m > [22m[2mdoes not map token-usage telemetry into AGENT_STATUS
+[22m[39mRun 'run-1': Codex token-usage update arrived without a turn id. Skipping persistence.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-thread-event-converter.test.ts [2m([22m[2m64 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-thread.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 170[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/events/claude-session-event-converter.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-turn-tracker.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-turn-tracker.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-agent-run-backend.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts[2m > [22m[2mCodex reasoning block conversion[2m > [22m[2mrejects a completed reasoning snapshot without exact turn identity
+[22m[39m[CodexSegmentTurnAdmissionRejected] {
+  runtimeKind: [32m'codex_app_server'[39m,
+  runId: [32m'run-1'[39m,
+  nativeEventName: [32m'item/completed'[39m,
+  reasonCode: [32m'CODEX_SEGMENT_TURN_INACTIVE'[39m
+}
+
+[90mstderr[2m | tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts[2m > [22m[2mCodex reasoning block conversion[2m > [22m[2mpreserves for in-place or no-effect event: thread tokens
+[22m[39mRun 'run-1': Codex token-usage update for turn 'turn-1' did not include usable token counts.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-converter.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-tool-gating.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-tool-gating.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts[2m > [22m[2mREQ-007/009/013 exact Codex input outcome before Task-owned release[2m > [22m[2mretains the exact reader/router/lease through idle and awaits the genuine native terminal
+[22m[39mtest-owned idle boundary receipt {"receipt":null,"backendReceipts":[],"threadRetained":true,"activeTurn":"owned-thread-1-turn","lastTerminal":null,"input":[{"state":"forwarded","turn":"owned-thread-1-turn"}]}
+
+[90mstdout[2m | tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts[2m > [22m[2mREQ-007/009/013 exact Codex input outcome before Task-owned release[2m > [22m[2mretains missing-terminal proof, then retries only the same fenced exact generation
+[22m[39mtest-owned exact retry receipt {"first":{"accepted":false,"code":"RUNTIME_COMMAND_FAILED","message":"Failed to terminate run for runtime 'codex_app_server': AggregateError: Codex exact thread cleanup failed."},"retry":{"accepted":true},"sameThread":"owned-thread-1","sameTurn":"owned-thread-1-turn","facts":[{"kind":"admitted"},{"kind":"forwarded","dispatchKind":"start_turn","turnId":"owned-thread-1-turn"},{"kind":"turn_associated","turnId":"owned-thread-1-turn"},{"kind":"interrupted","turnId":"owned-thread-1-turn"}]}
+
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-input-terminal-release.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 21141[2mms[22m[39m
+     [33m[2m✓[22m[39m retains timed-out async delivery proof and retries the same backend after provider release [33m 10153[2mms[22m[39m
+     [33m[2m✓[22m[39m retains missing-terminal proof, then retries only the same fenced exact generation [33m 10164[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-background-task-registry.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-input-terminal-release.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-input-terminal-release.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 465[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-compaction-abandon.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [31m❯[39m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts [2m([22m[2m7 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 8[2mms[22m[39m
+[31m     [31m×[31m ends each call at rawResponse/completed and excludes the tool, live sample 1 (API-L03/L04)[39m[32m 3[2mms[22m[39m
+[31m     [31m×[31m does the same on live sample 2[39m[32m 0[2mms[22m[39m
+     [32m✓[39m uses the server's approval reply as a request boundary[32m 2[2mms[22m[39m
+     [32m✓[39m gives null on a token mismatch or without rawResponse/completed, and never uses usage arrival[32m 0[2mms[22m[39m
+[31m     [31m×[31m gives every call of the recorded 0.161.0 probe (no raw events) no reading (P5)[39m[32m 0[2mms[22m[39m
+[31m     [31m×[31m leaves the pending reading untouched across a compaction frame (P6), then pairs it[39m[32m 0[2mms[22m[39m
+     [32m✓[39m clears the pending reading at turn end[32m 0[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-tool-use-coordinator.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-manager.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-manager.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-client-thread-router.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-tool-log-correlation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-compaction-operation-tracker.test.ts[2m > [22m[2mClaudeCompactionOperationTracker[2m > [22m[2mcollapses 30 s compacting keepalives into the open operation (AC-023)
+[22m[39mClaude compaction 7a12debe-56a1-4b84-ba8d-c69fd6973df9 suppressed 3 repeated compacting status frame(s).
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-compaction-operation-tracker.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/codex-app-server-model-normalizer.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/claude-agent-run-backend.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mclaude ordinary filesystem configured skills[2m > [22m[2mexposes resolved sources privately, skips unresolved, and leaves the project unchanged
+[22m[39mclaude private configured skill 'missing': source unavailable.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mclaude ordinary filesystem configured skills[2m > [22m[2mpreserves ALL_INSTALLED project-owned collision semantics without writing project files
+[22m[39mclaude private configured skill 'writer': project-owned skill preferred.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mclaude ordinary filesystem configured skills[2m > [22m[2mrefreshes managed source identity before exposure
+[22m[39mclaude private configured skill 'writer': source unavailable.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mcodex ordinary filesystem configured skills[2m > [22m[2mexposes resolved sources privately, skips unresolved, and leaves the project unchanged
+[22m[39mcodex private configured skill 'missing': source unavailable.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mcodex ordinary filesystem configured skills[2m > [22m[2mpreserves ALL_INSTALLED project-owned collision semantics without writing project files
+[22m[39mcodex private configured skill 'writer': project-owned skill preferred.
+
+[90mstderr[2m | tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22m[2mcodex ordinary filesystem configured skills[2m > [22m[2mrefreshes managed source identity before exposure
+[22m[39mcodex private configured skill 'writer': source unavailable.
+
+ [31m❯[39m tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts [2m([22m[2m10 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 47[2mms[22m[39m
+     [32m✓[39m exposes resolved sources privately, skips unresolved, and leaves the project unchanged[32m 13[2mms[22m[39m
+     [32m✓[39m does not acquire a profile when no skills are configured[32m 3[2mms[22m[39m
+     [32m✓[39m preserves CONFIGURED project-owned collision semantics without writing project files[32m 6[2mms[22m[39m
+     [32m✓[39m preserves ALL_INSTALLED project-owned collision semantics without writing project files[32m 5[2mms[22m[39m
+[31m     [31m×[31m refreshes managed source identity before exposure[39m[32m 5[2mms[22m[39m
+     [32m✓[39m exposes resolved sources privately, skips unresolved, and leaves the project unchanged[32m 4[2mms[22m[39m
+     [32m✓[39m does not acquire a profile when no skills are configured[32m 2[2mms[22m[39m
+     [32m✓[39m preserves CONFIGURED project-owned collision semantics without writing project files[32m 3[2mms[22m[39m
+     [32m✓[39m preserves ALL_INSTALLED project-owned collision semantics without writing project files[32m 4[2mms[22m[39m
+[31m     [31m×[31m refreshes managed source identity before exposure[39m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-token-usage.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-client.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-client-manager.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/client/codex-app-server-launch-config.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-item-event-payload-parser.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/runtime-skill-profile.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/claude/session/claude-session-output-events.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-output-events.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-reasoning-block-tracker.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/shared/prepare-private-runtime-skills.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/history/codex-thread-history-item-normalizer.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstderr[2m | tests/unit/agent-execution/backends/claude/session/claude-call-usage-tracker-throughput.test.ts[2m > [22m[2mClaudeCallUsageTracker per-call TPS (DEC-002 generation speed)[2m > [22m[2mgives no reading without a paired main-loop message_start, and ignores subagent frames
+[22m[39mClaude run 'run' dropped a message_delta without a paired message_start or usage.
+
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-call-usage-tracker-throughput.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/events/codex-ordered-tool-boundary-tracker.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/thread/codex-user-input-mapper.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-user-message-builder.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/agent-tools-mcp/codex-agent-tools-mcp-materializer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/agent-tools-mcp/claude-agent-tools-mcp-materializer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts
+[22m[39mAgentFactory (Singleton) initialized.
+
+ [32m✓[39m tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-cleanup.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/codex/backend/codex-configured-tool-gating.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-session-config.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/build-claude-session-mcp-servers.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/runtime-management/codex/codex-sandbox-mode-setting.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m tests/unit/agent-execution/backends/claude/session/claude-process-diagnostics.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 6 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22mclaude ordinary filesystem configured skills[2m > [22mrefreshes managed source identity before exposure
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts[2m > [22mcodex ordinary filesystem configured skills[2m > [22mrefreshes managed source identity before exposure
+[31m[1mAssertionError[22m: expected "vi.fn()" to be called once with arguments: [ 'source-id', 'writer' ][90m
+
+Number of calls: [1m0[22m
+[31m[39m
+[36m [2m❯[22m tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts:[2m72:60[22m[39m
+    [90m 70| [39m    [35mconst[39m f[33m=[39m[34mfixture[39m(runtime[33m,[39m[{kind[33m:[39m[32m'resolved'[39m[33m,[39mskill[33m:[39minitial}])[33m;[39m
+    [90m 71| [39m    const result=await f.bootstrapper.bootstrapForCreate(f.context,f.g…
+    [90m 72| [39m    expect(f.skills.resolveManagedSkillForMaterialization).toHaveBeenC…
+    [90m   | [39m                                                           [31m^[39m
+    [90m 73| [39m    expect(result.runtimeContext.privateSkillProfile!.exposures[0]!.sk…
+    [90m 74| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mends each call at rawResponse/completed and excludes the tool, live sample 1 (API-L03/L04)
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/output-tps-precision/evidence/api-e2e/live/codex/codex-wire.jsonl'[39m
+[36m [2m❯[22m replayLiveWire tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m58:25[22m[39m
+    [90m 56| [39m[35mconst[39m replayLiveWire [33m=[39m (file[33m:[39m string) [33m=>[39m {
+    [90m 57| [39m  [35mconst[39m harness [33m=[39m [34mcreateThread[39m()[33m;[39m
+    [90m 58| [39m  for (const line of fs.readFileSync(file, "utf8").split("\n").filter(…
+    [90m   | [39m                        [31m^[39m
+    [90m 59| [39m    [35mconst[39m frame [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(line) [35mas[39m { t[33m:[39m number[33m;[39m line[33m?[39m[33m:[39m string }[33m;[39m
+    [90m 60| [39m    [35mif[39m ([33m![39mframe[33m.[39mline) [35mcontinue[39m[33m;[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m76:21[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mdoes the same on live sample 2
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/output-tps-precision/evidence/api-e2e/live/codex-repeat/codex-wire.jsonl'[39m
+[36m [2m❯[22m replayLiveWire tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m58:25[22m[39m
+    [90m 56| [39m[35mconst[39m replayLiveWire [33m=[39m (file[33m:[39m string) [33m=>[39m {
+    [90m 57| [39m  [35mconst[39m harness [33m=[39m [34mcreateThread[39m()[33m;[39m
+    [90m 58| [39m  for (const line of fs.readFileSync(file, "utf8").split("\n").filter(…
+    [90m   | [39m                        [31m^[39m
+    [90m 59| [39m    [35mconst[39m frame [33m=[39m [33mJSON[39m[33m.[39m[34mparse[39m(line) [35mas[39m { t[33m:[39m number[33m;[39m line[33m?[39m[33m:[39m string }[33m;[39m
+    [90m 60| [39m    [35mif[39m ([33m![39mframe[33m.[39mline) [35mcontinue[39m[33m;[39m
+[90m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m90:12[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mgives every call of the recorded 0.161.0 probe (no raw events) no reading (P5)
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/token-meter-accuracy/probes/P5-codex-luna-multi.jsonl'[39m
+[36m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m134:27[22m[39m
+    [90m132| [39m    [35mconst[39m { updates[33m,[39m notify } [33m=[39m [34mcreateThread[39m()[33m;[39m
+    [90m133| [39m    [35mlet[39m turnId [33m=[39m [32m""[39m[33m;[39m
+    [90m134| [39m    for (const line of fs.readFileSync(probe("P5-codex-luna-multi.json…
+    [90m   | [39m                          [31m^[39m
+    [90m135| [39m      const row = JSON.parse(line) as { label: string; dt: number; dat…
+    [90m136| [39m      if (row.label === "EVENT" && row.data.method === "turn/started")…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts[2m > [22mCodex per-call TPS (DEC-002 end to end, SR-006)[2m > [22mleaves the pending reading untouched across a compaction frame (P6), then pairs it
+[31m[1mError[22m: ENOENT: no such file or directory, open '/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo/tickets/done/token-meter-accuracy/probes/P6-codex-luna-autocompact.jsonl'[39m
+[36m [2m❯[22m tests/unit/agent-execution/backends/codex/thread/codex-model-call-timing.test.ts:[2m150:27[22m[39m
+    [90m148| [39m
+    [90m149| [39m  it("leaves the pending reading untouched across a compaction frame (…
+    [90m150| [39m    const compaction = fs.readFileSync(probe("P6-codex-luna-autocompac…
+    [90m   | [39m                          [31m^[39m
+    [90m151| [39m      [33m.[39m[34mmap[39m((line) [33m=>[39m [33mJSON[39m[33m.[39m[34mparse[39m(line) [35mas[39m { label[33m:[39m string[33m;[39m data[33m:[39m any })
+    [90m152| [39m      .find((row) => row.label === "TOKEN_USAGE" && row.data.tokenUsag…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m45 passed[39m[22m[90m (47)[39m
+[2m      Tests [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m579 passed[39m[22m[90m (585)[39m
+[2m   Start at [22m 15:53:39
+[2m   Duration [22m 42.22s[2m (transform 3.76s, setup 426ms, import 13.97s, tests 22.79s, environment 3ms)[22m
+

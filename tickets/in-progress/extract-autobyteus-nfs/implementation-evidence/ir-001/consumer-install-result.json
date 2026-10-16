@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "path": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/repo",
+  "env": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin",
+    "HOME": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/home",
+    "TMPDIR": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  }
+}

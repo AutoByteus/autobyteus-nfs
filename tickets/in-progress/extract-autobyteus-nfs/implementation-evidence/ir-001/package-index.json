@@ -1,0 +1,667 @@
+{
+  "NSource": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "SSource": "d3f7f67015587b4c8aa26824786be807793485d1",
+  "scope": "IR001 own handoff and evidence; index itself excluded to avoid self-reference",
+  "files": [
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md",
+      "sha256": "e8676b7bcf48efcfb76ecc17cfd76db9e15317fc88e66292a6465dbf8029ff8c",
+      "bytes": 13065
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+      "sha256": "c9a1eee2d7381598767de5d2492bb1aa8291f63a80e0e0bcb1314e71024b264a",
+      "bytes": 3262
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/attempts.md",
+      "sha256": "3179f064deede328d0890a50e19dd47e6b4d251a62acff979a4b632bdc481cf0",
+      "bytes": 5899
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-console.log",
+      "sha256": "053806b054a058912c82442244bd72206a70bbfe005dac808019e4f0982ebcb9",
+      "bytes": 621
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-source.py",
+      "sha256": "2d9217eaf7c87cc49b4107b385d709101199b971caeb37cccf0592dbfe51f863",
+      "bytes": 5796
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-console.log",
+      "sha256": "e1d4eba2a1412a07d62d7175144f635bc702b04f2769762c65f3b41664770bdd",
+      "bytes": 599
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-source.py",
+      "sha256": "c808d17fe33631d72a8a6f0180e096a39c8db330c594f271b9dcc2c8e94240bf",
+      "bytes": 5771
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/change-inventory.json",
+      "sha256": "5a525833b3163bdf0405d0f76544039503232973232a3a435f4a1cddac2db7be",
+      "bytes": 17170
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/changed-typescript-parse.json",
+      "sha256": "503d664de79ca193c1db3686d2fe91efa4b6234210d312e0fe33246daea69eee",
+      "bytes": 5957
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/checks-and-limits.md",
+      "sha256": "99d18d1c31c75bd6335a1d94de946092e9607690c3d737ec461d56e44043bc41",
+      "bytes": 5938
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-console.log",
+      "sha256": "770fa3e255cca55430b0b46a21e1fbe9661e887a20133e30cd55cf20ae1f78dd",
+      "bytes": 91
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-owned.py",
+      "sha256": "2b54e00cf82e553586fccef801f5a451b5447fb57e5073f9062a87cebb5bd6cc",
+      "bytes": 2712
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup.json",
+      "sha256": "f1467bbd4a687a3571080e9ac73df4eb26fa233a6c029cb4cc4053d373efeec6",
+      "bytes": 2784
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fifth.log",
+      "sha256": "1bd1f1ed1d6c5052bc0777459f249e1a7dd447f8eb68b63dac93523ff694034d",
+      "bytes": 6517
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-first.log",
+      "sha256": "17eabb10ce25377aa63ab560deebc7ee30d1269b2d053342c3cb33c5c2d4f2f0",
+      "bytes": 932
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fourth.log",
+      "sha256": "c7acd1c9b92885b5297b52e8557429b52096859fb3d06667b57c123b6ca3e326",
+      "bytes": 15525
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-second.log",
+      "sha256": "e0e37a31c7c04ecdb9bc1a463899414f3da9c6481018d6dcce0652a44811e578",
+      "bytes": 3584
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-third.log",
+      "sha256": "a562026528c54078e9263f826b7ea4f705e1c47cb0994400cf45d1877b3a55c9",
+      "bytes": 7101
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.json",
+      "sha256": "9857db0127adf87bf6bb745e0b55879ecdd15552ed730ab240a23bd1c19f53af",
+      "bytes": 300
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.log",
+      "sha256": "e8a2a75f0eb5d260fb1c4ea665ebb55f64df2f3f89285a5f0dd9a508a5baa2f5",
+      "bytes": 14604
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-build.log",
+      "sha256": "ace1e7bba30329db2452a450f2a556b13288e0eeeb4a41cbdd0dd063700c0e0f",
+      "bytes": 164
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-checks.json",
+      "sha256": "ad5ae5bbd14a59a6552f025d16ed01ed2f256e61f64c1c82deb4dddaa2d3ca7d",
+      "bytes": 142
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-console.log",
+      "sha256": "e94e57ede6b930e502537ab6008961f504226b92886ab3f33e1dee140396fe8b",
+      "bytes": 33
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-inputs.json",
+      "sha256": "bf8a7ad8d40592eb088b00629aded0c35acfde5c55ca2857bf56d605ee682b01",
+      "bytes": 1361541
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/run-consumer-final.py",
+      "sha256": "a98c972d1e7de39cdf2ee325db52d97e72e20523e1c6df7b922b072503a81e28",
+      "bytes": 2415
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-build.log",
+      "sha256": "3be203d706e61eb5898f09d06cd601d432f876022b7a083c4c8f5678de5e4438",
+      "bytes": 3584
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-checks.json",
+      "sha256": "46ac8ffdd52fafd0d6dc82f6971fd1dc9d9100bbd8c81ecf813bb4ee5ae51d3b",
+      "bytes": 377
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-console.log",
+      "sha256": "f222a2ff8b07fb8ebc037cf0d9a993f6c49ff209dc6d6a987dc27d40c7077157",
+      "bytes": 43
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-inputs.json",
+      "sha256": "bf8a7ad8d40592eb088b00629aded0c35acfde5c55ca2857bf56d605ee682b01",
+      "bytes": 1361541
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-typecheck.log",
+      "sha256": "3e2b47b140d245543c0c77d5c93b1c21e89cdb3bc02f9c545c04f217953257a2",
+      "bytes": 539
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/run-consumer-final.py",
+      "sha256": "84d7642f413c96496752afa0b321f417fdcc4abb4483c4afe8ce3cd6b138fcbb",
+      "bytes": 2443
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-build.log",
+      "sha256": "5741d2dedb809c688107736776a56d08a7a08b84b2eacc3b750fe79aa1766d87",
+      "bytes": 3586
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-checks.json",
+      "sha256": "0e38e7ebea2853903d0ed02de7529d946cced85083167b4da44695f14d87928a",
+      "bytes": 1352
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-console.log",
+      "sha256": "f24684e7cc378ed9b7a5b8b126dd364706573561a63bba8f4d2cbe6bcfd6691b",
+      "bytes": 65
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-inputs.json",
+      "sha256": "2b36c754104094a7fb3309afc50613679644a0f5909ca0051c734f2ddb4c403a",
+      "bytes": 1361541
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-local-routes.log",
+      "sha256": "fa937b4dd2231435daedb9ac0547285407a66885b529975a1829569f39023cd2",
+      "bytes": 58164
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.json",
+      "sha256": "b7e38678b7008fc2b2e2ec546c7e4ec9fc9777753a84b783d31ce8701ddf78b7",
+      "bytes": 698
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.log",
+      "sha256": "d35eac4850ff270352dbc7d5a5d90822f35997b2105e2c1309f510ee64fcfc73",
+      "bytes": 53306
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.json",
+      "sha256": "aef0facb1052e9befa5680febb7ebf07ead55bbc61170903f0676b8704c5bc88",
+      "bytes": 491
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.log",
+      "sha256": "4df49b999aa96be1fa661dc64518ae8a3bcce8bbe5867d813688e2c058333e0e",
+      "bytes": 54919
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-typecheck.log",
+      "sha256": "93aab0ab6dd6dcd79b5c3fe08e98bca2c998e78edc9918fa9d28f6eebd0ef8e3",
+      "bytes": 72
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-unit.log",
+      "sha256": "d14878088097022a1c8104b8e054c68f585d7f078913bb1b3156356d55b5d23f",
+      "bytes": 86958
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install-result.json",
+      "sha256": "95d20dcdb5779f04aceb35356ad0342eb6b9046f92f87f41711cb45f50d2f248",
+      "bytes": 481
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install.log",
+      "sha256": "406d636ac183c3fbe6b8ac78635f10d5738625310ac45bf6c34db73273a315f7",
+      "bytes": 4137
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-launcher-localization.log",
+      "sha256": "91ba4ae8255d69aeacd9de7ab2178180c7e075910e4bdbf0d9d61ecc2289ec65",
+      "bytes": 8872
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api-second.log",
+      "sha256": "bf88dd5d6cffed4a7f134c85eebd9d406c7efbc469be6ee7364cbc7e69898d7d",
+      "bytes": 70709
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api.log",
+      "sha256": "84032b3df1961f1147c3985013380ec226afa4625125928aaf230dad011ffb28",
+      "bytes": 9703
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-scratch-path.txt",
+      "sha256": "0443482294eba211e05299e85fe6fe9e6404cfc93da9ccaa2028c94688213894",
+      "bytes": 77
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-staged-paths.json",
+      "sha256": "4dcfdb55cfc997640f84c65d106cc666481a8dd0180c13db8117500dffabb4ff",
+      "bytes": 8007
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-type-web.log",
+      "sha256": "f461e48087048d6891fd92ab584a915a1e7035ae92c20982bff7e735f2b7a221",
+      "bytes": 4423
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-first.log",
+      "sha256": "66150579920b9a5c1c8cba6a345d4f5babc193acc597e133fde5cda71d6ccb3e",
+      "bytes": 37591
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-second.log",
+      "sha256": "f0c18c7023eaa59b880c534b08105b80b8175a8b279010062dfc6134bd1d810b",
+      "bytes": 132427
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-third.log",
+      "sha256": "ce2c0d8fd231bfba3c521f8b02ffd36f1b297e71e95dae78216e6fa4e883c21d",
+      "bytes": 106490
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/destination-fetch.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/edit-app-r2.py",
+      "sha256": "e7733b7d76d2f449861ec00db1307ba0f17421112d1fa751203b616c7e67f058",
+      "bytes": 10015
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-fixture-docs.py",
+      "sha256": "6213f0e4d04c792b2bbf07412031c8fa4b1a8e6e9c6bee37c7f476adb0842955",
+      "bytes": 6884
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-test-cleanup.py",
+      "sha256": "f9aaed5cbbd34f692cee855b6f162bffe9e88afc2a9d49a21f01fef9142def2e",
+      "bytes": 5246
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-tests.py",
+      "sha256": "bfb71a7296b223681d5e6db8259a06dea08471adf203743ad238b63fb60cfbf3",
+      "bytes": 6142
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/extract.py",
+      "sha256": "d59470d78f9866e95291152a49fe4bd2445755c06ab4a440183da58f66f625f0",
+      "bytes": 4262
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-checks.json",
+      "sha256": "c68c5f233e49c958ce255c52c15dd9d5835ef44985650ea77297d0e0a714e564",
+      "bytes": 862
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-refs.json",
+      "sha256": "0ce56485ed48199f84042a6be76281b91d1e301f81318da2a87f0d3e83be5e02",
+      "bytes": 33158
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-actionlint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-amd64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-arm64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-amd64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64-embedded.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-race.log",
+      "sha256": "14bb282e2876b618e0a1eebc2ca298a84141fe8cb35b997559be95083f1ebbd7",
+      "bytes": 532
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-vet.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-publish-refusal.log",
+      "sha256": "378159f5b9e056565b861d3fc3f97fd5c0898b8acea1b142ff9073056b6c4d60",
+      "bytes": 54
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-python.log",
+      "sha256": "2a12f5df567dd0794d6b4afa355e2e34dfb43743988337b34c7dbd7e77fca515",
+      "bytes": 3331
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-shell.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-source-hash.log",
+      "sha256": "d8125ed53ada2ad26334cada409c592f69fb285e8a99c3aebf188f163eb1ad27",
+      "bytes": 65
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-version.log",
+      "sha256": "27c1cfab3f07267ba6cc39e0ef36570b580e48569f735d691a0ed1e3137d7c68",
+      "bytes": 24
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-toolchain.json",
+      "sha256": "8f25f80b233ecd9c2339d4180ec3d5e3d98121f6172c64e373bb7e9280525ecd",
+      "bytes": 412
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/fresh-refs.json",
+      "sha256": "838d867df0f9c3c189a2cc9cb2aee9dbcb6eaad442a9e4aa22a0296d96930d10",
+      "bytes": 150
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-initial-r2.log",
+      "sha256": "2cd32df37dc7a112bd44ef970932d411bf2b62aa63a6b7a47895c0a1279b36aa",
+      "bytes": 713
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-install-state.log",
+      "sha256": "97bfa8b778ad386c4757facaca032237239b047f108c6785b11f351425f5a202",
+      "bytes": 62
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-second-r2.log",
+      "sha256": "fea67c02317f4fb8c3ef05eee2b2f926f5d9137ac051450c45b1629ecb0d51cd",
+      "bytes": 540
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-third-r2.log",
+      "sha256": "afb409d8bbe0d41c35dc93fbdb9403707174ba35aad4535bb90e1eb39b57dd94",
+      "bytes": 540
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-console.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-1440.png",
+      "sha256": "6bb55bbe4a81f6e1e9b0e443fffe1fa64a70dc2202889bf1e0985edc23f48c23",
+      "bytes": 141940
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-390.png",
+      "sha256": "a1ca6464fcadb385cb541e4b815269e0aff97438ca5cec9fb3fab8ab3eaa7e4f",
+      "bytes": 159422
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/nuxt.log",
+      "sha256": "429cb990432248aae2d723c1b9edecaf1b358e2b074c56f3c23bf00c1f51a0d5",
+      "bytes": 815
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/result.json",
+      "sha256": "87e32f8bef890acb34a21adbee7e53c226138ce86cf024999b8401cab159f726",
+      "bytes": 8259
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-1440.png",
+      "sha256": "5533dc7e15da53889aae1cfe0ed04c9e46f6fb98080f7e0d820549cc0c2ab409",
+      "bytes": 167770
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-390.png",
+      "sha256": "10882f863f0fe7daf59035a3ac2e62a1f7809b98ec610b6f2a6f68d4aa4b3971",
+      "bytes": 166785
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/hold-checkpoint.json",
+      "sha256": "6a92591455f3b42c3b75c4a392811929ea2932ee9036eadd08a9fce0171b1972",
+      "bytes": 7245
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/input-audit.json",
+      "sha256": "56405964b6ade96d27dd2bb7f0a8db924ec6d8b9070975397d56f877878b776a",
+      "bytes": 4232
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/inspect-guide.mjs",
+      "sha256": "a75b5703e543a9d157a89d3104d7aea01e9d4d920b95fc04f5e11fd7a391cd9a",
+      "bytes": 4564
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/n-final-fetch.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/parse-changed-typescript.cjs",
+      "sha256": "1490d80608af86db32a87a794decaf8c83dab9934529a536f51d3adee7880fc1",
+      "bytes": 1156
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/permission-audit.json",
+      "sha256": "c4e4d24557381d533dcda108a5b7d5e2715b84f6a3f2ec5c6f4cb016cefa446d",
+      "bytes": 249
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-checks.py",
+      "sha256": "c3bcf5ca1c0aa9e7485c0062ee9bbaf20cc2065da1b3bd20b5df23a5eb1f5e31",
+      "bytes": 2257
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-console.log",
+      "sha256": "e87326f0129db325f012679e5b056d7c25b28e4560944c33ed99d094e9136bd8",
+      "bytes": 376
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-consumer.py",
+      "sha256": "6675087ff89a5dca09170f692f69212e40567ddada6f5dc31351f414d0fb934c",
+      "bytes": 1234
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/resume-toolchain.py",
+      "sha256": "6ecdfcb021bba9477569644edf0657ec5864d9a99dab85b1adb77bab2c0820b9",
+      "bytes": 810
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-first-verification.json",
+      "sha256": "d4608048ac6b3d24e568da07862403a6500d7229bff672ed3edc43109cd0ad9c",
+      "bytes": 2806
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-verification.json",
+      "sha256": "ad4937b8c6dcb82b0d37c59aa81bbe115e106286ea872c30ceed24845dcc5b18",
+      "bytes": 2793
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/routing.json",
+      "sha256": "bea38e44ba0a1c0d7d392aadca35071807948c773d1da0828edfff55117b1f79",
+      "bytes": 659
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-consumer-final.py",
+      "sha256": "76adbc9bc240800208f351277112e120f1029ba4c86f899277574fdf5d979ef5",
+      "bytes": 2470
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone-final.py",
+      "sha256": "ef3e5f726835d24d1a4f7948d9596e61f28df2031e978fb02060ac051bb746a9",
+      "bytes": 3861
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone.py",
+      "sha256": "6b3ee65b02c6f213ac93bd93ffe18e05e265738cef85de60f22cc2403c7c6c1d",
+      "bytes": 3777
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/s-final-fetch.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/scratch-path.txt",
+      "sha256": "4bf079303af07d5136dfd09b21a43f1c152f44b5e830cda12ef49f3032a8a7ba",
+      "bytes": 76
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/source-audit.json",
+      "sha256": "3090018f1a0ffa6e1bc5a27abf6452df923ee54a7caf0fbed6caf92b0641ab41",
+      "bytes": 33928
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/source-fetch.log",
+      "sha256": "e77843f813a0e367edf47bbf8290693fbe2c280973d2f41499885cabc39fa655",
+      "bytes": 105
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-actionlint.log",
+      "sha256": "71211d8d53741b9b0f4693f5ff81e22f87bd56e6dddaa77d5cf0a8907c0209eb",
+      "bytes": 229
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-archive.json",
+      "sha256": "6ae538c318eb6c87b73e0d07f0795972a88926bb6d77de4b83ed079b47550a6c",
+      "bytes": 11492
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-binaries.json",
+      "sha256": "0c68b19212488a8ca8e93dd0916dcbcb3697a65bf81f9629382cb607b540086a",
+      "bytes": 734
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-amd64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-arm64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-amd64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64-embedded.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-checks.json",
+      "sha256": "7e83cfb0cdb10bd2a9b442bba0dca3cd2ee2a3455d023407e13e135fa5673397",
+      "bytes": 3487
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-console.log",
+      "sha256": "d0e2d3176f7d4425b5819a0f69c07409cab66088c5d9dbb607ddcfe2a76270e3",
+      "bytes": 3307
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-archive.json",
+      "sha256": "4370e067b81b9b6605646531ef3c9edb63781acba503a3123373c01032b2a953",
+      "bytes": 11479
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-checks.json",
+      "sha256": "74e09f645c06d761ab53e9af7df597377b38b2833b31b421e9528e75c162ff4e",
+      "bytes": 3484
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-console.log",
+      "sha256": "06a3f1811be7cda1ea6d3a5e402821e212c089239b41eb794cfce5edff6204c6",
+      "bytes": 345
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-root.txt",
+      "sha256": "5cd5f6a6cc82a5482f6d5fb2dab7ec20a3bcd71f4d913b5f76deb61baad57fbd",
+      "bytes": 63
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-first-binaries.json",
+      "sha256": "0c68b19212488a8ca8e93dd0916dcbcb3697a65bf81f9629382cb607b540086a",
+      "bytes": 734
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-race.log",
+      "sha256": "74fda9a383b77609d09a1f08eea5e89ad979070eced745f5eda65563831581ff",
+      "bytes": 2264
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-vet.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-publish-refusal.log",
+      "sha256": "378159f5b9e056565b861d3fc3f97fd5c0898b8acea1b142ff9073056b6c4d60",
+      "bytes": 54
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-python.log",
+      "sha256": "65741c9f4e3815bf54f698811e91852d6f78085d6c3b9cabae8c4ad4749a3c06",
+      "bytes": 3331
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-shell.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-source-hash.log",
+      "sha256": "23842bd8e6b84e1049b4644784ccd48c1dc20ad1f4d46556ce1630c5be9c3f98",
+      "bytes": 65
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-version.log",
+      "sha256": "27c1cfab3f07267ba6cc39e0ef36570b580e48569f735d691a0ed1e3137d7c68",
+      "bytes": 24
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/sync-consumer.py",
+      "sha256": "53d4a4d38af3b2578ed7c311ae4dd9f76fe456def63991d16dc064da2d106855",
+      "bytes": 646
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/toolchain.json",
+      "sha256": "45f52aa024728adddbed2e7fc055d6278f2ca5fce113a0edcd1f80dc8af81432",
+      "bytes": 416
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/update-test-constructors.cjs",
+      "sha256": "6cdfdd6aaa2d34cb8c5bd6439b5cf6bacbbfd7e414d8b423764a29ba60e9771b",
+      "bytes": 1212
+    }
+  ]
+}

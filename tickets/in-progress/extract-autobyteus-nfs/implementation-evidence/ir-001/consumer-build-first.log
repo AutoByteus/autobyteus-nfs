@@ -1,0 +1,19 @@
+! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-12.14.0.tgz
+node:internal/modules/cjs/loader:1386
+  throw err;
+  ^
+
+Error: Cannot find module '/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-consumer-ir001-l4wgacn5/home/.cache/node/corepack/v1/pnpm/12.14.0/bin/pnpm.cjs'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+    at Function._load (node:internal/modules/cjs/loader:1192:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at executeUserEntryPoint (node:internal/modules/run_main:171:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.21.1
