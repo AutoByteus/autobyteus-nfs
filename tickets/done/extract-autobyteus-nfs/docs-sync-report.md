@@ -1,4 +1,4 @@
-# Docs Sync Report — DR-002
+# Docs Sync Report — DR-003
 
 ## Scope and integrated basis
 extract-autobyteus-nfs / project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8.
@@ -41,8 +41,15 @@ of filesystem. Standalone NFS retains host storage safety and refuses incompatib
 active/pending predecessor obligations before binary replacement/resource effects.
 The Guide is instructional; release availability stays disabled and qualifications empty.
 
-## Result
-**Pass — docs synchronized to integrated R2.** No outstanding docs ambiguity.
-Post-push native Ubuntu CI subsequently failed; docs Pass is not Delivery Completed.
+## Current round / result
+**Pass — No additional long-lived docs impact in DR003.** DR002 already corrected
+N/S RELEASE prose; this round changes only the reviewed portable test fixture
+and ticket records. Current README, filesystem usage, extraction provenance and
+release/testing policies remain accurate; no production/workflow/interface change.
+Fresh N origin/main22e934b is already an ancestor of current4979f263; S remote
+personal55bff1f5 is unchanged. No new integration or local repeat needed; API003
+native Linux/Darwin proof verifies the affected fixture. Current hosted CI still
+must pass before terminal completion. Prior failed runs remain historical.
+No restored app coupling, Guide removal, public availability or approval inferred.
 Finalization/cleanup receipts and terminal eligibility are owned by
 [release-deployment-report.md](release-deployment-report.md), not inferred here.
