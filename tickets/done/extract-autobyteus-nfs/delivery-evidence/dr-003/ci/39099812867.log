@@ -1,0 +1,481 @@
+checks (ubuntu-24.04)	Set up job	﻿2026-10-18T05:13:28.3048565Z Current runner version: '2.337.0'
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3080689Z ##[group]Runner Image Provisioner
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3081900Z Hosted Compute Agent
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3082623Z Version: 20261012.601
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3083265Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3084004Z Build Date: 2026-10-12T17:48:21Z
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3084667Z Worker ID: {45c18a9a-c97b-444a-a8d4-87c359c8be34}
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3085346Z Region: centralus
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3085916Z Cloud: Azure
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3086439Z ##[endgroup]
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3088166Z ##[group]Operating System
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3088812Z Ubuntu
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3089338Z 24.04.5
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3089898Z LTS
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3090433Z ##[endgroup]
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3090975Z ##[group]Runner Image
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3091559Z Image: ubuntu-24.04
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3092113Z Version: 20261012.334.1
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3093159Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3094868Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3095819Z ##[endgroup]
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3097115Z ##[group]GITHUB_TOKEN Permissions
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3099430Z Contents: read
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3100048Z Metadata: read
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3100618Z ##[endgroup]
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3102591Z Secret source: Actions
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3103524Z Cache mode: write
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3104437Z Prepare workflow directory
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3483393Z Prepare all required actions
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.3554182Z Getting action download info
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.5834442Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:28.6936364Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+checks (ubuntu-24.04)	Set up job	2026-10-18T05:13:29.4544891Z Complete job name: checks (ubuntu-24.04)
+checks (ubuntu-24.04)	Run actions/checkout@v4	﻿2026-10-18T05:13:29.5238942Z ##[group]Run actions/checkout@v4
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5240049Z with:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5240659Z   repository: AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5245205Z   token: ***
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5245781Z   ssh-strict: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5246370Z   ssh-user: git
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5247185Z   persist-credentials: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5247874Z   clean: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5248478Z   sparse-checkout-cone-mode: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5249204Z   fetch-depth: 1
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5249775Z   fetch-tags: false
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5250424Z   show-progress: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5251010Z   lfs: false
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5251572Z   submodules: false
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5252229Z   set-safe-directory: true
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5252889Z   allow-unsafe-pr-checkout: false
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.5253760Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6274755Z Syncing repository: AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6278044Z ##[group]Getting Git version info
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6279476Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6281693Z [command]/usr/bin/git version
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6306658Z git version 2.55.0
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6326746Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6345895Z Temporarily overriding HOME='/home/runner/work/_temp/6a592734-9582-4815-8298-2109eaf0b7d4' before making global git config changes
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6349025Z Adding repository directory to the temporary git global config as a safe directory
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6352298Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6395187Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6402144Z ##[group]Initializing the repository
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6404399Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6503905Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6506320Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6511167Z hint: to use in all of your new repositories, which will suppress this warning,
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6512972Z hint: call:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6513992Z hint:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6514957Z hint: 	git config --global init.defaultBranch <name>
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6516710Z hint:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6518430Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6520347Z hint: 'development'. The just-created branch can be renamed via this command:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6521909Z hint:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6522921Z hint: 	git branch -m <name>
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6523996Z hint:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6525404Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6527917Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6531866Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6562553Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6564030Z ##[group]Disabling automatic garbage collection
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6565509Z [command]/usr/bin/git config --local gc.auto 0
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6596652Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6598540Z ##[group]Setting up auth
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6603407Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6632460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.6984849Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7013768Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7219940Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7249091Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7430888Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7632564Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7633977Z ##[group]Fetching the repository
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:29.7642551Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d:refs/remotes/origin/codex/extract-autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4881621Z From https://github.com/AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4884867Z  * [new ref]         caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d -> origin/codex/extract-autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4891677Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4894282Z ##[group]Determining the checkout info
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4897581Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4899215Z [command]/usr/bin/git sparse-checkout disable
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4952075Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4983970Z ##[group]Checking out the ref
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.4988449Z [command]/usr/bin/git checkout --progress --force -B codex/extract-autobyteus-nfs refs/remotes/origin/codex/extract-autobyteus-nfs
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.5806013Z Switched to a new branch 'codex/extract-autobyteus-nfs'
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.5810427Z branch 'codex/extract-autobyteus-nfs' set up to track 'origin/codex/extract-autobyteus-nfs'.
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.5819448Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.5857298Z [command]/usr/bin/git log -1 --format=%H
+checks (ubuntu-24.04)	Run actions/checkout@v4	2026-10-18T05:13:30.5879394Z caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d
+checks (ubuntu-24.04)	Run actions/setup-go@v5	﻿2026-10-18T05:13:30.6234734Z ##[group]Run actions/setup-go@v5
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6236086Z with:
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6237197Z   go-version: 1.27.2
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6238287Z   cache: false
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6239528Z   check-latest: false
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6249155Z   token: ***
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.6250258Z ##[endgroup]
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.7529408Z Setup go version spec 1.27.2
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.7539490Z Attempting to download 1.27.2...
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.7648005Z (node:2286) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:30.7651770Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:31.4972220Z matching 1.27.2...
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:31.4997003Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-linux-x64.tar.gz
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:32.0778474Z Extracting Go...
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:32.0882259Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/9ee95e4b-2c03-41c6-81d2-95dabf543444 -f /home/runner/work/_temp/74893a28-353d-4f33-adca-4cd68d3dd6e4
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:33.7917458Z Successfully extracted go to /home/runner/work/_temp/9ee95e4b-2c03-41c6-81d2-95dabf543444
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:33.7918644Z Adding to the cache ...
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6531191Z Successfully cached go to /opt/hostedtoolcache/go/1.27.2/x64
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6532917Z Added go to the path
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6535143Z Successfully set up Go version 1.27.2
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6727459Z go version go1.27.2 linux/amd64
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6727817Z 
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.6728381Z ##[group]go env
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7978679Z AR='ar'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7979365Z CC='gcc'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7979791Z CGO_CFLAGS='-O2 -g'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7980367Z CGO_CPPFLAGS=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7980770Z CGO_CXXFLAGS='-O2 -g'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7981235Z CGO_ENABLED='1'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7981695Z CGO_FFLAGS='-O2 -g'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7981996Z CGO_LDFLAGS='-O2 -g'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7982345Z CXX='g++'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7982644Z GCCGO='gccgo'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7983054Z GO111MODULE=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7983392Z GOAMD64='v1'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7983818Z GOARCH='amd64'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7984120Z GOAUTH='netrc'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7984440Z GOBIN='/home/runner/go/bin'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7984832Z GOCACHE='/home/runner/.cache/go-build'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7985223Z GOCACHEPROG=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7985546Z GODEBUG=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7985925Z GOENV='/home/runner/.config/go/env'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7986351Z GOEXE=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7986661Z GOEXPERIMENT=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7987342Z GOFIPS140='off'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7987640Z GOFLAGS=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7988350Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2686523025=/tmp/go-build -gno-record-gcc-switches'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7989075Z GOHOSTARCH='amd64'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7989402Z GOHOSTOS='linux'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7989696Z GOINSECURE=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7990077Z GOMOD='/home/runner/work/autobyteus-nfs/autobyteus-nfs/go.mod'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7990529Z GOMODCACHE='/home/runner/go/pkg/mod'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7990895Z GONOPROXY=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7991245Z GONOSUMDB=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7991529Z GOOS='linux'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7991824Z GOPACKAGESDRIVER=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7992138Z GOPATH='/home/runner/go'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7992470Z GOPRIVATE=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7992856Z GOPROXY='https://proxy.golang.org,direct'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7993711Z GOROOT='/opt/hostedtoolcache/go/1.27.2/x64'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7994178Z GOSUMDB='sum.golang.org'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7994508Z GOTELEMETRY='local'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7994928Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7995309Z GOTMPDIR=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7995588Z GOTOOLCHAIN='auto'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7996026Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.2/x64/pkg/tool/linux_amd64'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7996459Z GOVCS=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7996757Z GOVERSION='go1.27.2'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7997684Z GOWORK=''
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7997997Z PKG_CONFIG='pkg-config'
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7998217Z 
+checks (ubuntu-24.04)	Run actions/setup-go@v5	2026-10-18T05:13:39.7998799Z ##[endgroup]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	﻿2026-10-18T05:13:39.8166206Z ##[group]Run go test -race ./...
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8166733Z [36;1mgo test -race ./...[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8167598Z [36;1mgo vet ./...[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8168079Z [36;1mgo build -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8168550Z [36;1mout/autobyteus-nfs version[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8169057Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8169719Z [36;1mbash -n scripts/public/nfs/install.sh[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8488905Z shell: /usr/bin/bash -e {0}
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:13:39.8489386Z ##[endgroup]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:00.3083626Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:01.4443837Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.131s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:01.8833957Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.024s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:01.8990520Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.038s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:01.8991406Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.023s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:04.6881462Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.241s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:04.6882996Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.016s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:04.6883967Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.156s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.5530835Z development-unqualified
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.6636361Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.6638692Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.6833058Z test_engine_bytes_part_of_source_hash_and_stale_qualification_clears (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_stale_qualification_clears) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.6876021Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.6878281Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.7872749Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.7874033Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8305500Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8307230Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8318721Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8820827Z test_unqualified_release_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_unqualified_release_cannot_publish) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8839274Z test_build_only_runs_all_build_gates_without_publishing (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_build_only_runs_all_build_gates_without_publishing) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8881661Z test_each_gate_rejects_bad_direct_needs_and_cancellation (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_each_gate_rejects_bad_direct_needs_and_cancellation) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8889536Z test_existing_candidate_skip_rebuild_reaches_publication (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_existing_candidate_skip_rebuild_reaches_publication) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8931531Z test_failed_or_skipped_applicable_prerequisites_block_dependents (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failed_or_skipped_applicable_prerequisites_block_dependents) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8938166Z test_manual_only_nfs_owned_version_and_publication (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_nfs_owned_version_and_publication) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.8944613Z test_qualification_candidate_and_signing_gates_remain_required (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_qualification_candidate_and_signing_gates_remain_required) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.9166825Z test_declared_owned_boundary_and_default_qualification (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_qualification) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:18.9476651Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1202369Z test_owned_input_changes_invalidate_qualification (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_qualification) ... ok
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1204163Z 
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1204927Z ----------------------------------------------------------------------
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1205832Z Ran 20 tests in 0.470s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1206225Z 
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T05:14:19.1206441Z OK (skipped=1)
+checks (ubuntu-24.04)	Post Run actions/setup-go@v5	﻿2026-10-18T05:14:19.1469543Z Post job cleanup.
+checks (ubuntu-24.04)	Post Run actions/setup-go@v5	2026-10-18T05:14:19.2654539Z (node:9016) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (ubuntu-24.04)	Post Run actions/setup-go@v5	2026-10-18T05:14:19.2655311Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	﻿2026-10-18T05:14:19.2892446Z Post job cleanup.
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3757940Z [command]/usr/bin/git version
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3796626Z git version 2.55.0
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3831664Z Temporarily overriding HOME='/home/runner/work/_temp/e81761aa-1342-4f71-843f-268d8ed3d35d' before making global git config changes
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3833106Z Adding repository directory to the temporary git global config as a safe directory
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3837615Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3874852Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.3907105Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4108875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4127427Z http.https://github.com/.extraheader
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4137726Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4172927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4380904Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (ubuntu-24.04)	Post Run actions/checkout@v4	2026-10-18T05:14:19.4417882Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (ubuntu-24.04)	Complete job	﻿2026-10-18T05:14:19.4852676Z Cleaning up orphan processes
+checks (ubuntu-24.04)	Complete job	2026-10-18T05:14:19.5099650Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+checks (macos-15)	Set up job	﻿2026-10-18T05:13:33.0748270Z Current runner version: '2.337.0'
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0765740Z ##[group]Runner Image Provisioner
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0766320Z Hosted Compute Agent
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0766720Z Version: 20260828.587
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0767130Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0767630Z Build Date: 2026-08-28T16:44:25Z
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0768100Z Worker ID: {5d9f14be-a234-4c15-a43e-33ff0a4cc479}
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0768560Z Azure Region: westus
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0768930Z ##[endgroup]
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0769840Z ##[group]Operating System
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0770260Z macOS
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0770610Z 15.7.9
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0771050Z 24G830
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0771400Z ##[endgroup]
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0771750Z ##[group]Runner Image
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0772210Z Image: macos-15-arm64
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0772580Z Version: 20260907.0337.1
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0773320Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0774470Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0775140Z ##[endgroup]
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0775870Z ##[group]GITHUB_TOKEN Permissions
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0776940Z Contents: read
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0777310Z Metadata: read
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0777660Z ##[endgroup]
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0779030Z Secret source: Actions
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0779600Z Cache mode: write
+checks (macos-15)	Set up job	2026-10-18T05:13:33.0780050Z Prepare workflow directory
+checks (macos-15)	Set up job	2026-10-18T05:13:33.1154070Z Prepare all required actions
+checks (macos-15)	Set up job	2026-10-18T05:13:33.1199080Z Getting action download info
+checks (macos-15)	Set up job	2026-10-18T05:13:33.2497640Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+checks (macos-15)	Set up job	2026-10-18T05:13:33.6295480Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+checks (macos-15)	Set up job	2026-10-18T05:13:34.5081830Z Complete job name: checks (macos-15)
+checks (macos-15)	Run actions/checkout@v4	﻿2026-10-18T05:13:34.5614490Z ##[group]Run actions/checkout@v4
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5615390Z with:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5615810Z   repository: AutoByteus/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5619780Z   token: ***
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5620220Z   ssh-strict: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5620620Z   ssh-user: git
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5621010Z   persist-credentials: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5621420Z   clean: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5621810Z   sparse-checkout-cone-mode: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5622250Z   fetch-depth: 1
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5622630Z   fetch-tags: false
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5623010Z   show-progress: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5623390Z   lfs: false
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5623750Z   submodules: false
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5624170Z   set-safe-directory: true
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5624590Z   allow-unsafe-pr-checkout: false
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.5625530Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.9105380Z Syncing repository: AutoByteus/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.9110380Z ##[group]Getting Git version info
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.9112520Z Working directory is '/Users/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:34.9116800Z [command]/opt/homebrew/bin/git version
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0768400Z git version 2.55.0
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0782490Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0793800Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/495f7b68-8ed0-4839-bc3e-a7aac47b9419/.gitconfig'
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0798500Z Temporarily overriding HOME='/Users/runner/work/_temp/495f7b68-8ed0-4839-bc3e-a7aac47b9419' before making global git config changes
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0802830Z Adding repository directory to the temporary git global config as a safe directory
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.0807510Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1090690Z Deleting the contents of '/Users/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1092710Z ##[group]Initializing the repository
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1094080Z [command]/opt/homebrew/bin/git init /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1310190Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1312230Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1335490Z hint: to use in all of your new repositories, which will suppress this warning,
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1336830Z hint: call:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1339160Z hint:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1340920Z hint: 	git config --global init.defaultBranch <name>
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1342550Z hint:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1364170Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1365460Z hint: 'development'. The just-created branch can be renamed via this command:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1366320Z hint:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1366770Z hint: 	git branch -m <name>
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1367190Z hint:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1367770Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1369130Z Initialized empty Git repository in /Users/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1372580Z [command]/opt/homebrew/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1423130Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1427630Z ##[group]Disabling automatic garbage collection
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1444460Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1509950Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1511230Z ##[group]Setting up auth
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1516410Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.1631640Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.2994580Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.3002470Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.4181430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.4312530Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.5648920Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.5743250Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.5744490Z ##[group]Fetching the repository
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:35.5747730Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d:refs/remotes/origin/codex/extract-autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5263550Z From https://github.com/AutoByteus/autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5265240Z  * [new ref]         caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d -> origin/codex/extract-autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5268330Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5269230Z ##[group]Determining the checkout info
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5270770Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5280560Z [command]/opt/homebrew/bin/git sparse-checkout disable
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5353550Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5442760Z ##[group]Checking out the ref
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.5451160Z [command]/opt/homebrew/bin/git checkout --progress --force -B codex/extract-autobyteus-nfs refs/remotes/origin/codex/extract-autobyteus-nfs
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.6708110Z Switched to a new branch 'codex/extract-autobyteus-nfs'
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.6717300Z branch 'codex/extract-autobyteus-nfs' set up to track 'origin/codex/extract-autobyteus-nfs'.
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.6723120Z ##[endgroup]
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.6853620Z [command]/opt/homebrew/bin/git log -1 --format=%H
+checks (macos-15)	Run actions/checkout@v4	2026-10-18T05:13:36.6922810Z caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d
+checks (macos-15)	Run actions/setup-go@v5	﻿2026-10-18T05:13:36.7205540Z ##[group]Run actions/setup-go@v5
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7206550Z with:
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7207210Z   go-version: 1.27.2
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7207950Z   cache: false
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7208590Z   check-latest: false
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7217410Z   token: ***
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.7218080Z ##[endgroup]
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.9012530Z Setup go version spec 1.27.2
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.9050970Z Attempting to download 1.27.2...
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.9271300Z (node:1107) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:36.9325070Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:37.8659630Z matching 1.27.2...
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:37.8694420Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-darwin-arm64.tar.gz
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:38.6034720Z Extracting Go...
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:38.6139190Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/96279686-92b8-4e3c-b1cd-445105ab85f5 -f /Users/runner/work/_temp/67ae043f-26c8-40b3-9335-cf0a15e75ad8
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:41.9268770Z Successfully extracted go to /Users/runner/work/_temp/96279686-92b8-4e3c-b1cd-445105ab85f5
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:41.9275160Z Adding to the cache ...
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.5291410Z Successfully cached go to /Users/runner/hostedtoolcache/go/1.27.2/arm64
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.5292540Z Added go to the path
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.5292920Z Successfully set up Go version 1.27.2
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.6871420Z go version go1.27.2 darwin/arm64
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.6871770Z 
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:53.6872170Z ##[group]go env
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5387410Z AR='ar'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5388390Z CC='clang'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5389230Z CGO_CFLAGS='-O2 -g'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5390040Z CGO_CPPFLAGS=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5393420Z CGO_CXXFLAGS='-O2 -g'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5393930Z CGO_ENABLED='1'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5396340Z CGO_FFLAGS='-O2 -g'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5396790Z CGO_LDFLAGS='-O2 -g'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5452780Z CXX='clang++'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5453440Z GCCGO='gccgo'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5453890Z GO111MODULE=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5454600Z GOARCH='arm64'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5455100Z GOARM64='v8.0'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5455420Z GOAUTH='netrc'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5455890Z GOBIN='/Users/runner/go/bin'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5456560Z GOCACHE='/Users/runner/Library/Caches/go-build'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5457140Z GOCACHEPROG=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5457400Z GODEBUG=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5457720Z GOENV='/Users/runner/Library/Application Support/go/env'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5458490Z GOEXE=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5458910Z GOEXPERIMENT=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5459170Z GOFIPS140='off'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5459400Z GOFLAGS=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5460380Z GOGCCFLAGS='-fPIC -arch arm64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -ffile-prefix-map=/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/go-build3664271455=/tmp/go-build -gno-record-gcc-switches -fno-common'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5461360Z GOHOSTARCH='arm64'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5461750Z GOHOSTOS='darwin'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5462210Z GOINSECURE=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5462590Z GOMOD='/Users/runner/work/autobyteus-nfs/autobyteus-nfs/go.mod'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5463070Z GOMODCACHE='/Users/runner/go/pkg/mod'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5463370Z GONOPROXY=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5463740Z GONOSUMDB=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5465340Z GOOS='darwin'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5465730Z GOPACKAGESDRIVER=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5465900Z GOPATH='/Users/runner/go'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5466700Z GOPRIVATE=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5467240Z GOPROXY='https://proxy.golang.org,direct'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5468200Z GOROOT='/Users/runner/hostedtoolcache/go/1.27.2/arm64'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5468910Z GOSUMDB='sum.golang.org'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5470900Z GOTELEMETRY='local'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5471750Z GOTELEMETRYDIR='/Users/runner/Library/Application Support/go/telemetry'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5472470Z GOTMPDIR=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5483020Z GOTOOLCHAIN='auto'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5483850Z GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.27.2/arm64/pkg/tool/darwin_arm64'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5486450Z GOVCS=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5487360Z GOVERSION='go1.27.2'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5487890Z GOWORK=''
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5490920Z PKG_CONFIG='pkg-config'
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5491210Z 
+checks (macos-15)	Run actions/setup-go@v5	2026-10-18T05:13:55.5491770Z ##[endgroup]
+checks (macos-15)	Native checks (no live mounts or nodes)	﻿2026-10-18T05:13:55.5736270Z ##[group]Run go test -race ./...
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5736850Z [36;1mgo test -race ./...[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5737130Z [36;1mgo vet ./...[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5739570Z [36;1mgo build -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5739880Z [36;1mout/autobyteus-nfs version[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5740310Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.5740870Z [36;1mbash -n scripts/public/nfs/install.sh[0m
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.6187500Z shell: /bin/bash -e {0}
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:13:55.6188000Z ##[endgroup]
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:11.0083230Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:12.1951790Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.179s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:12.4333420Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.069s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:12.5155550Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.102s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:13.3042170Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.084s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:16.3135350Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.871s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:16.3136270Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.070s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:16.3137750Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.397s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.2603220Z development-unqualified
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.4704400Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.4707600Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.4901350Z test_engine_bytes_part_of_source_hash_and_stale_qualification_clears (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_stale_qualification_clears) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.4994480Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.4998430Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.7488740Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.7490030Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.8580930Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.8582230Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.8627340Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9255730Z test_unqualified_release_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_unqualified_release_cannot_publish) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9269340Z test_build_only_runs_all_build_gates_without_publishing (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_build_only_runs_all_build_gates_without_publishing) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9299780Z test_each_gate_rejects_bad_direct_needs_and_cancellation (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_each_gate_rejects_bad_direct_needs_and_cancellation) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9304740Z test_existing_candidate_skip_rebuild_reaches_publication (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_existing_candidate_skip_rebuild_reaches_publication) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9342030Z test_failed_or_skipped_applicable_prerequisites_block_dependents (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failed_or_skipped_applicable_prerequisites_block_dependents) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9348520Z test_manual_only_nfs_owned_version_and_publication (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_nfs_owned_version_and_publication) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9351900Z test_qualification_candidate_and_signing_gates_remain_required (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_qualification_candidate_and_signing_gates_remain_required) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:29.9794540Z test_declared_owned_boundary_and_default_qualification (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_qualification) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.0273340Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1903830Z test_owned_input_changes_invalidate_qualification (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_qualification) ... ok
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1906030Z 
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1906580Z ----------------------------------------------------------------------
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1908040Z Ran 20 tests in 0.750s
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1908350Z 
+checks (macos-15)	Native checks (no live mounts or nodes)	2026-10-18T05:14:30.1908720Z OK (skipped=1)
+checks (macos-15)	Post Run actions/setup-go@v5	﻿2026-10-18T05:14:30.2304730Z Post job cleanup.
+checks (macos-15)	Post Run actions/setup-go@v5	2026-10-18T05:14:30.4192790Z (node:2594) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (macos-15)	Post Run actions/setup-go@v5	2026-10-18T05:14:30.4194740Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (macos-15)	Post Run actions/checkout@v4	﻿2026-10-18T05:14:30.4344070Z Post job cleanup.
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5358240Z [command]/opt/homebrew/bin/git version
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5436900Z git version 2.55.0
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5459610Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/4625be83-4c33-4dfd-a532-99967078b172/.gitconfig'
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5474730Z Temporarily overriding HOME='/Users/runner/work/_temp/4625be83-4c33-4dfd-a532-99967078b172' before making global git config changes
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5475450Z Adding repository directory to the temporary git global config as a safe directory
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5485000Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5564560Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.5634410Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.6506440Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.6562400Z http.https://github.com/.extraheader
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.6569940Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.6642370Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.7481500Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (macos-15)	Post Run actions/checkout@v4	2026-10-18T05:14:30.7541430Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (macos-15)	Complete job	﻿2026-10-18T05:14:30.8580680Z Cleaning up orphan processes
+checks (macos-15)	Complete job	2026-10-18T05:14:30.8643280Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

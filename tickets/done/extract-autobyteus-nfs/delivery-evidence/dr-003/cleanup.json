@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-18T05:17:16.036833+00:00",
+  "result": "Completed / safely Not required",
+  "N": {
+    "detached": true,
+    "head": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69",
+    "local_ticket_and_finalize_branches": "Deleted with -d after remote confirmed merge",
+    "worktree_removal": "Not required: retain unowned preexisting ignored cache in place; no force/relocation",
+    "cache_unchanged": true,
+    "cache": {
+      "test_nfs_installer_fixture.cpython-314.pyc": "0fc810f15d29307e347f88f0e905cf08d6c1759c54570df4e8d27ad2a50851bb"
+    }
+  },
+  "D0": {
+    "method": "git merge --ff-only origin/main; no authorship",
+    "head": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69",
+    "PM_before": {
+      "board.md": "f42d4829b2fb337736961f4f775a9850d680669005420bc31e845e5aa5864cf3"
+    },
+    "PM_after": {
+      "board.md": "f42d4829b2fb337736961f4f775a9850d680669005420bc31e845e5aa5864cf3"
+    },
+    "PM_unchanged_during_delivery": true,
+    "external_PM_note": "Earlier API-detected edit retained; not restored or staged; author not independently asserted"
+  },
+  "S": "Retired worktree remains absent; source finalization55bff1f5 not replayed",
+  "remote_ticket_branches": "Retained; deletion not required",
+  "prune": "Not required: no stale owned worktree entry; N intentionally retained",
+  "runtime_resources": "None created by Delivery; API003 exact scratch absent. No mounts/VM/provider/container/user data operations",
+  "receipt_completion": "A final docs-only detached receipt commit and D0 fast-forward follow; exact tip, hosted check and last cleanup observation recorded outside repo after commit to avoid a self-referential receipt."
+}

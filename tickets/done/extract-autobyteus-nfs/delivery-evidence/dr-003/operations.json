@@ -1,0 +1,270 @@
+[
+  {
+    "at": "2026-10-18T05:15:15.353412+00:00",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:15.369577+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:15.805766+00:00",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:15.826677+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:15.907843+00:00",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "finalize/extract-autobyteus-nfs",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "branch 'finalize/extract-autobyteus-nfs' set up to track 'origin/main'.\n",
+    "stderr": "Switched to a new branch 'finalize/extract-autobyteus-nfs'\n"
+  },
+  {
+    "at": "2026-10-18T05:15:16.007971+00:00",
+    "command": [
+      "git",
+      "merge",
+      "--no-stat",
+      "--no-ff",
+      "codex/extract-autobyteus-nfs",
+      "-m",
+      "Merge verified portable NFS hosted-config fixtures"
+    ],
+    "exit": 0,
+    "stdout": "Merge made by the 'ort' strategy.\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:16.030228+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:16.047035+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "8cbcb38fb0b44d1e25e62bb076d25f36f2c4146d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:16.063844+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "codex/extract-autobyteus-nfs^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "8cbcb38fb0b44d1e25e62bb076d25f36f2c4146d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:16.494007+00:00",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:16.539326+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:15:18.089182+00:00",
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   22e934b..b7056e1  HEAD -> main\n"
+  },
+  {
+    "at": "2026-10-18T05:15:18.529209+00:00",
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.082711+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.119464+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "?? task-plans/\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.138021+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "ls-files",
+      "--",
+      "task-plans"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.725667+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.786811+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.960633+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "merge",
+      "--ff-only",
+      "origin/main",
+      "--no-stat"
+    ],
+    "exit": 0,
+    "stdout": "Updating 22e934b..b7056e1\nFast-forward\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:15.992644+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "switch",
+      "--detach",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "HEAD is now at b7056e1 Merge verified portable NFS hosted-config fixtures\n"
+  },
+  {
+    "at": "2026-10-18T05:17:16.011671+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "branch",
+      "-d",
+      "codex/extract-autobyteus-nfs",
+      "finalize/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "Deleted branch codex/extract-autobyteus-nfs (was caaf5d6).\nDeleted branch finalize/extract-autobyteus-nfs (was b7056e1).\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T05:17:16.036205+00:00",
+    "root": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "!! scripts/tests/__pycache__/\n",
+    "stderr": ""
+  }
+]

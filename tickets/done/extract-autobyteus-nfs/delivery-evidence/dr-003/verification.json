@@ -1,7 +1,7 @@
 {
   "revision": "DR-003",
   "at": "2026-10-18T05:12:27.008314+00:00",
-  "result": "Pre-push scoped evidence sufficient; current hosted Ubuntu/macOS gate still pending",
+  "result": "Sufficient \u2014 current native local and exact candidate/merged hosted CI pass; no missing critical acceptance criterion",
   "N_intake": "4979f26377e1c15093c8b716e6f941fdab9c9581",
   "N_base": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
   "N_runtime": "83726b27400b405a7a6a79bd962d8e2419daa561",
@@ -847,13 +847,13 @@
     "target_overall": 95,
     "minimum_category": 90,
     "broader_native_linux": "Required/Completed",
-    "hosted": "Pending; local arm64 not Ubuntu amd64 or cancelled macOS matrix proof"
+    "hosted": "Completed: Ubuntu24.04 amd64 and macOS15 arm64, exact candidate then tree-equal main merge"
   },
   "AC_judgement": {
     "001_002": "Independent exact archive/native race/vet/build/Python/hash controls; unchanged earlier four-target/actual retained arm64 engine identity proof only",
     "003_006_010": "API002 integrated S ordinary filesystem/path/private ownership/API/native child/PTY boundaries carry; no new S runtime delta or worktree",
     "004_005": "Exact license/CLA/section7/pins retained; native expected publication refusals; empty lock/disabled Guide",
-    "007": "DR002 source N then S pushes preserved; current N forward fix/hosted success/final cleanup receipts remain",
+    "007": "Completed: original ordered paired source operations preserved; N fix-forward --no-ff main merge remotely confirmed and hosted-green; D0 ff-only/PM preservation and safe cleanup recorded. Final docs-only tip receipt is external to avoid self-reference.",
     "008": "35 expected command exits, raw hashes/metadata, preserved failed cleanup guard/zombie diagnosis/resolution, scratch absent",
     "009": "Native proc read-only Linux and command-boundary Darwin, specific config errors, exact unrelated mount refusal before effects/repeated detach; three assertion mutants fail as intended"
   },
@@ -869,5 +869,52 @@
     "performed": false,
     "reason": "No user-only missing dependency; current hosted check remains delivery-owned"
   },
-  "cleanup": "API003 initial guard rejected adopted zombie; recorded correction still refuses live processes and removes exact namespace/scratch. No candidate-test failure."
+  "cleanup": "API003 initial guard rejected adopted zombie; recorded correction still refuses live processes and removes exact namespace/scratch. No candidate-test failure.",
+  "hosted_runs": [
+    {
+      "run_id": 39099812867,
+      "head": "caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d",
+      "branch": "codex/extract-autobyteus-nfs",
+      "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39099812867",
+      "result": "success",
+      "jobs": [
+        {
+          "name": "checks (ubuntu-24.04)",
+          "id": 117593586314,
+          "conclusion": "success",
+          "native_step": "success"
+        },
+        {
+          "name": "checks (macos-15)",
+          "id": 117593586418,
+          "conclusion": "success",
+          "native_step": "success"
+        }
+      ],
+      "log_sha256": "0d886101bb626317e168eed8d2636e1f81d5ca5064fe29aefca0ed126a55cbd9"
+    },
+    {
+      "run_id": 39099923657,
+      "head": "b7056e17ae5d73d9cdfdbc62ca260ac813c27a69",
+      "branch": "main",
+      "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39099923657",
+      "result": "success",
+      "jobs": [
+        {
+          "name": "checks (ubuntu-24.04)",
+          "id": 117593913553,
+          "conclusion": "success",
+          "native_step": "success"
+        },
+        {
+          "name": "checks (macos-15)",
+          "id": 117593913797,
+          "conclusion": "success",
+          "native_step": "success"
+        }
+      ],
+      "log_sha256": "33ce7d58ceefc0e6a2f60ee51a3abad074fe576454ae1c17e73a69d36a8b2374"
+    }
+  ],
+  "final_tip_receipt": "/Users/normy/autobyteus_org/delivery-reports/extract-autobyteus-nfs-dr003/postcommit-receipt.json"
 }

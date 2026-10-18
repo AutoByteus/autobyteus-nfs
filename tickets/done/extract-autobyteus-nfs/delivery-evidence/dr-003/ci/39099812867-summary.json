@@ -1,0 +1,47 @@
+{
+  "run_id": 39099812867,
+  "head": "caaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d",
+  "branch": "codex/extract-autobyteus-nfs",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39099812867",
+  "result": "success",
+  "jobs": [
+    {
+      "name": "checks (ubuntu-24.04)",
+      "id": 117593586314,
+      "conclusion": "success",
+      "native_step": "success"
+    },
+    {
+      "name": "checks (macos-15)",
+      "id": 117593586418,
+      "conclusion": "success",
+      "native_step": "success"
+    }
+  ],
+  "log_sha256": "0d886101bb626317e168eed8d2636e1f81d5ca5064fe29aefca0ed126a55cbd9",
+  "evidence_lines": [
+    "checks (ubuntu-24.04)\tRun actions/setup-go@v5\t2026-10-18T05:13:39.6727459Z go version go1.27.2 linux/amd64",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:01.4443837Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.131s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:01.8833957Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.024s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:01.8990520Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.038s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:01.8991406Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.023s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:04.6881462Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.241s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:04.6882996Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.016s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:04.6883967Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.156s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:18.5530835Z development-unqualified",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:19.1205832Z Ran 20 tests in 0.470s",
+    "checks (ubuntu-24.04)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:19.1206441Z OK (skipped=1)",
+    "checks (macos-15)\tRun actions/setup-go@v5\t2026-10-18T05:13:53.6871420Z go version go1.27.2 darwin/arm64",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:12.1951790Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.179s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:12.4333420Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.069s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:12.5155550Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.102s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:13.3042170Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.084s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:16.3135350Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.871s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:16.3136270Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.070s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:16.3137750Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.397s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:29.2603220Z development-unqualified",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:30.1908040Z Ran 20 tests in 0.750s",
+    "checks (macos-15)\tNative checks (no live mounts or nodes)\t2026-10-18T05:14:30.1908720Z OK (skipped=1)"
+  ],
+  "limits": "Developer native fixtures/builds only, no live mounts/nodes/physical/provider/publication qualification. Expected child-fixture skips retained. Nonblocking hosted action Node20 deprecation/capacity notices retained, no policy/workflow change."
+}

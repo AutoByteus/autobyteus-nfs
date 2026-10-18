@@ -8,6 +8,8 @@
 
 | DR-002 | CRR006 after IR003/004 and API002 | DR-001 Blocked — integration Local Fix | Blocked — hosted Linux CI after source finalization | docs-sync-report.md; handoff-summary.md; release-deployment-report.md |
 
+| DR-003 | CRR008 after IR005/API003 native fixture recovery | DR-002 Blocked — hosted Linux Local Fix | Delivery Completed — fix-forward, hosted Pass, no release | docs-sync-report.md; handoff-summary.md; release-deployment-report.md |
+
 ## Revision Entries
 
 ### DR-001 — Initial paired delivery blocked on consumer test integration
@@ -68,3 +70,34 @@
 - Next sole implementation_engineer through fresh Local Fix rule. Preserve pushed
   targets; fix forward and validate native Linux without weakening safety/assertions.
   Terminal return to Solution Designer **Blocked/not eligible**.
+
+
+### DR-003 — Native fixture recovery finalized with current hosted CI
+
+- Prior DR002 Blocked now resolved by IR005 fixture09cac962, CRR007 source Pass100,
+  API003 native Pass95 and CRR008 no-delta test gate N/A/satisfied. Large/High/
+  Reviewed and R2/SR003/SR004/ARCH002 unchanged; runtime83726b unchanged.
+- Fresh N main22e934b ancestor of incoming4979f263; S remote55bff1f5 unchanged.
+  No new base integration/local repeat. Direct35 raw exits/108inputs/native race/
+  mutation/cleanup proof sufficient. Existing S/API002 evidence carried, not rerun.
+- Candidatecaaf5d6a52e6e3a5af1a4dfb92e1ddfeacfe669d pushed/CI39099812867 Pass.
+  N --no-ff mainb7056e17ae5d73d9cdfdbc62ca260ac813c27a69 pushed after fresh base
+  check, exact tree equality; mainCI39099923657 Pass. Both jobs Ubuntu amd64/
+  macOS arm64 native checks succeed, not cancelled jobs or cross-compilation.
+- Original N-first22e934b then S55bff1f5 source operations not replayed. Old failed
+  hosted runs remain historical. No new long-lived docs impact; DR002 corrections
+  retained. Archive/624 upstream artifacts preserved, no source/test edit by Delivery.
+- Safe cleanup complete: local N ticket/finalize branches deleted, detached N
+  retained for unowned byte-exact cache, D0 ff-only/current PM content preserved,
+  S remains retired. Exact final docs-only tip/CI/remote/cleanup supplement external
+  to avoid self-reference; its path is in finalization.json and release report.
+- Current **Delivery Completed**. Verified from evidence, user check not needed/
+  performed. No release/tag/version/publication/deployment/TaskDone or live
+  physical/provider/publication qualification. Guide instructions/disabled assets
+  remain. Dashboard follow-up already PM-owned TODO, not dispatched or duplicated.
+- Canonical own docs: docs-sync-report.md, handoff-summary.md,
+  release-deployment-report.md. Evidence dr-003 verification/finalization/
+  operations/cleanup and hosted raw logs. Prior DR001/DR002 entries preserved.
+- Terminal eligible after final postcommit confirmation; single fresh-rule return
+  to Solution Designer next. Actual tool receipt records transmission; no approval
+  loop or duplicate downstream notification. No unresolved blocker.

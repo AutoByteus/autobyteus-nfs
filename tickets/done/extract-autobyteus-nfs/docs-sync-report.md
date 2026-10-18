@@ -1,55 +1,37 @@
 # Docs Sync Report — DR-003
 
-## Scope and integrated basis
+## Scope / integrated basis
 extract-autobyteus-nfs / project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8.
-**Large / High / Reviewed**; R2 Approved/SR003, Ready SR004/ARCH002.
-N=standalone AutoByteus/autobyteus-nfs; S=AutoByteus workspace; D0=canonical N checkout.
+Large/High/Reviewed; R2/SR003 Approved, SR004/ARCH002.
+Fresh N main22e934b already in incoming4979f263; no new base integration.
+S personal55bff1f5 unchanged, source operations not replayed. IR005 corrects only
+hosted_config_test.go; runtime, workflows, release policy and interfaces unchanged.
+API003 direct local proof plus candidate39099812867 and tree-equal main39099923657
+hosted CI Pass establish current boundary. No additional local/S rerun required.
 
-Delivery first refreshed both targets. N had no remote heads/main. S current
-60b67dabecaf5569a8e26128dbdb26117c988811 already includes fresh personal
-2f211340ee36b81cef74a74b2e042b5102c269d3 through IR003 merge156ea2dacc0fb4989a6b5d8a7206fa143fde0c54.
-No new integration or runtime rerun needed: API002 independently executed all
-affected S01–06 on this exact integrated source; N01–03 carry after108-input
-equality. Delivery changed only two policy prose sections and ticket records.
-Direct evidence judgement: [verification.json](delivery-evidence/dr-002/verification.json).
-No broader approval, live editor closure or new user check inferred.
-
-## Long-lived documentation
-| Document | Result | Reason / durable truth |
+## Long-lived docs disposition
+| Document | Current result | Durable truth |
 | --- | --- | --- |
-| N/RELEASE.md | Updated | Ordered N then S finalization is independent application decoupling, not a pinned consumer integration. Service qualification concerns service/engine/host evidence. |
-| S/RELEASE.md, AutoByteus NFS assets | Updated | Remove stale R1 installed-service launcher/descriptor/pin claims; document path-only consumption, operator mapping, no mount/UUID/Git trust coupling. Retain instructions tab and disabled copy/download; independent publication gates unchanged. |
-| N/README.md | No change | Already distinguishes current host-only extraction, old same-kernel filesystem evidence and unqualified physical/publication scope. |
-| N/EXTRACTION.md | No change | Original snapshot provenance, held histories, R2 semantic changes, independent repositories and exact finalization receipts already documented. |
-| N/docs/filesystem-usage.md | No change | Ordinary directory boundary and operator-owned generic root/shared + root/nodes mappings, no application-node control. |
-| N/packaging/RELEASE.md | No change | Independent manual-only release, exact candidate reuse/source identity, physical/user/signing gates and empty qualification remain. |
-| S/autobyteus-server-ts/docs/modules/shared_network_workspaces.md | No change | Current R2 path APIs, private configured profiles, ordinary Git ownership, no pin/descriptor; retained informational Guide already accurate. |
+| N/RELEASE.md | No new change; DR002 correction retained | Independent service/engine/host evidence; N then S finalization, not pinned consumer integration. |
+| S/RELEASE.md | No new change; DR002 correction retained | Path-only app, no NFS launcher/descriptor/pin/UUID/Git-trust coupling. Guide informational and disabled public availability. |
+| N/README.md | No change | Standalone host-only tool, current source versus historical same-kernel filesystem proof and unqualified publication. |
+| N/EXTRACTION.md | No change | Snapshot provenance/original history, held commits, R2 semantic extraction and exact delivery references. |
+| N/docs/filesystem-usage.md | No change | Ordinary paths and operator-owned directory mapping; no app-node management. |
+| N/TESTING.md / packaging/RELEASE.md | No change | Actual native checks, isolated fixtures, no privileged live lifecycle; independent publication gates and empty qualification. |
+| S/docs module shared_network_workspaces.md | No change | Ordinary paths/private configured profiles, no automatic Git trust or consumer pin; retained Guide. |
 
-## Approved change scope
-This ticket expressly includes policies/docs correction (design sequence step3;
-IR003/004 and CRR006 named the stale S RELEASE tail). These are factual corrections
-within approved R2, not a change to release authorization or safety gates.
-No design/requirements authorities, implementation/reviewer/API records, source
-or tests modified. No new release notes: no release authorized.
+## No-impact decision
+**No additional long-lived docs impact in DR003.** Portable test fixture uses the
+actual Linux read-only proc boundary instead of incorrectly assuming an injected
+command runner; no new supported product behavior, runtime seam or policy.
+DR002 already promoted extraction ownership/release knowledge into both guides.
+Only delivery-owned reports/evidence updated now. Original source/API/review/
+requirements/design documents and624 other upstream ticket files preserved.
 
-## Removed/replaced concepts
-App-owned NFS lifecycle/descriptor/UUID admission and automatic Git trust were
-removed, not replaced with another detector or implicit fallback. App consumers
-use ordinary filesystem results; a surviving directory does not prove a mount.
-Configured Claude/Codex/Grok skills use execution-private exact ownership regardless
-of filesystem. Standalone NFS retains host storage safety and refuses incompatible
-active/pending predecessor obligations before binary replacement/resource effects.
-The Guide is instructional; release availability stays disabled and qualifications empty.
-
-## Current round / result
-**Pass — No additional long-lived docs impact in DR003.** DR002 already corrected
-N/S RELEASE prose; this round changes only the reviewed portable test fixture
-and ticket records. Current README, filesystem usage, extraction provenance and
-release/testing policies remain accurate; no production/workflow/interface change.
-Fresh N origin/main22e934b is already an ancestor of current4979f263; S remote
-personal55bff1f5 is unchanged. No new integration or local repeat needed; API003
-native Linux/Darwin proof verifies the affected fixture. Current hosted CI still
-must pass before terminal completion. Prior failed runs remain historical.
-No restored app coupling, Guide removal, public availability or approval inferred.
-Finalization/cleanup receipts and terminal eligibility are owned by
-[release-deployment-report.md](release-deployment-report.md), not inferred here.
+## Scope / result
+**Pass**. Keep standalone host-only NFS and filesystem-only application consumption,
+exact private configured-profile ownership, predecessor-obligation refusal and
+normal data/trust safeguards. Keep instructions tab/disabled downloads; do not
+promote hosted CI to live NFS/physical/publication qualification.
+Separate dashboard follow-up autobyteus-nfs-2 is TODO/not dispatched, not this scope.
+Finalization, release decision and safe cleanup: release-deployment-report.md.
