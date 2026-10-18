@@ -1,5 +1,17 @@
 # Handoff Summary — nfs-first-release
 
+## Latest DR-006: local signing diagnostic Pass; full Delivery still Blocked
+
+User requested real local build/signing diagnosis. On macOS26.5.2arm64, fresh Go1.27.2 build from exact9fa4e69 (same127 non-ticket inputs as IR00575f4dbe) signed successfully using the existing Developer ID certificate/private key. Actual hardened-runtime/timestamp codesign, strict verification and signed version execution all passed. Before/after keychain list unchanged; no credential export/read/settings changes. Owned scratch/binary/toolchain removed.
+
+This **does not establish the hosted failure cause**: the local test does not exercise GitHub's P12/password import or temporary keychain, and Apple notarization was not run. No assigned local notary profile; historical export was already deliberately removed. The IR005 diagnostics remain necessary for exact hosted stage/cause. Do not reset/reprovision secrets on speculation, repeat field tests, publish current unreviewed source or infer a signing/public release Pass. All local proof/log hashes and limits: `delivery-evidence/dr-006/summary.md`, `input.json`, `local-result.json`, `checks.json`, `cleanup.json`.
+
+Other owner's concurrent source/doc work preserved; this is diagnostic coordination with existing Implementation owner, not duplicate dispatch/review. No main push/tag/release or full gate transition. DR005 actual signed-publication failure and finalized-main receipt below remain authoritative. Own revision record now appends DR006; docs/release reports synced, notes unchanged. Task Large/High/Reviewed and R3 deferred field/user scope unchanged.
+
+---
+
+# Handoff Summary — nfs-first-release
+
 **DR-005: Blocked — Local Fix (packaging signing diagnostics). Source finalization completed; official signed publication failed before public effects.** Not Delivery Completed, not TaskDone or Terminal.
 
 Task **nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**. **Large / High / Reviewed**. R3/SR004 Approved/Ready, ARCH-REV-002 Pass, IR004/CRR005 sourcePass100, CRR006 testPass; API003 **prepublication Pass95**, unchanged scope. Field/filesystem/physical/user tests **Deferred**, not this blocker and not restored as a release prerequisite.

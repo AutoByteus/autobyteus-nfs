@@ -1,0 +1,10 @@
+{
+  "localSigning": "Passed",
+  "signExit": 0,
+  "signedBinarySha256": "287a31c64bc2398bad7f1c3b0a6f55801536e2325438c05097f2ec81dd24291a",
+  "notarization": "Not executed; no locally assigned credential/profile",
+  "hostedCause": "Not established by existing-keychain path",
+  "publication": "None",
+  "scratch": "/Users/normy/nfs-local-signing-fmmpqlnd",
+  "keychainSearchListUnchanged": true
+}

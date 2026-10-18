@@ -25,3 +25,7 @@ Normal signed release first, field/user testing afterward; first release targets
 ## Actual outcome sync
 
 Main finalized7683494; publication39121007787 failed both Mac signing steps before payload/public effects. Own handoff/release report now distinguish passed prepublication/native checks from unproven actual signing/public downloads. README/packaging guide remain accurately preparatory, not falsely changed to Published. Stable readiness remains genuine for its exact current source, not a signing-success claim. Implementation-local safe diagnostic correction requested; no root-guide change proposed, no runtime/documentation scope expansion. Archived authoritative folder does not mean Terminal. Public release notes were not used because publisher skipped.
+
+## DR-006 — bounded local diagnostic update
+
+User-requested existing-identity signing succeeded on fresh local arm64 build at9fa4e69 (IR005 product75f4dbe). Own handoff/revision/release report record actual checks, cleanup and unknown hosted cause; no long-lived doc or release-note change needed because no published/support behavior changed. Hosted P12/password/import and Apple notarization remain unproven. Existing readiness is stale for IR005 changed production, not promoted by local signing. No source/guide/API report edits or history rewrite.

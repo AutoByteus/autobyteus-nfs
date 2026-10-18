@@ -1,0 +1,113 @@
+[
+  {
+    "name": "go-version",
+    "argv": [
+      "/Users/normy/nfs-local-signing-fmmpqlnd/go/bin/go",
+      "version"
+    ],
+    "exit": 0,
+    "log": "go-version.log",
+    "logSha256": "94e911f9fbf3c118f6a0573ab3a13fa546ad13e89ba40cf53df77e468509c92d"
+  },
+  {
+    "name": "build",
+    "argv": [
+      "/Users/normy/nfs-local-signing-fmmpqlnd/go/bin/go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "log": "build.log",
+    "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "unsigned-version",
+    "argv": [
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0,
+    "log": "unsigned-version.log",
+    "logSha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be"
+  },
+  {
+    "name": "keychain-list-before",
+    "argv": [
+      "security",
+      "list-keychains",
+      "-d",
+      "user"
+    ],
+    "exit": 0,
+    "log": "keychain-list-before.log",
+    "logSha256": "3693a26abe9e7d8283cbb14246fa00be807d105ddb6c785437b989356451bd37"
+  },
+  {
+    "name": "codesign",
+    "argv": [
+      "codesign",
+      "--force",
+      "--timestamp",
+      "--options",
+      "runtime",
+      "--keychain",
+      "/Users/normy/Library/Keychains/login.keychain-db",
+      "--sign",
+      "37C9698B12C2CE90D9B9E9F882B67C65C9F5B4FA",
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "log": "codesign.log",
+    "logSha256": "f29f6b9a48cc6e39e8d68c020264fe21686909f128235c12e184972f71a59547"
+  },
+  {
+    "name": "verify",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=2",
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "log": "verify.log",
+    "logSha256": "f860994918daa59109a514570779bb12e73b216f72cf8b0820c036509a4b2af5"
+  },
+  {
+    "name": "details",
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "log": "details.log",
+    "logSha256": "648afd0de7a63b14d694fdba939a3951acdc2854c169ba82419946154ba0cabe"
+  },
+  {
+    "name": "signed-version",
+    "argv": [
+      "/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0,
+    "log": "signed-version.log",
+    "logSha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be"
+  },
+  {
+    "name": "keychain-list-after",
+    "argv": [
+      "security",
+      "list-keychains",
+      "-d",
+      "user"
+    ],
+    "exit": 0,
+    "log": "keychain-list-after.log",
+    "logSha256": "3693a26abe9e7d8283cbb14246fa00be807d105ddb6c785437b989356451bd37"
+  }
+]

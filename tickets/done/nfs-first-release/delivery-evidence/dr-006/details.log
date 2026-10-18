@@ -1,0 +1,28 @@
+Executable=/Users/normy/nfs-local-signing-fmmpqlnd/autobyteus-nfs
+Identifier=autobyteus-nfs
+Format=Mach-O thin (arm64)
+CodeDirectory v=20500 size=20570 flags=0x10000(runtime) hashes=637+2 location=embedded
+VersionPlatform=1
+VersionMin=851968
+VersionSDK=1704448
+Hash type=sha256 size=32
+CandidateCDHash sha256=de52d7511791f50959276f9d307828d7b3dcccba
+CandidateCDHashFull sha256=de52d7511791f50959276f9d307828d7b3dcccbaeb2d1231ca7aaf4dae004dd1
+Hash choices=sha256
+CMSDigest=de52d7511791f50959276f9d307828d7b3dcccbaeb2d1231ca7aaf4dae004dd1
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=5767168
+Executable Segment flags=0x1
+Page size=16384
+CDHash=de52d7511791f50959276f9d307828d7b3dcccba
+Signature size=9037
+Authority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=18. Oct 2026 at 13:12:53
+Info.plist=not bound
+TeamIdentifier=7Y86YBQ7B4
+Runtime Version=26.2.0
+Sealed Resources=none
+Internal requirements count=1 size=176

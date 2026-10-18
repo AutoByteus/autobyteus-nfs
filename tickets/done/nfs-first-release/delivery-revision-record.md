@@ -11,6 +11,8 @@
 
 | DR-005 | CRR006/API003 Pass; actual signed v0.1.0 attempt | DR-004 prerequisite complete/overall Blocked | **Blocked — Local Fix (packaging diagnostic boundary)**; main finalized, actual Mac signing fails before public effects | handoff-summary.md, docs-sync-report.md, release-deployment-report.md, delivery-evidence/dr-005/failure-assessment.json |
 
+| DR-006 | User requests local build/sign/log diagnosis | DR005 Blocked after hosted signing failure | Local existing-identity diagnostic **Pass**; full Delivery remains **Blocked**, hosted cause unknown | delivery-evidence/dr-006/summary.md, local-result.json, checks.json; own reports |
+
 ## DR-001 — Build-only source staging baseline
 
 - Task: nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. **Large / High / Reviewed**, R2/SR002 Approved, SR003 Ready, ARCH-REV-001. CRR001 source Pass100 is not an API Pass or release qualification.
@@ -74,3 +76,13 @@
 - Current result **Blocked — Local Fix**, AC003–008 actual public portions unfinished. No successful terminal, TaskDone, deployment/live setup or user-check claim. Postpublication testing plan custody remains Delivery→terminalSD→requestingPM after eventual success; no duplicate task/dispatch now.
 - Cleanup: own readiness scratch removed, no owned background process; retain active worktree/branches/candidates for recovery. Hosted post-job steps complete; actual secret keychain deletion not independently exposed. Canonical checkout/PM/old worktrees untouched. Own reports authoritative, exact raw/failure/finalization/inventory receipts in delivery-evidence/dr-005.
 - Fresh most-specific code/packaging Local Fix rule selects Implementation Engineer only. Handoff references include all five own docs plus focused failing logs/assessment/current source contracts. No parallel outcome recipients or delegation.
+
+## DR-006 — User-requested real local Developer ID signing
+
+- Direct user request: try a local build/sign and inspect logs to find the failure. This is bounded deployment diagnosis, not a new API/full-delivery handoff or permission to publish an unreviewed delta. Large/High/Reviewed, R3/SR004 and deferred field/user testing unchanged.
+- Fresh origin/main7683494 already ancestor; no merge/source edits. Current Implementation diagnostics75f4dbe plus docs9fa4e6968f3239ad1517fc33077eb527d0d76502; independent copy pins9fa4e69/127 non-ticket inputs, byte-identical product to75f4dbe. Other owner's concurrent docs/evidence untouched.
+- Official checksum-verified Go1.27.2; native macOS26.5.2arm64 fresh CLI build with private HOME/TMP/cache/development metadata, version execution pass. Actual existing Developer ID signing with hardened runtime/timestamp passed; codesign strict verification pass, correct authority/team/timestamp/runtime observed, signed binary version pass. Exact input/hash/log evidence in dr006.
+- This proves local identity/key functionality only. It does NOT test GitHub P12/export-password import/ephemeral keychain, Intel native execution, Apple notarization, final release metadata/public installation, or identify the original hosted exit1 cause. No credential export/read/settings changes; no new local notary profile known, old export intentionally deleted after upload. No speculative reprovision request.
+- Result **Diagnostic completed / Pass; overall Delivery Blocked**, DR005 hosted failure remains unresolved. IR005 diagnostic patch/review and subsequent authorized hosted execution still required. No new source repair, full scorecard, API Pass, TaskDone or terminal claim.
+- All owned source/toolchain/build/cache/binary/HOME/TMP scratch removed; keychain search list unchanged. No live setup, source/candidate/PM/canonical changes or public effects. Own handoff/docs/release report updated with this bounded evidence; release notes unchanged/unpublished. No source finalization replay.
+- Provide this result once to existing Implementation local-fix owner under fresh rule so it can inform current recovery; not a duplicate dispatch or instruction to restart review. Field/user plan custody remains Delivery→terminalSD→requestingPM after actual release.
