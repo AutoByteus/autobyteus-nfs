@@ -1,0 +1,25 @@
+const fs=require('fs'), cp=require('child_process'), path=require('path'), crypto=require('crypto'), assert=require('assert');
+const ts=require('/Users/normy/autobyteus_org/autobyteus-workspace-superrepo/autobyteus-server-ts/node_modules/typescript/lib/typescript.js');
+const S='/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs';
+const base='d3f7f67015587b4c8aa26824786be807793485d1';
+const files=['claude/backend/claude-agent-run-backend-factory.ts','claude/session/claude-session-manager.ts','codex/backend/codex-agent-run-backend-factory.ts'].map(p=>'autobyteus-server-ts/src/agent-execution/backends/'+p);
+const changed=cp.execFileSync('git',['-C',S,'diff','--name-only',base],{encoding:'utf8'}).trim().split('\n');
+assert.deepStrictEqual(changed,files);
+const cfg=ts.readConfigFile(path.join(S,'autobyteus-server-ts/tsconfig.build.json'),ts.sys.readFile);
+const parsed=ts.parseJsonConfigFileContent(cfg.config,ts.sys,path.join(S,'autobyteus-server-ts'));
+const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const results=files.map(p=>{
+ const before=cp.execFileSync('git',['-C',S,'show',base+':'+p],{encoding:'utf8'}),after=fs.readFileSync(path.join(S,p),'utf8');
+ const emit=s=>ts.transpileModule(s,{fileName:p,compilerOptions:{...parsed.options,sourceMap:false,inlineSourceMap:false},reportDiagnostics:true});
+ const a=emit(before),b=emit(after);
+ assert(!(a.diagnostics||[]).length && !(b.diagnostics||[]).length);
+ assert.strictEqual(a.outputText,b.outputText);
+ const nonempty=s=>s.split('\n').filter(l=>l.trim()).length;
+ assert(nonempty(after)<=nonempty(before));
+ return {path:p,before_sha256:hash(before),after_sha256:hash(after),javascript_sha256:hash(a.outputText),javascript_identical:true,nonempty_before:nonempty(before),nonempty_after:nonempty(after)};
+});
+const manager=fs.readFileSync(path.join(S,files[1]),'utf8');
+assert(manager.includes('export type { ClaudeSessionEvent } from "../claude-runtime-shared.js";'));
+const result={typescript:ts.version,baseline:base,scope:'Exactly three files, same JavaScript under production compiler options (transpile-only, separate semantic typecheck required).',results,claude_session_event_public_reexport_preserved:true};
+fs.writeFileSync(path.join(__dirname,'delta-audit.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

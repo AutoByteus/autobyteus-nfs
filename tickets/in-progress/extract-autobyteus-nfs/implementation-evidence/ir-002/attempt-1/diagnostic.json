@@ -1,0 +1,6 @@
+[
+  {
+    "code": 6059,
+    "message": "File 'module.ts' is not under 'rootDir' '/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/src'. 'rootDir' is expected to contain all source files.\n  The file is in the program because:\n    Root file specified for compilation\n  File is CommonJS module because 'package.json' was not found"
+  }
+]

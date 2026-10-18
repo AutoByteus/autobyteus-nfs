@@ -1,0 +1,27 @@
+[
+  {
+    "name": "install",
+    "command": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--filter",
+      "autobyteus-server-ts...",
+      "--filter",
+      "@autobyteus/application-backend-sdk..."
+    ],
+    "exit": 0,
+    "seconds": 0.79
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 12.429
+  }
+]

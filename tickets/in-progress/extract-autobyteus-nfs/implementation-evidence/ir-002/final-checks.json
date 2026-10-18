@@ -1,0 +1,21 @@
+{
+  "N_start": "a77048efc905f1996d6481963625d3940a2c542a",
+  "N_service_source": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "S_commit": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+  "N_service_inputs_unchanged": true,
+  "IR001_entry_preserved": true,
+  "upstream_artifacts_unchanged": 7,
+  "S_clean": true,
+  "fresh_typecheck_exit": 0,
+  "fresh_unused_diagnostics": 0,
+  "typescript_files_audited": 25,
+  "emission_identical_files": 3,
+  "source_copy_integrity_files": 7215,
+  "cleanup_complete": true,
+  "qualification_or_api_verdict": false,
+  "raw_log_whitespace_exceptions": [
+    "attempt-2/prisma.log:9 blank EOF",
+    "prisma.log:9 blank EOF",
+    "typecheck.log:21 blank EOF"
+  ]
+}

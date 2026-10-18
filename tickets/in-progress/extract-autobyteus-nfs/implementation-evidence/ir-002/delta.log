@@ -1,0 +1,35 @@
+{
+  "typescript": "5.9.3",
+  "baseline": "d3f7f67015587b4c8aa26824786be807793485d1",
+  "scope": "Exactly three files, same JavaScript under production compiler options (transpile-only, separate semantic typecheck required).",
+  "results": [
+    {
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts",
+      "before_sha256": "a8ce7c46ef1b26ca005cb5d4a44ba55bd766fab8346591465214c91a22158b73",
+      "after_sha256": "6a5166b25e6b75fe7a241701ff679a4e66c2a32a73962e61df0e3d5eb5586c37",
+      "javascript_sha256": "78f63d94a18cec37de8f9553bde06a7ae9e41ba84d90cbe5c4fae41645a0a67f",
+      "javascript_identical": true,
+      "nonempty_before": 60,
+      "nonempty_after": 59
+    },
+    {
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts",
+      "before_sha256": "7345a1830b011ae562bbd374f8ec3105cfe0804f80adcdaf53b35fc57325659d",
+      "after_sha256": "8afffd811a01ec08939d1b9697c6d33f538573c8b31be7c4a069b8ba86d99811",
+      "javascript_sha256": "bca5035a4a379388375120e6e4b84d7e580027d3d39ab1af4678156f93d196e5",
+      "javascript_identical": true,
+      "nonempty_before": 165,
+      "nonempty_after": 162
+    },
+    {
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts",
+      "before_sha256": "da0a0910527a182ce923933ae5e67970ca8120964f18a1a7a9c131a98c8c603b",
+      "after_sha256": "3d192cfe19559d3b815ae892662ab12cf89765eb1e0baf2efc2659c3cd02b869",
+      "javascript_sha256": "113f61465fcc8efaa54bb97497028e7027eb1d01157135d13a6cec569045f518",
+      "javascript_identical": true,
+      "nonempty_before": 49,
+      "nonempty_after": 48
+    }
+  ],
+  "claude_session_event_public_reexport_preserved": true
+}

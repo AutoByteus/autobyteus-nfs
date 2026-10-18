@@ -1,0 +1,62 @@
+{
+  "N": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+  "S": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+  "heads": {
+    "N": "a77048efc905f1996d6481963625d3940a2c542a",
+    "S": "d3f7f67015587b4c8aa26824786be807793485d1"
+  },
+  "initial_status": {
+    "N": "",
+    "S": ""
+  },
+  "inputs": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/requirements-doc.md",
+      "sha256": "feb342dabc94facb1448367fb8f7386847e976d474149e08f5333ec1e005af6f"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/design-spec.md",
+      "sha256": "035ba29a0b5c65d9a63a5ac5c07868584f8c6cc052689a44243700efdd33ceed"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/design-review-report.md",
+      "sha256": "61061816b3b28adce15eb706117b9d6e7e31ad25fab142d7115639ddad12dc3d"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-report.md",
+      "sha256": "a0521630dee800c20759c89c4299b53112021624c760cc90cf9bffe03d1ccf61"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-revision-record.md",
+      "sha256": "c9e7bf76d8f72340cde210ee12d58eabce91873ef33b710133108dc42bb57ae7"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md",
+      "sha256": "e8676b7bcf48efcfb76ecc17cfd76db9e15317fc88e66292a6465dbf8029ff8c"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+      "sha256": "c9a1eee2d7381598767de5d2492bb1aa8291f63a80e0e0bcb1314e71024b264a"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/unused-imports.json",
+      "sha256": "b1565890faafedb0ab5ab7dcf119fa97b3bc0a25dde009cd94686869b32b7293"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/audit-unused-imports.cjs",
+      "sha256": "185d4480d34cb266dfe04f4f56ec5aa8edc2d1a75fc962ec788a663158da24d6"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts",
+      "sha256": "a8ce7c46ef1b26ca005cb5d4a44ba55bd766fab8346591465214c91a22158b73"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts",
+      "sha256": "da0a0910527a182ce923933ae5e67970ca8120964f18a1a7a9c131a98c8c603b"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts",
+      "sha256": "7345a1830b011ae562bbd374f8ec3105cfe0804f80adcdaf53b35fc57325659d"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "install",
+    "command": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--filter",
+      "autobyteus-server-ts..."
+    ],
+    "exit": 0,
+    "seconds": 20.327
+  },
+  {
+    "name": "prisma",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "prisma",
+      "generate",
+      "--schema",
+      "./prisma/schema.prisma"
+    ],
+    "exit": 0,
+    "seconds": 4.416
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "typecheck"
+    ],
+    "exit": 2,
+    "seconds": 5.386
+  }
+]

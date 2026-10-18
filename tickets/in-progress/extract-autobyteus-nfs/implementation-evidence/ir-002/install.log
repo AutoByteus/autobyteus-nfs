@@ -1,0 +1,14 @@
+$ pnpm install --frozen-lockfile --filter autobyteus-server-ts... --filter @autobyteus/application-backend-sdk...
+Scope: 7 of 13 workspace projects
+Lockfile is up to date, resolution step is skipped
+autobyteus-ts postinstall$ node ./scripts/fix-node-pty-permissions.mjs
+autobyteus-ts postinstall: [node-pty-fix] ok: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir002-jxp7bi9m/repo/node_modules/.pnpm/node-pty@1.1.0/node_modules/node-pty/prebuilds/darwin-arm64/spawn-helper
+autobyteus-ts postinstall: Done
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @google/genai@2.24.0.                               │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Done in 621ms using pnpm v10.28.2

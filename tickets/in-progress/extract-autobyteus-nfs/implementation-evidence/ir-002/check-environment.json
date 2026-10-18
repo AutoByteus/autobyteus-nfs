@@ -1,0 +1,13 @@
+{
+  "scratch": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir002-jxp7bi9m",
+  "env": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin",
+    "HOME": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir002-jxp7bi9m/home",
+    "TMPDIR": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-ir002-jxp7bi9m/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+  "inputs_count": 7215,
+  "source_head": "d3f7f67015587b4c8aa26824786be807793485d1",
+  "source_patch": "source.diff"
+}
