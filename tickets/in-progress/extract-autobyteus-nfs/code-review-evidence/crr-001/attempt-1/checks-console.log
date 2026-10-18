@@ -1,0 +1,7 @@
+{'name': 'go-race', 'argv': ['go', 'test', '-race', '-count=1', './...'], 'exit': 1, 'expected': 0, 'seconds': 17.795}
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/run-standalone-checks.py", line 35, in <module>
+    for name,argv,expected in [('go-race',['go','test','-race','-count=1','./...'],0),('go-vet',['go','vet','./...'],0),('python',['python3','-m','unittest','discover','-s','scripts/tests','-p','test_*.py','-v'],0),('source-hash',['python3','packaging/release.py','--source-hash'],0),('publish-refusal',['python3','packaging/release.py','--check-publish'],1),('actionlint',['actionlint','.github/workflows/release-nfs.yml'],0),('shell',['bash','-n','scripts/public/nfs/install.sh'],0)]:run(name,argv,source,env,expected)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/run-standalone-checks.py", line 14, in run
+    if r.returncode!=expected: raise RuntimeError(name)
+RuntimeError: go-race

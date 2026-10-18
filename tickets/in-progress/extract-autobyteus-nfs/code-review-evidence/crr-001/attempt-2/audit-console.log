@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/complete-source-audit.py", line 33, in <module>
+    assert all(x['exit']==1 and not x['output'] for x in scans)
+AssertionError

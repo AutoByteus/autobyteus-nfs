@@ -1,0 +1,50 @@
+{
+  "scope": "CRR-001 own focused report and evidence, no cumulative historical package",
+  "review": "Fail / Local Fix CR-001",
+  "files": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-report.md",
+      "sha256": "a0521630dee800c20759c89c4299b53112021624c760cc90cf9bffe03d1ccf61"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-revision-record.md",
+      "sha256": "c9e7bf76d8f72340cde210ee12d58eabce91873ef33b710133108dc42bb57ae7"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/checks-and-limits.md",
+      "sha256": "057723396732b39c22f0d7ada6c81fe877377287a776d835b023363397a6d13a"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/source-audit.json",
+      "sha256": "d166b628dc75582342626f5de7dc72163dd3b48ff550fe3a11d185cc0db1ccd1"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/source-size-audit.md",
+      "sha256": "c3676d65b9343cc992e947bb8ea57e8dafdaed053b23e3bce8074809b97678a1"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/unused-imports.json",
+      "sha256": "b1565890faafedb0ab5ab7dcf119fa97b3bc0a25dde009cd94686869b32b7293"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/audit-unused-imports.cjs",
+      "sha256": "185d4480d34cb266dfe04f4f56ec5aa8edc2d1a75fc962ec788a663158da24d6"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/checks-result.json",
+      "sha256": "33f080e02c64274e22c24fba4dd7a9231488a0d13f69e6e0a162ee219e6137fc"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/cleanup.json",
+      "sha256": "e3903c5130effe5a1e5990fd024b372151819e74928f7dabcbe4c9a986e78b5a"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/final-checks.json",
+      "sha256": "27df84c2b98f5b66036a6b1e9b33e0e8930fdb477b5be31b8fdb35ed8c2e9536"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-001/attempts.md",
+      "sha256": "ce0885d3bf9ff2d4e9ad709b360e916cfcac53af0af63b00af25516e7ffe4b36"
+    }
+  ]
+}

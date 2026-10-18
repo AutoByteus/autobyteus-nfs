@@ -1,0 +1,8 @@
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.792s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.671s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	2.251s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	2.700s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	8.426s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	3.178s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	5.486s

@@ -1,0 +1,1833 @@
+{
+  "base": "3712cd9bf0db998501d162db7f8655f169e3def6",
+  "packageIndexChecks": [
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/attempts.md",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-source.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-source.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/change-inventory.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/changed-typescript-parse.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/checks-and-limits.md",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-owned.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fifth.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-first.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fourth.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-second.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-third.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-build.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-inputs.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/run-consumer-final.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-build.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-inputs.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-typecheck.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/run-consumer-final.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-build.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-inputs.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-local-routes.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-typecheck.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-unit.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install-result.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-launcher-localization.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api-second.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-scratch-path.txt",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-staged-paths.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-type-web.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-first.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-second.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-third.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/destination-fetch.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/edit-app-r2.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-fixture-docs.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-test-cleanup.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-tests.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/extract.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-refs.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-actionlint.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-amd64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-arm64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-amd64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64-embedded.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-race.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-vet.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-publish-refusal.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-python.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-shell.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-source-hash.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-version.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/final-toolchain.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/fresh-refs.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-initial-r2.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-install-state.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-second-r2.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/go-third-r2.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-1440.png",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-390.png",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/nuxt.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/result.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-1440.png",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-390.png",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/hold-checkpoint.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/input-audit.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/inspect-guide.mjs",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/n-final-fetch.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/parse-changed-typescript.cjs",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/permission-audit.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-checks.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-consumer.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/resume-toolchain.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-first-verification.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-verification.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/routing.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-consumer-final.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone-final.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/s-final-fetch.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/scratch-path.txt",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/source-audit.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/source-fetch.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-actionlint.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-archive.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-binaries.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-amd64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-arm64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-amd64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64-embedded.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-archive.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-checks.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-console.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-root.txt",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-first-binaries.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-race.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-vet.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-publish-refusal.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-python.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-shell.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-source-hash.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-version.log",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/sync-consumer.py",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/toolchain.json",
+      "hashMatches": true
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/update-test-constructors.cjs",
+      "hashMatches": true
+    }
+  ],
+  "goComparison": [
+    {
+      "path": "cmd/autobyteus-nfs/main.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/apple.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/apple_apply.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/apple_startup.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/apple_startup_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/backend_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/cleanup_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/engine_assets_linux.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/engine_assets_other.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/engine_bundle.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/engine_bundle_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/engine_staging.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/ganesha.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/ganesha_native.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/cli/cli_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/cli/engine_release_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/cli/inputs.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/cli/install.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/cli/interactive-setup.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/cli/launcher.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/cli/run.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/cli/terminal.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/cli/verify-release.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/config/config_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/config/connection.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/config/source-marker.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/config/source_identity.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/config/source_identity_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/config/state.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/config/store.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/docker/attachment.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/client.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/docker/docker_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/docker/engine.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/docker/exec.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/ownership.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/probe_cleanup.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/recovery.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/recreate.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/snapshot.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/docker/start_observation.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/start_recovery.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/start_recovery_test.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/docker/volume.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/platform/commands.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/directory_modes_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/platform/filesystem_darwin.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/filesystem_linux.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_amd64.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_arm64.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/handles_darwin.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/handles_linux.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/jobs.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/lock.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/mount-observation.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/mounts.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/platform_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/source.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/source_darwin.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/source_darwin_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/source_linux.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/source_linux_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/volume_identity.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/volume_identity_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/platform/volume_plist.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/service/probe.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/service/probe_test.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/service/supervisor.go",
+      "kind": "normalized-equal"
+    },
+    {
+      "path": "internal/setup/apply.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/detach_nodes.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/setup/detach_nodes_test.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/setup/hosted_config_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/lifecycle.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/pending.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/plan.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/reconnect_nodes.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/setup/reconnect_nodes_test.go",
+      "kind": "removed"
+    },
+    {
+      "path": "internal/setup/service.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/setup_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/source_binding_darwin_test.go",
+      "kind": "changed"
+    },
+    {
+      "path": "internal/setup/status.go",
+      "kind": "changed"
+    }
+  ],
+  "licensesAndEngine": [
+    {
+      "path": "LICENSE",
+      "baseSource": "autobyteus-nfs/LICENSE",
+      "equal": true
+    },
+    {
+      "path": "CLA.md",
+      "baseSource": "CLA.md",
+      "equal": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES",
+      "baseSource": "autobyteus-nfs/THIRD_PARTY_NOTICES",
+      "equal": true
+    },
+    {
+      "path": "packaging/release-lock.json",
+      "baseSource": "autobyteus-nfs/packaging/release-lock.json",
+      "equal": true
+    },
+    {
+      "path": "packaging/engine/build.py",
+      "equal": true
+    },
+    {
+      "path": "packaging/engine/get-dir-delegation.patch",
+      "equal": true
+    },
+    {
+      "path": "packaging/engine/manifest.py",
+      "equal": true
+    },
+    {
+      "path": "packaging/engine/source-lock.json",
+      "equal": true
+    },
+    {
+      "path": "packaging/engine/source.py",
+      "equal": true
+    }
+  ],
+  "sourceSizes": [
+    {
+      "repo": "N",
+      "path": "cmd/autobyteus-nfs/main.go",
+      "beforeNonblank": 22,
+      "afterNonblank": 22,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/apple.go",
+      "beforeNonblank": 140,
+      "afterNonblank": 140,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/apple_apply.go",
+      "beforeNonblank": 136,
+      "afterNonblank": 136,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/apple_startup.go",
+      "beforeNonblank": 98,
+      "afterNonblank": 98,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/engine_assets_linux.go",
+      "beforeNonblank": 4,
+      "afterNonblank": 4,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/engine_assets_other.go",
+      "beforeNonblank": 7,
+      "afterNonblank": 7,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/engine_bundle.go",
+      "beforeNonblank": 108,
+      "afterNonblank": 108,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/engine_staging.go",
+      "beforeNonblank": 53,
+      "afterNonblank": 53,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/ganesha.go",
+      "beforeNonblank": 55,
+      "afterNonblank": 55,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/ganesha_native.go",
+      "beforeNonblank": 143,
+      "afterNonblank": 143,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/backend/ubuntu_packages.go",
+      "beforeNonblank": 150,
+      "afterNonblank": 150,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/inputs.go",
+      "beforeNonblank": 162,
+      "afterNonblank": 161,
+      "addedNonblank": 4,
+      "removedNonblank": 5,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/install.go",
+      "beforeNonblank": 123,
+      "afterNonblank": 138,
+      "addedNonblank": 25,
+      "removedNonblank": 10,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/interactive-setup.go",
+      "beforeNonblank": 92,
+      "afterNonblank": 53,
+      "addedNonblank": 7,
+      "removedNonblank": 46,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/run.go",
+      "beforeNonblank": 193,
+      "afterNonblank": 187,
+      "addedNonblank": 14,
+      "removedNonblank": 20,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/terminal.go",
+      "beforeNonblank": 50,
+      "afterNonblank": 50,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/cli/verify-release.go",
+      "beforeNonblank": 36,
+      "afterNonblank": 36,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/connection.go",
+      "beforeNonblank": 138,
+      "afterNonblank": 135,
+      "addedNonblank": 1,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/installation_state.go",
+      "beforeNonblank": 0,
+      "afterNonblank": 84,
+      "addedNonblank": 84,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/source-marker.go",
+      "beforeNonblank": 38,
+      "afterNonblank": 38,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/source_identity.go",
+      "beforeNonblank": 20,
+      "afterNonblank": 20,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/state.go",
+      "beforeNonblank": 87,
+      "afterNonblank": 57,
+      "addedNonblank": 3,
+      "removedNonblank": 33,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/config/store.go",
+      "beforeNonblank": 124,
+      "afterNonblank": 120,
+      "addedNonblank": 2,
+      "removedNonblank": 6,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/docker/client.go",
+      "beforeNonblank": 136,
+      "afterNonblank": 107,
+      "addedNonblank": 1,
+      "removedNonblank": 30,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/docker/engine.go",
+      "beforeNonblank": 140,
+      "afterNonblank": 140,
+      "addedNonblank": 1,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/docker/snapshot.go",
+      "beforeNonblank": 214,
+      "afterNonblank": 18,
+      "addedNonblank": 1,
+      "removedNonblank": 197,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/commands.go",
+      "beforeNonblank": 86,
+      "afterNonblank": 86,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/filesystem_darwin.go",
+      "beforeNonblank": 29,
+      "afterNonblank": 29,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/filesystem_linux.go",
+      "beforeNonblank": 35,
+      "afterNonblank": 35,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/handle_syscalls_linux_amd64.go",
+      "beforeNonblank": 4,
+      "afterNonblank": 4,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/handle_syscalls_linux_arm64.go",
+      "beforeNonblank": 4,
+      "afterNonblank": 4,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/handles_darwin.go",
+      "beforeNonblank": 3,
+      "afterNonblank": 3,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/handles_linux.go",
+      "beforeNonblank": 49,
+      "afterNonblank": 49,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/jobs.go",
+      "beforeNonblank": 110,
+      "afterNonblank": 110,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/lock.go",
+      "beforeNonblank": 21,
+      "afterNonblank": 21,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/mount-observation.go",
+      "beforeNonblank": 106,
+      "afterNonblank": 106,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/mounts.go",
+      "beforeNonblank": 156,
+      "afterNonblank": 156,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/source.go",
+      "beforeNonblank": 63,
+      "afterNonblank": 63,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/source_darwin.go",
+      "beforeNonblank": 70,
+      "afterNonblank": 70,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/source_linux.go",
+      "beforeNonblank": 12,
+      "afterNonblank": 12,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/volume_identity.go",
+      "beforeNonblank": 25,
+      "afterNonblank": 25,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/platform/volume_plist.go",
+      "beforeNonblank": 183,
+      "afterNonblank": 183,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/service/probe.go",
+      "beforeNonblank": 155,
+      "afterNonblank": 155,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/service/supervisor.go",
+      "beforeNonblank": 28,
+      "afterNonblank": 28,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/apply.go",
+      "beforeNonblank": 210,
+      "afterNonblank": 167,
+      "addedNonblank": 7,
+      "removedNonblank": 50,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/lifecycle.go",
+      "beforeNonblank": 160,
+      "afterNonblank": 141,
+      "addedNonblank": 8,
+      "removedNonblank": 27,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/pending.go",
+      "beforeNonblank": 141,
+      "afterNonblank": 84,
+      "addedNonblank": 4,
+      "removedNonblank": 61,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/plan.go",
+      "beforeNonblank": 182,
+      "afterNonblank": 144,
+      "addedNonblank": 5,
+      "removedNonblank": 43,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/service.go",
+      "beforeNonblank": 47,
+      "afterNonblank": 44,
+      "addedNonblank": 0,
+      "removedNonblank": 3,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "internal/setup/status.go",
+      "beforeNonblank": 76,
+      "afterNonblank": 39,
+      "addedNonblank": 5,
+      "removedNonblank": 42,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "packaging/engine/build.py",
+      "beforeNonblank": 74,
+      "afterNonblank": 74,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "packaging/engine/manifest.py",
+      "beforeNonblank": 86,
+      "afterNonblank": 86,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "packaging/engine/source.py",
+      "beforeNonblank": 58,
+      "afterNonblank": 58,
+      "addedNonblank": 0,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "packaging/release.py",
+      "beforeNonblank": 94,
+      "afterNonblank": 91,
+      "addedNonblank": 9,
+      "removedNonblank": 12,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": "scripts/public/nfs/install.sh",
+      "beforeNonblank": 45,
+      "afterNonblank": 45,
+      "addedNonblank": 1,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/acp/backend/acp-agent-run-backend-factory.ts",
+      "beforeNonblank": 243,
+      "afterNonblank": 245,
+      "addedNonblank": 10,
+      "removedNonblank": 8,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/antigravity/backend/agy-agent-run-backend-factory.ts",
+      "beforeNonblank": 137,
+      "afterNonblank": 133,
+      "addedNonblank": 1,
+      "removedNonblank": 5,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.ts",
+      "beforeNonblank": 473,
+      "afterNonblank": 473,
+      "addedNonblank": 3,
+      "removedNonblank": 3,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts",
+      "beforeNonblank": 63,
+      "afterNonblank": 60,
+      "addedNonblank": 1,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-context.ts",
+      "beforeNonblank": 42,
+      "afterNonblank": 38,
+      "addedNonblank": 0,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-session-bootstrapper.ts",
+      "beforeNonblank": 129,
+      "afterNonblank": 103,
+      "addedNonblank": 1,
+      "removedNonblank": 27,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/claude-workspace-resolver.ts",
+      "beforeNonblank": 45,
+      "afterNonblank": 44,
+      "addedNonblank": 1,
+      "removedNonblank": 2,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-cleanup.ts",
+      "beforeNonblank": 47,
+      "afterNonblank": 39,
+      "addedNonblank": 1,
+      "removedNonblank": 9,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts",
+      "beforeNonblank": 173,
+      "afterNonblank": 165,
+      "addedNonblank": 1,
+      "removedNonblank": 9,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-query-options.ts",
+      "beforeNonblank": 56,
+      "afterNonblank": 54,
+      "addedNonblank": 1,
+      "removedNonblank": 3,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts",
+      "beforeNonblank": 62,
+      "afterNonblank": 49,
+      "addedNonblank": 1,
+      "removedNonblank": 14,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-context.ts",
+      "beforeNonblank": 36,
+      "afterNonblank": 25,
+      "addedNonblank": 0,
+      "removedNonblank": 11,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-thread-bootstrapper.ts",
+      "beforeNonblank": 401,
+      "afterNonblank": 259,
+      "addedNonblank": 0,
+      "removedNonblank": 142,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/backend/index.ts",
+      "beforeNonblank": 5,
+      "afterNonblank": 4,
+      "addedNonblank": 0,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/codex-workspace-resolver.ts",
+      "beforeNonblank": 44,
+      "afterNonblank": 43,
+      "addedNonblank": 1,
+      "removedNonblank": 2,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/codex/thread/codex-thread-manager.ts",
+      "beforeNonblank": 240,
+      "afterNonblank": 231,
+      "addedNonblank": 0,
+      "removedNonblank": 9,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/grok/grok-build-agent-run-backend-factory.ts",
+      "beforeNonblank": 27,
+      "afterNonblank": 25,
+      "addedNonblank": 0,
+      "removedNonblank": 2,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/provider-preparation-guard.ts",
+      "beforeNonblank": 10,
+      "afterNonblank": 6,
+      "addedNonblank": 0,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/shared/prepare-private-runtime-skills.ts",
+      "beforeNonblank": 38,
+      "afterNonblank": 37,
+      "addedNonblank": 5,
+      "removedNonblank": 6,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/backends/shared/runtime-skill-profile.ts",
+      "beforeNonblank": 130,
+      "afterNonblank": 147,
+      "addedNonblank": 17,
+      "removedNonblank": 0,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/providers/agent-provider-factory-builder.ts",
+      "beforeNonblank": 205,
+      "afterNonblank": 189,
+      "addedNonblank": 0,
+      "removedNonblank": 16,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts",
+      "beforeNonblank": 350,
+      "afterNonblank": 345,
+      "addedNonblank": 1,
+      "removedNonblank": 6,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/compositions/create-process-agent-provider-factory-builder.ts",
+      "beforeNonblank": 59,
+      "afterNonblank": 51,
+      "addedNonblank": 0,
+      "removedNonblank": 8,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/runtime-management/codex/client/codex-app-server-client-manager.ts",
+      "beforeNonblank": 114,
+      "afterNonblank": 112,
+      "addedNonblank": 1,
+      "removedNonblank": 3,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "autobyteus-server-ts/src/services/terminal-streaming/pty-session-manager.ts",
+      "beforeNonblank": 132,
+      "afterNonblank": 129,
+      "addedNonblank": 1,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "scripts/public/docker/autobyteus-docker.d/bash/commands.sh",
+      "beforeNonblank": 267,
+      "afterNonblank": 267,
+      "addedNonblank": 1,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "scripts/public/docker/autobyteus-docker.d/bash/container-config.sh",
+      "beforeNonblank": 54,
+      "afterNonblank": 50,
+      "addedNonblank": 0,
+      "removedNonblank": 4,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "scripts/public/docker/autobyteus-docker.d/bash/docker-runtime.sh",
+      "beforeNonblank": 450,
+      "afterNonblank": 449,
+      "addedNonblank": 0,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "S",
+      "path": "scripts/public/docker/autobyteus-docker.sh",
+      "beforeNonblank": 242,
+      "afterNonblank": 242,
+      "addedNonblank": 1,
+      "removedNonblank": 1,
+      "over500Grown": false,
+      "deltaOver220": false
+    },
+    {
+      "repo": "N",
+      "path": ".github/workflows/release-nfs.yml",
+      "beforeNonblank": 283,
+      "afterNonblank": 279,
+      "addedNonblank": 19,
+      "removedNonblank": 23,
+      "over500Grown": false,
+      "deltaOver220": false
+    }
+  ],
+  "normalization": "Only old Go module import prefix; no behavior/text normalization.",
+  "activeCouplingScans": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+        "grep",
+        "-n",
+        "-i",
+        "-E",
+        "configuredSharedWorkspace|checkSharedWorkspaceForRun|admitSharedRunWorkspace|scopedProjectGitEnvironment|autobyteus-nfs|nfs-attachment|shared-workspace-binding|mount-observation|safe\\.directory|NFS_STORAGE_ID",
+        "--",
+        "autobyteus-server-ts/src",
+        "scripts/public/docker",
+        "autobyteus-web"
+      ],
+      "exit": 1,
+      "output": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+        "grep",
+        "-n",
+        "-i",
+        "-E",
+        "PublicStore|launcher-attachment|attachNodes|reconnectNodes|detachNodes|autobyteus-workspace",
+        "--",
+        "internal",
+        "cmd",
+        "go.mod",
+        "packaging",
+        "scripts/public",
+        ":(exclude)**/*_test.go"
+      ],
+      "exit": 1,
+      "output": ""
+    }
+  ],
+  "unchangedBackendPlatformServiceProduction": [
+    "internal/backend/apple.go",
+    "internal/backend/apple_apply.go",
+    "internal/backend/apple_startup.go",
+    "internal/backend/engine_assets_linux.go",
+    "internal/backend/engine_assets_other.go",
+    "internal/backend/engine_bundle.go",
+    "internal/backend/engine_staging.go",
+    "internal/backend/ganesha.go",
+    "internal/backend/ganesha_native.go",
+    "internal/backend/ubuntu_packages.go",
+    "internal/platform/commands.go",
+    "internal/platform/filesystem_darwin.go",
+    "internal/platform/filesystem_linux.go",
+    "internal/platform/handle_syscalls_linux_amd64.go",
+    "internal/platform/handle_syscalls_linux_arm64.go",
+    "internal/platform/handles_darwin.go",
+    "internal/platform/handles_linux.go",
+    "internal/platform/jobs.go",
+    "internal/platform/lock.go",
+    "internal/platform/mount-observation.go",
+    "internal/platform/mounts.go",
+    "internal/platform/source.go",
+    "internal/platform/source_darwin.go",
+    "internal/platform/source_linux.go",
+    "internal/platform/volume_identity.go",
+    "internal/platform/volume_plist.go",
+    "internal/service/probe.go",
+    "internal/service/supervisor.go"
+  ]
+}

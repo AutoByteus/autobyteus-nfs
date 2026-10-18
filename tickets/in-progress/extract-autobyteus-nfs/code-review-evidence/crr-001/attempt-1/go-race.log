@@ -1,0 +1,22 @@
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.557s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.680s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	3.111s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	2.341s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	6.857s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	2.034s
+--- FAIL: TestPendingUnboundAndInvalidForms (0.18s)
+    --- FAIL: TestPendingUnboundAndInvalidForms/existing-unbound (0.02s)
+        source_binding_darwin_test.go:174: system/private/ephemeral source is not supported: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-crr001-r67vw_ah/source/internal/setup/.source-binding-test-3185475712
+    --- FAIL: TestPendingUnboundAndInvalidForms/absent-unbound (0.02s)
+        source_binding_darwin_test.go:174: system/private/ephemeral source is not supported: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-crr001-r67vw_ah/source/internal/setup/.source-binding-test-2631570047
+--- FAIL: TestBindingSaveFailureStopsAndUnboundRetryPersists (0.03s)
+    source_binding_darwin_test.go:236: system/private/ephemeral source is not supported: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-crr001-r67vw_ah/source/internal/setup/.source-binding-test-4047954675
+--- FAIL: TestPlanCapturesExistingAndQualifiesNewParent (0.00s)
+    --- FAIL: TestPlanCapturesExistingAndQualifiesNewParent/false (0.00s)
+        source_binding_darwin_test.go:329: source/parent capture missing system/private/ephemeral source is not supported: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-crr001-r67vw_ah/source/internal/setup/.source-binding-test-1245708082 0
+    --- FAIL: TestPlanCapturesExistingAndQualifiesNewParent/true (0.00s)
+        source_binding_darwin_test.go:329: source/parent capture missing system/private/ephemeral source is not supported: /private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-extract-crr001-r67vw_ah/source/internal/setup/.source-binding-test-2344757340/new-project 0
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	2.838s
+FAIL

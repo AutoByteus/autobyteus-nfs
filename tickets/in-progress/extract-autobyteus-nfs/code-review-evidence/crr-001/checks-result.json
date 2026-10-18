@@ -1,0 +1,86 @@
+[
+  {
+    "name": "go-race",
+    "argv": [
+      "go",
+      "test",
+      "-race",
+      "-count=1",
+      "./..."
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 20.653
+  },
+  {
+    "name": "go-vet",
+    "argv": [
+      "go",
+      "vet",
+      "./..."
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 6.55
+  },
+  {
+    "name": "python",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 6.083
+  },
+  {
+    "name": "source-hash",
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.13
+  },
+  {
+    "name": "publish-refusal",
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "seconds": 0.072
+  },
+  {
+    "name": "actionlint",
+    "argv": [
+      "actionlint",
+      ".github/workflows/release-nfs.yml"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.186
+  },
+  {
+    "name": "shell",
+    "argv": [
+      "bash",
+      "-n",
+      "scripts/public/nfs/install.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.007
+  }
+]

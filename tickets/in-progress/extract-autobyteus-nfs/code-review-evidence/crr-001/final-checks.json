@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-18T03:09:21.968075+00:00",
+  "NHead": "9208f8d4f81c78c537b4105773bae85dd74a0076",
+  "SHead": "d3f7f67015587b4c8aa26824786be807793485d1",
+  "unchangedNonTicketInputs": {
+    "Nfiles": 108,
+    "Sfiles": 7215
+  },
+  "upstream132HashChecks": 132,
+  "sourceSizeRows": 85,
+  "brokenReportLinks": [],
+  "ownedScratchAbsent": true,
+  "NTrackedDiff": "",
+  "STrackedDiff": "",
+  "reviewDecision": "Fail",
+  "classification": "Local Fix",
+  "finding": "CR-001",
+  "score": 98.8
+}
