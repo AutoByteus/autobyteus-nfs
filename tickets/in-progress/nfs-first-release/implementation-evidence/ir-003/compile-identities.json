@@ -1,0 +1,10 @@
+{
+  "sha256": {
+    "nfs-linux-arm64": "6883e4e845149463658c6f169bb53f50e032a1ed0b394f1f1812c6e4fe438ec6",
+    "nfs-darwin-amd64": "bfecd17bda4aaeb472f5cbecffb8d507818b7e093dfb708f4a81dcc80c78e3eb",
+    "nfs-darwin-arm64": "e665fbfe83e4440781c0e367429c18edaa8257bb45ccf83a0627964c22f71607",
+    "nfs-linux-amd64": "711d5d600fbe2c825e4ab276f93b3a657ec1ee4a2bd10bef41224d68c1e852fa",
+    "autobyteus-nfs": "c8d712d2cfc2e1c2acc4fbc368087ccb4a357d46040521f6e0de036faf632614"
+  },
+  "scope": "development stub builds; only native arm64 version executed, other targets compile only"
+}

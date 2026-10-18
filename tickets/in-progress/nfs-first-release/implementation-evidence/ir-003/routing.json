@@ -1,0 +1,9 @@
+{
+  "source": "fresh get_handoff_rules at IR003 completion",
+  "selected": {
+    "when": "When implementation is complete and the carried classification is task_size=Large or architectural_risk=High, implementation-scoped validation is complete, and the cumulative implementation package is ready for independent source review.",
+    "recipient_address": "/software_engineering_team/code_reviewer"
+  },
+  "reason": "Approved R3 replacement-basis implementation complete, not another CRR002 Local Fix; Large/High confirmed",
+  "otherRecipients": []
+}

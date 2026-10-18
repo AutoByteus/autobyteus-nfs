@@ -1,0 +1,54 @@
+=== RUN   TestReleaseManifestMustMatchAndAdmitActualArchitecture
+--- PASS: TestReleaseManifestMustMatchAndAdmitActualArchitecture (0.00s)
+=== RUN   TestEngineIdentityParticipatesInVerifiedReleaseEquality
+=== RUN   TestEngineIdentityParticipatesInVerifiedReleaseEquality/bytes
+=== RUN   TestEngineIdentityParticipatesInVerifiedReleaseEquality/recipe
+=== RUN   TestEngineIdentityParticipatesInVerifiedReleaseEquality/architecture
+=== RUN   TestEngineIdentityParticipatesInVerifiedReleaseEquality/source-removed
+--- PASS: TestEngineIdentityParticipatesInVerifiedReleaseEquality (0.01s)
+    --- PASS: TestEngineIdentityParticipatesInVerifiedReleaseEquality/bytes (0.00s)
+    --- PASS: TestEngineIdentityParticipatesInVerifiedReleaseEquality/recipe (0.00s)
+    --- PASS: TestEngineIdentityParticipatesInVerifiedReleaseEquality/architecture (0.00s)
+    --- PASS: TestEngineIdentityParticipatesInVerifiedReleaseEquality/source-removed (0.00s)
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/null
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/legacy-extra
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/missing-schema
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/old-schema
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/missing-status
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/false-user
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/unknown-status
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/extra-claim
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/empty
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/legacy-only
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/false-filesystem
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/duplicate
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/duplicate-status
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/trailing
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/candidate
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/unsupported
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/duplicate#01
+=== RUN   TestReleaseAdmissionCurrentSchemaAndClaims/wrong-target
+--- PASS: TestReleaseAdmissionCurrentSchemaAndClaims (0.01s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/null (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/legacy-extra (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/missing-schema (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/old-schema (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/missing-status (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/false-user (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/unknown-status (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/extra-claim (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/empty (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/legacy-only (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/false-filesystem (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/duplicate (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/duplicate-status (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/trailing (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/candidate (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/unsupported (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/duplicate#01 (0.00s)
+    --- PASS: TestReleaseAdmissionCurrentSchemaAndClaims/wrong-target (0.00s)
+=== RUN   TestReleaseNoticeOnlyAfterAdmissionAndExactVersionStdout
+--- PASS: TestReleaseNoticeOnlyAfterAdmissionAndExactVersionStdout (0.00s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.320s

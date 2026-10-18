@@ -1,0 +1,7 @@
+{
+  "exitCode": 0,
+  "passed": true,
+  "seconds": 55.8,
+  "container": "nfs-release-ir003-458546cf0a",
+  "scope": "native Linux arm64 Go/Python local checks, NOT mounted/physical/hosted qualification"
+}

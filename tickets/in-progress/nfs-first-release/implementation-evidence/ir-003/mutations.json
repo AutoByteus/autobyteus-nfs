@@ -1,0 +1,132 @@
+[
+  {
+    "name": "authorization",
+    "file": "packaging/release_support/readiness.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_release_records.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "source-applicability",
+    "file": "packaging/release_support/readiness.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_release_records.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "field-claim",
+    "file": "packaging/release_support/readiness.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_release_records.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "notes-disclosure",
+    "file": "packaging/release_support/payload.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_release_records.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "provenance-disclosure",
+    "file": "packaging/release_support/payload.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_release_records.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "engine-reset",
+    "file": "packaging/engine/manifest.py",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v",
+      "-p",
+      "test_nfs_engine_packaging.py"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "legacy-claim",
+    "file": "internal/cli/verify-release.go",
+    "command": [
+      "go",
+      "test",
+      "./internal/cli",
+      "-run",
+      "TestReleaseAdmissionCurrentSchemaAndClaims",
+      "-v"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  },
+  {
+    "name": "false-runtime-claim",
+    "file": "internal/cli/verify-release.go",
+    "command": [
+      "go",
+      "test",
+      "./internal/cli",
+      "-run",
+      "TestReleaseAdmissionCurrentSchemaAndClaims",
+      "-v"
+    ],
+    "exitCode": 1,
+    "detectedAssertion": true
+  }
+]

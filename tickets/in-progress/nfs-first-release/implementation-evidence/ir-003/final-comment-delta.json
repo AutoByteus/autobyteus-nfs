@@ -1,0 +1,6 @@
+{
+  "changed": [
+    "packaging/release_support/candidate.py"
+  ],
+  "detail": "Only fetch docstring Qualification -> Readiness; executable behavior identical. Prior native Go/Linux checks carry; final Python whole suite rerun."
+}

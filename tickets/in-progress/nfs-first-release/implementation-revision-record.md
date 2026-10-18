@@ -94,3 +94,49 @@ records do not belong to this new Task.
   six secrets already provisioned, not reprovisioned or proven. No target merge,
   push, publication, TaskDone/user verification/Terminal claim. Detailed commands,
   raw results and limits: implementation-evidence/ir-002/checks-and-limits.md.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-003 | Solution Designer SR004 replacement; Architecture Reviewer ARCH002 Pass | N/A — approved behavior change | Implementation complete | R3/SR004, ARCH002; historical IR002/CRR003/API002/DR003 context | Local checks pass; independent source review required |
+
+### IR-003 — Release-first readiness and explicit deferred field validation
+
+- Trigger: reviewed e08e078a3303c1ef073c45c9e0b5a044e5dd898c, SD bc1f1bb;
+  direct user approved official signed normal v0.1.0 first, testing/fixes afterward.
+  SR004/ARCH002 supersede old physical/user prepublication sequencing, not signing,
+  integrity or host protections. Not another CR-001 local fix or retrospective failure.
+- Prior implementation IR002 complete/source8436d0c, CRR003 Pass; API002 Blocked73.57
+  and complete old candidate remain historical exact-input outcomes. Current new
+  CRR/API result N/A — not executed yet; DR003 source of changed user direction.
+- Current source3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3. **Large/High confirmed**.
+  Implementation complete; no approval/design deviation or scope widening.
+- BEH001–006 / UC001–005 / AC001–008 mapped in current handoff. New readiness.py
+  replaces qualification.py; lock exact fields/engine invalidation, --release and
+  schema2 releaseTargets + deferred fieldValidation replace old authority aliases.
+  All metadata/preflight/payload/publication/resume consumers use the one owner.
+- Go release-only strict schema/unknown/duplicate/status/target/equality admission,
+  named FieldValidation and post-success stderr notice; exact version stdout and
+  installer pre-write integrity retained. Host config.Decode/state/consent/storage
+  owners unchanged. No live setup, arbitrary override or old-schema fallback.
+- Provenance schema2 binds readiness/deferred state; mandatory public notes disclosure
+  verified even after a tampered payload is rehashed. Signing/immutable same-byte
+  retry/exact engine/whole OCI sequence retained; four targets unchanged. Guides
+  aligned with approved release-first policy and explicit postpublication custody.
+- Local evidence: independent native Mac arm64 and owned Linux arm64 container
+  Go1.27.2 race7packages/vet/build/version pass; four-target compile only; final
+  Python45 with44 executed+1skip Mac and42+3skips Linux; actionlint/Bash3.2/shellcheck;
+  eight detected mutants; null-readiness refusal; preservation/size/source audit.
+  Last change after native checks was a fetch docstring only, then current Python
+  rerun; exact sequence/limits in ir-003/checks-and-limits.md, no hidden failures.
+- Source default-null-engine/readiness hash
+  d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac;
+  future measured-engine hash differs. Real readiness remains null, not fixtures.
+- Protected16 Delivery files and old API002 candidate untouched; prior IR prefix
+  retained. Owned scratch/containers removed (cleanup.json). No remote write,
+  credential access, engine rebuild, public download/signature or mounted-NFS proof.
+- Next: fresh configured Code Review route, then affected API/new complete actual
+  hosted candidate and Delivery actual readiness/signed publication/public receipts.
+  Field/shared-filesystem/physical/user tests deferred—not publication/closure gates;
+  Delivery→terminalSD→requestingPM owns the approved plan. No TaskDone/Terminal claim.

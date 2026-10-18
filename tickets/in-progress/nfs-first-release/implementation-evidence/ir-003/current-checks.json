@@ -1,0 +1,26 @@
+[
+  {
+    "name": "python-current",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "source-hash-current",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exitCode": 0
+  }
+]

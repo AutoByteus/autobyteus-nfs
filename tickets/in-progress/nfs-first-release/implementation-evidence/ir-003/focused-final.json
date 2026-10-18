@@ -1,0 +1,42 @@
+[
+  {
+    "name": "python-final",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "exitCode": 0,
+    "seconds": 25.36
+  },
+  {
+    "name": "go-admission",
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "./internal/cli",
+      "-run",
+      "TestRelease|TestEngineIdentity",
+      "-v"
+    ],
+    "exitCode": 0,
+    "seconds": 2.72
+  },
+  {
+    "name": "tool-versions",
+    "command": [
+      "/bin/bash",
+      "-c",
+      "sw_vers; uname -m; go version; python3 --version; /bin/bash --version; actionlint --version; shellcheck --version"
+    ],
+    "exitCode": 0,
+    "seconds": 0.24
+  }
+]
