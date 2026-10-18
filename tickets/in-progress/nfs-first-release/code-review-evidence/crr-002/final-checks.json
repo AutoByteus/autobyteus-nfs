@@ -1,0 +1,26 @@
+{
+  "review": "CRR-002",
+  "input_head": "72dc48b1aedbec8260951a4e851a7417a5672201",
+  "product_unchanged_since_review": true,
+  "unexpected_tracked_changes": [],
+  "scoped_input_changes": [],
+  "delivery_owned_changes": [],
+  "delivery_owned_untracked_count": 8,
+  "history_prior_prefix_preserved": true,
+  "prior_history_bytes": 2816,
+  "whitespace_failures": [],
+  "probe_cleanup": {
+    "result": "Confirmed implementation failure",
+    "source_inputs_unchanged": 119,
+    "scoped_files_unchanged": 18,
+    "delivery_owned_files_unchanged": 8,
+    "probe_observations": 4,
+    "scratch_absent": true,
+    "durable_or_production_edits": false,
+    "hosted_dispatch_or_remote_mutations": false,
+    "resource_effects": "Own temporary directories only; no network, secrets, mounts, VM, container or user data"
+  },
+  "review_report_sha256": "079a5acc7ab6a07ae8e8e4f46a7a5b2a611efc498700994d46522f799143fe90",
+  "history_sha256": "dd2167d27a442966e002c2d434e2fe508921f60bfb2e66348752893ff23fb066",
+  "passed": true
+}

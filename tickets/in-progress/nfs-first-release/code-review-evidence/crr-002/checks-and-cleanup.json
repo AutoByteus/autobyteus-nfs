@@ -1,0 +1,11 @@
+{
+  "result": "Confirmed implementation failure",
+  "source_inputs_unchanged": 119,
+  "scoped_files_unchanged": 18,
+  "delivery_owned_files_unchanged": 8,
+  "probe_observations": 4,
+  "scratch_absent": true,
+  "durable_or_production_edits": false,
+  "hosted_dispatch_or_remote_mutations": false,
+  "resource_effects": "Own temporary directories only; no network, secrets, mounts, VM, container or user data"
+}

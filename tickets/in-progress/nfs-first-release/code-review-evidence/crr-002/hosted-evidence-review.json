@@ -1,0 +1,132 @@
+{
+  "run": {
+    "id": 39111348848,
+    "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "failure",
+    "run_attempt": 1,
+    "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848"
+  },
+  "jobs": [
+    {
+      "id": 117627972056,
+      "name": "prepare",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628015203,
+      "name": "engine-packages (ubuntu-24.04, amd64)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628015271,
+      "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628452768,
+      "name": "engine-inputs",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628492072,
+      "name": "engine",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628928559,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 117628928560,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628928622,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 117628928627,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 117629240033,
+      "name": "payload",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 117629240155,
+      "name": "candidate",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 117629241188,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "skipped"
+    }
+  ],
+  "mac_excerpts": {
+    "117628928559": [
+      {
+        "line": 252,
+        "text": "2026-10-18T08:30:20.8983520Z shell: /bin/bash -e {0}"
+      },
+      {
+        "line": 255,
+        "text": "2026-10-18T08:30:20.8984460Z   MODE: candidate"
+      },
+      {
+        "line": 256,
+        "text": "2026-10-18T08:30:20.8984730Z   TARGET: darwin-arm64"
+      },
+      {
+        "line": 258,
+        "text": "2026-10-18T08:30:21.3071090Z /Users/runner/work/_temp/7a865f2f-de17-430c-91d9-226a86bf188f.sh: line 5: args[@]: unbound variable"
+      },
+      {
+        "line": 259,
+        "text": "2026-10-18T08:30:21.3085420Z ##[error]Process completed with exit code 1."
+      }
+    ],
+    "117628928627": [
+      {
+        "line": 252,
+        "text": "2026-10-18T08:31:18.6313170Z shell: /bin/bash -e {0}"
+      },
+      {
+        "line": 255,
+        "text": "2026-10-18T08:31:18.6315180Z   MODE: candidate"
+      },
+      {
+        "line": 256,
+        "text": "2026-10-18T08:31:18.6315650Z   TARGET: darwin-amd64"
+      },
+      {
+        "line": 258,
+        "text": "2026-10-18T08:31:19.1582650Z /Users/runner/work/_temp/5d4a06bb-1abf-406b-b5a6-c74c2a730737.sh: line 5: args[@]: unbound variable"
+      },
+      {
+        "line": 259,
+        "text": "2026-10-18T08:31:19.1604430Z ##[error]Process completed with exit code 1."
+      }
+    ]
+  },
+  "hosted_bash_version": "Not printed; do not infer it from local version"
+}

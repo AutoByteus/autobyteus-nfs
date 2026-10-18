@@ -1,0 +1,69 @@
+{
+  "workflow_sha256": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944",
+  "exact_source_lines": "args=()\nif [[ \"$MODE\" == fresh ]]; then args+=(--qualified --candidate work/candidate); fi\npython3 packaging/release.py --tag \"$TAG\" --engine-image \"$image\" --engine-manifest work/candidate/engine/engine-manifest.json --engine-artifacts work/candidate/engine --target \"$TARGET\" --output cmd/autobyteus-nfs/release.json \"${args[@]}\"\n",
+  "rows": [
+    {
+      "argv": [
+        "/bin/bash",
+        "-e",
+        "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh"
+      ],
+      "shell_version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "target_env": "darwin-arm64",
+      "mode": "candidate",
+      "exit": 1,
+      "command_entered": false,
+      "stdout": "",
+      "stderr": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh: line 5: args[@]: unbound variable\n",
+      "expected_observation": true
+    },
+    {
+      "argv": [
+        "/bin/bash",
+        "-e",
+        "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh"
+      ],
+      "shell_version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "target_env": "darwin-arm64",
+      "mode": "fresh",
+      "exit": 0,
+      "command_entered": true,
+      "stdout": "COMMAND_ENTERED\n<packaging/release.py>\n<--tag>\n<v0.1.0>\n<--engine-image>\n<inert-metadata-control>\n<--engine-manifest>\n<work/candidate/engine/engine-manifest.json>\n<--engine-artifacts>\n<work/candidate/engine>\n<--target>\n<darwin-arm64>\n<--output>\n<cmd/autobyteus-nfs/release.json>\n<--qualified>\n<--candidate>\n<work/candidate>\n",
+      "stderr": "",
+      "expected_observation": true
+    },
+    {
+      "argv": [
+        "/bin/bash",
+        "-e",
+        "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh"
+      ],
+      "shell_version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "target_env": "darwin-amd64",
+      "mode": "candidate",
+      "exit": 1,
+      "command_entered": false,
+      "stdout": "",
+      "stderr": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh: line 5: args[@]: unbound variable\n",
+      "expected_observation": true
+    },
+    {
+      "argv": [
+        "/bin/bash",
+        "-e",
+        "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/code-review-evidence/crr-002/exact-snippet.sh"
+      ],
+      "shell_version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "target_env": "darwin-amd64",
+      "mode": "fresh",
+      "exit": 0,
+      "command_entered": true,
+      "stdout": "COMMAND_ENTERED\n<packaging/release.py>\n<--tag>\n<v0.1.0>\n<--engine-image>\n<inert-metadata-control>\n<--engine-manifest>\n<work/candidate/engine/engine-manifest.json>\n<--engine-artifacts>\n<work/candidate/engine>\n<--target>\n<darwin-amd64>\n<--output>\n<cmd/autobyteus-nfs/release.json>\n<--qualified>\n<--candidate>\n<work/candidate>\n",
+      "stderr": "",
+      "expected_observation": true
+    }
+  ],
+  "scratch": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-crr002-tnbnrf0h",
+  "scratch_absent": true,
+  "scope": "Local system shell; TARGET is only an environment value. No amd64 execution or hosted rerun. Inert python boundary; no metadata, engine, signing or NFS execution."
+}

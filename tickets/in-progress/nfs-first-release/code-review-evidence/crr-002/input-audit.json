@@ -1,0 +1,42 @@
+{
+  "head": "72dc48b1aedbec8260951a4e851a7417a5672201",
+  "source": "886b55e1cf88f3f696334bd5e7b8c374946a594d",
+  "hosted_source": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "branch": "codex/nfs-first-release",
+  "source_same_since_review": true,
+  "scoped_files": {
+    "TESTING.md": "34fe03791ab403a95fb426eac1d9b7b737cb53a34c4b54cf81530819b04b7480",
+    ".github/workflows/release-nfs.yml": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944",
+    "scripts/tests/test_nfs_release_workflow.py": "d45c61e5cb46045193667c4b786f53ecea1068740d631d352164ad8ec2e0a94a",
+    "tickets/in-progress/nfs-first-release/requirements-doc.md": "4bd18d8c69d53cdeca26840d15b759520da5268949eb91ccd278c791e2eb4cd4",
+    "tickets/in-progress/nfs-first-release/design-spec.md": "3308f95906a3f8af9636531043dfe7c2c0ea9ca79650269c3fd5d22e2db8e60b",
+    "tickets/in-progress/nfs-first-release/implementation-handoff.md": "5c3b4d5e54254c3d445ee3bcea54d9ca9f1ce9fbaca3c4400d71b9e542f3d0cd",
+    "tickets/in-progress/nfs-first-release/code-review-report.md": "a9cf5f4088305f2e8e0ac4f4ac0ecafff76412b5c4a379f660c7a26109e10d91",
+    "tickets/in-progress/nfs-first-release/code-review-revision-record.md": "bde7b944fd20e20b2a62b4846f47a0b68fb88ff8490428ccfb31a61fb743fd1b",
+    "tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md": "b5f6c4fc8445503e04796c2050cefdd33b1f44418fadb76bb53152bacd9f691b",
+    "tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md": "52ff8fb63036b7e8f5370a406d42eee06e310cd6461719852cdde0fee1712729",
+    "tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md": "f9c86b730511eefdddb2126e4a47b39f75d7609672721ea22fcf98792579e29e",
+    "tickets/in-progress/nfs-first-release/api-e2e-revision-record.md": "2526fef097c472fe0edf337f2b880a2652f3b758f2ee9b377ff60c0ec361cafa",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/failure-summary.json": "f43c05281fb4a77a866d5497a3de191e3531567e6e9791154b89ee81b0e6bca1",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/hosted-final.json": "a790cb6292e4e860f21d17972147cb6543f068c4db3a50c985d3b0f2842f4173",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/hosted-job-117628928559.log": "714cf1fd62218a4ca80782b5d30657adbc733b509703a6b35656829bc35c0a42",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/hosted-job-117628928627.log": "efa8bff66763ce3fa01d661376455d567cf473b4f92def22dfd9ad28a9205b33",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/mac-array-reproduction.json": "da8e63449b298afc068dce9cc32a6889880e5b9856da39afa4b80cd69fc49fc9",
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/post-run-remote.json": "acc9b21edd717e1229ac87afa6bc11d0466423d35a3d735aaca5d3dd48b9a35e"
+  },
+  "delivery_owned_untracked": {
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/final-checks.json": "4d03671a0c1d8e69f8fb8b0a2fecb8de8644901fea34737e3c56024c596f4d82",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/post-staging-observation.json": "984b91577532b3d5e409dee7a42f3c9b75b14acca80c1d2e29e4cfe9545b3b1b",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/routing.json": "7461989d741e11255f24804be09f8648f139b9509f8d6bf4f89181e89cd8daa8",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/staged-source-receipt.json": "832f48366e4839588a26ab131ccfe5a14922b538c75a79af8e8ae95d0a19bba1",
+    "tickets/in-progress/nfs-first-release/delivery-revision-record.md": "c68101dd24350bbd3c6b0bad0d81c11a643c9d42761b1b648cb381f272f6118d",
+    "tickets/in-progress/nfs-first-release/docs-sync-report.md": "9f6469a2675b755ea6ae9a21f3f4c3cc8e2f683ffec4bf58bc67f6664ab99dac",
+    "tickets/in-progress/nfs-first-release/handoff-summary.md": "5de7d55a708bcd230be1cdf7b7f2c4c7967ac3074688aa78d2512511e4deb919",
+    "tickets/in-progress/nfs-first-release/release-deployment-report.md": "8a470e30fcf754f44bbc79704685dcf8fa07c4bc1350a074b91f87594554c142"
+  },
+  "history_bytes": 2816,
+  "history_sha256": "bde7b944fd20e20b2a62b4846f47a0b68fb88ff8490428ccfb31a61fb743fd1b",
+  "prior_report_commit": "c1f1330b8310bfadf772cebb09d085821be8da92",
+  "source_line_start": 203,
+  "workflow_sha256": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944"
+}
