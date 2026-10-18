@@ -1,0 +1,22 @@
+test_accepted_and_sanitized_receipt (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_failure_receipt_never_clobbers_existing_evidence (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_signal_reports_current_stage_and_cleans_up (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_validation_failures_are_not_credential_dumps (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_candidate_and_fresh_metadata_argv (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_metadata_failure_stops_step (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_nounset_and_oci_pipefail_stop_before_metadata (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_signing_upload_retains_only_sanitized_receipts_on_failure (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 69.569s
+
+OK

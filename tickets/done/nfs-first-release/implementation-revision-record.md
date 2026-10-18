@@ -174,3 +174,40 @@ records do not belong to this new Task.
   Both Mac actual signatures/Accepted notarization, final payload/publication/download
   and current-main gates remain. Deferred field/user plan is not a closure hold.
   No TaskDone/user verification/Terminal. Detailed evidence: ir-004/checks-and-limits.md.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-005 | Delivery / release-deployment-report.md / DR005 | N/A — named signing diagnostic boundary | Local Fix | R3/SR004, ARCH002; CRR005/006, API003 exact-input context; DR005 | Diagnostic correction locally complete; targeted source review required; actual signing remains unresolved |
+
+### IR-005 — Safe signing-stage and cleanup failure diagnostics
+
+- Trigger DR005 Blocked after actual publish=true run39121007787/1 failed both Mac
+  signing steps without any stage/notary receipt. Inputb2c6fdf, already-finalized
+  main7683494 retained. Canonical ticket now tickets/done/nfs-first-release; not TaskDone.
+- Prior IR004 complete/source850dfeb, CRR005sourcePass100/CRR006testPass and API003
+  prepublication95 retain their scope; no actual signing pass established. Current
+  source 75f4dbe5527a7159f536bafcf9448bc2d6a01604; **Large/High confirmed**, no new design/approval.
+- Current result Local Fix complete for diagnostics, ready for source review. Actual
+  signing stage/cause remains unknown until authorized hosted continuation; no false
+  root-cause/credential diagnosis. Current-delta CRR/API N/A—not executed.
+- BEH003/AC003/004/006/008: fixed stage+exit+cleanup on safe stderr and exclusive
+  failure JSON; private output suppressed. Workflow retains only sanitized notary/
+  failure JSON. Accepted/notary exit0/cleanup success still required; original command
+  exit preserved. Failed search-list capture cannot be restored during cleanup.
+- Only existing sign shell/workflow, two affected tests and TESTING/package release
+  guidance changed. No Go/runtime/host guard/engine/installer/authorization change.
+- Validation: baseline missing receipt detected; current17 focused and independent52
+  Python tests (51exec+1expectedGo-childskip) pass; Bash3.2 syntax/ShellCheck/actionlint;
+  four mutants detected. Attempts disclosed, no actual Apple/hosted/field execution.
+- Source hash bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62;
+  prior a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e; engine recipe
+  299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274 unchanged. Stable
+  readiness/engine/candidates preserved but stale for new source; no invented records.
+- Own scratch removed; no live keychain/storage/credentials/remote effects. Prior
+  history byte prefix retained; Delivery documents and previously pushed main untouched.
+- Next fresh Large/High Local Fix source-review route, then current affected API/new
+  complete candidate and Delivery-owned readiness/actual signed release. Field/user
+  deferral unchanged, not a blocker; both-Mac Accepted/signature/public receipts still
+  required. No TaskDone/Terminal. Evidence: implementation-evidence/ir-005/.

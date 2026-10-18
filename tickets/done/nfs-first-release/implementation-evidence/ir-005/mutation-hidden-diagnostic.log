@@ -1,0 +1,16 @@
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 99, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 74, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=import-certificate exit=5 cleanup=complete' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 2.120s
+
+FAILED (failures=1)

@@ -1,0 +1,14 @@
+{'name': 'python-version', 'command': ['/usr/bin/python3', '--version'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.57}
+{'name': 'bash-version', 'command': ['/bin/bash', '--version'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.01}
+{'name': 'python-all', 'command': ['/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_*.py', '-v'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 107.58}
+{'name': 'bash-syntax', 'command': ['/bin/bash', '-n', 'packaging/sign-macos.sh'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.01}
+{'name': 'shellcheck', 'command': ['/opt/homebrew/bin/shellcheck', 'packaging/sign-macos.sh'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.24}
+{'name': 'actionlint', 'command': ['/opt/homebrew/bin/actionlint', '.github/workflows/release-nfs.yml'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.07}
+{'name': 'source-hash', 'command': ['/usr/bin/python3', 'packaging/release.py', '--source-hash'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.6}
+{'name': 'recipe-hash', 'command': ['/usr/bin/python3', '-c', 'import sys;sys.path.insert(0,"packaging/engine");import source;print(source.recipe_hash())'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.41}
+{'name': 'stale-readiness-refusal', 'command': ['/usr/bin/python3', 'packaging/release.py', '--check-publish'], 'exitCode': 1, 'expected': 1, 'passed': True, 'seconds': 0.58}
+{'name': 'mutation-hidden-diagnostic', 'command': ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety', '-v'], 'exitCode': 1, 'expected': 1, 'passed': True, 'seconds': 2.44}
+{'name': 'mutation-ignore-errexit', 'command': ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety', '-v'], 'exitCode': 1, 'expected': 1, 'passed': True, 'seconds': 4.45}
+{'name': 'mutation-restore-failed-capture', 'command': ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit', '-v'], 'exitCode': 1, 'expected': 1, 'passed': True, 'seconds': 26.09}
+{'name': 'mutation-accept-invalid-notary', 'command': ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_rejected_or_pending_notary_retains_known_receipt_but_fails', '-v'], 'exitCode': 1, 'expected': 1, 'passed': True, 'seconds': 17.07}
+{'name': 'source-hash-before', 'command': ['/usr/bin/python3', 'packaging/release.py', '--source-hash'], 'exitCode': 0, 'expected': 0, 'passed': True, 'seconds': 0.5}

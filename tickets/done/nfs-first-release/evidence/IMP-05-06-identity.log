@@ -1,0 +1,24 @@
+Check: IMP-05-06
+Command/steps: python3 packaging/release.py --source-hash (current and original two production files); source.recipe_hash()
+Commit tested: 75f4dbe5527a7159f536bafcf9448bc2d6a01604 (identical uncommitted source tree at b2c6fdf; committed after checks)
+Environment: Darwin arm64; Bash3.2.57; Python3.9.6; independent private HOME/TMP where stated
+Recorded UTC: 2026-10-18T11:10:49.946492+00:00
+
+--- Raw source-check.json ---
+{
+  "copiedFiles": 127,
+  "copyMatchesWorktree": true,
+  "sourceBefore": "a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e",
+  "sourceAfter": "bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62",
+  "recipeHash": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+  "notes": "Actual current measured-engine lock preserved; old readiness now correctly stale. No new candidate/engine/real signing."
+}
+
+--- Raw source-hash-before.log ---
+a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e
+
+--- Raw source-hash.log ---
+bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62
+
+--- Raw recipe-hash.log ---
+299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274

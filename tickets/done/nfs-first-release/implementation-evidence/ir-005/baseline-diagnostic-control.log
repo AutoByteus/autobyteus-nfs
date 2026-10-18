@@ -1,0 +1,16 @@
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 93, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 65, in run_case
+    self.assertEqual(failure.exists(), stage is not None, result.stdout+result.stderr)
+AssertionError: False != True : 
+
+----------------------------------------------------------------------
+Ran 1 test in 2.644s
+
+FAILED (failures=1)

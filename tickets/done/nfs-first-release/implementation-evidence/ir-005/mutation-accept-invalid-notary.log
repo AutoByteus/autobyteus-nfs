@@ -1,0 +1,35 @@
+test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Rejected')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='In Progress')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 16.665s
+
+FAILED (failures=3)

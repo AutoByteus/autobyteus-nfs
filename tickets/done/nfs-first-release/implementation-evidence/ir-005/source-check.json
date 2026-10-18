@@ -1,0 +1,8 @@
+{
+  "copiedFiles": 127,
+  "copyMatchesWorktree": true,
+  "sourceBefore": "a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e",
+  "sourceAfter": "bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62",
+  "recipeHash": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+  "notes": "Actual current measured-engine lock preserved; old readiness now correctly stale. No new candidate/engine/real signing."
+}

@@ -1,0 +1,95 @@
+Check: IMP-05-08
+Command/steps: Owned-copy unittest SigningTest.test_import_failure_receipt_and_secret_safety (2 variants), test_command_failures_report_exact_stage_and_exit, test_rejected_or_pending_notary_retains_known_receipt_but_fails; each with -v
+Commit tested: 75f4dbe disposable mutated copies only
+Environment: Darwin arm64; Bash3.2.57; Python3.9.6; independent private HOME/TMP where stated
+Recorded UTC: 2026-10-18T11:10:49.946492+00:00
+
+--- Raw mutation-hidden-diagnostic.log ---
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 99, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 74, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=import-certificate exit=5 cleanup=complete' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 2.120s
+
+FAILED (failures=1)
+
+--- Raw mutation-ignore-errexit.log ---
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 99, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 5 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 3.632s
+
+FAILED (failures=1)
+
+--- Raw mutation-restore-failed-capture.log ---
+test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 109, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertNotIn('security:list-keychains:restore', trace)
+AssertionError: 'security:list-keychains:restore' unexpectedly found in ['security:list-keychains', 'security:list-keychains:restore']
+
+----------------------------------------------------------------------
+Ran 1 test in 25.726s
+
+FAILED (failures=1)
+
+--- Raw mutation-accept-invalid-notary.log ---
+test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Rejected')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='In Progress')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 123, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 63, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 0 != 1 : 
+
+----------------------------------------------------------------------
+Ran 1 test in 16.665s
+
+FAILED (failures=3)

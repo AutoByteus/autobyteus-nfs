@@ -1,0 +1,23 @@
+Check: IMP-05-09
+Command/steps: python3 -m unittest scripts.tests.test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety -v
+Commit tested: b2c6fdf production + new corrected regression fixture
+Environment: Darwin arm64; Bash3.2.57; Python3.9.6; independent private HOME/TMP where stated
+Recorded UTC: 2026-10-18T11:10:49.946492+00:00
+
+--- Raw baseline-diagnostic-control.log ---
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 93, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 65, in run_case
+    self.assertEqual(failure.exists(), stage is not None, result.stdout+result.stderr)
+AssertionError: False != True : 
+
+----------------------------------------------------------------------
+Ran 1 test in 2.644s
+
+FAILED (failures=1)
