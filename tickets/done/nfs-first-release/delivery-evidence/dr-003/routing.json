@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-18T09:29:34.722190+00:00",
+  "result": "Blocked",
+  "classification": "Requirement/Design Impact from explicit user release-first direction",
+  "selectedRule": "When delivery discovers a Design Impact, Requirement Gap, or Unclear issue, or final handoff is blocked by a non-deployment issue that requires upstream classification.",
+  "recipient_address": "/software_engineering_team/solution_designer",
+  "singleRecipient": true,
+  "terminalCompleted": false
+}

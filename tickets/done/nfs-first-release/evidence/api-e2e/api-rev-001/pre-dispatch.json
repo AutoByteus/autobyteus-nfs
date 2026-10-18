@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-18T08:24:54.680149+00:00",
+  "ref": {
+    "ref": "refs/heads/codex/nfs-first-release",
+    "node_id": "REF_kwDOVK4ms9oAInJlZnMvaGVhZHMvY29kZXgvbmZzLWZpcnN0LXJlbGVhc2U",
+    "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/heads/codex/nfs-first-release",
+    "object": {
+      "sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+      "type": "commit",
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/518f4b51e251edaa6b5664f71c7171bde57bafc9"
+    }
+  },
+  "workflow_blob": "1a3539cd160d26360b2138b6308e75d4803b3a4d",
+  "workflow_sha256": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944",
+  "runs": {
+    "total_count": 0,
+    "workflow_runs": []
+  },
+  "tags": [],
+  "releases": [],
+  "delivery_prerequisite": "DR001 staged branch only; no main merge or qualification"
+}

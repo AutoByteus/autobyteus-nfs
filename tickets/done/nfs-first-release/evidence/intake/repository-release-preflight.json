@@ -1,0 +1,116 @@
+{
+  "at_utc": "2026-10-18T05:42:22.406821+00:00",
+  "read_only": true,
+  "secret_values_accessed": false,
+  "queries": {
+    "repository": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs",
+        "--jq",
+        "{full_name,default_branch,private,permissions}"
+      ],
+      "exit": 0,
+      "response": {
+        "default_branch": "main",
+        "full_name": "AutoByteus/autobyteus-nfs",
+        "permissions": {
+          "admin": true,
+          "maintain": true,
+          "pull": true,
+          "push": true,
+          "triage": true
+        },
+        "private": false
+      }
+    },
+    "releases": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/releases",
+        "--jq",
+        "[.[]|{tag_name,draft,prerelease,html_url}]"
+      ],
+      "exit": 0,
+      "response": []
+    },
+    "tags": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/tags",
+        "--jq",
+        "[.[].name]"
+      ],
+      "exit": 0,
+      "response": []
+    },
+    "repository_secret_names": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/actions/secrets",
+        "--jq",
+        "{total_count,names:[.secrets[].name]}"
+      ],
+      "exit": 0,
+      "response": {
+        "names": [],
+        "total_count": 0
+      }
+    },
+    "organization_secret_names": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/actions/organization-secrets",
+        "--jq",
+        "{total_count,names:[.secrets[].name]}"
+      ],
+      "exit": 0,
+      "response": {
+        "names": [],
+        "total_count": 0
+      }
+    },
+    "environments": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/environments",
+        "--jq",
+        "[.environments[]|{name,protection_rules}]"
+      ],
+      "exit": 0,
+      "response": []
+    },
+    "release_workflow_runs": {
+      "command": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/actions/workflows/release-nfs.yml/runs",
+        "--jq",
+        "{total_count,runs:[.workflow_runs[]|{id,head_sha,event,status,conclusion}]}"
+      ],
+      "exit": 0,
+      "response": {
+        "runs": [],
+        "total_count": 0
+      }
+    }
+  },
+  "base": "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+  "source_file_sha256": {
+    "RELEASE.md": "ed1ba9ce328adf362557cf60d5b9eae972b45970f6afe114640f807d02aad677",
+    "packaging/RELEASE.md": "2e037473f7f5aa0a7dc01affa6d3dd95f07827a45dc1e135812faac579b02cda",
+    "packaging/release-lock.json": "48e259f0564322432a1f7b790676bc9be35d54bcf481e8abbdcad3d2c53c6395",
+    "packaging/release.py": "9e4a1dc422c01bda9cf3a69f889e0ec1be7fe0213bbfbeae98e5c09006733c38",
+    ".github/workflows/release-nfs.yml": "01bbf62e947c38096c70f07c71ea0d3acfff62098bd4a8c04e7c47bf74d41112",
+    ".github/workflows/ci.yml": "5565f88320a9f83693519817ef038539e7955b2c4ef480890a1b40c38ff45712",
+    "scripts/public/nfs/install.sh": "fe7f1cda14f1c06364119a943ec5794768e0e73d4fe7bd7541362d68e5d9f562",
+    "internal/cli/install.go": "7f7cae4d304223491afaf589c3235e5b5c7d64e9d1eca2ce4590c55cc652633b",
+    "internal/cli/verify-release.go": "6ce90a944825587f82cc8222bc6596dfedb2e1a4392221bbd10f08f4265d8ee1"
+  }
+}

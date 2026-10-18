@@ -2,6 +2,8 @@
 ARG UBUNTU_BASE
 FROM ${UBUNTU_BASE}
 ARG TARGETARCH
+LABEL org.opencontainers.image.source="https://github.com/AutoByteus/autobyteus-nfs"
+LABEL org.opencontainers.image.licenses="AGPL-3.0-only"
 COPY engine-candidate/${TARGETARCH}/ /tmp/autobyteus-engine/
 RUN set -eu; cd /tmp/autobyteus-engine; sha256sum -c SHA256SUMS; \
  for name in nfs-ganesha nfs-ganesha-vfs; do \

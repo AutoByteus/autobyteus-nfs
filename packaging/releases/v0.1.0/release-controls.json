@@ -1,0 +1,25 @@
+{
+  "apiRevision": "API-REV-003",
+  "cases": {
+    "C01": "Owned cleanup/source preservation; candidate intentionally retained",
+    "R01": "45 collected44executed1skip; focused7+12 overlap",
+    "R02": "Static/source/readiness controls; invalid recipe subcommand corrected and preserved",
+    "R04": "Actual envelope/download/engine/OCI/member verification; wrapper/digest/version/null-readiness expected refusals",
+    "R05": "Downloaded Darwinarm64 v0.1.0; candidate/false/legacy admission refusal"
+  },
+  "evidenceGitCommit": "e1addb8e96d3c0d32fb5c28e6e221b0a8d96eaf8",
+  "evidenceGitDirectory": "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003",
+  "limits": "Apple/registry/GitHub publication and positive installer fixture effects doubled; actual signing/public release remains downstream.",
+  "rawEvidenceHashes": {
+    "actual-envelope-refusal.json": "724eba27dd1de502f7102d8cdbed79fb83a79aa54e065d53fbaf42e2c9b5d6de",
+    "candidate-native-version.json": "825a5872e1c15d05d5d8b30ce61bc9f37b293c8c23498efb1680b39e2e0a6720",
+    "candidate-validation-results.json": "423a70bd9708402e527d21c9fb03961764807339bf0f66066db3a9dbdd436e83",
+    "final-checks.json": "f8c48933da49272c60c4d67161af2ce4f8532f51ab70ccb0162e6f6412b7459e",
+    "local-control-results.json": "2b411d923a036e731b73509f6f7b8e16f8b6eb05ab1fdc8f3c0eaee9e91c7c08",
+    "python-all.log": "bc78a95568dcee7859ff5d027f48149b79ae5000410e7207af071adebbc4b5ef",
+    "records-focused.log": "c36375bbd680a67ef16b91b51d8608914b025cf6c6e227dc090a860f3cd93c99",
+    "workflow-current.log": "0687d37a71f796a573f3bc2304926c89ece14e33afe446084baecd0fe26f2025"
+  },
+  "result": "passed",
+  "sourceCommit": "585d416c2746cf2963058d591b0753d0db8088f5"
+}

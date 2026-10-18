@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+    "--operation",
+    "fetch-candidate",
+    "--envelope",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/wrong-envelope-control.json",
+    "--directory",
+    "/Users/normy/nfs-first-candidate-api002-n940gd8s/refused-envelope-destination"
+  ],
+  "exit": 1,
+  "expected": "Retained artifact envelope differs",
+  "destinationAbsent": true,
+  "pass_": true,
+  "scope": "Real GitHub read-only metadata comparison; deliberately wrong copied wrapper digest, unchanged actual candidate/envelope"
+}

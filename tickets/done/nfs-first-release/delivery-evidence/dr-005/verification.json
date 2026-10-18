@@ -1,0 +1,102 @@
+{
+  "acJudgements": {
+    "AC001": "R02-R04 Proven: current complete actual candidate, source/run/engine/OCI/native identity",
+    "AC002": "R01-R05 Proven contract and current checks; actual stable readiness prepared in this round",
+    "AC003": "R01 signing fixtures only; actual signing/notary/download pending D01/D02",
+    "AC004": "R01/R02 controls proven; actual public immutable effects pending D01",
+    "AC005": "R01/R03/R05 admission/version/refusal proven; public signed install pending D02",
+    "AC006": "R01/R04 candidate integrity/provenance proven; published equality pending D01/D02",
+    "AC007": "R01-R05/C01 prepublication/honest deferral proven; release/custody pending",
+    "AC008": "R01/R02/C01 source/API cleanup proven; docs/main/final receipts/cleanup pending"
+  },
+  "all120ProductInputsEqual": true,
+  "apiConfidence": 95,
+  "at": "2026-10-18T10:48:33.976649+00:00",
+  "base": "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+  "baseAlreadyAncestor": true,
+  "candidateReverified": true,
+  "head": "41714c79872dc055e6c09acc744639d981f3fc33",
+  "limits": [
+    "Native individual Go test counts not exposed;7packages per target",
+    "Local45 collected44executed1Go-child skip; focused7+12 overlap",
+    "Apple/GitHub/positive installer fixture effects doubled, not real publication",
+    "Field/filesystem/user testing deferred under R3; no user check required for release",
+    "Initial API recipe subcommand mistake corrected; old failures preserved"
+  ],
+  "liveEnvelopeMatched": true,
+  "rawHostedLogs": [
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117649932129.log",
+      "jobId": 117649932129,
+      "name": "prepare",
+      "sha256": "fb184c4bf4ac56c7a9b43efbe26e940c4cd1c183e6ff0c2786adb987ae42a82c"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117649979053.log",
+      "jobId": 117649979053,
+      "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+      "sha256": "cf69302533a33f23009d6965e63097273a58e031140eeb667196e6629e566bcb"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117649979118.log",
+      "jobId": 117649979118,
+      "name": "engine-packages (ubuntu-24.04, amd64)",
+      "sha256": "344a6ede148ac131badedd15c16f2c46c01870c300dbe20c79541f1e3e84bf2d"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650410850.log",
+      "jobId": 117650410850,
+      "name": "engine-inputs",
+      "sha256": "e05c7e6299c4b91647a5b02a934f742576ff942c1e34b1b20781e595eb4a193f"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650438209.log",
+      "jobId": 117650438209,
+      "name": "engine",
+      "sha256": "afc2b96ffa53016f7427df927112a13b7e090d668fb3028901e1bbb2f1232475"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650827602.log",
+      "jobId": 117650827602,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "sha256": "a3eee859dd2d7b4349036fbd7f517f0f3c95426efb29a1ca5860834bce0b5dc9"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650827631.log",
+      "jobId": 117650827631,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "sha256": "452231a8bf7c913b9e1d2f9ba1c9fcef5ff607d54be80ec52df6131dc86a341c"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650827653.log",
+      "jobId": 117650827653,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "sha256": "6f4f3557ac80d6a68a6a74c36159c2a06d6f8f45beba31e2e141b19905055f23"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117650827778.log",
+      "jobId": 117650827778,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "sha256": "b737a7f60a941dd55360a2d95db9f22d86acd99d3d82a778a8eaf4ee7fab5809"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "file": "hosted-job-117651553221.log",
+      "jobId": 117651553221,
+      "name": "candidate",
+      "sha256": "687b172f89e2f4d051171a1cf2104eea62e6200e8b53cae2b99e83404b17748c"
+    }
+  ],
+  "scope": "Prepublication only",
+  "sourceReview": "CRR005 Pass100",
+  "testReview": "CRR006 Pass"
+}

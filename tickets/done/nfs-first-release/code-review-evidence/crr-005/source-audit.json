@@ -1,0 +1,90 @@
+{
+  "changed_paths": [
+    "packaging/engine/manifest.py",
+    "scripts/tests/nfs_release_fixture.py"
+  ],
+  "other_source_inputs_unchanged": 118,
+  "ast_delta": [
+    {
+      "path": "packaging/engine/manifest.py",
+      "removed_binding": "LOCK",
+      "other_ast_identical": true,
+      "prior_nonempty": 89,
+      "current_nonempty": 89
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "removed_binding": "readiness",
+      "other_ast_identical": true,
+      "prior_nonempty": 118,
+      "current_nonempty": 118
+    }
+  ],
+  "import_scan": [
+    {
+      "path": "packaging/engine/manifest.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/__init__.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/candidate.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/identity.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/payload.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/publication.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "packaging/release_support/readiness.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_engine_packaging.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_installer_fixture.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_packaging.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_publication.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_records.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_workflow.py",
+      "unused_local_bindings": []
+    },
+    {
+      "path": "scripts/tests/test_nfs_source_identity.py",
+      "unused_local_bindings": []
+    }
+  ],
+  "scan_limit": "AST local Name-load audit, not a compiler or public-export proof; direct caller trace separately reviewed."
+}

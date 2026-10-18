@@ -1,0 +1,139 @@
+{
+  "review": "CRR-003",
+  "rows": [
+    {
+      "name": "python-version",
+      "argv": [
+        "/usr/bin/python3",
+        "--version"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.342
+    },
+    {
+      "name": "shell-version",
+      "argv": [
+        "/bin/bash",
+        "--version"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.005
+    },
+    {
+      "name": "current-workflow",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_release_workflow.py",
+        "-v"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 2.403
+    },
+    {
+      "name": "original-workflow-control",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_release_workflow.py",
+        "-v"
+      ],
+      "exit": 1,
+      "expected": 1,
+      "seconds": 1.846
+    },
+    {
+      "name": "python-all",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 23.963
+    },
+    {
+      "name": "actionlint",
+      "argv": [
+        "/opt/homebrew/bin/actionlint",
+        ".github/workflows/ci.yml",
+        ".github/workflows/release-nfs.yml"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.156
+    },
+    {
+      "name": "prefix-syntax",
+      "argv": [
+        "/bin/bash",
+        "-n",
+        "/Users/normy/nfs-release-crr003-we2ki68y/native-prefix.sh"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.007
+    },
+    {
+      "name": "prefix-shellcheck",
+      "argv": [
+        "/opt/homebrew/bin/shellcheck",
+        "-s",
+        "bash",
+        "/Users/normy/nfs-release-crr003-we2ki68y/native-prefix.sh"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.027
+    },
+    {
+      "name": "source-hash",
+      "argv": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.24
+    },
+    {
+      "name": "publish-refusal",
+      "argv": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "exit": 1,
+      "expected": 1,
+      "seconds": 0.226
+    }
+  ],
+  "current_unique_tests": 41,
+  "executed": 40,
+  "standalone_go_child_skips": 1,
+  "focused7_overlap_full41": true,
+  "baseline_is_expected_failure_not_new_product_pass": true,
+  "all_expected": true,
+  "limits": "Local Mac arm64 Bash3.2 invocation and Python/static checks, not hosted/four CPU/metadata/NFS/signing qualification. No Go rerun or mutation rerun; IR002 mutations attributed."
+}

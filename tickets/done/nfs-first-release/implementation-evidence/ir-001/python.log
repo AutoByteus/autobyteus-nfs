@@ -1,0 +1,45 @@
+test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest) ... ok
+test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest) ... ok
+test_engine_bytes_part_of_source_hash_and_stale_qualification_clears (test_nfs_engine_packaging.EnginePackagingTest) ... ok
+test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest) ... ok
+test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest) ... ok
+test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... ok
+test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... skipped 'invoked by Go platform bootstrap regression'
+test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... ok
+test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest) ... ok
+test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest) ... ok
+test_unqualified_release_cannot_publish (test_nfs_packaging.NfsPackagingTest) ... ok
+test_annotated_tag_exact_sha_and_retained_identity (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_identity_and_nonclobber_creation (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... ok
+test_fresh_main_no_stale_write_permission (test_nfs_release_publication.PublicationTest) ... ok
+test_native_asset_conflicts_never_upload_or_clobber (test_nfs_release_publication.PublicationTest) ... ok
+test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_resume_downloads_original_payload_before_build_and_refuses_lost_input (test_nfs_release_publication.PublicationTest) ... ok
+test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest) ... /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/zipfile.py:1505: UserWarning: Duplicate name: 'a'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_complete_candidate_qualification_payload (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_executed_workflow_and_qualified_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_new_executables_invalidate_production_hash_not_qualification (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_qualification_missing_failed_duplicate_inapplicable_and_consent (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest) ... ok
+test_failed_import_sign_verify_submit_and_rejected_notary_clean_up (test_nfs_release_signing.SigningTest) ... ok
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_declared_owned_boundary_and_default_qualification (test_nfs_source_identity.SourceIdentityTest) ... ok
+test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest) ... ok
+test_owned_input_changes_invalidate_qualification (test_nfs_source_identity.SourceIdentityTest) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 16.337s
+
+OK (skipped=1)

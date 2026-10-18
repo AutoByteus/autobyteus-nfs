@@ -1,0 +1,16 @@
+{
+  "exceptions": [
+    {
+      "path": "tickets/in-progress/nfs-first-release/code-review-evidence/crr-005/source.diff",
+      "sha256": "6559412464e278a1f3484ec655f14e314f2ef5128a27a9a14c0090f93b131b3c",
+      "trailing_whitespace_lines": [
+        11,
+        19,
+        25
+      ],
+      "blank_line_at_eof": false,
+      "disposition": "Preserve exact raw output/diff context, not source formatting."
+    }
+  ],
+  "nonraw_violations": []
+}

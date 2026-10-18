@@ -1,0 +1,100 @@
+[
+  {
+    "name": "go-download",
+    "command": [
+      "curl",
+      "-fsSL",
+      "https://go.dev/dl/go1.27.2.darwin-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go1.27.2.darwin-arm64.tar.gz"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 6.717,
+    "passed": true
+  },
+  {
+    "name": "go-extract",
+    "command": [
+      "tar",
+      "-xzf",
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go1.27.2.darwin-arm64.tar.gz",
+      "-C",
+      "/Users/normy/nfs-first-api001-bjhz2hiu"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 2.838,
+    "passed": true
+  },
+  {
+    "name": "go-version",
+    "command": [
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go/bin/go",
+      "version"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.883,
+    "passed": true
+  },
+  {
+    "name": "go-race",
+    "command": [
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go/bin/go",
+      "test",
+      "-race",
+      "-json",
+      "-count=1",
+      "./..."
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 28.115,
+    "passed": true
+  },
+  {
+    "name": "go-vet",
+    "command": [
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go/bin/go",
+      "vet",
+      "./..."
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 5.715,
+    "passed": true
+  },
+  {
+    "name": "go-build",
+    "command": [
+      "/Users/normy/nfs-first-api001-bjhz2hiu/go/bin/go",
+      "build",
+      "-o",
+      "/Users/normy/nfs-first-api001-bjhz2hiu/out/autobyteus-nfs",
+      "./cmd/autobyteus-nfs"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.398,
+    "passed": true
+  },
+  {
+    "name": "native-version",
+    "command": [
+      "/Users/normy/nfs-first-api001-bjhz2hiu/out/autobyteus-nfs",
+      "version"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.928,
+    "passed": true
+  }
+]

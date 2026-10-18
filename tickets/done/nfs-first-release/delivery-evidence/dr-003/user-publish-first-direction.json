@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-18T09:28:58.050378+00:00",
+  "taskId": "project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5",
+  "source": "Direct user messages in Delivery conversation, after explanation of successful candidate and missing physical test hosts",
+  "verbatimMessages": [
+    {
+      "order": 1,
+      "text": "please publish first, then we could test. and if we found problem, then we fix"
+    },
+    {
+      "order": 2,
+      "text": "create one official signed release first. please"
+    }
+  ],
+  "approvedDirection": "Official signed normal first v0.1.0 publication before real-world shared-filesystem/physical/user testing; test afterwards and fix forward. Do not re-request this release sequencing decision.",
+  "interpretationBoundaries": [
+    "Do not fabricate physical/user verification or relabel API002 Blocked as Pass. Record deferred real-world testing explicitly.",
+    "Normal non-prerelease v0.1.0 and four build targets remain from established scope; no requested beta or target omission.",
+    "Official signed release explicitly requested; existing Developer ID/Accepted notarization, exact identity/checksum/source/engine/OCI and safe immutable publication protections are not waived.",
+    "No permission for live-user NFS mount/export/firewall/data mutation, secret disclosure/reprovisioning, unsigned fallback or unrelated project changes.",
+    "Solution Designer owns authoritative requirements/design recovery and routing of necessary implementation changes. Delivery has not bypassed current executable qualification enforcement."
+  ],
+  "affectedPriorAuthorities": [
+    "requirements-doc.md R2/SR002 REQ003 AC002 / retained physical and executed-user prerequisite",
+    "design-spec.md SR003 BEH002/DS2, qualification-before-publication",
+    "RELEASE.md and packaging/RELEASE.md current qualification gate",
+    "packaging/release_support/qualification.py and publication preflight plus affected lock/runtime/installer admission contracts to be investigated by design owner"
+  ],
+  "classification": "Requirement/Design Impact: explicit user-approved sequence change; not a new source defect or missing release authorization"
+}

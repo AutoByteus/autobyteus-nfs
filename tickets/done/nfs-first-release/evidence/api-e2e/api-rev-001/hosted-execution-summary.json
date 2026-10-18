@@ -1,0 +1,112 @@
+[
+  {
+    "jobId": 117627972056,
+    "name": "prepare",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [
+      "2026-10-18T08:25:08.4681596Z Ran 38 tests in 4.574s",
+      "2026-10-18T08:25:08.4681773Z OK (skipped=1)"
+    ],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628015203,
+    "name": "engine-packages (ubuntu-24.04, amd64)",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628015271,
+    "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628452768,
+    "name": "engine-inputs",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628492072,
+    "name": "engine",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628928559,
+    "name": "binaries (macos-15, darwin, arm64)",
+    "result": "failure",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [
+      "2026-10-18T08:30:21.3071090Z /Users/runner/work/_temp/7a865f2f-de17-430c-91d9-226a86bf188f.sh: line 5: args[@]: unbound variable"
+    ],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628928560,
+    "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T08:30:24.1815290Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.148s",
+      "2026-10-18T08:30:24.3962408Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.019s",
+      "2026-10-18T08:30:24.4087271Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.030s",
+      "2026-10-18T08:30:24.4087791Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.017s",
+      "2026-10-18T08:30:27.3900346Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.207s",
+      "2026-10-18T08:30:27.3900880Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+      "2026-10-18T08:30:27.3901337Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.109s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T08:30:42.5650843Z Ran 38 tests in 5.691s",
+      "2026-10-18T08:30:42.5651141Z OK (skipped=1)"
+    ],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628928622,
+    "name": "binaries (ubuntu-24.04, linux, amd64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T08:30:22.1871915Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.058s",
+      "2026-10-18T08:30:22.5754402Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.021s",
+      "2026-10-18T08:30:22.5842454Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.030s",
+      "2026-10-18T08:30:22.5842935Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.014s",
+      "2026-10-18T08:30:25.3555419Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.166s",
+      "2026-10-18T08:30:25.3555912Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.010s",
+      "2026-10-18T08:30:25.3556326Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.092s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T08:30:39.7917803Z Ran 38 tests in 5.116s",
+      "2026-10-18T08:30:39.7918065Z OK (skipped=1)"
+    ],
+    "failedExpansion": [],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  },
+  {
+    "jobId": 117628928627,
+    "name": "binaries (macos-15-intel, darwin, amd64)",
+    "result": "failure",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "failedExpansion": [
+      "2026-10-18T08:31:19.1582650Z /Users/runner/work/_temp/5d4a06bb-1abf-406b-b5a6-c74c2a730737.sh: line 5: args[@]: unbound variable"
+    ],
+    "claimLimit": "Mac failed before metadata/Go; Linux completed native pipeline; none is filesystem qualification"
+  }
+]

@@ -1,0 +1,10 @@
+$ /usr/bin/python3 -m unittest discover -s scripts/tests -p test_nfs_release_signing.py -v
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source
+test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest) ... ok
+test_failed_import_sign_verify_submit_and_rejected_notary_clean_up (test_nfs_release_signing.SigningTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.111s
+
+OK

@@ -1,0 +1,117 @@
+[
+  {
+    "case": "R02",
+    "name": "bash-version",
+    "command": [
+      "/bin/bash",
+      "--version"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "python-version",
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R03-F001",
+    "name": "workflow-current",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "scripts/tests/test_nfs_release_workflow.py",
+      "-v"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R01",
+    "name": "python-all",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "actionlint",
+    "command": [
+      "/opt/homebrew/bin/actionlint",
+      ".github/workflows/ci.yml",
+      ".github/workflows/release-nfs.yml"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "prefix-syntax",
+    "command": [
+      "/bin/bash",
+      "-n",
+      "/Users/normy/nfs-first-api002-_6zv884g/native-prefix.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "prefix-shellcheck",
+    "command": [
+      "/opt/homebrew/bin/shellcheck",
+      "-s",
+      "bash",
+      "/Users/normy/nfs-first-api002-_6zv884g/native-prefix.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "source-hash",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "case": "R02",
+    "name": "publish-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass": true
+  }
+]

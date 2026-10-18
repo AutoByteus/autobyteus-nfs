@@ -1,0 +1,16 @@
+{
+  "changed_inputs": [
+    ".github/workflows/release-nfs.yml",
+    "TESTING.md",
+    "scripts/tests/test_nfs_release_workflow.py"
+  ],
+  "other_inputs_unchanged": 116,
+  "test_unused_imports": [],
+  "workflow_nonempty_before": 358,
+  "workflow_nonempty_after": 359,
+  "workflow_diff_physical_lines": {
+    "added": 3,
+    "deleted": 2
+  },
+  "scope": "Standalone NFS repo only; no other project source changed by this review; no runtime/engine/qualification/signing/publication delta"
+}

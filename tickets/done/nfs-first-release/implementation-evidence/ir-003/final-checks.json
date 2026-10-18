@@ -1,0 +1,393 @@
+{
+  "result": "Implementation complete; local checks passed, independent review pending",
+  "sourceCommit": "3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3",
+  "basis": "R3/SR004 Approved; SR004 Ready; ARCH-REV-002 Pass",
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High"
+  },
+  "sourceHashNullEngineReadiness": "d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac",
+  "sourceInputsMatch": 120,
+  "protectedDeliveryFilesMatch": 16,
+  "priorIRPrefixPreserved": true,
+  "localResults": {
+    "mac": [
+      {
+        "name": "python",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_nfs_*.py",
+          "-v"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 21.69,
+        "passed": true
+      },
+      {
+        "name": "actionlint",
+        "command": [
+          "/opt/homebrew/bin/actionlint",
+          ".github/workflows/ci.yml",
+          ".github/workflows/release-nfs.yml"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.17,
+        "passed": true
+      },
+      {
+        "name": "bash-syntax",
+        "command": [
+          "/bin/bash",
+          "-n",
+          "packaging/sign-macos.sh",
+          "scripts/public/nfs/install.sh"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.01,
+        "passed": true
+      },
+      {
+        "name": "shellcheck",
+        "command": [
+          "/opt/homebrew/bin/shellcheck",
+          "packaging/sign-macos.sh",
+          "scripts/public/nfs/install.sh"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.11,
+        "passed": true
+      },
+      {
+        "name": "source-hash",
+        "command": [
+          "/usr/bin/python3",
+          "packaging/release.py",
+          "--source-hash"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.24,
+        "passed": true
+      },
+      {
+        "name": "publish-refusal",
+        "command": [
+          "/usr/bin/python3",
+          "packaging/release.py",
+          "--check-publish"
+        ],
+        "exitCode": 1,
+        "expected": 1,
+        "seconds": 0.28,
+        "passed": true
+      },
+      {
+        "name": "go-race",
+        "command": [
+          "go",
+          "test",
+          "-race",
+          "./..."
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 22.01,
+        "passed": true
+      },
+      {
+        "name": "go-vet",
+        "command": [
+          "go",
+          "vet",
+          "./..."
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 9.83,
+        "passed": true
+      },
+      {
+        "name": "go-native-build",
+        "command": [
+          "go",
+          "build",
+          "-o",
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/autobyteus-nfs",
+          "./cmd/autobyteus-nfs"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.67,
+        "passed": true
+      },
+      {
+        "name": "native-version",
+        "command": [
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/autobyteus-nfs",
+          "version"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 0.53,
+        "passed": true
+      },
+      {
+        "name": "compile-darwin-arm64",
+        "command": [
+          "go",
+          "build",
+          "-trimpath",
+          "-o",
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/nfs-darwin-arm64",
+          "./cmd/autobyteus-nfs"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 12.19,
+        "passed": true
+      },
+      {
+        "name": "compile-darwin-amd64",
+        "command": [
+          "go",
+          "build",
+          "-trimpath",
+          "-o",
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/nfs-darwin-amd64",
+          "./cmd/autobyteus-nfs"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 11.97,
+        "passed": true
+      },
+      {
+        "name": "compile-linux-arm64",
+        "command": [
+          "go",
+          "build",
+          "-trimpath",
+          "-o",
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/nfs-linux-arm64",
+          "./cmd/autobyteus-nfs"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 13.98,
+        "passed": true
+      },
+      {
+        "name": "compile-linux-amd64",
+        "command": [
+          "go",
+          "build",
+          "-trimpath",
+          "-o",
+          "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/out/nfs-linux-amd64",
+          "./cmd/autobyteus-nfs"
+        ],
+        "exitCode": 0,
+        "expected": 0,
+        "seconds": 8.37,
+        "passed": true
+      }
+    ],
+    "current": [
+      {
+        "name": "python-current",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_nfs_*.py",
+          "-v"
+        ],
+        "exitCode": 0
+      },
+      {
+        "name": "source-hash-current",
+        "command": [
+          "/usr/bin/python3",
+          "packaging/release.py",
+          "--source-hash"
+        ],
+        "exitCode": 0
+      }
+    ],
+    "linux": {
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 55.8,
+      "container": "nfs-release-ir003-458546cf0a",
+      "scope": "native Linux arm64 Go/Python local checks, NOT mounted/physical/hosted qualification"
+    },
+    "mutations": [
+      {
+        "name": "authorization",
+        "file": "packaging/release_support/readiness.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_release_records.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "source-applicability",
+        "file": "packaging/release_support/readiness.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_release_records.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "field-claim",
+        "file": "packaging/release_support/readiness.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_release_records.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "notes-disclosure",
+        "file": "packaging/release_support/payload.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_release_records.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "provenance-disclosure",
+        "file": "packaging/release_support/payload.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_release_records.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "engine-reset",
+        "file": "packaging/engine/manifest.py",
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v",
+          "-p",
+          "test_nfs_engine_packaging.py"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "legacy-claim",
+        "file": "internal/cli/verify-release.go",
+        "command": [
+          "go",
+          "test",
+          "./internal/cli",
+          "-run",
+          "TestReleaseAdmissionCurrentSchemaAndClaims",
+          "-v"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      },
+      {
+        "name": "false-runtime-claim",
+        "file": "internal/cli/verify-release.go",
+        "command": [
+          "go",
+          "test",
+          "./internal/cli",
+          "-run",
+          "TestReleaseAdmissionCurrentSchemaAndClaims",
+          "-v"
+        ],
+        "exitCode": 1,
+        "detectedAssertion": true
+      }
+    ]
+  },
+  "whitespaceExceptions": [
+    "tickets/in-progress/nfs-first-release/implementation-evidence/ir-003/initial-linux/linux-checks.log",
+    "tickets/in-progress/nfs-first-release/implementation-evidence/ir-003/linux-checks.log"
+  ],
+  "cleanup": {
+    "result": "Complete",
+    "ownedScratch": "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d",
+    "scratchAbsent": true,
+    "ownedContainersAbsent": [
+      "nfs-release-ir003-458546cf0a",
+      "nfs-release-ir003-871047ad94"
+    ],
+    "protectedDeliveryFiles": 16,
+    "protectedDeliveryHashesMatch": true,
+    "priorIRBytePrefixPreserved": true,
+    "api002Candidate": "untouched; no read/write/cleanup of retained directory",
+    "liveResourcesOrRemoteEffects": "none"
+  },
+  "remoteWrites": false,
+  "actualReadinessPopulated": false,
+  "API002CandidateChanged": false,
+  "releaseOrFieldQualificationClaim": false
+}

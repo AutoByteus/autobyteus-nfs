@@ -1,0 +1,38 @@
+[
+  {
+    "name": "user-consent",
+    "test": "test_nfs_release_records.py",
+    "exitCode": 1,
+    "detected": true
+  },
+  {
+    "name": "oci-blob-hash",
+    "test": "test_nfs_release_records.py",
+    "exitCode": 1,
+    "detected": true
+  },
+  {
+    "name": "workflow-identity",
+    "test": "test_nfs_release_records.py",
+    "exitCode": 1,
+    "detected": true
+  },
+  {
+    "name": "image-preserve",
+    "test": "test_nfs_release_publication.py",
+    "exitCode": 1,
+    "detected": true
+  },
+  {
+    "name": "fresh-main",
+    "test": "test_nfs_release_publication.py",
+    "exitCode": 1,
+    "detected": true
+  },
+  {
+    "name": "notary-accepted",
+    "test": "test_nfs_release_signing.py",
+    "exitCode": 1,
+    "detected": true
+  }
+]

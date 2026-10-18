@@ -1,0 +1,8 @@
+[
+  {
+    "attempt": 1,
+    "correction": "Check literal tar -czf command and live successful job results.",
+    "detail": "Expected UI step title Package four regular members in raw job log. Actual raw log contains tar -czf command instead. All log hashes and native result lines matched; no source defect or missing packaging execution.",
+    "result": "Harness assertion failed before any readiness/lock write"
+  }
+]

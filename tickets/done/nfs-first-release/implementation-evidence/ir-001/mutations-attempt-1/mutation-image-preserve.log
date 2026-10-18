@@ -1,0 +1,20 @@
+test_annotated_tag_exact_sha_and_retained_identity (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_identity_and_nonclobber_creation (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... FAIL
+test_fresh_main_no_stale_write_permission (test_nfs_release_publication.PublicationTest) ... ok
+test_native_asset_conflicts_never_upload_or_clobber (test_nfs_release_publication.PublicationTest) ... ok
+test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_resume_downloads_original_payload_before_build_and_refuses_lost_input (test_nfs_release_publication.PublicationTest) ... ok
+
+======================================================================
+FAIL: test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/mutation-source/scripts/tests/test_nfs_release_publication.py", line 89, in test_exact_oci_copy_and_anonymous_all_children
+    for args in calls:self.assertIn('--all',args);self.assertIn('--preserve-digests',args)
+AssertionError: '--preserve-digests' not found in ('skopeo', 'copy', '--all', 'oci-archive:/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/tmp/nfs-publish-fixture-7aj4hx9b/candidate/engine.oci.tar', 'docker://ghcr.io/autobyteus/autobyteus-nfs:v0.1.0')
+
+----------------------------------------------------------------------
+Ran 7 tests in 6.072s
+
+FAILED (failures=1)

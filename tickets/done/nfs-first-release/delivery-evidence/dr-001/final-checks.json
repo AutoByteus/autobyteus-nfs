@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-18T08:24:23.774193+00:00",
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--exit-code"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": "?? tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n?? tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n?? tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/delivery-evidence/\n?? tickets/in-progress/nfs-first-release/delivery-revision-record.md\n?? tickets/in-progress/nfs-first-release/docs-sync-report.md\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/\n?? tickets/in-progress/nfs-first-release/handoff-summary.md\n?? tickets/in-progress/nfs-first-release/release-deployment-report.md\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "518f4b51e251edaa6b5664f71c7171bde57bafc9\n",
+      "stderr": ""
+    }
+  ],
+  "note": "Only Delivery records authored. Additional API execution report appeared during concurrent API activity; never staged/restored/modified. No Delivery commit; no cleanup of active ticket."
+}

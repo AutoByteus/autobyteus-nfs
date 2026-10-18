@@ -1,0 +1,6 @@
+$ bash -c for t in gh python3 go actionlint shellcheck docker tart limactl virsh; do command -v "$t" || true; done
+/opt/homebrew/bin/gh
+/usr/bin/python3
+/opt/homebrew/bin/actionlint
+/opt/homebrew/bin/shellcheck
+/usr/local/bin/docker

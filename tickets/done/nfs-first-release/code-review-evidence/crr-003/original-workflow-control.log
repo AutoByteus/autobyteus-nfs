@@ -1,0 +1,54 @@
+test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) ... test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest) ... test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='darwin-arm64', mode='candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-release-crr003-we2ki68y/source/scripts/tests/test_nfs_release_workflow.py", line 209, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /bin/bash: line 11: args[@]: unbound variable
+
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='darwin-amd64', mode='candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-release-crr003-we2ki68y/source/scripts/tests/test_nfs_release_workflow.py", line 209, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /bin/bash: line 11: args[@]: unbound variable
+
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='linux-arm64', mode='candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-release-crr003-we2ki68y/source/scripts/tests/test_nfs_release_workflow.py", line 209, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /bin/bash: line 11: args[@]: unbound variable
+
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='linux-amd64', mode='candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-release-crr003-we2ki68y/source/scripts/tests/test_nfs_release_workflow.py", line 209, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /bin/bash: line 11: args[@]: unbound variable
+
+
+======================================================================
+FAIL: test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest) (mode='candidate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-release-crr003-we2ki68y/source/scripts/tests/test_nfs_release_workflow.py", line 224, in test_metadata_failure_stops_step
+    self.assertIsNotNone(args)
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.652s
+
+FAILED (failures=5)

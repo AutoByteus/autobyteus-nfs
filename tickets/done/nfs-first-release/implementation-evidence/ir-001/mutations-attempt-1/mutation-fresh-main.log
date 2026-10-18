@@ -1,0 +1,33 @@
+test_annotated_tag_exact_sha_and_retained_identity (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_identity_and_nonclobber_creation (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... ok
+test_fresh_main_no_stale_write_permission (test_nfs_release_publication.PublicationTest) ... ok
+test_native_asset_conflicts_never_upload_or_clobber (test_nfs_release_publication.PublicationTest) ... ok
+test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest) ... FAIL
+test_resume_downloads_original_payload_before_build_and_refuses_lost_input (test_nfs_release_publication.PublicationTest) ... ok
+
+======================================================================
+FAIL: test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/mutation-source/scripts/tests/test_nfs_release_publication.py", line 123, in test_publisher_stage_order_failed_promotion_and_same_payload_retry
+    self.assertEqual(events,['fresh-main','tag-object','tag-ref','draft','assets'])
+AssertionError: Lists differ: ['tag-object', 'tag-ref', 'draft', 'assets'] != ['fresh-main', 'tag-object', 'tag-ref', 'draft', 'assets']
+
+First differing element 0:
+'tag-object'
+'fresh-main'
+
+Second list contains 1 additional elements.
+First extra element 4:
+'assets'
+
+- ['tag-object', 'tag-ref', 'draft', 'assets']
++ ['fresh-main', 'tag-object', 'tag-ref', 'draft', 'assets']
+?  ++++++++++++++
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.781s
+
+FAILED (failures=1)

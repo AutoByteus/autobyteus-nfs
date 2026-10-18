@@ -1,0 +1,6 @@
+{
+  "container": "nfs-release-ir003-871047ad94",
+  "base": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+  "mount": "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d",
+  "scope": "Ubuntu24.04 arm64 native unit/packaging only, no field testing"
+}

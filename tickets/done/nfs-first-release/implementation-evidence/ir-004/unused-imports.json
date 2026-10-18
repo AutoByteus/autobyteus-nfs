@@ -1,0 +1,34 @@
+{
+  "scope": [
+    "packaging/engine/manifest.py",
+    "packaging/release.py",
+    "packaging/release_support/__init__.py",
+    "packaging/release_support/candidate.py",
+    "packaging/release_support/identity.py",
+    "packaging/release_support/payload.py",
+    "packaging/release_support/publication.py",
+    "packaging/release_support/readiness.py",
+    "scripts/tests/nfs_release_fixture.py",
+    "scripts/tests/test_nfs_engine_packaging.py",
+    "scripts/tests/test_nfs_installer_fixture.py",
+    "scripts/tests/test_nfs_packaging.py",
+    "scripts/tests/test_nfs_release_publication.py",
+    "scripts/tests/test_nfs_release_records.py",
+    "scripts/tests/test_nfs_release_workflow.py",
+    "scripts/tests/test_nfs_source_identity.py"
+  ],
+  "method": "AST import binding vs local Load names across every extant IR003 changed Python source/test; direct reference inspection corroborates removal",
+  "before": [
+    {
+      "path": "packaging/engine/manifest.py",
+      "line": 8,
+      "binding": "LOCK"
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "line": 13,
+      "binding": "readiness"
+    }
+  ],
+  "after": []
+}

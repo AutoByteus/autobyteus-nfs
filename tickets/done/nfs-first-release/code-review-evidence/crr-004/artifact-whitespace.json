@@ -1,0 +1,27 @@
+{
+  "exceptions": [
+    {
+      "file": "tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log",
+      "lines": [
+        366,
+        369,
+        383,
+        384
+      ],
+      "sha256": "0b1ef5f43af89e35f2f13cc3ec417cdc156ad59684ad11a1f87926eadf9ae9da",
+      "reason": "Raw Go diagnostic whitespace preserved verbatim; not source/code whitespace."
+    },
+    {
+      "file": "tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/staged-whitespace.log",
+      "lines": [
+        42,
+        44,
+        46,
+        48
+      ],
+      "sha256": "a3889bc67f202333d0208b640dfe00d9d53754ac810b2d84eb343ac50f5ce6ca",
+      "reason": "Raw git whitespace diagnostic quotes the four preserved Go output lines; not authored source whitespace."
+    }
+  ],
+  "nonraw_clean": true
+}

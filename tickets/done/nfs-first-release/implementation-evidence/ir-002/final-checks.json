@@ -1,0 +1,49 @@
+{
+  "result": "Local checks pass; targeted source review required",
+  "inputSourceCount": 119,
+  "exactIndependentCopy": true,
+  "changedInputs": [
+    ".github/workflows/release-nfs.yml",
+    "TESTING.md",
+    "scripts/tests/test_nfs_release_workflow.py"
+  ],
+  "otherSourcesUnchanged": 116,
+  "unusedImports": [],
+  "workflowNonemptyLines": 359,
+  "preservedDeliveryUntracked": {
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/final-checks.json": {
+      "sha256": "4d03671a0c1d8e69f8fb8b0a2fecb8de8644901fea34737e3c56024c596f4d82",
+      "size": 1516
+    },
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/post-staging-observation.json": {
+      "sha256": "984b91577532b3d5e409dee7a42f3c9b75b14acca80c1d2e29e4cfe9545b3b1b",
+      "size": 1333
+    },
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/routing.json": {
+      "sha256": "7461989d741e11255f24804be09f8648f139b9509f8d6bf4f89181e89cd8daa8",
+      "size": 789
+    },
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/staged-source-receipt.json": {
+      "sha256": "832f48366e4839588a26ab131ccfe5a14922b538c75a79af8e8ae95d0a19bba1",
+      "size": 133582
+    },
+    "tickets/in-progress/nfs-first-release/delivery-revision-record.md": {
+      "sha256": "c68101dd24350bbd3c6b0bad0d81c11a643c9d42761b1b648cb381f272f6118d",
+      "size": 3348
+    },
+    "tickets/in-progress/nfs-first-release/docs-sync-report.md": {
+      "sha256": "9f6469a2675b755ea6ae9a21f3f4c3cc8e2f683ffec4bf58bc67f6664ab99dac",
+      "size": 2062
+    },
+    "tickets/in-progress/nfs-first-release/handoff-summary.md": {
+      "sha256": "5de7d55a708bcd230be1cdf7b7f2c4c7967ac3074688aa78d2512511e4deb919",
+      "size": 3069
+    },
+    "tickets/in-progress/nfs-first-release/release-deployment-report.md": {
+      "sha256": "8a470e30fcf754f44bbc79704685dcf8fa07c4bc1350a074b91f87594554c142",
+      "size": 5171
+    }
+  },
+  "defaultQualification": "unchanged/empty",
+  "hostedCandidate": "NOT rerun; new source hash requires NEW API-owned candidate"
+}

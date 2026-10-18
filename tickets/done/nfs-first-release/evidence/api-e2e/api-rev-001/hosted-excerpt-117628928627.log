@@ -1,0 +1,3 @@
+2026-10-18T08:31:18.6314760Z   TAG: v0.1.0
+2026-10-18T08:31:19.1582650Z /Users/runner/work/_temp/5d4a06bb-1abf-406b-b5a6-c74c2a730737.sh: line 5: args[@]: unbound variable
+2026-10-18T08:31:19.1604430Z ##[error]Process completed with exit code 1.

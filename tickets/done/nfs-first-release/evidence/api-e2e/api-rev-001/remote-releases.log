@@ -1,0 +1,2 @@
+$ gh api repos/AutoByteus/autobyteus-nfs/releases?per_page=30
+[]

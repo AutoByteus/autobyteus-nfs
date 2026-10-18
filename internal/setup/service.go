@@ -27,13 +27,19 @@ type Plan struct {
 	NewSource    bool
 	Summary      []string
 }
+type FieldValidation struct {
+	Filesystem string `json:"filesystem"`
+	User       string `json:"user"`
+}
 type Release struct {
-	Engine           *backend.EngineManifest `json:"engine,omitempty"`
-	SourceHash       string                  `json:"sourceHash"`
-	QualifiedTargets []string                `json:"qualifiedTargets"`
-	Version          string                  `json:"version"`
-	Packages         map[string]string       `json:"ubuntuPackages"`
-	EngineImage      string                  `json:"engineImage"`
+	Schema          int                     `json:"schema"`
+	FieldValidation FieldValidation         `json:"fieldValidation"`
+	Engine          *backend.EngineManifest `json:"engine,omitempty"`
+	SourceHash      string                  `json:"sourceHash"`
+	ReleaseTargets  []string                `json:"releaseTargets"`
+	Version         string                  `json:"version"`
+	Packages        map[string]string       `json:"ubuntuPackages"`
+	EngineImage     string                  `json:"engineImage"`
 }
 type Service struct {
 	Lock    *os.File

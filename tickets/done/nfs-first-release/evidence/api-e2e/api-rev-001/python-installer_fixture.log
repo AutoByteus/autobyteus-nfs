@@ -1,0 +1,10 @@
+$ /usr/bin/python3 -m unittest discover -s scripts/tests -p test_nfs_installer_fixture.py -v
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source
+test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... ok
+test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... skipped 'invoked by Go platform bootstrap regression'
+test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.922s
+
+OK (skipped=1)

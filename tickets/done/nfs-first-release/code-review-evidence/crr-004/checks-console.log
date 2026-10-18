@@ -1,0 +1,13 @@
+{"name": "go-version", "argv": ["go", "version"], "exit": 0, "expected": 0, "seconds": 0.306}
+{"name": "shell-version", "argv": ["/bin/bash", "--version"], "exit": 0, "expected": 0, "seconds": 0.006}
+{"name": "python-version", "argv": ["/usr/bin/python3", "--version"], "exit": 0, "expected": 0, "seconds": 0.388}
+{"name": "python-all", "argv": ["/usr/bin/python3", "-m", "unittest", "discover", "-s", "scripts/tests", "-p", "test_nfs_*.py", "-v"], "exit": 0, "expected": 0, "seconds": 25.156}
+{"name": "go-race", "argv": ["go", "test", "-race", "-v", "./..."], "exit": 0, "expected": 0, "seconds": 20.256}
+{"name": "go-vet", "argv": ["go", "vet", "./..."], "exit": 0, "expected": 0, "seconds": 7.414}
+{"name": "native-build", "argv": ["go", "build", "-o", "/Users/normy/nfs-release-crr004-zs16acdg/out/autobyteus-nfs", "./cmd/autobyteus-nfs"], "exit": 0, "expected": 0, "seconds": 0.452}
+{"name": "native-version", "argv": ["/Users/normy/nfs-release-crr004-zs16acdg/out/autobyteus-nfs", "version"], "exit": 0, "expected": 0, "seconds": 0.458}
+{"name": "actionlint", "argv": ["/opt/homebrew/bin/actionlint", ".github/workflows/ci.yml", ".github/workflows/release-nfs.yml"], "exit": 0, "expected": 0, "seconds": 0.185}
+{"name": "shell-syntax", "argv": ["/bin/bash", "-n", "packaging/sign-macos.sh", "scripts/public/nfs/install.sh"], "exit": 0, "expected": 0, "seconds": 0.011}
+{"name": "shellcheck", "argv": ["/opt/homebrew/bin/shellcheck", "packaging/sign-macos.sh", "scripts/public/nfs/install.sh"], "exit": 0, "expected": 0, "seconds": 0.134}
+{"name": "source-hash", "argv": ["/usr/bin/python3", "packaging/release.py", "--source-hash"], "exit": 0, "expected": 0, "seconds": 0.292}
+{"name": "readiness-refusal", "argv": ["/usr/bin/python3", "packaging/release.py", "--check-publish"], "exit": 1, "expected": 1, "seconds": 0.29}

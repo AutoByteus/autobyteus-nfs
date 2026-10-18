@@ -5,7 +5,7 @@ import json
 import re
 import shutil
 from pathlib import Path
-from source import LOCK, VERSION, NAMES, identity, source_identity
+from source import VERSION, NAMES, identity, source_identity
 
 DIGEST = re.compile(r'[a-f0-9]{64}')
 LIMIT = 40*1024*1024
@@ -92,6 +92,9 @@ if __name__=='__main__':
         manifest=validate(json.loads((a.directory/'engine-manifest.json').read_text()),require_both=True)
         for arch,bundle in manifest['architectures'].items():verify_files(bundle,a.directory/arch)
         if a.operation=='lock':
-            lock=json.loads(a.release_lock.read_text());lock['engine']=manifest
-            lock.update(qualifiedTargets=[],qualifiedSourceHash='',physicalEvidence=[],userVerified=False)
+            lock=json.loads(a.release_lock.read_text())
+            if set(lock) != {'ubuntuBaseImage','ubuntuPackages','engine','releaseReadiness','note'}:
+                raise ValueError('Unexpected release lock fields')
+            lock['engine']=manifest
+            lock['releaseReadiness']=None
             a.release_lock.write_text(json.dumps(lock,indent=2)+'\n')

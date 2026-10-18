@@ -1,0 +1,1470 @@
+{
+  "utc": "2026-10-18T08:31:34.553157+00:00",
+  "run": {
+    "id": 39111348848,
+    "name": "AutoByteus NFS Release",
+    "node_id": "WFR_kwLOVK4ms88AAAAJGzfScA",
+    "head_branch": "codex/nfs-first-release",
+    "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "path": ".github/workflows/release-nfs.yml",
+    "display_title": "AutoByteus NFS Release",
+    "run_number": 1,
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "failure",
+    "workflow_id": 388178899,
+    "check_suite_id": 105989035179,
+    "check_suite_node_id": "CS_kwDOVK4ms88AAAAYrXBUqw",
+    "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+    "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+    "pull_requests": [],
+    "created_at": "2026-10-18T08:24:57Z",
+    "updated_at": "2026-10-18T08:31:25Z",
+    "actor": {
+      "login": "ryan-zheng-teki",
+      "id": 5105956,
+      "node_id": "MDQ6VXNlcjUxMDU5NTY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5105956?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ryan-zheng-teki",
+      "html_url": "https://github.com/ryan-zheng-teki",
+      "followers_url": "https://api.github.com/users/ryan-zheng-teki/followers",
+      "following_url": "https://api.github.com/users/ryan-zheng-teki/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ryan-zheng-teki/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ryan-zheng-teki/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ryan-zheng-teki/subscriptions",
+      "organizations_url": "https://api.github.com/users/ryan-zheng-teki/orgs",
+      "repos_url": "https://api.github.com/users/ryan-zheng-teki/repos",
+      "events_url": "https://api.github.com/users/ryan-zheng-teki/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ryan-zheng-teki/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-18T08:24:57Z",
+    "triggering_actor": {
+      "login": "ryan-zheng-teki",
+      "id": 5105956,
+      "node_id": "MDQ6VXNlcjUxMDU5NTY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5105956?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ryan-zheng-teki",
+      "html_url": "https://github.com/ryan-zheng-teki",
+      "followers_url": "https://api.github.com/users/ryan-zheng-teki/followers",
+      "following_url": "https://api.github.com/users/ryan-zheng-teki/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ryan-zheng-teki/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ryan-zheng-teki/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ryan-zheng-teki/subscriptions",
+      "organizations_url": "https://api.github.com/users/ryan-zheng-teki/orgs",
+      "repos_url": "https://api.github.com/users/ryan-zheng-teki/repos",
+      "events_url": "https://api.github.com/users/ryan-zheng-teki/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ryan-zheng-teki/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848/jobs",
+    "logs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848/logs",
+    "check_suite_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-suites/105989035179",
+    "artifacts_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848/artifacts",
+    "cancel_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848/cancel",
+    "rerun_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/workflows/388178899",
+    "head_commit": {
+      "id": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+      "tree_id": "2faf7f468f97ae5c89b247f0e126e278c361b99a",
+      "message": "review(nfs-release): retain CRR-001 API handoff receipt",
+      "timestamp": "2026-10-18T08:17:48Z",
+      "author": {
+        "name": "normy",
+        "email": "normy@macbookpro.speedport.ip"
+      },
+      "committer": {
+        "name": "normy",
+        "email": "normy@macbookpro.speedport.ip"
+      }
+    },
+    "repository": {
+      "id": 1420699315,
+      "node_id": "R_kgDOVK4msw",
+      "name": "autobyteus-nfs",
+      "full_name": "AutoByteus/autobyteus-nfs",
+      "private": false,
+      "owner": {
+        "login": "AutoByteus",
+        "id": 132748500,
+        "node_id": "O_kgDOB-mU1A",
+        "avatar_url": "https://avatars.githubusercontent.com/u/132748500?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/AutoByteus",
+        "html_url": "https://github.com/AutoByteus",
+        "followers_url": "https://api.github.com/users/AutoByteus/followers",
+        "following_url": "https://api.github.com/users/AutoByteus/following{/other_user}",
+        "gists_url": "https://api.github.com/users/AutoByteus/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/AutoByteus/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/AutoByteus/subscriptions",
+        "organizations_url": "https://api.github.com/users/AutoByteus/orgs",
+        "repos_url": "https://api.github.com/users/AutoByteus/repos",
+        "events_url": "https://api.github.com/users/AutoByteus/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/AutoByteus/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/AutoByteus/autobyteus-nfs",
+      "description": "shared file system",
+      "fork": false,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs",
+      "forks_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/forks",
+      "keys_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/teams",
+      "hooks_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/hooks",
+      "issue_events_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/events",
+      "assignees_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/tags",
+      "blobs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/languages",
+      "stargazers_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/stargazers",
+      "contributors_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/contributors",
+      "subscribers_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/subscribers",
+      "subscription_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/subscription",
+      "commits_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/merges",
+      "archive_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/downloads",
+      "issues_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/labels{/name}",
+      "releases_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/deployments"
+    },
+    "head_repository": {
+      "id": 1420699315,
+      "node_id": "R_kgDOVK4msw",
+      "name": "autobyteus-nfs",
+      "full_name": "AutoByteus/autobyteus-nfs",
+      "private": false,
+      "owner": {
+        "login": "AutoByteus",
+        "id": 132748500,
+        "node_id": "O_kgDOB-mU1A",
+        "avatar_url": "https://avatars.githubusercontent.com/u/132748500?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/AutoByteus",
+        "html_url": "https://github.com/AutoByteus",
+        "followers_url": "https://api.github.com/users/AutoByteus/followers",
+        "following_url": "https://api.github.com/users/AutoByteus/following{/other_user}",
+        "gists_url": "https://api.github.com/users/AutoByteus/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/AutoByteus/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/AutoByteus/subscriptions",
+        "organizations_url": "https://api.github.com/users/AutoByteus/orgs",
+        "repos_url": "https://api.github.com/users/AutoByteus/repos",
+        "events_url": "https://api.github.com/users/AutoByteus/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/AutoByteus/received_events",
+        "type": "Organization",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/AutoByteus/autobyteus-nfs",
+      "description": "shared file system",
+      "fork": false,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs",
+      "forks_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/forks",
+      "keys_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/teams",
+      "hooks_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/hooks",
+      "issue_events_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/events",
+      "assignees_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/tags",
+      "blobs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/languages",
+      "stargazers_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/stargazers",
+      "contributors_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/contributors",
+      "subscribers_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/subscribers",
+      "subscription_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/subscription",
+      "commits_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/merges",
+      "archive_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/downloads",
+      "issues_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/labels{/name}",
+      "releases_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/deployments"
+    }
+  },
+  "jobs": {
+    "total_count": 12,
+    "jobs": [
+      {
+        "id": 117627972056,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYyxp2A",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117627972056",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117627972056",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:24:58Z",
+        "started_at": "2026-10-18T08:25:00Z",
+        "completed_at": "2026-10-18T08:25:10Z",
+        "name": "prepare",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:25:00Z",
+            "completed_at": "2026-10-18T08:25:01Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:25:01Z",
+            "completed_at": "2026-10-18T08:25:03Z"
+          },
+          {
+            "name": "Release boundary checks",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:25:03Z",
+            "completed_at": "2026-10-18T08:25:08Z"
+          },
+          {
+            "name": "Run set -euo pipefail",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:25:08Z",
+            "completed_at": "2026-10-18T08:25:08Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 5,
+            "started_at": "2026-10-18T08:25:08Z",
+            "completed_at": "2026-10-18T08:25:08Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-18T08:25:08Z",
+            "completed_at": "2026-10-18T08:25:08Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-18T08:25:08Z",
+            "completed_at": "2026-10-18T08:25:08Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117627972056",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000006449,
+        "runner_name": "GitHub Actions 1000006449",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628015203,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYy0SYw",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628015203",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628015203",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:25:11Z",
+        "started_at": "2026-10-18T08:25:12Z",
+        "completed_at": "2026-10-18T08:27:23Z",
+        "name": "engine-packages (ubuntu-24.04, amd64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:25:13Z",
+            "completed_at": "2026-10-18T08:25:14Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:25:14Z",
+            "completed_at": "2026-10-18T08:25:14Z"
+          },
+          {
+            "name": "Build measured engine pair in pinned disposable builder",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:25:14Z",
+            "completed_at": "2026-10-18T08:27:21Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:27:21Z",
+            "completed_at": "2026-10-18T08:27:22Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-18T08:27:22Z",
+            "completed_at": "2026-10-18T08:27:22Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-18T08:27:22Z",
+            "completed_at": "2026-10-18T08:27:22Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628015203",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000006451,
+        "runner_name": "GitHub Actions 1000006451",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628015271,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYy0Spw",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628015271",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628015271",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:25:11Z",
+        "started_at": "2026-10-18T08:25:15Z",
+        "completed_at": "2026-10-18T08:27:03Z",
+        "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:25:16Z",
+            "completed_at": "2026-10-18T08:25:17Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:25:17Z",
+            "completed_at": "2026-10-18T08:25:18Z"
+          },
+          {
+            "name": "Build measured engine pair in pinned disposable builder",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:25:18Z",
+            "completed_at": "2026-10-18T08:27:00Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:27:00Z",
+            "completed_at": "2026-10-18T08:27:01Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-18T08:27:01Z",
+            "completed_at": "2026-10-18T08:27:01Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-18T08:27:01Z",
+            "completed_at": "2026-10-18T08:27:01Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628015271",
+        "labels": [
+          "ubuntu-24.04-arm"
+        ],
+        "runner_id": 1000006450,
+        "runner_name": "GitHub Actions 1000006450",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628452768,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzO_oA",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628452768",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628452768",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:27:23Z",
+        "started_at": "2026-10-18T08:27:26Z",
+        "completed_at": "2026-10-18T08:27:36Z",
+        "name": "engine-inputs",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:27:26Z",
+            "completed_at": "2026-10-18T08:27:28Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:27:28Z",
+            "completed_at": "2026-10-18T08:27:29Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:27:29Z",
+            "completed_at": "2026-10-18T08:27:31Z"
+          },
+          {
+            "name": "Run python3 packaging/engine/manifest.py merge --inputs engine-parts/nfs-engine-package-amd64 engine-parts/nfs-engine-package-arm64 --output engine-candidate",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:27:31Z",
+            "completed_at": "2026-10-18T08:27:31Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-18T08:27:31Z",
+            "completed_at": "2026-10-18T08:27:33Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-18T08:27:33Z",
+            "completed_at": "2026-10-18T08:27:33Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-18T08:27:33Z",
+            "completed_at": "2026-10-18T08:27:33Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628452768",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000006452,
+        "runner_name": "GitHub Actions 1000006452",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628492072,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzRZKA",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628492072",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628492072",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:27:36Z",
+        "started_at": "2026-10-18T08:27:37Z",
+        "completed_at": "2026-10-18T08:29:52Z",
+        "name": "engine",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:27:38Z",
+            "completed_at": "2026-10-18T08:27:39Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:27:39Z",
+            "completed_at": "2026-10-18T08:27:40Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:27:40Z",
+            "completed_at": "2026-10-18T08:27:41Z"
+          },
+          {
+            "name": "Run docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:27:41Z",
+            "completed_at": "2026-10-18T08:27:46Z"
+          },
+          {
+            "name": "Run docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-18T08:27:46Z",
+            "completed_at": "2026-10-18T08:27:49Z"
+          },
+          {
+            "name": "Run docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-18T08:27:49Z",
+            "completed_at": "2026-10-18T08:29:42Z"
+          },
+          {
+            "name": "Run python3 packaging/release.py --operation oci --directory engine.oci.tar",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-18T08:29:42Z",
+            "completed_at": "2026-10-18T08:29:43Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-18T08:29:43Z",
+            "completed_at": "2026-10-18T08:29:46Z"
+          },
+          {
+            "name": "Post Run docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-18T08:29:46Z",
+            "completed_at": "2026-10-18T08:29:48Z"
+          },
+          {
+            "name": "Post Run docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-18T08:29:48Z",
+            "completed_at": "2026-10-18T08:29:49Z"
+          },
+          {
+            "name": "Post Run docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-18T08:29:49Z",
+            "completed_at": "2026-10-18T08:29:50Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16,
+            "started_at": "2026-10-18T08:29:50Z",
+            "completed_at": "2026-10-18T08:29:51Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17,
+            "started_at": "2026-10-18T08:29:51Z",
+            "completed_at": "2026-10-18T08:29:51Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628492072",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000006453,
+        "runner_name": "GitHub Actions 1000006453",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628928559,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzsCLw",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628928559",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628928559",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-10-18T08:29:52Z",
+        "started_at": "2026-10-18T08:29:58Z",
+        "completed_at": "2026-10-18T08:30:24Z",
+        "name": "binaries (macos-15, darwin, arm64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:29:58Z",
+            "completed_at": "2026-10-18T08:30:00Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:30:00Z",
+            "completed_at": "2026-10-18T08:30:02Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:30:02Z",
+            "completed_at": "2026-10-18T08:30:03Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:30:03Z",
+            "completed_at": "2026-10-18T08:30:07Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 5,
+            "started_at": "2026-10-18T08:30:07Z",
+            "completed_at": "2026-10-18T08:30:07Z"
+          },
+          {
+            "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-18T08:30:07Z",
+            "completed_at": "2026-10-18T08:30:20Z"
+          },
+          {
+            "name": "Native checks and exact engine metadata (not physical qualification)",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 7,
+            "started_at": "2026-10-18T08:30:20Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Developer ID and Accepted notarization before public effects",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Package four regular members",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 10,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 11,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 21,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-10-18T08:30:21Z",
+            "completed_at": "2026-10-18T08:30:21Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628928559",
+        "labels": [
+          "macos-15"
+        ],
+        "runner_id": 1000006456,
+        "runner_name": "GitHub Actions 1000006456",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628928560,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzsCMA",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628928560",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628928560",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:29:52Z",
+        "started_at": "2026-10-18T08:29:56Z",
+        "completed_at": "2026-10-18T08:30:54Z",
+        "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:29:56Z",
+            "completed_at": "2026-10-18T08:29:58Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:29:58Z",
+            "completed_at": "2026-10-18T08:29:59Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:29:59Z",
+            "completed_at": "2026-10-18T08:30:00Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:30:00Z",
+            "completed_at": "2026-10-18T08:30:02Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 5,
+            "started_at": "2026-10-18T08:30:02Z",
+            "completed_at": "2026-10-18T08:30:02Z"
+          },
+          {
+            "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-18T08:30:02Z",
+            "completed_at": "2026-10-18T08:30:08Z"
+          },
+          {
+            "name": "Native checks and exact engine metadata (not physical qualification)",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-18T08:30:08Z",
+            "completed_at": "2026-10-18T08:30:50Z"
+          },
+          {
+            "name": "Developer ID and Accepted notarization before public effects",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-10-18T08:30:50Z",
+            "completed_at": "2026-10-18T08:30:50Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-18T08:30:50Z",
+            "completed_at": "2026-10-18T08:30:50Z"
+          },
+          {
+            "name": "Package four regular members",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-18T08:30:50Z",
+            "completed_at": "2026-10-18T08:30:51Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-18T08:30:51Z",
+            "completed_at": "2026-10-18T08:30:52Z"
+          },
+          {
+            "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21,
+            "started_at": "2026-10-18T08:30:52Z",
+            "completed_at": "2026-10-18T08:30:52Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-10-18T08:30:52Z",
+            "completed_at": "2026-10-18T08:30:52Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-10-18T08:30:52Z",
+            "completed_at": "2026-10-18T08:30:52Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628928560",
+        "labels": [
+          "ubuntu-24.04-arm"
+        ],
+        "runner_id": 1000006454,
+        "runner_name": "GitHub Actions 1000006454",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628928622,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzsCbg",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628928622",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628928622",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-18T08:29:52Z",
+        "started_at": "2026-10-18T08:29:54Z",
+        "completed_at": "2026-10-18T08:30:51Z",
+        "name": "binaries (ubuntu-24.04, linux, amd64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:29:54Z",
+            "completed_at": "2026-10-18T08:29:56Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:29:56Z",
+            "completed_at": "2026-10-18T08:29:57Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:29:57Z",
+            "completed_at": "2026-10-18T08:29:58Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:29:58Z",
+            "completed_at": "2026-10-18T08:30:00Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 5,
+            "started_at": "2026-10-18T08:30:00Z",
+            "completed_at": "2026-10-18T08:30:00Z"
+          },
+          {
+            "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-18T08:30:00Z",
+            "completed_at": "2026-10-18T08:30:07Z"
+          },
+          {
+            "name": "Native checks and exact engine metadata (not physical qualification)",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-18T08:30:07Z",
+            "completed_at": "2026-10-18T08:30:47Z"
+          },
+          {
+            "name": "Developer ID and Accepted notarization before public effects",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-10-18T08:30:47Z",
+            "completed_at": "2026-10-18T08:30:47Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-18T08:30:47Z",
+            "completed_at": "2026-10-18T08:30:47Z"
+          },
+          {
+            "name": "Package four regular members",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10,
+            "started_at": "2026-10-18T08:30:47Z",
+            "completed_at": "2026-10-18T08:30:47Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-18T08:30:47Z",
+            "completed_at": "2026-10-18T08:30:48Z"
+          },
+          {
+            "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21,
+            "started_at": "2026-10-18T08:30:48Z",
+            "completed_at": "2026-10-18T08:30:48Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-10-18T08:30:48Z",
+            "completed_at": "2026-10-18T08:30:49Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-10-18T08:30:49Z",
+            "completed_at": "2026-10-18T08:30:49Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628928622",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 1000006457,
+        "runner_name": "GitHub Actions 1000006457",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117628928627,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYzsCcw",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117628928627",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117628928627",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-10-18T08:29:52Z",
+        "started_at": "2026-10-18T08:29:55Z",
+        "completed_at": "2026-10-18T08:31:24Z",
+        "name": "binaries (macos-15-intel, darwin, amd64)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-18T08:29:56Z",
+            "completed_at": "2026-10-18T08:30:00Z"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-18T08:30:00Z",
+            "completed_at": "2026-10-18T08:30:04Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-18T08:30:04Z",
+            "completed_at": "2026-10-18T08:30:07Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-18T08:30:07Z",
+            "completed_at": "2026-10-18T08:30:15Z"
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 5,
+            "started_at": "2026-10-18T08:30:15Z",
+            "completed_at": "2026-10-18T08:30:15Z"
+          },
+          {
+            "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-18T08:30:15Z",
+            "completed_at": "2026-10-18T08:31:18Z"
+          },
+          {
+            "name": "Native checks and exact engine metadata (not physical qualification)",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 7,
+            "started_at": "2026-10-18T08:31:18Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Developer ID and Accepted notarization before public effects",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 8,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 9,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Package four regular members",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 10,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 11,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 21,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:19Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23,
+            "started_at": "2026-10-18T08:31:19Z",
+            "completed_at": "2026-10-18T08:31:20Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117628928627",
+        "labels": [
+          "macos-15-intel"
+        ],
+        "runner_id": 1000006455,
+        "runner_name": "GitHub Actions 1000006455",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 117629240033,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYz_C4Q",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117629240033",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117629240033",
+        "status": "completed",
+        "conclusion": "skipped",
+        "created_at": "2026-10-18T08:31:25Z",
+        "started_at": "2026-10-18T08:31:25Z",
+        "completed_at": "2026-10-18T08:31:24Z",
+        "name": "payload",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117629240033",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": null,
+        "runner_name": null,
+        "runner_group_id": null,
+        "runner_group_name": null
+      },
+      {
+        "id": 117629240155,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYz_DWw",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117629240155",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117629240155",
+        "status": "completed",
+        "conclusion": "skipped",
+        "created_at": "2026-10-18T08:31:25Z",
+        "started_at": "2026-10-18T08:31:25Z",
+        "completed_at": "2026-10-18T08:31:24Z",
+        "name": "candidate",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117629240155",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": null,
+        "runner_name": null,
+        "runner_group_id": null,
+        "runner_group_name": null
+      },
+      {
+        "id": 117629241188,
+        "run_id": 39111348848,
+        "workflow_name": "AutoByteus NFS Release",
+        "head_branch": "codex/nfs-first-release",
+        "run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/runs/39111348848",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVK4ms88AAAAbYz_HZA",
+        "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/jobs/117629241188",
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848/job/117629241188",
+        "status": "completed",
+        "conclusion": "skipped",
+        "created_at": "2026-10-18T08:31:25Z",
+        "started_at": "2026-10-18T08:31:25Z",
+        "completed_at": "2026-10-18T08:31:25Z",
+        "name": "publish",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/check-runs/117629241188",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": null,
+        "runner_name": null,
+        "runner_group_id": null,
+        "runner_group_name": null
+      }
+    ]
+  },
+  "artifacts": {
+    "total_count": 7,
+    "artifacts": [
+      {
+        "id": 12131060083,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMTA2MDA4Mw==",
+        "name": "nfs-native-linux-amd64",
+        "size_in_bytes": 6948891,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12131060083",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12131060083/zip",
+        "expired": false,
+        "digest": "sha256:4091a9a6b89fcba5ad60f312dd7f29decac62472f14ab9b66cdc1b769d818ea5",
+        "created_at": "2026-10-18T08:30:48Z",
+        "updated_at": "2026-10-18T08:30:48Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130498280,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDQ5ODI4MA==",
+        "name": "nfs-engine-inputs",
+        "size_in_bytes": 5266265,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130498280",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130498280/zip",
+        "expired": false,
+        "digest": "sha256:9590ff2c28c37fbaf0ebf6c13a02c0b70b09c950fa46d15ef32a8e58de282626",
+        "created_at": "2026-10-18T08:27:33Z",
+        "updated_at": "2026-10-18T08:27:33Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130483509,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDQ4MzUwOQ==",
+        "name": "nfs-oci",
+        "size_in_bytes": 96322900,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130483509",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130483509/zip",
+        "expired": false,
+        "digest": "sha256:a3640d32635b687a7becd60b27d235851060b1ca19201f6d6717dd791314f5fc",
+        "created_at": "2026-10-18T08:29:46Z",
+        "updated_at": "2026-10-18T08:29:46Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130413582,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDQxMzU4Mg==",
+        "name": "nfs-engine-package-amd64",
+        "size_in_bytes": 2654365,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130413582",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130413582/zip",
+        "expired": false,
+        "digest": "sha256:0e59b6057a0e248c69c8fa34e91cd07ed452028629328bf3ac6f2c0a86b1a5a6",
+        "created_at": "2026-10-18T08:27:21Z",
+        "updated_at": "2026-10-18T08:27:21Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130219457,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDIxOTQ1Nw==",
+        "name": "AutoByteus~autobyteus-nfs~EH9B2J.dockerbuild",
+        "size_in_bytes": 60287,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130219457",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130219457/zip",
+        "expired": false,
+        "digest": "sha256:8dabc2a7341c14f146aa4562f8308d448b3c9bfd6274f0b7d0b9ed75bbfe3a0d",
+        "created_at": "2026-10-18T08:29:48Z",
+        "updated_at": "2026-10-18T08:29:48Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130049974,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDA0OTk3NA==",
+        "name": "nfs-native-linux-arm64",
+        "size_in_bytes": 6343289,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130049974",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130049974/zip",
+        "expired": false,
+        "digest": "sha256:4f8b3d0bce96f1ba317c5b949fcb49e1ee7160b98d70671a0727ef19324dbb2d",
+        "created_at": "2026-10-18T08:30:52Z",
+        "updated_at": "2026-10-18T08:30:52Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      },
+      {
+        "id": 12130003189,
+        "node_id": "MDg6QXJ0aWZhY3QxMjEzMDAwMzE4OQ==",
+        "name": "nfs-engine-package-arm64",
+        "size_in_bytes": 2611842,
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130003189",
+        "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12130003189/zip",
+        "expired": false,
+        "digest": "sha256:3a48c105b8af0d8e25b92351371633dc53d1186da29c0427d9d6978af70e9b64",
+        "created_at": "2026-10-18T08:27:01Z",
+        "updated_at": "2026-10-18T08:27:01Z",
+        "expires_at": "2027-01-16T08:24:58Z",
+        "workflow_run": {
+          "id": 39111348848,
+          "repository_id": 1420699315,
+          "head_repository_id": 1420699315,
+          "head_branch": "codex/nfs-first-release",
+          "head_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+  "expected": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+  "source": "Official go.dev Go1.27.2 darwin-arm64 artifact; matches independently verified IR001/pinned toolchain",
+  "native": "darwin-arm64"
+}

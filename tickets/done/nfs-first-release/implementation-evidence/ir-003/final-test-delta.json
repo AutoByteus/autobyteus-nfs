@@ -1,0 +1,8 @@
+{
+  "changedAfterInitialChecks": [
+    "scripts/tests/test_nfs_engine_packaging.py",
+    "scripts/tests/test_nfs_packaging.py",
+    "scripts/tests/test_nfs_release_records.py"
+  ],
+  "productionChanged": false
+}

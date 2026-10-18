@@ -1,0 +1,23 @@
+{
+  "commands": 6,
+  "all_expected": true,
+  "python_collected": 45,
+  "python_executed": 44,
+  "python_skipped": 1,
+  "ast_delta": [
+    {
+      "path": "packaging/engine/manifest.py",
+      "removed_binding": "LOCK",
+      "other_ast_identical": true,
+      "prior_nonempty": 89,
+      "current_nonempty": 89
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "removed_binding": "readiness",
+      "other_ast_identical": true,
+      "prior_nonempty": 118,
+      "current_nonempty": 118
+    }
+  ]
+}

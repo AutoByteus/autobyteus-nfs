@@ -23,7 +23,11 @@ func Run(args []string, release setup.Release) error {
 			if len(args) != 2 {
 				return errors.New("verify-release requires manifest path")
 			}
-			return VerifyRelease(args[1], release)
+			if err := VerifyRelease(args[1], release); err != nil {
+				return err
+			}
+			fmt.Fprintln(os.Stderr, "Shared-filesystem/physical and user testing is deferred; distribution and signature checks are not field qualification.")
+			return nil
 		case "internal-install":
 			return InstallRoot(args[1:])
 		case "internal-probe":

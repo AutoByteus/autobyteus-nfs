@@ -1,0 +1,14 @@
+$ /usr/bin/python3 -m unittest scripts/tests/test_nfs_release_workflow.py -v
+cwd /Users/normy/nfs-first-api002-_6zv884g/source
+test_candidate_and_fresh_metadata_argv (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_metadata_failure_stops_step (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_nounset_and_oci_pipefail_stop_before_metadata (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.037s
+
+OK

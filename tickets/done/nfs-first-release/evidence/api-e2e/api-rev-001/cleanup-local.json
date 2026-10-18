@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-18T08:22:51.087882+00:00",
+  "source_inputs": 119,
+  "source_mismatches": [],
+  "protected_inputs": 795,
+  "protected_changes": [],
+  "external_owner_change": "Reviewer appended handoff receipt in518f4b5; inspected exact docs-only delta, preserved",
+  "head": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "head_delta_paths": [],
+  "own_host_processes": [],
+  "own_cwds": [],
+  "scratch": "/Users/normy/nfs-first-api001-bjhz2hiu",
+  "containers_created": 0,
+  "shared_live_containers_untouched": true,
+  "real_candidate_created": false,
+  "qualification_lock_unchanged": true,
+  "scratch_removed": true
+}

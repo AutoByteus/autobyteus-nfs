@@ -1,0 +1,372 @@
+﻿2026-10-18T09:03:24.2938881Z Current runner version: '2.337.0'
+2026-10-18T09:03:24.2962732Z ##[group]Runner Image Provisioner
+2026-10-18T09:03:24.2963601Z Hosted Compute Agent
+2026-10-18T09:03:24.2964316Z Version: 20261012.601
+2026-10-18T09:03:24.2964956Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-18T09:03:24.2965682Z Build Date: 2026-10-12T17:48:21Z
+2026-10-18T09:03:24.2966439Z Worker ID: {42284c76-63f1-4bf5-945b-909b15301816}
+2026-10-18T09:03:24.2967149Z Region: chilecentral
+2026-10-18T09:03:24.2967786Z Cloud: Azure
+2026-10-18T09:03:24.2968352Z ##[endgroup]
+2026-10-18T09:03:24.2970274Z ##[group]Operating System
+2026-10-18T09:03:24.2971031Z Ubuntu
+2026-10-18T09:03:24.2971595Z 24.04.5
+2026-10-18T09:03:24.2972188Z LTS
+2026-10-18T09:03:24.2972730Z ##[endgroup]
+2026-10-18T09:03:24.2973297Z ##[group]Runner Image
+2026-10-18T09:03:24.2973956Z Image: ubuntu-24.04
+2026-10-18T09:03:24.2974521Z Version: 20261012.334.1
+2026-10-18T09:03:24.2976202Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-18T09:03:24.2977819Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-18T09:03:24.2978833Z ##[endgroup]
+2026-10-18T09:03:24.2980341Z ##[group]GITHUB_TOKEN Permissions
+2026-10-18T09:03:24.2982474Z Actions: read
+2026-10-18T09:03:24.2983092Z Contents: read
+2026-10-18T09:03:24.2983765Z Metadata: read
+2026-10-18T09:03:24.2984341Z ##[endgroup]
+2026-10-18T09:03:24.2986379Z Secret source: Actions
+2026-10-18T09:03:24.2987414Z Cache mode: write
+2026-10-18T09:03:24.2988196Z Prepare workflow directory
+2026-10-18T09:03:24.3306871Z Prepare all required actions
+2026-10-18T09:03:24.3353818Z Getting action download info
+2026-10-18T09:03:24.8554552Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-18T09:03:24.9333294Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-18T09:03:25.8649757Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-18T09:03:26.0957667Z Complete job name: candidate
+2026-10-18T09:03:26.1742979Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-18T09:03:26.1744077Z with:
+2026-10-18T09:03:26.1744557Z   ref: 96c8de3a381f74ec8f2b9e93425fb90e17e7e693
+2026-10-18T09:03:26.1745141Z   fetch-depth: 0
+2026-10-18T09:03:26.1745606Z   persist-credentials: false
+2026-10-18T09:03:26.1746140Z   repository: AutoByteus/autobyteus-nfs
+2026-10-18T09:03:26.1750096Z   token: ***
+2026-10-18T09:03:26.1750533Z   ssh-strict: true
+2026-10-18T09:03:26.1750966Z   ssh-user: git
+2026-10-18T09:03:26.1751398Z   clean: true
+2026-10-18T09:03:26.1751842Z   sparse-checkout-cone-mode: true
+2026-10-18T09:03:26.1752357Z   fetch-tags: false
+2026-10-18T09:03:26.1752796Z   show-progress: true
+2026-10-18T09:03:26.1753248Z   lfs: false
+2026-10-18T09:03:26.1753674Z   submodules: false
+2026-10-18T09:03:26.1754126Z   set-safe-directory: true
+2026-10-18T09:03:26.1754624Z   allow-unsafe-pr-checkout: false
+2026-10-18T09:03:26.1755423Z ##[endgroup]
+2026-10-18T09:03:26.2806889Z Syncing repository: AutoByteus/autobyteus-nfs
+2026-10-18T09:03:26.2809704Z ##[group]Getting Git version info
+2026-10-18T09:03:26.2810938Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-18T09:03:26.2812648Z [command]/usr/bin/git version
+2026-10-18T09:03:26.2863786Z git version 2.55.0
+2026-10-18T09:03:26.2885269Z ##[endgroup]
+2026-10-18T09:03:26.2903276Z Temporarily overriding HOME='/home/runner/work/_temp/7ab83a30-4ec9-4053-93ac-e223f9e25fce' before making global git config changes
+2026-10-18T09:03:26.2905772Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T09:03:26.2910405Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-18T09:03:26.2963268Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-18T09:03:26.2969520Z ##[group]Initializing the repository
+2026-10-18T09:03:26.2974651Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-18T09:03:26.3076266Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-18T09:03:26.3077666Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-18T09:03:26.3078618Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-18T09:03:26.3079638Z hint: call:
+2026-10-18T09:03:26.3080075Z hint:
+2026-10-18T09:03:26.3080622Z hint: 	git config --global init.defaultBranch <name>
+2026-10-18T09:03:26.3081239Z hint:
+2026-10-18T09:03:26.3081835Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-18T09:03:26.3082758Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-18T09:03:26.3083492Z hint:
+2026-10-18T09:03:26.3084225Z hint: 	git branch -m <name>
+2026-10-18T09:03:26.3085002Z hint:
+2026-10-18T09:03:26.3086032Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-18T09:03:26.3102467Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+2026-10-18T09:03:26.3106617Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+2026-10-18T09:03:26.3156521Z ##[endgroup]
+2026-10-18T09:03:26.3157835Z ##[group]Disabling automatic garbage collection
+2026-10-18T09:03:26.3161365Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-18T09:03:26.3196513Z ##[endgroup]
+2026-10-18T09:03:26.3197879Z ##[group]Setting up auth
+2026-10-18T09:03:26.3204234Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T09:03:26.3238844Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T09:03:26.3593688Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T09:03:26.3638192Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T09:03:26.3867404Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T09:03:26.3903272Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T09:03:26.4128772Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-18T09:03:26.4171037Z ##[endgroup]
+2026-10-18T09:03:26.4171870Z ##[group]Fetching the repository
+2026-10-18T09:03:26.4181094Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-18T09:03:28.2265025Z From https://github.com/AutoByteus/autobyteus-nfs
+2026-10-18T09:03:28.2266334Z  * [new branch]      codex/extract-autobyteus-nfs -> origin/codex/extract-autobyteus-nfs
+2026-10-18T09:03:28.2267578Z  * [new branch]      codex/nfs-first-release -> origin/codex/nfs-first-release
+2026-10-18T09:03:28.2268469Z  * [new branch]      main                    -> origin/main
+2026-10-18T09:03:28.2280329Z [command]/usr/bin/git rev-parse --verify --quiet 96c8de3a381f74ec8f2b9e93425fb90e17e7e693^{object}
+2026-10-18T09:03:28.2308619Z 96c8de3a381f74ec8f2b9e93425fb90e17e7e693
+2026-10-18T09:03:28.2313240Z ##[endgroup]
+2026-10-18T09:03:28.2313777Z ##[group]Determining the checkout info
+2026-10-18T09:03:28.2315125Z ##[endgroup]
+2026-10-18T09:03:28.2320771Z [command]/usr/bin/git sparse-checkout disable
+2026-10-18T09:03:28.2371681Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-18T09:03:28.2410037Z ##[group]Checking out the ref
+2026-10-18T09:03:28.2413567Z [command]/usr/bin/git checkout --progress --force 96c8de3a381f74ec8f2b9e93425fb90e17e7e693
+2026-10-18T09:03:28.3431106Z Note: switching to '96c8de3a381f74ec8f2b9e93425fb90e17e7e693'.
+2026-10-18T09:03:28.3431806Z 
+2026-10-18T09:03:28.3432283Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-18T09:03:28.3433304Z changes and commit them, and you can discard any commits you make in this
+2026-10-18T09:03:28.3434306Z state without impacting any branches by switching back to a branch.
+2026-10-18T09:03:28.3434875Z 
+2026-10-18T09:03:28.3435251Z If you want to create a new branch to retain commits you create, you may
+2026-10-18T09:03:28.3435882Z do so (now or later) by using -c with the switch command. Example:
+2026-10-18T09:03:28.3436232Z 
+2026-10-18T09:03:28.3436524Z   git switch -c <new-branch-name>
+2026-10-18T09:03:28.3436914Z 
+2026-10-18T09:03:28.3437164Z Or undo this operation with:
+2026-10-18T09:03:28.3437539Z 
+2026-10-18T09:03:28.3437760Z   git switch -
+2026-10-18T09:03:28.3438096Z 
+2026-10-18T09:03:28.3438558Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-18T09:03:28.3439475Z 
+2026-10-18T09:03:28.3439974Z HEAD is now at 96c8de3 review(nfs-release): record CRR-003 API handoff receipt
+2026-10-18T09:03:28.3448184Z ##[endgroup]
+2026-10-18T09:03:28.3490447Z [command]/usr/bin/git log -1 --format=%H
+2026-10-18T09:03:28.3518632Z 96c8de3a381f74ec8f2b9e93425fb90e17e7e693
+2026-10-18T09:03:28.3527735Z ##[group]Removing auth
+2026-10-18T09:03:28.3531532Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T09:03:28.3565882Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T09:03:28.3789527Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T09:03:28.3816541Z http.https://github.com/.extraheader
+2026-10-18T09:03:28.3825399Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-18T09:03:28.3862546Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T09:03:28.4081395Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T09:03:28.4116590Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T09:03:28.4338665Z ##[endgroup]
+2026-10-18T09:03:28.4647091Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-18T09:03:28.4647578Z with:
+2026-10-18T09:03:28.4647826Z   name: nfs-engine-inputs
+2026-10-18T09:03:28.4648106Z   path: retained/engine
+2026-10-18T09:03:28.4648376Z   merge-multiple: false
+2026-10-18T09:03:28.4648698Z   repository: AutoByteus/autobyteus-nfs
+2026-10-18T09:03:28.4649018Z   run-id: 39113335636
+2026-10-18T09:03:28.4649627Z ##[endgroup]
+2026-10-18T09:03:28.6070117Z Downloading single artifact
+2026-10-18T09:03:28.6209585Z (node:2399) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T09:03:28.6210546Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T09:03:29.0336627Z Preparing to download the following artifacts:
+2026-10-18T09:03:29.0337628Z - nfs-engine-inputs (ID: 12131905575, Size: 5266265, Expected Digest: sha256:7e7348258bfb5c042d58db9dc152e503dced10baf30a117f7ddefbe3b75eee3a)
+2026-10-18T09:03:29.3688317Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-44c0ff74-d055-57eb-8d4d-251d2340807f/artifacts/023ec761221e1139a8147f5204fdfe7d6b6346e63d54cfa99674a9cb8410fbf3.zip
+2026-10-18T09:03:29.3690198Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained/engine
+2026-10-18T09:03:29.8846469Z (node:2399) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-18T09:03:31.8837923Z SHA256 digest of downloaded artifact is 7e7348258bfb5c042d58db9dc152e503dced10baf30a117f7ddefbe3b75eee3a
+2026-10-18T09:03:31.8838516Z Artifact download completed successfully.
+2026-10-18T09:03:31.8838826Z Total of 1 artifact(s) downloaded
+2026-10-18T09:03:31.8850523Z Download artifact has finished successfully
+2026-10-18T09:03:31.8998413Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-18T09:03:31.8998841Z with:
+2026-10-18T09:03:31.8999029Z   name: nfs-oci
+2026-10-18T09:03:31.8999496Z   path: retained
+2026-10-18T09:03:31.8999754Z   merge-multiple: false
+2026-10-18T09:03:31.9000006Z   repository: AutoByteus/autobyteus-nfs
+2026-10-18T09:03:31.9000299Z   run-id: 39113335636
+2026-10-18T09:03:31.9000507Z ##[endgroup]
+2026-10-18T09:03:32.0461413Z Downloading single artifact
+2026-10-18T09:03:32.0607562Z (node:2411) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T09:03:32.0609528Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T09:03:32.4750515Z Preparing to download the following artifacts:
+2026-10-18T09:03:32.4751811Z - nfs-oci (ID: 12131935805, Size: 96319796, Expected Digest: sha256:ca0e2b7f03f173b534aefcb7beeb94f28e93881a5721e5dc4f4ede722030f485)
+2026-10-18T09:03:32.8105009Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-44c242ef-37f4-5819-b4e9-b1013ae2971a/artifacts/46c36315381082f215ce29152b9f434779aecc8cbbbbc1f628034b47f9601dc4.zip
+2026-10-18T09:03:32.8107680Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained
+2026-10-18T09:03:33.3280885Z (node:2411) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-18T09:03:38.6913756Z SHA256 digest of downloaded artifact is ca0e2b7f03f173b534aefcb7beeb94f28e93881a5721e5dc4f4ede722030f485
+2026-10-18T09:03:38.6914878Z Artifact download completed successfully.
+2026-10-18T09:03:38.6915463Z Total of 1 artifact(s) downloaded
+2026-10-18T09:03:38.6923148Z Download artifact has finished successfully
+2026-10-18T09:03:38.7094021Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-18T09:03:38.7094466Z with:
+2026-10-18T09:03:38.7094687Z   pattern: nfs-native-*
+2026-10-18T09:03:38.7094925Z   path: retained/native
+2026-10-18T09:03:38.7095156Z   merge-multiple: true
+2026-10-18T09:03:38.7095403Z   repository: AutoByteus/autobyteus-nfs
+2026-10-18T09:03:38.7095681Z   run-id: 39113335636
+2026-10-18T09:03:38.7095918Z ##[endgroup]
+2026-10-18T09:03:38.8744707Z (node:2424) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T09:03:38.8745457Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T09:03:39.3295430Z Found 9 artifact(s)
+2026-10-18T09:03:39.3296311Z Filtering artifacts by pattern 'nfs-native-*'
+2026-10-18T09:03:39.3317415Z Preparing to download the following artifacts:
+2026-10-18T09:03:39.3318311Z - nfs-native-linux-arm64 (ID: 12131856218, Size: 6343544, Expected Digest: sha256:b2561b2b1c982f687ba83057992c519ad3f489f39d78f82472cb90f6205c0206)
+2026-10-18T09:03:39.3319618Z - nfs-native-darwin-arm64 (ID: 12131502257, Size: 5918815, Expected Digest: sha256:5d2753fe0864347e5d3a95e978c8814050a412a235e46aa180a21c5d30bb0fdb)
+2026-10-18T09:03:39.3320778Z - nfs-native-darwin-amd64 (ID: 12131457672, Size: 6352277, Expected Digest: sha256:b39aa9293c965bee82ebadbe2420737ef5a477cb51ef5792f77ee256af825b65)
+2026-10-18T09:03:39.3322170Z - nfs-native-linux-amd64 (ID: 12131017810, Size: 6949237, Expected Digest: sha256:93d5b1b08644d34cff9e797e15c6fcafe38942771b95e1aa162eb660a36e5ae7)
+2026-10-18T09:03:39.6661559Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-581f4732-e132-5dae-a4f9-4996232a7023/artifacts/826a65892121cf1888da1f8aaa42a3ce7013df04ef48f7d1555ca6f07977a524.zip
+2026-10-18T09:03:39.6664246Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained/native
+2026-10-18T09:03:39.9130374Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-32bb6a94-142e-5e46-842a-899379061427/artifacts/4b2a2d4592516bafd78361f29204fe30e8a9e2ffd4928ec931062395bb961703.zip
+2026-10-18T09:03:39.9133014Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained/native
+2026-10-18T09:03:39.9302066Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-5397e084-eca7-5fa9-958b-7498791eb8fc/artifacts/1a1c5b7b51ba675df97d46a606c4fe88405448bc559532da9b6a1f89472de55e.zip
+2026-10-18T09:03:39.9304022Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained/native
+2026-10-18T09:03:39.9401812Z Redirecting to blob download url: https://productionresultssa6.blob.core.windows.net/actions-results/c3cc8b30-80c0-49b5-99cd-e42a4e8d9367/workflow-job-run-a303cf16-73c6-5569-aac4-6ae2aec67b47/artifacts/9f826fbdfef4e167424698e6423d6677fed6c25987ba6a9bbb108c715dbf4657.zip
+2026-10-18T09:03:39.9411660Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/retained/native
+2026-10-18T09:03:40.1816481Z (node:2424) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-18T09:03:41.9267229Z SHA256 digest of downloaded artifact is b2561b2b1c982f687ba83057992c519ad3f489f39d78f82472cb90f6205c0206
+2026-10-18T09:03:41.9268256Z Artifact download completed successfully.
+2026-10-18T09:03:42.1691890Z SHA256 digest of downloaded artifact is b39aa9293c965bee82ebadbe2420737ef5a477cb51ef5792f77ee256af825b65
+2026-10-18T09:03:42.1692537Z Artifact download completed successfully.
+2026-10-18T09:03:42.1727839Z SHA256 digest of downloaded artifact is 5d2753fe0864347e5d3a95e978c8814050a412a235e46aa180a21c5d30bb0fdb
+2026-10-18T09:03:42.1728482Z Artifact download completed successfully.
+2026-10-18T09:03:42.4494451Z SHA256 digest of downloaded artifact is 93d5b1b08644d34cff9e797e15c6fcafe38942771b95e1aa162eb660a36e5ae7
+2026-10-18T09:03:42.4495128Z Artifact download completed successfully.
+2026-10-18T09:03:42.4495467Z Total of 4 artifact(s) downloaded
+2026-10-18T09:03:42.4499948Z Download artifact has finished successfully
+2026-10-18T09:03:42.4682075Z ##[group]Run python3 packaging/release.py --operation candidate --directory retained --tag "$TAG" --source-commit "$SOURCE" --workflow-commit "$GITHUB_SHA" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"
+2026-10-18T09:03:42.4683670Z [36;1mpython3 packaging/release.py --operation candidate --directory retained --tag "$TAG" --source-commit "$SOURCE" --workflow-commit "$GITHUB_SHA" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"[0m
+2026-10-18T09:03:42.4921494Z shell: /usr/bin/bash -e {0}
+2026-10-18T09:03:42.4921796Z env:
+2026-10-18T09:03:42.4922015Z   TAG: v0.1.0
+2026-10-18T09:03:42.4922312Z   SOURCE: 96c8de3a381f74ec8f2b9e93425fb90e17e7e693
+2026-10-18T09:03:42.4922650Z ##[endgroup]
+2026-10-18T09:03:43.3137426Z {
+2026-10-18T09:03:43.3137937Z   "buildInputs": {
+2026-10-18T09:03:43.3138526Z     "go": "1.27.2",
+2026-10-18T09:03:43.3139996Z     "ubuntuBaseImage": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55"
+2026-10-18T09:03:43.3141300Z   },
+2026-10-18T09:03:43.3142439Z   "engineManifestSha256": "3561abc22454d7d52830c4a24826057e5b2cd696d2160a67f3471af2e234f039",
+2026-10-18T09:03:43.3143273Z   "members": {
+2026-10-18T09:03:43.3143659Z     "engine.oci.tar": {
+2026-10-18T09:03:43.3144353Z       "sha256": "41317e722e8b0aa2be67f1bdca2ca819bb64ce81bc5e3ca163ad7814c71692e5",
+2026-10-18T09:03:43.3144892Z       "size": 97154560
+2026-10-18T09:03:43.3145147Z     },
+2026-10-18T09:03:43.3145375Z     "engine/amd64/COPYRIGHT": {
+2026-10-18T09:03:43.3145801Z       "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7",
+2026-10-18T09:03:43.3146237Z       "size": 30807
+2026-10-18T09:03:43.3146462Z     },
+2026-10-18T09:03:43.3146676Z     "engine/amd64/SHA256SUMS": {
+2026-10-18T09:03:43.3147074Z       "sha256": "23f9836a45f181925d95f493b64186aaab4c536674ff102d86af77f4ca8eed6e",
+2026-10-18T09:03:43.3147484Z       "size": 453
+2026-10-18T09:03:43.3147758Z     },
+2026-10-18T09:03:43.3148189Z     "engine/amd64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz": {
+2026-10-18T09:03:43.3148817Z       "sha256": "a3915524e71f1f3f30bcf16e09ed91e984e9604f2f063593d3aa4623431a300a",
+2026-10-18T09:03:43.3149368Z       "size": 1930108
+2026-10-18T09:03:43.3149602Z     },
+2026-10-18T09:03:43.3149839Z     "engine/amd64/engine-build-amd64.txt": {
+2026-10-18T09:03:43.3150277Z       "sha256": "5b03dc2061173964e880571be59aedc4ceb897ea3ae897e40b263c17698f04a8",
+2026-10-18T09:03:43.3150682Z       "size": 40381
+2026-10-18T09:03:43.3150895Z     },
+2026-10-18T09:03:43.3151209Z     "engine/amd64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_amd64.deb": {
+2026-10-18T09:03:43.3151717Z       "sha256": "0356da49260ae12f5695e3617ba7168dd2329efb87ca45515e2e459ba06d776b",
+2026-10-18T09:03:43.3152123Z       "size": 51450
+2026-10-18T09:03:43.3152337Z     },
+2026-10-18T09:03:43.3152632Z     "engine/amd64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_amd64.deb": {
+2026-10-18T09:03:43.3153131Z       "sha256": "00c40a50e293a142ba224f49005809553a02ea0e14d185fc780bac2e0ba331d5",
+2026-10-18T09:03:43.3153543Z       "size": 653642
+2026-10-18T09:03:43.3153766Z     },
+2026-10-18T09:03:43.3153979Z     "engine/arm64/COPYRIGHT": {
+2026-10-18T09:03:43.3154380Z       "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7",
+2026-10-18T09:03:43.3154789Z       "size": 30807
+2026-10-18T09:03:43.3172393Z     },
+2026-10-18T09:03:43.3172663Z     "engine/arm64/SHA256SUMS": {
+2026-10-18T09:03:43.3173234Z       "sha256": "f1c79411f8c7bb164730da1e514cbc16e74bf93ee4bf2c94553604b6e4c6209d",
+2026-10-18T09:03:43.3174059Z       "size": 453
+2026-10-18T09:03:43.3174476Z     },
+2026-10-18T09:03:43.3175309Z     "engine/arm64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz": {
+2026-10-18T09:03:43.3175992Z       "sha256": "a3915524e71f1f3f30bcf16e09ed91e984e9604f2f063593d3aa4623431a300a",
+2026-10-18T09:03:43.3176427Z       "size": 1930108
+2026-10-18T09:03:43.3176659Z     },
+2026-10-18T09:03:43.3176905Z     "engine/arm64/engine-build-arm64.txt": {
+2026-10-18T09:03:43.3177609Z       "sha256": "69b266250e99627dcef488337a4b4241b4893228a9175f0f3a5fb5a4a935faef",
+2026-10-18T09:03:43.3178044Z       "size": 40134
+2026-10-18T09:03:43.3178267Z     },
+2026-10-18T09:03:43.3178587Z     "engine/arm64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb": {
+2026-10-18T09:03:43.3179119Z       "sha256": "64f169e241dfd6e57d7f73ca7c8723c0b6ff68db504ac6acd4b572dd56792498",
+2026-10-18T09:03:43.3179747Z       "size": 48642
+2026-10-18T09:03:43.3179974Z     },
+2026-10-18T09:03:43.3180276Z     "engine/arm64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb": {
+2026-10-18T09:03:43.3180783Z       "sha256": "39593e287fc63b3f56b989814f603b962d72e8cde3b230ccd23f8ca8908cdd74",
+2026-10-18T09:03:43.3181199Z       "size": 613934
+2026-10-18T09:03:43.3181433Z     },
+2026-10-18T09:03:43.3181663Z     "engine/engine-manifest.json": {
+2026-10-18T09:03:43.3182078Z       "sha256": "3561abc22454d7d52830c4a24826057e5b2cd696d2160a67f3471af2e234f039",
+2026-10-18T09:03:43.3182487Z       "size": 3237
+2026-10-18T09:03:43.3182721Z     },
+2026-10-18T09:03:43.3183129Z     "native/autobyteus-nfs-0.1.0-darwin-amd64.tar.gz": {
+2026-10-18T09:03:43.3183606Z       "sha256": "ead137bd6fa1b15166ac980c704dc1468f99133df7e909440f784c63a97bcae2",
+2026-10-18T09:03:43.3184097Z       "size": 6363921
+2026-10-18T09:03:43.3184356Z     },
+2026-10-18T09:03:43.3184628Z     "native/autobyteus-nfs-0.1.0-darwin-arm64.tar.gz": {
+2026-10-18T09:03:43.3185085Z       "sha256": "c13a1a5607534a5926432623d5229ec2e21e93e6a99fb55a97ad64f857f9d7d7",
+2026-10-18T09:03:43.3185490Z       "size": 5929938
+2026-10-18T09:03:43.3185717Z     },
+2026-10-18T09:03:43.3185987Z     "native/autobyteus-nfs-0.1.0-linux-amd64.tar.gz": {
+2026-10-18T09:03:43.3186458Z       "sha256": "cd1145984a6baf5645ef3a11ebc7488bbe5425a8691a2cc62b405b3fb59da0c2",
+2026-10-18T09:03:43.3186875Z       "size": 6952308
+2026-10-18T09:03:43.3187098Z     },
+2026-10-18T09:03:43.3187364Z     "native/autobyteus-nfs-0.1.0-linux-arm64.tar.gz": {
+2026-10-18T09:03:43.3187829Z       "sha256": "52f8333c1405a9a75639d83a08cd8fa1b72cd86a1637da7df82511ce5ef1d832",
+2026-10-18T09:03:43.3188243Z       "size": 6347437
+2026-10-18T09:03:43.3188468Z     }
+2026-10-18T09:03:43.3188669Z   },
+2026-10-18T09:03:43.3189165Z   "oci": {
+2026-10-18T09:03:43.3189761Z     "children": {
+2026-10-18T09:03:43.3190553Z       "linux-amd64": "sha256:d6c8d486601c23c7c53fc4b96669f610cc8b4be03f714af701e496d24a913e95",
+2026-10-18T09:03:43.3191605Z       "linux-arm64": "sha256:1fae5fd7137d4a35acf4ece43a99e1b4ff243cb8695cfef403f655c438a867df"
+2026-10-18T09:03:43.3192093Z     },
+2026-10-18T09:03:43.3192460Z     "index": "sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb"
+2026-10-18T09:03:43.3192894Z   },
+2026-10-18T09:03:43.3193142Z   "repository": "AutoByteus/autobyteus-nfs",
+2026-10-18T09:03:43.3193465Z   "runAttempt": 1,
+2026-10-18T09:03:43.3193714Z   "runId": 39113335636,
+2026-10-18T09:03:43.3193959Z   "schema": 1,
+2026-10-18T09:03:43.3194270Z   "sourceCommit": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693",
+2026-10-18T09:03:43.3194801Z   "sourceHash": "09dad2e26feeefe71591e9a4fdf3431ffb6d884c3bd9e1181a8ed79fbefbec9d",
+2026-10-18T09:03:43.3195257Z   "version": "v0.1.0",
+2026-10-18T09:03:43.3195547Z   "workflow": ".github/workflows/release-nfs.yml",
+2026-10-18T09:03:43.3195951Z   "workflowCommit": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693"
+2026-10-18T09:03:43.3196304Z }
+2026-10-18T09:03:43.3279499Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-18T09:03:43.3279981Z with:
+2026-10-18T09:03:43.3280213Z   name: nfs-release-candidate
+2026-10-18T09:03:43.3280500Z   path: retained/
+2026-10-18T09:03:43.3280742Z   retention-days: 90
+2026-10-18T09:03:43.3280994Z   if-no-files-found: error
+2026-10-18T09:03:43.3281262Z   compression-level: 6
+2026-10-18T09:03:43.3281508Z   overwrite: false
+2026-10-18T09:03:43.3281757Z   include-hidden-files: false
+2026-10-18T09:03:43.3282027Z ##[endgroup]
+2026-10-18T09:03:43.4922332Z (node:2439) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-18T09:03:43.4923744Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-18T09:03:43.5028755Z With the provided path, there will be 19 files uploaded
+2026-10-18T09:03:43.5035681Z Artifact name is valid!
+2026-10-18T09:03:43.5036298Z Root directory input is valid!
+2026-10-18T09:03:44.0593594Z Beginning upload of artifact content to blob storage
+2026-10-18T09:03:44.3493152Z (node:2439) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-18T09:03:45.8900355Z Uploaded bytes 8388608
+2026-10-18T09:03:46.1941143Z Uploaded bytes 16777216
+2026-10-18T09:03:46.3203738Z Uploaded bytes 25165824
+2026-10-18T09:03:46.3443182Z Uploaded bytes 33554432
+2026-10-18T09:03:46.6067441Z Uploaded bytes 41943040
+2026-10-18T09:03:46.6491355Z Uploaded bytes 50331648
+2026-10-18T09:03:46.7342088Z Uploaded bytes 58720256
+2026-10-18T09:03:46.7704236Z Uploaded bytes 67108864
+2026-10-18T09:03:47.0106790Z Uploaded bytes 75497472
+2026-10-18T09:03:47.1396158Z Uploaded bytes 83886080
+2026-10-18T09:03:47.4278138Z Uploaded bytes 92274688
+2026-10-18T09:03:47.6755184Z Uploaded bytes 100663296
+2026-10-18T09:03:47.9574803Z Uploaded bytes 109051904
+2026-10-18T09:03:48.2058565Z Uploaded bytes 117440512
+2026-10-18T09:03:48.4782092Z Uploaded bytes 125829120
+2026-10-18T09:03:48.6497751Z Uploaded bytes 127151613
+2026-10-18T09:03:48.7710216Z Finished uploading artifact content to blob storage!
+2026-10-18T09:03:48.7713528Z SHA256 digest of uploaded artifact zip is e20fa2438f686646ab188d6c5356d090dd6baa3c723e281f89cb8a8ec266a4dc
+2026-10-18T09:03:48.7715625Z Finalizing artifact upload
+2026-10-18T09:03:49.0904084Z Artifact nfs-release-candidate.zip successfully finalized. Artifact ID 12131531399
+2026-10-18T09:03:49.0905542Z Artifact nfs-release-candidate has been successfully uploaded! Final size is 127151613 bytes. Artifact ID is 12131531399
+2026-10-18T09:03:49.0912332Z Artifact download URL: https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39113335636/artifacts/12131531399
+2026-10-18T09:03:49.1157437Z Post job cleanup.
+2026-10-18T09:03:49.2030985Z [command]/usr/bin/git version
+2026-10-18T09:03:49.2084771Z git version 2.55.0
+2026-10-18T09:03:49.2130893Z Temporarily overriding HOME='/home/runner/work/_temp/2ab4a64b-7166-460a-a8e2-9272b0f172c8' before making global git config changes
+2026-10-18T09:03:49.2148208Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-18T09:03:49.2150131Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-18T09:03:49.2181327Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-18T09:03:49.2232829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-18T09:03:49.2551026Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-18T09:03:49.2602355Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-18T09:03:49.2963438Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-18T09:03:49.3032243Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-18T09:03:49.3573379Z Cleaning up orphan processes
+2026-10-18T09:03:49.3867073Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

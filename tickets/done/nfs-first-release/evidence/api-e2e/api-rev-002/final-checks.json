@@ -1,0 +1,65 @@
+{
+  "sourceCount": 119,
+  "sourceMismatches": [],
+  "protectedCount": 951,
+  "protectedMismatches": [],
+  "API001HistoryPrefixPreserved": true,
+  "deliveryCurrentHashes": {
+    "tickets/in-progress/nfs-first-release/delivery-revision-record.md": "26ed7f5bd6e04eeb0a8545fba17aa6f746328257fb0acffc727ab25c40b7d296",
+    "tickets/in-progress/nfs-first-release/docs-sync-report.md": "f30314d4ea899d7ac16ebff7fc456c39d725f1032504057a6aefcedb9b6eb7c6",
+    "tickets/in-progress/nfs-first-release/handoff-summary.md": "fbee08c40ad175e21cb1620d8bd4209a10c49ee764b17c47a3d5822638f38ff5",
+    "tickets/in-progress/nfs-first-release/release-deployment-report.md": "758056c3e9aa4d37c8de532fb1c3f2ab86f5a85cc8dc49911cdf3a54d945ea4c",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/post-staging-observation.json": "984b91577532b3d5e409dee7a42f3c9b75b14acca80c1d2e29e4cfe9545b3b1b",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/staged-source-receipt.json": "832f48366e4839588a26ab131ccfe5a14922b538c75a79af8e8ae95d0a19bba1",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/final-checks.json": "4d03671a0c1d8e69f8fb8b0a2fecb8de8644901fea34737e3c56024c596f4d82",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/routing.json": "7461989d741e11255f24804be09f8648f139b9509f8d6bf4f89181e89cd8daa8",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/post-staging-observation.json": "a3ab923dafa68e883cbe17331dd01927535509005dd6168b9a26dab0fd52b031",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/staged-source-receipt.json": "aa385ede36be361bcbb8f24c23c5fee74c1152f6ca43f6aa90d326dc6a5e3a97",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/final-checks.json": "254deae5dbd992af6df86eba330f66e7dd92cd7e8ac7d6191b1910f160e97e40",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/routing.json": "4d0ccedfb4fc672193391ebec56151b5f9a16c98e3cafaf1edcfce7f4570caff"
+  },
+  "deliveryOwnerChanges": [
+    "tickets/in-progress/nfs-first-release/delivery-revision-record.md",
+    "tickets/in-progress/nfs-first-release/docs-sync-report.md",
+    "tickets/in-progress/nfs-first-release/handoff-summary.md",
+    "tickets/in-progress/nfs-first-release/release-deployment-report.md"
+  ],
+  "deliveryAddedFiles": [
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/final-checks.json",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/post-staging-observation.json",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/routing.json",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-002/staged-source-receipt.json"
+  ],
+  "externalOwnershipDisposition": "DR002 owner updates preserved/unmodified/unstaged; not API edits.",
+  "localTemporaryScratchAbsent": true,
+  "retainedCandidateFinalVerification": true,
+  "retainedRoot": "/Users/normy/nfs-first-candidate-api002-n940gd8s",
+  "rootMode": "0o700",
+  "retainedCandidateFiles": 19,
+  "retainedCandidateBytes": 128126277,
+  "generatedAliasRetainedOutsideRepo": "/Users/normy/nfs-first-candidate-api002-n940gd8s/metadata-alias-control.json",
+  "run": 39113335636,
+  "attempt": 1,
+  "runConclusion": "success",
+  "jobCounts": {
+    "success": 10,
+    "failure": 0,
+    "skipped": 2,
+    "cancelled": 0
+  },
+  "ledgerCount": 50,
+  "ledgerStates": {
+    "Pass": 5,
+    "Fail": 0,
+    "Blocked": 42,
+    "Not Tested": 3
+  },
+  "credentialPatternFiles": [],
+  "ownedRuntimeResourcesCreated": [],
+  "ownedTemporaryProcessesCompleted": true,
+  "platformRunnerDisposal": "Post-job cleanup logged; provider disposal not independently audited",
+  "productOrDurableEditsByAPI": [],
+  "utc": "2026-10-18T09:09:51.849385+00:00",
+  "headBeforeEvidenceCommit": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693",
+  "pass": true
+}

@@ -1,0 +1,22 @@
+{
+  "changedKeys": [
+    "engineImage"
+  ],
+  "limit": "Metadata only. registry.invalid was neither resolved nor contacted, no first-use pull or qualified binary exists.",
+  "originalIdentity": {
+    "version": "v0.1.0",
+    "sourceHash": "09dad2e26feeefe71591e9a4fdf3431ffb6d884c3bd9e1181a8ed79fbefbec9d",
+    "engineImage": "ghcr.io/autobyteus/autobyteus-nfs@sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb",
+    "qualifiedTargets": []
+  },
+  "aliasIdentity": {
+    "version": "v0.1.0",
+    "sourceHash": "09dad2e26feeefe71591e9a4fdf3431ffb6d884c3bd9e1181a8ed79fbefbec9d",
+    "engineImage": "registry.invalid/owned-api002/nfs@sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb",
+    "qualifiedTargets": []
+  },
+  "sameNonImageMetadata": true,
+  "generatedAliasRetainedOutsideRepository": "/Users/normy/nfs-first-candidate-api002-n940gd8s/metadata-alias-control.json",
+  "generatedAliasSha256": "ac6cee187d41706e1c86202c1b37c02ba2f391a6cc3b7d6163594f4b408e9854",
+  "relocation": "Generated runtime alias metadata was emitted into evidence during execution then moved to owned retained directory before staging. Invocation log preserves its original output path; no generated runtime metadata committed."
+}

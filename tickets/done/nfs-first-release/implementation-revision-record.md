@@ -1,0 +1,176 @@
+# Implementation Revision Record — nfs-first-release
+
+Current code and implementation-handoff.md are authoritative; this record locates
+implementation rounds, not independent acceptance. Prior extraction/filesystem
+records do not belong to this new Task.
+
+## Revision Index
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-001 | Architecture Reviewer / design-review-report.md / ARCH-REV-001 | N/A | Initial Baseline | R2/SR002, SR003, ARCH-REV-001; CRR/API/DR N/A | Implementation Complete; local checks passed; source review required |
+
+## Revision Entries
+
+### IR-001 — Identity-bound candidate and normal-release publication
+
+- Trigger: original ARCH-REV-001 Pass resumed after poweroff; not a duplicate round.
+- Task: autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5.
+- Prior authoritative result: **N/A** (initial implementation baseline).
+- Current result: **Implementation Complete**, Large/High confirmed; independent
+  source review next. No actual hosted/qualified/signed/published result claimed.
+- Related solution: R2/SR002 Approved, SR003 Ready. Architecture: ARCH-REV-001.
+  Code/API/Delivery revisions and triggering findings: **N/A** for this Task.
+- Input review commit2051fd9559f4f4fa7beae68723429f8199b50004; source commit
+  **886b55e1cf88f3f696334bd5e7b8c374946a594d** on codex/nfs-first-release.
+- Baseline reason: implement BEH001–006 / REQ001–010 / AC001–008's release-control
+  paths without pretending that implementation-local tests satisfy actual release
+  acceptance. Default qualification remains empty.
+- Delta: manual candidate/fresh/resume workflow; exact source/run/attempt/artifact,
+  two-arch engine and complete OCI identities; structured mode/physical/user evidence
+  validator; isolated signing with Accepted gate; retained final payload; annotated
+  exact tag/draft/non-clobber/digest-preserving/public-download reconciliation;
+  bounded installer manifest/checksum integrity; normal-version independent docs.
+- Main areas: .github/workflows/release-nfs.yml; packaging/release.py,
+  release_support/{identity,candidate,qualification,payload,publication}.py,
+  sign-macos.sh; scripts/public/nfs/install.sh; scripts/tests/test_nfs_*.py;
+  root/packaging release/testing/README documentation. Go runtime, engine recipes,
+  pins, licensing and ordinary CI are byte-preserved.
+- Local validation: final independent Mac/Linux arm64 native race7packages,
+  vet/build/version; Python38 (Mac37executed+1skip; Linux35+3); four compile targets;
+  workflow/Bash/shellcheck; expected empty-lock refusal; real nonroot skopeo on
+  synthetic OCI; six detected mutations; scope/hash/import/size audit.
+  implementation-evidence/ir-001/checks-and-limits.md owns detailed attribution.
+- Local corrections: protected-source and host-bridged-lock harness placement;
+  skopeo rootless archive-reader issue corrected using verified unchanged bytes in
+  an owned layout. No runtime guard or design-policy change. All attempts retained.
+- Next route: configured Large/High independent Code Review, selected by fresh
+  rules in implementation-evidence/ir-001/routing.json before handoff.
+- Remaining risks: actual hosted four-target candidate, physical/current-user
+  qualification, provisioned credential validation/Accepted notarization, current
+  main finalization, registry visibility/recovery, public downloads/install/signature
+  and actual first normal v0.1.0 release remain API/Delivery responsibilities.
+  No push/tag/release/deployment/TaskDone/user verification or terminal claim.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-002 | Code Reviewer / code-review-report.md / CRR002 | CR-001 = API R03-F001 | Local Fix | R2/SR002, SR003, ARCH001, CRR001–002, API001, DR001 staging context | Correction complete; local checks pass; targeted source re-review required |
+
+### IR-002 — Nonempty native metadata argv under supported Mac Bash
+
+- Trigger: CRR002 failure-origin review ca048be893516d79bc1ea895b929af17580e25dd,
+  confirming actual candidate39111348848/attempt1 fails both Mac jobs before
+  metadata/native tests. CR-001 = API R03-F001; earlier local/source review gap.
+- Classification: **Local Fix**, existing **Large/High** unchanged. No requirement
+  or design change; R2/SR002 Approved / SR003 Ready / ARCH001 retained.
+- Prior authoritative implementation: IR001 source886b55e; historical CRR001
+  sourcePass100. Current review is CRR002 Fail and API001 Fail62.86%; those verdicts
+  remain owned by those specialists, not silently replaced by these local results.
+- Current implementation result: **Local Fix Complete / ready for targeted source
+  re-review**, source8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34. Related DR001 only
+  staged reviewed branch518f4b51 for candidate execution, not finalization or release.
+- Approved basis: SCN001/BEH001/REQ001–002/AC001 and dependent AC007; fresh qualified
+  invocation preserves BEH002/003. No runtime/storage/signing policy deviation.
+- Delta: `.github/workflows/release-nfs.yml` native metadata array now begins with
+  all mandatory arguments, then appends exact fresh flags; quoted expansion is
+  always nonempty under Bash3.2 nounset. No masking or shell/target replacement.
+- Durable test: `scripts/tests/test_nfs_release_workflow.py` executes actual strict
+  prefix/JSON pipeline under /bin/bash with inert release-command boundary; exact
+  argv candidate/fresh, metadata-error propagation, missing input and pipefail.
+  TESTING.md records this new scope and limitations.
+- Validation: original workflow fails new regression (7tests,5assertion failures),
+  corrected7pass; independent full41tests/40executed+1child skip; actionlint,
+  prefix syntax/shellcheck, empty-lock refusal and three guard mutations pass their
+  expected outcomes. Local shell3.2.57 arm64; TARGET strings are not amd64 execution.
+- Preservation: other116/119 source inputs, all eight Delivery untracked files and
+  earlier history unchanged. Owned scratch removed; no new live/remote resources.
+- Next: fresh Large/High Local Fix source-review rule (ir-002/routing.json), then
+  API-owned NEW current hosted candidate/full aggregation. Workflow source hash
+  changed; do not qualify or relabel failed fragments. Current empty-lock hash
+  26af7e5bcab00ae22d4bdebe1820c6d38b0dc51a44f1b834036334ea79528298.
+- Remaining: physical/genuine-user/signing/current-main/publication/download gates;
+  six secrets already provisioned, not reprovisioned or proven. No target merge,
+  push, publication, TaskDone/user verification/Terminal claim. Detailed commands,
+  raw results and limits: implementation-evidence/ir-002/checks-and-limits.md.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-003 | Solution Designer SR004 replacement; Architecture Reviewer ARCH002 Pass | N/A — approved behavior change | Implementation complete | R3/SR004, ARCH002; historical IR002/CRR003/API002/DR003 context | Local checks pass; independent source review required |
+
+### IR-003 — Release-first readiness and explicit deferred field validation
+
+- Trigger: reviewed e08e078a3303c1ef073c45c9e0b5a044e5dd898c, SD bc1f1bb;
+  direct user approved official signed normal v0.1.0 first, testing/fixes afterward.
+  SR004/ARCH002 supersede old physical/user prepublication sequencing, not signing,
+  integrity or host protections. Not another CR-001 local fix or retrospective failure.
+- Prior implementation IR002 complete/source8436d0c, CRR003 Pass; API002 Blocked73.57
+  and complete old candidate remain historical exact-input outcomes. Current new
+  CRR/API result N/A — not executed yet; DR003 source of changed user direction.
+- Current source3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3. **Large/High confirmed**.
+  Implementation complete; no approval/design deviation or scope widening.
+- BEH001–006 / UC001–005 / AC001–008 mapped in current handoff. New readiness.py
+  replaces qualification.py; lock exact fields/engine invalidation, --release and
+  schema2 releaseTargets + deferred fieldValidation replace old authority aliases.
+  All metadata/preflight/payload/publication/resume consumers use the one owner.
+- Go release-only strict schema/unknown/duplicate/status/target/equality admission,
+  named FieldValidation and post-success stderr notice; exact version stdout and
+  installer pre-write integrity retained. Host config.Decode/state/consent/storage
+  owners unchanged. No live setup, arbitrary override or old-schema fallback.
+- Provenance schema2 binds readiness/deferred state; mandatory public notes disclosure
+  verified even after a tampered payload is rehashed. Signing/immutable same-byte
+  retry/exact engine/whole OCI sequence retained; four targets unchanged. Guides
+  aligned with approved release-first policy and explicit postpublication custody.
+- Local evidence: independent native Mac arm64 and owned Linux arm64 container
+  Go1.27.2 race7packages/vet/build/version pass; four-target compile only; final
+  Python45 with44 executed+1skip Mac and42+3skips Linux; actionlint/Bash3.2/shellcheck;
+  eight detected mutants; null-readiness refusal; preservation/size/source audit.
+  Last change after native checks was a fetch docstring only, then current Python
+  rerun; exact sequence/limits in ir-003/checks-and-limits.md, no hidden failures.
+- Source default-null-engine/readiness hash
+  d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac;
+  future measured-engine hash differs. Real readiness remains null, not fixtures.
+- Protected16 Delivery files and old API002 candidate untouched; prior IR prefix
+  retained. Owned scratch/containers removed (cleanup.json). No remote write,
+  credential access, engine rebuild, public download/signature or mounted-NFS proof.
+- Next: fresh configured Code Review route, then affected API/new complete actual
+  hosted candidate and Delivery actual readiness/signed publication/public receipts.
+  Field/shared-filesystem/physical/user tests deferred—not publication/closure gates;
+  Delivery→terminalSD→requestingPM owns the approved plan. No TaskDone/Terminal claim.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-004 | Code Reviewer / code-review-report.md / CRR004 | CR-002 | Local Fix | R3/SR004, ARCH002, CRR004; API002/DR003 historical context | Two-import cleanup complete; local checks pass; targeted source re-review required |
+
+### IR-004 — Remove two unused Python local bindings
+
+- Trigger CRR004 Fail99, review484c85c and receipt0d8d927. Prior IR003 implementation
+  complete/source3d2710b; current reviewer Fail99 solely mandatory Core7 cleanup.
+  No runtime/design defect established, no new approval or broad unused-code work.
+- Current result **Local Fix Complete / ready for targeted source re-review**;
+  source850dfeb97e2ec396b2b134e760dc9ee802873d6b. R3/SR004 Approved / SR004 Ready / ARCH002,
+  **Large/High confirmed**. No requirement/design/behavior change.
+- Delta: only manifest.py `LOCK` and nfs_release_fixture.py `readiness` local import
+  bindings removed. Live source.py/build.py LOCK, readiness module/consumers and all
+  assertions preserved. BEH001–006/AC001–008 unchanged; recipe/source identity changes
+  affect BEH001/002/AC001 next-candidate provenance, not intended runtime behavior.
+- Fresh checks: independent120-input/private HOME/TMP copy, Python3.9.6 full45
+  collected44 executed1 expected Go-child skip; all executed tests pass. AST/use
+  and reference checks, otherwise identical AST, current source/recipe hashes and
+  expected null-readiness refusal pass. No fresh Go/Linux/hosted/signing/field run.
+- Current default source hash c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60;
+  recipe hash 299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274. Both
+  changed; no new engine built. Other118 source inputs unchanged. NEW complete
+  current-source candidate/affected API still required; old API002 remains historical.
+- Prior history byte prefix and16 Delivery untracked files preserved; own scratch
+  removed. No new resources, source push, target merge, release or credential work.
+- Next fresh configured Large/High Local Fix source-review route (ir-004/routing.json).
+  API current-delta N/A—not executed; DR003 remains context, no outcome overwritten.
+  Both Mac actual signatures/Accepted notarization, final payload/publication/download
+  and current-main gates remain. Deferred field/user plan is not a closure hold.
+  No TaskDone/user verification/Terminal. Detailed evidence: ir-004/checks-and-limits.md.

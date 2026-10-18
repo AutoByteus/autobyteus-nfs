@@ -1,0 +1,26 @@
+{
+  "cleanup": "Complete",
+  "crossCompile": "darwin/linux arm64/amd64, compilation only",
+  "exactIndependentNativeAndLinuxInputs": true,
+  "goRacePackagesPerNativeOS": 7,
+  "goVetBuildVersion": "pass macOS26.5.2 arm64 and Ubuntu24.04 arm64 guest",
+  "hostedSigningPhysicalUserPublicationQualification": "NOT performed; default lock remains unqualified",
+  "inputReviewCommit": "2051fd9559f4f4fa7beae68723429f8199b50004",
+  "linuxPython": {
+    "collected": 38,
+    "executed": 35,
+    "skipped": 3
+  },
+  "mutationsDetected": 6,
+  "nativeCheckGroups": 14,
+  "nativePython": {
+    "collected": 38,
+    "executed": 37,
+    "skipped": 1
+  },
+  "realSkopeoTransport": "1.13.3 all-child preserve-digests success on synthetic OCI; identical index/children",
+  "result": "Implementation local checks passed; independent source review required",
+  "sourceCommit": "886b55e1cf88f3f696334bd5e7b8c374946a594d",
+  "sourceHashUnqualified": "8c1bcc13194f919c41cf4de9ad825a48acb4281bd558374ac77cbb1426820bac",
+  "sourceInputCount": 119
+}

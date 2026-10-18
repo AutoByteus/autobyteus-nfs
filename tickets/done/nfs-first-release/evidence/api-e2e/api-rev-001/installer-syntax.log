@@ -1,0 +1,2 @@
+$ /bin/bash -n scripts/public/nfs/install.sh
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source

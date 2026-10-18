@@ -1,0 +1,2 @@
+$ /usr/bin/python3 /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py --tag v0.1.1 --engine-image registry.invalid/owned-api002/nfs@sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb --engine-manifest /Users/normy/nfs-first-candidate-api002-n940gd8s/candidate/engine/engine-manifest.json --candidate /Users/normy/nfs-first-candidate-api002-n940gd8s/candidate
+Release refused: Candidate metadata inputs differ

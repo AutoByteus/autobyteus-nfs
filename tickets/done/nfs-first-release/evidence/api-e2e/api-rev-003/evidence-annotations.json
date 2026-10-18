@@ -1,0 +1,189 @@
+{
+  "step": "Add reader context only; no execution rerun or captured-output edit",
+  "utc": "2026-10-18T10:40:08.210765+00:00",
+  "commit": "585d416c2746cf2963058d591b0753d0db8088f5",
+  "cases": "R01\u2013R05/C01",
+  "environment": "report L/H/A",
+  "files": [
+    {
+      "file": "actionlint.log",
+      "originalBodySha256": "6f21df8b5f43255f0cf57a5282c790307a0d0a6c86261c94c733ecc8ddcd81ff",
+      "annotationBytes": 318
+    },
+    {
+      "file": "attempts.md",
+      "originalBodySha256": "73d0fb1c85ea2c570d388b5e3287b767add58fec04d58cf1272e0c4abace586f",
+      "annotationBytes": 336
+    },
+    {
+      "file": "bash-version.log",
+      "originalBodySha256": "52cfe1780bd27d3fb407c010313416eebfb5d53f09b9f7ef9d1a02d06edf74e4",
+      "annotationBytes": 320
+    },
+    {
+      "file": "candidate-envelope.log",
+      "originalBodySha256": "4e5e6b7aa52da4947a2701789af5c8c692388a9fd71d19665996365764ce1268",
+      "annotationBytes": 326
+    },
+    {
+      "file": "candidate-fetch.log",
+      "originalBodySha256": "f09f88efd81fc5fe7e5c957cece652cb5e9eb2ca886e9c032bb382444cb22e28",
+      "annotationBytes": 323
+    },
+    {
+      "file": "candidate-metadata-alias.log",
+      "originalBodySha256": "df0fc1a6fff3825384cec7c5cd7fcb528f92d5232e9d5078d806ff4e37fc2c21",
+      "annotationBytes": 332
+    },
+    {
+      "file": "candidate-metadata-wrong-digest.log",
+      "originalBodySha256": "ace5fca5d82be0aa586fcc3d33970b552be9dc56cb51ae16bc4b664f912ee7f9",
+      "annotationBytes": 339
+    },
+    {
+      "file": "candidate-metadata-wrong-version.log",
+      "originalBodySha256": "97449b39f7b6509b0ecff7375f17a3b2d0c37f21b4608022946d59b8c3748c2e",
+      "annotationBytes": 340
+    },
+    {
+      "file": "candidate-readiness-refusal.log",
+      "originalBodySha256": "0635b3175092ae3420991c5e7cda2be13a97393ecea20dc523efe263ab7ab5aa",
+      "annotationBytes": 335
+    },
+    {
+      "file": "candidate-verify.log",
+      "originalBodySha256": "a79330ad49727f116f0fba869eee8e61cc2540f63e0f96325e2eb8d19651db65",
+      "annotationBytes": 324
+    },
+    {
+      "file": "collect-hosted.py",
+      "originalBodySha256": "d0da237a207140e73e03a1f2995d6f7a785968d6dd5685423ef5f8d9383409be",
+      "annotationBytes": 367
+    },
+    {
+      "file": "dispatch-candidate.py",
+      "originalBodySha256": "e4e552cf6708badf893ebc583b96b17bf7c8ea25d5c3dd4a9e9955d8b5a33b11",
+      "annotationBytes": 371
+    },
+    {
+      "file": "dispatch.log",
+      "originalBodySha256": "5f1e06661397446402977976a1e098e3351b0600b348a9dc6dda35131da9e26a",
+      "annotationBytes": 362
+    },
+    {
+      "file": "fetch-actual-candidate.py",
+      "originalBodySha256": "69b129e9a9e81fb560abee302594dda7b7067d739adf60dbe6a61811aca5b604",
+      "annotationBytes": 329
+    },
+    {
+      "file": "finalize-audit.py",
+      "originalBodySha256": "8df5e7ea8c05b65e12a6e8b88e6c51683cfa7ae7ffe2fc0a8f21a1cfef51c23d",
+      "annotationBytes": 321
+    },
+    {
+      "file": "initialize.py",
+      "originalBodySha256": "b71c43e460459c2adba3154539e3a101cfb54d55e2758daf5674562e657b4aac",
+      "annotationBytes": 327
+    },
+    {
+      "file": "local-console.log",
+      "originalBodySha256": "a4da455a84ed629aaa2f2ee3fef984a677dddafe18c487ce66e81182c84794f7",
+      "annotationBytes": 325
+    },
+    {
+      "file": "monitor-hosted.py",
+      "originalBodySha256": "5185f1f88a5c5ea8f31ff50c82d46c85e817a53d7defade5cb28cc328b53eb1f",
+      "annotationBytes": 367
+    },
+    {
+      "file": "prefix-shellcheck.log",
+      "originalBodySha256": "3c228c5f130a341e4520545ea17b87bc761f8e9538e6f7afe21dcdb555f63766",
+      "annotationBytes": 325
+    },
+    {
+      "file": "prefix-syntax.log",
+      "originalBodySha256": "1b962cc3f3012bc1e6eb01379bbcde9e26f324ab188cf993bf3e2dd6de1773fb",
+      "annotationBytes": 321
+    },
+    {
+      "file": "probe-envelope-refusal.py",
+      "originalBodySha256": "ac24dbcfe68d0c407aba98e668ff035063c4775af42ca626dd8fdbedd8ce7d6d",
+      "annotationBytes": 329
+    },
+    {
+      "file": "python-all.log",
+      "originalBodySha256": "28e472d92374e13b4c79203f474765e6d71801fe04bad675f7fbfd08aa5b53ae",
+      "annotationBytes": 318
+    },
+    {
+      "file": "python-version.log",
+      "originalBodySha256": "f505ca9dab0f4fea74f5e24ec4b88707018cd2e9adfd8c7115d57bfb3d121bb0",
+      "annotationBytes": 322
+    },
+    {
+      "file": "readiness-refusal.log",
+      "originalBodySha256": "da61298678404a1c932a8ab972becb64eb9ebac9025a40f9e15bd4f97cdcfd39",
+      "annotationBytes": 325
+    },
+    {
+      "file": "recipe-hash-corrected.log",
+      "originalBodySha256": "11b46d658df4cdca6f300a04b7fcf91f78cd5c007aae0f1c4b5ba867aff98e06",
+      "annotationBytes": 329
+    },
+    {
+      "file": "recipe-hash.log",
+      "originalBodySha256": "c7bcb40b62e3b799f5da2d9a04a09eb817331c00429f982860268ba108b795d8",
+      "annotationBytes": 319
+    },
+    {
+      "file": "records-focused.log",
+      "originalBodySha256": "e4172541152d6cc80db88d2a493d4ea8a6156fcbf074dffbc78b7fb3691a6932",
+      "annotationBytes": 323
+    },
+    {
+      "file": "resume-local.py",
+      "originalBodySha256": "ebcff5b0a1dfcf3100b0af6a087401fc0d8454799c106517907ae47e645df763",
+      "annotationBytes": 319
+    },
+    {
+      "file": "run-local.py",
+      "originalBodySha256": "819326638e194c3bb9799a3ab0323ddc828d9a13fa4f928902d3a4e6ef68efd6",
+      "annotationBytes": 320
+    },
+    {
+      "file": "shell-syntax.log",
+      "originalBodySha256": "a66975f42d21dde77d41a0aa854232dd44dc969ded4377f3a43f9a92597cc7b3",
+      "annotationBytes": 320
+    },
+    {
+      "file": "shellcheck.log",
+      "originalBodySha256": "b97103473b3e6eac94af68655de1a613df5bf990534eee432f35fd0d3332d7b7",
+      "annotationBytes": 318
+    },
+    {
+      "file": "skill-update.md",
+      "originalBodySha256": "48bba2506f0185d03a21fc92b895817adf6748df4807472d7695747b016eb64d",
+      "annotationBytes": 346
+    },
+    {
+      "file": "smoke-candidate-native.py",
+      "originalBodySha256": "dad86418d2a9e4db4c740ce8f328d33017997210ffe8da68b5234892916b5058",
+      "annotationBytes": 329
+    },
+    {
+      "file": "source-hash.log",
+      "originalBodySha256": "2f91e66b1c912f00c3392ff808e5310b529dffbe28a5a497ee59c48670a7594c",
+      "annotationBytes": 319
+    },
+    {
+      "file": "validation-plan.md",
+      "originalBodySha256": "4cc2ae55e19049e423df31637a96650e7ef04c7b12c7e0c439e3059d8e5cf5f4",
+      "annotationBytes": 349
+    },
+    {
+      "file": "workflow-current.log",
+      "originalBodySha256": "8b6ffc1272673155679c6a9c6626100781573b468ad1c164993e9dce850a9d8f",
+      "annotationBytes": 324
+    }
+  ]
+}

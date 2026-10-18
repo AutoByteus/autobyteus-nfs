@@ -1,0 +1,98 @@
+$ /usr/bin/python3 packaging/release.py --operation verify-candidate --directory /Users/normy/nfs-first-candidate-api002-n940gd8s/candidate
+{
+  "buildInputs": {
+    "go": "1.27.2",
+    "ubuntuBaseImage": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55"
+  },
+  "engineManifestSha256": "3561abc22454d7d52830c4a24826057e5b2cd696d2160a67f3471af2e234f039",
+  "members": {
+    "engine.oci.tar": {
+      "sha256": "41317e722e8b0aa2be67f1bdca2ca819bb64ce81bc5e3ca163ad7814c71692e5",
+      "size": 97154560
+    },
+    "engine/amd64/COPYRIGHT": {
+      "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7",
+      "size": 30807
+    },
+    "engine/amd64/SHA256SUMS": {
+      "sha256": "23f9836a45f181925d95f493b64186aaab4c536674ff102d86af77f4ca8eed6e",
+      "size": 453
+    },
+    "engine/amd64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz": {
+      "sha256": "a3915524e71f1f3f30bcf16e09ed91e984e9604f2f063593d3aa4623431a300a",
+      "size": 1930108
+    },
+    "engine/amd64/engine-build-amd64.txt": {
+      "sha256": "5b03dc2061173964e880571be59aedc4ceb897ea3ae897e40b263c17698f04a8",
+      "size": 40381
+    },
+    "engine/amd64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_amd64.deb": {
+      "sha256": "0356da49260ae12f5695e3617ba7168dd2329efb87ca45515e2e459ba06d776b",
+      "size": 51450
+    },
+    "engine/amd64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_amd64.deb": {
+      "sha256": "00c40a50e293a142ba224f49005809553a02ea0e14d185fc780bac2e0ba331d5",
+      "size": 653642
+    },
+    "engine/arm64/COPYRIGHT": {
+      "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7",
+      "size": 30807
+    },
+    "engine/arm64/SHA256SUMS": {
+      "sha256": "f1c79411f8c7bb164730da1e514cbc16e74bf93ee4bf2c94553604b6e4c6209d",
+      "size": 453
+    },
+    "engine/arm64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz": {
+      "sha256": "a3915524e71f1f3f30bcf16e09ed91e984e9604f2f063593d3aa4623431a300a",
+      "size": 1930108
+    },
+    "engine/arm64/engine-build-arm64.txt": {
+      "sha256": "69b266250e99627dcef488337a4b4241b4893228a9175f0f3a5fb5a4a935faef",
+      "size": 40134
+    },
+    "engine/arm64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb": {
+      "sha256": "64f169e241dfd6e57d7f73ca7c8723c0b6ff68db504ac6acd4b572dd56792498",
+      "size": 48642
+    },
+    "engine/arm64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb": {
+      "sha256": "39593e287fc63b3f56b989814f603b962d72e8cde3b230ccd23f8ca8908cdd74",
+      "size": 613934
+    },
+    "engine/engine-manifest.json": {
+      "sha256": "3561abc22454d7d52830c4a24826057e5b2cd696d2160a67f3471af2e234f039",
+      "size": 3237
+    },
+    "native/autobyteus-nfs-0.1.0-darwin-amd64.tar.gz": {
+      "sha256": "ead137bd6fa1b15166ac980c704dc1468f99133df7e909440f784c63a97bcae2",
+      "size": 6363921
+    },
+    "native/autobyteus-nfs-0.1.0-darwin-arm64.tar.gz": {
+      "sha256": "c13a1a5607534a5926432623d5229ec2e21e93e6a99fb55a97ad64f857f9d7d7",
+      "size": 5929938
+    },
+    "native/autobyteus-nfs-0.1.0-linux-amd64.tar.gz": {
+      "sha256": "cd1145984a6baf5645ef3a11ebc7488bbe5425a8691a2cc62b405b3fb59da0c2",
+      "size": 6952308
+    },
+    "native/autobyteus-nfs-0.1.0-linux-arm64.tar.gz": {
+      "sha256": "52f8333c1405a9a75639d83a08cd8fa1b72cd86a1637da7df82511ce5ef1d832",
+      "size": 6347437
+    }
+  },
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:d6c8d486601c23c7c53fc4b96669f610cc8b4be03f714af701e496d24a913e95",
+      "linux-arm64": "sha256:1fae5fd7137d4a35acf4ece43a99e1b4ff243cb8695cfef403f655c438a867df"
+    },
+    "index": "sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb"
+  },
+  "repository": "AutoByteus/autobyteus-nfs",
+  "runAttempt": 1,
+  "runId": 39113335636,
+  "schema": 1,
+  "sourceCommit": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693",
+  "sourceHash": "09dad2e26feeefe71591e9a4fdf3431ffb6d884c3bd9e1181a8ed79fbefbec9d",
+  "version": "v0.1.0",
+  "workflow": ".github/workflows/release-nfs.yml",
+  "workflowCommit": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693"
+}

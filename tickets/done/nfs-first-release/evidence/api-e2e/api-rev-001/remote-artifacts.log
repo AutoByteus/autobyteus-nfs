@@ -1,0 +1,2 @@
+$ gh api repos/AutoByteus/autobyteus-nfs/actions/artifacts?per_page=30
+{"total_count":0,"artifacts":[]}

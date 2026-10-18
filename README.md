@@ -3,12 +3,15 @@
 A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
-**Release status:** historical source provenance includes bounded command-only
-Linux filesystem evidence, not fresh extraction/platform qualification. No qualified public
-NFS installer/command is published. The Nodes NFS Guide intentionally disables
-command copy/download. Do not substitute a prototype command or invent a release
-URL. `packaging/release-lock.json` contains architecture-reference pins, not a
-claim that this product has passed the physical/runtime matrix.
+**Release status:** first normal **v0.1.0** release preparation is in progress;
+no successful public release is claimed yet. Current native/build, release-control,
+source-review and release-first authorization evidence has been accepted in
+[the stable v0.1.0 readiness record](packaging/releases/v0.1.0/readiness.json).
+Actual signing/notarization and public download receipts remain pending. Shared-filesystem/physical and user testing
+is **deferred until after publication**, not passed or a release prerequisite.
+Distribution/signature checks are not field qualification.
+The application Guide stays disabled; internal CI candidates are not public
+installers. See [release procedure](packaging/RELEASE.md).
 
 ## Validation boundary
 
@@ -24,14 +27,14 @@ storage sequentially. It is not independent-client, physical, Mac/cross-OS or
 publication qualification. Its results remain historical, not promoted by this
 move. The [archived original delivery](https://github.com/AutoByteus/autobyteus-workspace/blob/3712cd9bf0db998501d162db7f8655f169e3def6/tickets/done/shared-network-workspaces/handoff-summary.md)
 records that bounded evidence. No old application/editor campaign is a gate for
-this repository extraction. Public qualification remains separate under
+this repository extraction. Distribution readiness remains separate under
 [packaging/RELEASE.md](packaging/RELEASE.md); the app Guide stays unavailable.
 
-## Supported design and qualification targets
+## Intended host modes and downloadable build targets
 
 | Storage computer | Export engine | Source | Protocol |
 | --- | --- | --- | --- |
-| Native Mac | Apple system nfsd | local APFS | NFSv3/TCP |
+| Native macOS 26+ | Apple system nfsd | local APFS | NFSv3/TCP |
 | Native Ubuntu 24.04 | corrected Ganesha 4.3/VFS | local ext4 | NFSv4.1/TCP |
 | Docker on a Linux computer | same Ganesha/VFS image, host networking | explicitly selected ext4 bind | NFSv4.1/TCP |
 
@@ -39,13 +42,41 @@ Native Mac/Linux host clients are included. Consumers use ordinary directories;
 container bind mappings are configured separately by their operator. Docker Desktop on Mac is not a storage-server option; use
 native Mac hosting instead. Windows, public/multi-tenant service, offline sync,
 HA, automatic remote notifications and application-node management are not
-included. Release metadata advertises only independently qualified CPU/OS targets;
-compilation for a target is not qualification.
+included. Release metadata advertises four distribution targets (darwin-amd64,
+darwin-arm64, linux-amd64, linux-arm64), not independently field-qualified support.
+Intended host floors above remain unchanged; compilation is not field validation.
 
 Linux engine delivery uses the reviewed Noble backport `4.3-8ubuntu1+autobyteus1`,
 not unpatched stock4.3. The matching packages are embedded in Linux release
 binaries and shared with the Docker image; users need no compiler/PPA or extra
 package command. This distribution path is still under validation.
+
+## Versioned download (after publication is confirmed)
+
+Advertised CPU targets are ARM64 and x64 for native macOS26+ and Ubuntu24.04.
+The first release is normal v0.1.0, not beta. These are the exact intended versioned
+commands; **do not treat a missing/draft release as a working download**:
+
+```sh
+curl --fail --location --proto '=https' --tlsv1.2 \
+  https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-install.sh \
+  -o autobyteus-nfs-install.sh
+less autobyteus-nfs-install.sh
+bash autobyteus-nfs-install.sh version
+~/.local/bin/autobyteus-nfs version
+```
+
+Inspect the script before executing it. SHA256SUMS-nfs covers every distributed
+file except itself; compare the installer hash as well as the archive/manifest
+checks that the installer performs. Checksums do not protect against a compromised
+publisher. Mac native payloads require Developer ID and Accepted notarization;
+do not disable Gatekeeper or promise offline first-use validation. Standalone
+binaries cannot have tickets stapled. No Go/Node/Python/Homebrew is required.
+Use an owned HOME for a download smoke and pass **version**, not an implicit setup.
+After installation choose create/connect explicitly with normal displayed consent;
+no installation smoke authorizes storage changes on the user's computer. The
+installer emits a deferred-field/user-testing notice on stderr after successful
+manifest admission; `version` stdout remains the exact version.
 
 ## Intended first-use journey
 
@@ -199,12 +230,13 @@ is not whole-host reboot or mounted NFS qualification.
 Unit tests use temporary owned files and fake Docker HTTP responses; they do not
 mount/export storage or alter real containers. Cross-compilation and `version` smoke do not
 prove native NFS or installer behavior. Root [TESTING.md](TESTING.md) applies. The historical command-only
-increment and local extraction checks are distinct from broader publication qualification:
-clean-machine installation, healthy application previews and native skill tool
-reads/peer-stop/restore, independent physical Mac/Linux/Docker topology and
-explicit publication user verification are not established by those checks.
-They are not new acceptance gates for repository extraction; the publication
-guide's gates remain unchanged. Do not run privileged setup
+increment and local extraction checks do not establish field qualification.
+Current build/release-control, signing, integrity and public install/version checks
+remain publication gates. Independent physical Mac/Linux/Docker filesystem and
+genuine user tests follow publication, with findings fixed in a new release.
+Delivery carries the scoped follow-up to Solution Designer and the requesting PM;
+those deferred tests are not this first release task's closure prerequisite. This release does not reopen old application/editor or
+provider campaigns; the publication guide defines its current NFS-only gates. Do not run privileged setup
 or provider calls merely because a design review passed.
 
 See [packaging/RELEASE.md](packaging/RELEASE.md) for distribution gates and

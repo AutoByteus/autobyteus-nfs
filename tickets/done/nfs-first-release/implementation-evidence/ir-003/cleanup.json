@@ -1,0 +1,14 @@
+{
+  "result": "Complete",
+  "ownedScratch": "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d",
+  "scratchAbsent": true,
+  "ownedContainersAbsent": [
+    "nfs-release-ir003-458546cf0a",
+    "nfs-release-ir003-871047ad94"
+  ],
+  "protectedDeliveryFiles": 16,
+  "protectedDeliveryHashesMatch": true,
+  "priorIRBytePrefixPreserved": true,
+  "api002Candidate": "untouched; no read/write/cleanup of retained directory",
+  "liveResourcesOrRemoteEffects": "none"
+}

@@ -1,0 +1,26 @@
+test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest) ... /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/zipfile.py:1505: UserWarning: Duplicate name: 'a'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_complete_candidate_readiness_payload (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_executed_workflow_and_release_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_new_executables_invalidate_production_hash_not_readiness (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest) ... test_readiness_missing_failed_stale_false_claims_and_authority (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_readiness_references_are_hashed_regular_stable_and_nonempty (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest) ... ok
+
+======================================================================
+FAIL: test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest) (kind='notes')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir003-n851me1d/mutation-source/scripts/tests/test_nfs_release_records.py", line 220, in test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away
+    with self.assertRaisesRegex(ValueError,'Provenance differs|Unreviewed release notes'):payload.verify(self.f.p,self.f.c)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.824s
+
+FAILED (failures=1)

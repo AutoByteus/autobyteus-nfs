@@ -1,0 +1,87 @@
+{
+  "commands": [
+    {
+      "name": "python-version",
+      "argv": [
+        "/usr/bin/python3",
+        "--version"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "seconds": 0.332
+    },
+    {
+      "name": "shell-version",
+      "argv": [
+        "/bin/bash",
+        "--version"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "seconds": 0.01
+    },
+    {
+      "name": "python-all",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "seconds": 61.917
+    },
+    {
+      "name": "source-hash",
+      "argv": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "seconds": 0.872
+    },
+    {
+      "name": "recipe-hash",
+      "argv": [
+        "/usr/bin/python3",
+        "-c",
+        "import sys;sys.path.insert(0,'packaging/engine');import source;print(source.recipe_hash())"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "seconds": 0.486
+    },
+    {
+      "name": "readiness-refusal",
+      "argv": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "cwd": "/Users/normy/nfs-release-crr005-ec68nyt0/source",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "seconds": 0.953
+    }
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/normy/nfs-release-crr005-ec68nyt0/home",
+    "TMPDIR": "/Users/normy/nfs-release-crr005-ec68nyt0/tmp",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "LC_ALL": "C"
+  }
+}

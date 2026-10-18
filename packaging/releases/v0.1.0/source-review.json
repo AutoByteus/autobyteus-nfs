@@ -1,0 +1,20 @@
+{
+  "candidateCommit": "585d416c2746cf2963058d591b0753d0db8088f5",
+  "deliveryIntake": "41714c79872dc055e6c09acc744639d981f3fc33",
+  "interveningChangeReview": "All120 product inputs equal. Delivery adds stable truthful evidence/notes/readiness and measured candidate engine lock. No code/test/pin changes; measured source hash rechecked.",
+  "productCommit": "850dfeb97e2ec396b2b134e760dc9ee802873d6b",
+  "result": "passed",
+  "sourceHash": "a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e",
+  "sourceReview": {
+    "commit": "5605c60087ac10135fd19914563cf353ebc27c1c",
+    "reportSha256": "38a020ba17aa48b9219241d1134c02aabf6e026abe9d7f3cbecb70467c2f1de4",
+    "revision": "CRR005",
+    "score": 100
+  },
+  "testReview": {
+    "commit": "d10dd455ce992bbce7b773a03724e9e0ae72acd6",
+    "reportSha256": "7634ac132cce3ef23c245f41a559eb2d1826b223d89e49a5652049e7f8aa7073",
+    "result": "Pass",
+    "revision": "CRR006"
+  }
+}

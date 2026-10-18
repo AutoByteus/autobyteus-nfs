@@ -1,0 +1,9 @@
+{
+  "file": "owned scratch/out/autobyteus-nfs (removed after checks)",
+  "sha256": "f590287e340998881b8241b95720988b69ae97c40fca36bdfe58bcf4f83d4314",
+  "version": "development-unqualified",
+  "platform": "macOS26.5.2 arm64",
+  "source_input": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "runtime_changed": false,
+  "qualified": false
+}

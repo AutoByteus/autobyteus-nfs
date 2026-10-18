@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-18T10:49:51.007294+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_nfs_*.py",
+    "-v"
+  ],
+  "cwd": "/Users/normy/nfs-delivery-readiness-_284dxb8/source",
+  "exit": 0,
+  "inputCount": 127,
+  "scope": "Independent current source with actual Delivery readiness data; no runtime setup/signing/publication.",
+  "logSha256": "073121f17f4ff84f7d6b93b483133d3e5bf7dc4cf8f04a9f7fef6eb547ce0b1f",
+  "ownedScratchRemoved": true
+}

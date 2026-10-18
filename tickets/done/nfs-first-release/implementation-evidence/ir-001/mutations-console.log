@@ -1,0 +1,6 @@
+{'name': 'user-consent', 'test': 'test_nfs_release_records.py', 'exitCode': 1, 'detected': True}
+{'name': 'oci-blob-hash', 'test': 'test_nfs_release_records.py', 'exitCode': 1, 'detected': True}
+{'name': 'workflow-identity', 'test': 'test_nfs_release_records.py', 'exitCode': 1, 'detected': True}
+{'name': 'image-preserve', 'test': 'test_nfs_release_publication.py', 'exitCode': 1, 'detected': True}
+{'name': 'fresh-main', 'test': 'test_nfs_release_publication.py', 'exitCode': 1, 'detected': True}
+{'name': 'notary-accepted', 'test': 'test_nfs_release_signing.py', 'exitCode': 1, 'detected': True}

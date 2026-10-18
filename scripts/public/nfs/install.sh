@@ -5,7 +5,7 @@ umask 077
 TAG='__RELEASE_TAG__'
 REPOSITORY='AutoByteus/autobyteus-nfs'
 fail() { printf 'AutoByteus NFS installer: %s\n' "$*" >&2; exit 1; }
-[[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]] || fail 'No qualified versioned release is embedded in this installer.'
+[[ "$TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || fail 'No versioned release is embedded in this installer.'
 case "$(uname -s)" in Darwin) os=darwin ;; Linux) os=linux ;; *) fail 'Supported computers are macOS and Linux, not Windows.' ;; esac
 case "$(uname -m)" in arm64|aarch64) arch=arm64 ;; x86_64|amd64) arch=amd64 ;; *) fail 'This CPU is not supported.' ;; esac
 [[ ! -e /.dockerenv ]] || fail 'Run on the computer, not inside an agent container.'
@@ -21,10 +21,19 @@ curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 "$base/a
 archive="autobyteus-nfs-${TAG#v}-${os}-${arch}.tar.gz"
 curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 "$base/$archive" -o "$scratch/$archive"
 curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 "$base/SHA256SUMS-nfs" -o "$scratch/checksums"
-expected="$(awk -v file="$archive" '$2 == file { print $1; found++ } END { if (found != 1) exit 1 }' "$scratch/checksums")" || fail 'Archive missing or duplicated in checksum manifest.'
-[[ "$expected" =~ ^[a-f0-9]{64}$ ]] || fail 'Invalid checksum manifest.'
-if command -v shasum >/dev/null; then actual="$(shasum -a 256 "$scratch/$archive" | awk '{print $1}')"; else actual="$(sha256sum "$scratch/$archive" | awk '{print $1}')"; fi
-[[ "$actual" == "$expected" ]] || fail 'Archive checksum mismatch.'
+verify_checksum() {
+  local file=$1 expected actual
+  expected="$(awk -v file="$file" '$2 == file { print $1; found++ } END { if (found != 1) exit 1 }' "$scratch/checksums")" || fail 'File missing or duplicated in checksum manifest.'
+  [[ "$expected" =~ ^[a-f0-9]{64}$ ]] || fail 'Invalid checksum manifest.'
+  if command -v shasum >/dev/null; then actual="$(shasum -a 256 "$scratch/$file" | awk '{print $1}')"; else actual="$(sha256sum "$scratch/$file" | awk '{print $1}')"; fi
+  [[ "$actual" == "$expected" ]] || fail 'Release checksum mismatch.'
+}
+mv "$scratch/manifest.json" "$scratch/autobyteus-nfs-manifest.json"
+verify_checksum autobyteus-nfs-manifest.json
+verify_checksum "$archive"
+# Bound expansion before extraction; no unbounded archive is written to disk.
+expanded=$(gzip -dc "$scratch/$archive" | wc -c | tr -d ' ')
+[[ "$expanded" =~ ^[0-9]+$ && "$expanded" -le 109051904 ]] || fail 'Archive exceeds size bound.'
 # No links, extra members, traversal, directories or duplicate members are extracted.
 listing="$(tar -tzf "$scratch/$archive")"
 expected_members=$'LICENSE\nTHIRD_PARTY_NOTICES\nautobyteus-nfs\nrelease.json'
@@ -33,7 +42,9 @@ tar -tvzf "$scratch/$archive" | awk 'substr($1,1,1) != "-" { exit 1 }' || fail '
 mkdir "$scratch/extracted"
 tar -xzf "$scratch/$archive" -C "$scratch/extracted"
 [[ -f "$scratch/extracted/autobyteus-nfs" && ! -L "$scratch/extracted/autobyteus-nfs" ]] || fail 'Missing binary.'
-"$scratch/extracted/autobyteus-nfs" verify-release "$scratch/manifest.json"
+[[ $(wc -c < "$scratch/extracted/autobyteus-nfs") -le 104857600 ]] || fail 'Binary exceeds size bound.'
+cmp -s "$scratch/extracted/release.json" "$scratch/autobyteus-nfs-manifest.json" || fail 'Archive manifest differs from downloaded manifest.'
+"$scratch/extracted/autobyteus-nfs" verify-release "$scratch/autobyteus-nfs-manifest.json"
 install_dir="${HOME:?HOME is required}/.local/lib/autobyteus-nfs/${TAG}"
 mkdir -p "$install_dir" "${HOME}/.local/bin"
 cp "$scratch/extracted/autobyteus-nfs" "$install_dir/autobyteus-nfs.new"

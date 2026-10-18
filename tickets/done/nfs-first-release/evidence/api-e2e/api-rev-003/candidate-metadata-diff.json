@@ -1,0 +1,15 @@
+{
+  "changedKeys": [
+    "engineImage"
+  ],
+  "schema": 2,
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "releaseTargets": [],
+  "originalHash": "58beb359030d8fe33be2dbcd5654b43cc94978f1d712f902120b4404e4992bc2",
+  "aliasPath": "/Users/normy/nfs-first-candidate-api003-p_t67xqw/metadata-alias-control.json",
+  "aliasHash": "8e7ebeb31bb2520b9359a7676b80c17ba618a04b073873e221b8b8f6062898e5",
+  "limit": "Metadata only. registry.invalid was neither resolved nor contacted, no first-use pull or release-admitted binary exists."
+}

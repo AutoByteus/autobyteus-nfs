@@ -1,12 +1,100 @@
 {
+  "engine": {
+    "architectures": {
+      "amd64": {
+        "buildInventory": {
+          "file": "engine-build-amd64.txt",
+          "sha256": "eea118eb6b34814f0ca67d6a7f9d5c24c385de85e348cc0fc459692f76734364",
+          "size": 40381
+        },
+        "correspondingSource": {
+          "file": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+          "sha256": "9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91",
+          "size": 1930260
+        },
+        "packages": [
+          {
+            "architecture": "amd64",
+            "file": "nfs-ganesha_4.3-8ubuntu1+autobyteus1_amd64.deb",
+            "name": "nfs-ganesha",
+            "sha256": "00c40a50e293a142ba224f49005809553a02ea0e14d185fc780bac2e0ba331d5",
+            "size": 653642,
+            "version": "4.3-8ubuntu1+autobyteus1"
+          },
+          {
+            "architecture": "amd64",
+            "file": "nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_amd64.deb",
+            "name": "nfs-ganesha-vfs",
+            "sha256": "0356da49260ae12f5695e3617ba7168dd2329efb87ca45515e2e459ba06d776b",
+            "size": 51450,
+            "version": "4.3-8ubuntu1+autobyteus1"
+          }
+        ]
+      },
+      "arm64": {
+        "buildInventory": {
+          "file": "engine-build-arm64.txt",
+          "sha256": "2bfee929a699be216e09874a250f679dad9ad43f16cd801ede2e6c68bef9e932",
+          "size": 40134
+        },
+        "correspondingSource": {
+          "file": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+          "sha256": "9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91",
+          "size": 1930260
+        },
+        "packages": [
+          {
+            "architecture": "arm64",
+            "file": "nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb",
+            "name": "nfs-ganesha",
+            "sha256": "39593e287fc63b3f56b989814f603b962d72e8cde3b230ccd23f8ca8908cdd74",
+            "size": 613934,
+            "version": "4.3-8ubuntu1+autobyteus1"
+          },
+          {
+            "architecture": "arm64",
+            "file": "nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb",
+            "name": "nfs-ganesha-vfs",
+            "sha256": "64f169e241dfd6e57d7f73ca7c8723c0b6ff68db504ac6acd4b572dd56792498",
+            "size": 48642,
+            "version": "4.3-8ubuntu1+autobyteus1"
+          }
+        ]
+      }
+    },
+    "source": {
+      "buildBase": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+      "files": [
+        {
+          "file": "nfs-ganesha_4.3-8ubuntu1.dsc",
+          "sha256": "ffa76c26b12d23b67dcda184d7ec7ae55a42d1d14bf84bb7c0cf0134156ba3ca",
+          "size": 3576
+        },
+        {
+          "file": "nfs-ganesha_4.3.orig.tar.gz",
+          "sha256": "d4efd020edf4dfe65abfd0f0f66eb4390613360f99dce4354467ab297e0e1c0f",
+          "size": 1895017
+        },
+        {
+          "file": "nfs-ganesha_4.3-8ubuntu1.debian.tar.xz",
+          "sha256": "ef35d130e1b37149b156d201b70e6c2804bebbfbee1713c5bd6d938dd433fe03",
+          "size": 19224
+        }
+      ],
+      "patchCommit": "98eb77c4fd94effa6882b214698a77752ec79f6e",
+      "patchSha256": "ba682b5c64e7f800c927f4c90b2a7bfb4b8d2a323ddc48c3d591db3d75799031",
+      "recipeSha256": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+      "sourceDateEpoch": 1791936000,
+      "version": "4.3-8ubuntu1"
+    }
+  },
+  "note": "v0.1.0 genuine R3 release-first readiness. Field/filesystem/user validation deferred, not passed.",
+  "releaseReadiness": {
+    "path": "packaging/releases/v0.1.0/readiness.json",
+    "sha256": "9941d6987d59d5f796d8d662a7e3bf07989f05aae5838cb5a65d82c812be46c3"
+  },
   "ubuntuBaseImage": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
   "ubuntuPackages": {
     "nfs-common": "1:2.6.4-3ubuntu5.1"
-  },
-  "qualifiedTargets": [],
-  "qualifiedSourceHash": "",
-  "physicalEvidence": [],
-  "userVerified": false,
-  "note": "SR020 corrected engine identities are populated from actual candidate artifacts by packaging/engine/manifest.py lock. No stock engine fallback, release or qualification. Changed artifact identities invalidate qualification.",
-  "engine": null
+  }
 }
