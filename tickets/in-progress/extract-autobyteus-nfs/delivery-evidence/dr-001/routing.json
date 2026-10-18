@@ -1,0 +1,11 @@
+{
+  "result": "Blocked",
+  "classification": "Local Fix",
+  "recipient": "/software_engineering_team/implementation_engineer",
+  "matchingRule": {
+    "when": "When delivery discovers a code or packaging Local Fix that must be corrected by implementation before finalization can continue.",
+    "recipient_address": "/software_engineering_team/implementation_engineer"
+  },
+  "reason": "Fresh S-base merge conflicts in Codex bootstrapper test; affected automatic merges need integrated owner checks. No new requirement or release decision.",
+  "handoff": "Prepared; actual send receipt in collaboration channel."
+}

@@ -1,0 +1,35 @@
+diff --cc autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+index 11ef0bdbad,dd2d6ec0bd..0000000000
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+@@@ -1,4 -1,4 +1,8 @@@
+++<<<<<<< HEAD
+ +import { WORK_REQUEST_EXECUTION_LLM_INSTRUCTION } from "../../../../../../src/agent-collaboration/domain/agent-team-collaboration-llm-contract.js";
+++=======
++ import { testCodexLeaseManager } from "../../../../../fixtures/agent-run-preparation-fixtures.js";
+++>>>>>>> origin/personal
+  import { createAgentRootExecutionIdentity, createCollaborationMemberExecutionIdentity } from "../../../../../../src/agent-collaboration/execution/domain/root-execution-identity.js";
+  import path from "node:path";
+  import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+@@@ -228,15 -266,15 +232,15 @@@ describe("CodexThreadBootstrapper", ()
+        const { bootstrapper } = createBootstrapper({
+          skills: [], requestImplementation: async () => ({ data: [] }),
+        });
+ -      const created = await bootstrapper.bootstrapForCreate(createRunContext({ memberExecutionContext }), { assertAccepting: () => undefined, ownSkill: () => undefined, ownCodexClient: () => undefined });
+ -      const restored = await bootstrapper.bootstrapForRestore(createRestoreRunContext({ memberExecutionContext }), { assertAccepting: () => undefined, ownSkill: () => undefined, ownCodexClient: () => undefined });
+ +      const created = await bootstrapper.bootstrapForCreate(createRunContext({ memberExecutionContext }), { assertAccepting: () => undefined });
+ +      const restored = await bootstrapper.bootstrapForRestore(createRestoreRunContext({ memberExecutionContext }), { assertAccepting: () => undefined });
+        for (const context of [created, restored]) {
+          const prompt = context.runtimeContext.codexThreadConfig.baseInstructions!;
+-         expect(prompt.split(WORK_REQUEST_EXECUTION_LLM_INSTRUCTION)).toHaveLength(scope === "no-context" ? 1 : 2);
++         expect(prompt.split("## Working With Other Agents")).toHaveLength(scope === "no-context" ? 1 : 2);
+          if (scope !== "no-context") {
+-           expect(prompt).toContain("only at a workflow-defined handoff point or when blocked and needing external input");
+-           expect(prompt).toContain("return the result or specific blocker to the requesting agent");
+-           expect(prompt.indexOf(WORK_REQUEST_EXECUTION_LLM_INSTRUCTION)).toBeLessThan(prompt.indexOf("`delegate_task`"));
++           expect(prompt).toContain("On receiving a request, follow your own instructions and skills.");
++           expect(prompt).toContain("Don't send acknowledgements, status chatter or promises to work.");
++           expect(prompt).toContain("`delegate_task`");
+          }
+          if (scope !== "team") expect(prompt).not.toContain("get_handoff_rules");
+        }

@@ -1,0 +1,51 @@
+{
+  "time": "2026-10-18T03:39:25.147000+00:00",
+  "S": {
+    "candidate": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+    "originPersonal": "2f211340ee36b81cef74a74b2e042b5102c269d3",
+    "commonBase": "3712cd9bf0db998501d162db7f8655f169e3def6",
+    "divergenceTicketBase": "4\t165",
+    "command": "git merge --no-edit origin/personal",
+    "exit": 1,
+    "unmerged": [
+      "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts"
+    ],
+    "conflictingBaseCommit": "290d32dd4bd4b074faa90afd5250ea32aa9366f8 Write collaboration prompts, tool descriptions, messages and refusals for the agent",
+    "recovery": {
+      "command": "git merge --abort",
+      "exit": 0,
+      "head": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+      "trackedClean": true,
+      "status": ""
+    }
+  },
+  "normalization": "Combined diff captured for inspection only; trailing whitespace normalized. No test/source edit.",
+  "N": {
+    "candidate": "6afc7922ca029081695675d3b7943f23a7686ed5",
+    "branch": "codex/extract-autobyteus-nfs",
+    "remote": "https://github.com/AutoByteus/autobyteus-nfs.git",
+    "freshHeads": "",
+    "result": "No remote branches; initial main absent. No integration base invented or push performed."
+  },
+  "D0": {
+    "path": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "symbolicHead": "refs/heads/main",
+    "headExists": false,
+    "status": "?? task-plans/",
+    "boardSha256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1",
+    "writes": "None; read-only inspection only."
+  },
+  "policy": {
+    "N": {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/RELEASE.md",
+      "revision": "353dd2c17a59dead97c900a327f78a2bb21f46ce",
+      "sha256": "e7fdbcfd527a56efb6fa007738147a26bc16de7f153131c463318f7b0f6d9e0b"
+    },
+    "S": {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/RELEASE.md",
+      "revision": "390e0c76dda56c206ed8cabd65fc3564caaf1804",
+      "sha256": "60dd05e503daa9f3110fa91ba3cb0e6863b9d6dc99da3dd6bb4f42fe2330f96d"
+    }
+  },
+  "result": "Blocked \u2014 Local Fix. AC007 not achieved; neither remote target changed."
+}
