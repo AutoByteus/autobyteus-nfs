@@ -1,0 +1,162 @@
+{
+  "review": "CRR-007",
+  "N_head": "21ec9f7c05f959e2b4361f2e335a3d71209a8dd2",
+  "baseline": "56c0c59efdd3b963b2fc11ba07bda7410b4067b2",
+  "candidate": "09cac96225fe4f36fb0dcbe6ddec01248992874f",
+  "changed_product_tree_paths": [
+    "internal/setup/hosted_config_test.go"
+  ],
+  "production_workflow_safety_unchanged": true,
+  "inputs": {
+    "count": 108,
+    "sha256": "f639bff7d41e706aa648a32bf2f6c76763638134034631eaeec683c36cf3c728"
+  },
+  "authorities_unchanged": 8,
+  "implementation_checks_attributed_not_rerun": {
+    "linux": [
+      {
+        "name": "baseline-hosted",
+        "exit": 1,
+        "expected_exit": 1
+      },
+      {
+        "name": "environment",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "focused",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "race",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "vet",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "build",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "version",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "python",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "shell",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "source-hash",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "publish-refusal",
+        "exit": 1,
+        "expected_exit": 1
+      }
+    ],
+    "darwin": [
+      {
+        "name": "environment",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "focused",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "race",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "vet",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "source-hash",
+        "exit": 0,
+        "expected_exit": 0
+      },
+      {
+        "name": "publish-refusal",
+        "exit": 1,
+        "expected_exit": 1
+      }
+    ]
+  },
+  "mutations_attributed": [
+    {
+      "name": "ignore-status-preflight",
+      "exit": 1,
+      "expected_failure": true,
+      "diagnostic": "status ignored hosted config"
+    },
+    {
+      "name": "ignore-detach-preflight",
+      "exit": 1,
+      "expected_failure": true,
+      "diagnostic": "detach touched dependencies before checking config"
+    },
+    {
+      "name": "reject-partial-detach",
+      "exit": 1,
+      "expected_failure": true,
+      "diagnostic": "did not stop at Linux mount boundary"
+    }
+  ],
+  "personal_readonly_checks": {
+    "source-hash": {
+      "command": [
+        "python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "exit": 0
+    },
+    "publish-refusal": {
+      "command": [
+        "python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "exit": 1
+    }
+  },
+  "IR005_scratch_absent": true,
+  "S_worktree_retired_no_recreation": true,
+  "completed_pushes_preserved": true,
+  "protected_inputs": {
+    "count": 532,
+    "sha256": "8111e4d2d672667ef159e180faac5c5af5274f5bdae47158e0a1b1d417600a75"
+  },
+  "prior_history_sha256": "01fe04b5127a36478e2142179ababacea80a71701c60ea6025ae4aceb948dfa8",
+  "reviewer_runtime_tests": false,
+  "new_live_resources": false,
+  "final_verification": {
+    "source_test_inputs_unchanged_during_review": true,
+    "protected_inputs_unchanged": 532,
+    "prior_CRR001_through_CRR006_entries_preserved": true,
+    "no_reviewer_source_test_edits": true,
+    "no_live_resources": true,
+    "no_target_actions": true
+  }
+}
