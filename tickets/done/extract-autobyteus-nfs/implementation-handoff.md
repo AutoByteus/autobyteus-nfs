@@ -1,107 +1,126 @@
 # Implementation Handoff — Extract AutoByteus NFS
 
-## Current result and identities
-**IR-004 — CR-002 one-import Local Fix complete; Ready for targeted independent source re-review.**
-Task project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8. Personal execution only; no delegation.
+## Current result
+**IR-005 — DR-002 implementation-owned Local Fix complete; Ready for targeted independent source review and affected validation.**
+Task project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8.
+Personal execution only; no delegation. Not Delivery Completed/TaskDone.
 
-- **N**: /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs, branch codex/extract-autobyteus-nfs, target origin/main. Current service source **83726b27400b405a7a6a79bd962d8e2419daa561**; later ticket-only handoff commit does not change tested service inputs.
-- **S**: /Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs, same branch, target origin/personal under --no-ff policy. Current source/tests **60b67dabecaf5569a8e26128dbdb26117c988811** (one test-only import deletion atop5559abbf017566f0030d95b023614f7418d3f212). Merge156ea2dacc0fb4989a6b5d8a7206fa143fde0c54 integrates fetched personal2f211340ee36b81cef74a74b2e042b5102c269d3 into the ticket;8c5c76a743760104119b08fc83ab74cd263f11f1 and5559abbf align only obsolete test fixture inputs. R2 production decoupling2448e166 and IR002 cleanup a2023feff remain in history.
-- Original extraction source S3712cd9bf0db998501d162db7f8655f169e3def6. Preserved held extraction commits N353dd2c/0c9fd27 and S390e0c76. No reset/rewrite.
-- Canonical ticket: N/tickets/in-progress/extract-autobyteus-nfs. Initial implementation evidence is implementation-evidence/ir-001 (**E** below); IR002 bounded-fix evidence is implementation-evidence/ir-002 (**E2**); integration evidence is implementation-evidence/ir-003 (**E3**); current bounded-fix evidence is implementation-evidence/ir-004 (**E4**).
-- D0 /Users/normy/autobyteus_org/autobyteus-nfs stays unborn main with PM task-plans. It is not the implementation worktree.
-- Fresh IR003 recovery fetch: N remote has no heads/main; S personal2f211340ee36b81cef74a74b2e042b5102c269d3 (165 base-only commits). E3/refresh.json records the observation, not a guarantee refs remain unchanged. Delivery must refresh again. Integration was into the ticket branch only; neither target has been finalized/pushed; no release/tag/deployment/TaskDone/user-verification claim.
+## Authoritative paths and completed operations
+- **N** /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs,
+  recovery branch codex/extract-autobyteus-nfs, target origin/main.
+  Current test correction **09cac96225fe4f36fb0dcbe6ddec01248992874f**, based on blocker checkpoint
+  56c0c59efdd3b963b2fc11ba07bda7410b4067b2. Runtime remains83726b27400b405a7a6a79bd962d8e2419daa561;
+  later delivery policy/docs are preserved. Production source hash unchanged.
+- **Canonical ticket is already archived:** N/tickets/done/extract-autobyteus-nfs.
+  Continue here; archive location is not TaskDone. E5 below means
+  implementation-evidence/ir-005; prior E/E2/E3/E4 evidence remains in this archive.
+- Delivery already pushed N main/ticket **22e934b9f2b95daf3c72a840788ee155cbd4ff6d**
+  first; then S ticket **9b72c8d1c8d6f7e294af2c23fb497211c67f930c** merged --no-ff
+  to personal **55bff1f5eea1f140bab6e372e3faadeb7ea33465**, exact tree equality.
+  Source operations must not be replayed, reset or undone. Their authority is
+  delivery-evidence/dr-002/finalization.json, not a new implementation fetch.
+- **S** task worktree was safely removed by Delivery after merge; no S change
+  or worktree recreation this round. Canonical app checkout untouched.
+- **D0** /Users/normy/autobyteus_org/autobyteus-nfs now populated main22e934b
+  tracking origin/main by Delivery, PM board preserved; no authorship here.
+- IR005 made no target fetch/merge/push/default-branch/tag/release/deployment action.
+  User wants no release. Delivery must refresh targets for the reviewed fix-forward.
 
-## Upstream authority and revision links
-Approved **R2/SR-003**, Ready **SR-004**, **ARCH-REV-002 Pass**, review commitfc5d2ff3f404de3a683994766dfd47c258efb374 atop designer983812e8b4fe3363909e44cc905285fc800ca19a.
-Canonical requirements-doc.md, investigation-notes.md, solution-revision-record.md, design-spec.md, solution-design-handoff.md, design-review-report.md and architecture-review-revision-record.md in this ticket remain unchanged by implementation. user-filesystem-boundary-correction.md is the governing supplemental direction.
-ARCH-REV-001/R1/SR002 are historical, not the current implementation basis. The held preparation was not a completed handoff. implementation-revision-record.md retains IR001 with prior result N/A and IR002, then IR003/IR004; prior entries are preserved.
-Current trigger: **CRR-004 Fail99.8% / implementation-owned Local Fix, CR-002 only**, code-review-report.md and code-review-revision-record.md. Reviewer artifact95dd311879067672fd7572b7d042aa60bcfed1e4 / receipt5c2c95895422a9f51857546e3bd38fa98a51e591. Full R2 integration re-audit found only one unused local Skill import in the touched Claude test; no runtime/design defect established. IR004 requests targeted re-review, not a new full audit. DR001 integration recovery is preserved in IR003. **CRR002 source Pass100%, API-REV-001 Pass95%, CRR003 successful-test Not Applicable** remain historical exact-input results, not integrated-current verdicts. Current independent source verdict remains CRR004 Fail until reviewer action. CR001 resolved in IR002; no old filesystem/editor Task reopened.
+## Authority / trigger / classification
+Approved **R2/SR003**, Ready **SR004**, **ARCH-REV-002 Pass** remain unchanged.
+Requirements, investigation, design, solution history and filesystem-boundary
+correction remain separate authorities in the archived ticket.
+**Large / High / Reviewed** retained: two-product boundary, trusted host install/
+state, asynchronous private-profile cleanup and two-repo distribution ownership.
+No Design Impact/Requirement Gap or changed intended behavior established.
+Current trigger **DR-002 Blocked / Local Fix**: actual hosted Ubuntu Developer
+Checks39097778705 and39097779223 failed at22e934b. CRR005 source Pass100,
+API002 current integrated/local Pass95 and CRR006 no-test-delta satisfied remain
+historical exact-input authorities, not Linux hosted qualification. CR001/002
+import findings are resolved; no old filesystem/editor Task is reopened.
+Selected next stage is Code Review via fresh most-specific Local Fix rule;
+direct-route self-review N/A.
 
-## Routing classification
-- Task size: **Large**, architectural risk: **High**, confirmed unchanged.
-- Design health: Behavior Change + ownership refactor; Boundary Or Ownership Issue / Duplicated Policy Or Coordination; Refactor Needed Now. Implementation matches reviewed scope.
-- Evidence: two products' runtime boundary, trusted installation admission, exact asynchronous private-profile ownership, source/distribution ownership and two-repo finalization. This is not mechanical relocation alone.
-- Selected next stage: **Code Review**, confirmed through fresh handoff rules before dispatch.
-- Direct-route self-review: N/A. New Design Impact / Requirement Gap: None demonstrated. Approved scope guardrail respected.
+## Current correction and behavior trace
+Only N/internal/setup/hosted_config_test.go changes (test fixture/assertions).
+Production platform.Mounts on Linux reads /proc/self/mountinfo, so the original
+runner-only mount trap was never called. The absent default mount let detach
+reach root Store ownership enforcement and an intentionally unusable Docker client.
+Production safely retains these checks; no product runtime failure is inferred.
 
-## Reviewed behavior implementation trace
+The corrected Linux fixture first verifies the already-present unrelated /proc
+mount read-only. Valid hosted-config preflight then reaches the ordinary Status
+source/protocol mismatch or Detach unrelated-source refusal before teardown.
+Darwin still reaches its fake mount-command error. Specific error/call assertions
+distinguish platform paths. Missing/changed/malformed configs still fail before
+readiness/effects; current or partially missing config still reaches existing
+checks on retry. Config/receipt bytes and file absence remain unchanged.
+No proc write, mount operation, root bypass, new runtime seam, skip, migration or
+fallback added. BEH005 host status/drained-detach invariants are preserved.
+
+## Preserved reviewed implementation
 | Behavior / AC | Actual path and outcome |
 | --- | --- |
 | BEH001 / AC001,002,006 | N root go.mod/cmd/internal imports use github.com/AutoByteus/autobyteus-nfs. Installer, packaging, five service Python suites and workflow are local. Go-to-Python fixture root resolves two levels up to N. S removes embedded service/workflow/installer/service suites; no sibling replace, app-source vendor or second maintained implementation |
 | BEH002 / AC002,004,005 | N packaging/release.py hashes service-local inputs plus docs/filesystem-usage.md and testdata/connection.json, not arbitrary app bytes. Workflow is manual-only with publish=false, no desktop version assertion/automatic tag trigger. Candidate reuse/equality, cancellation/failure/current-source/native/signing/physical/user/existing-release gates remain. Empty qualification lock and disabled S Guide remain. License/CLA/notices/pins and section7 permission preserved |
 | BEH003 / AC003,006 | S AgentRunManager prepares directly; native/Claude/Codex workspace resolvers preserve registered failure and prior unknown/no-selection policy. PtySessionManager uses ordinary cwd and normal lifecycle. Shared mount/binding/admission modules, all automatic scoped Git trust calls, launcher NFS module/hooks/download/hash and paired fixture/pin removed. No replacement mount detector. Generic launcher root/shared plus root/nodes/name and private volumes retained |
-| BEH004 / AC007,008 | Both development histories preserved and source/evidence identities recorded. Owned isolated check resources cleaned; protected PM/retained engine hashes checked. Delivery finalization remains pending; no false full Task completion |
+| BEH004 / AC007,008 | Both development histories preserved and source/evidence identities recorded. Owned isolated check resources cleaned; protected PM/retained engine hashes checked. Delivery completed paired source pushes; terminal CI/verification remains blocked, not full Task completion |
 | BEH005 / AC009 | N CLI/setup/config become host-only create/connect/status/reconnect/drained detach. Removed app node discovery/control/HTTP probes/public descriptors and retired CLI options. Retained storage-engine Docker client/types/config/identity/capability checks. Source/marker/pending/permission/mount/busy-detach behavior preserved; 28 backend/platform/service production files normalized-equal after import change |
 | BEH006 / AC010 | S prepare-private-runtime-skills and RuntimeSkillProfile acquire existing per-execution profiles uniformly for Claude/Codex/Grok. Exact owner registered before await; no bindings means no acquisition, not materializer fallback. Absolute private execution directory must resolve outside project including aliases. Existing managed-source/collision semantics and native capability errors retained. Process/client close precedes exact profile release; peers/project/source bytes preserved. Other ACP adapters retain filesystem-independent materializer behavior; Grok's now-dead materializer wrapper is removed |
 
 N and S are path abbreviations defined above, not extra directories. Detailed changed paths: E/change-inventory.json. No editor implementation change.
 
-## Key implementation boundaries
-- N internal/config/installation_state.go reads only active attachment.json and pending-setup.json's Attachment under existing trusted bounded Store semantics. Absent/null/empty Nodes are directly usable if current host metadata validates; nonempty/malformed/ambiguous envelopes refuse. Unknown harmless fields remain tolerated. No receipt/history scan, automatic migration, deletion or legacy execution path.
-- N internal/cli/install.go locks admission and root binary replacement together; refusal precedes target parent/replacement effects. Dispatch and supervisor recheck under the same administrative lock before resource effects. setup entry points also refuse incompatible state. Internal helper is not a new public configurable installer path.
-- Host pending source bind-once/persist-before-effects ordering remains; status does not repair, detach does not gain a live-source requirement or forced unmount.
-- S private configured-skill profile selection no longer depends on any filesystem classifier. ACP dependencies specialize private-profile versus generic-materializer inputs; the Grok owner does not construct a dead project materializer.
-- S native runtime and AGY keep their genuine private/tool owners; only removed binding/Git policy leaves their paths.
 
-## Legacy / compatibility / state check
-No compatibility bridge, old/new runtime mode, schema version, implicit safe.directory wildcard, application mount classifier or automatic installed-data migration added.
-Retired app-node/NFS coupling and touched dead wrappers/cleanup imports/tests are deleted. Generic ACP materializers remain per the explicit design; no provider framework redesign.
-Persisted-state decision follows design MP001/002: host-only NFS state directly usable; active/pending node obligations refuse safely and require the matching predecessor tool for explicit operator recovery outside this task. Workspace registry/history/credentials and sources/markers are not migrated. Generated runtime profiles use existing exact ownership; no scan/sweep of prior project links or old profiles.
-Shared design principles reapplied; no changed implementation file exceeds500 effective nonempty lines or grows an already-over-limit file; no >220 changed-line source signal in the R2 delta (tests excluded). Full source audit recorded. No additional out-of-scope dead-code follow-up identified.
+The table records preserved implementation, not freshly repeated qualification.
+The original extraction delta, source/pending identity, trusted incompatible
+active/pending node refusal, exact private-profile process/client cleanup,
+removed NFS/UUID/Git-trust admission and generic launcher ownership remain unchanged.
+License/CLA/section7/notices/engine pins, manual-only nonpublishing-default workflow,
+empty qualification and Guide instructions/disabled downloads are retained.
+Runtime source sizes are unchanged; only a test changes, outside the hard source
+size threshold. No newly discovered unrelated dead-code follow-up.
 
-## IR-004 current bounded cleanup and checks
-- CR002: removed only the unused local Skill import from S/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts. The actual domain class/configured-skill types, fixtures and every assertion remain. Entire-file byte comparison equals predecessor minus the single import; no production/shared input changed.
-- Same29-file TypeScript5.9.3 unused audit reproduces sole6133 before the fix, then exits0 with no diagnostics. It is noResolve/noEmit unused analysis, not a semantic typecheck.
-- Fresh current-source owned copy, frozen server+backend-SDK prerequisite installation and documented prebuild pass. Affected Claude test **1 file /1 test Pass /0 skips**, with current collaboration-prompt/approval assertions. All7307 copied inputs hash-match current source.
-- E4/validation-plan.md records impact before execution. IR003 other local checks/production typecheck remain valid within recorded scope; no1666-test repeat. API-owned integrated S04/S05 remain downstream. N source83726b unchanged; prior N proof carries with original limits.
-- No new failed preparation or test attempt; pre-fix audit exit1 is the expected confirmed finding. E4/checks-and-limits.md, checks-result.json, unused-locals.json, delta-audit.json and cleanup.json are fresh evidence.
-- Large/High confirmed, no Design Impact/Requirement Gap; frontend loop Not Applicable for test-import-only cleanup. No rendered behavior, live provider, storage, mount, VM or editor campaign.
-- Exact owned scratch/home/temp removed after process/cwd checks; worktrees/retained assets/D0 untouched except the declared source/evidence edits. No target actions or completion claims. AC007 and stale S RELEASE.md R1 prose remain Delivery-owned.
+## Current implementation-scoped evidence
+- E5/validation-plan.md precedes checks; E5/checks-and-limits.md and raw logs
+  record exact scope, baseline failures, limits and skipped cases.
+- Independent native Linux arm64 Ubuntu24.04 nonroot development container:
+  baseline reproduces all hosted failure classes; corrected focused setup tests,
+  full race7 packages, vet, build/version, Bash pass. Python20 collected,
+  **17 executed/3 explicit installer/child skips**. Container-host bootstrap is
+  intentionally skipped by the unchanged suite; not counted as passed.
+- Independent native Darwin arm64: focused hosted-config/no-live-source-detach
+  and full race7 packages/vet pass. Direct child skip remains covered by bootstrap
+  parent. No hosted matrix completion claim.
+- Three independent Linux mutation copies fail the intended assertions:
+  ignored Status preflight, ignored Detach preflight, reject missing partial
+  detach config. No compilation-only failures or changes to canonical code.
+- Official Go1.27.2 downloads SHA-verified; native Linux GCC13.3/Python3.12.3,
+  Darwin Apple clang17/Python3.14.2. E5 toolchain/command logs retain environment.
+- Source hash on both OSes remains
+  **348046594b470f7b294aa2162f78ec349eb57c4edf74aa2db32112a9dc9da90e**.
+  Empty-qualification publish refusal still exit1 as expected. No engine rebuild/
+  candidate qualification or new release metadata.
+- Initial preparation root-path error failed before container/tests; corrected
+  without product edits. Baseline/mutation failures explicitly retained.
+- E5/source-audit.json proves only this test differs from intake, all copied inputs
+  match and preexisting ignored cache is unchanged. S has no new impact.
+- Frontend loop **Not Applicable**: test-only N change; no rendered behavior.
 
-## IR-003 historical integration and checks
-- Conflict: Codex bootstrapper test's two competing imports are both obsolete in the combined state. R2 removed its client-lease fixture dependency; upstream replaced the work-request constant assertions with current collaboration text. Removed neither assertions nor supported cases; kept current guidance, team/standalone/no-context and create/restore controls. CodexThreadManager still uses and retains its distinct lease fixture.
-- Inspected all five overlapping paths. AgentRunManager preserves upstream inputPreface/lifecycle observer/onPublished additions alongside R2 direct backend preparation/exact release. Claude bootstrap, Codex manager and Brief tests retain current prompt/role/team-kind expectations. Only test cleanup beyond merge: old no-op ownSkill/ownCodexClient callbacks and unused requestImplementation declaration/21 caller values.
-- E3/validation-plan.md was written before checks. Shared core/contracts/fixtures changed, so **all S API001 cases require impact rerun** under current TESTING.md; independent N cases remain valid because all service inputs are unchanged. API-owned S04/S05 remain downstream reruns, not waived by local unit tests.
-- Fresh owned S copy: frozen install; documented integration prerequisite build (server/shared SDKs/Prisma/sanitized startup/devkit/Brief package); production typecheck all exit0. Integrated units **1666 Pass /6 gated skips**; narrow Brief/skill-notice integration **21 Pass**; focused core units **15 Pass**; Guide/component **24 Pass**; localization/web guards pass; launcher **34 executed /2 explicit skips**. No assertion/execution failure occurred. Final fixture-only cleanup repeated six overlap/control files: **76 Pass**, overlapping earlier counts, not additive unique coverage.
-- Broad checks ran at8c5c76; final Codex-only fixture cleanup at5559abbf changes no production/shared dependency. Its focused rerun passed;7318 source/copy inputs match final current bytes. Commands/logs/counts/attribution are E3/checks-result.json, focused-final-result.json, test-counts.json and final-input-integrity.json.
-- Source audit: all25 R2 production owners retained; only AgentRunManager changed since API001, by upstream additions (345→364 nonempty lines). Removed coupling stays absent; no classifier/automatic Git trust/pin restored. N source/policies/licenses/pins unchanged. No new source-size escalation or design deviation.
-- Frontend loop N/A for this resolution: no authored rendered/user-interaction change, Guide component/command bytes unchanged; fresh component controls are not new browser/desktop proof. Existing IR001 render observations remain attributed to that source.
-- Only tooling failure: initial source-audit script quoting/path setup, preserved and corrected without source changes. Merge conflict and inherited-base EOF whitespace exception recorded. Owned scratch removed; D0 still unborn, board hash matches DR001; no live app/VM/Docker/mount/provider mutation.
-- Next: targeted source review of integrated recovery, then affected current API validation. No renewed architecture approval or old filesystem/editor campaign. Delivery still owns docs sync and ordered N→S finalization. Explicit docs-sync item: S RELEASE.md's NFS tail still claims R1 descriptor/launcher consumers and a pin; update that obsolete prose to R2 before delivery completion.
+## Cleanup and remaining gates
+Owned development container, source/toolchain copies and private home/temp removed;
+no matching host process/cwd left. Only immutable Ubuntu image shared cache remains.
+D0/PM/canonical app/source ignored cache/old engine assets and completed pushes
+were not modified or removed. E5/cleanup.json scopes the receipt.
 
-## IR-002 historical bounded change and checks
-- Removed AgentRunConfig and RuntimeAgentRunContext local bindings from the Claude and Codex backend factories, and the local ClaudeSessionEvent type import from claude-session-manager.ts. Actual AgentRunContext imports and the independent ClaudeSessionEvent public re-export remain. Exact three-file delta: E2/source.diff.
-- No runtime logic, tests, schemas, N service inputs, requirements/design, Guide or launcher changed. BEH006 / REQ010 / AC010 ownership and cleanup behavior is preserved; no new behavior. Classification remains Large/High for the completed package, not downgraded for this small fix.
-- TypeScript5.9.3 unused-local audit of all25 extraction-touched production TS files: zero6133/6192/6196 diagnostics. Separate production typecheck via documented `pnpm -C autobyteus-server-ts typecheck`, including pretypecheck shared builds: exit0 in owned current-source copy with clean HOME/TMPDIR.
-- Transpile comparison under production options: identical JavaScript for all three changed files, public re-export retained; 2insertions/7deletions and all files shrink. This comparison is not a runtime test or substitute for the separate semantic typecheck.
-- Frozen filtered installation and Prisma generation are setup only. Initial typecheck setup omitted a script-only backend SDK prerequisite; corrected install and unchanged-source rerun passed. Optional audit initially used a relative fileName outside absolute rootDir; corrected the harness. Raw attempts preserved in E2/attempts.md, attempt-1 and attempt-2.
-- E2/checks-and-limits.md, checks-result.json, unused-imports.json, delta-audit.json and cleanup.json hold fresh results. No new tests or broader campaign were needed for import-only identical-emission cleanup; IR001 and CRR001 evidence carries with explicit attribution. Owned scratch removed, no live resources started.
-- Frontend loop **Not Applicable for IR002**: no rendered/user-interaction change. Initial Guide inspection remains historical IR001 evidence below.
-- At the IR002 handoff, CRR001 was the pending reviewer verdict. It was subsequently cleared by CRR002; API001/CRR003 followed. IR003 does not assign a new reviewer/API Pass.
-
-## IR-001 historical local implementation checks
-The following are the initial implementation checks, **not newly executed in IR003/IR004**. N inputs remain unchanged; S execution is historical and its affected current reruns are listed above. All are local self-checks, **not API/E2E signoff**. See E/checks-and-limits.md, E/attempts.md and raw logs.
-
-- Independent committed N archive, no sibling S: Go race across seven packages and vet exit0; Python20 collected/19 executed successfully, one child-only skip also exercised through Go's bootstrap fixture; actionlint and Bash syntax exit0.
-- Darwin/Linux ×arm64/amd64 compile, native Darwin arm64 version. Fresh exact retained IR005 arm64 engine hash/manifest/file verification and embedded Linux arm64 compile only. No engine rebuild/execution/new qualification.
-- Source hash **348046594b470f7b294aa2162f78ec349eb57c4edf74aa2db32112a9dc9da90e**, invalidation/missing-input/installer/archive/engine/workflow controls. Publication check expected exit1. Lock unchanged.
-- Independent S copy with clean HOME/TMPDIR: documented prerequisite build (including sanitized built bootstrap), production typecheck exit0. Focused unit command1158 successful checks, six explicitly gated AGY-live skips. Additional final activation/PTY units40 checks.
-- Existing local route/profile fixture commands39 checks; real local run composition/dummy-LLM memory lifecycle/native PTY command17 checks. Requested ordinary cwd, home, unavailable cwd and close/churn exercised. External provider process boundaries are scripted fixtures, not credential-backed models.
-- Guide/component/command utilities24 checks; localization guard; generic launcher36 collected/34 executed, pwsh unavailable and occupied8001 collision setup skips; Bash syntax. No real Docker nodes.
-- Final source input hashes unchanged;58 changed TS files parse clean. This is not a semantic typecheck of every test in the whole repository.
-
-Failed attempts retained: unsupported Python bootstrap, protected ephemeral source location, workflow glob lint, dependency filters, stale test/mock inputs, alias-path expectations, nested test constructor rewrite and wrong runner selectors. Corrections never weaken source/mount/privacy/publication policy. Current final runs green within stated scope.
-
-## IR-001 historical frontend rendered-result check
-Factual EN/zh NFS Guide copy only, using existing NfsGuideCard/NodeManager visual language; no new UI design. Owned Nuxt route rendered actual current component/catalogs and null release, clicked locale controls at1440 and390 widths. Disabled copy/no download, readable wrapping, spacing/alignment and no horizontal overflow/runtime errors observed. E/guide-render/result.json plus four screenshots; browser/Nuxt stopped and temporary route removed. No installed desktop, available-release clipboard success, storage/UI acceptance or old editor campaign claimed.
-
-## Environment, assumptions and known limits
-Darwin arm64; current IR004 Node22.21.1/pnpm10.28.2/TypeScript5.9.3 in E4/toolchain.json; IR003 versions in E3/toolchain.json; original versions E/final-toolchain.json. Clean isolated homes, no credentials or live provider usage. Scratch copies used installed workspace dependencies, never a sibling service module.
-App intentionally cannot distinguish a directory after its mount disappears; ordinary path/I/O behavior is the new contract. Operators own storage availability and generic container mapping. NFS refuses predecessor obligations rather than silently abandoning them; no live installation was upgraded.
-Four-target compilation is not Linux/amd64/physical runtime qualification. No real privileged install, mounts/exports, VM campaign, Mac/Linux cross-host or paid provider campaign, hosted Actions/signing/public bootstrap qualification. Source/engine/app identities remain separate. Empty qualification/disabled Guide are required, not a release blocker to be bypassed.
-Original retained engine/canonical source and unrelated scratch/dist assets were not modified or deleted. D0 PM board hash preserved. Cleanup covers enumerated owned resources only, E4/cleanup.json for this round, E3/cleanup.json for integration and E/cleanup.json historically.
-
-## Downstream coverage hints / remaining gates
-1. Targeted source re-review of CR002: one unused test import removed, E4 same29-file unused audit and affected Claude test green. CRR004 already audited the integrated R2 boundaries; no reason to repeat the full source/1666-test campaign solely for this cleanup. R2/ARCH002 unchanged.
-2. Selected API/E2E engineer applies current TESTING.md impact policy: N01–03 still valid; S01–06 affected by shared foundations. Fresh E3 local evidence is available, but API owns independent current verdict/confidence and reruns composed API/native run-memory-PTY boundaries (S04/S05). No old completed filesystem/editor/VM/provider campaign or new user-approval loop is implied.
-3. Delivery refreshes both targets, integrates concurrent changes safely, syncs docs and finalizes N first then S (--no-ff), safely populates D0 only if still unborn/unconflicted, and reports exact two-repo receipts. **AC007 not yet achieved.** No release authorized.
+1. Targeted source/test review of IR005, then proportionate affected N validation.
+   S API002 results carry with exact-input limits; no blanket S repeat or worktree
+   recreation is needed for this test-only correction.
+2. Native Linux arm64 fixture success is not GitHub Ubuntu amd64 job completion.
+   Hosted failures and cancelled macOS job conclusions remain historical failures/
+   limits until a reviewed current candidate passes new Developer Checks.
+3. Delivery resumes fix-forward target freshness/receipts and terminal verification.
+   **Paired repository source operations completed; terminal/AC007 receipt gate
+   remains open.** R1 RELEASE prose was already synchronized by Delivery; do not
+   create a duplicate docs task or replay ordered initial finalization.
+4. No old editor/filesystem/VM/authenticated-provider campaign, new topology approval,
+   live mount/node mutation, release, TaskDone, Terminal or user-verification claim.

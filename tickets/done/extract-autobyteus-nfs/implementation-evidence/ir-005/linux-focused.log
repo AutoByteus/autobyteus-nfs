@@ -1,0 +1,63 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/candidate nfs-extract-ir005-au0s6fis env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./internal/setup -run TestHostedConfig -count=1 -v
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current
+--- PASS: TestHostedConfigStatusRefusesBeforeReadiness (0.06s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed (0.00s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing (0.00s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different (0.00s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current (0.01s)
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending
+--- PASS: TestHostedConfigDetachPreflightsBeforeEffects (0.07s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved (0.00s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending (0.00s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending (0.00s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending (0.00s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending (0.00s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending (0.00s)
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/missing
+--- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks (0.03s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current (0.01s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing (0.01s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current (0.01s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/missing (0.01s)
+=== RUN   TestHostedConfigChecksLeaveAppleAndConnectOnlyUnchanged
+--- PASS: TestHostedConfigChecksLeaveAppleAndConnectOnlyUnchanged (0.02s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.201s

@@ -1,0 +1,16 @@
+{
+  "candidate": "09cac96225fe4f36fb0dcbe6ddec01248992874f",
+  "changed_paths": [
+    "internal/setup/hosted_config_test.go"
+  ],
+  "production_unchanged": true,
+  "workflow_unchanged": true,
+  "config_safety_unchanged": true,
+  "source_copy_inputs": 108,
+  "mismatches": [],
+  "source_hash_unchanged": "348046594b470f7b294aa2162f78ec349eb57c4edf74aa2db32112a9dc9da90e",
+  "preexisting_ignored_cache_unchanged": true,
+  "S_impact": "None; worktree not recreated",
+  "target_operations": "No fetch/merge/push/reset; completed DR002 paired pushes preserved",
+  "initial_handoff_history_sha256": "be1a20aebc5d7f478cf901063f3e9ad81d26541f9dcdafb3188cd6a51fd2a310"
+}

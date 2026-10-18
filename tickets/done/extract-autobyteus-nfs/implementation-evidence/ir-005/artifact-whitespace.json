@@ -1,0 +1,44 @@
+{
+  "initial_staged_exit": 2,
+  "exceptions": [
+    {
+      "path": "tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/artifact-whitespace-initial.log",
+      "lines": [
+        2,
+        33,
+        80,
+        173,
+        552,
+        564,
+        572,
+        588,
+        622
+      ],
+      "blank_EOF": false,
+      "reason": "Preserve raw command output / unified-diff context"
+    },
+    {
+      "path": "tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-prepare.log",
+      "lines": [
+        122,
+        148,
+        182,
+        239
+      ],
+      "blank_EOF": false,
+      "reason": "Preserve raw command output / unified-diff context"
+    },
+    {
+      "path": "tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/source.diff",
+      "lines": [
+        7,
+        20,
+        26,
+        47,
+        128
+      ],
+      "blank_EOF": false,
+      "reason": "Preserve raw command output / unified-diff context"
+    }
+  ]
+}

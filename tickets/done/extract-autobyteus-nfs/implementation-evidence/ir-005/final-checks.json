@@ -1,0 +1,20 @@
+{
+  "revision": "IR-005",
+  "trigger": "DR-002",
+  "classification": "Large/High/Reviewed",
+  "candidate": "09cac96225fe4f36fb0dcbe6ddec01248992874f",
+  "history_prefix_preserved": true,
+  "production_unchanged": true,
+  "native_linux": "arm64 Ubuntu24.04 development container, UID1001, Go1.27.2",
+  "linux_packages_race_passed": 7,
+  "linux_python_collected": 20,
+  "linux_python_executed": 17,
+  "linux_python_skipped": 3,
+  "darwin_packages_race_passed": 7,
+  "mutations_caught": 3,
+  "hosted_CI": "Not rerun; prior runs remain failed/cancelled",
+  "S_impact": "None",
+  "completed_paired_pushes": "Preserved, not repeated",
+  "release": "None authorized",
+  "cleanup": "Complete for exact owned live resources and scratch"
+}

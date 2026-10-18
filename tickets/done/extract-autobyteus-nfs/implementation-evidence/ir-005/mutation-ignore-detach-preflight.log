@@ -1,0 +1,42 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/ignore-detach-preflight nfs-extract-ir005-au0s6fis env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./internal/setup -run TestHostedConfigDetachPreflightsBeforeEffects -count=1 -v
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending
+    hosted_config_test.go:172: detach touched dependencies before checking config refusing to unmount an unrelated source 0
+--- FAIL: TestHostedConfigDetachPreflightsBeforeEffects (0.08s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending (0.00s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending (0.00s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved (0.01s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending (0.00s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending (0.00s)
+    --- FAIL: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending (0.00s)
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.092s
+FAIL
