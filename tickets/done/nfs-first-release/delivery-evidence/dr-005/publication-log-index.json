@@ -1,0 +1,37 @@
+[
+  {
+    "job": "prepare",
+    "id": 117656435832,
+    "conclusion": "success",
+    "sha256": "3a8e997e8f9f280f7caacf7f1cfbe39b06797a6dc1dca5311b6c7a7a47a952f9",
+    "file": "publication-job-117656435832.log"
+  },
+  {
+    "job": "binaries (ubuntu-24.04, linux, amd64)",
+    "id": 117656510839,
+    "conclusion": "success",
+    "sha256": "51a66e8118b29d6af5165b2bb8f6d424ed0e90959d229268e6e6dff490f5ce39",
+    "file": "publication-job-117656510839.log"
+  },
+  {
+    "job": "binaries (macos-15, darwin, arm64)",
+    "id": 117656510844,
+    "conclusion": "failure",
+    "sha256": "453142e3924e88e91d3ef14881599ea1dbe4831ed273b4886eb07fcc2df140a8",
+    "file": "publication-job-117656510844.log"
+  },
+  {
+    "job": "binaries (ubuntu-24.04-arm, linux, arm64)",
+    "id": 117656510854,
+    "conclusion": "success",
+    "sha256": "75c6009b59d7995df32ab8ce1ece415090f3827a2fdf5e1bab50356c0120c4e5",
+    "file": "publication-job-117656510854.log"
+  },
+  {
+    "job": "binaries (macos-15-intel, darwin, amd64)",
+    "id": 117656510925,
+    "conclusion": "failure",
+    "sha256": "c0306a948cacf9e88de9f42336defbd451e9584879a868cdd63b9e27a2797e8e",
+    "file": "publication-job-117656510925.log"
+  }
+]

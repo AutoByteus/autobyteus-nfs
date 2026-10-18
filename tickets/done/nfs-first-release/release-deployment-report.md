@@ -1,10 +1,10 @@
 # Delivery / Release / Deployment Report
 
-## DR-005 active — prepublication sufficient; full completion pending
+## DR-005 completed round — Blocked; source finalized, signing failed
 
 Task **nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**. **Large / High / Reviewed**, R3/SR004 Approved/Ready, ARCH-REV-002 Pass, IR004/CRR005 source Pass100, CRR006 successful-test Pass; API-REV-003 **prepublication Pass95.00%**, not a public-release result.
 
-Last completed result DR-004 is retained in delivery-revision-record.md. This current operation is not terminal. Project guides `RELEASE.md` and `packaging/RELEASE.md` at reviewed product850dfeb; packaging opening prose synchronized only. **No deviations.** Staged main finalization before signed execution is explicitly permitted.
+DR-001–004 remain historical; DR-005 is now the authoritative Blocked delivery result. This is not terminal. Project guides `RELEASE.md` and `packaging/RELEASE.md` at reviewed product850dfeb; packaging opening prose synchronized only. **No deviations.** Staged main finalization before signed execution is explicitly permitted.
 
 ## Initial integration and verification
 
@@ -40,3 +40,17 @@ Actual release/download/signature/OCI equality receipts **Pending**. Field/files
 ## Cleanup / final status
 
 Owned readiness-test scratch removed; active worktree/branches/candidate retained for unfinished publication/recovery. Cleanup after actual final receipts pending. Historical candidates remain distinct and not promoted. No source/test reroute needed at present. Final verification, release and safe cleanup not yet complete; successful terminal package **Not eligible / not sent**. Postpublication plan custody follows Delivery → terminal SD → requesting PM, not premature parallel dispatch.
+
+## Actual DR-005 finalization and release outcome (supersedes pending-stage descriptions above)
+
+Source finalization **Completed**: ticketb599e476 pushed, current-base --no-ff merge7683494050b85a298ed08a55592e70f86a010a7a pushed/remote verified, identical tree, unchanged measured productiona425e3f8, check-publish pass. Archived ticket path tickets/done/nfs-first-release. Portable-name check1455paths/no errors, tracked prose diff check clean. Historical raw log whitespace retained. Guides followed; no deviation.
+
+Actual manual publish=true run39121007787/1 **Failed**, not partial public release: both Mac signing boundaries exit1 without diagnostic stage/notary receipt; Linux jobs and four-target native checks pass, payload/publish skipped. Developer CI39120986961 and39120991701 success. No actual Apple rejection, certificate mismatch or Accepted status inferred. No generated final signed payload. No tag/release/package observed (404); existing main remains intact. `failure-assessment.json`, raw failed jobs117656510844/117656510925, `publication-execution-summary.json`, `publication-artifacts.json`, `remote-after-failure.json` govern.
+
+Verification: prepublication sufficient; AC003 real signature/notary Not Proven; AC004 actual public immutable release Not Proven; AC005 actual public signed install Not Proven; AC006 final public equality Not Proven; AC007 release/custody Not Proven; AC008 actual release-doc/cleanup remainder pending. No user/field check request: explicitly deferred R3. Current native/release-boundary API evidence not invalidated by this separate actual signing failure; it never claimed actual signing success.
+
+**Escalation classification: Local Fix — packaging signing diagnostic boundary.** Implementation Engineer owns a bounded sanitized stage/exit failure receipt and actual-boundary correction; root cause not yet established because the script suppresses then deletes diagnostics. This known code-local diagnosability fix requires no product decision. Preserve cleanup/secrets/Accepted-only protections, no xtrace/raw secret output, no speculative secret re-provision, no unsigned fallback. Normal affected review/API gates apply if production hash changes; do not reuse current candidate as new-source proof. Fresh applicable rule selects implementation only, no duplicate SD/API dispatch.
+
+Cleanup **safely deferred for recovery**: isolated test scratch removed; active ticket/finalize branches/worktree and candidate retained, no live processes/storage effects owned here. Hosted post-job cleanup succeeded, keychain scratch removal not independently visible in masked logs. Canonical checkout/PM/unrelated worktrees untouched. No deployment/persisted-data change. Release notes prepared but not published. Rollback not applicable to absent public effects; finalized source not undone.
+
+Final status: evidence verification only prepublication complete; repository finalization Yes; actual release No; recovery retention intentional; terminal eligibility **No**, successful terminal not sent. DR005 Blocked local-fix handoff, not TaskDone. Field/user plan stays under Delivery custody until release succeeds then terminalSD→requestingPM.

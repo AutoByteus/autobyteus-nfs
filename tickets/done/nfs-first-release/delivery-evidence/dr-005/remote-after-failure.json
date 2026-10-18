@@ -1,0 +1,49 @@
+{
+  "tag": {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+    "exit": 1,
+    "result": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest/git/refs#get-a-reference",
+      "status": "404"
+    },
+    "stderr": "gh: Not Found (HTTP 404)\n"
+  },
+  "release": {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/tags/v0.1.0",
+    "exit": 1,
+    "result": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest/releases/releases#get-a-release-by-tag-name",
+      "status": "404"
+    },
+    "stderr": "gh: Not Found (HTTP 404)\n"
+  },
+  "package": {
+    "endpoint": "orgs/AutoByteus/packages/container/autobyteus-nfs",
+    "exit": 1,
+    "result": {
+      "message": "Package not found.",
+      "documentation_url": "https://docs.github.com/rest/packages/packages#get-a-package-for-an-organization",
+      "status": "404"
+    },
+    "stderr": "gh: Package not found. (HTTP 404)\n"
+  },
+  "main": {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+    "exit": 0,
+    "result": {
+      "ref": "refs/heads/main",
+      "node_id": "REF_kwDOVK4ms69yZWZzL2hlYWRzL21haW4",
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/heads/main",
+      "object": {
+        "sha": "7683494050b85a298ed08a55592e70f86a010a7a",
+        "type": "commit",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/7683494050b85a298ed08a55592e70f86a010a7a"
+      }
+    },
+    "stderr": ""
+  },
+  "at": "2026-10-18T10:58:27.400238+00:00",
+  "interpretation": "No v0.1.0 tag/release/package observed; no publication job executed. Main finalized, not undone."
+}

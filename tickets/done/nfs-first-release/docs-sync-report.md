@@ -1,6 +1,6 @@
 # Documentation Sync — nfs-first-release
 
-## DR-005 active; integrated state verified
+## DR-005 Blocked after signed publication attempt; integrated state verified
 
 Task **nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**. **Large / High / Reviewed**, R3/SR004 Approved/Ready, ARCH-REV-002 Pass, IR004/CRR005 source Pass100, CRR006 successful-test Pass; API-REV-003 **prepublication Pass95.00%**, not a public-release result.
 
@@ -12,7 +12,7 @@ Initial base refresh completed before Delivery edits: origin/main7e375984, alrea
 - `packaging/RELEASE.md`: replaces obsolete null-readiness description with audited current stable record. Procedure, signing/public download gates and recipe unchanged.
 - `packaging/releases/v0.1.0/`: genuine stable authorization/native/control/review evidence summaries, hashed approved postpublication plan, release notes and readiness JSON; immutable upstream commit/path attribution avoids moving ticket authority. Not synthetic fixtures or claims of field tests.
 - `packaging/release-lock.json`: exact measured engine plus genuine readiness reference, validated read-only. This is authorized readiness data preparation, no package/base pin or runtime/workflow change.
-- Ticket handoff, release/deployment report and notes synchronized. Revision DR001–004 preserved; DR005 active pending final outcome.
+- Ticket handoff, release/deployment report and notes synchronized. Revision DR001–004 preserved; DR005 now records Blocked after both Mac signing jobs failed.
 
 ## No-impact decisions
 
@@ -21,3 +21,7 @@ Runtime/filesystem contract, implementation, TESTING, license/CLA/section7, engi
 ## Durable knowledge and custody
 
 Normal signed release first, field/user testing afterward; first release targets four build distributions, not four independently qualified field systems. Retained payload and immutable recovery own byte identity. R3 postpublication plan copied exactly; terminal SD forwards it once to requesting PM. No duplicate Task creation or dispatch.
+
+## Actual outcome sync
+
+Main finalized7683494; publication39121007787 failed both Mac signing steps before payload/public effects. Own handoff/release report now distinguish passed prepublication/native checks from unproven actual signing/public downloads. README/packaging guide remain accurately preparatory, not falsely changed to Published. Stable readiness remains genuine for its exact current source, not a signing-success claim. Implementation-local safe diagnostic correction requested; no root-guide change proposed, no runtime/documentation scope expansion. Archived authoritative folder does not mean Terminal. Public release notes were not used because publisher skipped.

@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-18T10:58:27.400238+00:00",
+  "result": "Blocked",
+  "classification": "Local Fix \u2014 packaging diagnostic boundary",
+  "runId": 39121007787,
+  "attempt": 1,
+  "sourceCommit": "7683494050b85a298ed08a55592e70f86a010a7a",
+  "jobs": {
+    "success": 3,
+    "failure": 2,
+    "skipped": 6
+  },
+  "failedBoundaries": [
+    {
+      "job": "binaries (macos-15, darwin, arm64)",
+      "id": 117656510844,
+      "startLine": 299,
+      "exitLine": 311,
+      "exit": 1,
+      "observed": "sign-macos.sh exited1 before sanitized notary receipt; stage/cause not logged",
+      "missingNotaryReceipt": true,
+      "noSpecificCredentialCauseProven": true
+    },
+    {
+      "job": "binaries (macos-15-intel, darwin, amd64)",
+      "id": 117656510925,
+      "startLine": 299,
+      "exitLine": 311,
+      "exit": 1,
+      "observed": "sign-macos.sh exited1 before sanitized notary receipt; stage/cause not logged",
+      "missingNotaryReceipt": true,
+      "noSpecificCredentialCauseProven": true
+    }
+  ],
+  "nativeChecks": "All4 race7packages/vet/Python45/build/version succeeded before signing; final Mac archives not produced",
+  "actualSigningNotary": "Not proven; not claimed rejected by Apple",
+  "payload": "Not created",
+  "publicEffects": "Not executed; remote tag/release/package404",
+  "developerRuns": {
+    "39120986961": "success",
+    "39120991701": "success"
+  },
+  "knownLocalDefect": "signing subcommands redirect diagnostics to ephemeral files removed by cleanup, while no sanitized stage+exit failure record survives; actual boundary failure cannot be located safely",
+  "next": "Implementation-owned bounded sanitized signing-stage diagnostics and local fix; retain gates/secret confidentiality and obtain actual new-source evidence as applicable",
+  "fieldTests": "Deferred under R3, not this blocker"
+}
