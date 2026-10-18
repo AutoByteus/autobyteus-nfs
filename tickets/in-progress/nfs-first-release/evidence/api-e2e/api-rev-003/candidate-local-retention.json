@@ -1,0 +1,19 @@
+{
+  "root": "/Users/normy/nfs-first-candidate-api003-p_t67xqw",
+  "candidate": "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate",
+  "reference": {
+    "envelope": {
+      "artifactId": 12133493094,
+      "digest": "sha256:018a143ae3dbd1a39e17ca1673095b0cf67fae04d831946c3553f8f9df891106",
+      "expiresAt": "2027-01-16T10:19:22Z",
+      "runAttempt": 1,
+      "runId": 39118784695,
+      "workflowCommit": "585d416c2746cf2963058d591b0753d0db8088f5"
+    },
+    "recordSha256": "c4f48aceec1434ab3c7e6fa3f7e52b66677454ba5f73d473c3f36d3e60f7b652"
+  },
+  "members": 19,
+  "bytes": 128137587,
+  "zipRemoved": true,
+  "aliasIsNotReadiness": true
+}

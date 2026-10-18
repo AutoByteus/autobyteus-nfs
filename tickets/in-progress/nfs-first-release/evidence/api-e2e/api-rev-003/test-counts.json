@@ -1,0 +1,16 @@
+{
+  "workflow-current": {
+    "collected": 7,
+    "skips": []
+  },
+  "records-focused": {
+    "collected": 12,
+    "skips": []
+  },
+  "python-all": {
+    "collected": 45,
+    "skips": [
+      "'invoked by Go platform bootstrap regression'"
+    ]
+  }
+}

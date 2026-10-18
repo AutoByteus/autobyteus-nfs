@@ -1,0 +1,159 @@
+[
+  {
+    "jobId": 117649932129,
+    "name": "prepare",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [
+      "2026-10-18T10:19:36.5486942Z Ran 45 tests in 9.445s",
+      "2026-10-18T10:19:36.5487278Z OK (skipped=1)"
+    ],
+    "explicitPythonSkips": [
+      "2026-10-18T10:19:27.7460213Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
+    ],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117649979053,
+    "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "explicitPythonSkips": [],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117649979118,
+    "name": "engine-packages (ubuntu-24.04, amd64)",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "explicitPythonSkips": [],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650410850,
+    "name": "engine-inputs",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "explicitPythonSkips": [],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650438209,
+    "name": "engine",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "explicitPythonSkips": [],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650827602,
+    "name": "binaries (macos-15, darwin, arm64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T10:25:09.3707720Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.300s",
+      "2026-10-18T10:25:09.7207300Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.120s",
+      "2026-10-18T10:25:09.8372100Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.205s",
+      "2026-10-18T10:25:10.5346200Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.161s",
+      "2026-10-18T10:25:13.7586700Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.018s",
+      "2026-10-18T10:25:13.7587680Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.120s",
+      "2026-10-18T10:25:13.7588600Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.747s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T10:25:46.1301260Z Ran 45 tests in 13.085s",
+      "2026-10-18T10:25:46.1301870Z OK (skipped=1)"
+    ],
+    "explicitPythonSkips": [
+      "2026-10-18T10:25:34.3853970Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
+    ],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650827631,
+    "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T10:24:37.8788388Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.072s",
+      "2026-10-18T10:24:38.2283986Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.032s",
+      "2026-10-18T10:24:38.2284499Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.030s",
+      "2026-10-18T10:24:38.2285134Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+      "2026-10-18T10:24:41.1371620Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.257s",
+      "2026-10-18T10:24:41.1372157Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+      "2026-10-18T10:24:41.1372611Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.129s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T10:24:58.2357039Z Ran 45 tests in 7.498s",
+      "2026-10-18T10:24:58.2357268Z OK (skipped=1)"
+    ],
+    "explicitPythonSkips": [
+      "2026-10-18T10:24:51.4291741Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
+    ],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650827653,
+    "name": "binaries (ubuntu-24.04, linux, amd64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T10:24:41.9334834Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.159s",
+      "2026-10-18T10:24:42.6302748Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.254s",
+      "2026-10-18T10:24:42.6304369Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.252s",
+      "2026-10-18T10:24:42.6305232Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.204s",
+      "2026-10-18T10:24:45.2250881Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.289s",
+      "2026-10-18T10:24:45.2251548Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.014s",
+      "2026-10-18T10:24:45.2252014Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.160s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T10:25:08.0133688Z Ran 45 tests in 8.271s",
+      "2026-10-18T10:25:08.0134234Z OK (skipped=1)"
+    ],
+    "explicitPythonSkips": [
+      "2026-10-18T10:25:00.3040874Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
+    ],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117650827778,
+    "name": "binaries (macos-15-intel, darwin, amd64)",
+    "result": "success",
+    "nativePackagePassLines": [
+      "2026-10-18T10:26:00.9308890Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.502s",
+      "2026-10-18T10:26:02.2677440Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.258s",
+      "2026-10-18T10:26:02.3804580Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.350s",
+      "2026-10-18T10:26:02.3885460Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.221s",
+      "2026-10-18T10:26:05.5093790Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.475s",
+      "2026-10-18T10:26:05.5137060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.135s",
+      "2026-10-18T10:26:05.5182800Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.323s"
+    ],
+    "pythonSummary": [
+      "2026-10-18T10:27:06.4826530Z Ran 45 tests in 28.532s",
+      "2026-10-18T10:27:06.4827440Z OK (skipped=1)"
+    ],
+    "explicitPythonSkips": [
+      "2026-10-18T10:26:40.4888500Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
+    ],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  },
+  {
+    "jobId": 117651553221,
+    "name": "candidate",
+    "result": "success",
+    "nativePackagePassLines": [],
+    "pythonSummary": [],
+    "explicitPythonSkips": [],
+    "errors": [],
+    "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+  }
+]

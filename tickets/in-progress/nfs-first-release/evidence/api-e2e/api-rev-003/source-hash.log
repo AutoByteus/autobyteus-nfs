@@ -1,0 +1,5 @@
+# Case R02; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment local macOS26.5.2 arm64; Python3.9.6/Bash3.2.57
+# Step: source-hash.log; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+$ /usr/bin/python3 packaging/release.py --source-hash
+cwd /Users/normy/nfs-first-api003-8uj2xjel/source
+c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60

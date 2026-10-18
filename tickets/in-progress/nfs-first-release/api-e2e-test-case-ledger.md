@@ -1,6 +1,20 @@
 # API/E2E case ledger — nfs-first-release
 
-API-REV-002 current result: Blocked73.57%. Same50cases:5Pass/0Fail/42Blocked/3NotTested. API001 events/history remain intact below. Supplements are not extra unique cases.
+Historical ledger, frozen after the API003 skill transition. Current results are solely in api-e2e-execution-coverage-report.md; ongoing progress is in api-e2e-test-progress.md. Prior API001/API002 rows and earlier API003 events remain unchanged. The initial plan below is not a current result table.
+
+### API003 initial plan (historical)
+| Case | Expected/current disposition | State |
+|---|---|---|
+| R01 | Current R3 release controls | Not Tested |
+| R02 | Current static/hash/readiness refusal | Not Tested |
+| R03 | NEW complete hosted engine/OCI/four-native candidate | Not Tested |
+| R04 | Actual envelope/fetch/verify and refusal controls | Not Tested |
+| R05 | Actual downloaded candidate CLI/version/admission | Not Tested |
+| C01 | Own cleanup and artifact retention | Not Tested |
+| Q01–Q06 (42 cases) / U01 | Deferred by R3; postpublication plan, NOT Pass | Not Tested — Deferred |
+| D01/D02 | Later Delivery-owned signing/publication/public downloads | Not Tested — Downstream |
+
+### Historical API002 final state (unchanged result)
 
 | Case | Expected | State | Evidence |
 |---|---|---|---|
@@ -136,3 +150,35 @@ API-REV-002 current result: Blocked73.57%. Same50cases:5Pass/0Fail/42Blocked/3No
 | 2026-10-18T09:05:55.094189+00:00 | R04-native | Pass actual retained Darwinarm64 CLI version on local Mac; owned scratch removed, no physical NFS qualification | candidate-native-version.json |
 | 2026-10-18T09:06:33.301829+00:00 | R04-negative | Pass actual API envelope mismatch refused before destination/download; correct candidate untouched | actual-envelope-refusal.json |
 | 2026-10-18T09:08:51.972217+00:00 | Q01–Q06 | Blocked ENV-001: actual candidate now available, but no assigned independent/physical pairs; user resource request made, no live-host substitute | resource-blocker.json |
+
+## API-REV-003 events
+
+| UTC | Case | Result/checkpoint | Evidence (api-rev-003) |
+|---|---|---|---|
+| 2026-10-18T10:17:46.483886+00:00 | R02 | Pass bash-version | bash-version.log |
+| 2026-10-18T10:17:46.947655+00:00 | R02 | Pass python-version | python-version.log |
+| 2026-10-18T10:17:50.162701+00:00 | R03-F001 | Pass workflow-current | workflow-current.log |
+| 2026-10-18T10:17:55.169007+00:00 | R01 | Pass records-focused | records-focused.log |
+| 2026-10-18T10:18:25.008591+00:00 | R01 | Pass python-all | python-all.log |
+| 2026-10-18T10:18:25.210532+00:00 | R02 | Pass actionlint | actionlint.log |
+| 2026-10-18T10:18:25.222524+00:00 | R02 | Pass prefix-syntax | prefix-syntax.log |
+| 2026-10-18T10:18:25.269783+00:00 | R02 | Pass prefix-shellcheck | prefix-shellcheck.log |
+| 2026-10-18T10:18:25.591785+00:00 | R02 | Pass source-hash | source-hash.log |
+| 2026-10-18T10:18:25.810880+00:00 | R02 | Fail recipe-hash | recipe-hash.log |
+| 2026-10-18T10:19:10.905986+00:00 | R02 | Pass recipe-hash-corrected | recipe-hash-corrected.log |
+| 2026-10-18T10:19:11.220647+00:00 | R02 | Pass readiness-refusal | readiness-refusal.log |
+| 2026-10-18T10:19:11.241308+00:00 | R02 | Pass shell-syntax | shell-syntax.log |
+| 2026-10-18T10:19:11.373022+00:00 | R02 | Pass shellcheck | shellcheck.log |
+| 2026-10-18T10:19:25.868942+00:00 | R03 | Running hosted build-only run 39118784695 attempt 1; dispatch accepted NOT Pass | dispatch-receipt.json |
+| 2026-10-18T10:19:40.061111+00:00 | R01/R02 | Pass completed current controls; recipe command harness error resolved, original attempt retained; native4/real candidate still pending | test-counts.json; local-results.json; local-control-results.json; attempts.md |
+| 2026-10-18T10:19:48.790065+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-001.json |
+| 2026-10-18T10:21:55.033965+00:00 | R03 | Hosted checkpoint queued/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-005.json |
+| 2026-10-18T10:22:26.540639+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-006.json |
+| 2026-10-18T10:24:01.360436+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-009.json |
+| 2026-10-18T10:24:32.899384+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-010.json |
+| 2026-10-18T10:25:35.958055+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-012.json |
+| 2026-10-18T10:26:07.575190+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-013.json |
+| 2026-10-18T10:26:39.497946+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-014.json |
+| 2026-10-18T10:27:43.412895+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-016.json |
+| 2026-10-18T10:28:15.317029+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-017.json |
+| 2026-10-18T10:28:47.429481+00:00 | R03 | Hosted checkpoint completed/success; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-018.json |

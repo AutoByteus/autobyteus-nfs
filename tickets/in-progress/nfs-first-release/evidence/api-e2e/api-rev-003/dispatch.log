@@ -1,0 +1,3 @@
+# Case R03; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment read-only Actions observation; actual hosted Ubuntu24.04/macOS15 four-native run39118784695/1
+# Step: dispatch.log; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+$ gh workflow run release-nfs.yml --repo AutoByteus/autobyteus-nfs --ref codex/nfs-first-release -f release_tag=v0.1.0 -f source_sha=585d416c2746cf2963058d591b0753d0db8088f5 -f publish=false

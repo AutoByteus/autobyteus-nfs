@@ -1,0 +1,18 @@
+# Case R01/R02; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment local macOS26.5.2 arm64; Python3.9.6/Bash3.2.57
+# Step: local-console.log; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+bash-version True
+python-version True
+workflow-current True
+records-focused True
+python-all True
+actionlint True
+prefix-syntax True
+prefix-shellcheck True
+source-hash True
+recipe-hash False
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003/run-local.py", line 25, in <module>
+    cmd('R02','recipe-hash',['/usr/bin/python3','packaging/engine/manifest.py','source-hash'],contains='299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003/run-local.py", line 15, in cmd
+    print(name,row['pass'],flush=True);assert row['pass'],row
+AssertionError: {'case': 'R02', 'name': 'recipe-hash', 'command': ['/usr/bin/python3', 'packaging/engine/manifest.py', 'source-hash'], 'exit': 2, 'expected': 0, 'pass': False}

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "recipe-hash-corrected",
+    "command": [
+      "/usr/bin/python3",
+      "-c",
+      "import sys;sys.path.insert(0,'packaging/engine');import source;print(source.recipe_hash())"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "readiness-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass_": true
+  },
+  {
+    "name": "shell-syntax",
+    "command": [
+      "/bin/bash",
+      "-n",
+      "scripts/public/nfs/install.sh",
+      "packaging/sign-macos.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "shellcheck",
+    "command": [
+      "/opt/homebrew/bin/shellcheck",
+      "scripts/public/nfs/install.sh",
+      "packaging/sign-macos.sh"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  }
+]

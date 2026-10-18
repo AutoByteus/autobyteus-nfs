@@ -1,0 +1,4 @@
+# Case R04; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment local macOS26.5.2 arm64; Python3.9.6/Bash3.2.57
+# Step: candidate-metadata-wrong-digest.log; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+$ /usr/bin/python3 /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py --tag v0.1.0 --engine-image registry.invalid/owned-api003/nfs@sha256:0000000000000000000000000000000000000000000000000000000000000000 --engine-manifest /Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate/engine/engine-manifest.json --candidate /Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate
+Release refused: Candidate metadata inputs differ

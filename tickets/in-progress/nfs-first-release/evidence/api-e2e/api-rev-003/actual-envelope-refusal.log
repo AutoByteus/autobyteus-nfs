@@ -1,0 +1,3 @@
+# Case R04; commit585d416c2746cf2963058d591b0753d0db8088f5; local Macarm64/current CLI or real Actions-read API; date 2026-10-18T10:31:39.590935+00:00
+$ /usr/bin/python3 /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py --operation fetch-candidate --envelope /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003/wrong-envelope-control.json --directory /Users/normy/nfs-first-candidate-api003-p_t67xqw/refused-envelope-destination
+Release refused: Retained artifact envelope differs

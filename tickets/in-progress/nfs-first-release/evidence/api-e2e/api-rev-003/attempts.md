@@ -1,0 +1,5 @@
+> Evidence context: Case R01/R02; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment local macOS26.5.2 arm64; Python3.9.6/Bash3.2.57 Step: attempts.md; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+
+# API003 attempts
+
+1. Local independent copy: workflow7, records12, fullPython45/44executed/1childskip, actionlint, prefix syntax/ShellCheck, source hash passed. The temporary runner then incorrectly invoked `manifest.py source-hash` (unsupported subcommand, exit2). This is API harness command selection, not product failure; source.py.recipe_hash is the actual existing recipe API. Original run-local.py/recipe-hash.log/local-results/console and cleanup preserved, no red-to-green overwrite. No source/check assertion changed. Resume in a fresh exact120-file copy only for corrected recipe API, not-yet-reached null-readiness refusal and full shell syntax/ShellCheck. Existing valid suite evidence carries.

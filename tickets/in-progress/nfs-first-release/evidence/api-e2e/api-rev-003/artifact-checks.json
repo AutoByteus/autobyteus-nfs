@@ -1,0 +1,69 @@
+{
+  "step": "Corrected final report/evidence integrity audit; not runtime rerun",
+  "utc": "2026-10-18T10:40:53.690308+00:00",
+  "commitBeforeEvidence": "585d416c2746cf2963058d591b0753d0db8088f5",
+  "cases": "R01\u2013R05/C01",
+  "environment": "N ticket on local macOS arm64",
+  "sourceInputsUnchanged": 120,
+  "protectedInputsUnchanged": 1186,
+  "DeliveryFilesUnchangedSinceC01": 20,
+  "historyBytePrefixPreserved": true,
+  "allSixCurrentCasesHaveCompletedPass": true,
+  "allEvidenceJSONValid": true,
+  "annotationBodiesUnchanged": true,
+  "missingExplicitReportEvidencePaths": [],
+  "capturedLogWhitespaceExceptions": [
+    {
+      "file": "hosted-job-117649932129.log",
+      "trailingWhitespaceLines": 10,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117649979053.log",
+      "trailingWhitespaceLines": 80,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117649979118.log",
+      "trailingWhitespaceLines": 78,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650410850.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650438209.log",
+      "trailingWhitespaceLines": 59,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650827602.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650827631.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650827653.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117650827778.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    },
+    {
+      "file": "hosted-job-117651553221.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Exact captured output retained; not authored source whitespace."
+    }
+  ],
+  "priorAttempt": "artifact-audit-attempts.md",
+  "pass": true
+}

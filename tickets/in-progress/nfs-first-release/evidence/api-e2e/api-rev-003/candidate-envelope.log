@@ -1,0 +1,3 @@
+# Case R04; source 585d416c2746cf2963058d591b0753d0db8088f5; executed 2026-10-18 UTC; environment local macOS26.5.2 arm64; Python3.9.6/Bash3.2.57
+# Step: candidate-envelope.log; exact command/steps in body or companion result JSON. Reader annotation 2026-10-18T10:40:08.210765+00:00; original captured body follows unchanged.
+$ /usr/bin/python3 /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py --operation candidate-envelope --artifact-id 12133493094 --run-id 39118784695 --attempt 1 --workflow-commit 585d416c2746cf2963058d591b0753d0db8088f5 --output /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003/candidate-envelope.json

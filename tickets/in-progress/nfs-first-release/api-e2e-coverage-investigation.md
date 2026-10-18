@@ -1,80 +1,77 @@
-# API/E2E coverage investigation — nfs-first-release
+# API/E2E Coverage Investigation — nfs-first-release
 
-## API-REV-001 plan before execution
-R2/SR002 Approved; SR003 Ready; ARCH001 Pass; IR001 source886b55e; CRR001 Pass100 at c1f1330. Large/High. This NEW first normal v0.1.0 task authorizes release only after readiness; old extraction no-release and command-only topology do NOT replace its approved current gates. No old Task reopened. Complete requirements/investigation/design/history/handoffs/architecture and source reports plus IR evidence map/intake E18 read. Six signing secrets provisioned, not validated; no reprovisioning request.
+## Investigation Meta
+- Round API-REV-003; trigger CRR005 source Pass for IR004 after R3 release-first recovery. Prior API001/002 plans/results reviewed; canonical history is api-e2e-revision-record.md. The earlier in-flight plan is evidence/api-e2e/api-rev-003/validation-plan.md; this document now follows the updated plan-only skill format.
+- Ticket/worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release`; branch codex/nfs-first-release, target origin/main. NFS ONLY.
+- Requirements requirements-doc.md R3/SR004 Approved; factual basis investigation-notes.md E19–22; solution-revision-record.md; design-spec.md SR004 Ready.
+- Supplements approval-record-sr004.md and postpublication-testing-plan.md; exact direction delivery-evidence/dr-003/user-publish-first-direction.json (Delivery-owned).
+- Architecture design-review-report.md / architecture-review-revision-record.md ARCH002 Pass. Implementation implementation-handoff.md / implementation-revision-record.md IR004 (cumulative IR003 replacement). Code code-review-report.md / code-review-revision-record.md CRR005 Pass100 (unaffected full R3 CRR004 review carried).
+- Delivery delivery-revision-record.md DR004: source availability only, no main integration or publication. API history/report/progress are independent authorities; no upstream source Pass is an executable result.
+- Prior API002 candidate must remain historical because production and engine recipe changed. No reuse as current evidence; no field-host questionnaire.
 
-Read root AGENTS/DESIGN/TESTING/RELEASE/README, go.mod, packaging/RELEASE and actual workflow, candidate/qualification/facade/test paths. No closer guidelines. Local checks require independent APFS source outside /private/tmp, private HOME/TMPDIR; Linux archives extracted inside guest filesystem. Fixtures do not imply privileged runtime authorization. Current source runtime/engine pins/ordinary CI unchanged; all119 source inputs and existing tracked ticket artifacts preserved by input-audit.json.
+## Current Requirement And Design Basis
+R3 separates release readiness from explicitly deferred filesystem/physical/user tests. Current prepublication native/release-control/source evidence and exact new candidate are required. Both Mac real Developer ID/Accepted notary, final signed payload, fresh main, immutable publication, canonical anonymous OCI and public download/signature checks remain later Delivery gates. This round validates the affected prepublication package for that next gate; it cannot claim the signed public release already exists.
 
-Boundaries: Actions scheduling/retention, source/engine/full OCI identity, structured qualification, Mac keychain/sign/notary, final payload/publication/recovery, bounded installer. No app/browser/UI work. UI category N/A; CLI/download covered under actual user boundary. Legacy removal and state decisions inspected: single current release path, no old publisher/beta/path-count fallback; host state Not Affected, qualification rebuilt ONLY from actual candidate, external immutable identity directly read/reconciled.
+## Supported Scenarios And Real Usage
+SCN001 candidate; SCN002 readiness; SCN004 download/admission; SCN005 missing/stale/false claims; SCN006 exact-payload retry. SCN003 actual publication and SCN007 finalization are downstream, SCN008 field/fix-forward custody deferred. No new unsupported/contrived scenario. Corrupt copied envelope is SCN005 input-corruption control, not a fabricated second candidate.
 
-## Coverage validity and gap decisions
-- Still Valid: all test_nfs_release_{records,publication,signing,workflow}, source_identity, engine_packaging, packaging and installer fixtures; reviewed current assertions follow SCN001–006. Execute actual parsers/files/signing shell/inert installer with disclosed external doubles. Synthetic evidence NEVER copied into real lock.
-- Still Valid/carried attribution: IR001 native Go race/vet/four compiles and six mutation controls, CRR001 independent Python/static evidence; unchanged Go runtime and ordinary CI justify reuse for local scope only. Required current hosted native four-target execution is separate and not carried.
-- Add Durable Coverage only if investigation/execution discovers a specific missing supported release boundary; none established now. Do not rewrite source from a test assumption. No stale coverage removal.
-- Temporary executable actual checks required: hosted exact candidate/run/envelope/no-public-effects, retained measured two-arch engine/whole OCI, qualification-only same-digest registry and native host journeys; exact current OS/topology inventory first. Publication/signing/final public payload is Delivery-owned after qualification acceptance. Real missing prerequisite remains explicit; do not manufacture receipts.
+## Changed Behavior / Boundaries
+| Behavior / boundary | Change | Basis | Coverage consequence |
+|---|---|---|---|
+| BEH001 candidate | Preserved mechanism / new hashed inputs | AC001/006, DS1 | New complete actual run, not old artifact relabel |
+| BEH002 readiness | Changed; qualification removed | AC002, DS2 | Exact authority/check/ref/source/engine/OCI and deferred status admission/refusal |
+| BEH003 payload/publication | Changed control record/disclosure; immutable effects preserved | AC004/006, DS3/5 | Semantic rehashed tamper/refusal/retry fixtures; actual effects downstream |
+| BEH004 native release/installer | Changed schema2 target/status/notice | AC005, DS4 | Native current admission tests; actual downloaded candidate refuses install, version remains exact |
+| BEH005 host state/lifecycle | Preserved | AC005/008 | Existing guard coverage; no live storage campaign |
+| BEH006 docs/custody | Changed release-first claims | AC007/008 | Honest deferred plan retained for Delivery→terminalSD→requestingPM |
 
-## Cases / expected evidence
-| Case | SCN / AC | Surface / expectation |
+API/transport here is CLI/Actions/artifact contract, not application HTTP. Runtime local release decoding, distribution permission, derived persisted control and external CI/download boundaries are affected. Frontend/browser/desktop shell/provider APIs/distributed NFS behavior are not changed; do not execute old application campaigns.
+
+## Project Execution Discovery
+Root `AGENTS.md`, `DESIGN.md`, `TESTING.md`, `RELEASE.md`, `README.md`, `go.mod`, `.github/workflows/{ci,release-nfs}.yml`, `packaging/RELEASE.md`, `packaging/engine/{README.md,manifest.py,source.py}`, current Go/Python tests govern execution. No closer testing guideline/instruction. Go module1.25 minimum, hosted pin1.27.2; Bash3.2 on local Mac; Python stdlib. No Node/sibling repo needed. Guideline conflict: None. Updated skill replaces ledger-result duplication with plan/report/append-only progress; old ledger remains historical, not a competing current authority.
+
+| Component / data | Setup / readiness | Safety / cleanup |
 |---|---|---|
-| R01 | 005 /001–006 | Fresh independent current local fixtures: release records, publication/retry, signing/cleanup, workflow truth table, installer; expected refusals, all valid controls pass |
-| R02 | 001/005 /001/006 | Source identity/static workflow/shell/empty-lock refusal; preserve exact inputs; native Go local proof attributed IR001, not new qualification |
-| R03 | 001 /001/006 | Read-only remote inventory then actual publish=false dispatch on available reviewed ref; 2engine architectures+complete OCI+4native targets succeed, no tag/release/image writes; retain exact run/attempt/artifact envelope |
-| R04 | 002/005 /002/006 | Fetch/verify actual retained candidate, no latest guessing; inspect source/engine/OCI/native hashes and retention; alias metadata bounded without qualified targets |
-| Q01 | 002 /002/006 | darwin-arm64 mac-native, macOS26+ APFS, independent hosts/kernels |
-| Q02 | 002 /002/006 | darwin-amd64 mac-native, macOS26+ APFS, independent hosts/kernels |
-| Q03 | 002 /002/006 | linux-arm64 linux-native, Ubuntu24.04 ext4, independent hosts/kernels |
-| Q04 | 002 /002/006 | linux-amd64 linux-native, Ubuntu24.04 ext4, independent hosts/kernels |
-| Q05 | 002 /002/006 | linux-arm64 linux-docker, same exact OCI from test-owned reachable registry on Ubuntu24.04 ext4 |
-| Q06 | 002 /002/006 | linux-amd64 linux-docker, same exact OCI from test-owned reachable registry on Ubuntu24.04 ext4 |
-| U01 | 002 /002 | Genuine executed-user-check of exact candidate/all4targets; publication/secret consent not verification; only request after executable candidate scope exists |
-| D01 | 003/006 /003/004/006/007 | Downstream Delivery: accepted qualification/current-main, real signing+Accepted notary, retained final payload, normal publication and same-payload recovery; not API-owned remote writes |
-| D02 | 004/007 /005/007/008 | Downstream Delivery/public checks: final fourtarget download/install/version/signature identities; docs/finalization/current refs/receipt |
-| C01 | 007 /008 | Owned cleanup, exact source/upstream preservation; retained real candidate ownership/path/expiry explicit if created |
+| Local controls | Exact tracked non-ticket copy into owned APFS development directory, outside /private or /tmp; private HOME/TMP, explicit PATH, no account variables | No setup/root/storage; delete only owned copy after source equality check |
+| Hosted candidate | Existing reviewed branch staging by Delivery; verify exact remote workflow bytes; `gh workflow run release-nfs.yml --repo AutoByteus/autobyteus-nfs --ref codex/nfs-first-release -f release_tag=v0.1.0 -f source_sha=<verified SHA> -f publish=false` | Omit candidate_run_id; no signing/publication; preserve exact run/attempt/artifacts, provider postjob cleanup |
+| Actual artifact | Repository candidate-envelope/fetch-candidate/verify-candidate facade; Actions-read identity, exact unique artifact from run | No arbitrary latest selection; full member/engine/OCI/native verification; retain through release, no generated binaries/metadata in Git |
+| Native smoke | Extract bounded regular candidate Darwinarm64 binary/manifest to owned HOME | version/verify-release only, no setup or quarantine bypass; remove copy |
+| Final signing/publication | Delivery uses genuine stable readiness refs and reviewed current main after successful-test gate | Six secrets provisioned, no reprovision absent concrete failure; no API publication authority inferred |
 
-Each Q row has seven independently recorded operations Qxx-01..07: (01) public create/connect and plan/consent/UUID; (02) bidirectional exact text/binary bytes through distinct client/server paths with measured <=5s visibility after close; (03) create/edit/rename/move/mkdir/list/delete and concurrent distinct paths without cache flush/manual remount; (04) nonroot permissions/executable preservation, supported fcntl exclusion/release and Git init/add/commit/status plus lock conflicts (no automatic trust); (05) wrong source/identity/busy/unowned detach refusal then safe detach preserving source/private state; (06) stop/restart and reconnect with source UUID/client state retained, recorded host reboot only on authorized disposable node; (07) private/runtime files not exported, chosen-path/existing bytes preserved. Planned commands use Python/standard shell/Git/NFS CLI, no product app/editor/provider. All required rows and at least physical mac-native/linux-native/linux-docker categories must be real; VMs cannot fill physical rows, containers not independent kernels.
+## Persisted Data Transition Basis
+Discard/Rebuild release-readiness and schema2 generated distribution metadata; current engine lock must clear readiness, legacy claims/flags refuse. Installed host records NotAffected; additive host decoder preserved. External immutable identities and history preserved; no migration, dual read/write or fallback. Required proof: R01/03/04/05 and native Go checks, with actual final signed metadata downstream.
 
-## Environment and safety plan
-Inventory local OS/CPU, available disposable VM managers and existing process/container names read-only; do not open SSH config, credentials, broad private files or touch running resources. Discover project-documented assigned remote hosts, not assumed physical resources. Inspect GitHub refs/workflow/run/artifact/tag/release metadata with gh read API. If reviewed workflow/source is unavailable remotely, request necessary staged ref/finalization from Delivery owner, never self-merge/push; no false API Pass to unblock it. No paid infrastructure or live-user mount/firewall/daemon changes. Actual setup only assigned test-owned hosts and minimal data. Never restore/delete other owners' work.
+## Existing Durable Coverage Inventory
+| Path / tests | Intent / AC | Validity | Action |
+|---|---|---|---|
+| scripts/tests/test_nfs_release_workflow.py | Candidate/fresh/resume gates, actual Bash3.2 argv/failures AC001/004 | Still Valid | Execute first; CR-001 guard retained with --release |
+| scripts/tests/test_nfs_release_records.py + nfs_release_fixture.py | Exact readiness, stable refs, candidate/OCI, provenance/mandatory disclosure AC002/006 | Still Valid replacement for old qualification contract | Focused then full; synthetic inputs remain fixtures only |
+| scripts/tests/test_nfs_release_publication.py | Original-payload recovery, exact immutable stages, conflicts AC004/006 | Still Valid | Full suite; remote effects explicitly doubled |
+| scripts/tests/test_nfs_release_signing.py | Accepted-only shell/cleanup AC003 | Still Valid | Full suite, not real Apple proof |
+| scripts/tests/test_nfs_installer_fixture.py | Prewrite integrity/admission and notice AC005 | Still Valid | Full suite; downloader/binary doubles disclosed; Go parent covers permission child |
+| scripts/tests/test_nfs_engine_packaging.py, test_nfs_packaging.py, test_nfs_source_identity.py | Engine-reset/new source hash/current shape AC002/006 | Still Valid | Full suite; no fake measured engine in product lock |
+| internal/cli/release_admission_test.go + cli_test.go + engine_release_test.go | Schema/status/duplicates/target/equality; notice and exact stdout AC005 | Still Valid | Current hosted native Go/race on four targets |
+| Remaining backend/platform/config/setup/Docker/service Go tests | Preserved host/pending/private/source safety | Still Valid | Hosted whole-module native race/vet; no mounted-filesystem claim |
+| Old qualification fields/flag/gate assertions | Superseded R2 intent | Replace (IR003 already replaced) | No stale compatibility coverage retained or removal needed by API |
 
-## Confidence / broader decision before execution
-Unscored until local results; no API verdict yet. Broader validation REQUIRED: fixtures cannot prove hosted Actions, real BuildKit OCI, physical target/mode behavior, user verification or notarization/public download. Candidate and host availability unresolved; these are execution dependencies, not a new design/approval loop. Follow up on concrete findings through normal origin rules. No qualification lock mutation or immediate Delivery completion.
+## Planned Cases
+| ID | AC | Surface / kind | Command or steps | Temporary rationale |
+|---|---|---|---|---|
+| R01 |002/004/005/006|Existing tests|Focused workflow/records then `python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v`|N/A|
+| R02 |001/002/008|Existing static/temporary checks|actionlint, Bash/ShellCheck, `release.py --source-hash`, existing source.recipe_hash(), expected `--check-publish` refusal|No duplicate durable static runner needed|
+| R03 |001/005/006|Hosted journey|Exact build-only dispatch; engine2/fullOCI/native4 race/vet/Python/build/version/aggregation; remote no-publication observation|Actual CI evidence, not local fixture replacement|
+| R04 |001/002/006|Live API/CLI temporary probe|Actual envelope/fetch/verify; same-digest metadata alias; wrong digest/version/envelope/current-null readiness refusals|Real candidate/run-specific probe, existing durable parser controls retained|
+| R05 |005|Downloaded native CLI temporary probe|Actual `version`; equal candidate metadata, false and legacy claims to `verify-release` must refuse|Proves retained binary boundary; final signed/installable metadata remains Delivery|
+| C01 |008|Cleanup/preservation|Own source/scratch checks, old evidence preservation, actual candidate retained and reverified|Run-specific resources|
+| Q01–Q06 (42) / U01 |003 requirement /007 AC|Not Tested — Deferred|Postpublication plan retains original IDs and field/user scope|Not prepublication/closure prerequisites, not Pass|
+| D01/D02 |003/004/005/006/007/008|Not Tested — Downstream|Delivery actual readiness/signing/publication/public downloads/finalization|Required release completion, not performed by build-only candidate|
 
-Post-local checkpoint: R01/R02 local checks green. R03 reviewed ref absent remotely; requested Delivery-owned staged availability, not qualification/publication. No test-owned physical endpoints identified; user asked only for resource inventory, not new requirements or credential entry. While staged availability is pending, add R02-native fresh native Darwin Go1.27.2 race/vet/build/version in existing owned APFS copy; root testing commands, no new runtime changes or source qualification claim.
+Progress log needed: Yes, `api-e2e-test-progress.md`. More than one case plus long hosted run. Skill changed mid-run: original ledger checkpoints retained; new cases use progress/report, no fabricated earlier start times.
 
-R02-preflight temporary probe added before execution: real release.py CLI, actual git HEAD/show byte comparison against current checked-out workflow, emulated GitHub event/env only. Positive candidate-mode preparation writes owned outputs; old workflow, wrong event, beta and non-main publication refuse. No Actions dispatch or external writer invoked. This supplements module mocks, not hosted acceptance.
+## Durable Changes / Ambiguities
+API additions/updates/removals planned: None; current durable assertions adequately target approved changed boundaries. No unresolved requirement/design ambiguity, no reroute before execution. Actual product failures follow normal failure-origin route. Record harness command/setup errors separately from product failures; do not change production behavior to satisfy an invalid probe.
 
-## Post-local confidence checkpoint (not final acceptance)
-R01 actual parser/file/shell/installer controls pass; R02 static/refusal and five real CLI/Git preflight controls pass (GitHub context emulated). Native Darwin run underway. Scores over current API release acceptance: AC proof50, changed-boundary directness75, cross-boundary realism50, environment/fixture fidelity50, failure/recovery75, CLI user-surface50 (browser/desktop N/A), durable regression relevance95. Equal mean63.57%. Missing actual hosted/physical/user/public boundaries prevent Pass; no source defect found. Broader remains Required; current reviewed remote ref and assigned host inventory pending. No source/qualification write or credential reprovisioning. Delivery requested only staged availability, not premature terminal delivery.
-
-R03 prerequisite resolved by DR001: reviewed remote ticket518f4b51 available, exact workflow bytes rechecked; no source/integration delta. Now execute ONLY publish=false candidate on this exact ref/source, v0.1.0, no candidate_run_id. Four native runners and two measured engine builds/complete OCI required; no signing/publication. Delivery records stay uncommitted/untouched.
-
-R04 pre-execution refinement: after successful exact hosted candidate, run documented envelope/fetch/verify on actual artifact into an owned retained home directory, preserve actual manifest/OCI/member identities. Then use release.py metadata output only to a ticket evidence JSON to prove same-digest unqualified alias admits and different version/digest refuses. The reserved registry.invalid alias is deliberately not resolved; this is NOT reachable registry/first-use Docker evidence and does not fill Q05/Q06. No --target embedding, source manifest or qualification-lock writes. Default --check-publish must still refuse.
-
-R03 actual hosted outcome: run39111348848/attempt1 failed in both Mac native-check jobs; Linux amd64/arm64 native and two engine builders/merged engine/OCI passed. Candidate/payload/publish skipped, no complete candidate exists. R04 planned reader/alias probe must NOT execute against fragments or hand-assembled fake candidate. Preserve attempt logs and investigate exact failure; supported current candidate journey AC001, not prior physical-user scope.
-
-R03-F001 investigation before rerouting: both actual Mac jobs fail args[@]:unbound variable at exact workflow native-check line5, before metadata/Go tests. Execute extracted three source lines under local /bin/bash with candidate vs fresh control; inert python command makes entry/argv observable, no engine/source modification. This supported candidate-mode shell path is within AC001. No durable-test or production fix before origin review.
-
-## Final API-REV-001 decision
-Fail62.86% (50/75/50/50/75/50/90; equal mean), not Pass/qualification. Existing tests remain valid, but static/syntax truth tables missed supported Mac candidate-mode empty-array execution. Actual hosted failure reproduced from exact three source lines under local systemBash3.2.57; fresh-mode control succeeds. Preliminary Local Fix workflow implementation after independent failure-origin review; no production/durable changes by API. R04 unexecuted scaffold, Q42 blocked on current complete candidate/assigned physical pairs; U01/D01/D02 unexecuted. All current source and prior inputs preserved, local resources cleaned, failed-run partial remote artifacts retained. Broader Required after fix; platform resource gap stays separate. See canonical report ACproof/scorecard and failure-summary.json.
-
-## API-REV-002 plan — IR002/CRR003 re-entry (before execution)
-NFS repository ONLY. R2/SR002, SR003/ARCH001 Large/High unchanged; CRR003 accepts source8436d0cf, docs-only receipt96c8de3. API001 Fail62.86 and its raw failed run remain historical authority until this new round finishes. Read current implementation/review/history including state/legacy decisions, updated TESTING, actual three-file delta and existing R01–R04/Q/U/D/C case plan. Other116/119 inputs unchanged. No application/Guide/editor/superrepo work.
-
-Coverage validity: current executable workflow7 tests Still Valid (candidate/fresh exact argv, command/nounset/pipefail refusal); previous scheduling/records/signing/publication/installer assertions Still Valid. No durable additions/removals needed now. First rerun prior R03-F001 through current workflow test on local systemBash3.2 in fresh exact119-input APFS copy/private HOME/TMP, then full current Python suite/actionlint/Bash/source hash/default refusal. API001 unchanged Go/local runtime evidence carries with its limits; actual new hosted four-target native checks remain required. Repeating old synthetic engine or VM campaigns is not useful.
-
-R03 must be a NEW publish=false v0.1.0 dispatch on exact available reviewed current ref; DR001 staged only old518f4b51, remote observed still old. Request Delivery-owned branch staging, no inferred main merge/source finalization. Verify remote ref/workflow bytes and run/attempt selection again. Do not reuse old7partial artifacts. R04 only after full candidate success: actual envelope/fetch/verify full measured two-arch engine/OCI/four archives, local metadata-only alias/admission controls retaining identity. No source/qualification mutation. Assigned independent/physical hosts and genuine user execution remain separate unresolved dependencies; no repeat secret provisioning.
-
-Broader Required: corrected local shell does not close hosted failure. Use same Q01–Q06 seven-operation plan only on assigned test-owned hosts. No live user computer/app containers/daemon/firewall resources may substitute; no targets dropped or fake physical claims. Public finalization/signing/publishing remain Delivery-owned gates. Preserve unrelated Delivery files, own cleanup and failed attempts.
-
-API002 post-local: current workflow7 tests and fullPython41collected/40executed/1Go-childskip pass; focused7 overlaps41. Prefix syntax/shellcheck/actionlint/hash/refusal pass. R03-F001 corrected local shell reached; hosted closure not inferred. No local Go repeat (unchanged owners); new hosted four-target suite required. Scratch removed119inputs preserved. Post-local score63.57% (50/75/50/50/75/50/95) with corrected regression restored; still Required actual candidate and separate physical evidence.
-
-API002 R03 prerequisite resolved by current Delivery staging: reviewed remote ticket96c8de3 available, exact workflow bytes rechecked; no integration delta from reviewed IR002 source. Now execute ONLY publish=false candidate on this exact ref/source, v0.1.0, no candidate_run_id. Four native runners and two measured engine builds/complete OCI required; no signing/publication. Delivery records stay uncommitted/untouched.
-
-DR002 prerequisite completed: remote96c8de3 exact current workflow bytes rechecked, no main integration/source delta. API personally dispatched new run39113335636/attempt1 publish=false. R04 extends actual artifact checks with owned-HOME downloaded darwin-arm64 `version` smoke if successful; extract only validated regular executable into temporary owned directory, no installer/setup/mount/quarantine bypass. Archive and all identity bytes unchanged. This is unsigned candidate CLI evidence on local Mac26, not independent physical filesystem or final notarized-download proof.
-
-R03-F001 closed by actual NEW run39113335636/attempt1 on reviewed96c8de3: both Mac jobs plus Linux jobs/full candidate succeed. Historical39111348848 remains failed; local shell correction not substituted for hosted proof. R04 actual successful-run candidate now eligible for facade fetch/identity checks. No public release/signing/physical qualification inferred.
+## Investigation Decision
+Proceed Yes. Source/durable edits No. Reroute required before validation No. Results, exact tested identities, confidence and broader decision are in the execution coverage report; historical outcomes in revision record.
 
 R04 additional actual-boundary negative before final result: change only a copy of the real envelope wrapper digest and invoke fetch-candidate. Actual GitHub run/artifact metadata must reject mismatch before download destination creation. This tests explicit corrupt-retention input, not a second synthetic candidate; preserve real envelope/candidate unchanged.
-
-## API-REV-002 final decision
-Blocked73.57% (50/95/75/50/75/75/95;515/7). R03-F001 resolved by actual new39113335636/attempt1 all4native jobs/fullaggregate. R04 verified actualartifact12131531399/19files/fullOCI/engine, real envelope mismatch and metadata admission/refusals; downloaded Mac26arm64 version passes. No new source failure or API test edit. Q42 remain blocked only on unassigned independent/physical host resources and reachable test registry, not a missing candidate. All executed current checks pass, not overall acceptance. Local synthetic/emulated/hosted alternatives cannot establish required physical evidence; live user Mac/app containers not appropriated. Actual candidate retained128126277bytes at owned path in candidate-local-retention.json; local temporary checks/smoke cleaned. Fresh route per skill: Blocked→specific user dependency request, no teammate result handoff. Full ACproof/scorecard in current report; API001 preserved.

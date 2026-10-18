@@ -1,0 +1,88 @@
+{
+  "context": {
+    "step": "Completed API003 evidence summary from saved actual results; not a release-readiness lock",
+    "utc": "2026-10-18T10:40:08.210765+00:00",
+    "cases": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "C01"
+    ],
+    "sourceCommit": "585d416c2746cf2963058d591b0753d0db8088f5",
+    "productCommit": "850dfeb97e2ec396b2b134e760dc9ee802873d6b",
+    "environments": [
+      "L",
+      "H",
+      "A"
+    ]
+  },
+  "result": "Pass",
+  "confidencePercent": 95,
+  "scope": "Affected prepublication validation only; actual signing/publication/completion not proven",
+  "run": 39118784695,
+  "attempt": 1,
+  "artifact": 12133493094,
+  "candidateReference": "candidate-reference.json",
+  "candidateRecord": "actual-candidate.json",
+  "checks": {
+    "native": {
+      "status": "passed",
+      "evidence": [
+        "hosted-execution-summary.json",
+        "hosted-log-index.json"
+      ],
+      "targets": [
+        "darwin-amd64",
+        "darwin-arm64",
+        "linux-amd64",
+        "linux-arm64"
+      ],
+      "go": "1.27.2",
+      "racePackagesPerTarget": 7,
+      "nonverboseGoIndividualCountsClaimed": false
+    },
+    "releaseControls": {
+      "status": "passed",
+      "evidence": [
+        "release-control-excerpt.log",
+        "local-results.json",
+        "local-control-results.json",
+        "candidate-validation-results.json",
+        "actual-envelope-refusal.json",
+        "candidate-native-version.json"
+      ],
+      "localPythonCollected": 45,
+      "localPythonExecuted": 44,
+      "localPythonSkipped": 1,
+      "fixtureBoundaries": [
+        "Apple/signing",
+        "public registry/publication",
+        "public installer download"
+      ],
+      "actualBoundaries": [
+        "hosted full candidate",
+        "Actions envelope/download",
+        "retained engine/fullOCI/native verification",
+        "candidate CLI version/admission refusal"
+      ]
+    }
+  },
+  "counts": {
+    "pass": 6,
+    "fail": 0,
+    "blocked": 0,
+    "notTestedDeferred": 43,
+    "notTestedDownstream": 2
+  },
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "readinessAccepted": false,
+  "signingNotarizationExecuted": false,
+  "publicationExecuted": false,
+  "publicDownloadInstallExecuted": false,
+  "productOrDurableEditsByAPI": []
+}
