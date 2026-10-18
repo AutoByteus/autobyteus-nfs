@@ -121,6 +121,19 @@ class ReleaseWorkflowGatesTest(unittest.TestCase):
         self.assertIn('retention-days: 90',self.text)
         self.assertIn('path: retained/',self.text)
 
+    def test_signing_upload_retains_only_sanitized_receipts_on_failure(self):
+        block = self.text.split('          name: nfs-signing-', 1)[1].split(
+            '      - name: Package four regular members', 1)[0]
+        paths = re.findall(r'^            (native/[^\n]+)$', block, re.M)
+        self.assertEqual(paths, ['native/*-notary.json', 'native/*-notary-failure.json'])
+        self.assertIn("always() && matrix.os == 'darwin' && needs.prepare.outputs.mode == 'fresh'", self.text)
+        with tempfile.TemporaryDirectory(prefix='nfs-sign-upload-') as temp:
+            root = Path(temp); (root/'native').mkdir()
+            receipts = {'darwin-arm64-notary.json', 'darwin-arm64-notary-failure.json'}
+            for name in receipts | {'certificate.p12', 'signing.keychain-db', 'import.log', 'notary-error.log'}:
+                (root/'native'/name).write_text('fixture')
+            self.assertEqual({p.name for pattern in paths for p in root.glob(pattern)}, receipts)
+
     def test_all_modes(self):
         self.assertEqual(schedule(self.jobs,'candidate'),dict(zip(ORDER,
             ['success','success','success','success','success','success','skipped','skipped'])))

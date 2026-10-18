@@ -1,4 +1,4 @@
-"""Exercise the real signing shell against command doubles; never real credentials."""
+"""Real signing shell with command doubles; no Apple calls or real credentials."""
 import base64
 import json
 import os
@@ -7,63 +7,140 @@ import tempfile
 import unittest
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[2]
-FAKE=r'''#!/usr/bin/env python3
-import json,os,sys
+ROOT = Path(__file__).resolve().parents[2]
+FAKE = r'''#!/usr/bin/env python3
+import json,os,signal,sys
 from pathlib import Path
 name=Path(sys.argv[0]).name;args=sys.argv[1:]
-with open(os.environ['CALLS'],'a') as f:f.write(name+' '+(args[0] if args else '')+'\n')
-if os.environ.get('FAIL')==name+':'+args[0]:sys.exit(5)
+operation=name+':'+args[0]
+if operation=='security:list-keychains' and '-s' in args:operation+=':restore'
+with open(os.environ['CALLS'],'a') as f:f.write(operation+'\n')
+if operation==os.environ.get('SIGNAL_AT'):os.kill(os.getppid(),signal.SIGTERM)
+if operation in os.environ.get('FAIL','').split(','):
+ for stream in (sys.stdout,sys.stderr):
+  print('PRIVATE-COMMAND-OUTPUT fake-export-password ZmFrZSBwMTI= fake-app-password fake-keychain-password',file=stream)
+ sys.exit(5)
 if name=='security':
  if args[0]=='list-keychains' and '-s' not in args:print('"/owned/original.keychain-db"')
  if args[0]=='create-keychain':Path(args[-1]).touch()
  if args[0]=='delete-keychain':Path(args[-1]).unlink()
- if args[0]=='find-identity':print('1) ABC "'+os.environ['IDENTITY']+'"')
+ if args[0]=='find-identity' and not os.environ.get('NO_IDENTITY'):print('1) ABC "'+os.environ['IDENTITY']+'"')
 if name=='codesign' and args[0]=='-d':
  print('TeamIdentifier='+os.environ['APPLE_TEAM_ID'],file=sys.stderr)
  print('Authority='+os.environ['IDENTITY'],file=sys.stderr)
- print('CodeDirectory flags=0x10000(runtime)',file=sys.stderr)
+ if not os.environ.get('NO_RUNTIME'):print('CodeDirectory flags=0x10000(runtime)',file=sys.stderr)
  print('Timestamp=Oct 18, 2026',file=sys.stderr)
-if name=='xcrun':print(json.dumps({'status':os.environ.get('NOTARY','Accepted'),'id':'12345678-1234-1234-1234-123456789abc'}))
+if name=='xcrun':
+ if os.environ.get('BAD_NOTARY_JSON'):print('PRIVATE-COMMAND-OUTPUT not JSON')
+ else:print(json.dumps({'status':os.environ.get('NOTARY','Accepted'),'id':'12345678-1234-1234-1234-123456789abc'}))
+ sys.exit(int(os.environ.get('NOTARY_EXIT','0')))
 if name=='ditto':Path(args[-1]).write_bytes(b'carrier')
+if name=='openssl':print('fake-keychain-password')
 '''
 
 
 class SigningTest(unittest.TestCase):
-    def run_case(self,fail='',notary='Accepted',missing=None):
+    def run_case(self, stage=None, code=1, cleanup='complete', notary_receipt=False, existing_failure=False, **changes):
         with tempfile.TemporaryDirectory(prefix='nfs-sign-fixture-') as temp:
-            root=Path(temp);bin_dir=root/'bin';bin_dir.mkdir();scratch=root/'scratch';scratch.mkdir()
-            for name in ('security','codesign','xcrun','ditto'):
-                path=bin_dir/name;path.write_text(FAKE);path.chmod(0o755)
-            binary=root/'binary';binary.write_bytes(b'fake unsigned CLI')
-            calls=root/'calls';receipt=root/'receipt.json'
-            env=os.environ|{'PATH':str(bin_dir)+':'+os.environ['PATH'],'RUNNER_TEMP':str(scratch),
-                'CERTIFICATE':base64.b64encode(b'fake p12').decode(),'PASSWORD':'fake-export-password',
-                'IDENTITY':'Developer ID Application: Fixture (ABCDEFG123)','APPLE_TEAM_ID':'ABCDEFG123',
-                'APPLE_ID':'fixture@example.invalid','APPLE_APP_SPECIFIC_PASSWORD':'fake-app-password',
-                'CALLS':str(calls),'FAIL':fail,'NOTARY':notary}
-            if missing:env[missing]='REPLACE_ME_BEFORE_RELEASE'
-            result=subprocess.run(['/bin/bash',str(ROOT/'packaging/sign-macos.sh'),str(binary),str(receipt)],
-                                  env=env,text=True,capture_output=True)
-            expected=not fail and not missing and notary=='Accepted'
-            self.assertEqual(result.returncode==0,expected,result.stdout+result.stderr)
-            self.assertEqual(list(scratch.iterdir()),[],'signing scratch/keychain leaked')
-            self.assertEqual(receipt.exists(),not fail and not missing)
-            for secret in ('fake-export-password','fake-app-password',env['CERTIFICATE']):
-                self.assertNotIn(secret,result.stdout+result.stderr)
-            if expected:self.assertEqual(json.loads(receipt.read_text())['status'],'Accepted')
-            if not missing:
-                trace=calls.read_text();self.assertIn('security list-keychains',trace)
-                self.assertIn('security delete-keychain',trace)
+            root = Path(temp); bin_dir = root/'bin'; bin_dir.mkdir()
+            scratch = root/'scratch'; scratch.mkdir()
+            for name in ('security', 'codesign', 'xcrun', 'ditto', 'openssl'):
+                path = bin_dir/name; path.write_text(FAKE); path.chmod(0o755)
+            binary = root/'binary'; binary.write_bytes(b'fake unsigned CLI')
+            calls = root/'calls'; receipt = root/'receipt.json'
+            failure = root/'receipt-failure.json'
+            if existing_failure:failure.write_text('owned prior receipt')
+            env = os.environ | {'PATH':str(bin_dir)+':'+os.environ['PATH'],
+                'RUNNER_TEMP':str(scratch), 'CERTIFICATE':base64.b64encode(b'fake p12').decode(),
+                'PASSWORD':'fake-export-password', 'IDENTITY':'Developer ID Application: Fixture (ABCDEFG123)',
+                'APPLE_TEAM_ID':'ABCDEFG123', 'APPLE_ID':'fixture@example.invalid',
+                'APPLE_APP_SPECIFIC_PASSWORD':'fake-app-password', 'CALLS':str(calls),
+                'FAIL':'', 'NOTARY':'Accepted', 'NOTARY_EXIT':'0', 'SIGNAL_AT':'',
+                'NO_IDENTITY':'', 'NO_RUNTIME':'', 'BAD_NOTARY_JSON':''} | changes
+            result = subprocess.run(['/bin/bash', str(ROOT/'packaging/sign-macos.sh'),
+                                     str(binary), str(receipt)], env=env, text=True,
+                                    capture_output=True, timeout=30)
+            self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+            self.assertEqual(list(scratch.iterdir()), [], 'signing scratch/keychain leaked')
+            self.assertEqual(receipt.exists(), not stage or notary_receipt)
+            self.assertEqual(failure.exists(), stage is not None, result.stdout+result.stderr)
+            if existing_failure:
+                self.assertEqual(failure.read_text(), 'owned prior receipt')
+                self.assertIn('Signing failure receipt unavailable (not overwritten)', result.stderr)
+            elif stage:
+                diagnostic = json.loads(failure.read_text())
+                self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+                                             'exitCode':code, 'cleanup':cleanup})
+                self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+                              result.stderr)
+            else:
+                self.assertEqual(json.loads(receipt.read_text())['status'], 'Accepted')
+            public = result.stdout+result.stderr+(''.join(p.read_text() for p in (failure,receipt) if p.exists()))
+            for secret in ('fake-export-password', 'fake-app-password', 'fake-keychain-password',
+                           base64.b64encode(b'fake p12').decode(), 'PRIVATE-COMMAND-OUTPUT',
+                           'fixture@example.invalid', 'Developer ID Application: Fixture'):
+                self.assertNotIn(secret, public)
+            self.assertNotIn(str(scratch), public)
+            trace = calls.read_text().splitlines() if calls.exists() else []
+            if 'security:create-keychain' in trace and env['FAIL'] != 'security:create-keychain':
+                self.assertIn('security:delete-keychain', trace)
+            if env['FAIL'] == 'security:list-keychains':
+                self.assertNotIn('security:list-keychains:restore', trace)
+            elif 'security:list-keychains' in trace:
+                self.assertIn('security:list-keychains:restore', trace)
+            if stage and stage not in ('notary-submit', 'notary-receipt', 'notary-accepted', 'cleanup'):
+                self.assertNotIn('xcrun:notarytool', trace)
+            return trace
 
-    def test_accepted_and_sanitized_receipt(self):self.run_case()
-    def test_failed_import_sign_verify_submit_and_rejected_notary_clean_up(self):
-        for fail in ('security:import','codesign:--force','codesign:--verify','xcrun:notarytool'):
-            with self.subTest(fail=fail):self.run_case(fail=fail)
-        self.run_case(notary='Invalid')
-        self.run_case(notary='In Progress')
+    def test_accepted_and_sanitized_receipt(self):
+        self.run_case()
+
+    def test_import_failure_receipt_and_secret_safety(self):
+        self.run_case('import-certificate', 5, FAIL='security:import')
+
+    def test_command_failures_report_exact_stage_and_exit(self):
+        stages = {'security:list-keychains':'read-search-list', 'openssl:rand':'keychain-password',
+                  'security:create-keychain':'create-keychain', 'security:unlock-keychain':'unlock-keychain',
+                  'security:set-key-partition-list':'partition-key', 'security:find-identity':'find-identity',
+                  'codesign:--force':'sign', 'codesign:--verify':'verify-signature',
+                  'codesign:-d':'inspect-signature', 'ditto:-c':'notary-archive',
+                  'xcrun:notarytool':'notary-submit'}
+        for command, stage in stages.items():
+            with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+
+    def test_validation_failures_are_not_credential_dumps(self):
+        self.run_case('decode-certificate', CERTIFICATE='not base64!')
+        self.run_case('validate-identity', IDENTITY='Not a Developer ID')
+        self.run_case('validate-identity-available', NO_IDENTITY='1')
+        self.run_case('validate-signature', NO_RUNTIME='1')
+        self.run_case('notary-receipt', BAD_NOTARY_JSON='1')
+        self.run_case('notary-receipt', NOTARY='Unknown')
+        self.run_case('create-scratch', RUNNER_TEMP='')
+
+    def test_rejected_or_pending_notary_retains_known_receipt_but_fails(self):
+        for status in ('Invalid', 'Rejected', 'In Progress'):
+            with self.subTest(status=status):
+                self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+        self.run_case('notary-submit', 7, notary_receipt=True, NOTARY_EXIT='7')
+
     def test_all_six_missing_placeholder_values_fail_before_keychain(self):
-        for name in ('CERTIFICATE','PASSWORD','IDENTITY','APPLE_ID','APPLE_APP_SPECIFIC_PASSWORD','APPLE_TEAM_ID'):
-            with self.subTest(name=name):self.run_case(missing=name)
+        for name in ('CERTIFICATE', 'PASSWORD', 'IDENTITY', 'APPLE_ID',
+                     'APPLE_APP_SPECIFIC_PASSWORD', 'APPLE_TEAM_ID'):
+            for value in ('', 'REPLACE_ME_BEFORE_RELEASE'):
+                with self.subTest(name=name, value=value):
+                    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
 
-if __name__=='__main__':unittest.main()
+    def test_failure_receipt_never_clobbers_existing_evidence(self):
+        self.run_case('import-certificate', 5, existing_failure=True, FAIL='security:import')
+
+    def test_signal_reports_current_stage_and_cleans_up(self):
+        self.run_case('sign', 143, SIGNAL_AT='codesign:--force')
+
+    def test_cleanup_failure_cannot_succeed_or_hide_primary_failure(self):
+        for command in ('security:list-keychains:restore', 'security:delete-keychain'):
+            with self.subTest(command=command):
+                self.run_case('cleanup', cleanup='failed', notary_receipt=True, FAIL=command)
+                self.run_case('import-certificate', 5, cleanup='failed', FAIL='security:import,'+command)
+
+
+if __name__ == '__main__':unittest.main()

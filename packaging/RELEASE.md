@@ -136,8 +136,17 @@ rejects empty/placeholders, imports into an owned ephemeral keychain with random
 keychain password, validates Developer ID/team, signs with runtime/timestamp,
 verifies, and requires notarytool JSON **Accepted**. It restores the search list and
 removes its certificate/keychain/scratch on every exit. Known notary status and
-submission ID are retained as sanitized receipts even for a rejected submission;
-failed signing never reaches archive publication. No secret log/base64 upload,
+submission ID are retained as sanitized receipts even for a rejected submission.
+On any caught failure, a fixed stage label, numeric exit code and cleanup result
+are written to stderr and a separate `*-notary-failure.json` receipt, without
+command arguments, identities, account details or raw private tool output. The
+always-run artifact step retains only these failure receipts and sanitized notary
+receipts. Existing receipts are never overwritten. A failed keychain-list capture
+is not used to restore the search list; cleanup failures cannot turn success into
+a passing signing job or hide the primary failure. A failure stage localizes the
+boundary, not its cause: credential validity or Apple rejection requires actual
+specific evidence, not speculation/re-provisioning. Failed signing never reaches
+archive publication. No secret log/base64 upload,
 unsigned fallback, or fictitious stapling: standalone CLI tickets cannot be stapled.
 Downloaded signature/online Gatekeeper behavior still needs supported Mac evidence.
 

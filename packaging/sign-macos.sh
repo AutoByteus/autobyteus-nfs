@@ -3,53 +3,91 @@
 set +x
 set -euo pipefail
 umask 077
+# Keep a diagnostic-only stderr outside the private command redirection.
+exec 3>&2
 [[ $# == 2 ]] || { echo 'Usage: sign-macos.sh BINARY SANITIZED_RECEIPT' >&2; exit 2; }
 binary=$1
 receipt=$2
-for name in CERTIFICATE PASSWORD IDENTITY APPLE_ID APPLE_APP_SPECIFIC_PASSWORD APPLE_TEAM_ID; do
-  value=${!name:-}
-  [[ -n "$value" && "$value" != REPLACE_ME_BEFORE_RELEASE ]] || { echo "Missing/placeholder signing input: $name" >&2; exit 1; }
-done
-unset value
-[[ "$IDENTITY" == 'Developer ID Application: '*" ($APPLE_TEAM_ID)" ]] || { echo 'Selected identity/team is not Developer ID Application' >&2; exit 1; }
-scratch=$(mktemp -d "${RUNNER_TEMP:?}/nfs-signing.XXXXXXXX")
-keychain="$scratch/signing.keychain-db"
+failure_receipt="${receipt%.json}-failure.json"
+stage=validate-inputs
+scratch=
+keychain=
 cleanup() {
   code=$?
-  trap - EXIT
-  if [[ -f "$scratch/search.json" ]]; then
-    python3 - "$scratch/search.json" <<'PY' || code=1
+  trap - EXIT INT TERM
+  cleanup_status=complete
+  if [[ -n "$scratch" ]]; then
+    if [[ -f "$scratch/search.json" ]]; then
+      python3 - "$scratch/search.json" >/dev/null 2>&1 <<'PY' || cleanup_status=failed
 import json, subprocess, sys
 subprocess.run(['security','list-keychains','-d','user','-s',*json.load(open(sys.argv[1]))], check=True, stdout=subprocess.DEVNULL)
 PY
+    fi
+    if [[ -e "$keychain" ]]; then
+      security delete-keychain "$keychain" >/dev/null 2>&1 || cleanup_status=failed
+    fi
+    rm -rf -- "$scratch" >/dev/null 2>&1 || cleanup_status=failed
   fi
-  if [[ -e "$keychain" ]]; then security delete-keychain "$keychain" >/dev/null 2>&1 || code=1; fi
-  rm -rf -- "$scratch"
+  if [[ "$cleanup_status" == failed && "$code" == 0 ]]; then stage=cleanup; code=1; fi
+  if [[ "$code" != 0 ]]; then
+    # Values are fixed internal stage labels, numeric exit status and a fixed enum.
+    # Never include command text/arguments, raw tool output or credential values.
+    printf 'Signing failed: stage=%s exit=%s cleanup=%s\n' "$stage" "$code" "$cleanup_status" >&3
+    if ! (set -o noclobber; printf '{"schema":1,"status":"Failed","stage":"%s","exitCode":%s,"cleanup":"%s"}\n' \
+        "$stage" "$code" "$cleanup_status" > "$failure_receipt") 2>/dev/null; then
+      echo 'Signing failure receipt unavailable (not overwritten)' >&3
+    fi
+  fi
   exit "$code"
 }
 trap cleanup EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM
-security list-keychains -d user | python3 -c 'import json,shlex,sys; json.dump(shlex.split(sys.stdin.read()),sys.stdout)' > "$scratch/search.json"
-# Python's strict decoder rejects truncated/invalid certificate input; mode0600.
-printf '%s' "$CERTIFICATE" | python3 -c 'import base64,sys; open(sys.argv[1],"xb").write(base64.b64decode(sys.stdin.buffer.read(),validate=True))' "$scratch/certificate.p12"
-unset CERTIFICATE
-keychain_password=$(openssl rand -hex 32)
-security create-keychain -p "$keychain_password" "$keychain" >/dev/null
-security unlock-keychain -p "$keychain_password" "$keychain" >/dev/null
-security import "$scratch/certificate.p12" -k "$keychain" -P "$PASSWORD" -T /usr/bin/codesign > "$scratch/import.log" 2>&1
-unset PASSWORD
-security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$keychain_password" "$keychain" > "$scratch/partition.log" 2>&1
-unset keychain_password
-security find-identity -v -p codesigning "$keychain" > "$scratch/identities.txt"
-python3 - "$scratch/identities.txt" <<'PY'
+sign_and_notarize() {
+  for name in CERTIFICATE PASSWORD IDENTITY APPLE_ID APPLE_APP_SPECIFIC_PASSWORD APPLE_TEAM_ID; do
+    value=${!name:-}
+    [[ -n "$value" && "$value" != REPLACE_ME_BEFORE_RELEASE ]] || exit 1
+  done
+  unset value
+  stage=validate-identity
+  [[ "$IDENTITY" == 'Developer ID Application: '*" ($APPLE_TEAM_ID)" ]] || exit 1
+  stage=create-scratch
+  scratch=$(mktemp -d "${RUNNER_TEMP:?}/nfs-signing.XXXXXXXX")
+  keychain="$scratch/signing.keychain-db"
+  stage=read-search-list
+  security list-keychains -d user | python3 -c 'import json,shlex,sys; json.dump(shlex.split(sys.stdin.read()),sys.stdout)' > "$scratch/search-pending.json"
+  mv -- "$scratch/search-pending.json" "$scratch/search.json"
+  stage=decode-certificate
+  # Python's strict decoder rejects truncated/invalid certificate input; mode0600.
+  printf '%s' "$CERTIFICATE" | python3 -c 'import base64,sys; open(sys.argv[1],"xb").write(base64.b64decode(sys.stdin.buffer.read(),validate=True))' "$scratch/certificate.p12"
+  unset CERTIFICATE
+  stage='keychain-password'
+  keychain_password=$(openssl rand -hex 32)
+  stage=create-keychain
+  security create-keychain -p "$keychain_password" "$keychain"
+  stage=unlock-keychain
+  security unlock-keychain -p "$keychain_password" "$keychain"
+  stage=import-certificate
+  security import "$scratch/certificate.p12" -k "$keychain" -P "$PASSWORD" -T /usr/bin/codesign
+  unset PASSWORD
+  stage=partition-key
+  security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$keychain_password" "$keychain"
+  unset keychain_password
+  stage=find-identity
+  security find-identity -v -p codesigning "$keychain" > "$scratch/identities.txt"
+  stage=validate-identity-available
+  python3 - "$scratch/identities.txt" <<'PY'
 import os, sys
 assert '"'+os.environ['IDENTITY']+'"' in open(sys.argv[1]).read(), 'Selected signing identity unavailable'
 PY
-codesign --force --timestamp --options runtime --keychain "$keychain" --sign "$IDENTITY" "$binary" > "$scratch/sign.log" 2>&1
-codesign --verify --strict --verbose=2 "$binary" > "$scratch/verify.log" 2>&1
-codesign -d --verbose=4 "$binary" > "$scratch/details.txt" 2>&1
-python3 - "$scratch/details.txt" <<'PY'
+  stage=sign
+  codesign --force --timestamp --options runtime --keychain "$keychain" --sign "$IDENTITY" "$binary"
+  stage=verify-signature
+  codesign --verify --strict --verbose=2 "$binary"
+  stage=inspect-signature
+  codesign -d --verbose=4 "$binary" > "$scratch/details.txt" 2>&1
+  stage=validate-signature
+  python3 - "$scratch/details.txt" <<'PY'
 import os, sys
 s=open(sys.argv[1]).read().splitlines()
 assert 'TeamIdentifier='+os.environ['APPLE_TEAM_ID'] in s, 'Signed team differs'
@@ -57,10 +95,14 @@ assert 'Authority='+os.environ['IDENTITY'] in s, 'Signed identity differs'
 assert any('runtime' in x and 'flags=' in x for x in s), 'Hardened runtime missing'
 assert any(x.startswith('Timestamp=') for x in s), 'Secure timestamp missing'
 PY
-ditto -c -k --keepParent "$binary" "$scratch/notarize.zip"
-notary_exit=0
-xcrun notarytool submit "$scratch/notarize.zip" --apple-id "$APPLE_ID" --password "$APPLE_APP_SPECIFIC_PASSWORD" --team-id "$APPLE_TEAM_ID" --wait --output-format json > "$scratch/notary.json" 2> "$scratch/notary-error.log" || notary_exit=$?
-python3 - "$scratch/notary.json" "$binary" "$receipt" <<'PY'
+  stage=notary-archive
+  ditto -c -k --keepParent "$binary" "$scratch/notarize.zip"
+  stage=notary-submit
+  notary_exit=0
+  xcrun notarytool submit "$scratch/notarize.zip" --apple-id "$APPLE_ID" --password "$APPLE_APP_SPECIFIC_PASSWORD" --team-id "$APPLE_TEAM_ID" --wait --output-format json > "$scratch/notary.json" || notary_exit=$?
+  stage=notary-receipt
+  receipt_exit=0
+  python3 - "$scratch/notary.json" "$binary" "$receipt" <<'PY' || receipt_exit=$?
 import hashlib, json, os, re, sys
 r=json.load(open(sys.argv[1]))
 assert r.get('status') in ('Accepted', 'Invalid', 'Rejected', 'In Progress'), 'Unknown notary status'
@@ -68,8 +110,17 @@ assert re.fullmatch(r'[a-fA-F0-9-]{36}', r['id']), 'Notary submission identity m
 result={'status':r['status'],'submissionId':r['id'],'teamId':os.environ['APPLE_TEAM_ID'],
         'binarySha256':hashlib.sha256(open(sys.argv[2],'rb').read()).hexdigest()}
 with open(sys.argv[3],'x') as f: json.dump(result,f,indent=2);f.write('\n')
-print('Notary status: '+r['status']+'; submission: '+r['id'])
-assert r['status'] == 'Accepted', 'Notarization not Accepted'
 PY
-[[ "$notary_exit" == 0 ]] || { echo 'Notary command failed' >&2; exit 1; }
+  # Preserve a real notary command failure even if its output cannot form a receipt.
+  [[ "$notary_exit" == 0 ]] || { stage=notary-submit; exit "$notary_exit"; }
+  [[ "$receipt_exit" == 0 ]] || exit "$receipt_exit"
+  stage=notary-accepted
+  python3 - "$receipt" <<'PY'
+import json, sys
+assert json.load(open(sys.argv[1]))['status'] == 'Accepted', 'Notarization not Accepted'
+PY
+}
+# Run as an ordinary simple command, NOT an if/|| predicate (which disables
+# errexit within a Bash function). Only controlled diagnostics leave this boundary.
+sign_and_notarize >/dev/null 2>&1
 # A standalone binary cannot be stapled. Downloaded online verification is separate.

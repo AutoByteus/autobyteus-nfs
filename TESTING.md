@@ -76,7 +76,12 @@ authority statements in them are synthetic and must never enter the real lock.
 Publication fixtures double GitHub/registry boundaries and check same-payload
 retry, conflicting assets/images, stage order and main drift. Signing fixtures
 execute the actual shell with fake commands/credentials, checking Accepted-only
-behavior and cleanup, not Apple acceptance. Installer fixtures use actual tar/hash
+behavior and cleanup, not Apple acceptance. They inject stage failures and TERM,
+check sanitized stderr/failure receipts (including hostile private tool output),
+preserve exact command exit status and existing receipts, and check keychain-list
+capture/restore plus cleanup failure refusal. Workflow receipt glob checks exclude
+private files; only actual hosted execution proves artifact upload and real signing.
+Installer fixtures use actual tar/hash
 tools and an inert binary. Workflow truth tables cover candidate/fresh/resume modes
 and failed/cancelled/legitimate skipped ancestors; actionlint checks YAML separately.
 The workflow suite also executes the native metadata prefix with `/bin/bash`
