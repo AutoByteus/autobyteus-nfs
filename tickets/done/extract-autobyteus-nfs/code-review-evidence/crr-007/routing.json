@@ -27,5 +27,12 @@
     "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/review-audit.json",
     "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/internal/setup/hosted_config_test.go"
   ],
-  "delivery_status": "Not yet sent"
+  "delivery_status": "Delivered",
+  "review_commit": "d32309db1d938a7d975c0f1a06b15f9c74624b0b",
+  "receipt": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  }
 }
