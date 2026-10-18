@@ -1,0 +1,68 @@
+[
+  [
+    "E01",
+    "Current independent source, removal and license audit",
+    "AC001/004/006/008",
+    "Archive/hash/import/lock audit; no sibling linkage"
+  ],
+  [
+    "N01",
+    "Bounded predecessor-state admission and host lifecycle",
+    "AC009",
+    "Focused Go config/CLI/setup tests, then race/vet all packages"
+  ],
+  [
+    "N02",
+    "Standalone packaging and refusal gates",
+    "AC001/002/005",
+    "Python fixtures, installer shell, actionlint, current source hash/publication refusal"
+  ],
+  [
+    "N03",
+    "Current four-target compile and exact retained engine verification",
+    "AC001/002/005",
+    "CGO0 darwin/linux arm64/amd64; native version; real arm64 manifest/embed"
+  ],
+  [
+    "S01",
+    "Clean consumer setup, production build and typecheck",
+    "AC003/006",
+    "Frozen filtered install including script-only dependencies; integration:prepare/typecheck"
+  ],
+  [
+    "S02",
+    "Ordinary registered paths and filesystem-independent private profiles",
+    "AC003/010",
+    "Focused registered/native/private preparation/bootstrappers/process tests"
+  ],
+  [
+    "S03",
+    "Runtime owner regression closure",
+    "AC003/006/010",
+    "Broader backends/services/workspaces/terminal/Codex/activation units; real process fixture included"
+  ],
+  [
+    "S04",
+    "Ordinary file/skill APIs",
+    "AC003/010",
+    "Local composed server REST/GraphQL tests, owned filesystem fixtures"
+  ],
+  [
+    "S05",
+    "Ordinary run and native PTY/WebSocket lifecycle",
+    "AC003/010",
+    "Current-build path/memory-layout/terminal integration; local dummy LLM, no paid provider"
+  ],
+  [
+    "S06",
+    "Generic launcher and factual disabled Guide",
+    "AC003/005/006",
+    "Bash fixture launcher; four Guide/localization suites and guards; carry unchanged current Guide render proof"
+  ],
+  [
+    "E02",
+    "Cleanup and evidence/source integrity",
+    "AC008",
+    "Own scratch/process cleanup; source and protected resources unchanged"
+  ]
+]

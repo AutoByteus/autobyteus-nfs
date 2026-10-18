@@ -1,0 +1,2 @@
+$ bash -n scripts/public/nfs/install.sh
+CWD /Users/normy/nfs-extract-api001-N-7r931pcc/repo

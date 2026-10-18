@@ -1,0 +1,44 @@
+{
+  "go": {
+    "packages_pass": 7,
+    "tests_top_level_pass": 59,
+    "tests_including_subtests_pass": 252,
+    "skips": [
+      {
+        "Time": "2026-10-18T05:27:43.511714+02:00",
+        "Action": "skip",
+        "Package": "github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs",
+        "Elapsed": 0.009
+      },
+      {
+        "Time": "2026-10-18T05:27:50.240203+02:00",
+        "Action": "skip",
+        "Package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "Test": "TestInstallerDirectoryModeChild",
+        "Elapsed": 0
+      }
+    ]
+  },
+  "python": {
+    "nfs-python": [
+      "test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'",
+      "test_failed_or_skipped_applicable_prerequisites_block_dependents (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failed_or_skipped_applicable_prerequisites_block_dependents) ... ok",
+      "Ran 20 tests in 2.641s",
+      "OK (skipped=1)"
+    ],
+    "consumer-launcher": [
+      "test_powershell_launcher_parses_when_pwsh_is_available (scripts.tests.test_public_docker_launcher_shared_workspace.PublicDockerLauncherSharedWorkspaceTest.test_powershell_launcher_parses_when_pwsh_is_available) ... skipped 'pwsh is not installed'",
+      "test_preferred_port_collision_falls_back_for_that_service (scripts.tests.test_public_docker_launcher_shared_workspace.PublicDockerLauncherSharedWorkspaceTest.test_preferred_port_collision_falls_back_for_that_service) ... skipped 'port 8001 is not available for collision test setup'",
+      "Ran 36 tests in 32.754s",
+      "OK (skipped=2)"
+    ]
+  }
+}
+consumer-narrow ['Test Files  7 passed (7)', 'Tests  34 passed (34)', 'Duration  7.82s (transform 2.36s, setup 64ms, import 5.78s, tests 706ms, environment 0ms)']
+consumer-unit ['Test Files  2 failed | 102 passed | 4 skipped (108)', 'Tests  12 failed | 1186 passed | 6 skipped (1204)', 'Duration  71.00s (transform 3.90s, setup 815ms, import 30.21s, tests 30.67s, environment 7ms)']
+consumer-fixture-confirm ['Test Files  2 passed (2)', 'Tests  86 passed (86)', 'Duration  3.02s (transform 1.52s, setup 35ms, import 2.34s, tests 31ms, environment 0ms)']
+consumer-unit-confirm ['Test Files  104 passed | 4 skipped (108)', 'Tests  1198 passed | 6 skipped (1204)', 'Duration  76.72s (transform 5.12s, setup 972ms, import 34.52s, tests 30.93s, environment 8ms)']
+consumer-routes ['Test Files  3 passed (3)', 'Tests  39 passed (39)', 'Duration  16.88s (transform 6.24s, setup 43ms, import 12.22s, tests 3.88s, environment 0ms)']
+consumer-path-pty ['Test Files  3 passed (3)', 'Tests  17 passed (17)', 'Duration  11.60s (transform 5.18s, setup 78ms, import 9.17s, tests 1.28s, environment 0ms)']
+consumer-guide ['Test Files  4 failed (4)', 'Tests  no tests', 'Duration  964ms (transform 32ms, setup 0ms, collect 0ms, tests 0ms, environment 821ms, prepare 513ms)']
+consumer-guide-confirm ['Test Files  4 passed (4)', 'Tests  24 passed (24)', 'Duration  9.21s (transform 3.70s, setup 16.32s, collect 171ms, tests 103ms, environment 643ms, prepare 447ms)']

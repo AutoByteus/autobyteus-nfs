@@ -1,0 +1,6 @@
+{
+  "raw_log_whitespace_exit": 2,
+  "raw_log_whitespace_output": "tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-fixture-confirm.log:107: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-guide-confirm.log:52: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-narrow.log:152: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-path-pty.log:563: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-routes.log:586: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-typecheck.log:22: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-unit-confirm.log:1231: new blank line at EOF.\ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-unit.log:1427: trailing whitespace.\n+    148| \ntickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-unit.log:1441: new blank line at EOF.\n",
+  "non_log_artifacts_exit": 0,
+  "decision": "Preserve raw test logs verbatim, including renderer-added trailing space and blank EOF. No source/test edits; non-log artifacts clean."
+}

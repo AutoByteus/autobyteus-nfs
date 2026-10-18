@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md",
+      "sha256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/engine-manifest.json",
+      "sha256": "4488fccf14574d27931429d4c2529c34620de575bacce63383254808f97c39a5"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+      "sha256": "eed35ab4b732ac05d2afc3531e70cdc27031fb414fdb52a0daf093f33daaec0a"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-manifest.json",
+      "sha256": "4488fccf14574d27931429d4c2529c34620de575bacce63383254808f97c39a5"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/engine-build-arm64.txt",
+      "sha256": "56fad63c43f85091d84df347564dfd962a9afaafe519539849860b1807695761"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha_4.3-8ubuntu1+autobyteus1_arm64.deb",
+      "sha256": "0b5c78911cfc1b299e9894e1f841e74176fbb2cb45b158008e4530713549ebc8"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/COPYRIGHT",
+      "sha256": "f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/SHA256SUMS",
+      "sha256": "59100b94a86df4f03d3720daf4c65466b4f10ad447ab41d91163023001a63735"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-worktrees/shared-network-workspaces/autobyteus-nfs/out/ir005-local-candidate/engine-candidate/arm64/nfs-ganesha-vfs_4.3-8ubuntu1+autobyteus1_arm64.deb",
+      "sha256": "3bf06769646d93ea85f0277fe0726eb42d0d29a70c0108505706954e5e8d2ac6"
+    }
+  ],
+  "D0_head": 128,
+  "D0_branch": "refs/heads/main"
+}

@@ -1,0 +1,17 @@
+{
+  "goFile": {
+    "filename": "go1.27.2.darwin-arm64.tar.gz",
+    "os": "darwin",
+    "arch": "arm64",
+    "version": "go1.27.2",
+    "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+    "size": 68195916,
+    "kind": "archive"
+  },
+  "url": "https://go.dev/dl/go1.27.2.darwin-arm64.tar.gz",
+  "go": "go version go1.27.2 darwin/arm64\n",
+  "node": "v22.21.1\n",
+  "python": "Python 3.9.6\n",
+  "actionlint": "1.7.11\ninstalled by building from source\nbuilt with go1.26.0 compiler for darwin/arm64\n",
+  "platform": "Darwin MacBookPro 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:18:58 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6000 arm64\n"
+}

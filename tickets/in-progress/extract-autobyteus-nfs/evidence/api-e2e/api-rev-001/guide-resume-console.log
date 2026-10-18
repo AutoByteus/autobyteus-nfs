@@ -1,0 +1,6 @@
+S06 Started Correct API omission of documented Nuxt prepare before exact suite rerun N/A
+consumer-nuxt-prepare 0 expected 0
+consumer-guide-confirm 0 expected 0
+consumer-localization 0 expected 0
+consumer-web-boundary 0 expected 0
+S06 Completed Generic launcher green; after documented Nuxt preparation all4 Guide suites and both guards passed; no product/test edit Pass

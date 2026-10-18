@@ -1,0 +1,72 @@
+$ go test -count=1 -v ./internal/config ./internal/cli ./internal/setup -run Standalone|InstallRefuses|BootstrapDirectoryModes
+CWD /Users/normy/nfs-extract-api001-N-7r931pcc/repo
+=== RUN   TestStandaloneStateActiveAndPendingObligations
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/absent
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/empty
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/null
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/unknown
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/active
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/malformed
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/wrong-scalar
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/wrong-list
+=== RUN   TestStandaloneStateActiveAndPendingObligations/attachment.json/duplicate
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/absent
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/empty
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/null
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/unknown
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/active
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/malformed
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/wrong-scalar
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/wrong-list
+=== RUN   TestStandaloneStateActiveAndPendingObligations/pending-setup.json/duplicate
+--- PASS: TestStandaloneStateActiveAndPendingObligations (0.03s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/absent (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/empty (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/null (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/unknown (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/active (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/malformed (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/wrong-scalar (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/wrong-list (0.01s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/attachment.json/duplicate (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/absent (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/empty (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/null (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/unknown (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/active (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/malformed (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/wrong-scalar (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/wrong-list (0.00s)
+    --- PASS: TestStandaloneStateActiveAndPendingObligations/pending-setup.json/duplicate (0.00s)
+=== RUN   TestStandaloneStateMalformedAndTrustedBoundary
+--- PASS: TestStandaloneStateMalformedAndTrustedBoundary (0.02s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	0.418s
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.json[{"containerId":"old-owned-id"}]
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.json{}
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.jsonfalse
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.json[{"containerId":"old-owned-id"}]
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.json{}
+=== RUN   TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.jsonfalse
+--- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects (0.01s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.json[{"containerId":"old-owned-id"}] (0.00s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.json{} (0.00s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/attachment.jsonfalse (0.00s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.json[{"containerId":"old-owned-id"}] (0.00s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.json{} (0.00s)
+    --- PASS: TestInstallRefusesPredecessorBeforeBinaryEffects/pending-setup.jsonfalse (0.00s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	0.362s
+=== RUN   TestStandaloneRefusesPredecessorObligationsBeforeEffects
+=== RUN   TestStandaloneRefusesPredecessorObligationsBeforeEffects/attachment.json
+=== RUN   TestStandaloneRefusesPredecessorObligationsBeforeEffects/attachment.json#01
+=== RUN   TestStandaloneRefusesPredecessorObligationsBeforeEffects/pending-setup.json
+=== RUN   TestStandaloneRefusesPredecessorObligationsBeforeEffects/pending-setup.json#01
+--- PASS: TestStandaloneRefusesPredecessorObligationsBeforeEffects (0.07s)
+    --- PASS: TestStandaloneRefusesPredecessorObligationsBeforeEffects/attachment.json (0.03s)
+    --- PASS: TestStandaloneRefusesPredecessorObligationsBeforeEffects/attachment.json#01 (0.02s)
+    --- PASS: TestStandaloneRefusesPredecessorObligationsBeforeEffects/pending-setup.json (0.01s)
+    --- PASS: TestStandaloneRefusesPredecessorObligationsBeforeEffects/pending-setup.json#01 (0.01s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.801s

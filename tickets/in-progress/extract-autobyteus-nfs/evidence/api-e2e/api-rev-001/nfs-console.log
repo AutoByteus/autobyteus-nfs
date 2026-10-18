@@ -1,0 +1,20 @@
+N01 Started Focused admission/current host controls, then complete race/vet N/A
+nfs-focused 0 expected 0
+nfs-race 0 expected 0
+nfs-vet 0 expected 0
+N01 Completed Focused current reader/lock/pre-effect refusal and all Go race/vet passed Pass
+N02 Started Root packaging/installer/workflow/refusal fixtures N/A
+nfs-python 0 expected 0
+nfs-actionlint 0 expected 0
+nfs-shell 0 expected 0
+nfs-source-hash 0 expected 0
+nfs-publish-refusal 1 expected 1
+N02 Completed Packaging/shell/workflow checks passed; unqualified publication refused as expected. Python child skip is not counted Pass Pass
+N03 Started Compile all four targets; current native version and exact arm64 artifact N/A
+nfs-build-darwin-arm64 0 expected 0
+nfs-build-darwin-amd64 0 expected 0
+nfs-build-linux-arm64 0 expected 0
+nfs-build-linux-amd64 0 expected 0
+nfs-version 0 expected 0
+nfs-build-embedded 0 expected 0
+N03 Completed Four target builds/native version + actual verified arm64 bundle embedded compile passed; no target runtime qualification Pass

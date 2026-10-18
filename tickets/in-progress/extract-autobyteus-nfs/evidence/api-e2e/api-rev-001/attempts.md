@@ -1,0 +1,6 @@
+# Execution attempts
+- Initial evidence-summary formatter failed with TypeError int + NoneType while summing Go package rows without Test. No product/test command failed and no assertion was changed. Initial script retained at summary-attempt-1/summarize.py. Corrected to bool(x.get("Test")); recompute from unchanged raw JSON test logs.
+- Discovery grep for a Claude factory test at an obsolete path returned missing; actual backend/factory and session cleanup paths included by the broad backend suite. Not an execution failure.
+- S03 initial broad command failed 12 replay cases because API source archive omitted 11 tracked root tickets/done fixture files. Original consumer-unit.log retained. Restored exact source-commit bytes only; fixture-restoration.json lists hashes. No product/test changes or live provider use.
+- S06 Guide initial4 suites collected zero tests due missing .nuxt/tsconfig.json. API omitted documented nuxt prepare. Restored prerequisite using project command; original consumer-guide.log kept, rerun consumer-guide-confirm.log, no test assertion/config edit.
+- An orchestration call for test-review-scope.py was rejected by JavaScript parsing before shell execution (nested backticks). Retried using Markdown tilde fences; no runtime/test execution was affected.

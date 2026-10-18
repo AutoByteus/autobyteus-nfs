@@ -1,0 +1,250 @@
+{
+  "baseline": "3712cd9bf0db998501d162db7f8655f169e3def6",
+  "checks": [
+    {
+      "name": "exact LICENSE",
+      "pass_": true,
+      "details": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "name": "exact CLA.md",
+      "pass_": true,
+      "details": "439f73144d7348ab13c53de17bb9afff0ea0839c4caa7cb4379bdf1b9d585240"
+    },
+    {
+      "name": "exact THIRD_PARTY_NOTICES",
+      "pass_": true,
+      "details": "06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+    },
+    {
+      "name": "exact packaging/release-lock.json",
+      "pass_": true,
+      "details": "48e259f0564322432a1f7b790676bc9be35d54bcf481e8abbdcad3d2c53c6395"
+    },
+    {
+      "name": "engine packaging/engine/build.py",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "engine packaging/engine/get-dir-delegation.patch",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "engine packaging/engine/manifest.py",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "engine packaging/engine/source-lock.json",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "engine packaging/engine/source.py",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/apple.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/apple_apply.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/apple_startup.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/engine_assets_linux.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/engine_assets_other.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/engine_bundle.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/engine_staging.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/ganesha.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/ganesha_native.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/backend/ubuntu_packages.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/commands.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/filesystem_darwin.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/filesystem_linux.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/handle_syscalls_linux_amd64.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/handle_syscalls_linux_arm64.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/handles_darwin.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/handles_linux.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/jobs.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/lock.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/mount-observation.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/mounts.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/source.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/source_darwin.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/source_linux.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/volume_identity.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/platform/volume_plist.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/service/probe.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "preserved host internal/service/supervisor.go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "retired S paths absent",
+      "pass_": true,
+      "details": [
+        "autobyteus-nfs",
+        ".github/workflows/release-nfs.yml",
+        "scripts/public/nfs",
+        "autobyteus-server-ts/src/workspaces/shared-workspace-binding.ts",
+        "autobyteus-server-ts/src/workspaces/shared-workspace-mount-observation.ts",
+        "autobyteus-server-ts/src/agent-execution/services/shared-run-workspace-admission.ts",
+        "scripts/public/docker/autobyteus-docker.d/bash/nfs-attachment.sh"
+      ]
+    },
+    {
+      "name": "removed coupling S",
+      "pass_": true,
+      "details": []
+    },
+    {
+      "name": "removed coupling N",
+      "pass_": true,
+      "details": []
+    },
+    {
+      "name": "independent Go",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "independent source hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "qualification empty",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "Guide render input autobyteus-web/components/settings/NfsGuideCard.vue",
+      "pass_": true,
+      "details": "7f4d771b47e72a7b79000ba3f1e4ce2ac0c1392605b85b41142dc5a633337732"
+    },
+    {
+      "name": "Guide render input autobyteus-web/localization/messages/en/settings.ts",
+      "pass_": true,
+      "details": "649c1b330d4d61604e82602db658fa496190e4ce9380fbc5a07c8b87d34a41ac"
+    },
+    {
+      "name": "Guide render input autobyteus-web/localization/messages/zh-CN/settings.ts",
+      "pass_": true,
+      "details": "73f24e13526246b45f725f876d74c9d6096fb968f9e618cbd81a61929f1072e0"
+    },
+    {
+      "name": "Guide render input autobyteus-web/utils/nfsLauncherCommands.ts",
+      "pass_": true,
+      "details": "f2334a5de1e7025b696cbb926fe955fad2f3c8e5101a1ff7d4136e478e54ebea"
+    }
+  ],
+  "pass_": true,
+  "guide_render_carried": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/result.json"
+}

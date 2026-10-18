@@ -1,0 +1,30 @@
+{
+  "source_mismatches": [],
+  "all_final_cases_pass": [
+    "E01",
+    "N01",
+    "N02",
+    "N03",
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "E02"
+  ],
+  "retained_failed_commands": [
+    "consumer-unit",
+    "consumer-guide"
+  ],
+  "resolution": {
+    "consumer-unit": "fixture-restoration.json / consumer-unit-confirm.log",
+    "consumer-guide": "consumer-nuxt-prepare.log / consumer-guide-confirm.log"
+  },
+  "parseable_json_files": 14,
+  "scratch_absent": true,
+  "production_and_durable_test_changes": false,
+  "final_result": "Pass",
+  "confidence": 95,
+  "selected_recipient": "/software_engineering_team/code_reviewer"
+}

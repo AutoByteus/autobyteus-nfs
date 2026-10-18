@@ -1,0 +1,17 @@
+S01 Started Frozen install with script-only integration build closure; isolated private HOME/TMPDIR N/A
+consumer-install 0 expected 0
+consumer-build 0 expected 0
+consumer-typecheck 0 expected 0
+S01 Completed Fresh production/prerequisite builds and production typecheck exit0 Pass
+S02 Started Current ordinary path and private profile narrow tests N/A
+consumer-narrow 0 expected 0
+S02 Completed Real files/aliases/collisions and registered error/native Codex/Grok process controls passed Pass
+S03 Started Broader affected ownership/runtime/path/terminal regression N/A
+consumer-unit 1 expected 0
+S03 Completed consumer-unit exit 1 Fail
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/run-consumer.py", line 16, in <module>
+    run('consumer-unit',pre+['tests/unit/agent-execution/backends','tests/unit/agent-execution/services','tests/unit/agent-execution/agent-provider-factory-builder.test.ts','tests/unit/workspaces','tests/unit/services/terminal-streaming','tests/unit/runtime-management/codex','tests/unit/agent-execution/agent-run-manager.test.ts','tests/unit/services/terminal/pty-session-manager.test.ts','--maxWorkers=2','--no-watch'],R,env)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/common.py", line 20, in run
+    if code!=expected:raise RuntimeError(name+' exit '+str(code))
+RuntimeError: consumer-unit exit 1

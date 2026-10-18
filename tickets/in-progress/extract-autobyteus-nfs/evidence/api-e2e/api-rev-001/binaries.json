@@ -1,0 +1,22 @@
+[
+  {
+    "target": "darwin/arm64",
+    "sha256": "85ca4827a388a32fe5f5c6ac40ac47c18a7d47318b90b3417a542782f713a102",
+    "path": "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-darwin-arm64"
+  },
+  {
+    "target": "darwin/amd64",
+    "sha256": "703e62bdecd5375232119277bb7cb1af877df5f2a47f15b9d91aa3855d213bb7",
+    "path": "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-darwin-amd64"
+  },
+  {
+    "target": "linux/arm64",
+    "sha256": "7e1635f5ae89f57cfc1c10450f229002f44c4a1664de3729491ffccfe8ec46f5",
+    "path": "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-arm64"
+  },
+  {
+    "target": "linux/amd64",
+    "sha256": "f53ae9a6bd593203936746f9a04f21c7acd5f26ffe4fbafaaca6071b3557faeb",
+    "path": "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-amd64"
+  }
+]

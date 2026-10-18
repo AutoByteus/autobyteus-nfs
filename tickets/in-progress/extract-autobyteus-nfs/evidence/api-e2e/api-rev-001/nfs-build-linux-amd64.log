@@ -1,0 +1,2 @@
+$ go build -trimpath -o /Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-amd64 ./cmd/autobyteus-nfs
+CWD /Users/normy/nfs-extract-api001-N-7r931pcc/repo

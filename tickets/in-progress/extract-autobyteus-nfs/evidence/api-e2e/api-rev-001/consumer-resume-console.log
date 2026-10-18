@@ -1,0 +1,21 @@
+S03 Started Rerun exact restored replay fixtures first, then full affected suite N/A
+consumer-fixture-confirm 0 expected 0
+S03 Started Broader affected ownership/runtime/path/terminal regression N/A
+consumer-unit-confirm 0 expected 0
+S03 Completed Affected regression suite passed; live-gated skips retained separately Pass
+S04 Started Local socket/inject file and skill API contracts N/A
+consumer-routes 0 expected 0
+S04 Completed Ordinary file/skill local transport and filesystem cases passed Pass
+S05 Started Current-build run/memory layout/native PTY and WebSocket lifecycle N/A
+consumer-path-pty 0 expected 0
+S05 Completed Local run registration/memory and actual native PTY/WebSocket lifecycle passed Pass
+S06 Started Generic launcher and disabled Guide/localization tests N/A
+consumer-launcher 0 expected 0
+consumer-guide 1 expected 0
+S06 Completed consumer-guide exit 1 Fail
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/run-consumer-resume.py", line 19, in <module>
+    run('consumer-guide',['pnpm','-C','autobyteus-web','test:nuxt','components/settings/__tests__/NfsGuideCard.spec.ts','components/settings/__tests__/NodeManager.spec.ts','components/settings/__tests__/DockerNodeStartGuideCard.spec.ts','utils/__tests__/nfsLauncherCommands.spec.ts','--run','--maxWorkers=2'],R,env)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/common.py", line 20, in run
+    if code!=expected:raise RuntimeError(name+' exit '+str(code))
+RuntimeError: consumer-guide exit 1

@@ -1,0 +1,64 @@
+{
+  "classification": "API environment/fixture Local Fix",
+  "source_head": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+  "files": [
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/denied.stdout.jsonl",
+      "sha256": "6b8f8bdbf3b420a83069471902d4caa1cc58aa3562ca896f3d6074052e96ffc9",
+      "bytes": 3085
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit0.stdout.jsonl",
+      "sha256": "e6118e022de4a9c6f890a397595b0678c280de9575f67b5b03765c1e9cef1b91",
+      "bytes": 3188
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit8_empty.stdout.jsonl",
+      "sha256": "5bf7c06a9debceb7a10c95797c92cb65d647e211ad307fbe45f008c33debee75",
+      "bytes": 4235
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/not_found.stdout.jsonl",
+      "sha256": "1cdc1d7b3d218febc19f67581c3a7ece8e89c419f814cec033f7ccd81bcd3887",
+      "bytes": 3723
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/multi_turn.stdout.jsonl",
+      "sha256": "75b6330eb689220f18efeaeb5b510fed787ab476fdcc1aa86837b8b9b87a1e27",
+      "bytes": 5160
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_denied.stdout.jsonl",
+      "sha256": "1076962925d14546a2f77a62c12b191c15fbcbaae0330cc35a07a150b6a30eb6",
+      "bytes": 3093
+    },
+    {
+      "path": "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_nonzero.stdout.jsonl",
+      "sha256": "79059758f22ba934a6dce130aa9e377891d4b66fdfb84a7cb00a449e1e014d53",
+      "bytes": 3269
+    },
+    {
+      "path": "tickets/done/output-tps-precision/evidence/api-e2e/live/codex-repeat/codex-wire.jsonl",
+      "sha256": "dc67c1a35c15083b2f1dd3a62a3556e69c34c0f0f423647819a7779e6cf28dc6",
+      "bytes": 90779
+    },
+    {
+      "path": "tickets/done/output-tps-precision/evidence/api-e2e/live/codex/codex-wire.jsonl",
+      "sha256": "12402c285b32c09f006d0149fda5029daf3f0400262c33330c7ff5bff0c50ee7",
+      "bytes": 191860
+    },
+    {
+      "path": "tickets/done/token-meter-accuracy/probes/P5-codex-luna-multi.jsonl",
+      "sha256": "fa76ab9a71094e26c7a260696ba46d03822b2eeb448b3e570e6060020df61c04",
+      "bytes": 11017
+    },
+    {
+      "path": "tickets/done/token-meter-accuracy/probes/P6-codex-luna-autocompact.jsonl",
+      "sha256": "bcfd6349f9d79f44712b4c12867a1f153fa23c55a9569454692a9c1815457f06",
+      "bytes": 20101
+    }
+  ],
+  "production_changes": false,
+  "test_changes": false,
+  "assertion_changes": false
+}

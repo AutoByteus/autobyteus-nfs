@@ -1,0 +1,23 @@
+{
+  "N": "/Users/normy/nfs-extract-api001-N-7r931pcc",
+  "S": "/Users/normy/nfs-extract-api001-S-6_t14mqb",
+  "envN": {
+    "PATH": "/Users/normy/nfs-extract-api001-N-7r931pcc/tools/go/bin:/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/normy/nfs-extract-api001-N-7r931pcc/home",
+    "TMPDIR": "/Users/normy/nfs-extract-api001-N-7r931pcc/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "NO_COLOR": "1",
+    "GOCACHE": "/Users/normy/nfs-extract-api001-N-7r931pcc/go-cache",
+    "GOMODCACHE": "/Users/normy/nfs-extract-api001-N-7r931pcc/go-mod-cache",
+    "GOTOOLCHAIN": "local"
+  },
+  "envS": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/normy/nfs-extract-api001-S-6_t14mqb/home",
+    "TMPDIR": "/Users/normy/nfs-extract-api001-S-6_t14mqb/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "NO_COLOR": "1"
+  }
+}

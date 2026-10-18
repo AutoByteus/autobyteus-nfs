@@ -1,0 +1,27 @@
+{
+  "removed": [
+    {
+      "path": "/Users/normy/nfs-extract-api001-N-7r931pcc",
+      "removed": true
+    },
+    {
+      "path": "/Users/normy/nfs-extract-api001-S-6_t14mqb",
+      "removed": true
+    }
+  ],
+  "source_inputs_verified": {
+    "N": 108,
+    "S": 7215
+  },
+  "source_mismatches": [],
+  "protected_files_verified": 9,
+  "protected_changes": [],
+  "D0_unborn_main_unchanged": true,
+  "owned_process_matches": [],
+  "source_status": {
+    "N": "?? tickets/in-progress/extract-autobyteus-nfs/api-e2e-coverage-investigation.md\n?? tickets/in-progress/extract-autobyteus-nfs/api-e2e-test-case-ledger.md\n?? tickets/in-progress/extract-autobyteus-nfs/evidence/\n",
+    "S": ""
+  },
+  "live_resource_actions": "None; no VM/Docker/mount/user app/provider actions",
+  "shared_tool_cache_actions": "None; tools/node_modules/cache/generated output removed only within owned archives"
+}
