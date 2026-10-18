@@ -6,7 +6,7 @@
 - Fresh git fetch origin succeeded2026-10-18; resolved origin/main7e375984be2bea7a4d536e43cc59d6bc2b116870; finalization origin/main under repository policy.
 - Canonical checkout has untracked task-plans; untouched. Prior extract checkout detached/retained; no reuse or archive changes.
 - Authorities read in full: solution-designer SKILL; requirements-engineering; requirements/investigation/revision templates; N AGENTS/DESIGN/TESTING/RELEASE.
-- Requirements investigation underway; architecture not started. Current SR N/A.
+- Requirements R2/SR002 Approved; completed design SR003 Ready, Large/High. Architecture gates passed before design; SR001 pending/beta statements below are historical. E18 is the latest credential state; names/values provisioned, actual signing/notary not validated.
 
 ## Initial Request
 PM forwarded explicit2026-10-18 user direction to enable releases analogous in usability to superrepo CI and publish first usable NFS release. Former extraction no-release choice is historical, not a permanent ban. User approval to publish is not runtime qualification or a user test. No dashboard or live storage upgrade authorized.
@@ -15,10 +15,10 @@ PM forwarded explicit2026-10-18 user direction to enable releases analogous in u
 E01: read incoming PM copy of extraction DR003 terminal receipt at /Users/normy/.autobyteus/server-data/projects/project_6416db5b-926a-4865-8705-d8ebb2425780/tasks/project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5/context/ctx_f9bcfb27c948__extract-autobyteus-nfs-dr003-terminal-receipt.md. Native CI7packages on Ubuntu/macOS passed but explicitly no mounted/platform/signing/publication qualification. Prior scope/closedTask preserved.
 E02: canonical git status/remote/worktree inventory, fetch and isolated worktree creation above. No source changes or live resources.
 
-## Unknowns
+## Initial unknowns (historical)
 Current release gates/assets/targets; source of supported qualification; signing secret names/availability without retrieving values; superrepo conventions; actual version/channel choice; independent release outcome versus blockers.
 
-## Supplement inventory
+## Initial supplement inventory (historical)
 None yet. Prior finalized receipt is reference-only evidence, not a new requirements supplement or qualification.
 
 ## Completed requirements evidence (2026-10-18)
@@ -48,14 +48,93 @@ Structural surfaces: privileged publication credentials, Git tags/GitHub release
 ## State, dependencies and unknowns
 No live host state may be altered; new intended external state is versioned release/tag/assets. Existing installed state safety is not repository path-dependent. A real authorized release needs exact candidate, independently adequate physical/host-mode receipts and user-verification reference, plus selected Mac signing/notary inputs. Test-owned physical host availability is **unknown**, not claimed unavailable or satisfied by local VMs/hosted unit runners. No paid resource acquisition authorized. Current-source candidate and qualification do not yet exist; no agent is dispatched to execution in this requirements hold.
 
-## User decision / approval applicability
+## Initial R1 user decision / approval applicability (superseded by E10)
 DEC001 asks first release channel/version/platform set directly: recommend v0.1.0-beta.1 full macOS/Ubuntu ARM64/x64 versus expressly Linux-only first with Mac deferred. This is material scope/channel, not an implementation questionnaire. Await answer; preserving current physical/signing/user-evidence gates is explicit. Source policy says user verification is required; publication consent cannot populate userVerified=true. No other requirements decision currently requires user preference. Architecture work has not begun.
 
-## Supplemental artifact inventory (current)
+## Initial supplemental artifact inventory (expanded below)
 | Path | Owner / purpose | Scope / related IDs | Status / approval |
 | --- | --- | --- | --- |
 | evidence/intake/repository-release-preflight.json | SD, timestamped GitHub metadata and source-file hashes | REQ001/003/004; AC001/002/003 | Read-only evidence, no secret values; not behavior-defining |
 | Original DR003 terminal receipt path E01 | SD/Delivery prior completion provenance | Preserved extraction boundary | Finalized read-only; no current release qualification |
 
-## Current status / next work
+## Historical R1 status / next work (superseded by E10/SR003)
 R1/SR001 Ready for Approval of DEC001. Further target architecture awaits approval and full architecture reading gate. No source/policy/workflow change, tag/release/registry/secret write, CI dispatch, mount/service/container or test execution performed. Only new task documents and metadata evidence authored in isolated worktree. Failed guessed read of a nonexistent filename was not a product failure; actual tests located and read. No Task completion/handoff claim.
+
+
+## E10 — User decision / current approval2026-10-18
+User rejects beta: “I will directly drop the beta release approach. I will just use the normal release.” Releases expected infrequent; no desktop-style beta channel. R2/SR002 records normal-only vMAJOR.MINOR.PATCH (first v0.1.0), original four targets retained, qualification/signing unchanged. SD approves within direction and informed user of version/platform scope. Prior DEC001 pending/beta notes above are historical. No user test or qualification is inferred. Architecture reading gate: full architecture-design.md, design-principles.md and handoff-references.md; N DESIGN.md reread. No other closer DESIGN/AGENTS found in relevant source (root AGENTS applies).
+
+## E11 — Existing superrepo credentials confirmed; reuse authorization
+User2026-10-18: “you have access to our superrepo github right? we have credentials, just copy from there.” This authorizes reuse for NFS, not secret disclosure or a user test. Actual source remote resolves to AutoByteus/autobyteus-workspace. Its release workflow refers to APPLE_CERTIFICATE_P12_BASE64, APPLE_CERTIFICATE_P12_PASSWORD, APPLE_SIGNING_IDENTITY, APPLE_ID, APPLE_APP_SPECIFIC_PASSWORD and APPLE_TEAM_ID. All six names are configured as repository-scoped secrets; none are currently organization-shared to the source or NFS. NFS still has no repository secrets. This corrects any inference that the organization lacks credentials: the missing prerequisite is NFS provisioning/access, not necessarily issuing new credentials. Names establish configuration, not validity/expiry or successful NFS signing.
+
+`evidence/intake/signing-reuse-preflight.json` records sanitized current metadata. The organization-wide inventory query returns403 (org-admin/actions-secret permission or admin:org scope required); no privilege escalation attempted. GitHub's documented GET secret API returns metadata without encrypted/plaintext values, so ordinary direct API read-and-copy is unavailable. Existing credentials can be reused by provisioning from their original secure source, or through normal organization-secret administration. No source workflow/secret/permissions change, secret extraction, credential-file search or plaintext disclosure was performed. Three source secret names differ from current NFS aliases; future release design should explicitly map or standardize the names rather than assume automatic availability. Primary contract: https://docs.github.com/en/rest/actions/secrets#get-a-repository-secret .
+
+Supplement: signing-reuse-preflight.json — SD-owned metadata-only evidence for REQ004/AC003/ASM001, not behavior-defining; approval unchanged R2. The user's normal-only choice and publication authorization remain unchanged. Architecture work remains incomplete; this credential clarification is not a Blocked result for the whole solution or a terminal handoff.
+
+E11 direct follow-up: at user request, actual GET of the configured APPLE_CERTIFICATE_P12_BASE64 returned only created_at/name/updated_at. `gh secret --help` exposes delete/list/set, no value-read/copy command. `gh secret set --help` supports encrypted upload from stdin or an original local dotenv file. No setting attempted without original values; no secret was printed.
+
+## E12 — User-authorized placeholder secret creation2026-10-18
+User asked to create the entries first, then they will fill the values. Created exactly six Actions repository **secrets**, not plain variables, in AutoByteus/autobyteus-nfs: NFS_MAC_CERTIFICATE_P12_BASE64, NFS_MAC_CERTIFICATE_PASSWORD, NFS_MAC_SIGNING_IDENTITY, APPLE_ID, APPLE_APP_SPECIFIC_PASSWORD, APPLE_TEAM_ID. Each absence was checked before setting; every operation succeeded and the names were read back. Each value is only the explicit invalid placeholder REPLACE_ME_BEFORE_RELEASE. No real credential was obtained, copied or disclosed. No workflow/signing/publication dispatched. Source superrepo configuration unchanged.
+
+Current credential prerequisite is **user replacement of placeholders, then actual signing/notary validation**. Six names existing is NOT signing readiness. Release preflight must reject the known placeholder as well as missing credentials; never infer valid credentials from metadata alone. This administrative setup is not completion of release Task, user verification, qualification or a scope change.
+
+Supplement: evidence/intake/signing-placeholders-receipt.json — SD-owned mutation/metadata receipt; REQ004/AC003/ASM001; non-behavioral evidence, R2 approval unchanged.
+
+## E13 — User-provided Apple account email
+User supplied their Apple account email for release configuration. The setting outcome is in evidence/intake/apple-id-setting-receipt.json (email intentionally omitted from repository artifacts). Only APPLE_ID was eligible for update after checking our placeholder metadata timestamp; no other secret was touched. Local certificate inspection showed a Developer ID Application identity and team identifier, not account login email. No private key/password export or notarization was performed; remaining values and actual account/team authorization still require validation. Supplement is administrative evidence for REQ004/AC003, not a qualification or requirements change.
+
+
+## E14 — Public certificate metadata and app-password provisioning
+User provided account email, created an Apple app-specific password personally and entered it directly into the NFS secret. `gh secret list --json name,updatedAt` confirmed the app-password entry changed at2026-10-18T06:48:08Z; no value read. After comparing unchanged owned-placeholder timestamps, SD populated APPLE_TEAM_ID and NFS_MAC_SIGNING_IDENTITY from the selected public Developer ID Application certificate metadata. The certificate had a corresponding local signing identity and valid public date range; this did not establish exportability, account authorization or notary success. Receipt: signing-metadata-setting-receipt.json. P12/export-password were still placeholders at this point, later resolved in E18.
+
+The user asked about CLI/Homebrew distribution. SD corrected its premature Homebrew-first suggestion after tracing actual packaging: prebuilt binaries plus versioned terminal installer best fit this setup tool and avoid requiring Go/Homebrew. GitHub Releases stores assets; it does not make NFS a desktop app. This clarifies existing REQ005/007, not new Homebrew scope. Apple app-specific passwords and PKCS12 export passwords are separate purposes; reuse of the signing identity was explicitly authorized, not permission to read unrelated personal keychain items.
+
+## E15 — Completed post-approval production-path investigation
+Full files read/revisited: release-nfs.yml; packaging/release.py/release-lock.json/Dockerfile; packaging/engine/manifest.py/source.py/source-lock.json/README.md; scripts/public/nfs/install.sh; internal/cli/verify-release.go/install.go; internal/setup/service.go/plan.go; internal/docker/engine.go. Focused references to QualifiedTargets and EngineImage traced from generated cmd release.json through setup.Release/plan to Docker pull and from installer through VerifyRelease. Existing release/Python fixtures were located and read, not executed.
+
+Observed: native Linux CLI embeds only matching exact main/VFS pair; Mac carries metadata but no engine bundle. Dockerfile consumes the same pairs yet resolves runtime apt dependencies at image build, so publication rebuilding the image need not reproduce candidate layers. EnsureEngine always calls image-create/pull for a new owned engine after consent, even if an archive was loaded into a daemon. Thus an OCI-load-only qualification plan would miss actual first-use. Direct CLI candidate setup does not consult QualifiedTargets; public VerifyRelease requires runtime target in that list and exact embedded/downloaded metadata. No runtime override needs adding. Release schema has version/source/packages/engine/image/targets; external provenance can remain separate. Installer archive naming strips v, requires four regular members, and no-argument invocation enters setup. A smoke must explicitly pass version, not accidentally alter user storage.
+
+Current source hashing covers production/runtime/installer/engine/release workflow inputs and exact engine identity but not a future release_support folder/signing script; those new executable inputs must be added when extracted. Qualification fields/generated release.json are intentionally excluded; reviewed qualification-only commits need distinct candidate/tag SHA provenance instead of a circular hash. This is a design inference from the inspected source, not evidence of an existing candidate.
+
+Repository DESIGN.md is the persisted-data authority. Existing node-obligation refusal before install effects remains untouched; no installed-state schema migration is proposed. Current lock is one unqualified record and remote tags/releases were empty at intake. New release evidence can be regenerated from actual new candidate; historic archives stay read-only. Existing published-state compatibility/migration is not justified by this empty baseline.
+
+## E16 — Primary release/signing/promotion contracts
+Checked2026-10-18:
+- GitHub CLI https://cli.github.com/manual/gh_release_create : explicit target/verify-tag prevents accidental default-tip association; draft creation and final publication are separate operations. Design chooses nonforce explicit annotated tag and draft reconciliation, not implicit gh tag creation.
+- GitHub token trigger rules https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow : ordinary GITHUB_TOKEN-generated events do not trigger new runs (dispatch exceptions documented). One explicit candidate/publication workflow avoids tag-trigger recursion and an unnecessary PAT.
+- Artifact retention/read access: E08 source above; actual expiry must be checked. The source content cannot embed its own later GitHub artifact ID/digest without a cycle; design uses an external Actions identity envelope.
+- GHCR https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry : newly published packages default private; public images allow anonymous access; workflow GITHUB_TOKEN can publish associated packages. Repository visibility alone does not establish anonymous image availability. Exact package permission remains an execution prerequisite, not grounds for org-wide escalation.
+- Skopeo upstream https://github.com/podman-container-tools/skopeo/blob/main/docs/skopeo-copy.1.md : --all copies the index and member images; --preserve-digests fails rather than changing digest. Design inference: retain complete OCI candidate and promote without rebuild/conversion; actual selected tool/registry combination still needs executable proof.
+- Apple https://developer.apple.com/documentation/security/customizing-the-notarization-workflow and its `.md` representation: browser HTML returned JS-only and markdown click returned unsupported content type; official Markdown retrieved successfully through urllib for targeted procedural text. notarytool wait produces terminal status; explicit Accepted must be inspected. Standalone-binary tickets cannot be stapled, so no fictitious raw-CLI stapling or offline guarantee. This is signing evidence, not runtime qualification.
+- Apple https://developer.apple.com/documentation/technotes/tn3147-migrating-to-the-latest-notarization-tool : Apple ID/team/app-specific-password credential mode; actual account validation still required.
+- Apple https://support.apple.com/en-us/102654 and https://support.apple.com/guide/keychain-access/import-and-export-keychain-items-kyca35961/mac : app-specific password creation/revocation and certificate/key export with separately chosen encryption password. These explained setup, not proof that entered credentials work.
+
+No external-source text is treated as authorization to weaken repository/user gates. No publication or platform experiment was run in architecture investigation.
+
+## E17 — Completed design and classification
+Design SR003 maps R2 BEH001–006/SCN001–007/REQ001–010/AC001–008 to candidate, qualification, publication/recovery and installer lifecycles. Bounded distribution refactor removes pre-created tag/release, beta, clobber and early/rebuilt image publication, while keeping runtime/engine semantics. It defines exact OCI promotion, actual physical/user evidence applicability, Mac secret/signing cleanup and non-atomic partial-release recovery. Decisions are in design-spec.md, not established runtime facts. Size Large/risk High derives actual release/credential/artifact/state boundaries. No intended-behavior change beyond approved R2; no new user questionnaire. Independent review artifact N/A — not yet applicable.
+
+## E18 — User-confirmed selected identity export/upload completed
+User explicitly asked SD to handle export/upload of the identified Developer ID signing identity without inspecting unrelated personal data. CUA selected Developer ID Application identity under My Certificates; its child private key was visible. An initial UI operation momentarily selected the other Apple Development identity; this was corrected and the exact Developer ID identity verified before File Export. No other item was exported/opened for secret content. Export dialog .p12 destination was an owned0700 temporary directory; human entered the new export password and any required OS authentication personally. No credential fields were read by SD.
+
+User reported setting NFS_MAC_CERTIFICATE_PASSWORD. Metadata confirms update2026-10-18T07:01:54Z. Initial checks for nfs-signing.p12 at the two agreed locations found no file; a subsequent listing of only the owned export directory found **Zertifikate.p12**,3247bytes. User screenshot confirmed that filename/folder. No broad home/private-file search occurred. The regular owned file was opened with no-follow and bounded size, permissions narrowed0600, Base64 encoded in memory and passed via stdin to gh secret set NFS_MAC_CERTIFICATE_P12_BASE64 after guarding its unchanged placeholder timestamp. Upload exit0 and updated metadata2026-10-18T07:05:16Z confirmed. The unchanged temporary file and now-empty owned folder were removed; original Keychain identity/private key untouched. No secret bytes/passwords/export data in chat or repository artifacts.
+
+**Current credential result: all six entries provisioned; no remaining private input currently requested.** Actual encrypted-payload/password pairing, key import/signing and notary acceptance remain unverified until the release jobs. No workflow dispatch, tag/release/image write, source implementation or filesystem runtime action was performed by SD. Final receipt: evidence/intake/signing-certificate-upload-receipt.json. Earlier placeholder and export-progress records remain chronological administrative evidence, not current blockers.
+
+## Supplemental artifact inventory — current SR003
+All paths relative to this ticket unless absolute. Owner SD; all evidence-only/non-behavior-defining, requirements approval R2 unchanged.
+| Artifact | Purpose / related IDs | Status |
+| --- | --- | --- |
+| evidence/intake/repository-release-preflight.json | Initial remote/source/secret-name inventory; REQ001/003/004 | Historical intake observation |
+| evidence/intake/signing-reuse-preflight.json | Source-repo secret names and GET metadata limitation; REQ004/AC003 | Historical prerequisite investigation, no values |
+| evidence/intake/signing-placeholders-receipt.json | User-authorized six invalid placeholders; REQ004/AC003 | Superseded provisioning state, preserved |
+| evidence/intake/apple-id-setting-receipt.json | Account entry update, value omitted; REQ004/AC003 | Completed administrative write |
+| evidence/intake/signing-metadata-setting-receipt.json | Public identity/team and app-password timestamp; REQ004/AC003 | Completed writes; then-missing P12 resolved E18 |
+| evidence/intake/signing-export-progress.json | Selected-identity export workspace lifecycle; REQ004/AC003 | Completed; linked final upload/cleanup receipt |
+| evidence/intake/signing-certificate-upload-receipt.json | Exact authorized upload + metadata + owned cleanup; REQ004/AC003 | Provisioning completed, signing unvalidated |
+| Original DR003 receipt E01 | Closed extraction provenance | Finalized read-only, not current qualification |
+| evidence/design-artifact-audit.json | Local authoring consistency/whitespace/production-unchanged check | Administrative doc audit only, not product tests |
+| evidence/design-routing.json | Fresh rules and selected downstream route | Routing evidence only |
+
+## Current result / remaining uncertainty
+Architecture Design Complete / SR003 / Large / High, requirements R2 Approved. Ready for independent architecture review, not publication. No code/test/CI/runtime check or successful signing/qualification claim. No owned runtime resources; certificate temporary files cleaned. Worktree contains only SD task artifacts. Remaining execution prerequisites: actual candidate, applicable physical/independent host-mode/user verification, real credential validation, exact GHCR public visibility and hosted/public download proof. The design specifies failure dispositions without inventing unavailable hosts or closing the Task. Core next action is independent design review, then configured implementation/validation/delivery.

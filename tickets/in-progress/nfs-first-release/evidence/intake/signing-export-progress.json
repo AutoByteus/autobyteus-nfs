@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-18T06:57:25.659374+00:00",
+  "purpose": "User-authorized export of only existing Developer ID Application identity to two NFS repository secrets; no unrelated keychain items.",
+  "scratch": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-signing-export-y13_716x",
+  "secretMetadataBefore": [
+    {
+      "name": "NFS_MAC_CERTIFICATE_P12_BASE64",
+      "updatedAt": "2026-10-18T06:18:12Z"
+    },
+    {
+      "name": "NFS_MAC_CERTIFICATE_PASSWORD",
+      "updatedAt": "2026-10-18T06:18:13Z"
+    }
+  ],
+  "state": "Certificate uploaded and temporary export cleanup completed; see signing-certificate-upload-receipt.json",
+  "receipt": "signing-certificate-upload-receipt.json"
+}

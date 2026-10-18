@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-18T06:01:43.227670+00:00",
+  "purpose": "User authorized reuse/copy of existing superrepo Apple credentials for NFS; metadata-only feasibility check",
+  "secret_values_accessed": false,
+  "configuration_changed": false,
+  "queries": {
+    "superrepo_repository": {
+      "endpoint": "repos/AutoByteus/autobyteus-workspace/actions/secrets",
+      "exit_code": 0,
+      "total_count": 20,
+      "relevant_names": [
+        "APPLE_APP_SPECIFIC_PASSWORD",
+        "APPLE_CERTIFICATE_P12_BASE64",
+        "APPLE_CERTIFICATE_P12_PASSWORD",
+        "APPLE_ID",
+        "APPLE_SIGNING_IDENTITY",
+        "APPLE_TEAM_ID"
+      ]
+    },
+    "superrepo_shared_organization": {
+      "endpoint": "repos/AutoByteus/autobyteus-workspace/actions/organization-secrets",
+      "exit_code": 0,
+      "total_count": 0,
+      "relevant_names": []
+    },
+    "nfs_repository": {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/secrets",
+      "exit_code": 0,
+      "total_count": 0,
+      "relevant_names": []
+    },
+    "nfs_shared_organization": {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/organization-secrets",
+      "exit_code": 0,
+      "total_count": 0,
+      "relevant_names": []
+    },
+    "organization_inventory": {
+      "endpoint": "orgs/AutoByteus/actions/secrets",
+      "exit_code": 1,
+      "error": "You must be an org admin or have the actions secrets fine-grained permission."
+    }
+  },
+  "finding": "All six current desktop Apple signing/notary names are configured as repository secrets; none shared to either repo. Existing credential validity untested. GitHub read endpoints do not return secret values; normal direct API copy unavailable. Organization inventory denied with current token. No secret-extraction workflow or local credential search performed.",
+  "primary_contract": "https://docs.github.com/en/rest/actions/secrets#get-a-repository-secret",
+  "direct_get_probe": {
+    "endpoint": "repos/AutoByteus/autobyteus-workspace/actions/secrets/APPLE_CERTIFICATE_P12_BASE64",
+    "exit_code": 0,
+    "returned_fields": [
+      "created_at",
+      "name",
+      "updated_at"
+    ],
+    "secret_value_returned": false
+  },
+  "cli_secret_commands": [
+    "delete",
+    "list",
+    "set"
+  ]
+}

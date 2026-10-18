@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-18T06:50:58.943138+00:00",
+  "repository": "AutoByteus/autobyteus-nfs",
+  "authorization": "User authorized configure signing entries and continue after personally entering app-specific password. Guarded own placeholder timestamps before known public metadata update.",
+  "actions": [
+    {
+      "name": "APPLE_TEAM_ID",
+      "action": "Set from public local Developer ID certificate metadata",
+      "exit": 0
+    },
+    {
+      "name": "NFS_MAC_SIGNING_IDENTITY",
+      "action": "Set from public local Developer ID certificate metadata",
+      "exit": 0
+    }
+  ],
+  "metadata": [
+    {
+      "name": "APPLE_APP_SPECIFIC_PASSWORD",
+      "updatedAt": "2026-10-18T06:48:08Z"
+    },
+    {
+      "name": "APPLE_ID",
+      "updatedAt": "2026-10-18T06:27:57Z"
+    },
+    {
+      "name": "APPLE_TEAM_ID",
+      "updatedAt": "2026-10-18T06:50:58Z"
+    },
+    {
+      "name": "NFS_MAC_CERTIFICATE_P12_BASE64",
+      "updatedAt": "2026-10-18T06:18:12Z"
+    },
+    {
+      "name": "NFS_MAC_CERTIFICATE_PASSWORD",
+      "updatedAt": "2026-10-18T06:18:13Z"
+    },
+    {
+      "name": "NFS_MAC_SIGNING_IDENTITY",
+      "updatedAt": "2026-10-18T06:50:58Z"
+    }
+  ],
+  "app_password": "User reports entered; updated timestamp observed. No value read and no validity claim.",
+  "remaining_private_inputs": [
+    "NFS_MAC_CERTIFICATE_P12_BASE64",
+    "NFS_MAC_CERTIFICATE_PASSWORD"
+  ],
+  "limits": "No private-key export, secret readback, signing, notarization or workflow dispatch. Certificate Team ID and identity are public metadata; no values persisted here."
+}
