@@ -1,0 +1,22 @@
+{
+  "N_intake": "27db7441523e7b9c1a2ee3263ae83f857ef30d80",
+  "N_service_source": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "N_source_unchanged": true,
+  "S_final": "5559abbf017566f0030d95b023614f7418d3f212",
+  "S_merge": "156ea2dacc0fb4989a6b5d8a7206fa143fde0c54",
+  "S_integrated_base": "2f211340ee36b81cef74a74b2e042b5102c269d3",
+  "S_clean": true,
+  "IR001_IR002_entries_preserved": true,
+  "unchanged_upstream_documents": 9,
+  "local_checks_pass": true,
+  "independent_current_API_verdict": false,
+  "API_owned_reruns": [
+    "S04",
+    "S05"
+  ],
+  "other_S_cases": "Shared foundation changed; current local results provided, API owns fresh integrated verdict.",
+  "N_cases": "Still valid; production/tests/policies unchanged.",
+  "cleanup_complete": true,
+  "targets_modified": false,
+  "AC007_achieved": false
+}

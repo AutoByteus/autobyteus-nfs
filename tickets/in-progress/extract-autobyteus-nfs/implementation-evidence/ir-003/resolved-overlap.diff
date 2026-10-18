@@ -1,0 +1,169 @@
+diff --git a/autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts b/autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts
+index 135bdb8bbd..d233a5e807 100644
+--- a/autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts
++++ b/autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts
+@@ -26,6 +26,8 @@ import { beginAgentRunActivation, type AgentRunActivationOperation } from "./age
+ import type { AgentRunProviderInputNormalizer } from "../input/agent-run-provider-input-normalizer.js";
+ import { createManagedAgentRunTermination } from "./managed-agent-run-termination.js";
+ import { buildAgentRunRestoreRuntimeContext } from "./agent-run-restore-context-factory.js";
++import type { AgentRunInputPreface } from "../domain/agent-run-input-preface.js";
++import type { AgentRunLifecycleObserver } from "../domain/agent-run-lifecycle-observer.js";
+ 
+ const logger = console;
+ 
+@@ -45,6 +47,10 @@ export type AgentRunManagerOptions = Readonly<{
+   memoryRecorder: AgentRunMemoryRecorder;
+   providerInputNormalizer: Pick<AgentRunProviderInputNormalizer, "normalizeForProvider">;
+   agentToolMcpRunSessionDeactivator: AgentToolMcpRunSessionDeactivator;
++  /** Supplies platform notices that ride along with each run's next external input (none by default). */
++  inputPreface?: AgentRunInputPreface | null;
++  /** Told when a run is published (the matching release is reported by the resource manager). */
++  lifecycleObserver?: Pick<AgentRunLifecycleObserver, "runPublished"> | null;
+ }>;
+ 
+ export class AgentRunManager {
+@@ -58,6 +64,8 @@ export class AgentRunManager {
+   private readonly memoryRecorder: AgentRunMemoryRecorder;
+   private readonly providerInputNormalizer: Pick<AgentRunProviderInputNormalizer, "normalizeForProvider">;
+   private readonly agentToolMcpRunSessionDeactivator: AgentToolMcpRunSessionDeactivator;
++  private readonly inputPreface: AgentRunInputPreface | null;
++  private readonly lifecycleObserver: Pick<AgentRunLifecycleObserver, "runPublished"> | null;
+   private readonly activations = new Set<AgentRunActivationOperation>();
+   private activationAdmissionOpen = true;
+   private readonly managedTerminationPreparations = new WeakMap<
+@@ -116,6 +124,8 @@ export class AgentRunManager {
+     this.agentToolMcpRunSessionDeactivator =
+       options.agentToolMcpRunSessionDeactivator;
+     this.activationRegistry = options.activationRegistry;
++    this.inputPreface = options.inputPreface ?? null;
++    this.lifecycleObserver = options.lifecycleObserver ?? null;
+     logger.info("AgentRunManager initialized.");
+   }
+ 
+@@ -144,9 +154,11 @@ export class AgentRunManager {
+         preparation,
+         constructRun: (backend) => {
+           const run = new AgentRun({ context: backend.getContext(), backend,
+-            commandObservers: [this.memoryRecorder], providerInputNormalizer: this.providerInputNormalizer });
++            commandObservers: [this.memoryRecorder], providerInputNormalizer: this.providerInputNormalizer,
++            inputPreface: this.inputPreface });
+           return run;
+         },
++        onPublished: run => this.notifyPublished(run, request.kind),
+         validateRun: run => { if (expectedPlatformId && run.getPlatformAgentRunId() !== expectedPlatformId) throw new PlatformAgentRunRestoreError(); },
+         onTerminal: () => { this.activations.delete(operation); },
+         deactivateMcp: () => { this.agentToolMcpRunSessionDeactivator.deactivateForRun(runId); },
+@@ -158,6 +170,14 @@ export class AgentRunManager {
+ 
+   closeActivationAdmission(): void { this.activationAdmissionOpen = false; }
+ 
++  private notifyPublished(run: AgentRun, activationKind: AgentRunActivationRequest["kind"]): void {
++    try {
++      this.lifecycleObserver?.runPublished(run, activationKind);
++    } catch (error) {
++      logger.warn(`AgentRun lifecycle observer failed on publish of '${run.runId}': ${String(error)}`);
++    }
++  }
++
+   private assertActivationAdmissionOpen(): void { if (!this.activationAdmissionOpen) throw new AgentCreationError("AgentRun activation admission is closed for process shutdown."); }
+ 
+   hasActiveRun(runId: string): boolean { return this.getActiveRun(runId) !== null; }
+diff --git a/autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts b/autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts
+index 6db101f2f3..97cb3cd05a 100644
+--- a/autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts
++++ b/autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts
+@@ -81,6 +81,7 @@ describe("Brief package team prompt authority", () => {
+       definitions.agentTeamDefinitionService,
+     ).build({
+       teamContext: new TeamRunContext({
++        teamKind: "configured",
+         physicalScope: createRootExecutionPhysicalScope({
+           root: createTeamRootExecutionIdentity("brief-team-run"),
+           ancestorTeamRunIds: [],
+@@ -155,8 +156,8 @@ describe("Brief package team prompt authority", () => {
+     expect(prompt).toContain("## Team Instruction");
+     expect(prompt).toContain(packageTeam.instructions.trim());
+     expect(prompt).toContain("## AgentTeam Addressing");
+-    expect(prompt).toContain("Your Agent address is:\n\n/researcher");
+-    expect(prompt).toContain("## AgentTeam Collaboration");
++    expect(prompt).not.toContain("Your Agent address is");
++    expect(prompt).toContain("## Working With Other Agents");
+     expect(prompt).not.toContain("## Team Runtime");
+     expect(prompt).toContain("writer");
+     expect(activateForRun).toHaveBeenCalledWith(expect.objectContaining({
+diff --git a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+index 753034affc..5f3b47b5e4 100644
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+@@ -1,4 +1,3 @@
+-import { WORK_REQUEST_EXECUTION_LLM_INSTRUCTION } from "../../../../../../src/agent-collaboration/domain/agent-team-collaboration-llm-contract.js";
+ import { describe, expect, it, vi } from "vitest";
+ import { AgentRunConfig } from "../../../../../../src/agent-execution/domain/agent-run-config.js";
+ import { AgentRunContext } from "../../../../../../src/agent-execution/domain/agent-run-context.js";
+@@ -76,8 +75,8 @@ describe("ClaudeSessionBootstrapper", () => {
+     expect(runContext.config.memberExecutionContext).toBe(memberExecutionContext);
+     expect(runContext.runtimeContext.carpenterSystemPrompt).toContain("## Agent Identity");
+     expect(runContext.runtimeContext.carpenterSystemPrompt).toContain("## AgentTeam Addressing");
+-    expect(runContext.runtimeContext.carpenterSystemPrompt).toContain("## AgentTeam Collaboration");
+-    expect(runContext.runtimeContext.carpenterSystemPrompt.split(WORK_REQUEST_EXECUTION_LLM_INSTRUCTION)).toHaveLength(2);
++    expect(runContext.runtimeContext.carpenterSystemPrompt).toContain("## Working With Other Agents");
++    expect(runContext.runtimeContext.carpenterSystemPrompt.split("On receiving a request, follow your own instructions and skills.")).toHaveLength(2);
+     expect(runContext.runtimeContext.carpenterSystemPrompt).not.toContain("## Team Runtime");
+     expect(runContext.runtimeContext.carpenterSystemPrompt).not.toContain("## Working Environment");
+     expect(runContext.runtimeContext.carpenterSystemPrompt).not.toContain("## Bash Operating Practice");
+diff --git a/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts b/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+index 11ef0bdbad..a115ed6ddd 100644
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts
+@@ -1,4 +1,3 @@
+-import { WORK_REQUEST_EXECUTION_LLM_INSTRUCTION } from "../../../../../../src/agent-collaboration/domain/agent-team-collaboration-llm-contract.js";
+ import { createAgentRootExecutionIdentity, createCollaborationMemberExecutionIdentity } from "../../../../../../src/agent-collaboration/execution/domain/root-execution-identity.js";
+ import path from "node:path";
+ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+@@ -215,7 +214,7 @@ describe("CodexThreadBootstrapper", () => {
+           identity: createCollaborationMemberExecutionIdentity({
+             root, memberAddress: "/collaborator", agentRunId: "run-1",
+           }),
+-          teamScoped: false,
++          teamScoped: false, collaborationRole: "standalone_agent",
+           collaboration: new MemberCollaborationContext({
+             deliverLogicalMessage: async () => ({ accepted: true }),
+           }),
+@@ -232,11 +231,11 @@ describe("CodexThreadBootstrapper", () => {
+       const restored = await bootstrapper.bootstrapForRestore(createRestoreRunContext({ memberExecutionContext }), { assertAccepting: () => undefined });
+       for (const context of [created, restored]) {
+         const prompt = context.runtimeContext.codexThreadConfig.baseInstructions!;
+-        expect(prompt.split(WORK_REQUEST_EXECUTION_LLM_INSTRUCTION)).toHaveLength(scope === "no-context" ? 1 : 2);
++        expect(prompt.split("## Working With Other Agents")).toHaveLength(scope === "no-context" ? 1 : 2);
+         if (scope !== "no-context") {
+-          expect(prompt).toContain("only at a workflow-defined handoff point or when blocked and needing external input");
+-          expect(prompt).toContain("return the result or specific blocker to the requesting agent");
+-          expect(prompt.indexOf(WORK_REQUEST_EXECUTION_LLM_INSTRUCTION)).toBeLessThan(prompt.indexOf("`delegate_task`"));
++          expect(prompt).toContain("On receiving a request, follow your own instructions and skills.");
++          expect(prompt).toContain("Don't send acknowledgements, status chatter or promises to work.");
++          expect(prompt).toContain("`delegate_task`");
+         }
+         if (scope !== "team") expect(prompt).not.toContain("get_handoff_rules");
+       }
+@@ -312,7 +311,7 @@ describe("CodexThreadBootstrapper", () => {
+       "## AgentTeam Addressing",
+     );
+     expect(createdRunContext.runtimeContext.codexThreadConfig.baseInstructions).toContain(
+-      "## AgentTeam Collaboration",
++      "## Working With Other Agents",
+     );
+     expect(createdRunContext.runtimeContext.codexThreadConfig.baseInstructions).not.toContain(
+       "## Team Runtime",
+diff --git a/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts b/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts
+index b13dc888b5..313d0f482e 100644
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts
+@@ -41,7 +41,7 @@ const createRunContext = (
+       llmConfig: null,
+       memberExecutionContext: input.teamRunId
+         ? new MemberExecutionContext({
+-            teamScoped: true,
++            teamScoped: true, collaborationRole: "team_member",
+             identity: {
+               root: createTeamRootExecutionIdentity(input.teamRunId),
+               memberAddress: `/${runId}`,

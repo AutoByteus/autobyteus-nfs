@@ -7,6 +7,7 @@ Current code and implementation-handoff.md are authoritative. History begins wit
 | --- | --- | --- | --- | --- | --- |
 | IR-001 | Architecture Reviewer replacement design-review-report.md | N/A | Initial Baseline | R2/SR003, SR004, ARCH-REV-002; CRR/API-REV/DR N/A | Ready for independent source review; implementation local checks complete |
 | IR-002 | Code Reviewer code-review-report.md / CRR-001 | CR-001 | Implementation-owned Local Fix | R2/SR003, SR004, ARCH-REV-002; CRR-001; API-REV/DR N/A | Five-binding cleanup complete; ready for targeted source re-review |
+| IR-003 | Delivery Engineer DR-001 / handoff-summary.md | Latest-base Codex test conflict | Implementation-owned Local Fix | R2/SR003, SR004, ARCH-REV-002; CRR002/003; API-REV-001; DR-001 | Integrated candidate checked; ready for targeted source review |
 
 ## IR-001 — Independent host NFS and filesystem-only application boundary
 - Triggering role/report/round: architecture_reviewer, canonical design-review-report.md, ARCH-REV-002 Pass.
@@ -38,3 +39,18 @@ Current code and implementation-handoff.md are authoritative. History begins wit
 - Evidence: implementation-evidence/ir-002/checks-and-limits.md, checks-result.json, unused-imports.json, delta-audit.json, attempts.md and cleanup.json. IR001 and reviewer N checks are carried/attributed, not rerun or promoted to new runtime proof.
 - Route: fresh configured source-review route; no duplicate Designer/API/PM dispatch.
 - Limitations: targeted source re-review then proportionate current API validation remain. AC007 remains Delivery-owned. No live app/VM/storage/node/provider campaign, old filesystem/editor work, target merge/push/tag/release/deployment/TaskDone/user verification. Owned scratch removed.
+
+## IR-003 — Latest-base consumer integration recovery
+- Trigger: delivery_engineer, DR-001 Blocked / Local Fix; handoff-summary.md, delivery-revision-record.md and delivery-evidence/dr-001/integration-state.json. Finding: one Codex test import conflict; no new numbered CR finding.
+- Prior implementation result: IR002 cleanup Ready, then CRR002 source Pass100, API-REV-001 Pass95, CRR003 successful-test Not Applicable. Delivery blocked before paired finalization; those upstream results are retained for their original inputs.
+- Current result: integration Local Fix complete, Ready for targeted source review; no independent current API/Delivery verdict assigned.
+- Authority/classification: Approved R2/SR003, Ready SR004, ARCH-REV-002; Large/High/Reviewed unchanged. No Design Impact/Requirement Gap/new approval.
+- Behavior/requirements: preserve BEH003/006 (ordinary paths/exact private runtime profiles), BEH001/002/005 unchanged N; BEH004/AC007 delivery sequence still pending.
+- Actual delta: merge personal2f211340 (165 base-only commits) into S ticket via156ea2dacc0fb4989a6b5d8a7206fa143fde0c54. Resolve conflict by omitting both unused competing imports while retaining upstream current prompts and R2 bootstrap dependencies. Preserve four auto-merged overlaps. Separate8c5c76 removes obsolete Brief guard no-ops;5559abbf removes ignored Codex request fixture input and21 callers; assertions unchanged by those cleanups.
+- Current identities: S5559abbf017566f0030d95b023614f7418d3f212; N service83726b27400b405a7a6a79bd962d8e2419daa561 unchanged from intake27db7441523e7b9c1a2ee3263ae83f857ef30d80. N remote has no heads/main; no remote target altered.
+- Impact plan before tests: E3/validation-plan.md and integrated-changed-paths.txt. Core/contracts/fixtures changed, so S cases require rerun; independent N proof remains valid. API-owned S04/S05 reruns explicitly downstream per role boundary, not closed by implementation.
+- Fresh local checks: prerequisite build/production typecheck;1666 unit Pass with6 gated skips;21 narrow integration,15 core,24 Guide; launcher34 executed/2 environmental skips; localization/web guards. Final fixture-only rerun76 overlap/control checks Pass (repeated, not additive).7318 source/copy input equality, current source/coupling/size audit. No product/test failure; initial audit-script parse/setup error preserved.
+- Scope/cleanup: no authored production change beyond upstream integration, no renewed architecture/old VM/editor/provider qualification. Owned scratch removed and no owned active process; D0 unborn/PM board unchanged. N service/licenses/CLA/engine pins/empty qualification/disabled Guide remain.
+- Frontend loop: N/A for backend/test reconciliation; prior render proof historical, fresh component checks not browser/desktop proof.
+- Remaining: targeted source review, current affected API validation, Delivery docs sync (including obsolete R1 NFS tail in S RELEASE.md), fresh refs and N then S finalization. AC007 not achieved. No target merge/push/tag/release/deploy/TaskDone/user verification.
+- Evidence: implementation-evidence/ir-003 (E3): validation-plan.md, checks-result.json, test-counts.json, focused-final-result.json, integration-audit.json, final-input-integrity.json, attempts.md, cleanup.json. Route via fresh most-specific rules.

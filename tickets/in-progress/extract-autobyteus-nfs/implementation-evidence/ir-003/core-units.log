@@ -1,0 +1,34 @@
+$ pnpm -C autobyteus-ts exec vitest run tests/unit/agent/platform-input-preface-memory.test.ts tests/unit/agent/loop/llm-response-stream-collector.test.ts tests/unit/agent/pipelines/llm-response-pipeline.test.ts --maxWorkers=2 --no-watch
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/autobyteus-ts[39m
+
+[90mstdout[2m | tests/unit/agent/loop/llm-response-stream-collector.test.ts[2m > [22m[2mLlmResponseStreamCollector[2m > [22m[2mreturns parsed invocations from completeNormally, or none when tool calls are disabled
+[22m[39mLlmStreamingResponseHandler finalized 1 tool invocations.
+
+ [32m✓[39m tests/unit/agent/loop/llm-response-stream-collector.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/agent/pipelines/llm-response-pipeline.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+[90mstdout[2m | tests/unit/agent/platform-input-preface-memory.test.ts[2m > [22m[2mnative memory for an input carrying a platform notice (SR-004, N-1)[2m > [22m[2mrecords one system notice and the input unchanged, and links the combined working-context entry to both traces
+[22m[39mAgentConfig created for name='name', role='role'.
+AgentRuntimeState initialized for agent_id 'agent_preface'. Initial status: uninitialized. Workspace linked. AgentEventInbox pending initialization. Output data via notifier.
+AgentContext composed for agent_id 'agent_preface'. Config and State linked.
+MemoryIngestInputProcessor stored a platform notice and its input with turnId turn_0001
+
+[90mstdout[2m | tests/unit/agent/platform-input-preface-memory.test.ts[2m > [22m[2mnative memory for an input carrying a platform notice (SR-004, N-1)[2m > [22m[2mrecords a notice-only message as one system notice and no user message
+[22m[39mAgentConfig created for name='name', role='role'.
+AgentRuntimeState initialized for agent_id 'agent_preface'. Initial status: uninitialized. Workspace linked. AgentEventInbox pending initialization. Output data via notifier.
+AgentContext composed for agent_id 'agent_preface'. Config and State linked.
+MemoryIngestInputProcessor stored a platform notice and its input with turnId turn_0001
+
+[90mstdout[2m | tests/unit/agent/platform-input-preface-memory.test.ts[2m > [22m[2mnative memory for an input carrying a platform notice (SR-004, N-1)[2m > [22m[2mhandles an untagged message exactly as before (one user trace, linked by content)
+[22m[39mAgentConfig created for name='name', role='role'.
+AgentRuntimeState initialized for agent_id 'agent_preface'. Initial status: uninitialized. Workspace linked. AgentEventInbox pending initialization. Output data via notifier.
+AgentContext composed for agent_id 'agent_preface'. Config and State linked.
+MemoryIngestInputProcessor stored processed user input with turnId turn_0001
+
+ [32m✓[39m tests/unit/agent/platform-input-preface-memory.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m15 passed[39m[22m[90m (15)[39m
+[2m   Start at [22m 05:47:54
+[2m   Duration [22m 656ms[2m (transform 485ms, setup 41ms, import 678ms, tests 26ms, environment 0ms)[22m
+

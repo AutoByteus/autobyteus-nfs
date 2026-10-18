@@ -1,0 +1,34 @@
+{
+  "N_service_unchanged": true,
+  "S_head": "8c5c76a743760104119b08fc83ab74cd263f11f1",
+  "base_merged": "2f211340ee36b81cef74a74b2e042b5102c269d3",
+  "removed_owners": [
+    "autobyteus-nfs",
+    ".github/workflows/release-nfs.yml",
+    "scripts/public/nfs",
+    "autobyteus-server-ts/src/workspaces/shared-workspace-binding.ts",
+    "autobyteus-server-ts/src/workspaces/shared-workspace-mount-observation.ts",
+    "autobyteus-server-ts/src/agent-execution/services/shared-run-workspace-admission.ts",
+    "scripts/public/docker/autobyteus-docker.d/bash/nfs-attachment.sh",
+    "autobyteus-server-ts/tests/fixtures/shared-network-workspaces/attachment.json",
+    "autobyteus-server-ts/tests/fixtures/shared-network-workspaces/provenance.json"
+  ],
+  "forbidden_hits": [],
+  "R2_production_owners_count": 25,
+  "R2_production_owners_changed_since_API001": [
+    "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts"
+  ],
+  "source_sizes": [
+    {
+      "path": "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts",
+      "before": 345,
+      "after": 364
+    }
+  ],
+  "unchanged_guide_paths": [
+    "autobyteus-web/components/settings/NfsGuideCard.vue",
+    "autobyteus-web/utils/nfsLauncherCommands.ts"
+  ],
+  "conflict_resolution": "Neither stale import is used; current prompt assertions and R2 dependency/guard shapes retained.",
+  "no_new_production_logic_beyond_upstream": true
+}

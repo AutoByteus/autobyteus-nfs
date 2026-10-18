@@ -1,0 +1,7 @@
+[
+  "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts",
+  "autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+  "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+  "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+  "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts"
+]

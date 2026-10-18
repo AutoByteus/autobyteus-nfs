@@ -1,0 +1,5 @@
+$ pnpm -C autobyteus-web exec nuxt prepare
+[log] isElectronBuild false
+[log] [Electron Module] Skipping electron module setup: BUILD_TARGET is not electron
+[90m│[39m
+[32m◆[39m  Types generated in .nuxt.

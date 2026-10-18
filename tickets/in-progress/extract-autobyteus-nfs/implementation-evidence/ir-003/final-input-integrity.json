@@ -1,0 +1,7 @@
+{
+  "files": 7318,
+  "source_changes_since_broad": [
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts"
+  ],
+  "final_copy_matches": true
+}

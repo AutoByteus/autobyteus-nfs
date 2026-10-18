@@ -1,0 +1,25 @@
+{
+  "scratch": "/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn",
+  "env": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin",
+    "HOME": "/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/home",
+    "TMPDIR": "/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+  "source_head": "8c5c76a743760104119b08fc83ab74cd263f11f1",
+  "input_count": 7318,
+  "fixtures": [
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/denied.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit0.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/exit8_empty.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-command-outcome-matrix-probe/not_found.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/multi_turn.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_denied.stdout.jsonl",
+    "tickets/done/antigravity-cli-runtime-redesign-20260924/agy-tool-event-capture/run_command_nonzero.stdout.jsonl",
+    "tickets/done/output-tps-precision/evidence/api-e2e/live/codex-repeat/codex-wire.jsonl",
+    "tickets/done/output-tps-precision/evidence/api-e2e/live/codex/codex-wire.jsonl",
+    "tickets/done/token-meter-accuracy/probes/P5-codex-luna-multi.jsonl",
+    "tickets/done/token-meter-accuracy/probes/P6-codex-luna-autocompact.jsonl"
+  ]
+}

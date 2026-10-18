@@ -1,0 +1,6 @@
+$ pnpm -C autobyteus-web guard:web-boundary
+
+> autobyteus@1.5.6-beta.1 guard:web-boundary /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/autobyteus-web
+> node ./scripts/guard-web-boundary.mjs
+
+[guard:web-boundary] Passed.

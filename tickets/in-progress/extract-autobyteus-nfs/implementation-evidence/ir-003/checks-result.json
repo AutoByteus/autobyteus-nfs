@@ -1,0 +1,156 @@
+[
+  {
+    "name": "install",
+    "command": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile"
+    ],
+    "exit": 0,
+    "seconds": 42.047
+  },
+  {
+    "name": "build",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "test:integration:prepare"
+    ],
+    "exit": 0,
+    "seconds": 29.509
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 15.987
+  },
+  {
+    "name": "unit",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/unit/agent-execution",
+      "tests/unit/workspaces",
+      "tests/unit/services/terminal-streaming",
+      "tests/unit/services/terminal/pty-session-manager.test.ts",
+      "tests/unit/runtime-management/codex",
+      "tests/unit/agent-memory",
+      "tests/unit/skill-update-notices",
+      "--maxWorkers=2",
+      "--no-watch"
+    ],
+    "exit": 0,
+    "seconds": 182.011
+  },
+  {
+    "name": "integration",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+      "tests/integration/skill-update-notices",
+      "--maxWorkers=1",
+      "--no-watch"
+    ],
+    "exit": 0,
+    "seconds": 10.641
+  },
+  {
+    "name": "core-units",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/unit/agent/platform-input-preface-memory.test.ts",
+      "tests/unit/agent/loop/llm-response-stream-collector.test.ts",
+      "tests/unit/agent/pipelines/llm-response-pipeline.test.ts",
+      "--maxWorkers=2",
+      "--no-watch"
+    ],
+    "exit": 0,
+    "seconds": 1.488
+  },
+  {
+    "name": "nuxt-prepare",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-web",
+      "exec",
+      "nuxt",
+      "prepare"
+    ],
+    "exit": 0,
+    "seconds": 3.553
+  },
+  {
+    "name": "guide",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-web",
+      "test:nuxt",
+      "components/settings/__tests__/NfsGuideCard.spec.ts",
+      "components/settings/__tests__/NodeManager.spec.ts",
+      "components/settings/__tests__/DockerNodeStartGuideCard.spec.ts",
+      "utils/__tests__/nfsLauncherCommands.spec.ts",
+      "--run",
+      "--maxWorkers=2"
+    ],
+    "exit": 0,
+    "seconds": 13.0
+  },
+  {
+    "name": "localization",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-web",
+      "guard:localization-boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.493
+  },
+  {
+    "name": "web-boundary",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-web",
+      "guard:web-boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.376
+  },
+  {
+    "name": "launcher",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "scripts.tests.test_public_docker_launcher_shared_workspace",
+      "scripts.tests.test_public_docker_launcher_stop",
+      "-v"
+    ],
+    "exit": 0,
+    "seconds": 39.714
+  }
+]

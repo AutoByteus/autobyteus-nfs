@@ -1,0 +1,83 @@
+$ pnpm install --frozen-lockfile
+Scope: all 13 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1689
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1689, reused 0, downloaded 53, added 0
+Progress: resolved 1689, reused 0, downloaded 171, added 158
+Progress: resolved 1689, reused 0, downloaded 253, added 252
+Progress: resolved 1689, reused 0, downloaded 341, added 343
+Progress: resolved 1689, reused 0, downloaded 418, added 416
+Progress: resolved 1689, reused 0, downloaded 451, added 449
+Progress: resolved 1689, reused 0, downloaded 495, added 495
+Progress: resolved 1689, reused 0, downloaded 550, added 538
+Progress: resolved 1689, reused 0, downloaded 610, added 556
+Progress: resolved 1689, reused 0, downloaded 670, added 612
+Progress: resolved 1689, reused 0, downloaded 728, added 729
+Progress: resolved 1689, reused 0, downloaded 800, added 799
+Progress: resolved 1689, reused 0, downloaded 868, added 855
+Progress: resolved 1689, reused 0, downloaded 955, added 956
+Progress: resolved 1689, reused 0, downloaded 1028, added 1029
+Progress: resolved 1689, reused 0, downloaded 1095, added 1095
+Progress: resolved 1689, reused 0, downloaded 1175, added 1177
+Progress: resolved 1689, reused 0, downloaded 1242, added 1243
+Progress: resolved 1689, reused 0, downloaded 1306, added 1308
+Progress: resolved 1689, reused 0, downloaded 1401, added 1402
+Progress: resolved 1689, reused 0, downloaded 1487, added 1489
+Progress: resolved 1689, reused 0, downloaded 1525, added 1517
+Progress: resolved 1689, reused 0, downloaded 1615, added 1616
+Progress: resolved 1689, reused 0, downloaded 1668, added 1670
+Progress: resolved 1689, reused 0, downloaded 1676, added 1678
+Progress: resolved 1689, reused 0, downloaded 1681, added 1683
+Progress: resolved 1689, reused 0, downloaded 1683, added 1685
+Progress: resolved 1689, reused 0, downloaded 1684, added 1685
+Progress: resolved 1689, reused 0, downloaded 1685, added 1687
+Progress: resolved 1689, reused 0, downloaded 1686, added 1687
+Progress: resolved 1689, reused 0, downloaded 1686, added 1688
+Progress: resolved 1689, reused 0, downloaded 1687, added 1688
+Progress: resolved 1689, reused 0, downloaded 1687, added 1689, done
+.../node-pty@1.1.0/node_modules/node-pty install$ node scripts/prebuild.js || node-gyp rebuild
+.../node_modules/@parcel/watcher install$ node scripts/build-from-source.js
+.../node_modules/@prisma/engines postinstall$ node scripts/postinstall.js
+.../node_modules/protobufjs postinstall$ node scripts/postinstall
+.../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+.../node-pty@1.1.0/node_modules/node-pty install: [32m> Checking prebuilds...[0m
+.../node-pty@1.1.0/node_modules/node-pty install: Done
+.../node-pty@1.1.0/node_modules/node-pty postinstall$ node scripts/post-install.js
+.../node_modules/protobufjs postinstall: Done
+.../node_modules/@parcel/watcher install: Done
+.../node_modules/vue-demi postinstall$ node -e "try{require('./scripts/postinstall.js')}catch(e){}"
+.../node-pty@1.1.0/node_modules/node-pty postinstall: [32m> Cleaning release folder...[0m
+.../node-pty@1.1.0/node_modules/node-pty postinstall: [32m> Moving conpty.dll...[0m
+.../node-pty@1.1.0/node_modules/node-pty postinstall:   SKIPPED (not Windows)
+.../node-pty@1.1.0/node_modules/node-pty postinstall: Done
+.../sharp@0.33.5/node_modules/sharp install$ node install/check
+.../node_modules/vue-demi postinstall: Done
+.../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+.../node_modules/@prisma/engines postinstall: Done
+.../sharp@0.33.5/node_modules/sharp install: Done
+.../prisma@5.22.0/node_modules/prisma preinstall$ node scripts/preinstall-entry.js
+.../prisma@5.22.0/node_modules/prisma preinstall: Done
+.../node_modules/@prisma/client postinstall$ node scripts/postinstall.js
+.../node_modules/@prisma/client postinstall: prisma:warn We could not find your Prisma schema in the default locations (see: https://pris.ly/d/prisma-schema-location).
+.../node_modules/@prisma/client postinstall: If you have a Prisma schema file in a custom path, you will need to run
+.../node_modules/@prisma/client postinstall: `prisma generate --schema=./path/to/your/schema.prisma` to generate Prisma Client.
+.../node_modules/@prisma/client postinstall: If you do not have a Prisma schema file yet, you can ignore this message.
+.../node_modules/@prisma/client postinstall: Done
+ WARN  Failed to create bin at /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/socratic-math-teacher/node_modules/.bin/autobyteus-app. ENOENT: no such file or directory, open '/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/autobyteus-application-devkit/dist/cli.js'
+ WARN  Failed to create bin at /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/brief-studio/node_modules/.bin/autobyteus-app. ENOENT: no such file or directory, open '/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/autobyteus-application-devkit/dist/cli.js'
+
+autobyteus-ts postinstall$ node ./scripts/fix-node-pty-permissions.mjs
+autobyteus-ts postinstall: [node-pty-fix] repaired: /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/node_modules/.pnpm/node-pty@1.1.0/node_modules/node-pty/prebuilds/darwin-arm64/spawn-helper
+autobyteus-ts postinstall: Done
+ WARN  Failed to create bin at /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/socratic-math-teacher/node_modules/.bin/autobyteus-app. ENOENT: no such file or directory, open '/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/socratic-math-teacher/node_modules/@autobyteus/application-devkit/dist/cli.js'
+ WARN  Failed to create bin at /Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/brief-studio/node_modules/.bin/autobyteus-app. ENOENT: no such file or directory, open '/Users/normy/autobyteus_org/nfs-extract-ir003-1xhskqsn/repo/applications/brief-studio/node_modules/@autobyteus/application-devkit/dist/cli.js'
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: @google/genai@2.24.0.                               │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Done in 40.8s using pnpm v10.28.2

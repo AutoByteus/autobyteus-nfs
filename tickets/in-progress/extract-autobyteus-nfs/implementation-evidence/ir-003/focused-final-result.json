@@ -1,0 +1,21 @@
+{
+  "command": [
+    "pnpm",
+    "-C",
+    "autobyteus-server-ts",
+    "exec",
+    "vitest",
+    "run",
+    "tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+    "tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+    "tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts",
+    "tests/unit/agent-execution/agent-run-manager.test.ts",
+    "tests/unit/agent-execution/agent-run-input-preface.test.ts",
+    "tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+    "--maxWorkers=2",
+    "--no-watch"
+  ],
+  "exit": 0,
+  "seconds": 12.945,
+  "commit": "5559abbf017566f0030d95b023614f7418d3f212"
+}

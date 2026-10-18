@@ -1,0 +1,26 @@
+{
+  "unit": [
+    "Test Files  168 passed | 4 skipped (172)",
+    "Tests  1666 passed | 6 skipped (1672)"
+  ],
+  "integration": [
+    "Test Files  3 passed (3)",
+    "Tests  21 passed (21)"
+  ],
+  "core-units": [
+    "Test Files  3 passed (3)",
+    "Tests  15 passed (15)"
+  ],
+  "guide": [
+    "Test Files  4 passed (4)",
+    "Tests  24 passed (24)"
+  ],
+  "launcher": [
+    "Ran 36 tests in 39.527s",
+    "OK (skipped=2)"
+  ],
+  "focused-final": [
+    "Test Files  6 passed (6)",
+    "Tests  76 passed (76)"
+  ]
+}
