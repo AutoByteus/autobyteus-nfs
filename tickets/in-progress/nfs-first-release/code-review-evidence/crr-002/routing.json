@@ -50,5 +50,7 @@
     "recipient_address": "/software_engineering_team/implementation_engineer"
   },
   "routing_policy": "Single most-specific failure-origin owner, not successful-test or source-Pass route.",
-  "handoff_status": "Pending"
+  "handoff_status": "Delivered",
+  "handoff_receipt": "handoff-receipt.json",
+  "review_commit": "ca048be893516d79bc1ea895b929af17580e25dd"
 }

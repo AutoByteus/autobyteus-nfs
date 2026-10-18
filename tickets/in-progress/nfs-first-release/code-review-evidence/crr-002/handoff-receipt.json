@@ -1,0 +1,12 @@
+{
+  "review": "CRR-002",
+  "review_commit": "ca048be893516d79bc1ea895b929af17580e25dd",
+  "recipient_address": "/software_engineering_team/implementation_engineer",
+  "result": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/implementation_engineer.",
+    "target_agent_run_id": "implementation_engineer_2c60a2b9fdf1490c818f25289337aa21"
+  },
+  "duplicate_dispatch": false
+}
