@@ -1,43 +1,48 @@
 # Finalization and release
 
-## Repository finalization (no release by default)
+## Source finalization
 
-Target is `origin/main`; task branches use `codex/<ticket>`. Work in the task
-worktree, not the user canonical checkout or another owner's dirty checkout.
-Before each target push, fetch origin and compare the current remote main with
-the base actually integrated. Never force push/reset, overwrite competing work,
-or assume a previously empty remote is still empty.
+Target `origin/main`; use `codex/<ticket>` in the task worktree, not the canonical
+checkout or another owner's worktree. Fetch immediately before finalization and
+compare the remote main with the base actually integrated. Merge reviewed changes
+with `--no-ff` on a fresh finalize branch, run affected integrated checks and record
+ticket/target commits and remote confirmation. Never force push/reset or overwrite
+competing work. NFS is independent: no paired application merge or desktop version.
+Preserve PM `task-plans/`, archives and retained historical assets byte-for-byte.
+Archive evidence and clean only owned scratch/worktrees after durable receipts.
 
-For this repository's initial reviewed history, establish main from the validated
-task branch only after confirming remote main is absent. Do not invent an empty
-base or merge unrelated history. If main has appeared, reconcile actual ownership
-and commits first; report a concrete blocker rather than overwriting it.
-Subsequent reviewed changes merge with `--no-ff` into a fresh finalize branch from
-origin/main. Record ticket/target commits and remote confirmation.
+## Publication authorization
 
-The extraction spans two repositories. Validate paired candidates first; establish
-this repository's main, then finalize the application's filesystem-only decoupling
-under that repository's `origin/personal` / `--no-ff` policy. If the second step
-fails, report partial finalization and preserve the first; never force rollback.
-Only after remote finalization may the canonical still-unborn main be populated
-with normal non-force checkout/tracking, after checking new owner content.
-Preserve `task-plans/` and all unrelated files byte-for-byte. Do not author there.
-Archive evidence and clean only owned scratch/worktrees after durable receipts;
-canonical checkouts and retained historical candidates are not disposable.
+Source finalization alone does **not** authorize publication or deployment. The
+`nfs-first-release` task explicitly authorizes the first **normal v0.1.0** release
+once its existing readiness gates are met. Normal `vMAJOR.MINOR.PATCH` only; no
+beta/prerelease or build suffix. The manual workflow defaults to build-only and
+ordinary push/PR checks never publish. Do not pre-create a version tag or release.
 
-## Publication and rollout
+[packaging/RELEASE.md](packaging/RELEASE.md) owns candidate identity, qualification,
+signing, retained final payload and publication/recovery procedure. API/E2E owns
+executable evidence; Delivery judges sufficiency, records qualification, finalizes
+current main, executes the authorized release and verifies public receipts. A
+build, source-review Pass, configured secret or permission to release is **not**
+independent physical testing, actual user verification or Accepted notarization.
 
-**No release** is the default. Finalizing source does not authorize a tag,
-GitHub release, image push, signing operation, installer publication or deployment.
-There is no automatic tag/main publication workflow. A future explicitly
-approved NFS release owns its version/tag independently from AutoByteus desktop.
-The maintainer must separately authorize/create the tag and existing GitHub
-release before a publish dispatch; the workflow does not create either.
+Staged source finalization may be needed to exercise the hosted workflow. It does
+not complete the Task: actual normal release, exact public downloads and truthful
+platform/user/signature receipts are required. Any concrete external prerequisite
+keeps the release open. Do not silently drop a target or weaken a gate.
 
-[packaging/RELEASE.md](packaging/RELEASE.md) defines the exact candidate reuse,
-service/engine/host evidence, physical/user qualification, signing and
-existing-release gates. `workflow_dispatch` defaults `publish=false`. Do not
-enable the app's unavailable Guide from build-only artifacts. No live rollout
-is implied by extraction. Preserve installed paths/data; any later supported
-upgrade transition needs its own evidence and plan. Never move a published tag
-or relabel failed/unqualified evidence as a release result.
+## Partial effects and cleanup
+
+Publication is non-atomic. Preserve tag/draft/image/assets and failed-run evidence.
+Retry resolves the annotation-bound original payload before building/signing;
+never clobber an asset, move/delete a published tag, rebuild a qualified engine or
+re-sign under an existing payload identity. Missing/expired/conflicting inputs
+block automatic recovery; a different output needs a newly authorized version.
+A scoped package-visibility permission failure leaves the release draft, not Pass.
+
+No live-user setup, storage migration, node upgrade, application Guide activation
+or deployment is implied. Do not delete user configuration/source data or claim
+rollback of a publication. Clean only this task's ephemeral resources/credentials;
+retain artifacts through qualification and recovery. Return actual URL/version,
+source/tag/run/attempt/artifact/image identities, supported targets and exact
+commands, or the precise unfinished stage and preserved partial effects.

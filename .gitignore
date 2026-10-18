@@ -6,3 +6,5 @@
 /engine-parts/
 /artifacts/
 /scripts/tests/__pycache__/
+/packaging/release_support/__pycache__/
+/packaging/__pycache__/

@@ -13,7 +13,7 @@ go vet ./...
 go build -o out/autobyteus-nfs ./cmd/autobyteus-nfs
 out/autobyteus-nfs version
 python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v
-bash -n scripts/public/nfs/install.sh
+bash -n scripts/public/nfs/install.sh packaging/sign-macos.sh
 python3 packaging/release.py --source-hash
 ```
 
@@ -67,3 +67,36 @@ Fix demonstrated in-scope failures; disclose failed attempts and environmental
 limits. New behavior/design needs return to its owner. Do not silently weaken
 checks or reopen unrelated completed filesystem/editor work. No test result is
 user verification, physical/platform qualification or release authorization.
+
+## Release-control changes
+
+Run all `test_nfs_*.py` suites. Record fixtures parse real candidate/OCI/native
+archives, strict JSON and qualification references; the engine bytes/topologies/
+user statements in them are synthetic and must never enter the real lock.
+Publication fixtures double GitHub/registry boundaries and check same-payload
+retry, conflicting assets/images, stage order and main drift. Signing fixtures
+execute the actual shell with fake commands/credentials, checking Accepted-only
+behavior and cleanup, not Apple acceptance. Installer fixtures use actual tar/hash
+tools and an inert binary. Workflow truth tables cover candidate/fresh/resume modes
+and failed/cancelled/legitimate skipped ancestors; actionlint checks YAML separately.
+No fixture is a hosted run, public download or qualified physical platform.
+
+An independent source archive is sufficient for normal local checks; retain source
+identity/logs and tool versions. For release work, all four native hosted checks,
+current complete engine/OCI candidate, target/mode physical evidence, genuine user
+verification, real notarization and public downloads remain API/Delivery gates.
+The release schema is documented in packaging/RELEASE.md. Do not fabricate receipts
+or automatically mark the qualification lock populated from test success.
+
+On macOS, place the independent source checkout/copy in an owned local APFS
+development directory, **outside** `/private` and `/tmp`. Source-binding fixtures
+create their owned project below the package cwd and intentionally preserve the
+production refusal of system/private/ephemeral sources. HOME/TMPDIR/cache may
+still be private scratch. A bad fixture location is not a reason to weaken that
+guard or skip native tests.
+
+For a Linux container local-check harness, extract the independent source archive
+and create HOME/TMPDIR/cache **inside the guest filesystem**, not on a Docker
+Desktop host bind. Host-bridged file-lock behavior is not native Linux flock.
+Use read-only input archives and copy only owned result files out. Container-host
+installer refusals remain explicit skips, not host installer qualification.

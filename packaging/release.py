@@ -1,99 +1,134 @@
 #!/usr/bin/env python3
-"""Deterministic release metadata/qualification boundary; never publishes or mounts.
-Run --check-publish before any publishing step. Empty qualification fails closed.
-"""
+"""NFS release facade. Candidate/qualification/payload/publication have distinct owners."""
 import argparse
-import hashlib
 import json
-import re
+import os
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'packaging/engine'))
-from manifest import validate as validate_engine, embed as embed_engine
-
-LOCK = ROOT / 'packaging/release-lock.json'
-SOURCES = ['internal', 'cmd/autobyteus-nfs/main.go', 'go.mod',
-           'scripts/public/nfs', 'packaging/Dockerfile', 'packaging/engine',
-           'packaging/release.py', '.github/workflows/release-nfs.yml',
-           'testdata/connection.json', 'docs/filesystem-usage.md',
-           'LICENSE', 'THIRD_PARTY_NOTICES']
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from release_support import candidate, identity as i, payload, publication, qualification
+from manifest import embed as embed_engine, validate as validate_engine
 
 
-def source_hash(engine=None):
-    digest = hashlib.sha256()
-    lock = json.loads(LOCK.read_text())
-    inputs = {k: lock[k] for k in ('ubuntuBaseImage', 'ubuntuPackages', 'engine')}
-    if engine is not None:
-        inputs['engine'] = engine
-    digest.update(json.dumps(inputs, sort_keys=True).encode())
-    files = []
-    for name in SOURCES:
-        path = ROOT / name
-        files.extend(p for p in path.rglob('*') if p.is_file()) if path.is_dir() else files.append(path)
-    for path in sorted(files):
-        if path.name.endswith('_test.go') or '__tests__' in path.parts or '__pycache__' in path.parts or path.suffix == '.deb':
-            continue
-        digest.update(str(path.relative_to(ROOT)).encode() + b'\0')
-        digest.update(path.read_bytes())
-    return digest.hexdigest()
+def metadata(args):
+    lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
+    measured = i.read_json(args.engine_manifest) if args.engine_manifest else lock['engine']
+    if measured is not None:
+        validate_engine(measured)
+    if args.source_hash:
+        print(i.source_hash(measured))
+        return
+    if args.check_publish:
+        qualification.load()  # Useful default refusal before a candidate is supplied.
+        i.require(args.candidate is not None, 'Identified candidate is required')
+        qualification.validate(args.candidate)
+        return
+    i.version(args.tag)
+    qualified = False
+    if args.qualified:
+        i.require(args.candidate is not None, 'Qualified metadata requires identified candidate')
+        qualification.validate(args.candidate)
+        c = candidate.verify(args.candidate)
+        i.require(args.tag == c['version'] and args.engine_image == i.IMAGE + '@' + c['oci']['index'] and
+                  measured == candidate.engine(args.candidate / 'engine'), 'Qualified metadata inputs differ')
+        qualified = True
+    if args.candidate is not None:
+        c = candidate.verify(args.candidate)
+        i.require(args.tag == c['version'] and args.engine_image.endswith('@' + c['oci']['index']) and
+                  measured == candidate.engine(args.candidate / 'engine'), 'Candidate metadata inputs differ')
+    if measured is None:
+        i.require(not args.qualified and not args.engine_image, 'Release metadata needs measured engine')
+        result = {'version': args.tag, 'sourceHash': i.source_hash(), 'ubuntuPackages': lock['ubuntuPackages'],
+                  'engineImage': '', 'qualifiedTargets': []}
+    else:
+        result = candidate.runtime_metadata(args.tag, args.engine_image, measured, qualified)
+    if args.target and args.target.startswith('linux-'):
+        i.require(measured is not None and args.engine_artifacts is not None, 'Linux release requires matching engine bundle')
+        embed_engine(measured, args.engine_artifacts, args.target.split('-')[1], i.ROOT / 'internal/backend/engine-assets')
+    if args.output:
+        i.write_json(args.output, result)
+    else:
+        print(json.dumps(result, indent=2))
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--check-publish', action='store_true')
-    p.add_argument('--tag')
-    p.add_argument('--engine-image', default='')
-    p.add_argument('--output', type=Path)
-    p.add_argument('--source-hash', action='store_true')
-    p.add_argument('--engine-manifest', type=Path)
-    p.add_argument('--engine-artifacts', type=Path)
-    p.add_argument('--target', choices=['darwin-arm64','darwin-amd64','linux-arm64','linux-amd64'])
-    a = p.parse_args()
-    lock = json.loads(LOCK.read_text())
-    engine = json.loads(a.engine_manifest.read_text()) if a.engine_manifest else lock["engine"]
-    if engine is not None:
-        validate_engine(engine)
-    digest = source_hash(engine)
-    if a.source_hash:
-        print(digest)
-        return
-    if a.check_publish:
-        targets = lock['qualifiedTargets']
-        if not targets or not set(targets) <= {'darwin-arm64','darwin-amd64','linux-arm64','linux-amd64'}:
-            raise SystemExit('No qualified release targets; publishing unavailable.')
-        if lock['qualifiedSourceHash'] != digest or not lock['userVerified'] or len(lock['physicalEvidence']) < 3:
-            raise SystemExit('Current-source, independent physical Mac/Linux/Docker and explicit user verification gates are incomplete.')
-        if engine is None:
-            raise SystemExit("Corrected engine candidate is missing.")
-        validate_engine(engine, require_both=True)
-        if engine != lock['engine']:
-            raise SystemExit('Candidate engine bytes differ from qualified lock.')
-        for evidence in lock['physicalEvidence']:
-            path = (ROOT / evidence).resolve()
-            if not path.is_relative_to(ROOT) or not path.is_file():
-                raise SystemExit('Qualification evidence missing or outside repository.')
-        return
-    if not a.tag or not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?', a.tag):
-        raise SystemExit('A repository release tag is required.')
-    if a.engine_image and not re.fullmatch(r'[a-z0-9][a-z0-9./:_-]+@sha256:[a-f0-9]{64}', a.engine_image):
-        raise SystemExit('Engine image must be immutable.')
-    metadata = {'version':a.tag, 'sourceHash':digest, 'ubuntuPackages':lock['ubuntuPackages'],
-                'engineImage':a.engine_image,
-                'qualifiedTargets':lock['qualifiedTargets'] if digest == lock['qualifiedSourceHash'] and engine == lock['engine'] else []}
-    if engine is not None:
-        metadata['engine'] = engine
-    if a.target and a.target.startswith('linux-'):
-        if engine is None or a.engine_artifacts is None:
-            raise SystemExit('Linux release build requires the matching corrected engine bundle.')
-        embed_engine(engine, a.engine_artifacts, a.target.split('-')[1], ROOT/'internal/backend/engine-assets')
-    if a.output:
-        a.output.parent.mkdir(parents=True, exist_ok=True)
-        a.output.write_text(json.dumps(metadata, indent=2)+'\n')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--operation', choices=['prepare', 'candidate', 'verify-candidate', 'payload', 'bind', 'publish', 'oci', 'candidate-envelope', 'fetch-candidate'])
+    parser.add_argument('--source-hash', action='store_true')
+    parser.add_argument('--check-publish', action='store_true')
+    parser.add_argument('--tag')
+    parser.add_argument('--engine-image', default='')
+    parser.add_argument('--engine-manifest', type=Path)
+    parser.add_argument('--engine-artifacts', type=Path)
+    parser.add_argument('--target', choices=i.TARGETS)
+    parser.add_argument('--qualified', action='store_true')
+    parser.add_argument('--output', type=Path)
+    parser.add_argument('--directory', type=Path)
+    parser.add_argument('--candidate', type=Path)
+    parser.add_argument('--native', type=Path)
+    parser.add_argument('--binding', type=Path)
+    parser.add_argument('--envelope', type=Path)
+    parser.add_argument('--artifact-id', type=int)
+    parser.add_argument('--run-id', type=int)
+    parser.add_argument('--attempt', type=int)
+    parser.add_argument('--source-commit')
+    parser.add_argument('--workflow-commit')
+    args = parser.parse_args()
+    result = None
+    if args.operation == 'prepare':
+        tag = i.version(args.tag)
+        source = i.hex_value(args.source_commit, 40)
+        i.require(i.commit() == source and os.environ.get('GITHUB_REPOSITORY') == i.REPOSITORY and
+                  os.environ.get('GITHUB_EVENT_NAME') == 'workflow_dispatch', 'Dispatch/source identity differs')
+        workflow_commit = i.hex_value(os.environ.get('GITHUB_SHA'), 40)
+        i.require(i.command('git', 'show', workflow_commit + ':' + i.WORKFLOW) == (i.ROOT / i.WORKFLOW).read_bytes(),
+                  'Dispatch workflow differs from checked-out release source')
+        mode = 'candidate'
+        if os.environ.get('WANT_PUBLISH') == 'true':
+            mode = publication.prepare(tag, source, args.run_id, args.directory)
+        lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
+        result = {'tag': tag, 'source': source, 'mode': mode, 'base': lock['ubuntuBaseImage']}
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+            for name, value in result.items():
+                i.text(value)
+                output.write(name + '=' + value + '\n')
+        with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+            summary.write(f'## NFS release inputs\n\nVersion: `{tag}`\n\n'
+                          f'Source: `{source}`\n\nWorkflow: `{workflow_commit}`\n\nMode: `{mode}`\n')
+    elif args.operation == 'candidate':
+        result = candidate.assemble(args.directory, args.tag, args.source_commit,
+                                    args.workflow_commit, args.run_id, args.attempt)
+    elif args.operation == 'candidate-envelope':
+        result = candidate.envelope(args.artifact_id, args.run_id, args.attempt, args.workflow_commit, candidate.CANDIDATE)
+    elif args.operation == 'fetch-candidate':
+        e = i.read_json(args.envelope)
+        candidate.download(e, candidate.CANDIDATE, args.directory)
+        c = candidate.verify(args.directory)
+        i.require((c['runId'], c['runAttempt'], c['workflowCommit']) ==
+                  (e['runId'], e['runAttempt'], e['workflowCommit']), 'Downloaded candidate attempt differs')
+        result = {'recordSha256': i.sha(args.directory / 'candidate.json'), 'envelope': e}
+    elif args.operation == 'verify-candidate':
+        result = candidate.verify(args.directory)
+    elif args.operation == 'oci':
+        result = candidate.oci(args.directory)
+    elif args.operation == 'payload':
+        result = payload.assemble(args.directory, args.candidate, args.native, args.source_commit, args.run_id, args.attempt)
+    elif args.operation == 'bind':
+        result = publication.bind(args.directory, args.candidate, args.artifact_id, args.run_id, args.attempt)
+    elif args.operation == 'publish':
+        result = publication.publish(args.directory, args.candidate, i.read_json(args.binding), args.output)
     else:
-        print(json.dumps(metadata, indent=2))
+        metadata(args)
+    if result is not None:
+        if args.output:
+            i.write_json(args.output, result)
+        else:
+            print(json.dumps(result, indent=2))
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        raise SystemExit('Release refused: ' + str(error))

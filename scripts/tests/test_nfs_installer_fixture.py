@@ -19,7 +19,7 @@ class NfsInstallerFixtureTest(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix='nfs-installer-fixture-') as root:
             p=Path(root); home=p/'home';home.mkdir();downloads=p/'downloads';downloads.mkdir();bin_dir=p/'bin';bin_dir.mkdir()
             installer=p/'install.sh'
-            installer.write_text((ROOT/'scripts/public/nfs/install.sh').read_text().replace('__RELEASE_TAG__','v0.0.0-fixture'))
+            installer.write_text((ROOT/'scripts/public/nfs/install.sh').read_text().replace('__RELEASE_TAG__','v0.0.0'))
             # Only platform metadata is doubled; the container guard is unchanged.
             (bin_dir/'uname').write_text('#!/bin/sh\ncase "$1" in -s) echo Darwin;; -m) echo arm64;; esac\n')
             (bin_dir/'curl').write_text('''#!/bin/bash
@@ -37,17 +37,19 @@ printf '%s\n' "$1" >> "$HOME/invocations"
 export NFS_PERMISSION_PHASE="$1"
 exec "$NFS_DIRECTORY_TEST_BINARY" -test.run '^TestInstallerDirectoryModeChild$' -test.v
 '''
-            archive=downloads/'autobyteus-nfs-0.0.0-fixture-darwin-arm64.tar.gz'
+            archive=downloads/'autobyteus-nfs-0.0.0-darwin-arm64.tar.gz'
             with tarfile.open(archive,'w:gz') as tar:
-                for name,content in [('LICENSE',b'fixture'),('THIRD_PARTY_NOTICES',b'fixture'),('release.json',b'{}'),('autobyteus-nfs',binary)]:
+                for name,content in [('LICENSE',b'fixture'),('THIRD_PARTY_NOTICES',b'fixture'),('release.json',b'{"wrong":true}' if variant=='manifest-mismatch' else b'{}'),('autobyteus-nfs',binary)]:
                     info=tarfile.TarInfo(name);info.size=len(content);info.mode=0o755 if name=='autobyteus-nfs' else 0o644
                     if variant=='symlink' and name=='autobyteus-nfs':info.type=tarfile.SYMTYPE;info.linkname='/bin/false';info.size=0
                     tar.addfile(info,io.BytesIO(content) if info.isreg() else None)
                 if variant=='extra':
                     info=tarfile.TarInfo('../outside');info.size=3;tar.addfile(info,io.BytesIO(b'bad'))
             checksum=hashlib.sha256(archive.read_bytes()).hexdigest() if variant!='checksum' else '0'*64
-            (downloads/'SHA256SUMS-nfs').write_text(checksum+'  '+archive.name+'\n')
-            (downloads/'autobyteus-nfs-manifest.json').write_text('{}')
+            (downloads/'SHA256SUMS-nfs').write_text(checksum+'  '+archive.name+'\n'+hashlib.sha256(b'{}').hexdigest()+'  autobyteus-nfs-manifest.json\n')
+            (downloads/'autobyteus-nfs-manifest.json').write_text('{"bad":true}' if variant=='manifest-checksum' else '{}')
+            if variant=='duplicate-checksum':
+                with (downloads/'SHA256SUMS-nfs').open('a') as out:out.write(checksum+'  '+archive.name+'\n')
             env={'PATH':str(bin_dir)+':/usr/bin:/bin','HOME':str(home),'TMPDIR':root,'FIXTURE_DOWNLOADS':str(downloads)}
             if variant=='permissions':
                 env['NFS_DIRECTORY_TEST_BINARY']=os.environ['NFS_DIRECTORY_TEST_BINARY']
@@ -71,7 +73,7 @@ exec "$NFS_DIRECTORY_TEST_BINARY" -test.run '^TestInstallerDirectoryModeChild$' 
     def test_valid_fixture_installs_and_immediately_invokes(self):self.run_fixture('valid')
     @unittest.skipIf(Path('/.dockerenv').exists(), 'installer deliberately refuses container-host context')
     def test_corrupt_or_unsafe_archive_never_executes(self):
-        for case in ['checksum','symlink','extra']:
+        for case in ['checksum','symlink','extra','manifest-checksum','manifest-mismatch','duplicate-checksum']:
             with self.subTest(case=case):self.run_fixture(case)
     @unittest.skipUnless(os.environ.get('NFS_DIRECTORY_TEST_BINARY'), 'invoked by Go platform bootstrap regression')
     def test_directory_modes_with_go_fixture(self):self.run_fixture('permissions')

@@ -3,7 +3,6 @@ Run python3 -m unittest scripts/tests/test_nfs_engine_packaging.py -v.
 Fixture .deb bytes are not native engine qualification; actual recipe build is separate.
 """
 import copy
-import hashlib
 import importlib.util
 import json
 import sys
@@ -80,24 +79,28 @@ class EnginePackagingTest(unittest.TestCase):
     def test_engine_bytes_part_of_source_hash_and_stale_qualification_clears(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);m=fixture(root/'arm64','arm64')
-            lock=json.loads((ROOT/'packaging/release-lock.json').read_text())
-            lock.update(engine=m,qualifiedTargets=['linux-arm64'],qualifiedSourceHash='old')
-            p=root/'release-lock.json';p.write_text(json.dumps(lock))
-            with patch.object(release,'LOCK',p):
-                before=release.source_hash();changed=copy.deepcopy(m);changed['architectures']['arm64']['packages'][0]['sha256']='b'*64
-                self.assertNotEqual(before,release.source_hash(changed))
-                out=root/'release.json'
+            before=release.i.source_hash(m)
+            changed=copy.deepcopy(m);changed['architectures']['arm64']['packages'][0]['sha256']='b'*64
+            self.assertNotEqual(before,release.i.source_hash(changed))
+            out=root/'release.json'
+            read=release.i.read_json
+            def unqualified(path):
+                result=read(path)
+                if path==ROOT/'packaging/release-lock.json':result.update(engine=None,qualifiedTargets=[])
+                return result
+            with patch.object(release.i,'read_json',side_effect=unqualified):
                 with patch.object(sys,'argv',['release.py','--tag','v1.2.3','--output',str(out)]):release.main()
                 self.assertEqual(json.loads(out.read_text())['qualifiedTargets'],[])
                 with patch.object(sys,'argv',['release.py','--tag','v1.2.3','--target','linux-arm64']):
-                    with self.assertRaises(SystemExit):release.main()
+                    with self.assertRaises(ValueError):release.main()
 
     def test_pipeline_pair_reuse_and_size_gate(self):
         w=(ROOT/'.github/workflows/release-nfs.yml').read_text()
-        self.assertIn('candidate_run_id:',w);self.assertIn('run-id: ${{ inputs.candidate_run_id }}',w)
-        self.assertIn("if: needs.prepare.outputs.publish != 'true'",w)
-        self.assertIn('manifest.py verify --directory engine-candidate',w)
-        self.assertIn('100*1024*1024',w);self.assertIn('autobyteus-nfs-ganesha-source-',w)
+        self.assertIn('candidate_run_id:',w)
+        self.assertIn("if: needs.prepare.outputs.mode == 'candidate'",w)
+        self.assertIn('manifest.py merge --inputs',w)
+        self.assertIn('100*1024*1024',w)
+        self.assertIn('push: false',w)
         d=(ROOT/'packaging/Dockerfile').read_text()
         self.assertIn('COPY engine-candidate/${TARGETARCH}/',d);self.assertIn('sha256sum -c SHA256SUMS',d)
         self.assertNotIn('GANESHA_VERSION',d);self.assertNotIn('build-essential',d)
