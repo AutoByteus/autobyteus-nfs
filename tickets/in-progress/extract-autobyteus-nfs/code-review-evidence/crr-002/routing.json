@@ -70,5 +70,12 @@
     "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-002/unused-imports.json",
     "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-002/final-checks.json"
   ],
-  "delivery_status": "Not yet sent"
+  "delivery_status": "DELIVERED",
+  "review_commit": "96aca9cfe5c2b72e57d2d992a7086b2481512d89",
+  "receipt": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  }
 }
