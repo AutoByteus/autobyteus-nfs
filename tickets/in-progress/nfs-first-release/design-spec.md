@@ -1,251 +1,211 @@
 # Design — First downloadable NFS release
 
 ## Solution And Approval Basis
-- Package `nfs-first-release`; Task `autobyteus-nfs-3` / `project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5`; current solution **SR-003**.
-- **Design Ready — Architecture Design Complete**, not reviewed/implemented/qualified/published.
-- Requirements **R2/SR-002 Approved**: user explicitly rejects beta; SD approved initial normal `v0.1.0` and retained four-target scope within the assigned direction and informed the user. Original PM-carried user direction authorizes actual publication after readiness. No behavior-defining supplement. Publication consent is not a user-verification receipt.
-- Canonical investigation: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/investigation-notes.md` (E01–E18).
-- Workspace `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`; fresh base/finalization `origin/main`7e375984be2bea7a4d536e43cc59d6bc2b116870, still confirmed by ls-remote2026-10-18. Canonical checkout/PM/archive untouched.
-- Authorities read2026-10-18: solution-designer SKILL; full references/requirements-engineering.md, architecture-design.md, design-principles.md, handoff-references.md and relevant artifact templates; NFS root AGENTS.md, DESIGN.md, TESTING.md, RELEASE.md and packaging/RELEASE.md. No closer design/agent instructions found. Design-examples: N/A. General/project design conflicts: none. Extraction-specific release prose is obsolete for this newly authorized task and is replaced, not silently ignored.
+- **SR-004 / Design Ready — Architecture Design Complete**. This is release-first requirement/design recovery, not a code defect or Delivery Completed. Large/High; review of this delta is pending. Prior ARCH001 covered SR003 only.
+- Requirements **R3/SR004 Approved**, user direct publication-first instructions in `delivery-evidence/dr-003/user-publish-first-direction.json`; exact scope/approval in `approval-record-sr004.md`. Normal v0.1.0/four targets retained. `postpublication-testing-plan.md` is the approved deferral/custody supplement. No renewed user question.
+- Package nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Canonical investigation: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/investigation-notes.md`, E19–22 for this recovery; E01–18 historical.
+- Workspace `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, `codex/nfs-first-release`; intake HEAD a5f57097578f9503eff0beb120dbc9e33e194eef, product8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34. Last Delivery-refreshed origin/main/base7e375984be2bea7a4d536e43cc59d6bc2b116870; finalization origin/main with fresh fetch by Delivery.
+- Authorities read: solution-designer SKILL; full requirements-engineering, architecture-design, design-principles, handoff-references and required templates; NFS AGENTS/DESIGN/TESTING/RELEASE and packaging/RELEASE (2026-10-18). No closer AGENTS. Project design conflicts: none. R3 explicitly supersedes the old release policy's physical/user sequencing; implementation must update the guides and code together. Design-examples N/A.
 
-## Current-State Read And Intended Change
-Current manual workflow checks out an already-existing tag, optionally rebuilds/pushes the image before all signing gates, and uploads with clobber to an already-existing release. Its engine-package reuse invariant is useful, but its distributed gate/side-effect ordering is incomplete. Source hashing, embedded metadata verification and bounded four-member archives are sound existing boundaries to retain. Current qualification is empty; historic native CI and shared-kernel filesystem results do not fill it. See E03–09/E15.
+## Current-State Read / Intended Change
+IR002 already implemented the cohesive candidate → qualification → payload → publication flow; CRR003 reviewed it. API002 actually built/downloaded the complete candidate but could not run assigned physical tests. Old qualification.py deliberately requires independent physical rows and an executed-user receipt. Final metadata fills QualifiedTargets and VerifyRelease requires that field before installation. Changing only publication would either leave downloads unusable or falsely label targets qualified.
 
-Replace the release orchestration with one manually initiated, identity-pinned candidate/publication workflow. Build and retain engine packages **and the OCI image once**; qualify those inputs; sign final Mac binaries; create the exact tag, stage a complete draft, promote the exact image and publish a normal release. Ordinary push/PR checks remain nonpublishing. Users obtain prebuilt binaries through a versioned installer; no Go/Homebrew prerequisite. No runtime filesystem change.
+**Replace the old qualification-as-admission contract with explicit release readiness and separate deferred field-validation status.** Preserve the existing candidate/engine/signing/payload/immutable-publication implementation, not a new release system. No runtime NFS/backend/consent behavior change. Official normal release availability and actual filesystem qualification are different claims.
 
 ## Task Size And Architectural Risk
-- **task_size: Large** — changes span Actions orchestration, candidate/qualification/promotion records and tooling, signing, installer asset assembly, durable tests and repository/distribution docs, followed by actual multi-platform qualification/publication.
-- **architectural_risk: High** — external irreversible Git/release/registry effects, private signing credentials, trust in externally supplied evidence/artifacts, cross-run identity and failure/retry sequencing. Compilation cannot validate these boundaries.
-- Escalate changed runtime/state/host behavior, target/channel/qualification policy, new paid infrastructure or a needed trust bypass to Solution Designer; do not patch around the gate. Concrete unavailable credentials/hosts are execution prerequisites, not permission to weaken R2.
+- **task_size: Large**: release-control record/lock, Python metadata/payload/publisher contracts, Go release metadata/admission, workflow/tests/docs and actual four-platform signed publication are affected. The recovery is narrower than the original release implementation but crosses multiple distribution boundaries.
+- **architectural_risk: High**: authorized publication of explicitly field-untested privileged tooling; private signing keys, immutable external effects and identity/claim coupling. Native green tests cannot prove field behavior.
+- Escalate any newly needed host-state/backend/source protection change, unsigned fallback, target/channel omission, paid hosts or new product scope. Missing physical hosts are now deferred, not escalation for prepublication permission; concrete signing/integrity/access failures still block.
 
 ## Architecture Investigation Evidence
-| Evidence | Current owner / path | Finding / design consequence | Remaining uncertainty |
-| --- | --- | --- | --- |
-| E03/E15 | `.github/workflows/release-nfs.yml` | Existing-tag checkout and existing-release upload prevent end-to-end flow; image pushed too early and rebuilt with potentially different runtime apt dependencies | Real hosted replacement must be exercised |
-| E04/E15 | `packaging/release.py`, engine/manifest.py, Dockerfile | Engine pair verified; source identity includes engine; physical evidence only counted as paths by code | Semantic evidence and real platforms remain mandatory |
-| E05/E15 | install.sh → VerifyRelease → setup | Exact manifest equality and target admission before installer writes; direct candidate CLI can be exercised on isolated hosts without claiming installer qualification | Actual final download/signature/host runs pending |
-| E15 | `internal/docker/engine.go:EnsureEngine` | New Docker engine always pulls digest; simply loading a local image will not exercise first-use correctly | Isolated qualification registry/host inventory required |
-| E16 | GitHub/Apple/skopeo primary contracts in notes | Explicit tag pin, draft promotion, no token-trigger recursion, digest-preserving OCI copy, explicit notarization Accepted and anonymous GHCR access checks | Package visibility privilege and credential validity not assumed |
-| E11–14/E18 | Sanitized signing receipts | All six entries now populated: user set app/export passwords, selected local identity exported and uploaded without disclosure | Key import/password pairing/notary account/team validation pending |
+| Evidence / source | Observed current path | Decision supported / remaining uncertainty |
+| --- | --- | --- |
+| E19 / DR003 exact user direction, API002 report | Actual candidate success, missing field hosts, no release/tag | Change intent explicitly; preserve old verdict, no new physical campaign before release |
+| E20 / release.py, qualification.py, payload.py, publication.py | Physical/user record demanded at every preflight/assembly/verify/write boundary | Replace singular owner, no bypass flag or only one call-site deletion |
+| E20/E22 / candidate.runtime_metadata → setup.Release → VerifyRelease → install.sh | Generated QualifiedTargets gate; other Release uses supply existing engine pins/image | Separate releaseTargets from field status, current-schema-only bounded installer admission |
+| E20/E22 / identity.source_hash, candidate.verify, engine manifest lock | Every changed production path hashed; workflow bytes and native manifests verified | API002 candidate cannot be promoted after this change; new exact candidate required |
+| E21 / DESIGN.md and read-only remote0 releases/0tags | One empty lock, no published manifest/release obligations | Clean-cut derived metadata/control replacement, no live-host migration |
+| E16/E18 / signing and external contracts | Credentials provisioned; immutable promotion and Accepted notarization required | Reuse unchanged, actual signing/public accessibility still unproven |
 
 ## Change Scope
-- UC001–005 / BEH001–006: NFS-only release workflow, packaging release boundary/records, narrowly needed installer checks, tests, support/release/testing docs and actual release execution evidence.
-- Leave Go runtime source/config/mount/backend/Docker semantics, engine recipe/backport/pins, installed state, application/desktop repos, Guide, dashboard, PM boards and old archives alone. Dockerfile may add source/license labels/inventory reporting only; no engine/dependency-policy change.
-- No Homebrew tap/formula, new OS family, auto-updater, setup-on-user-host, provider/app acceptance, or rollout. No application coupling restored.
-- Follow-ups found: **None newly requested**. Homebrew is optional future distribution, not part of this task; dashboard remains existing nfs-2. Previously deferred filesystem work stays deferred.
+UC001–005, BEH001–006: replace qualification/readiness coupling; narrowly change release metadata/install admission, pipeline wording/plumbing, evidence provenance/notes and affected tests/docs. Source hash remains complete. Preserve candidate retrieval, engine recipe/pins/packages/OCI verification, signing, tag/draft/asset/image recovery and ordinary CI nonpublication.
+
+Leave backend/platform/source/mount/private-state/lifecycle semantics, installed host records, application/superrepo, dashboard nfs-2, updater/editor, PM boards, original archives and unowned caches alone. No live setup/deployment/upgrade or credential reprovisioning. No Homebrew or new platform.
+
+**Follow-up:** postpublication shared-filesystem/physical/user validation and fix-forward, carried explicitly by Delivery to terminal Solution Designer → requesting PM per `postpublication-testing-plan.md`. No new Task/dispatch or test completion invented. No other new follow-up.
 
 ## Relevant Behavior And Production-Path Map
-| Behavior | Kind / approved IDs | Existing evidence | Target path / preserved outcome |
-| --- | --- | --- | --- |
-| BEH001 | Operational; REQ001/002, AC001 | ci.yml and release prepare/build | DS1: explicit candidate request → fixed checkout → engine/OCI/binary builds → identified CI artifacts; no publication permission |
-| BEH002 | Contract; REQ003/004/006, AC002/003/006 | release.py/lock + engine manifest + signing | DS2: verified candidate → actual host evidence/user receipt → qualified lock → publish preflight; fail closed |
-| BEH003 | Operational; REQ001/005/006, AC004/006 | engine push + final upload | DS3: exact qualified inputs → final binary/signing checks → retained payload → tag/draft/image → normal release; safe resumable partial state |
-| BEH004 | User; REQ005/007/008, AC005/007 | versioned installer → bounded tar → VerifyRelease | DS4: public download → checksum/archive/embedded metadata/target validation → user CLI installation/version; setup only by normal explicit consent |
-| BEH005 | Contract; REQ003/007/010, AC002/005/008 | host admission/setup/source/private-state owners | DS2/4 preserve host-only modes and all safety/refusal semantics; tests on explicitly owned resources only |
-| BEH006 | Operational; REQ009/010, AC008 | root and packaging policy/docs | DS3 delivery receipt records main/tag/run/asset/image identities, truthful platform limits and owned cleanup |
+| Behavior / kind | Approved trigger / REQ / AC | Existing evidence → target production path |
+| --- | --- | --- |
+| BEH001 Operational | SCN001; REQ001/002; AC001 | Existing candidate orchestration retained; DS1 builds NEW reviewed current-source metadata/code, no publication |
+| BEH002 Contract | SCN002/005; REQ003/004/006; AC002/003/006 | Old qualification → DS2 readiness owner validates exact candidate, real prepublication evidence, explicit release-first authority and deferred status |
+| BEH003 Operational | SCN003/006; REQ001/005/006; AC004/006 | DS3 payload/publisher consumes readiness not physical receipts; signing and immutable external sequence unchanged |
+| BEH004 User | SCN004/005; REQ005/007/008; AC005/007 | DS4 checksum/archive/current release schema + distribution target → install/version with deferred notice; no false qualified flag |
+| BEH005 Contract | SCN002/004/007; REQ007/010; AC005/008 | Existing host/source/state guards unchanged; DS2/4 exercise owned no-setup checks only |
+| BEH006 Operational | SCN007/008; REQ009/010; AC007/008 | DS3 receipt + explicit off-spine follow-up custody; docs separate build/distribution from field qualification |
 
-## Supplemental Task Artifacts
-The investigation inventory is canonical. Seven intake receipts record bootstrap/secret-name/admin operations, not runtime qualification or approval. Only `signing-certificate-upload-receipt.json` and `repository-release-preflight.json` are selected handoff supplements; earlier metadata receipts remain linked. Prior extraction DR003 is read-only provenance. Architecture/source/API/delivery review artifacts for this task: **N/A — not yet applicable**.
+## Supplemental Artifacts
+Canonical inventory in investigation notes. Current: `approval-record-sr004.md` (R3 authority), `postpublication-testing-plan.md` (approved deferred scope), Delivery exact direction/handoff (read-only), API002 report (actual candidate/history, not new Pass), E18 credential upload receipt (provisioning only). Prior design/requirements snapshots and all review/implementation/API histories remain linked. ARCH001/IR002/CRR003/API002 do not cover this new delta. Independent review of SR004: pending; omitted new review artifact **N/A — not yet applicable**.
 
 ## Task Design Health Assessment
-- Posture: Larger Requirement / release behavior completion. Current design issue: **Yes**, missing promotion invariant and scattered coordination.
-- Structural triggers: workflow mixes building, remote image mutation and later signing; final publish can see an image already exposed despite binary failure. Qualification gate counts evidence paths instead of binding supported target/mode receipts. Existing-release/clobber assumptions obscure ownership and recovery.
-- Root cause: **Missing Invariant / Duplicated Policy Or Coordination** in distribution orchestration, not Go filesystem layering.
-- Refactor needed now: **Yes, bounded to packaging/workflow**. A release-specific control owner validates candidate/qualification identity and remote reconciliation; workflow owns runner scheduling/permissions, not competing identity rules. Existing engine manifest and runtime installer verification are reused.
-- No broad runtime refactor or generic workflow framework. Residual unavoidable risk: GitHub Release/Git/registry are not one atomic transaction; explicit stage receipts and non-clobber reconciliation handle partial completion.
+- Posture **Behavior Change**; design issue **Yes under R3**, not a retroactive source defect under R2.
+- Structural trigger: **Shared Structure Looseness / Boundary Or Ownership Issue**: one QualifiedTargets concept controls distribution admission and asserts physical/user qualification; removing only the publisher gate leaves installer behavior contradictory.
+- **Refactor needed now: Yes, bounded**: replace qualification.py with a release-readiness owner and replace generated metadata semantics at the existing runtime admission owner. Existing candidate/payload/publication decomposition is healthy; no extra coordinator, provider layer, framework or broad runtime refactor.
+- Root cause: changed authority plus conflated claim/admission structure. Response: one current schema, one policy path, explicit immutable deferral state. No skip-qualification switches, legacy fallback or test-success-to-userVerified conversion.
+- Residual risk: actual filesystem behavior remains unqualified; mitigated by honest notices, preserved safety guards and specific later test/fix custody, not falsely claimed eliminated.
 
-## Legacy Removal Policy / Removal Plan
-No compatibility wrappers, parallel old publisher, beta fallback or existing-tag-only route.
-| Remove / replace | Why unnecessary | Replacement owner | Scope |
-| --- | --- | --- | --- |
-| Existing-tag and manually pre-created-release prerequisite | Contradicts UC001/003 | Fixed source input + controlled tag/draft creation | This change |
-| Image rebuild/push during engine build in publish mode | Breaks exact OCI identity and early-effect ordering | Candidate image retention + late digest-preserving promotion | This change |
-| `gh release upload --clobber`, implicit default-tip tag behavior | Can silently substitute assets/source | Exact-tag/draft identity reconciliation, missing-asset-only upload | This change |
-| Permissive prerelease regex and beta prose | User rejected public beta | One strict normal-version parser | This change |
-| Path-count-only physical gate as sufficient | Not semantic source/platform proof | Structured qualification validator plus API/Delivery evidence review | This change |
-| Old workflow fixture assertions prohibiting all tag/release creation | Old no-publication extraction basis | Candidate-no-effects and gated-publication tests | This change |
-| Extraction-specific paired/unborn-main/root release procedure | Extraction done, NFS independent | Current-main NFS finalization/release docs | This change |
+## Terminology
+**Build target**: native binary exists and checks run on that CPU/OS runner. **Release target**: approved distribution asset may pass installer admission. Neither is a field-qualified platform. **Readiness**: exact authorized candidate plus observed prepublication release checks and disclosure. **Field validation**: actual independent shared-filesystem/physical and user testing, deferred for this release. Signed/notarized does not mean field tested.
+
+## Legacy Removal / Decommission Plan
+| Remove / replace in this change | Why unnecessary | Single replacement |
+| --- | --- | --- |
+| qualification.py physical/user admission owner and all live imports | R3 supersedes that prepublication policy | readiness.py; do not retain old module as fallback |
+| Lock qualifiedTargets/qualifiedSourceHash/physicalEvidence/userVerified/qualification fields | They mix an install/release permission with an unperformed test assertion | Pins + measured engine + releaseReadiness ref; field status in readiness record |
+| --qualified flag and runtime QualifiedTargets/qualifiedTargets field | Cannot truthfully fill them to install untested official release | --release flag, releaseTargets + explicit fieldValidation |
+| Old path/physical/user gating fixture assertions and docs | Now assert superseded behavior | Readiness, truthful-deferral, current-schema/install-negative tests; raw historical evidence stays |
+| Dead touched constants/imports/qualification-only topology validation code | No longer a live release prerequisite | Later field-testing plan/owner, not dormant policy code |
+No changes to immutable-retry/signing mechanisms, no old/new paths in parallel. Old records/CLI flags fail current admission; no conversion of old physical claims or legacy flags to release permission.
 
 ## Persisted Data / State Transition Decision
-Repository DESIGN.md current-record/admission convention was read before this decision; representative writers/readers are setup.Release/VerifyRelease and release.py/lock. No migration inference from field changes.
-
-| Stored subject | Evidence / direct-use constraints | Decision |
+Repository DESIGN.md was read as the migration authority; E20/E22 trace actual writers/readers.
+| Subject / volume | Current semantics / constraints | Decision / rationale |
 | --- | --- | --- |
-| Installed host state/binaries, source/mount identity | Existing paths/schema/consent unchanged; no active/pending transformation | **Not Affected**. No deployment/upgrade/migration in this ticket |
-| Current release lock | One committed unqualified record, no published tag; engine null, targets/evidence empty | **Discard or Rebuild** for qualification fields from actual new candidate/evidence. Preserve recipe pins, historical raw evidence and original lock in Git; never reuse an old Pass. New validator accepts one current shape only |
-| Candidate/generated release metadata/build products | Disposable derived outputs; exact source/recipe is authority but rebuilding invalidates candidate evidence | **Discard or Rebuild** only as a new identified candidate, never under prior qualification. Do not delete historical/unowned retained artifacts |
-| Tags/releases/assets/registry | Initial inventory empty; later externally visible identity is append-only | **Directly Usable — No Migration**. Read exact new-state identity and reconcile; never rewrite a published tag/asset. No preexisting public formats require compatibility reader |
-| GitHub secrets | Six named entries, private values unreadable through API | **Directly Usable — No Migration**; normal authorized secret provisioning. No repo persistence of private values |
+| One committed empty release-lock | package/base pins, null engine, qualification empty; no public releases | **Discard or Rebuild** only control fields into current shape; retain pins and measured engine identity. History preserved in Git, readiness defaults null until actual evidence |
+| Generated embedded/loose release.json and CI candidates | release.py/candidate writes; cmd main/VerifyRelease reads; installer stores informational copy under version directory | **Discard or Rebuild** new candidate from reviewed source. Old API002 retained untouched for history, never passed to new promotion. No published-client compatibility obligation and no installed-copy scan/migration |
+| Tracked development release.json stub | Non-installable development metadata, not release proof | Update minimal schema/status defaults if needed; keep empty targets/no measured engine, never commit generated release assets |
+| Root-owned attachment/hosted/pending records, actual user files/mounts | Release is not persisted inside them; service uses only engine packages/image | **Not Affected**; no migration/startup gate or rewrite |
+| Tags/releases/assets | Empty now; later immutable published identity | **Directly Usable — No Migration** using existing reconciliation; never overwrite |
+| Secrets, historical evidence and owned retained old candidate | Provisioned / required historical proof | **Directly Usable — No Migration**; preserve, no re-export or cleanup by SD |
 
-No migration plan or startup migration gate is applicable. New release-control records live in packaging/ticket evidence, not runtime host state.
+No migration plan is warranted. ReleaseReadiness refs must use durable repo paths not ticket paths that move during archival; no new state daemon/database.
 
-## Data-Flow Spines / Narratives
-| Spine | Scope / trigger → outcome | Governing owner | Narrative |
-| --- | --- | --- | --- |
-| DS1 | Primary: explicit build-only dispatch → retained candidate | Workflow scheduling + candidate owner | Resolve source SHA once, validate normal version, build measured engine pair/OCI once and native CLI matrix, aggregate immutable identity/manifest/checksums and CI artifact references. No tag, release, registry push or qualification write |
-| DS2 | Primary: candidate available → audited qualified inputs | API/E2E evidence; Delivery qualification acceptance; packaging validator | Verify actual artifacts, test supported modes on scoped hosts, record exact source/engine/OCI and genuine user verification. Commit the reviewed qualification-only record. The validator rejects missing/stale/unsupported records; it does not create evidence |
-| DS3 | Primary: authorized publish dispatch → public receipt | Publication owner; Delivery execution | Pin reviewed main, download exact candidate, validate qualification; build/sign final payload before any public write. Retain the complete payload; reconcile exact tag/draft, promote OCI, verify anonymous availability, publish draft, confirm assets/downloads and report cleanup |
-| DS4 | Primary: user downloads → installed CLI/version | Existing installer and CLI VerifyRelease | Download pinned version/checksums/manifest/archive, validate before installation, invoke explicit version for smoke. No automatic setup on a live user host. Actual storage use remains the existing explicit CLI consent path |
-| DS5 | Bounded local within DS3: interrupted publication → same-input resume or refusal | Publication owner | Observe tag, draft/release, assets, image and bound payload identity on every retry; never use a local success flag alone. Fill only missing exact outputs, or stop on conflict/expiry. Preserve failed attempts |
-
-Main-line subjects: **Candidate**, **Qualification**, **Publication**, **Release Manifest**. All names have distinct meanings; no generic context bag. Returned status/evidence is a workflow result/report, not a new callback/event subsystem. Public facade `packaging/release.py` remains a thin command entrypoint; release control modules govern their respective invariants.
-
-## Workflow And Identity Decisions
-### D1 — Trigger, source and version
-Retain one `workflow_dispatch` release workflow with `release_tag`, `publish` (default false) and `candidate_run_id` (required only for publish). Add explicit `source_sha` full commit input, defaulting to the selected dispatch ref resolved once; show the resolved SHA in summary. Candidate may run on the reviewed task ref. Publish must execute the reviewed workflow on **main** and use its exact checked-out current main SHA; reject arbitrary branch publication. Never interpolate inputs directly into shell source; pass validated environment/arguments.
-
-Normal-version grammar: `^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$`. First release v0.1.0; no prerelease or build suffix. Version is NFS-owned, not a desktop package file. An internal candidate can carry v0.1.0 metadata while clearly unqualified and unpublished.
-
-No tag-push or release-event recursion: the same authorized workflow creates its tag/draft and publishes. This avoids requiring a PAT just to trigger another workflow from GITHUB_TOKEN. Publication serialized under a single repository release concurrency group with cancellation disabled; candidates may run independently. Native matrix fail-fast false preserves useful failures but **all** required jobs must succeed. Explicit needs/result guards distinguish legitimate mode skips from failed/cancelled ancestors.
-
-### D2 — Candidate identity and retention
-Use an aggregated `nfs-release-candidate` CI artifact containing a small candidate record and all required engine packages/source/inventories, OCI layout/archive, native build artifacts and hashes. Native per-job artifacts may remain execution intermediates. Retention explicitly90days subject to repository limits; record actual expiry. Retain through qualification/publication. Missing artifact means new candidate + affected qualification, not silent rebuild.
-
-Candidate identity binds repository, workflow path, run ID/attempt, source commit, normal version, production source hash, exact engine manifest digest, OCI index and platform child digests, toolchain/build inputs, named members' sizes/SHA256 in its immutable content record. After upload, Actions supplies an external envelope with artifact ID, wrapper digest and expiry; this is resolved by run/attempt and recorded in qualification, never embedded into the artifact that would have to hash itself. Artifact-service digest is recorded alongside payload hashes, not substituted for them. Reject missing/duplicate/unsafe paths, unexpected platforms, malformed sizes, hash mismatch or archive traversal. Verify workflow run event/conclusion/source and artifact identity with Actions API, not a user-written manifest alone. Rerun artifacts must not be mistaken for the qualified attempt.
-
-Reuse engine/manifest.py verification, source inventory and main/VFS pair limits. Build the multi-arch image once from those pairs; runtime apt dependencies make a later rebuild non-equivalent even if .deb bytes match. Keep OCI index **and all children**, no recompression/manifest conversion. Candidate jobs have no contents/packages write permissions or Mac secrets.
-
-Source digest includes all release-executing code under the new packaging/release_support folder and packaging/sign-macos.sh, current workflow, existing installer/engine/runtime/licensing inputs and measured engine identities. Exclude only generated metadata, qualification fields/evidence, tests, cache and built artifacts as documented. Tests ensure a change to any new release logic changes the digest. Image digest is a separate mandatory identity, avoiding a build/hash circular dependency.
-
-### D3 — Qualification, current source and Docker first-use
-Retain release-lock fields for package pins, engine, qualifiedSourceHash, qualifiedTargets, physicalEvidence and userVerified; add one `qualification` reference (relative regular file + SHA256) to a structured record. Empty default fails. Require **exactly the approved four-target set** for this release, no automatic subset filtering.
-
-Qualification record binds candidate identity, source hash/engine/OCI and explicit target/mode rows. Each row names actual OS/version/architecture/filesystem/hosting backend, physical versus virtual topology, independently identified client/server kernels/hosts, executed case outcomes and bounded in-repo raw evidence paths/hashes. Mac-native, Linux-native and Linux-Docker modes must be covered on their advertised architecture/reference; Docker-Linux alone does not cover native Linux. At least the current three physical evidence categories remain, not merely any three files. Reject duplicate/missing/failed/inapplicable rows. User verification has a separately recorded actual user statement/check and exact candidate scope; consent to publish or configure credentials is not verification. Do not manufacture `userVerified=true`.
-
-API owns executable coverage and semantic evidence; Delivery judges sufficiency and updates qualification from that evidence. A schema can check consistency, not prove a physical host exists. Sanitized public receipts retain meaningful identity without credentials/IP/account email. No full raw secret-bearing logs committed.
-
-Docker first-use requires a registry pull (`EnsureEngine`), so `docker load` alone is insufficient. API's **test-owned isolated registry** serves the exact candidate multi-arch OCI digest over a reachable scoped transport. A qualification-only generated release.json may substitute only that registry hostname/reference while retaining the same digest, version, source hash and exact package bytes; qualifiedTargets remains empty. Record the metadata-only difference and generated binary hashes. Direct CLI invocation on test hosts exercises current product paths; it does not claim public-installer success. No runtime override flag, live daemon reconfiguration, host DNS/credential workaround or production-code patch. Prefer TLS; any necessary isolated test daemon trust configuration belongs only to owned resources and is disclosed. If no suitable owned registry/hosts exist, report that precise prerequisite.
-
-Final release metadata uses canonical `ghcr.io/autobyteus/autobyteus-nfs@sha256:...` and audited qualifiedTargets. Final CLIs are built from **the same production-source hash and exact engine packages**; qualification metadata and Mac signature change executable bytes, so never claim candidate/final binary byte equality. Record both. Final native version/manifest/signature/download checks close those deltas; canonical anonymous image pull is also mandatory before release exposure.
-
-Qualification-only commits and reviewed docs/tests can follow candidate commit without a rebuild if production digest and engine/OCI identities remain exact. Record candidate commit and final tag commit separately, prove ancestry and inspect the intervening diff. Any source/hash/input change requires a new candidate and affected qualification. Do not put the yet-unknown final tag commit inside a self-referential committed record.
-
-### D4 — Final payload, signing and preflight
-Publish preflight downloads the identified successful candidate and validates its full record and qualified lock **before any remote mutation**. Check required credentials for missing values and `REPLACE_ME_BEFORE_RELEASE`; do not log values. Repository-secret metadata names alone never qualify signing.
-
-Build the final native matrix using pinned Go1.27.2 and unchanged per-architecture engine bundle. Run native race/vet/build/version and packaging boundary checks. Hosted macOS15 compiles/tests; it is **not** macOS26 runtime hosting proof. Installed binary limit100MiB and engine member40MiB remain. Each archive is exactly LICENSE, THIRD_PARTY_NOTICES, autobyteus-nfs and release.json. Names `autobyteus-nfs-0.1.0-<darwin|linux>-<arm64|amd64>.tar.gz` omit v as the current installer expects.
-
-Only publication-mode Mac jobs receive the six named secrets. Decode .p12 to0600 owned runner scratch; import into a separate ephemeral keychain with a random ephemeral keychain password, not a persistent login keychain. Validate intended Developer ID identity/team, sign with hardened runtime + secure timestamp, verify signature, submit ZIP carrier with notarytool --wait and JSON output; require **status Accepted** and retain submission ID plus sanitized result/log. Restore any changed search-list state and delete only owned keychain/certificate/temporary credential files on every exit. No credential/base64/xtrace upload. No unsigned fallback. Standalone binaries cannot have tickets stapled; do not report a fictitious stapling success or promise offline first-use Gatekeeper validation. Verify the downloaded signature/notarization behavior on supported owned Mac hosts.
-
-Aggregate final payload as retained CI artifact **before remote writes**: four archives, versioned installer, runtime manifest, engine manifest, corresponding complete modified source/build inventories/notices, release-provenance.json, reviewed release notes, SHA256SUMS-nfs. Checksum every distributed payload file except the checksum file itself (not only tar.gz). Provenance binds candidate/qualified/tag-source/OCI/signing inputs and payload members without self-hashing cycles: manifest lists product members, aggregate receipt adds provenance/checksum hashes. No credentials in public provenance.
-
-### D5 — Publication, visibility and retries
-One write-capable publication job starts only after preflight and every native/signing job succeeds. Default workflow permissions are contents/actions read; only this job gains contents/packages write. Pinned/reviewed action implementations, no PR secrets or pull_request_target execution. Validate repository identity and actual fresh remote main against the approved publication SHA immediately before first write; stale main fails for reintegration, not force push.
-
-Normal ordering:
-1. Retain final payload identity (run/attempt/artifact ID/SHA) and verify all inputs again.
-2. Create an annotated version tag at exact SHA without force; its annotation binds the pre-write payload artifact ID, run/attempt and payload digest so a tag-only interrupted attempt remains recoverable. If it exists require exact peeled commit and annotation identity. Never rely on gh's default-tip implicit tag creation.
-3. Create **draft** GitHub release using --verify-tag and explicit normal/non-prerelease metadata, with approved release notes and bound payload identity. Existing unrelated draft/tag is a conflict.
-4. Upload complete final payload to draft, validating existing same-name assets by bytes/hash; only missing exact assets can be added, never --clobber. Re-download draft assets and verify full set/integrity.
-5. Promote retained OCI using `skopeo copy --all --preserve-digests`; verify registry index and all child digests against the candidate, no rebuild. Refuse a conflicting version tag. Record Docker package version/digest and source repository association.
-6. Confirm the package is public and canonical digest anonymously fetchable on both Linux architectures; a new GHCR package defaults private even for a public repo. Delivery may set this **specific package** public under authorized public release scope using available normal administration; unavailable permission is a named external blocker, not a broad org/token escalation. Keep release draft until resolved.
-7. Publish the fully verified draft with prerelease=false, mark latest for this first release, verify tag/assets/image and perform public installer/download smoke. Record real release URL and result.
-
-Non-atomicity is explicit. Once tag/image is visible a later failure cannot be described as no publication effects. Never delete/move a published tag/image to simulate rollback. Retry uses observed remote state plus the **retained same final payload**, not freshly re-signed/repacked bytes (timestamps differ). If any remote stage exists, resolve its bound publication artifact identity before building again; reuse that retained artifact for same-input resume. If tag alone exists after interruption, require exact tag SHA and locate the successful pre-write payload for the recorded attempt; no guessing by newest artifact. Missing/ambiguous payload or conflicting assets blocks automatic resume. Completed identical release is idempotent read/verify success; it is not overwritten. A genuinely different candidate/output needs a new authorized version, not deletion/clobber.
-
-### D6 — Installer and human guidance
-Keep versioned HTTPS URLs and current manifest equality. Do not switch to an unsigned Homebrew/source-build requirement or latest URL. Strict normal tag substitution is done by the same release identity owner. Verify checksums for downloaded manifest/archive before execution; verify archive membership, regular files, bounded size, target and embedded metadata before install. Preserve fail-without-setup behavior on corrupt/unsupported inputs. Shell installer is an inspectable downloader, not a new signed .pkg/app; only its separately signed/notarized native payload runs.
-
-Release notes/README show supported OS floors and architectures, exact curl download + inspect + shell invocation, an explicit `version` smoke, normal create/connect consent instructions and checksum guidance. Distinguish installing the CLI in an owned HOME from creating a storage service under admin consent. Do not advertise success before actual publication or bypass Gatekeeper/quarantine. No compiler or Homebrew installation required; platform system/Docker prerequisites are still described truthfully.
-
-## Ownership, Dependencies And Interfaces
-| Boundary / owner | Owns / allowed callers | Forbidden bypass |
+## Data-Flow Spines / Narratives / Actors
+| ID / scope | Arrow chain and narrative | Governing owner / subjects |
 | --- | --- | --- |
-| release.py facade → release_support | Typed CLI dispatch; compatibility of existing source-hash/metadata command spelling, not old publication behavior | Shell reimplements version/source/qualification rules |
-| candidate owner | Candidate compound identity + file verification; workflow calls it after builds/downloads | Trust run ID alone, loose latest-artifact lookup or arbitrary artifact manifest |
-| qualification owner | Lock/record validation and source-engine-target applicability; publisher calls before writes | Treat three files, secret presence or user publication consent as qualification |
-| publication owner | Stage ordering/remote identity reconciliation; sole writer entrypoint | Image push during build, direct clobber upload, force tag, silent partial completion |
-| engine/manifest.py | Exact pair/source/inventory validation/embedding; existing owner reused | Duplicated package decoder or unqualified rebuild on promotion |
-| installer / CLI VerifyRelease | Public install admission / embedded runtime metadata | Packaging pipeline changes runtime host safety or grants app coupling |
-| API / Delivery | Real checks, evidence judgement, approved finalization/publication/cleanup | SD/reviewer fabricates runtime or user-test receipts |
+| DS1 Primary | Explicit build-only dispatch → fixed reviewed checkout → measured engine/OCI + native checks/build → new retained candidate/envelope. All four jobs succeed; no release permission/secret/registry push | Existing workflow/candidate; CandidateIdentity |
+| DS2 Primary | Verified current candidate → API affected checks → Delivery evidence audit + release-first user authority/plan → readiness record/lock → read-only publisher preflight. Deferred field/user tests are explicit dispositions, not missing successes | readiness.py; ReleaseReadiness, API/Delivery evidence owners |
+| DS3 Primary | Reviewed main + readiness → final native metadata/signing → retained payload → exact annotated tag/draft/assets → exact OCI/public access → normal public release/download receipt. Final bytes differ by metadata/signatures, source/engine/OCI stay bound | payload.py/publication.py/signing; PublicationIdentity |
+| DS4 Primary | Versioned download → checksums/bounded exact archive/equal manifest → schema/target/deferred-state admission → notice → owned CLI install/version. Actual setup still requires unchanged host checks/admin/storage consent | Existing install.sh/VerifyRelease; ReleaseManifest |
+| DS5 Bounded within DS3 | Observe remote state → resolve annotation-bound original payload → verify/reconcile missing exact stages or refuse conflict/expiry. No new signatures/rebuild for retry | Existing publication owner |
+Return/event spine: **N/A**, no asynchronous product subsystem added. Follow-up custody is a human/task handoff outside runtime, not a callback or release-blocking worker.
 
-Dependencies: workflow → release facade → cohesive release_support modules; those reuse engine manifest and invoke subprocess/API adapters at their effect boundary. Go runtime never imports/queries release-control evidence or GitHub. No new external Python dependency/framework. Explicit subprocess argv, bounded inputs and structured JSON; no eval of artifact content.
+## Contract Decisions
+### D1 — Singular readiness record and effect boundary
+Rename qualification.py → `packaging/release_support/readiness.py`, retaining bounded ref/hash checks and exact candidate/source/engine/OCI/ancestry checks while replacing physical/user requirement validation. Do not merely weaken `userVerified` to optional or add `--skip-tests`.
 
-| Interface | Identity / result | Boundary check |
+New exact lock shape: `ubuntuBaseImage`, `ubuntuPackages`, `engine`, `releaseReadiness` (null or `{path,sha256}`), `note`. Defaults null/engine-null refuse publishing. Engine manifest `lock` writes the measured engine and clears releaseReadiness; no old qualification fields emitted. Readiness publication validation requires all four targets in canonical order. Source hash remains based on pins + measured engine + every production file, never on mutable evidence refs.
+
+Use durable `packaging/releases/v0.1.0/readiness.json` and adjacent reviewed/sanitized evidence/notes/plan snapshots, generated by Delivery from real records after new API coverage. References may point to other stable in-repo evidence files but **not moving tickets/in-progress paths**. A signed public receipt must survive ticket archival and same-payload resume. Do not commit synthetic fixtures or populate readiness during this SD/design round.
+
+Readiness exact fields:
+- `schema:1`, `kind:"release-first"`, `version`, `targets` (exact four), `candidate` (existing actual `{recordSha256,envelope}`), `sourceHash`, `engineManifestSha256`, `oci`.
+- `authorization`: `{kind:"publish-before-field-testing", requirementsRevision:"R3/SR004", version, evidence:{path,sha256}}`. Version must equal candidate/requested release. Evidence is the genuine user direction, not a test statement. Human review confirms meaning; parser verifies identity, not truth.
+- `checks`: exactly `native` and `releaseControls`; each `{status:"passed", evidence:{path,sha256}}`, with actual current API/CI records. Candidate envelope remains validated by actual Actions API and full artifact traversal. Reject failed/skipped/not-tested claims here; field deferrals belong only below. These are prepublication checks, not a fabricated overall historical API Pass.
+- `fieldValidation`: exactly `{filesystem:"deferred", user:"deferred"}` for this release-first contract. No supported `passed` shortcut in this change, no independent topology rows or executed-user placeholders.
+- `postpublicationPlan`: `{path,sha256}` to the approved nonempty scoped plan and named custody. `review`: existing `{candidateCommit,sourceHash,evidence}` covering actual reviewed source and any intervening diff. `releaseNotes`: hashed reviewed Markdown.
+
+Keep exact shape/type/duplicate-key/no-traversal/regular-file/bounds/hash checks; candidate metadata/run/workflow/attempt/current source/engine/OCI equality and ancestor checks remain. Release readiness cannot be inferred from null lock, candidate success alone or arbitrary consent text. Default empty readiness refuses `--check-publish`; explicit audited R3 deferred record passes the intended prerequisite without any field/user Pass.
+
+Update release.py, publication.prepare/bind/publish and payload.assemble/verify to use this one owner. Preflight productionHash comes from validated readiness/candidate sourceHash, not removed qualifiedSourceHash. Update provenance to `schema:2`, `releaseReadiness` ref plus explicit `fieldValidation`, replacing qualification; keep all other immutable members/signing/source/OCI bindings. Verify emitted disclosure against readiness during payload verification and same-payload resume. Add a deterministic disclosure paragraph to the public release body/notes from validated state, so omission of that paragraph cannot hide deferral. Preserve reviewed prose as well; do not put credentials/private access details in public evidence or notes.
+
+### D2 — Runtime distribution admission without a field claim
+Current runtime release metadata becomes schema2 with `schema`, `version`, `sourceHash`, `ubuntuPackages`, `engineImage`, `engine` (existing optional development omission), `releaseTargets`, `fieldValidation`. Explicit named Go field type for the two validation statuses; not a generic map carrying arbitrary policy. Replace QualifiedTargets; do not retain an alias.
+
+Candidate metadata: schema2, releaseTargets=[], fieldValidation={filesystem:deferred,user:deferred}; candidate version can still run for build smoke, but public installer admission refuses it. Final metadata: same source/engine/OCI/version, releaseTargets exactly four only after readiness validation, same truthful deferred statuses. `--release --candidate <dir>` replaces --qualified; final canonical image digest remains required. Candidate-only isolated registry alias capability keeps the exact OCI/source invariant and empty targets; not part of this prepublication physical test campaign.
+
+`VerifyRelease` remains bounded/regular-file, validates the current release schema locally (including no legacy/unknown claim fields), exact typed downloaded/embedded equality including engine identity/status, and valid release target membership for runtime GOOS/GOARCH. Require nonempty valid unique target set and exactly supported deferred field status; legacy qualifiedTargets-only, missing status/schema, unknown/passed status and mismatched engine/source still refuse. Local strict release decoding must not change config.Decode's installed-state additive-field policy. No fallback or installed-state migration.
+
+After successful verify-release, the existing CLI dispatch emits a concise stderr notice: this official release's shared-filesystem/physical and user testing is deferred; distribution/signature checks are not field qualification. Keep `version` stdout exact for existing automation. No extra approval prompt/flag or gating on a newly installed host's test status. Installer still calls verify-release before writes; it naturally displays the notice, then installs and invokes explicit `version` for smoke. Fix misleading “qualified version” errors to “versioned release”; keep all archive/checksum/member/size/container/OS protections. Normal create/connect remains explicit consent; this task does not invoke it on live user storage.
+
+### D3 — Candidate invalidation, signing and publication retained
+All changed source/control/workflow/installer/runtime inputs remain hashed. API002 run39113335636/1, artifact12131531399 and retained bytes are **historical and stale for the replacement source**. New reviewed source requires a new successful candidate; no editing old records, self-declared same source or removing files from source_hash to save a run. Use the existing complete engine-build/OCI path for that candidate; pin/source recipe unchanged. After candidate creation, only reviewed readiness/docs/test-only descendants with equal production hash/engine/OCI can advance to final main without another candidate build.
+
+Keep existing manual candidate/publish dispatch, false default, native four-runner matrix and cancellation guards, publication-on-exact-main requirement, least privileges, no automatic tag recursion. All six signing secrets remain provisioned; actual import, selected Developer ID/team, hardened-runtime/timestamp codesign, explicit Accepted notary and sanitized receipts/always-cleanup remain mandatory for both Mac architectures. No new user credential request absent real validation error. macOS15 hosted native tests are not macOS26 field qualification.
+
+Final payload before writes remains four exact four-member archives, installer, runtime/engine manifests, full modified source/inventories/notices/licenses, reviewed truthful notes, updated provenance and complete checksums. Signing/metadata change final binary hashes; attribute them, do not assert equality to unsigned candidate. At minimum inspect final per-target metadata/version and signatures from actual final artifacts; anonymous public asset hashes and canonical OCI index/children must match. Delivery's owned-HOME public install/version smoke and native Mac signature/download verification remain, but no physical/shared-filesystem test or end-user test is smuggled back into publication readiness.
+
+Unchanged remote order: retain payload → nonforce annotated exact-SHA tag bound to payload artifact/run/attempt/hash → exact normal draft → add only missing byte-equal assets and verify → skopeo --all --preserve-digests exact OCI → confirm specific package public/anonymous child access → publish non-prerelease/latest → public download checks. Never clobber/delete/move tags/assets/images, rebuild or re-sign a bound retry. Use a fresh same-input manual dispatch to inspect remote state; no failed-job-only replay with stale preflight. Missing/expired/conflicting payload/access fails precisely, leaves honest partial effects and task open. No arbitrary broad token/org change.
+
+### D4 — Truthful docs, validation and follow-up
+Root/packaging RELEASE, README, TESTING and engine README must consistently say: first official normal v0.1.0 is authorized **before** field/user validation; current source/native/release-control/signing/integrity/download gates remain. Four downloadable build targets and unchanged intended host floors are not field-qualified support. Explicit deferred statement in README/notes/provenance/installer; no permanent “unavailable” claim after successful publication, and no premature working-link claim before it.
+
+Field tests from API002 Q01–Q06/U01 move to explicit postpublication disposition in the **new** API ledger/revision. Historical API001 Fail/API002 Blocked and raw evidence stay unchanged. API judges new changed release-boundary coverage under R3; no reused percentage/blanket Pass, no old application or full filesystem campaign. Delivery may finalize this release once current required gates and follow-up custody are complete; deferred field testing does not keep this release task open. Follow-up reports any discovered defect and uses a new approved fix-forward version, never mutating v0.1.0.
+
+## Ownership / Interfaces / Dependency Rules
+| Boundary | Owner / input → output | Forbidden alternate |
 | --- | --- | --- |
-| candidate assemble/verify | Repo+workflow+run+attempt+commit+version+source+engine+OCI; named artifact hashes | Singular, explicit; no overloaded tag/run selector |
-| release.py --source-hash / metadata | Current production inputs + optional measured engine; existing runtime Release shape | Singular; same common implementation, no second digest algorithm |
-| --check-publish | Current lock + candidate + qualification record → typed readiness/error | Singular; no effect, does not mint approvals |
-| publication plan/resume | Validated final SHA/version + candidate + final payload/run identity → stage observations | Singular; missing/conflict explicit, no arbitrary shell command input |
-| installer/VerifyRelease | Versioned archive/downloaded runtime manifest == embedded Release | Existing exact target/hash admission retained |
+| release.py facade | CLI argument plumbing → candidate/readiness/payload/publication | Inline policy duplicate, --skip/--qualified compatibility |
+| readiness.py | Lock + exact candidate + bounded genuine refs → audited readiness/error | Test execution, invented approval or physical Pass |
+| candidate.py / identity.py | Existing artifact/source/native metadata identities; shared schema output | Stale record editing, excluding changed inputs from hash |
+| payload.py | Readiness + final native/signing → complete retained immutable payload | Publisher signs/rebuilds, missing deferral provenance |
+| publication.py | Validated exact payload/remote observations → existing ordered publication/receipt | Manual bypass, clobber, releasing before signing |
+| setup.Release / VerifyRelease | Current generated schema → local equality/target/claim admission | Runtime reads GitHub/readiness ledger or converts installed host state |
+| API / Delivery | Execute affected checks / judge evidence, prepare actual readiness and publish | SD/reviewer fabricates their results |
 
-## Off-Spine Concerns And Capability Reuse
-| Concern | Owner / reuse decision | Why not a second main-line owner |
+Dependencies unchanged: workflow → thin facade → cohesive release_support owners → existing engine validator/effect adapters; installer → existing CLI. Readiness reuses candidate and identity helpers, not a new policy service. Named shared values: ReleaseReadiness and ReleaseManifest have different lifecycle/claim scope; external envelope cannot be embedded into its own hash. Public runtime does not carry user statement/PM task IDs/raw test logs.
+
+## Off-Spine Concerns / Capability Reuse
+- Reuse identity bounded JSON/path/hash and engine manifest verifier; rename only qualification owner to readiness. No generic shared-utils expansion.
+- Signing/secret hygiene remains narrow existing shell capability; no policy/publication ownership there.
+- Logging/retention/cleanup remain current workflow/effect owners; preserve raw failed runs and no-secret logs.
+- Host safety owners untouched; current Go regression tests demonstrate preservation, not actual field qualification.
+- Postpublication custody stays in task/Delivery/PM artifacts, not runtime or automatic test infrastructure.
+
+## Names, Structures And Responsibility Tightening
+Names are intentionally distinct: ReleaseReadiness authorizes distribution; ReleaseManifest describes the exact binary; fieldValidation records missing field evidence, not a success bit. CandidateIdentity and PublicationIdentity retain existing separate source/run/byte meanings. Naming drift risk is addressed by removing qualifiedTargets/--qualified rather than retaining misleading aliases.
+
+Draft allocation considered letting publication.py interpret the deferred exception. Re-tightening rejects that: metadata generation, payload verification and resume also need the same invariant, so readiness.py is the one control owner. Reuse candidate.runtime_metadata for the Python output shape and setup.Release for Go's typed read boundary; no third ad-hoc serializer in shell. Shared fieldValidation fields have one meaning each and replace, rather than overlap, qualified/userVerified fields. Release target set is distribution permission; candidate inventory is actual artifact membership. Both are compared, not independently inferred. Duplicate authority fields in provenance are identity assertions checked against readiness, not editable alternative policy.
+
+Capability allocation: existing packaging control **Extend**, existing installer/CLI admission **Extend**, engine/source/signing/host owners **Reuse**, durable release evidence directory **Create** as data only (stable archive-safe path), no new runtime subsystem. Applied pattern is the existing staged immutable publication with reconciliation; the policy change does not create a rollback framework. Final responsibilities are projected below.
+
+## Target Subsystem / Folder / File Mapping
+| Paths / action | Responsibility and justification | Excluded |
 | --- | --- | --- |
-| Hash/path/version/schema parsing | release_support identity; new narrowly shared value/validation module | Avoid duplicated meanings, not a generic shared-utils bag |
-| Package/backport/source proof | Existing packaging/engine, **Reuse** | Release code coordinates, never reimplements engine family |
-| Mac signing/keychain | Narrow signing script, **Extend** existing workflow responsibility | Secrets confined to Mac step; cannot decide qualification or publish |
-| Retention/provenance/log hygiene | Candidate/publication owners, workflow uploads | Audit sidecar carries result, not authoritative fabricated Pass |
-| OS/source/consent/mount lifecycle | Existing Go owners, **Reuse unchanged** | No packaging credential/evidence coupling into runtime |
+| packaging/release_support/qualification.py → readiness.py | Replace obsolete control owner with exact readiness/ref validation | Dormant physical gating fallback |
+| packaging/release_support/{candidate,payload,publication}.py; __init__.py | Current runtime schema, readiness-consumer/provenance/notice changes; existing lifecycle boundaries | New promotion/signing engine |
+| packaging/release_support/identity.py | Existing whole-source hashing remains; focused shared schema constants only if needed | Exempt changed files or broad utility refactor |
+| packaging/release.py | --release + current metadata/check-publish dispatch | --qualified alias/bypass flag |
+| packaging/release-lock.json; packaging/engine/manifest.py | New null readiness default; clear it on measured-engine lock write | Fake populated readiness or package/backport change |
+| packaging/releases/v0.1.0/ | Durable actual readiness/approval/plan/notes/selected evidence snapshots by Delivery after validation; archive-stable | Generated binaries, credentials or synthetic results |
+| internal/setup/service.go; internal/cli/verify-release.go; internal/cli/run.go | Typed current release metadata, local strict equality/admission and successful-verification stderr notice | Host lifecycle/config-decoder changes |
+| cmd/autobyteus-nfs/release.json | Minimal tracked development stub if schema update needed; non-installable empty targets | Committed generated final metadata/assets |
+| scripts/public/nfs/install.sh | Existing verify path and correct release language; integrity preserved | User-test prompt, live setup in smoke |
+| .github/workflows/release-nfs.yml | Current flag/description and needed readiness plumbing; existing matrix/guards | New automatic trigger, early push or permissive failure handling |
+| internal/cli/{cli_test,engine_release_test}.go + focused admission tests | Actual new schema, wrong target/claim/equality refusal, notice stdout/stderr | Physical success claims |
+| scripts/tests/nfs_release_fixture.py, test_nfs_{release_records,release_publication,release_workflow,source_identity,engine_packaging,packaging,installer_fixture}.py | Update real owner consumers and controls, new false-claim/stale/readiness/engine-reset cases; preserve retry/signing coverage | Weakening tests to string-only happy paths |
+| README.md, RELEASE.md, TESTING.md, packaging/RELEASE.md, packaging/engine/README.md | R3 policy, claim boundaries, runnable instructions after publication | Historical report rewrite |
 
-## File Responsibilities And Folder Projection
-Draft allocation put scheduling in YAML and all gate/effect logic in release.py. Re-tightening separates candidate/qualification/publication subjects to keep the facade readable; one cohesive release_support folder is sufficient, not one folder per job. Shared identity types remove parallel source/version/path parsing. Runtime Release stays a distinct exact existing schema; publication provenance is not stuffed into it.
-
-| Path | Change / owner / concrete responsibility | Must not contain |
-| --- | --- | --- |
-| `.github/workflows/release-nfs.yml` | Replace orchestration; scheduling, mode/needs/concurrency, least privileges, pinned job tools, artifact plumbing | Independent policy parsers, early image publication, inline monolithic recovery logic |
-| `.github/workflows/ci.yml` | Extend affected packaging/test checks only if needed; ordinary nonpublication retained | Signing secrets/write permissions/public release trigger |
-| `packaging/release.py` | Thin existing CLI facade and metadata orchestration | Generic catch-all release engine or duplicated policy |
-| `packaging/release_support/__init__.py` | Package boundary only | Side effects at import |
-| `packaging/release_support/identity.py` | Version/source hash and bounded artifact/record identity structures | Github mutation/secret retrieval |
-| `packaging/release_support/candidate.py` | Candidate assembly/verification and retained run/artifact reconciliation | Qualification creation or publication effects |
-| `packaging/release_support/qualification.py` | Current lock/structured evidence validation, exact target/mode coverage | Invented receipts or test execution |
-| `packaging/release_support/publication.py` | Final payload/stage planning, strict remote reconciliation and promotion | Filesystem service setup or engine rebuilding |
-| `packaging/sign-macos.sh` | Narrow fail-closed credential/keychain/codesign/notary boundary with cleanup | Public upload or user data access |
-| `packaging/release-lock.json` | Current pins/engine and evidence reference; keep unqualified until accepted real receipts | Placeholders masquerading as qualified evidence |
-| `packaging/Dockerfile` | Optional source/license labels and inventory consistency only | New backend/caps/dependency policy |
-| `scripts/public/nfs/install.sh` | Normal-version/integrity consistency, preserve current bounded installation flow | Live setup in smoke, unsigned fallback, app integration |
-| `scripts/tests/test_nfs_release_workflow.py`, test_nfs_packaging.py; focused `test_nfs_release_*.py` | Durable release/installer semantic and failure controls | Claim that boolean/string fixtures are hosted/platform proof |
-| `README.md`, `RELEASE.md`, `TESTING.md`, `packaging/RELEASE.md`, engine README if affected | Single-repo normal-release/candidate/qualification/recovery/download guidance | Old beta/manual-precreate/paired extraction requirements or premature published claims |
-| Ticket-owned evidence and qualification record | API/Delivery actual receipts with relative hashed references | Private credentials or changes to finalized old archives |
-
-Folder boundary: .github is transport/scheduling; release_support is cohesive release control with explicit effect boundary (mixed control/provider justified for small packaging-only area, no service/container framework); packaging/engine retains its independent build/provenance boundary; signing is off-spine Mac capability; scripts/public is user entry; internal remains untouched runtime. Low over-split risk: four release modules by lifecycle responsibility, not one module per field/job. Implementation may choose fewer files only if those singular boundaries remain evident and testable; no parallel old/new path.
-
-Shared structure tightness: CandidateIdentity separates run attempt, source SHA, production hash and OCI digest (not interchangeable); Qualification references CandidateIdentity rather than duplicating unvalidated copies; PublicationIdentity binds final payload separately from candidate (signed bytes differ); Runtime Release retains its existing fields. One owner validates each, contradictory redundant assertions rejected. Pattern: explicit staged publication with reconciliation, not a general transaction/rollback framework.
+Folder check: release_support remains a compact cohesive control/effect group with existing owners, **Mixed justified / low over-split risk**; .github transport only; internal existing runtime/config/value owner only; packaging/releases immutable release evidence, not application persistence. No new framework/subsystem needed. Source-size/refactor check during implementation must keep these boundaries clear.
 
 ## Concrete Shapes / Compatibility Rejection
-Good: candidate index digest A → qualification A → copy --preserve-digests A → anonymous pull A → publish. Bad: same .deb pair → rebuild image B → call it qualified A.
-Good: user explicitly confirms a scoped test → hashed receipt → userVerified. Bad: “go ahead with release” → true.
-Good: draft asset exists with exact hash → reuse; different hash → conflict. Bad: upload --clobber because a retry is convenient.
+Good: releaseTargets=[four], fieldValidation={filesystem:deferred,user:deferred}, signed exact payload → install + truthful warning. Bad: qualifiedTargets=[four], userVerified=true because user said publish.
+Good: new current candidate + new API release-boundary result, old API002 remains Blocked. Bad: change old result to Pass to satisfy gate.
+Good: same annotation-bound final bytes on resume. Bad: new signature/packing bytes under existing tag.
 
-| Considered compatibility | Decision / replacement |
-| --- | --- |
-| Retain old existing-release/tag publisher alongside new create flow | Rejected; single current candidate/publication route |
-| Accept beta or infer a reduced target set for old workflow callers | Rejected; strict normal-only/four-target input |
-| Old path-count gate as fallback when structured evidence absent | Rejected; current record required, default unqualified |
-| Import old extraction qualification / use VM result for physical coverage | Rejected; historical evidence retained only as historical |
-| Backward-compatible host-state transformation | N/A; no host-state schema/reader change, existing refusal intact |
-
-Derived layering: scheduling → release identity/control → existing engine validator and bounded GitHub/registry/signing effects; public installer → Go runtime admission. No app or host-data migration layer.
+Rejected compatibility: old --qualified alias, old QualifiedTargets admission fallback, accepting old qualification schema as readiness, keeping old physical-required branch under an emergency override, or reusing old candidate under new source. No published consumers require these; use one current contract. Installed-state migration **N/A**, not touched.
 
 ## Change / Refactor Sequence
-1. Implement singular identity/source hashing and candidate/qualification schemas/tests. Keep default lock empty; never fabricate record population.
-2. Replace workflow candidate path and affected tests; create reproducible identified engine/OCI/binary artifacts on an actual hosted build-only run with no public side effects.
-3. Implement final signing/payload + publication reconciliation and failure controls, remove legacy clobber/precreate/early-push/beta behavior; reconcile docs. Validate credentials only in intended signing context, with secret hygiene.
-4. Independent source review and API testing under configured route. API establishes concrete owned physical host/registry inventory and executes qualified candidate scenarios or reports precise prerequisites. No live-user storage change.
-5. Delivery judges real evidence, records qualification/current-source relationship, integrates fresh main under --no-ff policy, revalidates affected changes. Ordinary workflow main availability may require staged source finalization before candidate/publication; source merge alone is never Task completion.
-6. Authorized publication workflow signs/prepares/reconciles/promotes/publishes; Delivery verifies actual public downloads, records URL/version/platform/commands and cleanup. If any external gate fails, preserve partial effects and keep Task open. No repeat duplicate source merge or force rollback.
+1. Implement current readiness/lock/reset and schema tests; replace old module/fields/flags atomically across callers. Keep readiness null until genuine new candidate/evidence.
+2. Implement metadata/Go installer admission and notice; update generated-development defaults/fixtures/workflow flags and all affected policy docs. Preserve engine/source/safety/signing/immutable mechanisms.
+3. Implementation local checks; configured independent source review. API updates current ledger first, executes affected current-schema/installer/release controls and new complete hosted candidate, preserves old failures and explicit deferrals. No physical-host questionnaire before publication.
+4. Delivery prepares archive-stable actual readiness/authorization/check references/notes/plan from that evidence; fresh main integration/reviewed diff under repo policy. New production changes require new candidate; evidence-only descendants do not if exact hash/engine/OCI/ancestry match.
+5. Actual authorized signed normal publication with retained gates. Verify public bytes/install/version/signature, record exact identities, follow-up custody and owned cleanup. If real signing/access/integrity gate fails, report precise blocker; no fake completion/manual bypass.
+6. Terminal receipt forwards scoped postpublication testing/fixes once to PM. No duplicate dashboard or redispatch of closed tasks.
 
 ## Validation Intent / Acceptance Coverage
-Implementation owns focused checks; API owns executable coverage and ledger; Delivery owns final publication/download evidence. These are required boundary outcomes, not fabricated test results.
-| AC | Required proof / negative controls |
+| AC | Required affected proof, not SD test results |
 | --- | --- |
-| AC001 | Actual candidate without preexisting tag/release; exact identity/artifacts; remote inventory unchanged. Wrong repo/run/attempt/source/version/expired artifact refused |
-| AC002 | Per-target/mode physical and explicit-user receipts verified against hashes/topology; reject stale/duplicate/missing/mismatched/inapplicable evidence, empty lock and publication consent used as test |
-| AC003 | Real P12 import/identity/codesign/Accepted notary, final download signature; missing/placeholder/rejected notary and cleanup-on-failure controls; no secret logs |
-| AC004 | Real normal release/tag exact SHA; no beta accepted; branch/main drift, cancelled/skipped/failed prerequisite, conflicting asset/tag/image refusal; resume at each partial stage without overwrite |
-| AC005 | Public supported-target archive/manifest/checksum and owned-HOME version install; wrong digest/target/manifest/member/link/traversal refused before installation/setup |
-| AC006 | Exact measured pair plus whole OCI index/children preserved; mutation/rebuild/expiry fails; source/inventory/notices available |
-| AC007 | Actual authorized workflow and public downloads, not only unit/YAML. Native four-platform checks distinct from supported OS physical hosting and independent client proof |
-| AC008 | NFS-only source/main identities, documentation/license review, no app coupling, preservation/owned-resource cleanup |
+| AC001 | New four-native hosted candidate with complete engine/OCI, actual run/envelope/metadata; old candidate rejected after any changed production input |
+| AC002 | Real readiness/approval/check refs; reject null, wrong version/source/engine/OCI/attempt, missing refs/plan/review, fabricated passed field/user status; valid explicit deferred contract admits preflight |
+| AC003 | Retained real Developer ID/Accepted notarization for both Mac targets; negative fixtures/cleanup; final downloaded signature identities |
+| AC004 | Gated actual normal publication + existing conflict/expiry/main-drift/cancellation/resume controls; no beta or overwrite |
+| AC005 | Native Go actual schema/equality/target refusal including legacy-only/candidate/unknown status; installer real command with isolated no-setup version, warning and exact stdout; checksum/archive negatives |
+| AC006 | Engine lock clears readiness; complete source hash covers replacements; final exact engine/OCI identity; provenance/notes deferred state and metadata differences explicit |
+| AC007 | New scoped API evidence, actual publication/public downloads; archived historical Blocked untouched and deferred plan named, no full filesystem prerequisite |
+| AC008 | Guides/README/notes consistent with R3, licenses/other-owner preservation, archive-stable evidence, current-main finalization and own cleanup |
 
-Required realistic storage validation derives existing supported behavior: create/connect and reciprocal exact bytes, directory operations/visibility, permissions/locks/Git, safe detach/refusal/preservation, restart/reconnect/private-state on actual candidate and supported mode/topology. API must define the complete applicable ledger from current source and existing requirements; no blanket carry of previous task's passes. Unit race/vet, Python/Bash, actionlint and mutation/adversarial controls support but do not replace runtime/hosted/publication evidence.
+Native Go race/vet/build/version and Python affected suites, actionlint/Bash and actual Bash3.2 workflow regression remain proportionate. Mutants should detect removed readiness/source checks, false field Pass or accepted legacy targets; synthetic records cannot enter real readiness. The actual newly executed scope determines API confidence, not a preassigned Pass/percentage.
 
-## Tradeoffs, Risks And Implementation Guidance
-- Manual candidate/publish dispatch is deliberate: infrequent normal releases, explicit authorization, no accidental main/tag publish. No public beta does not remove internal candidates.
-- Exact image promotion costs artifact storage but prevents apt drift. Retention/registry digest support must be proved; fallback rebuild is forbidden.
-- Current four-target physical/host requirements are materially stronger than hosted build availability. Test resources remain unknown; report exact missing target/mode, not a generic “needs testing” or silent subset.
-- As of E18 all six signing entries are populated. User entered app/export passwords; the selected Developer ID identity was exported into an owned private folder, encoded in memory and uploaded via encrypted GitHub secret administration. The temporary export was removed; original Keychain identity untouched. Actual P12/password pairing, import, signing and notarization remain unvalidated. No further private input is currently requested; no credential validity assumed.
-- GHCR visibility may need normal package-admin action after first push. Report partial image stage and keep release draft if anonymous availability fails.
-- Checksums prove payload consistency, not resistance to a compromised publisher. Notary acceptance is not filesystem qualification. No new security promise, sandbox/service or paid dependency is introduced.
-- Classification remains Large/High even if runtime Go files remain unchanged. Architecture review is requested on this completed design under fresh routing rules. Review must not reopen settled normal-only scope or turn execution prerequisites into a new product questionnaire.
+## Tradeoffs / Risks / Guidance
+Publishing before field tests is the user's explicit tradeoff, not evidence of reliability. Notices and later tests reduce misunderstanding, not runtime risk. This recovery must not turn simple release-first into a multi-policy platform: implement one explicit current contract and reuse existing owners. Secrets are provisioned; test in intended signing jobs, never print/export again. No SD production code/test/CI/publication action. Once completed, classify Large/High and route through fresh rules for the changed design only; downstream review should focus on this delta and retained invariants, not restart settled product choices.

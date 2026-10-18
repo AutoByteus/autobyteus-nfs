@@ -1,115 +1,99 @@
 # Requirements — First NFS release
 
-## Document Status
-- **Approved — R2 / SR-002**, normal releases only. User explicitly selected removal of beta; Solution Designer approves the aligned requirements within the assigned direction, user informed in conversation2026-10-18. Architecture may proceed; implementation still needs completed design/applicable review.
-- Package: `nfs-first-release`; Task `autobyteus-nfs-3` / `project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5`; Project `project_6416db5b-926a-4865-8705-d8ebb2425780`.
-- Requested by `/project_task_manager`, run `project_task_manager_a5f6d9d306e54970bafdad895bdf731d`; owner Solution Designer; date2026-10-18.
-- User direction via PM: “we should ... enable the release ... improve it to enable release ... if you look at the SuperRapro project, RCI also do the release ... make the NFS project also do release.” Actual publication is authorized when readiness is established; this does not establish qualification or user-test evidence.
-- Release basis: **v0.1.0** as the first normal release; thereafter strict `vMAJOR.MINOR.PATCH`, no beta/prerelease channel. Preserve the current four target tuples: native macOS26+ and Ubuntu24.04, ARM64/x64, with Docker-Linux storage engine. No target is silently dropped or marked qualified. No Product/UI supplement.
-- Approval reference: user2026-10-18, “I will directly drop the beta release approach. I will just use the normal release.” SD notification: “NFS will use normal versioned releases, starting with v0.1.0, with no beta channel” and retained macOS/Ubuntu scope. This approves intent, not a user test or completed qualification. Behavior-defining supplement: none.
-- Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`; branch `codex/nfs-first-release`; fresh base `origin/main`7e375984be2bea7a4d536e43cc59d6bc2b116870; finalization `origin/main`.
+## Document Status / Approval
+- **Approved — R3 / SR-004**, 2026-10-18. Supersedes R2/SR002 only for publication/testing sequence and the related distribution-admission claim. User explicitly approved publishing the official signed release first, then testing and fixing forward. Solution Designer approves the aligned details within that direction; no outstanding Needs user decision.
+- Package `nfs-first-release`; Task `autobyteus-nfs-3` / `project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5`; Project `project_6416db5b-926a-4865-8705-d8ebb2425780`.
+- Requested by `/project_task_manager`, run `project_task_manager_a5f6d9d306e54970bafdad895bdf731d`; owner Solution Designer.
+- Original request: enable independent end-to-end NFS release automation and actually publish the first downloadable release. User retained normal-only release direction: “I will directly drop the beta release approach. I will just use the normal release.”
+- **Controlling new approval:** “please publish first, then we could test. and if we found problem, then we fix”; “create one official signed release first. please”. Exact durable source: `delivery-evidence/dr-003/user-publish-first-direction.json`, received from Delivery after it explained the unavailable independent/physical hosts. This is sequencing/publication authorization, **not** an executed-user-test receipt.
+- First **v0.1.0**, normal/non-prerelease, four build/distribution targets `darwin-amd64`, `darwin-arm64`, `linux-amd64`, `linux-arm64`. Intended host floors remain macOS26+/APFS and Ubuntu24.04/ext4, with native Mac/Linux and Docker-on-Linux storage modes. Build availability does not assert field-qualified support.
+- Approval details and scoped deferred-test supplement: `approval-record-sr004.md`, `postpublication-testing-plan.md`. SD notification in this conversation: publish-first gates will replace physical/user prerequisites; signing/integrity/host protections remain, deferred tests are not passed.
+- Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`; intake HEAD `a5f57097578f9503eff0beb120dbc9e33e194eef`, integration target `origin/main`, last Delivery-refreshed base `7e375984be2bea7a4d536e43cc59d6bc2b116870`. Fresh fetch/integration remains Delivery-owned. Canonical checkout/PM boards/old archives are not authoring workspaces.
 
 ## Problem And Desired Outcome
-The public NFS repository has no tags/releases or release-workflow runs. Its ordinary CI checks native code without downloadable executable assets. Its manual release workflow assumes an existing tag/release and has no currently qualified targets. Users cannot complete the intended public download/install journey.
+The implemented release path can build candidates but currently prevents publication and installer admission without independent physical and executed-user qualification. The first complete candidate succeeded, yet API002 remained Blocked73.57 because assigned physical/independent test hosts were absent. GitHub has no public release at this recovery intake.
 
-Deliver a repeatable standalone CI-driven release journey, from a reviewed version/candidate through qualification and authorized publication to verified public downloads/install instructions. Actual first release, not YAML alone, is required for Task completion. Concrete external blockers keep the Task open. Prior extraction no-release instructions must be reconciled with this explicit follow-up, not treated as a permanent prohibition.
+Publish a real official signed normal v0.1.0 through the reviewed workflow after current-source build/release-control/signing/integrity checks. Mark shared-filesystem/physical/user testing **Deferred — not executed for this release**, retain specific follow-up custody, test after publication and fix forward. Do not call build success filesystem qualification. Actual downloadable usable assets/install instructions, finalization and owned cleanup remain required; a YAML-only or build-only result is not done. External signing, integrity, repository or distribution-access blockers remain real blockers.
 
 ## Current, Desired And Preserved Behavior
-| ID | Kind / scenarios | Current (evidence) | Desired | Preserve |
+| ID | Scenarios | Current evidence | Desired | Preserve |
 | --- | --- | --- | --- | --- |
-| BEH001 | Operational SCN001 | Developer CI runs native checks; release build-only needs existing tag (E03) | Maintainer prepares a versioned candidate without hand-making a public release; receives usable, traceable non-public candidate artifacts | Ordinary push/PR never authorizes publication; candidate is not qualified merely by build |
-| BEH002 | Contract SCN002/005 | Empty qualification; source/engine/physical/user/signing gates (E04) | Current candidate has explicit target/mode evidence and truthful readiness before publication | Required evidence, engine identity, exact source, Mac signing/notarization; no invented Pass |
-| BEH003 | Operational SCN003/006 | Existing-release upload only; image can publish before Mac signing completes; clobber upload (E03) | Authorized version completes tag/release/assets/notes workflow, with clear staged/failed/partial/success outcomes | No moved published tags, no substituted qualified engine, no accidental competing-asset overwrite |
-| BEH004 | User SCN004/005 | Placeholder installer refuses; qualified target absent; four-member archive/checksum/manifest guards (E05) | User downloads supported platform assets and follows exact versioned install/run guidance | Integrity checks, bounded archive/matching embedded metadata, no compiler/PPA requirement, unsupported-target refusal |
-| BEH005 | Contract SCN002/004/007 | Host-only source/mount setup, data preservation, private state, coarse private-host trust (E06) | Behavior unchanged in release artifacts | App independence; consent; incompatible predecessor-state refusal; no live-user setup/upgrade by this task |
-| BEH006 | Operational SCN007 | Extraction-era no-release/paired-finalization prose (E07) | NFS-only policy/docs describe current independent release process and observed support limits | Attribution/license/source provenance, safe main finalization and owned cleanup |
-
-## Stakeholders
-Maintainer selects approved version and advances evidence-backed release; end user obtains a usable supported CLI; API/E2E owns executable qualification; Delivery owns final evidence judgement, actual authorized publication, download confirmation and cleanup. User remains authority for material release/channel/platform changes. No application/server dependency.
+| BEH001 | SCN001 | Manual build-only candidate succeeds; E19/API002 | Current reviewed-source candidate with traceable four-target artifacts | Push/PR never publishes; no inferred field Pass |
+| BEH002 | SCN002/005 | physical/user qualification blocks publication; E20 | Separate release readiness from deferred field/user testing; require evidence for the checks actually claimed | Exact source/engine/OCI, review/native/release-control proof and actual signing/notary; no fabricated userVerified or topology |
+| BEH003 | SCN003/006 | Reviewed immutable tag/draft/assets/image publisher exists | Publish authorized normal v0.1.0 before field tests; preserve recoverable same-input partial stages | No force/moved tags, clobber, substituted artifact or unsigned fallback |
+| BEH004 | SCN004/005 | Installer requires manifest QualifiedTargets, currently empty | Verified published-target binary is installable despite explicitly deferred field tests; show the limitation without a new approval questionnaire | Checksum, bounded archive, embedded/downloaded equality, wrong-target refusal, no Go/Homebrew requirement |
+| BEH005 | SCN002/004/007 | Host-only setup/consent/source/state guards | Unchanged; publish/download/version checks do not touch live storage | Host OS/source/identity, admin/storage consent, private state, incompatibility refusal and safe detach |
+| BEH006 | SCN007/008 | Docs retain prepublication physical/user gate | Consistent release-first policy and explicit postpublication test/fix custody | Independent NFS versioning, licensing, history, safe finalization/cleanup |
 
 ## Scope Guardrail
-### In-scope use cases
-| ID | Use case | Scenarios |
+| ID | In-scope use case | Scenarios |
 | --- | --- | --- |
-| UC001 | Prepare and identify release candidate | SCN001 |
-| UC002 | Qualify candidate and reject incomplete publication requests | SCN002/005 |
-| UC003 | Publish and recover the independently versioned release | SCN003/006 |
-| UC004 | Download, verify and install supported CLI | SCN004/005 |
-| UC005 | Reconcile policies, report evidence and finalize safely | SCN007 |
+| UC001 | Prepare identified nonpublic candidate | SCN001 |
+| UC002 | Establish release readiness, disclose deferred field qualification | SCN002/005 |
+| UC003 | Publish and safely recover the independent version | SCN003/006 |
+| UC004 | Download, verify and install released CLI | SCN004/005 |
+| UC005 | Reconcile policy, report release evidence, retain follow-up and finalize | SCN007/008 |
 
-Out of scope: dashboard nfs-2, superrepo release/source changes, application integration/Guide activation, live-user mounts/data/nodes or upgrades, new NFS capabilities/backends/OS families, auth/encryption/public service, outage isolation, automatic remote notifications, editor/updater work, license changes or unrelated cleanup. No live storage migration. No silent platform drop or qualification weakening to obtain a green release.
+Allowed delta: release-readiness/evidence policy, packaging metadata, installer admission, workflow wording/necessary plumbing, affected tests and documentation. No current runtime filesystem capability change. No manual gate bypass: implement the changed authority coherently before publication.
 
-Non-goals: auto-publication on arbitrary main/PR changes; desktop/mobile-version coupling; performance benchmarks or general filesystem equivalence; proving checksums resist a compromised publisher. No public beta/prerelease channel; internal build-only candidate artifacts remain necessary and are not releases.
+Out of scope: dashboard nfs-2, Homebrew distribution, superrepo/app/Guide/editor/updater work, new backend/OS family, paid infrastructure, auth/public-service/outage/remote-notification features, live-user mounts/exports/firewalls/data/node upgrades, credential reprovisioning without demonstrated failure, licensing changes and generic cleanup. Closed tasks/archives stay closed.
 
-Preserved boundary: BEH002/004/005. Existing source/wire protocol/backport/package selection/privileged consent/source identity and private-state behavior remain unchanged unless an actual in-scope defect requires solution recovery. Current physical and explicit-user verification gates remain until an explicit approved policy revision; the new publication request is not such evidence.
+Non-goals: public beta/prerelease, automatic main/PR publication, asserting production readiness or independent-client/physical/platform support from hosted builds. Internal candidates remain build-only. Physical/shared-filesystem and genuine user-check completion is **not a prepublication or this release-task closure prerequisite** under the explicit change; concrete handoff custody is required, not silent abandonment. Postpublication testing is separate scoped follow-up work, not authority to run against live user data.
 
-Review authority: blocking findings must trace to approved REQ/AC/preserved behavior. New behavior, platform, threat model or weakened qualification is a Requirement Gap for Solution Designer/user; adjacent problems remain non-authoritative follow-ups. No review comment silently amends scope.
+Review authority: changes to signing/integrity/host protection or additional scope need Solution Designer recovery. Do not re-ask the settled publish-first/no-beta choice or restore missing-host questions as a release dependency.
 
 ## Requirements
-| ID | Requirement | Behavior | Priority / rationale / source |
-| --- | --- | --- | --- |
-| REQ001 | Provide documented candidate and authorized-publication journeys without requiring the maintainer to manually pre-create a GitHub release; independent NFS version and exact source identity are consistent throughout | BEH001/003 | Required; user outcome/E03/E08 |
-| REQ002 | Ordinary development CI and build-only candidates cannot publish releases/images or set qualification; candidates expose useful version/platform/provenance information and downloadable CI artifacts clearly labeled non-release | BEH001 | Required; user separation and existing policy |
-| REQ003 | Preserve current source/engine, independent physical Mac/Linux/Docker and explicit-user verification gates; require evidence applicable to every advertised target/mode. Candidate/source/engine changes invalidate affected qualification. Report missing prerequisites concretely | BEH002 | Required; user prohibits fabricated evidence/E04 |
-| REQ004 | Mac release assets must pass Developer ID signing/notarization; unavailable credentials are a named external blocker, never unsigned fallback or unapproved omission | BEH002/003 | Required; packaging policy/E09 |
-| REQ005 | Publish only the approved version/channel/platform set with complete executable archives, installer, manifest, checksums, required engine image/corresponding modified source/inventory/notices and understandable release notes. Only strict normal vMAJOR.MINOR.PATCH releases are supported; reject beta/prerelease inputs; publish the first qualified v0.1.0 as a normal GitHub release | BEH003/004 | Required; explicit user normal-release choice / DEC001 |
-| REQ006 | Promotion preserves tested candidate provenance and exact engine package identities; qualified input loss/expiration, hash mismatch, failed/cancelled checks or signing must fail closed. Partial effects and safe retry boundaries must be explicit, not clobbered or relabeled | BEH002/003 | Required; existing candidate contract and release safety |
-| REQ007 | Public versioned download/install must verify archive and embedded/retrieved manifest consistency before installation; unsupported OS/CPU, wrong checksum or unsafe archive fails without host setup. Document actual OS floor/limits and exact version/run commands | BEH004/005 | Required; current installer guarantees/E05/E06 |
-| REQ008 | Prove the resulting workflow through a real authorized release run and download/install checks on test-owned resources; preserve actual raw results/skips/failures and distinguish native fixture/build checks from filesystem qualification | BEH002/004 | Required; Task definition of done |
-| REQ009 | Reconcile root/packaging/README/testing/release documentation with current direction and single-repository ownership, retaining license/attribution/source provenance and an honest release/support table | BEH006 | Required; contradictory extraction policy |
-| REQ010 | Finalize on current integrated main under repo rules; preserve PM/unrelated work and archives, remove only task-owned resources, return URL/version/platform/assets/commands/evidence or precise still-open blocker | BEH005/006 | Required; Task constraints/done |
+| ID | Requirement | Behavior / priority |
+| --- | --- | --- |
+| REQ001 | Independent NFS version/exact-source candidate and authorized release journeys must work without hand-creating tag/release | BEH001/003; Required |
+| REQ002 | Ordinary CI/build-only candidates cannot publish or imply field qualification; candidate identity/results stay explicit | BEH001; Required |
+| REQ003 | For v0.1.0, permit release before independent/physical shared-filesystem and genuine user tests. Require truthful deferred status and scoped postpublication custody; retain current-source native/build/release-control evidence and source/engine/OCI applicability. Never fabricate physical/user proof or relabel API002/historical outcomes | BEH002/006; Required, direct new approval |
+| REQ004 | Every Mac release binary must be Developer ID signed and notarization Accepted; real failures block, no unsigned fallback or omitted Mac target | BEH002/003; Required, unchanged |
+| REQ005 | Publish normal non-prerelease v0.1.0 for all four build targets, with executable archives, installer, manifests, checksums, notes, exact engine image/corresponding modified source/inventories/notices. Reject beta/build-suffix versions | BEH003/004; Required, unchanged target/channel |
+| REQ006 | Promotion must preserve current candidate provenance and exact engine/OCI bytes. Missing/expired/mismatched inputs or failed/cancelled required checks/signing fail closed; partial effects and same-payload retries remain explicit | BEH002/003; Required |
+| REQ007 | Public installer must admit an intact release-authorized target while stating field/user validation is deferred; reject unsupported target, wrong checksum, unsafe archive or mismatched metadata before installation/setup. Preserve OS/setup safety and document exact commands/floors/limits | BEH004/005; Required |
+| REQ008 | Exercise a real authorized publication and public download/install/version/signature checks on owned resources. Distinguish these from deferred NFS operations; preserve real failures/skips and native platform limitations | BEH002/004; Required |
+| REQ009 | Align root/package/README/testing/release docs and public validation statements with R3; distinguish build targets from field-qualified support; retain licensing and test/fix-forward custody | BEH006; Required |
+| REQ010 | Finalize reviewed current main, preserve other owners/archives, clean own temporary resources; return real URL/version/platform/assets/commands/evidence and deferred work or an exact remaining release blocker | BEH005/006; Required |
 
 ## Acceptance Criteria
-| ID | REQ | Scenarios | Observable success / important failure | Verification intent |
-| --- | --- | --- | --- | --- |
-| AC001 | 001/002 | 001 | Candidate journey starts from an exact reviewed ref/version with no existing release; CI artifacts identify source/platform/engine; no public release/image/tag side effect in build-only | Actual hosted candidate run and remote inventory; unit controls supplement |
-| AC002 | 003/006 | 002/005 | Selected targets have current-source actual candidate qualification and verification records; empty/stale/mismatched/missing physical/user evidence refuses publication | Semantic evidence audit plus executable negative controls; CI build alone insufficient |
-| AC003 | 004 | 002/005 | Every selected Mac asset is signed and accepted by notarization; missing inputs/failed signing are explicit blockers before final public promotion | Actual signing/notary logs and downloaded artifact verification, no secrets in evidence |
-| AC004 | 001/005/006 | 003/006 | Authorized run produces correct immutable normal version tag/source, non-prerelease status and complete release assets/notes; prerelease inputs are refused; repeat cannot silently replace another version/source/asset; failure leaves truthful recoverable disposition | Actual hosted run, tag/release/image identities and failure/retry controls |
-| AC005 | 005/007 | 004/005 | Real public downloads match checksums/manifests; installed CLI reports version; exact commands documented. Unsupported/corrupt/mismatched archive rejected without setup; scope-specific platform prerequisites explicit | Owned HOME/temp/no-setup version smoke plus approved isolated actual-host qualification |
-| AC006 | 003/006 | 002/006 | Published engine packages equal qualified candidate bytes, correct architecture/source/inventory/notices retained; missing/expired candidate cannot be silently rebuilt under an old Pass | Hash comparison and adversarial fixture; actual run identities |
-| AC007 | 008 | 001–006 | Real first release completed; all required checks report truthful pass/fail/skip and evidence boundary. No workflow-only closure; external prerequisite keeps Task open | API/Delivery reports and public receipt |
-| AC008 | 009/010 | 007 | NFS docs consistent; no desktop version/node coupling; licenses preserved; current main merge/push exact; cleanup and preserved-owner inventory complete | Source/doc review and finalization/cleanup receipt |
+| ID | REQ / scenarios | Observable success / failure | Verification intent |
+| --- | --- | --- | --- |
+| AC001 | 001/002; SCN001 | New current-source four-target candidate, exact run/attempt/engine/OCI/member identity; no publication in candidate mode | Actual hosted run and remote inventory; no old-candidate relabel |
+| AC002 | 003/006; SCN002/005 | Audited release readiness permits explicitly deferred physical/user status; missing authorization/reference/candidate/build/source-review or stale identity refuses. No executed-user/physical Pass is required or invented | Updated schema/admission negative controls + semantic evidence review |
+| AC003 | 004; SCN002/005 | Both Mac targets actually signed, Accepted notarization and exact downloaded signature evidence; missing/rejected inputs block before promotion | Actual Apple receipts/signature checks, no secret values |
+| AC004 | 001/005/006; SCN003/006 | Real immutable exact-SHA normal tag/release/assets/image; honest release-first notes; conflict/failed prerequisite/unsafe retry refused, no overwrite | Actual workflow/publication + focused recovery controls |
+| AC005 | 005/007; SCN004/005 | Public checksums/archive/manifest match, released target installs and version runs with deferred notice; candidate/old-qualified-only/wrong-target/malformed/corrupt metadata refuses without setup | Native/installer tests; actual owned-HOME public download/version proof, not NFS setup |
+| AC006 | 003/006; SCN002/006 | Published engine packages and complete OCI equal the new candidate; metadata/signing delta attributable; stale/lost candidate cannot be rebuilt under old evidence | Actual hashes/identities and negative controls |
+| AC007 | 008/003; SCN001–008 | First signed public release actually completed; current prepublication checks evidenced, field/user tests explicitly deferred with named owner/plan; old API002 remains historical Blocked | API/Delivery receipts, public downloads and follow-up custody, no filesystem campaign prerequisite |
+| AC008 | 009/010; SCN007/008 | Docs and metadata make consistent bounded claims, licenses intact, main finalized/pushed, owned cleanup and preservation complete; follow-up handed off | Doc/source review and final receipt |
 
 ## Relevant Scenarios And Journeys
-| ID | Actor / goal and trigger | Product-level sequence and outcome | Supported alternate / failure | Validity / evidence |
-| --- | --- | --- | --- | --- |
-| SCN001 | Maintainer, explicit candidate preparation | Choose intended NFS version/source; CI builds/checks; retrieve identified candidate and results without publication | Build/toolchain/package failure leaves failed evidence, not release | Supported Normal Scenario; user/E03/E07 |
-| SCN002 | Qualification owner, candidate available | Verify candidate identities; exercise supported storage/client modes on designated test-owned hosts; record source/target/engine outcomes and explicit verification; determine release readiness | Unavailable physical host/credential/evidence remains blocker; no old same-kernel evidence promotion | Supported Normal Scenario; existing qualification policy/E04/E06 |
-| SCN003 | Maintainer, authorized qualified version | Request publication; gates succeed; version tag/release/assets/notes available; verify public receipt | Any unmet gate fails; tag/release need not preexist manually | Supported Normal Scenario; explicit new user direction |
-| SCN004 | User, supported host and public release | Follow versioned instructions, download/verify/install, run version/help or choose setup with normal consent | Host/runtime/permissions errors explained; installation smoke does not exercise setup on user's host | Supported Normal Scenario; README/installer/E05 |
-| SCN005 | Safety contract, missing/changed input or unsupported host | Refuse wrong checksum/manifest/archive/target, stale evidence, missing signing or candidate before unsafe continuation | No best-effort unqualified publication or beta fallback | Supported Explicit Edge Scenario; existing checks and Task safety constraints |
-| SCN006 | Maintainer, interrupted/failed or repeated release attempt | Inspect source/assets and stage status; retry only safe same-input failed work, otherwise choose new version; disclose partial publication | Never move published tag or clobber unrelated/different asset; keep original failed evidence | Supported Explicit Edge Scenario; superrepo recovery reference and current irreversible publication path |
-| SCN007 | Delivery, successful release or external blocker | Sync docs/evidence, safely finalize current main, preserve unrelated work and clean owned resources; return definitive release receipt or exact blocker | Do not close Task as done for only workflow enablement | Supported Normal Scenario; Task done/constraints |
+| ID | Actor / trigger / coherent sequence | Alternate / outcome | Validity / evidence |
+| --- | --- | --- | --- |
+| SCN001 | Maintainer requests versioned current-source candidate; CI builds/checks and retains identified artifacts | Failed build is failed candidate, never release | Supported Normal Scenario; original task/API002 |
+| SCN002 | Release owner receives candidate; audits native/release checks and identity, records user-approved deferral, source review and test/fix plan; establishes release readiness | Missing physical hosts do not block; missing actual build/identity/review or signing still does | Supported Normal Scenario; direct user approval/E19–21 |
+| SCN003 | Maintainer requests official signed release before field tests; preflight/signing succeed, immutable tag/assets/image published and downloads verified | Unmet retained gate keeps precise unfinished stage; no unsigned/beta workaround | Supported Normal Scenario; direct user words |
+| SCN004 | User downloads versioned released CLI, sees deferred-field notice, verifies/installs and runs version; may choose normal setup with consent | Unsupported host/archive errors refuse; no automatic test on user's storage | Supported Normal Scenario; existing installer and user publish-first intent |
+| SCN005 | Changed/missing inputs, unsupported target or false validation claim reaches admission | Fail closed on integrity/authority/claim mismatch; deferred testing alone is not an error | Supported Explicit Edge Scenario; retained safety contracts/R3 |
+| SCN006 | Maintainer resumes interrupted publication | Reuse bound same payload, fill missing exact outputs or refuse conflict/expiry; different output requires new version approval | Supported Explicit Edge Scenario; existing publisher |
+| SCN007 | Delivery completes release/finalization or encounters actual blocker | Evidence-backed receipt/owned cleanup, no build-only closure or false field Pass | Supported Normal Scenario; task done |
+| SCN008 | After publication, delegated test owner receives scoped plan and exact release identities; gets test-owned hosts/user participation, runs field tests and reports/fixes through normal ownership | Unassigned resources remain explicit follow-up, not release blocker; any fix uses new reviewed version rather than overwrite | Supported Normal Scenario; latest user instruction, supplement |
 
-## UI / Quality / Data
-Product UI/UX fields: **N/A — not applicable**. GitHub workflow inputs/results, CLI instructions and release notes are operational text, not a dashboard design request.
+## UI / Quality / Data / Supplements
+Product UI/UX: **N/A — not applicable**; no dashboard. QR001: immutable integrity, explicit authorization/claims and signed Mac assets. QR002: safe repeat/partial-state handling. QR003: no app coupling, licensing and owner preservation. No new security or performance claim.
 
-QR001 (REQ003–007/AC002–006): explicit source/artifact identity, fail-closed qualification and signed Mac artifacts. QR002 (REQ006/AC004/006): controlled retries preserve published provenance and failed evidence. QR003 (REQ009–010/AC008): independent versioning, preserved licensing and unrelated files.
+Release-control records and generated manifests are affected, not installed host/source state. Preserve candidate/history/failed evidence, immutable external identities and unrelated resources. Old build-only candidates can remain historical; no in-place reinterpretation as current source. The architecture must investigate actual readers/writers before deciding metadata transition. No live storage migration.
 
-Persisted/external state affected: Git refs/releases/assets/registry artifacts and release qualification records. Preserve published tags/assets/history, retained candidates and owner state. Regenerate only own disposable build/check output; no live user NFS state change or loss is authorized. No installed-state schema migration proposed.
+Behavior-defining supplement: `postpublication-testing-plan.md`, approved within this user-approved scope. Exact approval receipt and `approval-record-sr004.md` establish authority; investigation is factual evidence, not intended behavior. GitHub/Apple retention/access/signing constraints remain unchanged.
 
-## External Contracts And Supplements
-GitHub Actions artifact retention/read-access, Release tag/asset semantics and Apple signing/notarization are external contracts (investigation E08). Expired artifacts/permission/credential failures are explicit blockers. No new costs or paid infrastructure purchase authorized.
+## Decisions / Uncertainty
+- DEC001 unchanged: normal-only first v0.1.0/four targets, not beta or unsupported new platforms.
+- DEC002 unchanged: automate controlled tag/release creation, ordinary CI remains nonpublishing.
+- DEC003 **superseded for physical/user sequencing by DEC005**: publication approval remains distinct from testing evidence; signing/source/integrity gates retained.
+- DEC004 unchanged: standalone NFS, no superrepo version/release change.
+- DEC005 User decided publish first, test/fix later. SD chooses explicit release readiness versus field-validation terminology and installability to make this usable without a false qualification claim. No new waiver prompt, no platform omission, no auto-mount or silent field Pass. **Decided**, exact source above.
+- ASM001 Six signing secrets provisioned; actual import/notary not yet proven. No fresh private input needed absent demonstrated error. Field hosts/user testing deferred; native/release/signature/public-access failures remain execution prerequisites. No paid hosts authorized.
 
-`investigation-notes.md` is evidence, not intent. `evidence/intake/repository-release-preflight.json` is timestamped read-only repository/secret-name metadata; no credential values. No behavior-defining supplement beyond this R2; normal-only policy is DEC001.
-
-## Decisions And Assumptions
-| ID | Question / reasoning before recommendation | Owner / status |
-| --- | --- | --- |
-| DEC001 | User explains NFS releases will be infrequent and explicitly rejects the desktop-style beta approach. Use normal versions only; first v0.1.0 is the proposed independent initial version without implying a mature1.0 API. Retain the existing four-target scope rather than infer an unrequested Linux-only deferral. Required qualification/signing still gates every normal release. | User chose normal-only; SD selected initial version/retained scope within direction, user informed / **Decided**2026-10-18 |
-| DEC002 | Current manual tag/release prerequisite obstructs end-to-end flow; automate controlled creation as part of authorized release, while retaining ordinary CI/build-only nonpublication. Exact trigger/structure belongs to architecture. | SD / Decided within direction |
-| DEC003 | Prior extraction no-release is superseded by explicit publication authorization for this Task, but no physical/user/signing evidence was supplied by that authorization. Retain evidence gates and report blockers; do not invent a verification record. | SD / Decided within direction |
-| DEC004 | Superrepo provides usability/recovery examples, not NFS platform promises, Android version limits or desktop version ownership. Its beta channel is explicitly not adopted. Keep NFS independent; no superrepo edits. | SD / Decided within direction |
-| ASM001 | Available test-host inventory and successful signing/notary validation remain unresolved execution prerequisites. E18 confirms all six required repository-secret entries are now populated, including the user-confirmed selected local Developer ID .p12 and user-entered export/app passwords. Temporary private export removed; no secret values persisted in artifacts. This establishes provisioning, not password pairing/signing validity. GitHub read APIs expose no secret values; do not scrape source secrets or assume physical hosts are available/unavailable without an inventory. | API/Delivery prerequisite coordination; provision complete, validation/inventory open |
-
-## Traceability And Architecture Input
-REQ001/002 → UC001/003 → BEH001/003 → SCN001/003 → AC001/004.
-REQ003/004/006 → UC002/003 → BEH002/003 → SCN002/005/006 → AC002/003/004/006.
-REQ005/007/008 → UC003/004 → BEH003/004/005 → SCN003/004/005 → AC004/005/007.
-REQ009/010 → UC005 → BEH005/006 → SCN007 → AC008.
-
-Architecture must trace candidate/source/engine/image/binary/manifest/evidence/tag/release identities, permissions and failure boundaries after approval. Verify qualified-artifact preservation across build/promotion, installer trust and exact hosted gate behavior. The completed technical design is design-spec.md / SR-003, Ready for applicable independent review; requirements approval remains R2/SR-002. No persisted host-data migration is requested.
-
-## Readiness
-Problem/current/desired/preserved behavior, scope, testable traceability and supported scenarios: Yes. Product/UI: N/A. Material decisions visible: Yes. **Content ready: Yes; approval recorded: Yes (R2/SR002, user normal-only choice plus SD within-direction approval and notification); approved basis ready for architecture: Yes.** Publication execution also needs real candidate/qualification/signing prerequisites; these are not claimed ready and do not justify dropping gates.
+## Readiness / Architecture Input
+R3 ready and approved: supported scenarios/BEH/REQ/AC traceability, scope/limits/data preservation and user decision explicit. No material unanswered product question. Approval does not bypass implementation/review or invent a test result. Design SR004 must replace the qualification/install-admission dependency coherently, preserve immutable publication controls and invalidate changed production candidates. Prior SR003/ARCH001/IR002/CRR003 remain historical for the basis they covered, not a Pass for this change.
