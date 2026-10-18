@@ -9,6 +9,7 @@ The canonical code-review-report.md remains authoritative. History starts with t
 | CRR-001 | code-review-report.md | Initial implementation source review / IR-001 | N/A | Fail — Local Fix,98.8/100 | CR-001 |
 | CRR-002 | code-review-report.md | Targeted source re-review / IR-002 | CRR-001 Fail | Pass,100/100 | CR-001 resolved; none remaining |
 | CRR-003 | api-e2e-test-review-report.md | Successful API-REV-001 test review | N/A (first test review); source CRR002 Pass | Not Applicable — no API test changes; gate satisfied | None |
+| CRR-004 | code-review-report.md | Integrated source re-audit / IR003 from DR001 | CRR002 source Pass; CRR003 test N/A | Fail — Local Fix,99.8/100 | CR-002; CR-001 stays resolved |
 
 ## Revision Entries
 
@@ -73,3 +74,22 @@ None applicable to this test-review entry point. CR-001 stays resolved by CRR002
 - Recommended recipient: `/software_engineering_team/delivery_engineer` via fresh successful-test/Not-Applicable route; sole handoff.
 - Remaining limits: live mounts/platforms/authenticated providers/publication unqualified; compile/protocol fixtures and carried Guide renders retain original attribution. Fresh targets/integration/ordered N then S receipts still downstream.
 - Resources: read-only review, no owned scratch/live resource created; both API scratch paths confirmed absent. No target merge/push/tag/release/deploy/TaskDone/user verification.
+
+### CRR-004 — Integrated boundary re-audit; one residual test import
+
+- Date/reviewer: 2026-10-18, code reviewer; personal, no delegation.
+- Canonical source report code-review-report.md; Implementation Review source round3 / **Full Re-Audit**. Integrated manager interfaces/spine/shared foundation exceed prior CR001 scope; all24 structural checks/all10 scores reevaluated for R2 boundaries, not unrelated upstream features.
+- Trigger: IR003 DR001 integration Local Fix; current implementation handoff/history, delivery-revision-record.md/handoff-summary.md. R2/SR003 Approved, SR004 Ready, ARCH002 unchanged. API-REV-001 historical Pass95, CRR003 successful-test N/A; DR001 current Blocked until its owner resumes.
+- Inputs: N5226fca6ea99abc33a0ec78e647260a26e2112a6, unchanged service83726b27400b405a7a6a79bd962d8e2419daa561. S5559abbf017566f0030d95b023614f7418d3f212; merge156ea2da parents a2023fef and2f211340, then two fixture-only cleanup commits. Large/High retained.
+- Prior source CRR002 Pass100. Current **Fail / implementation-owned Local Fix /99.8%**. No test/runtime/architecture defect demonstrated. One mandatory unused Skill import in the touched Claude bootstrapper test remains (CR002/C004/ENG-DEAD).
+- Fresh personal checks: all five overlap paths/tri-way diffs, manager equals adopted upstream except approved admission removal,24/25 R2 owners unchanged, all108 N inputs unchanged; TS unused audit25 production+4 overlap test files yields exactly one6133; assertion AST comparison15 Brief/58 Codex statements unchanged by final cleanup. No workflow rerun. IR003 current build/typecheck/1666unit/21integration/15core/24Guide/34launcher and final76 overlap tests are attributed upstream, with skips/overlap/limits.
+- Supported scenario/material-premise changes: none to R2. Current upstream publication/input interfaces preserved under integration contract; no mount classifier/Git trust/pin restored.
+
+#### Prior Finding Resolution
+
+- CR-001: resolved in IR002/CRR002; remains resolved, all25 production files unused-clean.
+- **CR-002 new/current**: local Skill import at S/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts:7. Already unused at a2023fef; prior production-only audit missed touched-test cleanup. Explicit reviewer gap, not false runtime attribution. Remove only import, preserve assertions/domain class; focused unused/Claude test then targeted source re-review.
+- Cleanup10→9.8; other nine scores10. No double penalty. No unrelated follow-up.
+- S RELEASE.md stale R1 consumer/pin tail is an acknowledged existing Delivery docs-sync obligation, not accepted contract or new source finding; must clear before completion.
+- Recipient: `/software_engineering_team/implementation_engineer` via fresh source Local Fix rule only. After source passes, current TESTING impact policy requires affected S API validation, particularly S04/S05; N cases remain valid with limits. No old VM/editor/provider campaign.
+- Source/test edits none; prior entries/upstream evidence preserved. IR003 scratch absent; reviewer accidental empty report-preparation file removed, no live resources. No targets/merge/push/tag/release/deploy/TaskDone/user verification.

@@ -1,0 +1,30 @@
+{
+  "review": "CRR-004",
+  "result": "Fail",
+  "classification": "Local Fix",
+  "owner": "implementation",
+  "finding": "CR-002",
+  "score_percent": 99.8,
+  "task_size": "Large",
+  "architectural_risk": "High",
+  "selected_rule": {
+    "when": "When source review identifies an implementation-owned Local Fix or packaging defect that must be corrected before executable coverage.",
+    "recipient_address": "/software_engineering_team/implementation_engineer"
+  },
+  "reason": "One mandatory touched-test dead import, not API execution failure or design ambiguity. Single most-specific source Local Fix recipient.",
+  "reference_files": [
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/delivery-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-003/validation-plan.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/checks-and-limits.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/unused-locals.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/audit-unused.cjs",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/source-audit.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/assertions.json",
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts"
+  ],
+  "delivery_status": "Not yet sent"
+}

@@ -1,0 +1,32 @@
+{
+  "review": "CRR-004",
+  "decision": "Fail",
+  "classification": "Local Fix",
+  "finding": "CR-002",
+  "source_score": 99.8,
+  "source_inputs_unchanged_during_review": true,
+  "protected_ticket_inputs_unchanged": 365,
+  "prior_CRR001_through_CRR003_entries_preserved": true,
+  "structural_checks": 24,
+  "structural_pass": 23,
+  "structural_fail_cleanup": 1,
+  "no_runtime_failure_attributed": true,
+  "reviewer_source_test_edits": false,
+  "runtime_checks_rerun": false,
+  "new_live_resources": false,
+  "accidental_empty_reviewer_file_removed": true,
+  "artifact_whitespace_exception": {
+    "path": "tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-004/manager.diff",
+    "lines": [
+      11,
+      13,
+      23,
+      42,
+      57,
+      59,
+      69
+    ],
+    "reason": "Single-space blank context in unmodified raw git diff",
+    "initial_staged_check_exit": 2
+  }
+}

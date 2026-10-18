@@ -1,0 +1,63 @@
+{
+  "review": "CRR-004",
+  "N_head": "5226fca6ea99abc33a0ec78e647260a26e2112a6",
+  "S_head": "5559abbf017566f0030d95b023614f7418d3f212",
+  "integrated_base": "2f211340ee36b81cef74a74b2e042b5102c269d3",
+  "merge": "156ea2dacc0fb4989a6b5d8a7206fa143fde0c54",
+  "overlap": [
+    "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts",
+    "autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts"
+  ],
+  "input_identity": {
+    "N": {
+      "paths": 108,
+      "sha256": "070f9b587743ef02fc561457aa9bedcf16f9f4df22fe4b1ececa7d011a15c048"
+    },
+    "S": {
+      "paths": 7307,
+      "sha256": "4df8371511138a16c5cc3c7f3846d1b371aed9c14ede989f00ed2e9406de70d3"
+    }
+  },
+  "N_source_unchanged": true,
+  "R2_production_files": 25,
+  "changed_R2_production": [
+    "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts"
+  ],
+  "manager_equals_upstream_except_approved_admission_removal": true,
+  "manager_nonempty": {
+    "previous": 345,
+    "current": 364
+  },
+  "post_merge_changed_paths": [
+    "autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts"
+  ],
+  "retired_owner_paths_absent": [
+    "autobyteus-nfs",
+    ".github/workflows/release-nfs.yml",
+    "scripts/public/nfs",
+    "autobyteus-server-ts/src/workspaces/shared-workspace-binding.ts",
+    "autobyteus-server-ts/src/workspaces/shared-workspace-mount-observation.ts",
+    "autobyteus-server-ts/src/agent-execution/services/shared-run-workspace-admission.ts",
+    "scripts/public/docker/autobyteus-docker.d/bash/nfs-attachment.sh",
+    "autobyteus-server-ts/tests/fixtures/shared-network-workspaces/attachment.json",
+    "autobyteus-server-ts/tests/fixtures/shared-network-workspaces/provenance.json"
+  ],
+  "unchanged_authority_files": 8,
+  "finding_provenance": "Skill import already unused at a2023fef; original R2 deleted old materializer cases, and IR003 touches this file again. Prior production-only unused audit did not cover test imports.",
+  "finding": {
+    "path": "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+    "line": 7,
+    "code": 6133,
+    "message": "'Skill' is declared but its value is never read."
+  },
+  "protected_ticket_inputs": {
+    "count": 365,
+    "sha256": "627c378575af74257a8521dcaf5ba4b23a43c02bdf41c62f0958c192e38f7000"
+  },
+  "prior_history_sha256": "ecb3df23a3d19b042c9401f2d5106fd5f185e0d31470413696a4e4b4eaf21627",
+  "IR003_scratch_absent": true
+}

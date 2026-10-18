@@ -1,0 +1,16 @@
+{
+  "scope": "Post-merge authored fixture cleanup only; assertion statement AST comparison complements full diff review, not test execution.",
+  "typescript": "5.9.3",
+  "results": [
+    {
+      "path": "autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+      "expect_statement_count": 15,
+      "post_merge_assertions_identical": true
+    },
+    {
+      "path": "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+      "expect_statement_count": 58,
+      "post_merge_assertions_identical": true
+    }
+  ]
+}

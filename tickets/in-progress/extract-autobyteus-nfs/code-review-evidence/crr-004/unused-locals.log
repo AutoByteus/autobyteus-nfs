@@ -1,0 +1,13 @@
+{
+  "typescript": "5.9.3",
+  "production_files": 25,
+  "tests": 4,
+  "diagnostics": [
+    {
+      "path": "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+      "line": 7,
+      "code": 6133,
+      "message": "'Skill' is declared but its value is never read."
+    }
+  ]
+}
