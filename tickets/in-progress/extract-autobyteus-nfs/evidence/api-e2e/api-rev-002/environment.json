@@ -1,0 +1,11 @@
+{
+  "S": "/Users/normy/nfs-extract-api002-S-bvh3zjh0",
+  "envS": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+    "HOME": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/home",
+    "TMPDIR": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "NO_COLOR": "1"
+  }
+}

@@ -1,0 +1,2 @@
+# Attempts — API-REV-002
+No failed test/preparation command in this round. Source audit and all15 planned commands passed. Prior API001 replay/Nuxt setup failures were resolved there and remain in immutable evidence/history; current preparation includes both upfront. No test/production change or assertion relaxation. Native asynchronous negative-control logs are expected assertions, not failed commands. Copied E01 event wording is clarified in current report: only S was freshly archived, N exact108-input evidence carried. No hidden retry or provider/platform qualification.

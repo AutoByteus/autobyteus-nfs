@@ -1,0 +1,52 @@
+$ pnpm -C autobyteus-web test:nuxt components/settings/__tests__/NfsGuideCard.spec.ts components/settings/__tests__/NodeManager.spec.ts components/settings/__tests__/DockerNodeStartGuideCard.spec.ts utils/__tests__/nfsLauncherCommands.spec.ts --run --maxWorkers=2
+CWD /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo
+
+> autobyteus@1.5.6-beta.1 test:nuxt /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-web
+> cross-env NUXT_TEST=true vitest components/settings/__tests__/NfsGuideCard.spec.ts components/settings/__tests__/NodeManager.spec.ts components/settings/__tests__/DockerNodeStartGuideCard.spec.ts utils/__tests__/nfsLauncherCommands.spec.ts --run --maxWorkers=2
+
+isElectronBuild false
+[Electron Module] Skipping electron module setup: BUILD_TARGET is not electron
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+ RUN  v3.2.4 /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-web
+
+stderr | components/settings/__tests__/DockerNodeStartGuideCard.spec.ts
+Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+stderr | components/settings/__tests__/NodeManager.spec.ts
+Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+stdout | components/settings/__tests__/NodeManager.spec.ts
+serverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+stdout | components/settings/__tests__/DockerNodeStartGuideCard.spec.ts
+serverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+ ✓ components/settings/__tests__/DockerNodeStartGuideCard.spec.ts (3 tests) 30ms
+ ✓ components/settings/__tests__/NodeManager.spec.ts (11 tests) 51ms
+stderr | components/settings/__tests__/NfsGuideCard.spec.ts
+Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+stderr | utils/__tests__/nfsLauncherCommands.spec.ts
+Warning: KaTeX doesn't work in quirks mode. Make sure your website has a suitable doctype.
+
+stdout | components/settings/__tests__/NfsGuideCard.spec.ts
+serverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+ ✓ components/settings/__tests__/NfsGuideCard.spec.ts (3 tests) 22ms
+stdout | utils/__tests__/nfsLauncherCommands.spec.ts
+serverStore: Initializing server config
+serverStore: Not in Electron environment. Skipping server initialization.
+
+ ✓ utils/__tests__/nfsLauncherCommands.spec.ts (7 tests) 2ms
+
+ Test Files  4 passed (4)
+      Tests  24 passed (24)
+   Start at  06:18:48
+   Duration  9.04s (transform 3.69s, setup 15.91s, collect 183ms, tests 105ms, environment 784ms, prepare 428ms)
+

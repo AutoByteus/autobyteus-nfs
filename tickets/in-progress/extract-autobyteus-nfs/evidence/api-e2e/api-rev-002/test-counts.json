@@ -1,0 +1,52 @@
+{
+  "consumer-install": [],
+  "consumer-build": [],
+  "consumer-typecheck": [],
+  "consumer-nuxt-prepare": [],
+  "consumer-overlap": [
+    "Test Files  2 passed (2)",
+    "Tests  28 passed (28)",
+    "Duration  5.85s (transform 2.82s, setup 35ms, import 4.74s, tests 17ms, environment 0ms)"
+  ],
+  "consumer-narrow": [
+    "Test Files  7 passed (7)",
+    "Tests  34 passed (34)",
+    "Duration  9.84s (transform 3.27s, setup 70ms, import 8.09s, tests 687ms, environment 0ms)"
+  ],
+  "consumer-unit": [
+    "Test Files  168 passed | 4 skipped (172)",
+    "Tests  1666 passed | 6 skipped (1672)",
+    "Duration  177.67s (transform 8.27s, setup 1.53s, import 71.21s, tests 88.43s, environment 13ms)"
+  ],
+  "consumer-integration": [
+    "Test Files  3 passed (3)",
+    "Tests  21 passed (21)",
+    "Duration  8.27s (transform 2.92s, setup 38ms, import 5.39s, tests 2.18s, environment 0ms)"
+  ],
+  "consumer-core": [
+    "Test Files  3 passed (3)",
+    "Tests  15 passed (15)",
+    "Duration  619ms (transform 449ms, setup 49ms, import 624ms, tests 24ms, environment 0ms)"
+  ],
+  "consumer-routes": [
+    "Test Files  3 passed (3)",
+    "Tests  39 passed (39)",
+    "Duration  14.31s (transform 5.38s, setup 36ms, import 10.21s, tests 3.45s, environment 0ms)"
+  ],
+  "consumer-path-pty": [
+    "Test Files  3 passed (3)",
+    "Tests  17 passed (17)",
+    "Duration  7.89s (transform 3.20s, setup 39ms, import 5.91s, tests 1.21s, environment 0ms)"
+  ],
+  "consumer-launcher": [
+    "Ran 36 tests in 31.255s",
+    "OK (skipped=2)"
+  ],
+  "consumer-guide": [
+    "Test Files  4 passed (4)",
+    "Tests  24 passed (24)",
+    "Duration  9.04s (transform 3.69s, setup 15.91s, collect 183ms, tests 105ms, environment 784ms, prepare 428ms)"
+  ],
+  "consumer-localization": [],
+  "consumer-web-boundary": []
+}

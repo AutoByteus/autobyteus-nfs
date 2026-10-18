@@ -1,0 +1,6 @@
+$ pnpm -C autobyteus-web exec nuxt prepare
+CWD /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo
+[log] isElectronBuild false
+[log] [Electron Module] Skipping electron module setup: BUILD_TARGET is not electron
+│
+◆  Types generated in .nuxt.

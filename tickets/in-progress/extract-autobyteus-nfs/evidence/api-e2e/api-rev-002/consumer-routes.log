@@ -1,0 +1,588 @@
+$ pnpm -C autobyteus-server-ts exec vitest run tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts --maxWorkers=1 --no-watch
+CWD /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo
+
+ RUN  v4.0.18 /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "autobyteus-server-test.db" at "file:/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts/tests/.tmp/autobyteus-server-test.db"
+
+Applying migration `20260203074245_init`
+Applying migration `20260208094000_add_external_channel_tables`
+Applying migration `20260209174500_add_channel_message_receipt_turn_id`
+Applying migration `20260209213000_remove_agent_conversation_tables`
+Applying migration `20260210101500_add_agent_avatar`
+Applying migration `20260210192000_add_agent_team_avatar`
+Applying migration `20260211214500_add_sync_columns_and_tombstones`
+Applying migration `20260212070000_remove_workflow_definition`
+Applying migration `20260309103000_add_channel_binding_launch_preset`
+Applying migration `20260310153000_add_channel_binding_team_definition_id`
+Applying migration `20260331102000_remove_channel_bindings_table`
+Applying migration `20260331130000_receipt_lifecycle_and_remove_channel_idempotency`
+Applying migration `20260517090000_add_app_data_migration_records`
+Applying migration `20260624090000_add_token_usage_ledger_events`
+Applying migration `20260625193000_token_usage_component_pricing_explainability`
+Applying migration `20260629120000_add_token_usage_display_fields`
+Applying migration `20260702093000_token_usage_execution_address`
+Applying migration `20260726090000_add_secret_vault`
+Applying migration `20260730090000_add_token_usage_provider_name`
+Applying migration `20260801090000_token_usage_member_display_name`
+Applying migration `20260814090000_team_run_execution_tree_v1`
+Applying migration `20260819090000_add_token_usage_run_records`
+Applying migration `20260820090000_redesign_app_data_migration_summary`
+Applying migration `20260822090000_add_token_usage_analytics`
+Applying migration `20260923130000_add_claude_sdk_usage_state`
+Applying migration `20260924120000_remove_external_channel_tables`
+Applying migration `20261009120000_token_meter_context_readings`
+
+Database reset successful
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260203074245_init/
+    └─ migration.sql
+  └─ 20260208094000_add_external_channel_tables/
+    └─ migration.sql
+  └─ 20260209174500_add_channel_message_receipt_turn_id/
+    └─ migration.sql
+  └─ 20260209213000_remove_agent_conversation_tables/
+    └─ migration.sql
+  └─ 20260210101500_add_agent_avatar/
+    └─ migration.sql
+  └─ 20260210192000_add_agent_team_avatar/
+    └─ migration.sql
+  └─ 20260211214500_add_sync_columns_and_tombstones/
+    └─ migration.sql
+  └─ 20260212070000_remove_workflow_definition/
+    └─ migration.sql
+  └─ 20260309103000_add_channel_binding_launch_preset/
+    └─ migration.sql
+  └─ 20260310153000_add_channel_binding_team_definition_id/
+    └─ migration.sql
+  └─ 20260331102000_remove_channel_bindings_table/
+    └─ migration.sql
+  └─ 20260331130000_receipt_lifecycle_and_remove_channel_idempotency/
+    └─ migration.sql
+  └─ 20260517090000_add_app_data_migration_records/
+    └─ migration.sql
+  └─ 20260624090000_add_token_usage_ledger_events/
+    └─ migration.sql
+  └─ 20260625193000_token_usage_component_pricing_explainability/
+    └─ migration.sql
+  └─ 20260629120000_add_token_usage_display_fields/
+    └─ migration.sql
+  └─ 20260702093000_token_usage_execution_address/
+    └─ migration.sql
+  └─ 20260726090000_add_secret_vault/
+    └─ migration.sql
+  └─ 20260730090000_add_token_usage_provider_name/
+    └─ migration.sql
+  └─ 20260801090000_token_usage_member_display_name/
+    └─ migration.sql
+  └─ 20260814090000_team_run_execution_tree_v1/
+    └─ migration.sql
+  └─ 20260819090000_add_token_usage_run_records/
+    └─ migration.sql
+  └─ 20260820090000_redesign_app_data_migration_summary/
+    └─ migration.sql
+  └─ 20260822090000_add_token_usage_analytics/
+    └─ migration.sql
+  └─ 20260923130000_add_claude_sdk_usage_state/
+    └─ migration.sql
+  └─ 20260924120000_remove_external_channel_tables/
+    └─ migration.sql
+  └─ 20261009120000_token_meter_context_readings/
+    └─ migration.sql
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts
+AgentFactory (Singleton) initialized.
+
+(node:73145) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-skills-data-AtUNlx
+Config file not found in new data directory: Error: Configuration file not found: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-skills-data-AtUNlx/.env
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > passes imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+Resolved skill 'autobyteus_single_1792297076041_7ae7a298da2e8' to path: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076041_7ae7a298da2e8-un0amB/agents/autobyteus-single-agent-1792297076041_7ae7a298da2e8/skills/autobyteus_single_1792297076041_7ae7a298da2e8
+
+stderr | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > passes imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+Tool 'run_bash' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'read_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'edit_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+Tool 'write_file' defined in agent definition 'AutoByteus Runtime Single Private Skill Agent' not found in registry. Skipping.
+
+stderr | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > passes imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+Tool 'run_bash' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'read_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'edit_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+Tool 'write_file' defined in agent definition 'AutoByteus Runtime Multi Private Skill Agent' not found in registry. Skipping.
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > passes imported canonical single-skill and multi-skill paths to the AutoByteus runtime config
+Resolved skill 'autobyteus_tone_1792297076041_7ae7a298da2e8' to path: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076041_7ae7a298da2e8-un0amB/agents/autobyteus-multi-agent-1792297076041_7ae7a298da2e8/skills/autobyteus_tone_1792297076041_7ae7a298da2e8
+Resolved skill 'autobyteus_outline_1792297076041_7ae7a298da2e8' to path: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076041_7ae7a298da2e8-un0amB/agents/autobyteus-multi-agent-1792297076041_7ae7a298da2e8/skills/autobyteus_outline_1792297076041_7ae7a298da2e8
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+Starting directory traversal for: '/Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906' with max_depth=null
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+Creating on-demand SkillWorkspace for: single_private_1792297076063_a0b5cfd7dc906
+Creating on-demand SkillWorkspace for: single_private_1792297076063_a0b5cfd7dc906
+Creating on-demand SkillWorkspace for: tone_1792297076063_a0b5cfd7dc906
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906.
+Initialized SkillWorkspace for skill 'single_private_1792297076063_a0b5cfd7dc906' at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906.
+Initialized SkillWorkspace for skill 'single_private_1792297076063_a0b5cfd7dc906' at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-multi-1792297076063_a0b5cfd7dc906/skills/tone_1792297076063_a0b5cfd7dc906.
+Initialized SkillWorkspace for skill 'tone_1792297076063_a0b5cfd7dc906' at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-multi-1792297076063_a0b5cfd7dc906/skills/tone_1792297076063_a0b5cfd7dc906
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+Created WorkspaceFileExplorer for skill_ws_single_private_1792297076063_a0b5cfd7dc906 (graphql-folder-children).
+Created WorkspaceFileExplorer for skill_ws_single_private_1792297076063_a0b5cfd7dc906 (graphql-file-content).
+Created WorkspaceFileExplorer for skill_ws_tone_1792297076063_a0b5cfd7dc906 (graphql-file-content).
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports shared agents with canonical single-skill, multi-skill, one-catalog private, and global fallback skills with catalog visibility
+Directory traversal for '/Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076063_a0b5cfd7dc906-3Y2WdA/agents/shared-single-1792297076063_a0b5cfd7dc906/skills/single_private_1792297076063_a0b5cfd7dc906' completed in 0.0090 seconds.
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+Starting directory traversal for: '/Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3' with max_depth=null
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+Creating on-demand SkillWorkspace for: team_shared_1792297076100_b43f9200296e3
+Creating on-demand SkillWorkspace for: team_shared_1792297076100_b43f9200296e3
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3.
+Initialized SkillWorkspace for skill 'team_shared_1792297076100_b43f9200296e3' at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3.
+Initialized SkillWorkspace for skill 'team_shared_1792297076100_b43f9200296e3' at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+Created WorkspaceFileExplorer for skill_ws_team_shared_1792297076100_b43f9200296e3 (graphql-folder-children).
+Created WorkspaceFileExplorer for skill_ws_team_shared_1792297076100_b43f9200296e3 (graphql-file-content).
+
+stdout | tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts > Agent package private skills GraphQL e2e > imports team-local private and team-shared skills through the one catalog plus warn-and-skip guards
+Directory traversal for '/Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/agent-package-private-local-1792297076100_b43f9200296e3-4DpQCB/agent-teams/team-1792297076100_b43f9200296e3/skills/team_shared_1792297076100_b43f9200296e3' completed in 0.0070 seconds.
+
+ ✓ tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts (4 tests) 194ms
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts
+AgentFactory (Singleton) initialized.
+
+(node:75301) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > imports root/support files, reuses equivalent URLs, and retains all fields on query and Reload
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-t4EkSB/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-t4EkSB/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > checks without replacement, retains offline availability, and updates a collection with disabled choices
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-rrnVuU/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-rrnVuU/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > maps conflicts with both paths and rejects the whole source without partial publication
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-137Eco/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-137Eco/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > retains REMOVING after deletion fault and retries through the API after owner reconstruction
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-gE6sT2/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-gE6sT2/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > keeps local mutations and Reload usable with a malformed managed registry without rewriting it
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-CLAbYu/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-CLAbYu/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > keeps local mutations and Reload usable with a malformed managed registry without rewriting it
+Initialized server settings service with 19 predefined settings
+Added new custom server setting: AUTOBYTEUS_SKILLS_PATHS
+Server setting 'AUTOBYTEUS_SKILLS_PATHS' updated
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > keeps local mutations and Reload usable with a malformed managed registry without rewriting it
+Server setting 'AUTOBYTEUS_SKILLS_PATHS' updated
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'CONFIGURED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-AZWilg/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-AZWilg/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'CONFIGURED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-6e8oov/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-6e8oov/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'CONFIGURED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-m6aHLM/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-m6aHLM/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'CONFIGURED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-YFyid8/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-YFyid8/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-beD06l/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-beD06l/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-FwHBH4/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-FwHBH4/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-rK750Q/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-rK750Q/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'codex'/'ALL_INSTALLED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-5RrDCQ/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-5RrDCQ/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'CONFIGURED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-ukm7Wr/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-ukm7Wr/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'CONFIGURED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-e8gtOD/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-e8gtOD/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'CONFIGURED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-nLfX4R/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-nLfX4R/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'CONFIGURED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-Qx23Qv/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-Qx23Qv/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-Mr5gUd/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-Mr5gUd/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-QamsTb/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-QamsTb/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-owQS9a/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-owQS9a/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'claude'/'ALL_INSTALLED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-eBwJ03/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-eBwJ03/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-VUKYXw/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-VUKYXw/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'CONFIGURED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-6Ddzmo/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-6Ddzmo/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-dLWjCC/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-dLWjCC/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-xHrfed/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-xHrfed/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-B0k6cf/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-B0k6cf/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-j8nDkH/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-j8nDkH/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=false
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-SU9Y5I/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-SU9Y5I/data/.env
+
+stdout | tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts > GitHub skill sources through production GraphQL documents > prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=true reverse=true
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-U0uo4p/data
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/github-skill-api-U0uo4p/data/.env
+
+ ✓ tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts (29 tests) 3013ms
+     ✓ prepares later run after real API update: 'grok'/'CONFIGURED' retain=true reverse=true  310ms
+     ✓ prepares later run after real API update: 'grok'/'ALL_INSTALLED' retain=false reverse=false  453ms
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts
+AgentFactory (Singleton) initialized.
+
+(node:77248) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Platform detection: Windows=false
+App root directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+App data directory: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+Custom app data directory set to: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP
+Updated config file path to /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/.env
+Loading environment from: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/.env
+[dotenv@17.3.1] injecting env (2) from ../../tmp/workspace-rest-appdata-tTKEzP/.env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Environment variables loaded successfully
+Server public base URL configured to: http://localhost:8000
+=== Starting logging configuration ===
+Logging config file is ignored in Node.js: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts/logging_config.ini
+============================================================
+SERVER PUBLIC URL: http://localhost:8000
+APP ROOT DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/repo/autobyteus-server-ts
+APP DATA DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP
+DB DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/db
+LOGS DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/logs
+DOWNLOAD DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/download
+MEMORY DIRECTORY: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/memory
+============================================================
+Initialized server settings service with 19 predefined settings
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+AgentRunManager initialized.
+AgentRunManager initialized.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Loading workspace packages to trigger registration...
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully loaded workspace packages.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Creating temp workspace at: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/temp_workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/temp_workspace.
+Initialized TempWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/workspace-rest-appdata-tTKEzP/temp_workspace with fixed ID 'temp_ws_default'
+Temp workspace created and cached with ID: temp_ws_default
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Registering agent customization processors...
+Input processor definition 'WorkspacePathSanitizationProcessor' (class: 'WorkspacePathSanitizationProcessor') registered successfully.
+Registered input processor 'WorkspacePathSanitizationProcessor'.
+Input processor definition 'UserInputContextBuildingProcessor' (class: 'UserInputContextBuildingProcessor') registered successfully.
+Registered input processor 'UserInputContextBuildingProcessor'.
+LLM response processor definition 'MediaUrlTransformerProcessor' (class: 'MediaUrlTransformerProcessor') registered successfully.
+Registered LLM response processor 'MediaUrlTransformerProcessor'.
+Agent customization processor registration complete.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully registered tool definition: 'read_file'
+Successfully registered tool definition: 'write_file'
+Successfully registered tool definition: 'edit_file'
+Successfully registered tool definition: 'run_bash'
+Successfully registered tool definition: 'start_background_process'
+Successfully registered tool definition: 'get_background_processes'
+Successfully registered tool definition: 'get_process_output'
+Successfully registered tool definition: 'stop_background_process'
+Successfully registered tool definition: 'search_web'
+Successfully registered tool definition: 'read_media_file'
+Successfully registered tool definition: 'download_media'
+Successfully registered tool definition: 'read_url'
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Registered required tool unit: Core Tools
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully registered tool definition: 'delegate_task'
+Successfully registered tool definition: 'list_available_agents'
+Successfully registered tool definition: 'generate_image'
+Successfully registered tool definition: 'edit_image'
+Successfully registered tool definition: 'generate_speech'
+Successfully registered tool definition: 'generate_video'
+Registered required tool unit: Task Delegation Tools
+Registered required tool unit: Agent Discovery Tools
+Registered required tool unit: Media Tools
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully registered tool definition: 'publish_artifacts'
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Registered required tool unit: Published Artifact Tools
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully registered tool definition: 'list_projects'
+Successfully registered tool definition: 'list_project_tasks'
+Successfully registered tool definition: 'create_project'
+Successfully registered tool definition: 'update_project'
+Successfully registered tool definition: 'create_or_update_project'
+Successfully registered tool definition: 'create_task'
+Successfully registered tool definition: 'update_task'
+Successfully registered tool definition: 'send_message_to'
+Successfully registered tool definition: 'get_handoff_rules'
+Registered required tool unit: Project Task Tools
+Registered required tool unit: Agent Communication Tools
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Registered required tool unit: Browser Tools
+
+stderr | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Overwriting existing tool definition for name: 'search_web'
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Successfully registered tool definition: 'search_web'
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Registered required tool unit: Search Tools
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e
+Server setting 'AUTOBYTEUS_RETROSPECTIVE_SKILL_IMPROVER_AGENT_DEFINITION_ID' updated
+Initialized 'AUTOBYTEUS_RETROSPECTIVE_SKILL_IMPROVER_AGENT_DEFINITION_ID' with 'autobyteus-retrospective-skill-improver'.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > reopens HTML and relative media over HTTP after external replacement and deletion
+GraphQL mutation to create workspace metadata
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-dFKDrS/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-dFKDrS/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > reopens HTML and relative media over HTTP after external replacement and deletion
+Created and registered workspace ID: agent_ws_44baa7cbd71be7d037fec044898ffa75bf0d911799e48d565bbb8491dd225856
+
+stderr | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > reopens HTML and relative media over HTTP after external replacement and deletion
+File not found in workspace agent_ws_44baa7cbd71be7d037fec044898ffa75bf0d911799e48d565bbb8491dd225856: docs/assets/diagram one.png
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > reopens HTML and relative media over HTTP after external replacement and deletion
+Closing FileSystemWorkspace agent_ws_44baa7cbd71be7d037fec044898ffa75bf0d911799e48d565bbb8491dd225856
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves encoded image paths through a real FileSystemWorkspace
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-l0AUAv/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-l0AUAv/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves encoded image paths through a real FileSystemWorkspace
+Created and registered workspace ID: agent_ws_836d84bda9a42739523271a094213a783188da1b41e1ddf72780e3eb44c2a8f7
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves encoded image paths through a real FileSystemWorkspace
+Closing FileSystemWorkspace agent_ws_836d84bda9a42739523271a094213a783188da1b41e1ddf72780e3eb44c2a8f7
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-L9MF7i/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-L9MF7i/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+Created and registered workspace ID: agent_ws_7f18d31455f6542a5033ada3bad9e60fa9c34fd74351bc1bf739d30c475d9f7e
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > serves SVG bytes with the image/svg+xml content boundary through a real FileSystemWorkspace
+Closing FileSystemWorkspace agent_ws_7f18d31455f6542a5033ada3bad9e60fa9c34fd74351bc1bf739d30c475d9f7e
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects a same-prefix sibling traversal through FileSystemWorkspace
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-NTyF1n/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-NTyF1n/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects a same-prefix sibling traversal through FileSystemWorkspace
+Created and registered workspace ID: agent_ws_9a13e011cf3ec7b0ee88ec801ba9c1761bf0045b9c0e7ec1c8db4412c9a0aa58
+
+stderr | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects a same-prefix sibling traversal through FileSystemWorkspace
+Security error accessing path ../workspace-sibling/leak.png in workspace agent_ws_9a13e011cf3ec7b0ee88ec801ba9c1761bf0045b9c0e7ec1c8db4412c9a0aa58: Access denied: Path resolves outside the workspace boundary.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects a same-prefix sibling traversal through FileSystemWorkspace
+Closing FileSystemWorkspace agent_ws_9a13e011cf3ec7b0ee88ec801ba9c1761bf0045b9c0e7ec1c8db4412c9a0aa58
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through FileSystemWorkspace
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-F3c7BC/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-F3c7BC/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through FileSystemWorkspace
+Created and registered workspace ID: agent_ws_b8eeff97870b62d552e591e6135e6f50687c6f22e4029f3b317d2efdf692c21f
+
+stderr | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through FileSystemWorkspace
+Security error accessing path /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-F3c7BC/absolute.png in workspace agent_ws_b8eeff97870b62d552e591e6135e6f50687c6f22e4029f3b317d2efdf692c21f: Access denied: Path resolves outside the workspace boundary.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through FileSystemWorkspace
+Closing FileSystemWorkspace agent_ws_b8eeff97870b62d552e591e6135e6f50687c6f22e4029f3b317d2efdf692c21f
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through the static workspace route
+Creating new workspace for rootPath: /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-M59mCj/workspace
+Created metadata-only FileSystemWorkspace at /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-M59mCj/workspace.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through the static workspace route
+Created and registered workspace ID: agent_ws_560933c5fc0b953bc3e0c31e4c07394eb74aad5391a9b884705e7bae1715d34a
+
+stderr | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through the static workspace route
+Security error accessing path /Users/normy/nfs-extract-api002-S-bvh3zjh0/tmp/autobyteus-workspace-rest-e2e-M59mCj/absolute.html in workspace agent_ws_560933c5fc0b953bc3e0c31e4c07394eb74aad5391a9b884705e7bae1715d34a: Access denied: Path resolves outside the workspace boundary.
+
+stdout | tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts > workspace content REST boundary e2e > rejects an absolute candidate through the static workspace route
+Closing FileSystemWorkspace agent_ws_560933c5fc0b953bc3e0c31e4c07394eb74aad5391a9b884705e7bae1715d34a
+
+ ✓ tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts (6 tests) 240ms
+
+ Test Files  3 passed (3)
+      Tests  39 passed (39)
+   Start at  06:17:50
+   Duration  14.31s (transform 5.38s, setup 36ms, import 10.21s, tests 3.45s, environment 0ms)
+

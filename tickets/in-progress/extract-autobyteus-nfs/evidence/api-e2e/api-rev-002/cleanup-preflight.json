@@ -1,0 +1,21 @@
+{
+  "source": {
+    "N": {
+      "inputs": 108,
+      "mismatches": []
+    },
+    "S": {
+      "inputs": 7307,
+      "mismatches": []
+    }
+  },
+  "copy_mismatches": [],
+  "fixture_count": 11,
+  "fixture_mismatches": [],
+  "protected_count": 9,
+  "protected_mismatches": [],
+  "owned_processes": [],
+  "owned_cwds": [],
+  "D0_head_exit": 128,
+  "D0_branch": "refs/heads/main"
+}

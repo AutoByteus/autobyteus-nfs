@@ -1,106 +1,91 @@
 # API/E2E Execution Coverage Report
 
 ## Latest authoritative result
-**API-REV-001 — Pass / 95.00% (2026-10-18).** Extract-autobyteus-nfs, not the completed shared-network-workspaces task. All11 planned API case groups have final Pass. The initial S03 fixture-closure failure is preserved and resolved by environment-only correction, not relabeled.
-Large / High / Reviewed. **Proportional successful-test review required** before Delivery. No production or durable-test edits by API. No target merge/push/tag/release/deploy/TaskDone/user verification.
+**API-REV-002 — Pass /95.00% (2026-10-18), current integrated extraction scope.** Large / High / Reviewed. E01/S01–06/E02 freshly Pass; N01–03 Still Valid / carried Pass after exact108-input verification. All11 case groups reconciled; no unresolved in-scope failure, blocked or unstarted case. No API production/durable-test changes. Proportional successful-test review required before Delivery resumes.
+This is extract-autobyteus-nfs, not a reopened shared-filesystem/editor Task. No storage/platform/provider/publication/end-user verification implied. AC007 and Delivery DR001 remain downstream.
 
-## Execution round and authority
-First completed round; prior API/DR result N/A. Trigger CRR002 source Pass100 over IR002/IR001. Approved R2/SR003, Ready SR004, ARCH-REV-002 remain governing.
-Authority paths at this ticket root: requirements-doc.md, investigation-notes.md, solution-revision-record.md, design-spec.md, user-filesystem-boundary-correction.md, solution-design-handoff.md; design-review-report.md and architecture-review-revision-record.md; implementation-handoff.md and implementation-revision-record.md; code-review-report.md and code-review-revision-record.md.
-Coverage investigation and ledger were written before execution. Their canonical paths are api-e2e-coverage-investigation.md / api-e2e-test-case-ledger.md; history is api-e2e-revision-record.md.
-N input HEAD62f7b3933b4ec040b50f2ac12c333b2a9f23b459 (review receipt; unchanged service source83726b27400b405a7a6a79bd962d8e2419daa561). S a2023feff3d498fb6c51cebf1c93360da3679a45. Both branches codex/extract-autobyteus-nfs.
-N=/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs
-S=/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs
+## Round identities and governing inputs
+Trigger CRR005 Pass100 over IR004/IR003 integrated recovery after DR001. R2/SR003, ReadySR004/ARCH002 unchanged. Full requirements/investigation/design/solution history/supplement and implementation/review/history accepted; eight authority docs verified unchanged from API001. Current investigation and ledger were updated BEFORE execution; history preserved in api-e2e-revision-record.md.
+N=/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs; input HEAD062b5da0c9ba78bf5573feafaf0356fee2cf88f9; service83726b27400b405a7a6a79bd962d8e2419daa561 unchanged.
+S=/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs; tested **60b67dabecaf5569a8e26128dbdb26117c988811**, branch codex/extract-autobyteus-nfs. Merge156ea2d integrates personal2f211340; only three test files authored after merge, current exact source archived.
+Prior API001 Pass95 / CRR003 applies to Sa2023feff, not current integrated S. DR001 is Delivery-owned Blocked—Local Fix; this report supplies new API evidence without declaring delivery complete. Known obsolete R1 prose in S RELEASE.md remains a required Delivery docs-sync item.
 
-## Scope / changed-boundary evidence
-SCN001/002/003/006/007: independent service/build/distribution, host-only admission/lifecycle, ordinary application paths, private runtime profiles. SCN004/AC007 remains Delivery-owned. SCN005 live provider/platform/old filesystem/editor campaigns are excluded, not Passed.
-Exact commands/cwd/exits/timing are in evidence/api-e2e/api-rev-001/commands.jsonl; environment/tool versions in environment.json/toolchain.json. Production source is archived exactly; no stale installed app or old dist was used. Only root ticket history was initially excluded;11 tracked fixtures actually consumed by two broad unit suites were restored verbatim after ENOENT proof.
+## Impact, execution and case results
+Current TESTING.md core/contracts/harness/fixture impact rule: ALL S01–06 rerun, not only the removed unused Skill import. E01/E02 fresh. N01–03 unchanged and carried with original limits. Full before-plan/diff and carry proof: [validation-plan](evidence/api-e2e/api-rev-002/validation-plan.md), [carry-validity](evidence/api-e2e/api-rev-002/carry-validity.json), integrated-changed-paths.txt.
+Evidence **E2** = evidence/api-e2e/api-rev-002; **E1** = evidence/api-e2e/api-rev-001. Exact commands/cwd/exits/durations in E2/commands.jsonl; environment/tool versions and source hashes in E2/environment.json, toolchain.json and input-audit.json.
 
-| Case | Final | Observation / boundary | Evidence under evidence/api-e2e/api-rev-001/ |
-|---|---|---|---|
-| E01 | Pass | 47 source/license/pin/removal contracts; exact108 N/7215 S source archive inputs | source-contract-audit.json; archive-integrity.json |
-| N01 | Pass | 7 Go packages;59 top-level tests/252 including subtests Pass, race/vet; focused locked refusal | nfs-focused.log; nfs-race.log; nfs-vet.log |
-| N02 | Pass | 19 Python tests executed;1 Go-child skip; workflow/shell/hash and expected publication refusal | nfs-python.log; nfs-actionlint.log; nfs-shell.log; nfs-source-hash.log; nfs-publish-refusal.log |
-| N03 | Pass | 4 targets compile, native version, actual retained arm64 manifest/bytes verified and embedded compile | binaries.json; engine-check.json; nfs-version.log; nfs-build-embedded.log |
-| S01 | Pass | Frozen install and fresh documented production/prerequisite builds/typecheck | consumer-install.log; consumer-build.log; consumer-typecheck.log |
-| S02 | Pass | 7 files/34 tests; ordinary registered errors and private preparation/files/process controls | consumer-narrow.log |
-| S03 | Pass | Same full broad suite green after exact replay-fixture closure; initial failure preserved | consumer-unit-confirm.log; consumer-fixture-confirm.log; fixture-restoration.json; consumer-unit.log |
-| S04 | Pass | Local composed ordinary file/skill API contracts | consumer-routes.log |
-| S05 | Pass | Local run/memory layout and actual native PTY/WebSocket lifecycle | consumer-path-pty.log |
-| S06 | Pass | Generic Bash launcher and disabled Guide/localization checks; carried current render evidence | consumer-launcher.log; consumer-guide-confirm.log; consumer-localization.log; consumer-web-boundary.log |
-| E02 | Pass | Both owned archives removed, no owned processes, source/protected data unchanged | cleanup.json; cleanup-preflight.json |
+| Case | Result / attribution | Evidence and boundary |
+|---|---|---|
+| E01 | Fresh Pass | E2/source-contract-audit.json:47 current source/license/pin/Guide/removal checks; E2/archive-integrity.json:7307 exact S inputs +11 replay fixtures;108 N exact to E1 |
+| N01 | Carried Pass, NOT rerun | E1/nfs-focused.log, nfs-race.log, nfs-vet.log;7 packages,59 top-level/252 incl subtests; real trusted store/lock/refusal before doubled effects |
+| N02 | Carried Pass, NOT rerun | E1/nfs-python.log:19 executed/1 child skip; actionlint/shell/sourcehash/refusal logs. Go parent exercises permission child |
+| N03 | Carried Pass, NOT rerun | E1/binaries.json, engine-check.json, nfs-version.log/nfs-build-embedded.log;4-target compile, native version and actual arm64 embed, not runtime qualification |
+| S01 | Fresh Pass | E2/consumer-install/build/typecheck/nuxt-prepare logs; whole frozen install and documented current prerequisites/builds |
+| S02 | Fresh Pass | E2/consumer-overlap.log and consumer-narrow.log; current Claude/Codex overlap plus7 path/profile/native-child controls |
+| S03 | Fresh Pass | E2/consumer-unit.log, consumer-integration.log, consumer-core.log; expanded activation/runtime/path/memory/notice ownership, integrated Brief/notice and core input-preface |
+| S04 | Fresh Pass | E2/consumer-routes.log; current composed HTTP/GraphQL/inject file/skill contracts, ordinary owned files/bytes/MIME/containment/removal |
+| S05 | Fresh Pass | E2/consumer-path-pty.log; current run/memory lifecycle and native PTY/WebSocket actual cwd/home/error/close/churn |
+| S06 | Fresh Pass | E2/consumer-launcher/guide/localization/web-boundary logs; generic Bash/Docker-command fixture + disabled Guide/components/guards |
+| E02 | Fresh Pass | E2/cleanup.json and cleanup-preflight.json; only own archive removed, no owned process/cwd, source/protected inputs exact |
 
 ## Acceptance-Criteria Proof
-Evidence folder: /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001
-Table filenames resolve under that folder unless marked ticket-root. The API Pass covers executable extraction scope; AC007 remains explicitly unproven by this stage.
+Critical proof uses current S and verified unchanged N only. AC identifiers without hyphens in older ledger rows mean the same approved ACs.
+Evidence folder absolute: /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002
 
-| AC | Critical to API gate | Cases | Evidence | Disposition |
-|---|---|---|---|---|
-| AC001 | Yes | E01/N01/N02/N03 | archive-integrity.json; nfs-race.log; nfs-python.log; binaries.json | Proven: independent N root/toolchain with no S source access required |
-| AC002 | Yes | N02/N03 | nfs-python.log; nfs-source-hash.log; binaries.json; engine-check.json | Proven: layout/hash/invalidation/manifest/embed/compiler boundary; runtime qualification not claimed |
-| AC003 | Yes | S02/S03/S04/S05/S06 | consumer-narrow.log; consumer-unit-confirm.log; consumer-routes.log; consumer-path-pty.log; consumer-launcher.log | Proven: ordinary selected path/error, file API, run/PTY and generic launcher mapping |
-| AC004 | Yes | E01 | source-contract-audit.json | Proven: exact licenses/CLA/third-party/section7 via license equality, engine recipes/pins |
-| AC005 | Yes | E01/N02/S06 | source-contract-audit.json; nfs-python.log; nfs-publish-refusal.log; consumer-guide-confirm.log | Proven: qualification remains empty; unqualified publication refused, Guide disabled |
-| AC006 | Yes | E01/S01/S03/S06 | source-contract-audit.json; consumer-build.log; consumer-typecheck.log; consumer-unit-confirm.log; consumer-launcher.log | Proven: removed bridge/owners/imports, independent builds, current owners execute |
-| AC007 | No — Delivery-owned | None | implementation-handoff.md and design-spec.md (ticket-root authorities) | Not Proven / Not Tested here: fresh target verification and ordered N then S finalization remain Delivery work |
-| AC008 | Yes | E01/E02/all | commands.jsonl; execution-summary.json; attempts.md; cleanup.json | Proven: traceable executions, retained failures/skips/cleanup and bounded verdict |
-| AC009 | Yes | N01 | nfs-focused.log; nfs-race.log; source-contract-audit.json | Proven: actual trusted active/pending admission/lock before effects, current host-only shape and retained lifecycle controls |
-| AC010 | Yes | S02/S03/S04/S05 | consumer-narrow.log; consumer-unit-confirm.log; consumer-routes.log; consumer-path-pty.log | Proven: private exact pre-await owner, aliases/collision/no-binding/no fallback and source-preserving close/retry/release |
+| AC | Cases | Direct evidence / conclusion |
+|---|---|---|
+| AC-001 | E01/N01–03 | E2/carry-validity.json + E1/archive-integrity.json/nfs-race.log/nfs-python.log/binaries.json: independent unchanged N archive/toolchain has no S dependency |
+| AC-002 | N02/03 | E1/nfs-python.log/nfs-source-hash.log/binaries.json/engine-check.json, exact N equality E2: root layout/hash/invalidation/manifest/embed/four compilations |
+| AC-003 | S02–06 | E2/consumer-narrow.log/consumer-unit.log/consumer-routes.log/consumer-path-pty.log/consumer-launcher.log: ordinary selected path/error/file/run/native PTY/generic mapping |
+| AC-004 | E01 | E2/source-contract-audit.json: exact license/CLA/notices/section7 content and pinned engine recipes, unchanged N inputs |
+| AC-005 | E01/N02/S06 | E2/source-contract-audit.json/consumer-guide.log + E1/nfs-publish-refusal.log/nfs-python.log: empty qualification, refused publish, disabled Guide |
+| AC-006 | E01/S01–03/S06 | E2/source-contract-audit.json/consumer-build.log/consumer-typecheck.log/consumer-unit.log/consumer-launcher.log: removed coupling absent; current integrated owners/builds execute |
+| AC-007 | None; Delivery-owned | **Not Tested / not achieved here**. Fresh target refs, ordered N→S finalization/push/cleanup and D0 PM preservation remain downstream |
+| AC-008 | All/E02 | E2/commands.jsonl/execution-summary.json/cleanup.json + canonical ledger/history: exact identity, traceable current/carried proof, honest skips and cleanup |
+| AC-009 | N01 | E1/nfs-focused.log/nfs-race.log + E2/carry-validity.json: current host-only direct reader, incompatible active/pending refusal under lock before effects, lifecycle controls unchanged |
+| AC-010 | S02–05 | E2/consumer-narrow.log/consumer-unit.log/consumer-integration.log/consumer-routes.log/consumer-path-pty.log: exact private owner, pre-await/no-binding/no-fallback, alias/collision/source preservation, close/retry/release and integrated activation/memory |
 
-## Counts and exact limits
-- consumer-narrow: Test Files  7 passed (7); Tests  34 passed (34); Duration  7.82s (transform 2.36s, setup 64ms, import 5.78s, tests 706ms, environment 0ms).
-- consumer-unit: Test Files  2 failed | 102 passed | 4 skipped (108); Tests  12 failed | 1186 passed | 6 skipped (1204); Duration  71.00s (transform 3.90s, setup 815ms, import 30.21s, tests 30.67s, environment 7ms).
-- consumer-fixture-confirm: Test Files  2 passed (2); Tests  86 passed (86); Duration  3.02s (transform 1.52s, setup 35ms, import 2.34s, tests 31ms, environment 0ms).
-- consumer-unit-confirm: Test Files  104 passed | 4 skipped (108); Tests  1198 passed | 6 skipped (1204); Duration  76.72s (transform 5.12s, setup 972ms, import 34.52s, tests 30.93s, environment 8ms).
-- consumer-routes: Test Files  3 passed (3); Tests  39 passed (39); Duration  16.88s (transform 6.24s, setup 43ms, import 12.22s, tests 3.88s, environment 0ms).
-- consumer-path-pty: Test Files  3 passed (3); Tests  17 passed (17); Duration  11.60s (transform 5.18s, setup 78ms, import 9.17s, tests 1.28s, environment 0ms).
-- consumer-guide: Test Files  4 failed (4); Tests  no tests; Duration  964ms (transform 32ms, setup 0ms, collect 0ms, tests 0ms, environment 821ms, prepare 513ms).
-- consumer-guide-confirm: Test Files  4 passed (4); Tests  24 passed (24); Duration  9.21s (transform 3.70s, setup 16.32s, collect 171ms, tests 103ms, environment 643ms, prepare 447ms).
-- Counts are separate runs, not additive unique coverage: S02's34 and the restored-fixture86 are repeated inside S03's final broad suite.
-- Go cmd package has no tests; standalone TestInstallerDirectoryModeChild is opt-in skipped, and the Python child fixture is skipped in standalone discovery. Parent TestBootstrapDirectoryModes invokes the permission child regression and passed. Do not promote either skip to a separate Pass.
-- Six AGY live tests/four files are gated and not executed; no authenticated provider proof claimed. Launcher ran34 tests;2 skipped: pwsh unavailable and port8001 unavailable for collision fixture. Existing controlled-busy-port coverage passed without changing the occupying service. Skips are not masked.
-- Frozen install warned about a not-yet-built devkit bin and a disallowed unrelated @google/genai build script. Documented integration preparation built the devkit and invokes its CLI directly; all selected builds/checks passed. No approval policy or dependency scripts were loosened.
+## Fresh counts (separate runs, not additive unique coverage)
+- **consumer-overlap**: Test Files  2 passed (2); Tests  28 passed (28); Duration  5.85s (transform 2.82s, setup 35ms, import 4.74s, tests 17ms, environment 0ms)
+- **consumer-narrow**: Test Files  7 passed (7); Tests  34 passed (34); Duration  9.84s (transform 3.27s, setup 70ms, import 8.09s, tests 687ms, environment 0ms)
+- **consumer-unit**: Test Files  168 passed | 4 skipped (172); Tests  1666 passed | 6 skipped (1672); Duration  177.67s (transform 8.27s, setup 1.53s, import 71.21s, tests 88.43s, environment 13ms)
+- **consumer-integration**: Test Files  3 passed (3); Tests  21 passed (21); Duration  8.27s (transform 2.92s, setup 38ms, import 5.39s, tests 2.18s, environment 0ms)
+- **consumer-core**: Test Files  3 passed (3); Tests  15 passed (15); Duration  619ms (transform 449ms, setup 49ms, import 624ms, tests 24ms, environment 0ms)
+- **consumer-routes**: Test Files  3 passed (3); Tests  39 passed (39); Duration  14.31s (transform 5.38s, setup 36ms, import 10.21s, tests 3.45s, environment 0ms)
+- **consumer-path-pty**: Test Files  3 passed (3); Tests  17 passed (17); Duration  7.89s (transform 3.20s, setup 39ms, import 5.91s, tests 1.21s, environment 0ms)
+- **consumer-launcher**: Ran 36 tests in 31.255s; OK (skipped=2)
+- **consumer-guide**: Test Files  4 passed (4); Tests  24 passed (24); Duration  9.04s (transform 3.69s, setup 15.91s, collect 183ms, tests 105ms, environment 784ms, prepare 428ms)
 
-## Attempts and preliminary classification
-S03 initial12 failures were all ENOENT for11 replay files under root tickets/done excluded by API archive setup. fixture-restoration.json identifies exact current-commit paths/hashes; tests and assertions unchanged. The2 affected suites passed86 tests, followed by full same broad command. **API-owned environment Local Fix resolved**; no product defect or reviewer-origin routing required. Initial consumer-unit.log and commands remain.
-S06 initially collected zero tests in4 suites because API omitted documented Nuxt preparation (.nuxt/tsconfig.json absent). consumer-guide.log preserves that setup failure. Ran documented nuxt prepare and the identical4 suites passed; no source/config/assertion change. API-owned environment Local Fix resolved.
+Overlap28 and narrow34 are repeated within broad units, not extra unique tests. IR0031666/21/15/24/34 and final76 are Implementation-attributed historical/local checks, not added to API execution totals. Raw API002 logs/commands are the current evidence.
+Six gated live AGY tests/four files remain skipped, not Passed. Launcher2 skips are disclosed in its raw log (PowerShell unavailable and occupied default collision port); controlled busy-port fixture still executes without touching the occupying service. No authenticated provider or real Docker qualification. N standalone child skip and Go-parent execution remain distinct carried facts.
+Fresh install warnings about devkit bins before documented build and ignored unrelated @google/genai build script are retained. No dependency/security policy loosened or source upgraded. Current preparation produced the required outputs. Toolchain: Node22.21.1, pnpm10.28.2, test Python3.14.2, Darwin arm64; orchestrator system Python3.9.6. No new Go/toolchain/engine download or N execution.
 
-An initial summary formatter mixed None with bool during Go counting; original script retained under summary-attempt-1, corrected without altering raw logs. Evidence tooling error, not product failure. Other discovery/tooling notes in attempts.md.
+## Attempts / findings / persisted-data disposition
+No failed execution/preparation attempt this round. Prior API001 replay-fixture and Nuxt-preparation failures remain in its logs/history and were resolved there; this round included exact11 replay fixtures and Nuxt prepare upfront. Current CR001/CR002 are source-review-resolved; no new defect or test validity ambiguity found. No assertion weakening or production change.
+The E01 copied audit event's phrase 'independent archives exact' refers to fresh S archive plus exact carried N input identity; **no second fresh N archive/run occurred in API002**.
+Approved Directly Usable—No Migration remains: host-only absent/null/empty Nodes usable, current writes omit Nodes; incompatible active/pending obligations refuse before effects, unknown harmless fields/history inert. No compatibility version branch, mount classifier/Git trust/pin, migration or scan/sweep introduced. Profiles remain exact-owned; project skills/history/credentials not rewritten. Legacy/Compatibility/Persisted sections agree with observed source and tests.
 
-## Confidence scorecard
-| Category | Post-repository | Final | Supporting proof | Residual limit |
-|---|---|---|---|---|
-| Requirement and acceptance-criteria proof | 95% | 95% | Direct evidence for AC001–006/008–010; AC007 explicitly belongs to Delivery | No publication/platform inference; scope-limited proof |
-| Changed-boundary execution directness | 95% | 95% | Real root builds/tooling/locks/readers/files/private profile owners; no sibling linkage | Privileged mount/engine side effects remain doubled; underlying production backend/platform/service mechanically unchanged |
-| Cross-boundary integration realism and mock gap | 95% | 95% | Local HTTP/GraphQL + actual native PTY/WebSocket + Codex/Grok owned child protocols | Fake model/native-protocol fixtures and Claude client doubles, not authenticated provider proof |
-| Environment, configuration, identity and fixture fidelity | 95% | 95% | Exact current source archives, canonical private HOME/TMPDIR, frozen dependencies/current builds,11 exact restored tracked fixtures | Single Darwin arm64 host; no target platform execution claim |
-| Failure, edge-case, lifecycle and recovery | 95% | 95% | Malformed/predecessor refusal before effects, source/busy-detach controls, cancellation, alias/collision, exact close/retry/release | No live installation migration/outage/reboot qualification |
-| User-surface, browser and desktop-shell | 95% | 95% | Fresh Guide/component/localization checks; exact-byte current Guide matches IR001 rendered EN/zh wide/narrow evidence | Carried rendered component proof attributed to IR001; no API browser or Electron rerun, no shell-specific change |
-| Durable regression coverage quality and relevance | 95% | 95% | Current R2 ownership/path/admission tests replace obsolete coupling tests; narrow then broader regression green | Replay fixtures currently live in tracked ticket data; isolated runs must include these explicit dependencies |
+## Confidence and broader-validation decision
+| Mandatory category | Post-repository | Final | Evidence / residual limit |
+|---|---|---|---|
+| Requirement and AC proof |95%|95%| All critical API-owned ACs directly evidenced; AC007 explicit downstream boundary, no release/platform inference |
+| Changed-boundary execution directness |95%|95%| Current real files/paths/profile owners/builds/native children and exact carried store/locks; privileged N effects doubled |
+| Cross-boundary realism / mock gap |95%|95%| Actual local HTTP/GraphQL/PTY/WebSocket + native scripted children + fresh integrated runtime/core; Claude/model/remote-fetch doubles are not paid-provider proof |
+| Environment/configuration/identity/fixtures |95%|95%| Fresh7307+11 exact-source archive, private HOME/TMPDIR/store, frozen deps/current builds; one Darwin arm64 host only |
+| Failure/edge/lifecycle/recovery |95%|95%| Exact cleanup/cancel/retry, alias/collision/source safety, registered errors, native close/churn, integrated notice/memory; no live outage/upgrade/reboot claim |
+| User-surface/browser/desktop-shell |95%|95%| Fresh Guide/component/guards; byte-exact Guide/catalog vs IR001 EN/zh wide/narrow render evidence; no new authored UI/shell behavior or browser rerun |
+| Durable regression quality/relevance |95%|95%| Current approved path/ownership tests, expanded affected regression and real socket/process layers; explicit tracked ticket replay dependencies |
 
-Overall post-repository and final confidence **95.00%**, equal mean. Every critical API-owned AC has direct proof, no category below90%, no material unclosed R2 boundary risk.
-**Broader validation: Not Required beyond executed repository-native process/API/PTY tests.** Real filesystem, lock, native child, local socket and PTY boundaries are already exercised. Changed host admission is tested before privileged effects; unchanged backend/platform/service bytes are mechanically proven. A new mounted/provider/desktop campaign would expand qualification rather than close a material extraction gap.
-Guide: carried IR001 implementation-rendered current component EN/zh at1440/390, verified exact current component/catalog bytes and fresh component tests. API personally inspected en-390/zh-1440 and all4 result states. No new browser run or Electron shell claim. No effect on running user application.
+Overall post-repository/final **95.00%**, equal mean; no category below90%, no missing/failing critical API-owned criterion.
+**Broader validation: Not Required beyond executed repository-native process/API/PTY surfaces.** They already cross the actual changed filesystem/registered-path/process/socket/memory/publication boundaries. Unchanged host backend equality and pre-effect admission proof do not require a new mounted campaign. Integrated Guide presentation inputs unchanged, fresh component checks pass. A new paid-provider/VM/mount/browser/desktop campaign would expand qualification rather than close a material R2 uncertainty.
+No only-user-checkable dependency is needed for this verdict. Live installed upgrades/mounted/cross-OS/physical/provider/signing/hosted-publication remain Not Tested, not a questionnaire or implied Pass.
 
-## Persisted transition / legacy check
-Approved **Directly Usable — No Migration**: absent/null/empty old Nodes are usable and not perpetuated by current writers; meaningful/malformed active or pending obligations refuse under existing admin lock before binary or resource effects. Unknown additive fields/history remain inert; no scan/migration/dual-version runtime. Install existing binary/state preservation, all setup entry refusal, source/pending/permissions/busy-detach controls execute. Application registration/history/project skills/credentials are not transformed.
-No invalid compatibility retention observed. Removed binding/classifier/automatic Git trust and paired protocol assertions were superseded by R2; ordinary path/private profile tests are their replacements. No source or test removed by API.
+## Changes, cleanup and next stage
+API durable tests added/updated/removed: **None**; production edits: **None**. Current three post-merge fixture cleanups were already source-reviewed CRR004/005; E2/test-review-scope.md identifies them for proportional successful-test gate. Temporary scripts only orchestrate current-source archives, documented checks, evidence and cleanup; no shipped framework addition.
+Single API002 archive/home/tmp/store/dependencies/builds removed after no owned process or cwd.108 N and7307 S source inputs,11 current replay fixtures,9 protected PM/retained-engine files unchanged. D0 remains unborn main. No user app/node/VM/mount/firewall/credential mutation, target ref fetch/merge/push/tag/release/deploy/TaskDone/user verification. Assigned worktree old dist untouched.
+Fresh routing required: successful-test gate first, then normal Delivery continuation. Delivery must refresh targets, sync obsolete S RELEASE.md R1 tail and own AC007 ordered finalization; DR001 not overridden here. No duplicate informational dispatch or reopened old filesystem/editor Task.
 
-## Durable coverage and proportional review
-API durable additions/updates/removals: **None**; current R2 coverage is adequate and unchanged. Temporary ticket scripts only orchestrate safe archives/checks/audits. The cumulative R2 test delta is listed in evidence/api-e2e/api-rev-001/test-review-scope.md (N relativefc5d2ff; S relative3712cd9b; old embedded-service deletion is not a new API change).
-Review should remain proportional to executed current coverage and stated fixture/mock limits. No source rereview, old af9f23/editor acceptance loop or new approval request.
+## Applied API-REV-002 route
+Fresh get_handoff_rules selected only /software_engineering_team/code_reviewer: Pass + Large/High + proportional successful-test gate. Direct low-risk Delivery, failure-origin and upstream ambiguity rules do not match. routing.json preserves exact rules. No duplicate notification.
 
-## Environment / mocks / safety / cleanup
-Fresh owned archives with explicit PATH/HOME/TMPDIR and no inherited application/provider environment. Actual versions/platform in toolchain.json; Go1.27.2 official archive SHA verified, Node22.21.1, pnpm10.28.2, Python system3.9, Darwin arm64.
-N tests double root/engine/mount effects; Docker launcher doubles Docker. Claude SDK failure controls are doubles; Codex/Grok protocol executables are actual owned children without paid inference. Local route/run/PTY tests use minimal fixture data and documented current build prerequisites. No VM/Docker/mount/firewall/user-app/provider/remote-ref operation.
-Both owned source/tool/cache/node_modules/data/build roots removed after no-owned-process preflight.108 N and7215 S source files unchanged;11 restored fixtures hash-exact;9 protected PM/retained-engine files unchanged. D0 remains unborn main with PM data preserved. cleanup.json and cleanup-preflight.json prove boundaries. No binaries/bundles/database/node_modules committed.
-No only-user-checkable behavior is required for this API verdict. Live mounted/install/provider/physical/cross-OS/signing/hosted-publication qualification remains Not Tested, not a user-approval request. AC007 is pending downstream Delivery work.
-
-## Ledger reconciliation and next action
-Ledger initialized before execution, each attempt recorded before next case; N and S independent groups ran concurrently in personally owned processes. E01/N01–03/S01–06/E02 all final Pass. No running, interrupted, blocked or unstarted API case. Initial S03 failure retained with final resolution.
-Fresh get_handoff_rules must select the exact recipient. Request proportional successful-test review; then normal Delivery. No direct Delivery or duplicate notifications.
-
-## Applied route
-Fresh rules selected only /software_engineering_team/code_reviewer: API Pass + Large/High + cumulative proportional test-code review. Failure, direct low-risk Delivery, and upstream-ambiguity rules do not match. routing.json preserves the returned rules. No duplicate notification.
-
-Raw test logs retained verbatim; git whitespace diagnostics are confined to captured log formatting. Non-log artifact check exit0; artifact-whitespace.json records both results.
+Artifact hygiene: raw test logs and the captured integration diff retain original EOF/context whitespace (git check exit2); all non-log/non-diff artifacts pass. E2/artifact-whitespace.json records the explicit exceptions. This is not a test failure.

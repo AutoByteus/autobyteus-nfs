@@ -1,0 +1,27 @@
+S01 Started Frozen install with script-only integration build closure; isolated private HOME/TMPDIR N/A
+consumer-install 0 expected 0
+consumer-build 0 expected 0
+consumer-typecheck 0 expected 0
+consumer-nuxt-prepare 0 expected 0
+S01 Completed Fresh production/prerequisite builds and production typecheck exit0 Pass
+S02 Started Current ordinary path and private profile narrow tests N/A
+consumer-overlap 0 expected 0
+consumer-narrow 0 expected 0
+S02 Completed Real files/aliases/collisions and registered error/native Codex/Grok process controls passed Pass
+S03 Started Broader affected ownership/runtime/path/terminal regression N/A
+consumer-unit 0 expected 0
+consumer-integration 0 expected 0
+consumer-core 0 expected 0
+S03 Completed Affected regression suite passed; live-gated skips retained separately Pass
+S04 Started Local socket/inject file and skill API contracts N/A
+consumer-routes 0 expected 0
+S04 Completed Ordinary file/skill local transport and filesystem cases passed Pass
+S05 Started Current-build run/memory layout/native PTY and WebSocket lifecycle N/A
+consumer-path-pty 0 expected 0
+S05 Completed Local run registration/memory and actual native PTY/WebSocket lifecycle passed Pass
+S06 Started Generic launcher and disabled Guide/localization tests N/A
+consumer-launcher 0 expected 0
+consumer-guide 0 expected 0
+consumer-localization 0 expected 0
+consumer-web-boundary 0 expected 0
+S06 Completed Generic launcher and Guide/guards passed; explicit skips in log; carried Guide render inputs verified Pass

@@ -1,6 +1,6 @@
 # API/E2E Test-Case Ledger
 
-## Ledger Meta
+## API-REV-001 Ledger Meta (historical)
 - Task: extract-autobyteus-nfs; first round API-REV-001 (no prior API result).
 - Scope: approved R2/SR003, Ready SR004, ARCH-REV-002, CRR-002. Large / High / Reviewed.
 - Investigation: api-e2e-coverage-investigation.md. Report: api-e2e-execution-coverage-report.md (pending).
@@ -55,5 +55,53 @@
 | 2026-10-18T03:33:59.583202+00:00 | E02 | Started | Check source/protected data and own runtime process quiescence, then remove only two API archives | N/A |  |
 | 2026-10-18T03:34:26.859833+00:00 | E02 | Completed | Both API scratch roots removed; 108 N/7215 S source inputs and nine protected PM/engine files unchanged; no owned process remains | Pass | cleanup.json; cleanup-preflight.json |
 
-## Final Reconciliation
+## API-REV-001 Final Reconciliation (historical)
 All11 case groups have final Pass; initial S03/S06 Fail attempts are retained, exact fixture/build setup corrected and same broad command rerun. No running/interrupted/unstarted API case. Reconciled into api-e2e-execution-coverage-report.md (API-REV-001 Pass95%). AC007 is downstream Delivery-owned, not claimed as executed.
+
+## API-REV-002 pre-execution impact plan
+
+# API-REV-002 current integrated validation plan
+
+Planned before execution 2026-10-18. Trigger CRR005 Pass100 after IR003/IR004/DR001.
+Last API001 S:a2023feff3d498fb6c51cebf1c93360da3679a45; current S:60b67dabecaf5569a8e26128dbdb26117c988811.
+N service83726b unchanged: all108 non-ticket tracked inputs match API001; eight authority documents unchanged.
+Current S TESTING.md shared-foundation rule invalidates all six recorded S groups after core/contracts/test harness/fixture integration. Complete diff: integrated-changed-paths.txt.
+
+| Case | Last validated | Decision / expected result |
+|---|---|---|
+| E01 | API001 N83726/Sa2023 | Rerun current removal/license/Guide equality and source/authority audit; no coupling restored |
+| N01 | API001 N83726 | Still Valid: all independent N inputs exact; Go race/vet/locked refusal with original privileged-double limits |
+| N02 | API001 N83726 | Still Valid: independent packaging/hash/workflow/refusal,19 Python pass/1 child skip |
+| N03 | API001 N83726 | Still Valid: four-target compile/native version/actual arm64 embed; no runtime qualification |
+| S01 | API001 Sa2023 | Rerun: clean frozen whole-workspace install, current integration:prepare/typecheck, Nuxt prepare |
+| S02 | API001 Sa2023 | Rerun:7 private-profile/path/process suites; first affected Claude/Codex/Brief overlap integration controls |
+| S03 | API001 Sa2023 | Rerun and broaden: all agent-execution/workspace/terminal/Codex/memory/skill-notice units; core input-preface/collector/pipeline and Brief/skill-notice integration |
+| S04 | API001 Sa2023 | Rerun:3 composed API suites, actual HTTP/GraphQL/inject bytes/MIME/ordinary skill/profile paths |
+| S05 | API001 Sa2023 | Rerun:3 run/memory/native PTY/WebSocket suites; current built core/runtime, DummyLLM only |
+| S06 | API001 Sa2023 | Rerun: launcher/4 Guide suites/bothguards; Guide visual sources byte-exact so IR001 rendered proof remains attributed only to component presentation |
+| E02 | API001 prior scratch | Rerun: own fresh archive/process cleanup; current source/fixtures/protected data unchanged |
+
+
+## API-REV-002 Execution Events
+| Time UTC | Case | Event | Observation | Result | Evidence |
+|---|---|---|---|---|---|
+| 2026-10-18T04:12:53.298737+00:00 | E01 | Started | Verify current source identity and carry independent unchanged N only | N/A |  |
+| 2026-10-18T04:12:57.939827+00:00 | E01 | Checkpoint | Exact7307-source archive plus11 current replay inputs prepared; no stale build dependency | N/A | archive-integrity.json; fixture-inputs.json; carry-validity.json |
+| 2026-10-18T04:13:00.178703+00:00 | E01 | Completed | 47 source/license/pin/removal contracts checked; independent archives exact | Pass | source-contract-audit.json; archive-integrity.json |
+| 2026-10-18T04:13:00.288205+00:00 | S01 | Started | Frozen install with script-only integration build closure; isolated private HOME/TMPDIR | N/A |  |
+| 2026-10-18T04:14:23.667269+00:00 | S01 | Completed | Fresh production/prerequisite builds and production typecheck exit0 | Pass | consumer-install.log; consumer-build.log; consumer-typecheck.log |
+| 2026-10-18T04:14:23.667951+00:00 | S02 | Started | Current ordinary path and private profile narrow tests | N/A |  |
+| 2026-10-18T04:14:40.959620+00:00 | S02 | Completed | Real files/aliases/collisions and registered error/native Codex/Grok process controls passed | Pass | consumer-narrow.log |
+| 2026-10-18T04:14:40.960240+00:00 | S03 | Started | Broader affected ownership/runtime/path/terminal regression | N/A |  |
+| 2026-10-18T04:17:49.592732+00:00 | S03 | Completed | Affected regression suite passed; live-gated skips retained separately | Pass | consumer-unit.log |
+| 2026-10-18T04:17:49.593579+00:00 | S04 | Started | Local socket/inject file and skill API contracts | N/A |  |
+| 2026-10-18T04:18:04.466023+00:00 | S04 | Completed | Ordinary file/skill local transport and filesystem cases passed | Pass | consumer-routes.log |
+| 2026-10-18T04:18:04.466136+00:00 | S05 | Started | Current-build run/memory layout/native PTY and WebSocket lifecycle | N/A |  |
+| 2026-10-18T04:18:13.074853+00:00 | S05 | Completed | Local run registration/memory and actual native PTY/WebSocket lifecycle passed | Pass | consumer-path-pty.log |
+| 2026-10-18T04:18:13.075360+00:00 | S06 | Started | Generic launcher and disabled Guide/localization tests | N/A |  |
+| 2026-10-18T04:18:58.698870+00:00 | S06 | Completed | Generic launcher and Guide/guards passed; explicit skips in log; carried Guide render inputs verified | Pass | consumer-launcher.log; consumer-guide.log; consumer-localization.log; consumer-web-boundary.log; source-contract-audit.json |
+| 2026-10-18T04:19:27.822953+00:00 | E02 | Started | Verify exact assigned inputs/protected data and process quiescence before removing own archive | N/A |  |
+| 2026-10-18T04:19:50.421866+00:00 | E02 | Completed | Owned S archive removed; no owned process/cwd;108 N/7307 S +11 replay inputs and protected PM/engine unchanged | Pass | cleanup.json; cleanup-preflight.json |
+
+## API-REV-002 final reconciliation
+Fresh E01/S01–06/E02 Pass at S60b67dabecaf5569a8e26128dbdb26117c988811; N01–03 carried API001 Pass only after exact108 independent N input equality. Seven fresh case checks plus E02 and three carried groups =11 groups. No failed, blocked, interrupted or unstarted current case. All15 current commands exit0. Narrow/overlap repeat inside broad; do not add as unique. See execution-summary.json and test-counts.json for exact fresh counts/skips. API002 Pass95% covers current executable extraction scope only. No new N campaign; copied E01 audit phrase is clarified in the report. AC007/DR001 and stale RELEASE docs remain Delivery-owned.

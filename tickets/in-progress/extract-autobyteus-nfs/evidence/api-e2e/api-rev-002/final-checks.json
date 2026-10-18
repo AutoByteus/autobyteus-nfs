@@ -1,0 +1,26 @@
+{
+  "pass_": true,
+  "current_commands": 15,
+  "failed_commands": 0,
+  "fresh_case_groups": 8,
+  "carried_case_groups": 3,
+  "confidence": 95.0,
+  "critical_API_criteria_proven": true,
+  "AC007": "Delivery-owned not executed",
+  "source_mismatches": {
+    "N": [],
+    "S": []
+  },
+  "prior_API001_entry_exact": true,
+  "S_clean": true,
+  "owned_scratch_absent": true,
+  "production_changes": [],
+  "durable_test_changes": [],
+  "N_tracked_changes": [
+    "tickets/in-progress/extract-autobyteus-nfs/api-e2e-coverage-investigation.md",
+    "tickets/in-progress/extract-autobyteus-nfs/api-e2e-execution-coverage-report.md",
+    "tickets/in-progress/extract-autobyteus-nfs/api-e2e-revision-record.md",
+    "tickets/in-progress/extract-autobyteus-nfs/api-e2e-test-case-ledger.md"
+  ],
+  "selected_recipient": "/software_engineering_team/code_reviewer"
+}

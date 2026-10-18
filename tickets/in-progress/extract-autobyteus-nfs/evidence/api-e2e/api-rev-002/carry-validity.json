@@ -1,0 +1,24 @@
+{
+  "N_inputs": 108,
+  "N_all_exact_API001": true,
+  "unchanged_authorities": [
+    "requirements-doc.md",
+    "investigation-notes.md",
+    "solution-revision-record.md",
+    "design-spec.md",
+    "user-filesystem-boundary-correction.md",
+    "solution-design-handoff.md",
+    "design-review-report.md",
+    "architecture-review-revision-record.md"
+  ],
+  "N_service": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "N_cases": [
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "original_evidence": "../api-rev-001",
+  "S_previous": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+  "S_current": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "S_cases": "ALL S01-S06 Rerun: changed core/contracts/harness/fixtures; API001 does not prove integrated S"
+}

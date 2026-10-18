@@ -1,0 +1,385 @@
+{
+  "revision": "API-REV-002",
+  "current_S": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "current_N_service": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "checks": [
+    {
+      "name": "consumer-install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--store-dir",
+        "/Users/normy/nfs-extract-api002-S-bvh3zjh0/pnpm-store"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 39.986,
+      "pass_": true,
+      "log": "consumer-install.log"
+    },
+    {
+      "name": "consumer-build",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "test:integration:prepare"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 25.853,
+      "pass_": true,
+      "log": "consumer-build.log"
+    },
+    {
+      "name": "consumer-typecheck",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "typecheck"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 13.793,
+      "pass_": true,
+      "log": "consumer-typecheck.log"
+    },
+    {
+      "name": "consumer-nuxt-prepare",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "exec",
+        "nuxt",
+        "prepare"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 3.744,
+      "pass_": true,
+      "log": "consumer-nuxt-prepare.log"
+    },
+    {
+      "name": "consumer-overlap",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+        "tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 6.72,
+      "pass_": true,
+      "log": "consumer-overlap.log"
+    },
+    {
+      "name": "consumer-narrow",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution/backends/shared/prepare-private-runtime-skills.test.ts",
+        "tests/unit/agent-execution/backends/shared/runtime-skill-profile.test.ts",
+        "tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts",
+        "tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts",
+        "tests/unit/agent-execution/backends/autobyteus/native-workspace-resolution.test.ts",
+        "tests/unit/agent-execution/backends/codex/codex-private-profile-process.test.ts",
+        "tests/unit/agent-execution/backends/grok/grok-private-profile-process.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 10.571,
+      "pass_": true,
+      "log": "consumer-narrow.log"
+    },
+    {
+      "name": "consumer-unit",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution",
+        "tests/unit/workspaces",
+        "tests/unit/services/terminal-streaming",
+        "tests/unit/services/terminal/pty-session-manager.test.ts",
+        "tests/unit/runtime-management/codex",
+        "tests/unit/agent-memory",
+        "tests/unit/skill-update-notices",
+        "--maxWorkers=2",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 178.415,
+      "pass_": true,
+      "log": "consumer-unit.log"
+    },
+    {
+      "name": "consumer-integration",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+        "tests/integration/skill-update-notices",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 8.81,
+      "pass_": true,
+      "log": "consumer-integration.log"
+    },
+    {
+      "name": "consumer-core",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent/platform-input-preface-memory.test.ts",
+        "tests/unit/agent/loop/llm-response-stream-collector.test.ts",
+        "tests/unit/agent/pipelines/llm-response-pipeline.test.ts",
+        "--maxWorkers=2",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 1.405,
+      "pass_": true,
+      "log": "consumer-core.log"
+    },
+    {
+      "name": "consumer-routes",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts",
+        "tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts",
+        "tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 14.872,
+      "pass_": true,
+      "log": "consumer-routes.log"
+    },
+    {
+      "name": "consumer-path-pty",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/integration/agent-execution/agent-run-manager.integration.test.ts",
+        "tests/integration/agent-execution/agent-run-manager.memory-layout.real.integration.test.ts",
+        "tests/e2e/terminal/terminal-websocket-lifecycle.e2e.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 8.607,
+      "pass_": true,
+      "log": "consumer-path-pty.log"
+    },
+    {
+      "name": "consumer-launcher",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_public_docker_launcher_shared_workspace",
+        "scripts.tests.test_public_docker_launcher_stop",
+        "-v"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 31.542,
+      "pass_": true,
+      "log": "consumer-launcher.log"
+    },
+    {
+      "name": "consumer-guide",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "test:nuxt",
+        "components/settings/__tests__/NfsGuideCard.spec.ts",
+        "components/settings/__tests__/NodeManager.spec.ts",
+        "components/settings/__tests__/DockerNodeStartGuideCard.spec.ts",
+        "utils/__tests__/nfsLauncherCommands.spec.ts",
+        "--run",
+        "--maxWorkers=2"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 13.234,
+      "pass_": true,
+      "log": "consumer-guide.log"
+    },
+    {
+      "name": "consumer-localization",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "guard:localization-boundary"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.445,
+      "pass_": true,
+      "log": "consumer-localization.log"
+    },
+    {
+      "name": "consumer-web-boundary",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "guard:web-boundary"
+      ],
+      "cwd": "/Users/normy/nfs-extract-api002-S-bvh3zjh0/repo",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.4,
+      "pass_": true,
+      "log": "consumer-web-boundary.log"
+    }
+  ],
+  "counts": {
+    "consumer-install": [],
+    "consumer-build": [],
+    "consumer-typecheck": [],
+    "consumer-nuxt-prepare": [],
+    "consumer-overlap": [
+      "Test Files  2 passed (2)",
+      "Tests  28 passed (28)",
+      "Duration  5.85s (transform 2.82s, setup 35ms, import 4.74s, tests 17ms, environment 0ms)"
+    ],
+    "consumer-narrow": [
+      "Test Files  7 passed (7)",
+      "Tests  34 passed (34)",
+      "Duration  9.84s (transform 3.27s, setup 70ms, import 8.09s, tests 687ms, environment 0ms)"
+    ],
+    "consumer-unit": [
+      "Test Files  168 passed | 4 skipped (172)",
+      "Tests  1666 passed | 6 skipped (1672)",
+      "Duration  177.67s (transform 8.27s, setup 1.53s, import 71.21s, tests 88.43s, environment 13ms)"
+    ],
+    "consumer-integration": [
+      "Test Files  3 passed (3)",
+      "Tests  21 passed (21)",
+      "Duration  8.27s (transform 2.92s, setup 38ms, import 5.39s, tests 2.18s, environment 0ms)"
+    ],
+    "consumer-core": [
+      "Test Files  3 passed (3)",
+      "Tests  15 passed (15)",
+      "Duration  619ms (transform 449ms, setup 49ms, import 624ms, tests 24ms, environment 0ms)"
+    ],
+    "consumer-routes": [
+      "Test Files  3 passed (3)",
+      "Tests  39 passed (39)",
+      "Duration  14.31s (transform 5.38s, setup 36ms, import 10.21s, tests 3.45s, environment 0ms)"
+    ],
+    "consumer-path-pty": [
+      "Test Files  3 passed (3)",
+      "Tests  17 passed (17)",
+      "Duration  7.89s (transform 3.20s, setup 39ms, import 5.91s, tests 1.21s, environment 0ms)"
+    ],
+    "consumer-launcher": [
+      "Ran 36 tests in 31.255s",
+      "OK (skipped=2)"
+    ],
+    "consumer-guide": [
+      "Test Files  4 passed (4)",
+      "Tests  24 passed (24)",
+      "Duration  9.04s (transform 3.69s, setup 15.91s, collect 183ms, tests 105ms, environment 784ms, prepare 428ms)"
+    ],
+    "consumer-localization": [],
+    "consumer-web-boundary": []
+  },
+  "carried_N": [
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "N_carry_evidence": "carry-validity.json + ../api-rev-001 logs, no new N execution",
+  "test_changes": [],
+  "production_changes": [],
+  "overlap": "narrow34 and overlap28 repeated within broad units; never sum as unique",
+  "cleanup": {
+    "source": {
+      "N": {
+        "inputs": 108,
+        "mismatches": []
+      },
+      "S": {
+        "inputs": 7307,
+        "mismatches": []
+      }
+    },
+    "copy_mismatches": [],
+    "fixture_count": 11,
+    "fixture_mismatches": [],
+    "protected_count": 9,
+    "protected_mismatches": [],
+    "owned_processes": [],
+    "owned_cwds": [],
+    "D0_head_exit": 128,
+    "D0_branch": "refs/heads/main",
+    "scratch": "/Users/normy/nfs-extract-api002-S-bvh3zjh0",
+    "scratch_absent": true,
+    "removed": "Only API002-owned source/dependencies/builds/home/tmp/store; no assigned worktree or other owner resource",
+    "pass_": true
+  },
+  "all_current_commands_pass": true
+}
