@@ -1,0 +1,12 @@
+test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.166s
+
+OK

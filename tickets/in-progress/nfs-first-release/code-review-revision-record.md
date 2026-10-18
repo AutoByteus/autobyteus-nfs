@@ -56,3 +56,30 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision ID | Canonical Review Report | Entry Point / Trigger | Prior Result | Current Result | Affected Finding IDs |
 | --- | --- | --- | --- | --- | --- |
 | CRR-002 | code-review-report.md | API/E2E Failure-Origin Review / API-REV-001 R03-F001 | CRR001 Pass100 | Fail — Local Fix, source score N/A | CR-001 |
+
+
+### CRR-003 — Bounded Mac shell correction source re-review
+
+- Date:2026-10-18. Canonical report `code-review-report.md`; **Implementation Review**, round3, **Targeted Delta Review**.
+- Trigger: implementation_engineer IR-002 Local Fix for CRR002/CR-001 (= API001 R03-F001). Scope limited to prior finding: native argument construction, durable workflow test and TESTING.md; other116/119 product inputs unchanged.
+- Upstream: R2/SR-002 Approved; SR-003 Ready; ARCH-REV-001; IR-002; API-REV-001 Fail62.86%; DR-001 prior branch staging only. Large/High retained. Latest user reiteration confirms standalone NFS project only; no scope expansion.
+- Input00b94551ba00e159ceedae5bdb4a5f1e3f1a25d8; reviewed source8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34 versus886b55e. No source/test edit by reviewer.
+- Prior authoritative result **CRR002 Fail / Local Fix**; current **Pass100.00/100** at source boundary. Prior reviewer gap is acknowledged history, not erased. API verdict unchanged.
+- BEH001 now Confirmed at source scope: all mandatory arguments seed one nonempty array, fresh appends exact qualification flags, strict mode and four-target scheduling preserved. Other behavior/MP001/MP002 unchanged; no new premise.
+- Fresh exact-copy checks: current7 workflow tests Pass; original workflow/current tests produce5 expected assertion failures; restored-current full41 collected/40 executed/1 child skip Pass. actionlint/prefix syntax/ShellCheck/hash/default refusal pass. IR002 guard mutations attributed, no Go/VM/hosted repetition. TARGET values are not four CPU executions.
+- Full mandatory24 structural checks and ten-category scorecard retained with explicit unaffected carry from CRR001 and affected revalidation. No new size/owner/legacy/dead-code issue. No broader source re-audit implied.
+
+#### Prior Finding Resolution
+
+| Finding ID | Prior Status | Current Status | Related Revision References | Verification Evidence |
+| --- | --- | --- | --- | --- |
+| CR-001 | Open — candidate Mac shell abort | **Resolved at source scope** | IR002 / CRR002 / API001 R03-F001 | workflow204–206; reviewer current7 green/original5 assertion failures/full41 suite; exact fresh/candidate argv and strict guards |
+
+- New/remaining source findings: None. API R03 execution closure still requires actual new current hosted candidate; old failure/artifacts remain truthful history.
+- Current unqualified hash26af7e5bcab00ae22d4bdebe1820c6d38b0dc51a44f1b834036334ea79528298 is not candidate qualification. No target/secret/physical/user/signing/publication waiver.
+- Recipient: API/E2E per fresh most-specific source-Pass rule in `code-review-evidence/crr-003/routing.json`. No duplicate dispatch.
+- Cleanup/preservation: own119-file copy/HOME/temp removed, eight Delivery untracked inputs and previous history prefix preserved; only NFS review artifacts changed. No hosted/remote/live/credential/target-finalization/publication action or completion claim.
+
+| Revision ID | Canonical Review Report | Entry Point / Trigger | Prior Result | Current Result | Affected Finding IDs |
+| --- | --- | --- | --- | --- | --- |
+| CRR-003 | code-review-report.md | Implementation Review / IR-002 Local Fix | CRR002 Fail | Pass100 — source scope only | CR-001 resolved |

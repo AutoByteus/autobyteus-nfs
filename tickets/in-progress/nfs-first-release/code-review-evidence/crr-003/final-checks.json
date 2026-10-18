@@ -1,0 +1,28 @@
+{
+  "review": "CRR-003",
+  "result": "Pass",
+  "source_scope": "standalone autobyteus-nfs only",
+  "head_at_review": "00b94551ba00e159ceedae5bdb4a5f1e3f1a25d8",
+  "source_commit": "8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34",
+  "source_inputs_unchanged": 119,
+  "upstream_unchanged": 8,
+  "delivery_untracked_unchanged_unstaged": 8,
+  "history_prefix_bytes_preserved": 6097,
+  "structural_checks": 24,
+  "score_categories": 10,
+  "source_score": 100,
+  "review_artifact_hashes": {
+    "code-review-report.md": "dd345a784d0cab5efaf34c8598e1fb6a83a0ab947ddb7e09b225ee5bd6c334f2",
+    "code-review-revision-record.md": "e9e592818e58277e60715d329acf3b90125987d978cd0417afc2adf54b3d9cee"
+  },
+  "tracked_delta": [
+    "tickets/in-progress/nfs-first-release/code-review-report.md",
+    "tickets/in-progress/nfs-first-release/code-review-revision-record.md"
+  ],
+  "all_checks_expected": true,
+  "raw_and_nonraw_whitespace_issues": [],
+  "scratch_absent": true,
+  "production_or_durable_test_edits": false,
+  "remote_hosted_release_actions": false,
+  "limits": "Source review only; API001 failed attempt remains unchanged and new current hosted candidate required."
+}

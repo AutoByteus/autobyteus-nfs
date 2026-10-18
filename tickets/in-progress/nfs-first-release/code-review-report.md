@@ -3,97 +3,164 @@
 ## Review Round Meta
 
 - Date:2026-10-18. Task `autobyteus-nfs-3` / `project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5`.
-- Entry: **API/E2E Failure-Origin Review**, round **2**, revision **CRR-002**. Review scope: **N/A — focused failure origin**, not full source or successful-test review.
-- Trigger: API-REV-001 **Fail62.86%**, case R03, failure **R03-F001**; actual build-only candidate run39111348848/attempt1.
-- Requirements: `requirements-doc.md`, **R2/SR-002 Approved**. Investigation/design/history: `investigation-notes.md`, `design-spec.md`, `solution-revision-record.md`, **SR-003 Ready**; relevant SCN001/BEH001/DS1 and D1/D2/D4 unchanged.
-- Architecture: `design-review-report.md`, `architecture-review-revision-record.md`, **ARCH-REV-001 Pass**. Implementation: `implementation-handoff.md`, `implementation-revision-record.md`, **IR-001**. No later source fix exists.
-- Prior review: **CRR-001 source Pass100.00** at c1f1330b8310bfadf772cebb09d085821be8da92, receipt518f4b51e251edaa6b5664f71c7171bde57bafc9. Prior complete report remains in Git at that commit; this canonical report now governs the failed boundary. History: `code-review-revision-record.md`, CRR001 byte prefix retained.
-- API context read: `api-e2e-coverage-investigation.md`, `api-e2e-execution-coverage-report.md`, `api-e2e-test-case-ledger.md`, `api-e2e-revision-record.md` and focused raw evidence under `evidence/api-e2e/api-rev-001` (A below).
-- Delivery context: **DR-001** staged the reviewed ticket branch only as an API prerequisite. This is not delivery-stage source recovery or Delivery Completed. Its eight existing untracked files remain owned by Delivery and unchanged/unstaged by review.
-- Input HEAD72dc48b1aedbec8260951a4e851a7417a5672201; actual hosted source/workflow518f4b51e251edaa6b5664f71c7171bde57bafc9; product source886b55e1cf88f3f696334bd5e7b8c374946a594d. All119 non-ticket inputs identical since source review. Branch `codex/nfs-first-release`; target `origin/main`.
-- Root TESTING.md and existing workflow fixture scope reread. Existing syntax/truth-table tests are valid for their stated boundary; they do not execute this native shell block. No guideline conflict.
+- Entry: **Implementation Review**, round **3**, revision **CRR-003**, **Targeted Delta Review**.
+- Trigger: IR-002 Local Fix for **CR-001 / API R03-F001**, after CRR002 focused failure-origin Fail. Prior complete source audit is CRR001; prior failure attribution and acknowledged review gap remain historical, not erased.
+- Scope evidence: only native workflow argument construction, existing workflow durable tests and TESTING.md changed from reviewed886b55e; other116/119 non-ticket inputs unchanged. Same behavior/owners as CR-001; no data-flow, interface, record shape or cross-owner change requiring Full Re-Audit.
+- Requirements/investigation/history: `requirements-doc.md` **R2/SR-002 Approved**, `investigation-notes.md`, `solution-revision-record.md`; design `design-spec.md` / `solution-design-handoff.md` **SR-003 Ready**. Architecture `design-review-report.md`, `architecture-review-revision-record.md`, **ARCH-REV-001** unchanged.
+- Implementation: `implementation-handoff.md`, `implementation-revision-record.md`, **IR-002** and `implementation-evidence/ir-002/checks-and-limits.md`, raw baseline/current/mutation logs, final/cleanup records. Prior IR001 evidence carries only for unchanged boundaries.
+- Prior code review: `code-review-report.md` CRR002 at ca048be, receiptc726b6d; cumulative `code-review-revision-record.md` now appends CRR003 preserving CRR001–002 bytes. CRR001 full report remains in Git at c1f1330.
+- API trigger: `api-e2e-execution-coverage-report.md`, investigation/ledger/history **API-REV-001 Fail62.86%**. Actual run39111348848/attempt1 remains failed. No successful-test review in this round.
+- Delivery context: **DR-001**, reviewed-branch staging prerequisite only; eight Delivery-owned untracked records remain unchanged/unstaged. No delivery completion or source integration change.
+- Worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`; branch `codex/nfs-first-release`; target `origin/main`. Input HEAD00b94551ba00e159ceedae5bdb4a5f1e3f1a25d8; current product source8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34; prior product886b55e1cf88f3f696334bd5e7b8c374946a594d.
+- Guides: shared design principles/code-reviewer scope and template, root DESIGN/TESTING and existing release policy. Relevant current testing paragraph explicitly distinguishes shell-prefix execution from hosted/native qualification. No conflicting guide.
 
-## Routing Classification And Scope
+## Routing Classification And Review Scope
 
-**Large / High / Reviewed** unchanged. Confirm only the supported Mac candidate shell failure, source origin and necessary correction/coverage. Do not reopen architecture, Go/NFS runtime, editor/application, physical-host policy, signing provisioning or public recovery design. API authored no production or durable-test change; its diagnostic runner is evidence, not a new product scenario.
+**Large / High / Reviewed**, independent source review required, unchanged. This bounded correction remains part of the already reviewed high-risk release package.
 
-## Upstream Behavior And Production-Path Basis
+Latest user reiteration: **only the NFS project**. Confirmed git root and all three implementation delta paths are within this standalone NFS repository: `.github/workflows/release-nfs.yml`, `scripts/tests/test_nfs_release_workflow.py`, `TESTING.md`. Reviewer artifacts are in its ticket folder. No application/frontend/editor/Guide/dashboard/superrepo source edits or review expansion. Own temporary execution copies are cleaned, not another project's source changes.
 
-Approved behavior is unchanged and clear. **BEH001 implementation status: Contradicted** for the normal Mac candidate path. REQ001/002 and AC001 require the exact reviewed nonpublishing candidate journey across the advertised matrix; AC007 cannot complete without it. The design selects both Mac runners and requires all native jobs before aggregation. No new behavior or unsupported edge case is invented.
+Review actual changed prefix/test and affected SCN001/SCN003 invocation contracts; carry unaffected CRR001 structural evidence after exact delta/owner checks. Do not rerun unrelated Go/NFS/VM/provider campaigns or redefine physical/user/signing/release gates.
 
-| Scenario | Independent actor / goal / entry | Forward path and lifecycle | Expected consequence | Evidence / validity / use |
+## Upstream Behavior And Production-Path Basis Confirmation
+
+Approved behavior remains clear. **Confirmed at source-review scope**; no new or reclassified behavior. CR-001's implementation contradiction is resolved by this correction and fresh executable proof, not by changing intent. Hosted AC001 remains unproven until API rerun.
+
+| Behavior | Status | Current path / evidence | Contradicting or new behavior |
+| --- | --- | --- | --- |
+| BEH001 | Confirmed — affected boundary revalidated | Manual candidate → existing matrix/OCI → native prefix201–206 initializes mandatory nonempty argv → metadata invocation → existing native checks/aggregate. Current executable test reaches inert command with exact args; original workflow fails same regression. | None remaining at source boundary; old hosted run remains failed. |
+| BEH002 | Confirmed — affected flags revalidated, other evidence carried | Fresh-mode invocation appends exactly --qualified --candidate work/candidate; qualification validator/lock/metadata owner unchanged. | None |
+| BEH003 | Confirmed — carried | Existing final signing/payload/publication/current-input gates unchanged; fresh argv retains required qualification admission. | None |
+| BEH004 | Confirmed — carried | Installer/download/Go admission unchanged. | None |
+| BEH005 | Confirmed — carried | Runtime, engine pins, installed-state/consent and source safety unchanged. | None |
+| BEH006 | Confirmed | TESTING.md accurately adds shell-prefix proof and limits; other finalization/docs ownership unchanged. | None |
+
+## Supported Product Scenario And Reachability Gate
+
+| Scenario / contract | Actor and coherent goal / independent entry | Forward path / lifecycle / outcome | Independent basis | Validity / use |
 | --- | --- | --- | --- | --- |
-| SCN001 / BEH001 / DS1 | Maintainer prepares first normalv0.1.0 from the reviewed ref through manual publish=false dispatch | prepare resolves candidate → engine pair/merge/OCI succeed → native Mac job enters `/bin/bash -e` run block → strict mode → args=() and fresh-only append → line205 argument expansion → intended metadata/native tests/archive → complete candidate | Candidate mode must invoke metadata with no qualification options, then run checks and retain its native archive; all required jobs permit candidate aggregation | R2 REQ001/002,AC001; SR003 D1/D2/D4; actual run and both raw Mac logs. **Supported Normal Scenario; Reachable; Use**. |
+| SCN001; BEH001; REQ001/002; AC001 | Maintainer explicitly prepares normalv0.1.0 candidate from reviewed ref, publish=false | Existing prepare/engine/OCI → native Mac run prefix → mandatory argv without qualification suffix → metadata/native checks → complete candidate. Nonempty array avoids the actual strict-shell abort. | R2 and SR003 DS1/D1/D2; actual API001 Mac failure establishes the path, not the new test. | Supported Normal Scenario; Reachable; Use |
+| SCN003; BEH002/003; REQ003/006 | Authorized maintainer publishes an already qualified input through fresh mode | Existing preflight → fresh native prefix → mandatory argv plus exact qualified/candidate args → unchanged validator → signing/payload/publication gates | R2 publication/qualification contract, SR003 D3/D4; existing workflow caller. Local double validates argv only. | Supported Normal Scenario; Reachable; Use |
+| SCN005; BEH002/005; REQ006 | Governing fail-closed contract rejects missing inputs or failed required release steps | Native strict shell refuses missing TARGET, nonzero OCI pipeline or metadata exit before continuation | R2 explicit failure/admission contract; current workflow prefix | Supported Explicit Edge Scenario; Reachable; Use |
 
-### Candidate Finding Gate
+### Candidate Finding And Mechanism Gate
 
-| Candidate | Observation | Independent trigger / contract | Forward state / consequence | Evidence | Disposition / scope / response |
+| Candidate | Observation / mechanism | Independent trigger and forward consequence | Evidence | Disposition / scope / response |
+| --- | --- | --- | --- | --- |
+| CG008 / CR-001 | Prior empty-array failure | SCN001 candidate under actual Mac shell aborted before metadata; observed in API001 | Prior CRR002, API raw logs and current reviewer old-workflow control | Promote — This ticket; **Resolved at source scope** in IR002, not a claim to close API execution. |
+| CG009 | Nonempty argument construction preserves supported invocation and failures | SCN001 mandatory arguments always present; SCN003 adds exact fresh flags; SCN005 strict failures still stop before continuation | workflow201–206; actual-prefix candidate/fresh/error tests; current7 Pass versus original5 assertion failures | Promote — This ticket; correction satisfies the existing contract. No new recovery/version mechanism needed. |
+
+No held material candidate or new finding. MP001/MP002 unchanged and not reopened. Existing defensive/lifecycle mechanisms remain carried from CRR001 with their independent scenario basis; this delta introduces none.
+
+## Prior Finding Resolution
+
+| Finding | Prior | Current | Verification |
+| --- | --- | --- | --- |
+| CR-001 / R03-F001 | CRR002 Open — metadata not called on normal Mac candidate | **Resolved — source correction and durable regression** | Mandatory array at204 stays nonempty; exact candidate/fresh argv on system Bash3.2.57; command17/missing TARGET/pipeline23 guards; original workflow fails the same current tests. API R03 still requires actual new hosted completion. |
+
+## Structural / Design Checks
+
+The complete mandatory checklist is retained. Unaffected evidence is carried, not represented as a fresh full re-audit.
+
+| Check | Result | Evidence / current-round disposition | Required Action |
+| --- | --- | --- | --- |
+| Task design health assessment is present, evidence-backed, and preserved by the implementation | Pass | Carried from CRR001 after unchanged-owner/delta check: SR003 identifies missing promotion invariant/scattered coordination; old early push/clobber replaced with retained payload and one publication owner. | None. |
+| Implementation matches approved behavior-defining supplemental artifacts | Pass | Revalidated: R2/SR002 unchanged; IR002 corrects only the approved Mac candidate invocation. Latest user reiteration explicitly confines this ticket to standalone NFS. | None. |
+| Data-flow spine inventory clarity and preservation under shared principles | Pass | Revalidated: DS1 native prefix now reaches metadata with exact candidate/fresh argv on local system Bash3.2; remaining DS1 scheduling and DS2–5 unchanged. | None. |
+| Ownership boundary preservation and clarity | Pass | Carried from CRR001 after unchanged-owner/delta check: Workflow schedules, candidate owns artifacts, qualification judges record consistency, payload owns final bytes, publication owns writes; Go runtime remains independent. | None. |
+| Off-spine concern clarity (off-spine concerns serve clear owners and stay off the main line) | Pass | Carried from CRR001 after unchanged-owner/delta check: identity owns bounded values/hash rules; signing owns Mac secret lifecycle; receipts describe results, not approvals. | None. |
+| Existing capability/subsystem reuse check (no fresh helper where an existing subsystem should own it) | Pass | Carried from CRR001 after unchanged-owner/delta check: engine/manifest validate/verify/embed and existing Go VerifyRelease reused; no new filesystem/provider capability. | None. |
+| Reusable owned structures check (repeated structures extracted into the right owned file instead of copied across files) | Pass | Carried from CRR001 after unchanged-owner/delta check: Common identity/file record/inventory/JSON handling reused; candidate/payload records serve different lifecycle identities. | None. |
+| Shared-structure/data-model tightness check (no kitchen-sink base, no overlapping parallel shapes, specialization/composition used meaningfully) | Pass | Carried from CRR001 after unchanged-owner/delta check: Separate candidate, Actions envelope, qualification, payload and public binding; self-hash cycles intentionally avoided; no optional mega-context. | None. |
+| Repeated coordination ownership check (shared policy has a clear owner instead of being repeated across callers) | Pass | Revalidated: One nonempty argument array carries mandatory values; fresh appends its exact options. No duplicate full commands or extra shell-version policy. | None. |
+| Empty indirection check (no pass-through-only boundary) | Pass | Carried from CRR001 after unchanged-owner/delta check: release.py owns CLI argument translation/dispatch/outputs; each release module owns concrete invariants, not forwarding wrappers. | None. |
+| Scope-appropriate separation of concerns and file responsibility clarity | Pass | Carried from CRR001 after unchanged-owner/delta check: Scheduling, parsing/identity, artifact validation, evidence admission, payload and external reconciliation are bounded subjects. | None. |
+| Ownership-driven dependency check (no forbidden shortcuts or unjustified cycles) | Pass | Revalidated: Workflow still calls the release facade; tests intercept only its effect boundary. No owner bypass or new dependency. | None. |
+| Authoritative Boundary Rule check (callers do not depend on both an outer owner and that owner's internal manager/repository/helper/lower-level concern) | Pass | Carried from CRR001 after unchanged-owner/delta check: Workflow never independently writes tag/assets/image or fabricates qualification; installers retain Go admission; sibling value owners are not hidden competing authorities. | None. |
+| File placement check (file/folder path matches owning concern or explicitly justified shared boundary) | Pass | Carried from CRR001 after unchanged-owner/delta check: Release-only modules below packaging; Mac effect in sign-macos.sh; public downloader and tests remain in existing owning folders. | None. |
+| Flat-vs-over-split layout judgment (layout is readable for the scope and not artificially fragmented) | Pass | Carried from CRR001 after unchanged-owner/delta check: Five concrete release owners, one facade; no class/framework hierarchy or per-operation file explosion. | None. |
+| Interface/API/query/command/service-method boundary clarity (one subject, one responsibility, explicit identity shape) | Pass | Revalidated: Exact ordered metadata argv verified for candidate and fresh; missing TARGET, OCI pipeline failure and metadata failure stop. | None. |
+| Naming quality and naming-to-responsibility alignment check (files, folders, APIs, types, functions, parameters, variables) | Pass | Revalidated: args now holds the complete command arguments rather than empty optional suffix; comment explains the Mac shell constraint. | None. |
+| No unjustified duplication of code / repeated structures in changed scope | Pass | Revalidated: Single mandatory argument construction plus fresh-only append avoids duplicated invocation logic. | None. |
+| Patch-on-patch complexity control | Pass | Revalidated: Bounded correction replaces the failing construction; no set+u, ignored status, version branch, target drop or layered workaround. | None. |
+| Dead code removed in the touched files and modules (Core Principle 7) | Pass | Revalidated: Changed durable-test imports checked by AST/reference use; old empty optional-array invocation removed. No new unused binding. | None. |
+| Relevant test scenarios and assertions are clear and requirement-aligned | Pass | Revalidated: New tests execute actual native prefix including strict mode/JSON pipeline; exact argv and error propagation assertions detect the old failure. | None. |
+| Test fixtures/helpers are reasonably reusable and test structure remains coherent | Pass | Revalidated: One NativeMetadataShellTest helper owns isolated HOME/TMPDIR/argv recorder and reuses real shell/pipeline; external release effects inert. | None. |
+| No stale, duplicated, or compatibility-only tests are retained in changed scope | Pass | Revalidated: Existing scheduling/permission/cancellation tests remain valid and retained; added executable shell coverage is complementary, not a duplicate truth table. | None. |
+| API/E2E readiness for the next workflow stage | Pass | Revalidated: Fresh current41-test suite and executable old-source control establish source readiness. API must rerun NEW actual current hosted candidate; prior failed run not relabeled. | New actual hosted candidate remains API-owned. |
+
+## Source File Size And Structure Audit
+
+| Source file | Before | After | >500 | >220 delta | SoC / placement | Preliminary classification | Required action |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| .github/workflows/release-nfs.yml | 358 nonempty | 359 nonempty | Pass | Below;3 added/2 deleted physical lines | Pass; existing native-job scheduling/invocation owner, one argument construction | None | None |
+
+No new source owner/abstraction or scope spread. Durable tests and TESTING.md are not subject to source-file size limits. Unchanged source-size judgments from CRR001 carry; no forced test splitting.
+
+## Legacy / Backward-Compatibility Verdict
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| No backward-compatibility mechanisms in changed scope | Pass | One normal invocation, no shell-version branch or fallback. |
+| No legacy old-behavior retention in changed scope | Pass | Empty optional-array pattern replaced, not kept as another path. |
+| Dead code removed in touched files/modules | Pass | Changed test imports used; no new dormant path; former call replaced. |
+| Approved persisted-data transition decision followed without unnecessary migration | Pass | No state/schema change; CRR001 Not Affected/rebuild-only/public identity decisions unchanged. |
+| No version-specific dual reads/writes or old-shape fallback | Pass | No such mechanism added. |
+| Approved transition mechanics match reviewed design | Pass | No migration or public recovery change. |
+
+Dead/obsolete items requiring removal: **None**.
+
+## Docs-Impact Verdict
+
+**Yes**, bounded TESTING.md update now describes the real shell/JSON-pipeline versus inert release-command boundary and excludes four-CPU/hosted/native qualification claims. Current API/implementation/source histories remain distinct. No other project's documentation or source is changed. No new approval needed.
+
+## Validation And Limits
+
+Independent exact119-file source copy/private HOME/TMPDIR, local macOS arm64 `/bin/bash3.2.57`, Python3.9.6:
+
+- Current workflow suite **7 Pass**; it covers eight exact target-string/mode argv combinations and strict-error controls. Target strings are not four native CPUs.
+- Same current tests with only the **original workflow** substituted in owned scratch: **7 tests,5 intended assertion failures**; candidate cannot enter metadata. Restored current bytes before all subsequent checks. This is regression sensitivity, not another product pass.
+- Full current Python suite **41 collected /40 executed /1 explicit standalone Go-child skip**, Pass. Focused7 overlaps41; no additive unique-count claim.
+- actionlint on ordinary/release workflows, extracted-prefix Bash syntax and ShellCheck Pass. Source hash **26af7e5bcab00ae22d4bdebe1820c6d38b0dc51a44f1b834036334ea79528298** matches current empty/unqualified lock, **not a measured-engine candidate identity**. Default --check-publish refused with expected all-four-target message.
+- IR002's three guard mutations (fresh flags, nounset, pipefail) are attributed implementation evidence; reviewer did not repeat them. Original workflow control above was independently repeated. No Go/native engine/hosted campaign rerun solely for this argument delta.
+- All source bytes restored/matched current inputs after checks; selected upstream docs and eight Delivery files preserved. Own scratch removed, all subprocesses completed. No live resource, remote/credential/publication action or production/durable-test modification by reviewer.
+
+Evidence: `code-review-evidence/crr-003/checks-and-limits.md`, `checks-result.json`, raw current/baseline/full logs, `input-audit.json`, `delta-audit.json`, `cleanup.json`, final audit/routing. No unexpected failed reviewer check; expected baseline failure retained intact.
+
+## Review Scorecard
+
+**10.0/10,100.00/100** simple mean for current source scope. This restores source acceptance after independently resolving CR-001; it neither erases the CRR002 review gap nor overwrites API001 Fail62.86%. Source-quality score is not a probability, hosted qualification or release-readiness score.
+
+| Priority | Category | Score | Why this score | Weakness / drag | Expected improvement |
 | --- | --- | --- | --- | --- | --- |
-| CG008 | Empty optional-array expansion under the actual supported Mac job shell aborts candidate metadata invocation | SCN001 normal publish=false dispatch, not a synthetic test or manually corrupted state | MODE=candidate leaves args empty; set -u expansion fails before Python invocation; Mac native checks/archives absent, aggregate candidate skipped | workflow203–205; A/hosted-job-117628928559.log:252–259 and117628928627.log:252–259; reviewer reproduction.json | **Promote — This ticket**. CR-001 bounded workflow invocation and executable regression correction. |
+| 1 | Data-Flow Spine Inventory and Clarity | 10.0 | DS1 affected invocation now executes; unchanged DS2–5 carried from CRR001. | None evidenced in this delta. | Preserve actual execution identity downstream. |
+| 2 | Ownership Clarity and Boundary Encapsulation | 10.0 | Workflow/facade boundary preserved; no new authority; carried owner audit. | None evidenced. | Maintain existing boundaries. |
+| 3 | API / Interface / Query / Command Clarity | 10.0 | Exact candidate/fresh argument contracts independently asserted; CG009. | None evidenced. | Preserve these executable controls. |
+| 4 | Separation of Concerns and File Placement | 10.0 | Small native prefix change, cohesive existing test owner; other source unchanged. | None evidenced. | No further split needed. |
+| 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10.0 | One mandatory argv structure with minimal mode extension, reusable isolated test helper. | None evidenced. | No new records/framework needed. |
+| 6 | Naming Quality and Local Readability | 10.0 | args now has its complete subject; explicit comment and clear scenario tests. | None evidenced. | Keep this clarity. |
+| 7 | API/E2E Readiness | 10.0 | Prior missed shell boundary now executable, baseline-sensitive and strict-failure checked. | No remaining source-readiness defect; actual hosted run still pending. | API must execute a new current candidate. |
+| 8 | Runtime Correctness And Behavioral Fidelity | 10.0 | CR-001 resolved locally with original red/current green and preserved qualified/error paths; CG008/009. | No remaining source defect established. Hosted/physical proof unclaimed. | Close actual R03 and downstream acceptance with real evidence. |
+| 9 | No Backward-Compatibility / No Legacy Retention | 10.0 | No legacy branch/error suppression/version workaround; prior clean-cut decisions carry. | None evidenced. | No fallback restoration. |
+| 10 | Cleanup Completeness | 10.0 | Scratch removed, current source/Delivery/upstream bytes protected, no dead touched import. | None evidenced. | Preserve unrelated owners and failed hosted artifacts. |
 
-No held or rejected material candidate. Existing MP001/MP002 are not implicated or reclassified. Scenario gate **Pass** means the defect has a valid supported basis, not that implementation passed.
+## Findings / Follow-ups
 
-## Failure Evidence And Independent Confirmation
-
-Actual API command:
-
-```sh
-gh workflow run release-nfs.yml --repo AutoByteus/autobyteus-nfs --ref codex/nfs-first-release -f release_tag=v0.1.0 -f source_sha=518f4b51e251edaa6b5664f71c7171bde57bafc9 -f publish=false
-```
-
-[Actual run39111348848](https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39111348848), attempt1: completed failure. Seven jobs succeeded (prepare, two engine builders, merge, OCI and two Linux native jobs); both Mac jobs failed; candidate/payload/publish skipped. Reviewer inspected the preserved API run/job records, not a new hosted run.
-
-- Mac jobs117628928559 (arm64) and117628928627 (amd64) show `shell: /bin/bash -e {0}`, MODE=candidate, their respective darwin TARGET, then `line 5: args[@]: unbound variable` and exit1. The printed native block maps this precisely to source205. Command text printed by Actions is not proof those later commands executed.
-- Exact current source203–205 initializes an empty array, only populates it in fresh mode, then expands it under preceding `set -euo pipefail`. The failure happens before the metadata-generating Python invocation and subsequent Go tests. The earlier OCI-inspection command is not the failed call.
-- Reviewer independently extracted those three **unchanged** lines and executed `/bin/bash -e` in four isolated observations (two mode values for each TARGET environment value). Inert Python function records command entry/argv only. Candidate exits1 before entry; fresh/nonempty control exits0 and includes the expected qualification options.
-- Local measured shell: **GNU Bash3.2.57(1)-release, arm64-apple-darwin25**. TARGET=darwin-amd64 is only a string in the local probe, not amd64 execution. Actual amd64 failure is established by its hosted job. Hosted shell version itself was **not printed**, and is not inferred from local version.
-- Evidence: `code-review-evidence/crr-002/input-audit.json`, `hosted-evidence-review.json`, `exact-snippet.sh`, `reproduction.json`, `review-failure.py`, `checks-and-cleanup.json`. API reproduction remains corroboration and was not rerun because its runner appends to API-owned documents.
-
-## Finding — CR-001: Mac candidate shell aborts before native checks
-
-- Priority: **High — blocks the approved candidate journey**, not a data-loss/security/NFS-runtime attribution.
-- Path: `.github/workflows/release-nfs.yml:203–205`, specifically line205 optional argument expansion.
-- Related failure/case: **R03-F001 / R03**. Related approved basis: **SCN001,BEH001,REQ001/002,AC001**, downstream AC007. Promoted candidate: **CG008**.
-- Origin: **implementation-owned release workflow defect introduced in IR001, plus an earlier source-review gap**. Exact workflow/product bytes are unchanged after CRR001; this is not an implementation change after review.
-- Why in scope: the newly delivered first-release candidate path cannot complete for either retained Mac target. It is inherent to AC001, not a surrounding pre-existing issue or optional follow-up.
-- Required correction: make metadata argument construction/invocation work under the supported runner shell with both candidate (no qualification arguments) and fresh (the exact qualification arguments) while preserving strict failure handling and correct argument boundaries. Add a bounded **executable** regression at that shell boundary, sensitive to the original candidate failure and covering the populated fresh control. Do not merely add text assertions, drop targets, mask the error, weaken qualification, or introduce a runtime filesystem change. The exact implementation is the implementation owner's decision.
-- Closure: targeted source re-review, then API-owned actual new current hosted candidate including both Mac native jobs and complete aggregate artifact, plus affected qualification/refusal checks. Workflow is production-hashed; preserve the failed run and partial artifacts, but do not relabel them as a successful new-source candidate or hand-assemble one.
-
-## Origin Alternatives And Earlier Review Gap
-
-| Attribution | Decision / evidence |
-| --- | --- |
-| Implementation defect | **Confirmed**: approved candidate mode produces the failing empty-array state in unchanged production workflow on both actual Mac jobs. |
-| Earlier review gap | **Confirmed, bounded**: CRR001 checked scheduling truth tables, syntax and static analysis but did not execute the native candidate argument block under the Mac system shell. The review should have verified that the intentionally empty optional arguments remain callable under the selected shell and set -u; the small local inert-command probe now demonstrates that this was reasonably detectable without physical hosts/secrets. |
-| Runtime-only unknowable failure | Not the right attribution: external hosted execution exposed it, but the same source-level shell invariant is independently locally reproducible. |
-| Invalid/stale test or fixture/environment error | Not supported: actual intended runner/dispatch, correct candidate state and unchanged source fail before tests. A production job's unsupported assumption about its selected shell is not an excuse to waive the failure as a test environment problem. |
-| NFS/runtime or credential failure | Not established: metadata/native test/signing boundary not reached. Physical resource shortage and six provisioned-but-unvalidated secrets are separate remaining gates, not this cause. |
-| Design/requirement gap | Not established: four-target candidate behavior and workflow ownership are already explicit; no approval change or architecture loop required. |
-
-## Affected Prior Review Rationale
-
-CRR001 remains historical; its source-quality100 is **not the current acceptance result**. Its BEH001 confirmation and category7 API/E2E-readiness/category8 behavioral-fidelity rationale are superseded for this shell boundary by CR-001. A complete new scorecard is **N/A for focused failure-origin review**; no arithmetic re-score or repeat of unrelated24 structural checks. Unaffected architecture/source evidence is not declared newly failed or reexecuted. Current canonical verdict is **Fail** until the bounded correction is independently reviewed and tested.
+**No open source findings. CR-001 resolved at source scope.** No follow-ups or PM dispatch. API001 R03-F001 remains an execution failure until API-owned revalidation; source review does not relabel its failed attempt.
 
 ## Classification / Recommended Recipient
 
-**Local Fix — implementation_engineer**, exact recipient selected by fresh failure-origin rule. No source or durable-test fix by reviewer. After correction require source review and API/E2E again; later successful execution receives proportional test-code review normally. No duplicate API/Designer/Delivery dispatch.
+Failure classification **N/A — clean source-review Pass**; Large/High unchanged. Fresh most-specific implementation-Pass rule routes to API/E2E for the new current hosted candidate and affected validation. Single-recipient convention, no duplicate informational/Designer/Delivery dispatch.
 
-## Follow-ups
+## Residual Risks
 
-None. This defect belongs to the current ticket. No PM follow-up or previous filesystem/editor task reopening.
+The production-hashed workflow changed: the previous failed39111348848/attempt1 and seven partial artifacts cannot qualify current source or be hand-assembled/relabelled. API must execute the new reviewed current candidate, both Mac jobs and full aggregate, followed by actual candidate identity verification and supported target/mode evidence. Delivery owns any needed remote branch availability; DR001 only staged old518f4b51.
 
-## Cleanup, Preservation And Residual Limits
-
-Own diagnostic temporary directories removed; four subprocess observations completed. No hosted dispatch, source/test modification, credentials, mounts, VM/container, registry/publication, target fetch/merge/push or live-user action. All119 product inputs and selected existing evidence unchanged during the probe; Delivery's eight untracked files remain unstaged and byte-preserved. History append preserves CRR001 bytes; final audit separately confirms all pre-existing tracked inputs except the two intentionally updated canonical review documents.
-
-API's retained records show no complete candidate and seven partial failed-run artifacts with actual expiry2027-01-16T08:24:58Z. They stay untouched, not qualification. Its post-run remote receipt reports tags/releases/main unchanged and no signing/publication/registry-write path reached; reviewer did not independently mutate or refresh remote state.
-
-Physical/independent host inventory, actual user execution, real signing/Accepted notary, final payload/publication/download and Delivery current-main gates remain open and independent of this local correction. Six secrets are provisioned; do not ask again without an actual provisioning/validation failure. Current task conditionally authorizes normalv0.1.0; old extraction no-release direction does not apply. No TaskDone, Terminal or release completion claim.
+Physical host assignment, independent-kernel checks, genuine user execution, six already-provisioned secrets' actual validation/Accepted notarization, final payload/publication/download and fresh current-main gates remain separate. Do not re-request provisioning without a real failure or lower/drop gates. Normalv0.1.0 is conditionally authorized by this task; no immediate merge/publish or old extraction no-release policy inferred. Keep all work within standalone NFS.
 
 ## Latest Authoritative Result
 
-- **Fail — CRR-002**, API/E2E Failure-Origin Review.
-- **CR-001 / R03-F001: implementation-owned Local Fix; bounded earlier review gap acknowledged.**
-- Supported-scenario and material-premise gates: **Pass**. Behavior BEH001: **Contradicted at the Mac candidate invocation**.
-- Score: **N/A — focused failure-origin round**; API's Fail62.86% remains API-owned.
-- Next: Implementation Engineer for bounded workflow/regression correction, then targeted source review and new current API candidate validation.
+- **Pass — CRR-003**, Implementation Review / Targeted Delta Review.
+- Supported-scenario gate **Pass**; material-premise gate **Pass**; source score **10.0/10,100.00/100**.
+- **CR-001 resolved at source scope**; no new findings. Prior failure-origin attribution/review gap retained in CRR002 history.
+- Next: new current API-owned hosted candidate and applicable acceptance checks; **not** API Pass, TaskDone, Terminal or publication completion.
