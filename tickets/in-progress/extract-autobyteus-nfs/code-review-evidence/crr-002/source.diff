@@ -1,0 +1,41 @@
+diff --git a/autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts b/autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts
+index 505667aa74..cd4110e36c 100644
+--- a/autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts
++++ b/autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts
+@@ -3,8 +3,7 @@ import { createBackendPreparation } from "../../agent-run-backend-preparation.js
+ import type { AgentRunBackendPreparationRequest } from "../../agent-run-backend-factory.js";
+ import type { ClaudeRunContext } from "./claude-agent-run-context.js";
+ import type { ClaudeSession } from "../session/claude-session.js";
+-import { AgentRunConfig } from "../../../domain/agent-run-config.js";
+-import { AgentRunContext, type RuntimeAgentRunContext } from "../../../domain/agent-run-context.js";
++import { AgentRunContext } from "../../../domain/agent-run-context.js";
+ import type { ClaudeSessionManager } from "../session/claude-session-manager.js";
+ import type { ClaudeSessionBootstrapper } from "./claude-session-bootstrapper.js";
+ import type { AgentRunBackendFactory } from "../../agent-run-backend-factory.js";
+diff --git a/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts b/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts
+index f0fa418a2d..0327b77549 100644
+--- a/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts
++++ b/autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts
+@@ -1,8 +1,5 @@
+ import type { WorkspaceManager } from "../../../../workspaces/workspace-manager.js";
+ import { getWorkspaceManager } from "../../../../workspaces/workspace-manager.js";
+-import {
+-  type ClaudeSessionEvent,
+-} from "../claude-runtime-shared.js";
+ import { normalizeSessionMessages } from "../claude-runtime-message-normalizers.js";
+ import { ClaudeSessionMessageCache } from "./claude-session-message-cache.js";
+ import { ClaudeSessionToolUseCoordinator } from "./claude-session-tool-use-coordinator.js";
+diff --git a/autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts b/autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts
+index 6c43bf3f14..86fb238039 100644
+--- a/autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts
++++ b/autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts
+@@ -2,8 +2,7 @@ import type { RuntimeSkillProfile } from "../../shared/runtime-skill-profile.js"
+ import { createBackendPreparation } from "../../agent-run-backend-preparation.js";
+ import type { AgentRunBackendPreparationRequest } from "../../agent-run-backend-factory.js";
+ import type { CodexRunContext } from "./codex-agent-run-context.js";
+-import { AgentRunConfig } from "../../../domain/agent-run-config.js";
+-import { AgentRunContext, type RuntimeAgentRunContext } from "../../../domain/agent-run-context.js";
++import { AgentRunContext } from "../../../domain/agent-run-context.js";
+ import type { CodexThreadManager } from "../thread/codex-thread-manager.js";
+ import type { CodexThreadBootstrapper } from "./codex-thread-bootstrapper.js";
+ import { CodexAgentRunBackend } from "./codex-agent-run-backend.js";

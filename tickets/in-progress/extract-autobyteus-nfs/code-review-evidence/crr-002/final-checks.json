@@ -1,0 +1,15 @@
+{
+  "review": "CRR-002",
+  "outcome": "Pass",
+  "source_score_percent": 100,
+  "N_inputs_unchanged": 108,
+  "S_inputs_verified": 7215,
+  "S_changed_paths_exactly_CR001": 3,
+  "protected_ticket_inputs_unchanged": 215,
+  "prior_CRR001_entry_byte_identical": true,
+  "structural_checks_current": 24,
+  "scorecard_categories_current": 10,
+  "reviewer_production_or_test_edits": false,
+  "new_scratch_or_live_resources": false,
+  "api_or_delivery_approval": false
+}

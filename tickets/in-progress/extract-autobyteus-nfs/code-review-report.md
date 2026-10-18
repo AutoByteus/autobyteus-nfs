@@ -2,18 +2,19 @@
 
 ## Review Round Meta
 
-- Date / reviewer: 2026-10-18 (source/checks performed 2026-10-16; unchanged input identities reverified on continuation) / code reviewer, personal execution; no delegation.
-- Entry point / round / scope: **Implementation Review / 1 / Full Review**. Initial result **CRR-001**; prior review N/A, not an inferred Pass.
+- Date / reviewer: 2026-10-18 / code reviewer, personal execution; no delegation. CRR-001 full-review evidence is carried explicitly, not newly rerun.
+- Entry point / round / scope: **Implementation Review / 2 / Targeted Delta Review**. Current result **CRR-002 Pass**; prior **CRR-001 Fail / Local Fix /98.8%** remains historical.
 - Task: `extract-autobyteus-nfs` / `project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8`.
 - Requirements / investigation / solution history: [requirements-doc.md](requirements-doc.md), **replacement R2 Approved / SR-003**; [investigation-notes.md](investigation-notes.md), E12–20; [solution-revision-record.md](solution-revision-record.md).
 - Design / supplemental authority: [design-spec.md](design-spec.md), **SR-004 Ready**; [user-filesystem-boundary-correction.md](user-filesystem-boundary-correction.md); [solution-design-handoff.md](solution-design-handoff.md).
 - Architecture: [design-review-report.md](design-review-report.md) **ARCH-REV-002 Pass**, [architecture-review-revision-record.md](architecture-review-revision-record.md). ARCH001/R1 are historical only.
-- Trigger: Implementation Engineer's [implementation-handoff.md](implementation-handoff.md), [implementation-revision-record.md](implementation-revision-record.md), **IR-001 initial baseline**. Entire relevant artifact chain considered, not only its summary.
-- Code review history: [code-review-revision-record.md](code-review-revision-record.md), CRR-001 initial baseline.
-- N worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs`; reviewed HEAD **9208f8d4f81c78c537b4105773bae85dd74a0076**, service source **83726b27400b405a7a6a79bd962d8e2419daa561**.
-- S worktree: `/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs`; reviewed HEAD **d3f7f67015587b4c8aa26824786be807793485d1**, production delta2448e166. Both `codex/extract-autobyteus-nfs`; extraction provenance S3712cd9bf0db998501d162db7f8655f169e3def6.
+- Trigger: Implementation Engineer's [implementation-handoff.md](implementation-handoff.md), [implementation-revision-record.md](implementation-revision-record.md), **IR-002 bounded CR-001 cleanup**, following IR-001. Prior report, revision history, current diff and fresh evidence considered; no summary-only closure.
+- Code review history: [code-review-revision-record.md](code-review-revision-record.md), CRR-001 baseline plus CRR-002. Prior report is preserved in N commit fedefa52583cf8f404b11f6080d87ed36ba0ae1e; receipt a77048efc905f1996d6481963625d3940a2c542a.
+- N worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs`; reviewed HEAD **357c64a3ac9ff10880ccc1982eb153587ae92318**, service source **83726b27400b405a7a6a79bd962d8e2419daa561**.
+- S worktree: `/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs`; reviewed HEAD **a2023feff3d498fb6c51cebf1c93360da3679a45**, import-only delta atop d3f7f670; production decoupling2448e166 remains. Both `codex/extract-autobyteus-nfs`; extraction provenance S3712cd9bf0db998501d162db7f8655f169e3def6.
 - API/E2E and Delivery revisions/reports/failing scenarios: **N/A for this new Task**. This is not a failure-origin review or old filesystem/editor continuation.
-- Evidence shorthand: **E** = [code-review-evidence/crr-001](code-review-evidence/crr-001); **IR** = [implementation-evidence/ir-001](implementation-evidence/ir-001). Exact commands, failures, limits and cleanup: [E/checks-and-limits.md](code-review-evidence/crr-001/checks-and-limits.md).
+- Current evidence: **E2** = [code-review-evidence/crr-002](code-review-evidence/crr-002); [E2/checks-and-limits.md](code-review-evidence/crr-002/checks-and-limits.md), [input-audit.json](code-review-evidence/crr-002/input-audit.json), [delta-audit.json](code-review-evidence/crr-002/delta-audit.json). IR002 production typecheck is inspected/attributed, not a reviewer rerun.
+- Carried evidence shorthand: **E** = [code-review-evidence/crr-001](code-review-evidence/crr-001); **IR** = [implementation-evidence/ir-001](implementation-evidence/ir-001). Exact commands, failures, limits and cleanup: [E/checks-and-limits.md](code-review-evidence/crr-001/checks-and-limits.md).
 
 ## Routing Classification Review
 
@@ -21,7 +22,9 @@
 
 ## Review Scope
 
-Reviewed all six approved behavior spines; standalone development/package/installer/workflow, host CLI/config/setup/supervisor and retained engine lifecycle; S workspace/run/PTY resolution, Claude/Codex/Grok configured-skill preparation/release, AGY/native Git-policy removal, composition dependencies, generic launcher and Guide copy. Read actual production owners and representative tests; normalized comparison establishes unchanged host safety implementation, not a semantic shortcut for changed R2 code.
+**Targeted Delta Review justified:** exactly the three CR-001 files changed, only five import bindings (2 additions/7 deletions); no runtime statement, shared interface, data shape, test, configuration or new owner changed. Fresh comparison confirms identical JavaScript under production compiler options, retained public type re-export and zero unused-local diagnostics over all25 extraction-touched production TS files. All108 N inputs are unchanged; S retains all7215 tracked inputs outside root tickets/ (including nested historical ticket artifacts), with only those three files differing. Eight current authority documents are unchanged. CR-001 is resolved; no broader re-audit trigger exists.
+
+The following unchanged full-review checks/path traces are **carried from CRR-001**, revalidated by those identities; cleanup and affected scores are fresh. Previously reviewed all six approved behavior spines; standalone development/package/installer/workflow, host CLI/config/setup/supervisor and retained engine lifecycle; S workspace/run/PTY resolution, Claude/Codex/Grok configured-skill preparation/release, AGY/native Git-policy removal, composition dependencies, generic launcher and Guide copy. Read actual production owners and representative tests; normalized comparison establishes unchanged host safety implementation, not a semantic shortcut for changed R2 code.
 
 Policies: shared design principles and Example9; N AGENTS/DESIGN/TESTING and S root DESIGN/TESTING/package AGENTS; approved migration analysis. No conflict requiring changed requirements. No review of live installed state, no provider authentication, no old acceptance campaign, no editor modification. Delivery finalization/AC007 is deliberately not claimed complete.
 
@@ -38,7 +41,7 @@ Policies: shared design principles and Example9; N AGENTS/DESIGN/TESTING and S r
 | BEH-005 / DS4 | Confirmed | CLI consent/elevation -> private store/admin lock -> bounded active/pending admission -> host Plan/Apply or Reconnect/Status/Detach -> backend/mount/nonroot probe. Installer guard precedes root binary parent/replacement. Supervisor guard runs inside each serial locked reconcile. Source bind is saved before export/mount effects; detach unmounts without force before owned teardown. Docker retains only storage-engine identity/config/capability/lifecycle. |
 | BEH-006 / DS5 | Confirmed | New/restore run -> provider bootstrap -> configured bindings -> ownSkillProfile before async prepare -> resolved private execution directory/profile -> native plugin/extraRoots adapter -> exact process/client close -> exact profile release. No bindings acquire nothing, no project-link fallback. Source resolution/collision handling and generic nonprivate ACP behavior retained. |
 
-No prior finding applies. Existing preparation/cancellation ownership is reused; no new scheduler, migration framework, receipt scan or alternate storage abstraction introduced.
+Prior finding CR-001 is resolved below; it required no behavioral change. Existing preparation/cancellation ownership is reused; no new scheduler, migration framework, receipt scan or alternate storage abstraction introduced.
 
 ## Supported Product Scenario And Reachability Gate
 
@@ -52,13 +55,13 @@ No prior finding applies. Existing preparation/cancellation ownership is reused;
 | MP-001 / SCN-006 | Operational: install/administer host-only tool while predecessor active node obligations remain | Predecessor create/connect consent -> persisted active Attachment.Nodes -> new installRootBinary/Run -> guard refuses before replacement/backend effects | ARCH002 source-derived predecessor writer path; R2 no abandoned obligations | Supported Explicit Edge Scenario / Use |
 | MP-002 / SCN-006 | Operational: retry after predecessor setup saved pending intent but did not complete | Predecessor SaveIntent before resource effects -> pending Plan.Attachment.Nodes -> new install/dispatch/supervisor guard -> refuse, retain bytes | ARCH002 interrupted-setup preservation contract and production ordering | Supported Explicit Edge Scenario / Use |
 | SCN-007 / REQ010 | User/system: configured-skill runtime preparation, normal termination or supported cancellation | Existing run memory layout -> own profile pre-await -> source links/native adapters -> close-before-release; project/source/peer profiles preserved | R2 DEC006; DS5; current provisioning/preparation/process owners | Supported Normal Scenario and explicitly supported cancellation edge / Use |
-| ENG-DEAD / Core Principle7 | Engineering contract: changed modules must not retain unused imports | Touched production files still contain five import bindings with no consumers -> unnecessary misleading dependencies in source | Mandatory shared no-dead-code rule explicitly includes preexisting imports in touched files | Supported contract / Use |
+| ENG-DEAD / Core Principle7 | Engineering contract: changed modules must not retain unused imports | Touched production files must not retain unconsumed local imports -> remove only dead bindings, preserve real imports and public API | Mandatory shared no-dead-code rule explicitly includes preexisting imports in touched files | Supported contract / Use |
 
 ### Candidate Finding And Mechanism Gate
 
 | ID | Observation / mechanism | Independent basis / trigger | Path, lifecycle and consequence | Evidence | Disposition / scope / proportionate response |
 | --- | --- | --- | --- | --- | --- |
-| C-001 | Five unused import bindings in three touched runtime files | ENG-DEAD, not an invented runtime failure | Factories and manager were modified in R2, but those local names have no reference. TypeScript reports6133. Cleanup contract unsatisfied; no runtime breakage attributed | E/unused-imports.json + direct full-file reads; base inspection confirms preexisting provenance; current diff confirms all three files touched | **Promote / This ticket / CR-001**. Remove only unused bindings; preserve actual symbols and public re-export. No behavior redesign/new test campaign. |
+| C-001 / CR-001 | Previously five unused import bindings in three touched files; now removed | ENG-DEAD; original independent mandatory cleanup contract unchanged | Same production owners/lifecycles; actual AgentRunContext use and ClaudeSessionEvent public re-export retained. No runtime defect attributed | E2/source.diff, full-file reads, fresh unused-imports.json (zero), delta-audit.json (identical emission); IR002 semantic typecheck exit0 | **Resolved**. Historical Promote / This ticket retained in CRR-001 history; no current finding or additional machinery. |
 | C-002 | Active/pending obligation refusal and private-profile path/ownership checks | MP001/002, REQ009/010 | Protect actual predecessor persisted obligations before binary/resource effects; private configured exposure stays outside selected project and retained until child close | Installer/Run/setup guard trace; RuntimeSkillProfile/preparation/native managers; independent N checks, IR local profile tests | Promote as justified existing mechanisms, **not defects**. Keep bounded current owners; no migration/history scan or new machinery. |
 | C-003 | Search hit for removed launcher-attachment command in test | No supported active production caller | cli_test.go passes removed option specifically to assert parser refusal; not a current action implementation | Raw audit attempt-2; corrected production-only scan | **Reject — Not Reachable as active implementation**. Negative regression remains valid; no deduction. |
 
@@ -85,15 +88,15 @@ No prior finding applies. Existing preparation/cancellation ownership is reused;
 | Naming/responsibility alignment | Pass | Connection fixture is service input, not public app attachment contract | None |
 | No unjustified duplication | Pass | Shared private preparation and engine helpers retained once | None |
 | Patch-on-patch complexity control | Pass | Clean removal, no old/new strategy branch or compatibility bridge | None |
-| Dead code removed in touched files/modules | **Fail** | C-001 / CR-001: five unused import bindings | Bounded import cleanup |
+| Dead code removed in touched files/modules | Pass | CR-001 resolved; five bindings removed, zero current compiler unused diagnostics in25 touched TS files | None |
 | Relevant test scenarios/assertions clear | Pass | Admission pre-effect refusal, no-binding/source/collision/exact release, ordinary registered paths | None |
 | Test fixtures/helper coherence | Pass | Test-owned stores/profiles/processes; independent N tests; intentional provider doubles | None |
 | No stale/duplicated/compatibility-only tests | Pass | Old app-node/paired/admission/materializer tests removed; generic launcher and negative option checks preserved | None |
-| API/E2E readiness | Pass | Explicit evidence map/local checks and honest limits; no ambiguous product contract | After cleanup/review, proportional current validation only |
+| API/E2E readiness | Pass | Explicit evidence map/local checks and honest limits; cleanup now cleared | Proportional current validation, not old qualification campaigns |
 
 ## Source File Size And Structure Audit
 
-Full per-file counts and normalized deltas: [E/source-size-audit.md](code-review-evidence/crr-001/source-size-audit.md), machine evidence [E/source-audit.json](code-review-evidence/crr-001/source-audit.json). Original S3712cd9b mapped to N for extraction, not a misleading all-new-file count. Test/fixture/generated evidence and translation payload excluded from implementation thresholds. The workflow is separately included. No >500 growth or >220 normalized delta requiring a split; largest production owner is native backend factory473 nonblank before/after. This does not waive CR-001.
+Full per-file counts and normalized deltas: [E/source-size-audit.md](code-review-evidence/crr-001/source-size-audit.md), machine evidence [E/source-audit.json](code-review-evidence/crr-001/source-audit.json). Original S3712cd9b mapped to N for extraction, not a misleading all-new-file count. Test/fixture/generated evidence and translation payload excluded from implementation thresholds. The workflow is separately included. No >500 growth or >220 normalized delta requiring a split; largest production owner is native backend factory473 nonblank before/after. Current three-file nonempty counts shrink60→59,165→162,49→48; E2/delta-audit.json updates these rows without changing the remaining size audit. CR-001 is resolved.
 
 ## Legacy / Backward-Compatibility Verdict
 
@@ -101,26 +104,18 @@ Full per-file counts and normalized deltas: [E/source-size-audit.md](code-review
 | --- | --- | --- |
 | No compatibility mechanism | Pass | No paired pin, descriptor fallback or legacy execution path |
 | No legacy old-behavior retention | Pass | App node management, mount admission and automatic Git trust removed |
-| Dead code removed in touched files/modules | **Fail** | CR-001 only; do not mislabel unused imports as an active old runtime |
+| Dead code removed in touched files/modules | Pass | CR-001 resolved; no active old-runtime behavior was involved |
 | Approved persisted transition followed | Pass | Host-only state directly usable; incompatible active/pending obligations refused; no user data rewritten |
 | No version-specific dual read/write | Pass | General trusted envelope inspection, not version branching |
 | Transition mechanics proportionate | Pass | Two bounded current records under existing lock; no historical receipt scan/migration |
 
 ## Dead / Obsolete / Legacy Items Requiring Removal
 
-All paths below are relative to **S**. Import bindings only; do not remove exported domain classes/types or behavior.
-
-| Item / path | Type | Evidence | Why / required action |
-| --- | --- | --- | --- |
-| Claude backend/claude-agent-run-backend-factory.ts:6 `AgentRunConfig`, :7 `RuntimeAgentRunContext` | DeadCode / unused imports | TypeScript6133; zero use outside import | ENG-DEAD; remove these two bindings, retain AgentRunContext |
-| Codex backend/codex-agent-run-backend-factory.ts:5 `AgentRunConfig`, :6 `RuntimeAgentRunContext` | DeadCode / unused imports | TypeScript6133; zero use outside import | Same bounded cleanup |
-| Claude session/claude-session-manager.ts:3–5 local `ClaudeSessionEvent` import | DeadCode / unused import | TypeScript6133; separate direct re-export at:22 supplies public API | Remove local import **only**, keep direct public re-export |
-
-Full prefixes and diagnostic lines are in E/unused-imports.json. These bindings predate extraction, but all three files are actively changed and Core Principle7 explicitly makes their cleanup part of this ticket. No runtime defect or performance penalty is claimed.
+**None remaining.** CR-001 removed AgentRunConfig and RuntimeAgentRunContext local bindings in both backend factories and the unused ClaudeSessionEvent local import in the session manager. Real AgentRunContext imports and the independent ClaudeSessionEvent public type re-export remain. Fresh E2 compiler analysis, exact three-file diff and unchanged emitted JavaScript verify the bounded cleanup. No runtime defect or performance improvement is claimed.
 
 ## Docs-Impact Verdict
 
-**Yes**, and current extraction/usage/policy/Guide references reflect host-only service and ordinary app paths. Licenses/provenance preserved. Guide remains release=null/disabled; inspected two screenshots from the implementation's four-state render proof. No new UI or editor scope. Delivery still owns final integration docs/receipts; CR-001 needs no product documentation change.
+**Yes**, and current extraction/usage/policy/Guide references reflect host-only service and ordinary app paths. Licenses/provenance preserved. Guide remains release=null/disabled; inspected two screenshots from the implementation's four-state render proof. No new UI or editor scope. Delivery still owns final integration docs/receipts; IR002 import cleanup needs no product documentation change.
 
 ## Additional Material Premise Validation
 
@@ -133,7 +128,7 @@ No additional behavioral premise invented. No requirement for app mount-loss cla
 
 ## Review Scorecard
 
-Overall **9.88/10 = 98.8/100**, arithmetic mean for visibility, **not approval**. One mandatory cleanup gap makes the result Fail; all other categories have no evidenced in-scope defect. No deduction for historical limits or unsupported scenarios, no double penalty for the same imports.
+Overall **10/10 = 100/100** for implementation source review. CR-001 is verified resolved, raising cleanup8.8→10; the other nine scores and supporting full-review checks carry on unchanged source/behavior. No deduction for historical limits or unsupported scenarios. This is source approval, **not API/E2E, platform or release qualification**.
 
 | Priority | Category | Score | Reason | Weakness / improvement |
 | --- | --- | --- | --- | --- |
@@ -143,19 +138,14 @@ Overall **9.88/10 = 98.8/100**, arithmetic mean for visibility, **not approval**
 | 4 | Separation of Concerns and File Placement | 10 | Existing concern owners preserved, no replacement framework | None demonstrated |
 | 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10 | Host state narrowed; profile builder shared; ACP variant explicit | None demonstrated |
 | 6 | Naming Quality and Local Readability | 10 | Subjects and scope explicit; no size pressure | None demonstrated |
-| 7 | API/E2E Readiness | 10 | Evidence map/checks/limits support proportional validation once cleanup clears | No separate readiness defect; downstream not yet executed |
+| 7 | API/E2E Readiness | 10 | Evidence map/checks/limits support proportional current validation after verified cleanup | No separate readiness defect; downstream not yet executed |
 | 8 | Runtime Correctness And Behavioral Fidelity | 10 | Supported paths match R2; N independently green; S traces and attributed implementation evidence coherent | No established runtime defect; not live qualification |
 | 9 | No Backward-Compatibility / No Legacy Retention | 10 | Clean-cut behavior and bounded refusal, no compatibility execution | None demonstrated |
-| 10 | Cleanup Completeness | **8.8** | Most obsolete owners removed, but C-001 violates mandatory touched-file rule | Remove five unused bindings; focused source re-review, no design change |
+| 10 | Cleanup Completeness | **10** | CR-001 removed exactly five unused bindings; no residual diagnostic in25 touched production TS files | None demonstrated |
 
 ## Findings
 
-### CR-001 — Remove five unused imports in three touched runtime files
-
-- **Low severity; mandatory cleanup; Local Fix (implementation-owned)**. Candidate C-001 / engineering contract ENG-DEAD.
-- Exact items are enumerated above and compiler-confirmed in E/unused-imports.json. All are preexisting bindings in files changed by this refactor; the shared no-dead-code rule explicitly applies here.
-- Consequence: unnecessary, misleading source dependencies remain in the current refactored owner. **Not** a proven runtime failure, broken extraction or architectural defect.
-- Response: remove only those local import bindings, preserve the ClaudeSessionEvent public re-export and real classes/types. Do not expand into unrelated unused-code cleanup, provider changes or new product requirements. Rerun a focused no-unused check and appropriate production typecheck; source review then proportionate API validation remain the existing route.
+**None current. CR-001 resolved in IR002.** The original low-severity engineering-contract finding and Fail verdict remain in CRR-001 history. Independent verification confirms exactly the requested five binding removals, unchanged runtime statements/emission, preserved public export, shrinking sizes and zero unused diagnostics. The implementation-owned production typecheck also passed with its documented prerequisite builds. No new candidate requires promotion, evidence hold or scope expansion.
 
 ## Follow-ups
 
@@ -163,11 +153,11 @@ None. No new Task requested. Completed filesystem/editor Tasks remain closed; no
 
 ## Classification
 
-**Local Fix — implementation-owned**, limited to CR-001. No Design Impact, Requirement Gap or failure-origin attribution. The earlier architecture approval remains valid.
+**Pass**; failure classification **N/A**. Prior Local Fix CR-001 is resolved. No Design Impact, Requirement Gap or failure-origin attribution. Earlier architecture approval remains valid; Large/High unchanged.
 
 ## Recommended Recipient
 
-`/software_engineering_team/implementation_engineer`, subject to fresh routing rules. No API/E2E advance until cleanup/source re-review passes. No duplicate Designer/API/PM dispatch.
+`/software_engineering_team/api_e2e_engineer` under the fresh implementation-review-pass rule. Proportionate executable validation of the current cumulative R2 extraction package is next, not just a repeat of the import audit. Single most-specific handoff; no duplicate Implementation/Designer/PM dispatch.
 
 ## Residual Risks
 
@@ -175,10 +165,10 @@ No live mount/export/installed upgrade/provider-authenticated/physical/platform/
 
 ## Latest Authoritative Result
 
-- **Review Decision: Fail — CR-001 bounded import cleanup only.**
-- Entry point: Implementation Review / Full Review / CRR-001.
-- Supported Product Scenario Gate: **Pass**; Material-Premise Gate: **Pass**.
-- Score: **9.88/10 / 98.8/100**; no score overrides mandatory cleanup.
-- Failure origin: N/A, not an API failure-origin review.
-- Recommended recipient: implementation engineer, then source re-review and proportionate API validation.
-- Reviewer production/test modifications: **None**. Both input source identities preserved; owned scratch cleaned. No target finalization, release, TaskDone or user-verification claim.
+- **Review Decision: Pass — CR-001 verified resolved, no remaining source finding.**
+- Entry point: Implementation Review / round2 / Targeted Delta Review / **CRR-002**.
+- Supported Product Scenario Gate: **Pass**; Material-Premise Gate: **Pass**; no changed scenario/premise basis.
+- Score: **10/10 /100/100**. All24 structural checks and all10 score categories current via bounded recheck plus identified carried evidence.
+- Failure origin: N/A, not an API failure-origin review. API-REV/DR remain N/A for this Task.
+- Recommended recipient: API/E2E engineer for proportionate current R2 execution. AC007 remains Delivery-owned; no live/platform/provider/publication qualification implied.
+- Reviewer production/test modifications: **None**. Both input source identities and protected upstream artifacts preserved. Read-only audits created only current reviewer evidence; no scratch or live resources created. No target finalization, release, TaskDone or user-verification claim.

@@ -1,0 +1,50 @@
+{
+  "review": "CRR-002",
+  "basis": "CRR-001 / IR-002",
+  "scope": "Root tickets/ excluded; nested historical ticket inputs retained in S inventory, not counted as new production code.",
+  "repositories": {
+    "N": {
+      "head": "357c64a3ac9ff10880ccc1982eb153587ae92318",
+      "tracked_inputs": 108,
+      "added_or_removed": [],
+      "changed_since_CRR001": [],
+      "current_aggregate_sha256": "070f9b587743ef02fc561457aa9bedcf16f9f4df22fe4b1ececa7d011a15c048"
+    },
+    "S": {
+      "head": "a2023feff3d498fb6c51cebf1c93360da3679a45",
+      "tracked_inputs": 7215,
+      "added_or_removed": [],
+      "changed_since_CRR001": [
+        "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts",
+        "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts",
+        "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts"
+      ],
+      "current_aggregate_sha256": "0c6ebe4e3728189ffe0cf48261d54702f33bdc0a46861204f282693bdb42f25e",
+      "numstat": "1\t2\tautobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts\n0\t3\tautobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts\n1\t2\tautobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts\n"
+    }
+  },
+  "authority_files_unchanged": {
+    "requirements-doc.md": "feb342dabc94facb1448367fb8f7386847e976d474149e08f5333ec1e005af6f",
+    "investigation-notes.md": "d9e76f6b2aed183744ac046a171d0c2159cd86a61ffc018e0f47524a58396421",
+    "solution-revision-record.md": "eea0e8cc86007685fc845372253df2a3d8750cee8493037067b5d28eed22b8ae",
+    "design-spec.md": "035ba29a0b5c65d9a63a5ac5c07868584f8c6cc052689a44243700efdd33ceed",
+    "user-filesystem-boundary-correction.md": "54508be052e617a1dddd80fe8df742e285dafef2912e99f69666f19aa3379047",
+    "solution-design-handoff.md": "e91a11061631018a3dcf118f682b57fd64d898a00835ddc13a65cb18c381fd02",
+    "design-review-report.md": "61061816b3b28adce15eb706117b9d6e7e31ad25fab142d7115639ddad12dc3d",
+    "architecture-review-revision-record.md": "35426335e8c9009051192ad273302ab472f0cb7659e374bd34684270eb098193"
+  },
+  "protected_tracked_ticket_inputs": {
+    "count": 215,
+    "aggregate_sha256": "d27078a5b9f9baa4798c42463e462ab338f898543df4194d5c86c3d947da1d01"
+  },
+  "prior_review_history": {
+    "bytes": 3163,
+    "sha256": "c9e7bf76d8f72340cde210ee12d58eabce91873ef33b710133108dc42bb57ae7",
+    "CRR001_entry_sha256": "6f184048cbe3df280af824f8132dad3aa54eb58a650cd5a8b6b12909d3c05c07"
+  },
+  "current_unused_diagnostics": [],
+  "toolchain": {
+    "node": "v22.23.1",
+    "typescript": "5.9.3"
+  }
+}
