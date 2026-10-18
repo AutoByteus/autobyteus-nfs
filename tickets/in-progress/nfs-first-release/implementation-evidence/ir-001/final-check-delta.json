@@ -1,0 +1,30 @@
+{
+  "changesAfterNativeSnapshot": [
+    {
+      "path": "packaging/RELEASE.md",
+      "before": "7dff95488faafbfe5dc1c1efd9974b6e5ce43d3aa21e41dd968ec9e0ba719688",
+      "after": "a831dd081365062e58ad7963b917ee5cb0a088f62cca1688dbbf394c1c7d3636"
+    },
+    {
+      "path": "packaging/release.py",
+      "before": "10893d7df31f5558147a70968ba0ac63706fd8d4a45bee3034a481d60ba987fe",
+      "after": "4200245a26c737235029e79ac56b32baec9818df8dfacf63fa613423647515d0"
+    },
+    {
+      "path": "packaging/release_support/candidate.py",
+      "before": "793cabeb9b4c88b12b252f5e8bb0e9abaae18dd6b28b3639ecbaaa0bcfb5203a",
+      "after": "cf4487cb087f74461baed4f993c62a9cd6556a60b3d80c8b81fb33f4c69e083f"
+    },
+    {
+      "path": "packaging/release_support/identity.py",
+      "before": "bc29af17a2358a1b1caaa5513e316182c54a08b3406373e96bdb622cffbf8928",
+      "after": "bbe088ea03061f8fdb10e226fa240d34bc85d6cc5142c9b1349cae1cdcc6f3b1"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_records.py",
+      "before": "ce6e7c1b865055a080245224213f166733abe632ed95b305734b40dbcdfe684b",
+      "after": "fe44d79b471dc59ec40f895fb41a08ee6b2ce2a883c14880b280bed83cec7ab5"
+    }
+  ],
+  "runtimeChange": false
+}

@@ -1,0 +1,29 @@
+{
+  "result": "All non-raw artifacts clean; raw apt/dpkg CR diagnostics retained byte-for-byte",
+  "exceptions": [
+    {
+      "path": "tickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/linux-checks.log",
+      "linesReported": 352,
+      "sha256": "bbf0d1548e92c2961a94c23d34e1b36be473d05ca3b1e280890e8e805fe11916",
+      "reason": "Raw apt/dpkg terminal CR line endings, not source formatting"
+    },
+    {
+      "path": "tickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/linux-checks.log",
+      "linesReported": 352,
+      "sha256": "d923898ccfc884dc8fd635f08fe3c2832fc0300d153d6e0f8a10d886c2cbda80",
+      "reason": "Raw apt/dpkg terminal CR line endings, not source formatting"
+    },
+    {
+      "path": "tickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/linux-checks.log",
+      "linesReported": 352,
+      "sha256": "955b3fae5d4719196216238287b86ea09a6b715f823175cf0920b38e157eef8c",
+      "reason": "Raw apt/dpkg terminal CR line endings, not source formatting"
+    },
+    {
+      "path": "tickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-checks.log",
+      "linesReported": 352,
+      "sha256": "f5bc605ecb7f49f0d89038d625735a8b94a241d82bc548f3eaf3fff632a67584",
+      "reason": "Raw apt/dpkg terminal CR line endings, not source formatting"
+    }
+  ]
+}

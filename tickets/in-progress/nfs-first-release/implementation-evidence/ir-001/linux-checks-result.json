@@ -1,0 +1,7 @@
+{
+  "exitCode": 0,
+  "passed": true,
+  "seconds": 46.45,
+  "container": "nfs-release-ir001-345c42811a",
+  "scope": "Ubuntu24.04 Linux arm64 native Go/Python and synthetic OCI transport; NOT mounted/physical/hosted qualification"
+}

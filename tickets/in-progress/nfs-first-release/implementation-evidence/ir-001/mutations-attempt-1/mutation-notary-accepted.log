@@ -1,0 +1,19 @@
+test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest) ... ok
+test_failed_import_sign_verify_submit_and_rejected_notary_clean_up (test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_failed_import_sign_verify_submit_and_rejected_notary_clean_up (test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/mutation-source/scripts/tests/test_nfs_release_signing.py", line 63, in test_failed_import_sign_verify_submit_and_rejected_notary_clean_up
+    self.run_case(notary='Invalid')
+  File "/private/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/mutation-source/scripts/tests/test_nfs_release_signing.py", line 49, in run_case
+    self.assertEqual(result.returncode==0,expected,result.stdout+result.stderr)
+AssertionError: True != False : Notary status: Invalid; submission: 12345678-1234-1234-1234-123456789abc
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 19.340s
+
+FAILED (failures=1)

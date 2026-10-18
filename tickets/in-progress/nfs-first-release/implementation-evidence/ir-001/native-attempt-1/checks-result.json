@@ -1,0 +1,191 @@
+[
+  {
+    "name": "python",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 27.76,
+    "passed": true
+  },
+  {
+    "name": "actionlint",
+    "command": [
+      "/opt/homebrew/bin/actionlint",
+      ".github/workflows/ci.yml",
+      ".github/workflows/release-nfs.yml"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.13,
+    "passed": true
+  },
+  {
+    "name": "bash-syntax",
+    "command": [
+      "/bin/bash",
+      "-n",
+      "packaging/sign-macos.sh",
+      "scripts/public/nfs/install.sh"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.01,
+    "passed": true
+  },
+  {
+    "name": "shellcheck",
+    "command": [
+      "/opt/homebrew/bin/shellcheck",
+      "packaging/sign-macos.sh",
+      "scripts/public/nfs/install.sh"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.25,
+    "passed": true
+  },
+  {
+    "name": "source-hash",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.63,
+    "passed": true
+  },
+  {
+    "name": "publish-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exitCode": 1,
+    "expected": 1,
+    "seconds": 0.55,
+    "passed": true
+  },
+  {
+    "name": "go-race",
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "./..."
+    ],
+    "exitCode": 1,
+    "expected": 0,
+    "seconds": 30.69,
+    "passed": false
+  },
+  {
+    "name": "go-vet",
+    "command": [
+      "go",
+      "vet",
+      "./..."
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 12.34,
+    "passed": true
+  },
+  {
+    "name": "go-native-build",
+    "command": [
+      "go",
+      "build",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/autobyteus-nfs",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.71,
+    "passed": true
+  },
+  {
+    "name": "native-version",
+    "command": [
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/autobyteus-nfs",
+      "version"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 0.38,
+    "passed": true
+  },
+  {
+    "name": "compile-darwin-arm64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/nfs-darwin-arm64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 11.85,
+    "passed": true
+  },
+  {
+    "name": "compile-darwin-amd64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/nfs-darwin-amd64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 10.25,
+    "passed": true
+  },
+  {
+    "name": "compile-linux-arm64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/nfs-linux-arm64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 10.29,
+    "passed": true
+  },
+  {
+    "name": "compile-linux-amd64",
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-o",
+      "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/out/nfs-linux-amd64",
+      "./cmd/autobyteus-nfs"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "seconds": 11.67,
+    "passed": true
+  }
+]

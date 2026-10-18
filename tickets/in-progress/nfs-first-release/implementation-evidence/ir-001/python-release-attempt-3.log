@@ -1,0 +1,30 @@
+test_annotated_tag_exact_sha_and_retained_identity (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_identity_and_nonclobber_creation (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... ok
+test_fresh_main_no_stale_write_permission (test_nfs_release_publication.PublicationTest) ... ok
+test_native_asset_conflicts_never_upload_or_clobber (test_nfs_release_publication.PublicationTest) ... ok
+test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_resume_downloads_original_payload_before_build_and_refuses_lost_input (test_nfs_release_publication.PublicationTest) ... ok
+test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest) ... /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/zipfile.py:1505: UserWarning: Duplicate name: 'a'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_complete_candidate_qualification_payload (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_new_executables_invalidate_production_hash_not_qualification (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_qualification_missing_failed_duplicate_inapplicable_and_consent (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest) ... ok
+test_failed_import_sign_verify_submit_and_rejected_notary_clean_up (test_nfs_release_signing.SigningTest) ... ok
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 25.085s
+
+OK

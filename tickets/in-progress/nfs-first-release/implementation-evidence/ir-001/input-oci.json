@@ -1,0 +1,7 @@
+{
+  "index": "sha256:8d01aa07aaf14abe498c5c7a7fb0543f865f01818d86cfbf5e5b039801d1c006",
+  "children": {
+    "linux-amd64": "sha256:336c02a067852839e6203d953eba41a060278b838a7da50b0706d2de3db9648a",
+    "linux-arm64": "sha256:ac5e95f97f16e2bb2250eeae624a94e0ab7c3ade395f57bc3d56cd36afa5c158"
+  }
+}

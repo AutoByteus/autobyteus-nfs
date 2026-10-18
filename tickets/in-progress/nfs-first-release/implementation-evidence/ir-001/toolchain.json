@@ -1,0 +1,16 @@
+{
+  "scratch": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh",
+  "file": {
+    "filename": "go1.27.2.darwin-arm64.tar.gz",
+    "os": "darwin",
+    "arch": "arm64",
+    "version": "go1.27.2",
+    "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+    "size": 68195916,
+    "kind": "archive"
+  },
+  "platform": "Darwin MacBookPro 25.5.0 Darwin Kernel Version 25.5.0: Tue Jun  9 22:18:58 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6000 arm64",
+  "python": "Python 3.9.6",
+  "go": "go version go1.27.2 darwin/arm64",
+  "actionlint": "1.7.11\ninstalled by building from source\nbuilt with go1.26.0 compiler for darwin/arm64"
+}

@@ -1,0 +1,16 @@
+{
+  "containersConfirmedAbsent": [
+    "nfs-release-ir001-345c42811a",
+    "nfs-release-ir001-88d0467b35",
+    "nfs-release-ir001-d2f63e48b1",
+    "nfs-release-ir001-f93d072e1c"
+  ],
+  "noPersistentDaemonOrMountedResourceCreated": true,
+  "preserved": "Canonical NFS/app checkouts, PM data, historical worktrees/assets, shared Docker base cache untouched. No signing credential/hosted/publication resource created.",
+  "removedOwnedScratch": [
+    "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh",
+    "/Users/normy/autobyteus_org/nfs-release-ir001-check-pu7ph3d1",
+    "/tmp/nfs-release-design-read.txt"
+  ],
+  "result": "Complete"
+}

@@ -1,0 +1,15 @@
+{
+  "container": "nfs-release-ir001-345c42811a",
+  "base": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+  "toolchain": {
+    "filename": "go1.27.2.linux-arm64.tar.gz",
+    "os": "linux",
+    "arch": "arm64",
+    "version": "go1.27.2",
+    "sha256": "94f3e30b8e374bc285e7dadc11e0865726b9bc6e85b841ccceaabc0214c6b7c8",
+    "size": 67076180,
+    "kind": "archive"
+  },
+  "mount": "/var/folders/7w/9r4_s1_s42z3f7c136bpjf0r0000gn/T/nfs-release-ir001-86s25eeh/linux",
+  "purpose": "local fixture/native checks only; no Docker socket or privileged mode"
+}
