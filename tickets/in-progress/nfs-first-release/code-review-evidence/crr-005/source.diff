@@ -1,0 +1,26 @@
+diff --git a/packaging/engine/manifest.py b/packaging/engine/manifest.py
+index fa87b0f..abac042 100644
+--- a/packaging/engine/manifest.py
++++ b/packaging/engine/manifest.py
+@@ -5,7 +5,7 @@ import json
+ import re
+ import shutil
+ from pathlib import Path
+-from source import LOCK, VERSION, NAMES, identity, source_identity
++from source import VERSION, NAMES, identity, source_identity
+ 
+ DIGEST = re.compile(r'[a-f0-9]{64}')
+ LIMIT = 40*1024*1024
+diff --git a/scripts/tests/nfs_release_fixture.py b/scripts/tests/nfs_release_fixture.py
+index f021172..d963672 100644
+--- a/scripts/tests/nfs_release_fixture.py
++++ b/scripts/tests/nfs_release_fixture.py
+@@ -10,7 +10,7 @@ from unittest.mock import patch
+ 
+ ROOT = Path(__file__).resolve().parents[2]
+ sys.path.insert(0, str(ROOT / 'packaging'))
+-from release_support import candidate, identity as i, payload, readiness
++from release_support import candidate, identity as i, payload
+ from source import source_identity, VERSION, NAMES
+ 
+ SHA = 'a' * 40

@@ -107,3 +107,28 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-004 | code-review-report.md | IR003 / R3 shared contract replacement | CRR003 Pass100 (R2) | Fail99 / Local Fix | CR-002 Open; CR-001 remains resolved |
+
+
+### CRR-005 — IR004 two-import targeted source re-review
+
+- Date2026-10-18; canonical code-review-report.md. **Implementation Review / round5 / Targeted Delta Review**. IR004 stays exactly within prior CR-002; no shared interface, shape, behavior or assertion changed. Unaffected full R3 checklist/score evidence carries from CRR004, not a new full audit.
+- R3/SR004 Approved / SR004 Ready / ARCH-REV-002 Pass; Large/High/Reviewed unchanged. IR004; API002 Blocked73.57 historical; DR003 requirement-recovery context only. Authority hashes verified unchanged.
+- Intake baf2ea5024a18051d5c2f8c87ecaa1c838d4f64f; source850dfeb97e2ec396b2b134e760dc9ee802873d6b versus3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3. Only manifest.py LOCK and nfs_release_fixture.py readiness aliases removed;2insertions/2deletions, other118/120 inputs byte-identical. Independent normalized AST and sixteen-file binding audit corroborate caller inspection. No reviewer source/test edit.
+- Prior **CRR004 Fail99 / Local Fix**; current **Pass100.00/100**, source scope only. Cleanup9→10 after resolution; other nine categories10 carry, affected test/dependency/readiness checks revalidated. All24 structural checks retained with attribution.
+
+#### Prior Finding Resolution
+
+| Finding | Prior status | Current status | Evidence / related revisions |
+| --- | --- | --- | --- |
+| CR-002 / CG012 | Open CRR004 | **Resolved at source scope** | IR004 exact requested alias removals, identical remaining AST, live consumers, reviewer Python45/44executed/1skip and current hash/refusal checks. |
+| CR-001 / API001 R03-F001 | Source-resolved CRR003/004 | Remains resolved | Workflow byte-identical; fresh actual Bash3.2 prefix controls pass within Python suite. No new hosted result. |
+
+- Fresh personal exact120-input copy/private HOME/TMP: Python3.9.6 full45collected44executed1standalone-Go-childskip Pass; Bash3.2.57 measured; current source/recipe hashes and expected null-readiness refusal. Six commands all expected. CRR004 Go/actionlint/shell and IR003 Linux/compile/mutations carry their exact-input limits; not rerun or aggregated as new checks. No product check failure. Removed unused os import only from own runner after execution without changing argv/assertions.
+- New default-null sourcehash c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60, recipe299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274. No measured engine built. NEW complete actual current hosted candidate/affected API required; old API002 candidate/run/artifact stays historical and untouched.
+- Own scratch removed/no matching process; source120,1164 prior ticket files excluding2 intentional canonical updates,16Delivery untracked inputs and12652-byte prior review-history prefix preserved. Only NFS review artifacts written. No application/superrepo/live/remote/CI/secrets/signing/merge/push/release/TaskDone/Terminal action.
+- No new findings/follow-ups. Field/physical/shared-filesystem/user tests remain Deferred, not publication/closure prerequisites. Both-Mac signature/Accepted notary/current-main/payload/publication/download obligations remain; six secrets provisioned, no repeat questionnaire.
+- Fresh most-specific source-Pass rule routes only API/E2E; crr-005/routing.json and receipt record delivery. No duplicate Implementation/Designer/Delivery/PM dispatch. Delivery retains genuine readiness refs/final effects and postpublication custody.
+
+| Revision | Canonical report | Trigger | Prior result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-005 | code-review-report.md | IR004 / CR-002 bounded cleanup | CRR004 Fail99 | Pass100 — source scope | CR-002 resolved; CR-001 remains resolved |

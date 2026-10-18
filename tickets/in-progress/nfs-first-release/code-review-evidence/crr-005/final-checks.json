@@ -1,0 +1,41 @@
+{
+  "review": "CRR-005",
+  "entry": "Implementation Review / Targeted Delta Review",
+  "result": "Pass",
+  "source_score": 100,
+  "open_findings": [],
+  "resolved_findings": [
+    "CR-002"
+  ],
+  "prior_resolved_retained": [
+    "CR-001"
+  ],
+  "basis": "R3/SR004 Approved / SR004 Ready / ARCH002",
+  "source_commit": "850dfeb97e2ec396b2b134e760dc9ee802873d6b",
+  "source_inputs_unchanged": 120,
+  "protected_prior_ticket_unchanged": 1164,
+  "delivery_untracked_unchanged_unstaged": 16,
+  "prior_history_prefix_unchanged_bytes": 12652,
+  "intentional_canonical_updates": [
+    "tickets/in-progress/nfs-first-release/code-review-report.md",
+    "tickets/in-progress/nfs-first-release/code-review-revision-record.md"
+  ],
+  "review_document_hashes": {
+    "code-review-report.md": "38a020ba17aa48b9219241d1134c02aabf6e026abe9d7f3cbecb70467c2f1de4",
+    "code-review-revision-record.md": "4f3e2f4cc02728ba2916c5133210c1976ce1f162ac0b332f9274a391c054d065"
+  },
+  "structural_checks": 24,
+  "score_categories": 10,
+  "scope": "Standalone NFS only",
+  "current_commands": 6,
+  "python_collected": 45,
+  "python_executed": 44,
+  "python_skips": 1,
+  "current_source_hash": "c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60",
+  "current_recipe_hash": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+  "scratch_removed": true,
+  "source_test_edits_by_reviewer": false,
+  "remote_live_signing_release_actions": false,
+  "new_current_hosted_candidate_required": true,
+  "field_and_user_tests": "Deferred, not a publication/closure prerequisite"
+}
