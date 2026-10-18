@@ -20,7 +20,7 @@ under the administrative lock before binary replacement or resource effects.
 No history scan, migration, deletion or legacy execution path. Absent/node-free
 state remains usable; operators recover incompatible state with its matching tool.
 Service source/build/tests need no AutoByteus checkout or paired fixture. Keep
-engine recipe/pin/provenance and publication qualification separate from builds.
+engine recipe/pin/provenance and publication readiness separate from field qualification.
 
 Validate at the affected boundary with owned scratch and truthful limitations.
 Cross-compilation, synthetic fixtures and historical results do not qualify

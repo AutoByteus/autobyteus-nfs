@@ -5,7 +5,7 @@ umask 077
 TAG='__RELEASE_TAG__'
 REPOSITORY='AutoByteus/autobyteus-nfs'
 fail() { printf 'AutoByteus NFS installer: %s\n' "$*" >&2; exit 1; }
-[[ "$TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || fail 'No qualified versioned release is embedded in this installer.'
+[[ "$TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]] || fail 'No versioned release is embedded in this installer.'
 case "$(uname -s)" in Darwin) os=darwin ;; Linux) os=linux ;; *) fail 'Supported computers are macOS and Linux, not Windows.' ;; esac
 case "$(uname -m)" in arm64|aarch64) arch=arm64 ;; x86_64|amd64) arch=amd64 ;; *) fail 'This CPU is not supported.' ;; esac
 [[ ! -e /.dockerenv ]] || fail 'Run on the computer, not inside an agent container.'

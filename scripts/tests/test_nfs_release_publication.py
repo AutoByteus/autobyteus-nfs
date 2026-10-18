@@ -9,7 +9,7 @@ from pathlib import Path
 from unittest.mock import patch, Mock
 
 from nfs_release_fixture import Fixture, TAG, SHA
-from release_support import candidate, identity as i, publication
+from release_support import candidate, identity as i, publication, readiness
 
 
 class PublicationTest(unittest.TestCase):
@@ -71,6 +71,7 @@ class PublicationTest(unittest.TestCase):
             args=commands.call_args.args
             self.assertIn('--verify-tag',args);self.assertIn('--draft',args);self.assertIn('--prerelease=false',args)
             self.assertNotIn('--clobber',args)
+            self.assertIn(readiness.DISCLOSURE, args[args.index('--notes')+1])
         with self.assertRaises(ValueError):publication.reconcile_release(existing|{'body':'unrelated'},self.f.p,self.f.binding)
 
     def test_exact_oci_copy_and_anonymous_all_children(self):

@@ -1,4 +1,4 @@
-"""Durable source/manifest/embed/qualification fixtures, no download/root/Docker.
+"""Durable source/manifest/embed/readiness fixtures, no download/root/Docker.
 Run python3 -m unittest scripts/tests/test_nfs_engine_packaging.py -v.
 Fixture .deb bytes are not native engine qualification; actual recipe build is separate.
 """
@@ -6,6 +6,7 @@ import copy
 import importlib.util
 import json
 import sys
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -76,7 +77,7 @@ class EnginePackagingTest(unittest.TestCase):
                 with self.assertRaises((ValueError,FileNotFoundError)):manifest.embed(m,root,'arm64',root/'assets')
                 self.assertFalse((root/'assets').exists())
 
-    def test_engine_bytes_part_of_source_hash_and_stale_qualification_clears(self):
+    def test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);m=fixture(root/'arm64','arm64')
             before=release.i.source_hash(m)
@@ -84,15 +85,36 @@ class EnginePackagingTest(unittest.TestCase):
             self.assertNotEqual(before,release.i.source_hash(changed))
             out=root/'release.json'
             read=release.i.read_json
-            def unqualified(path):
+            def no_engine(path):
                 result=read(path)
-                if path==ROOT/'packaging/release-lock.json':result.update(engine=None,qualifiedTargets=[])
+                if path==ROOT/'packaging/release-lock.json':result.update(engine=None,releaseReadiness=None)
                 return result
-            with patch.object(release.i,'read_json',side_effect=unqualified):
+            with patch.object(release.i,'read_json',side_effect=no_engine):
                 with patch.object(sys,'argv',['release.py','--tag','v1.2.3','--output',str(out)]):release.main()
-                self.assertEqual(json.loads(out.read_text())['qualifiedTargets'],[])
+                self.assertEqual(json.loads(out.read_text())['releaseTargets'],[])
                 with patch.object(sys,'argv',['release.py','--tag','v1.2.3','--target','linux-arm64']):
                     with self.assertRaises(ValueError):release.main()
+
+    def test_measured_engine_lock_clears_readiness_and_preserves_pins(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);fixture(root/'a','arm64');fixture(root/'b','amd64')
+            manifest.merge([root/'a',root/'b'],root/'merged')
+            lock=json.loads((ROOT/'packaging/release-lock.json').read_text())
+            lock['releaseReadiness']={'path':'stale/readiness.json','sha256':'0'*64}
+            path=root/'lock.json';path.write_text(json.dumps(lock))
+            subprocess.run([sys.executable,str(ENGINE/'manifest.py'),'lock','--directory',str(root/'merged'),
+                            '--release-lock',str(path)],check=True,capture_output=True)
+            current=json.loads(path.read_text())
+            self.assertEqual(set(current),set(lock))
+            self.assertIsNone(current['releaseReadiness'])
+            self.assertEqual(current['engine'],json.loads((root/'merged/engine-manifest.json').read_text()))
+            for key in ('ubuntuBaseImage','ubuntuPackages','note'):self.assertEqual(current[key],lock[key])
+            current['qualification']={'path':'old','sha256':'0'*64};path.write_text(json.dumps(current))
+            old=path.read_bytes()
+            result=subprocess.run([sys.executable,str(ENGINE/'manifest.py'),'lock','--directory',str(root/'merged'),
+                                   '--release-lock',str(path)],capture_output=True)
+            self.assertNotEqual(result.returncode,0)
+            self.assertEqual(path.read_bytes(),old)
 
     def test_pipeline_pair_reuse_and_size_gate(self):
         w=(ROOT/'.github/workflows/release-nfs.yml').read_text()

@@ -1,4 +1,4 @@
-"""Real parsers/files with synthetic bytes. No Actions, signing or qualification."""
+"""Real parsers/files with synthetic bytes. No Actions, signing or readiness."""
 import copy
 import io
 import json
@@ -10,7 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from nfs_release_fixture import Fixture, TAG, SHA, make_oci
-from release_support import candidate, identity as i, payload, qualification
+from release_support import candidate, identity as i, payload, readiness
 
 
 class ReleaseRecordsTest(unittest.TestCase):
@@ -19,14 +19,14 @@ class ReleaseRecordsTest(unittest.TestCase):
         self.f=Fixture(Path(self.temp.name))
         self.addCleanup(self.temp.cleanup); self.addCleanup(self.f.close)
 
-    def test_complete_candidate_qualification_payload(self):
+    def test_complete_candidate_readiness_payload(self):
         self.assertEqual(candidate.verify(self.f.c),self.f.record)
         layout=Path(self.temp.name)/'layout'
         self.assertEqual(candidate.materialize_oci(self.f.c/'engine.oci.tar',layout),self.f.image)
         with tarfile.open(self.f.c/'engine.oci.tar') as tar:
             for member in tar:
                 if member.isreg():self.assertEqual((layout/member.name).read_bytes(),tar.extractfile(member).read())
-        self.assertEqual(qualification.validate(self.f.c),self.f.q)
+        self.assertEqual(readiness.validate(self.f.c),self.f.q)
         self.f.final_payload()
         result=payload.verify(self.f.p,self.f.c)
         self.assertEqual(result['candidateRecordSha256'],self.f.q['candidate']['recordSha256'])
@@ -34,6 +34,12 @@ class ReleaseRecordsTest(unittest.TestCase):
         self.assertIn('autobyteus-nfs-install.sh',checksums)
         self.assertIn('autobyteus-nfs-manifest.json',checksums)
         self.assertIn('release-provenance.json',checksums)
+        provenance=i.read_json(self.f.p/'assets/release-provenance.json')
+        self.assertEqual(provenance['schema'],2)
+        self.assertEqual(provenance['fieldValidation'],i.DEFERRED_FIELD_VALIDATION)
+        self.assertIn(readiness.DISCLOSURE,(self.f.p/'assets/release-notes.md').read_text())
+        self.assertEqual(self.f.metadata['schema'],2)
+        self.assertEqual(self.f.metadata['releaseTargets'],[])
 
     def test_strict_version_paths_json_and_sizes(self):
         for bad in ('v01.2.3','v1.2.3-beta.1','v1.2.3+build','1.2.3','v1.2','v1.2.3\n'):
@@ -44,19 +50,19 @@ class ReleaseRecordsTest(unittest.TestCase):
             with self.subTest(value=bad),self.assertRaises(ValueError):i.positive(bad)
         for bad in (b'{"x":1,"x":2}',b'{"x":NaN}',b'{} trailing'):
             with self.subTest(value=bad),self.assertRaises(ValueError):i.decode(bad)
-        link=self.f.repo/'evidence/link';link.symlink_to(self.f.repo/'evidence/user')
-        with self.assertRaises(ValueError):qualification.evidence({'path':'evidence/link','sha256':i.sha(link)})
+        link=self.f.repo/'evidence/link';link.symlink_to(self.f.repo/'evidence/authorization')
+        with self.assertRaises(ValueError):readiness.evidence({'path':'evidence/link','sha256':i.sha(link)})
 
-    def test_new_executables_invalidate_production_hash_not_qualification(self):
+    def test_new_executables_invalidate_production_hash_not_readiness(self):
         before=i.source_hash(self.f.lock['engine'])
         for name in ('packaging/release_support/identity.py','packaging/release_support/candidate.py',
-                     'packaging/release_support/qualification.py','packaging/release_support/payload.py',
+                     'packaging/release_support/readiness.py','packaging/release_support/payload.py',
                      'packaging/release_support/publication.py','packaging/sign-macos.sh',i.WORKFLOW):
             path=self.f.repo/name;old=path.read_bytes();path.write_bytes(old+b'\n# mutation\n')
             self.assertNotEqual(before,i.source_hash(self.f.lock['engine']),name)
             with self.assertRaises(ValueError):candidate.verify(self.f.c)
             path.write_bytes(old)
-        self.f.lock['qualifiedSourceHash']='x';self.f.save_q()
+        self.f.lock['note']='changed note';self.f.save_q()
         self.assertEqual(before,i.source_hash(self.f.lock['engine']))
 
     def test_candidate_mutations_refused(self):
@@ -76,25 +82,47 @@ class ReleaseRecordsTest(unittest.TestCase):
         (self.f.c/'extra').write_text('unexpected')
         with self.assertRaises(ValueError):candidate.verify(self.f.c)
 
-    def test_qualification_missing_failed_duplicate_inapplicable_and_consent(self):
+    def test_readiness_missing_failed_stale_false_claims_and_authority(self):
         original=copy.deepcopy(self.f.q)
-        mutations=[lambda q:q['rows'].pop(),lambda q:q['rows'].__setitem__(1,q['rows'][0]),
-                   lambda q:q['rows'][0]['cases'].__setitem__('create-connect','fail'),
-                   lambda q:q['rows'][0].__setitem__('osVersion','15.0'),
-                   lambda q:q['rows'][0]['topology'].__setitem__('clientKernel','server-boot'),
-                   lambda q:q['rows'][0].__setitem__('engineImage','registry.invalid/a@sha256:'+'0'*64),
-                   lambda q:q['userVerification'].__setitem__('kind','publication-consent'),
-                   lambda q:q['userVerification'].__setitem__('candidateRecordSha256','0'*64),
+        mutations=[lambda q:q.pop('postpublicationPlan'), lambda q:q.__setitem__('schema',True),
+                   lambda q:q.__setitem__('kind','qualified'), lambda q:q.__setitem__('version','v9.9.9'),
+                   lambda q:q['targets'].pop(), lambda q:q['targets'].reverse(),
+                   lambda q:q['targets'].__setitem__(1,q['targets'][0]),
+                   lambda q:q['checks'].pop('native'), lambda q:q['checks']['native'].__setitem__('status','skipped'),
+                   lambda q:q['checks']['releaseControls'].__setitem__('status','failed'),
+                   lambda q:q['authorization'].__setitem__('requirementsRevision','R2/SR002'),
+                   lambda q:q['authorization'].__setitem__('kind','executed-user-check'),
+                   lambda q:q['authorization'].__setitem__('version','v9.9.9'),
+                   lambda q:q['authorization']['evidence'].__setitem__('sha256','0'*64),
+                   lambda q:q['fieldValidation'].__setitem__('user','passed'),
+                   lambda q:q['fieldValidation'].__setitem__('filesystem','passed'),
+                   lambda q:q['fieldValidation'].__setitem__('unknown','deferred'),
                    lambda q:q.__setitem__('sourceHash','0'*64),
+                   lambda q:q.__setitem__('engineManifestSha256','0'*64),
+                   lambda q:q['oci'].__setitem__('index','sha256:'+'0'*64),
+                   lambda q:q['candidate'].__setitem__('recordSha256','0'*64),
                    lambda q:q['candidate']['envelope'].__setitem__('runAttempt',2),
-                   lambda q:q['rows'][0]['evidence'].__setitem__('sha256','0'*64)]
-        for mutate in mutations:
-            self.f.q=copy.deepcopy(original);mutate(self.f.q);self.f.save_q()
-            with self.assertRaises(ValueError):qualification.validate(self.f.c)
-        self.f.q=copy.deepcopy(original)
-        for row in self.f.q['rows']:row['topology']['kind']='virtual'
-        self.f.save_q()
-        with self.assertRaisesRegex(ValueError,'physical'):qualification.validate(self.f.c)
+                   lambda q:q['review'].__setitem__('candidateCommit','0'*40),
+                   lambda q:q.__setitem__('userVerified',True)]
+        for number,mutate in enumerate(mutations):
+            with self.subTest(mutation=number):
+                self.f.q=copy.deepcopy(original);mutate(self.f.q);self.f.save_q()
+                with self.assertRaises(ValueError):readiness.validate(self.f.c)
+        self.f.q=original;self.f.save_q()
+        self.assertEqual(readiness.validate(self.f.c)['fieldValidation'], i.DEFERRED_FIELD_VALIDATION)
+
+    def test_readiness_references_are_hashed_regular_stable_and_nonempty(self):
+        original=copy.deepcopy(self.f.q)
+        for name in ('postpublicationPlan','releaseNotes'):
+            self.f.q=copy.deepcopy(original);self.f.q[name]['sha256']='0'*64;self.f.save_q()
+            with self.assertRaises(ValueError):readiness.validate(self.f.c)
+        for name in ('tickets/in-progress/task/evidence.json','../escape'):
+            with self.assertRaises(ValueError):readiness.evidence({'path':name,'sha256':'0'*64})
+        empty=self.f.repo/'evidence/empty';empty.write_bytes(b'')
+        with self.assertRaises(ValueError):readiness.evidence({'path':'evidence/empty','sha256':i.sha(empty)})
+        self.f.q=original;self.f.save_q()
+        self.f.lock['qualifiedTargets']=list(i.TARGETS);self.f.save_q()
+        with self.assertRaises(ValueError):readiness.load()
 
     def test_oci_graph_not_just_declared_digest(self):
         path=Path(self.temp.name)/'bad-oci.tar';files=make_oci(path)
@@ -133,7 +161,7 @@ class ReleaseRecordsTest(unittest.TestCase):
                           ('created_at','2000-01-01T00:00:00Z'),('digest','bad'),('id',44)]:
             with self.subTest(key=key),self.assertRaises(ValueError):check(run,artifact|{key:value})
 
-    def test_executed_workflow_and_qualified_metadata_cannot_drift(self):
+    def test_executed_workflow_and_release_metadata_cannot_drift(self):
         with patch.object(i,'command',return_value=b'other workflow'),self.assertRaisesRegex(ValueError,'Executed workflow'):
             candidate.verify(self.f.c)
         import importlib.util
@@ -141,17 +169,24 @@ class ReleaseRecordsTest(unittest.TestCase):
         spec=importlib.util.spec_from_file_location('release_facade_test',i.ROOT/'packaging/release.py')
         facade=importlib.util.module_from_spec(spec);spec.loader.exec_module(facade)
         args=SimpleNamespace(engine_manifest=self.f.c/'engine/engine-manifest.json',source_hash=False,check_publish=False,
-             tag='v9.9.9',qualified=True,candidate=self.f.c,engine_image=self.f.metadata['engineImage'],target=None,
+             tag='v9.9.9',release=True,candidate=self.f.c,engine_image=self.f.metadata['engineImage'],target=None,
              output=Path(self.temp.name)/'bad-metadata.json')
-        with self.assertRaisesRegex(ValueError,'Qualified metadata inputs differ'):facade.metadata(args)
+        with self.assertRaisesRegex(ValueError,'Release metadata inputs differ'):facade.metadata(args)
         self.assertFalse(args.output.exists())
-        args.qualified=False;args.tag=TAG;args.engine_image='registry.test:5443/owned@'+self.f.image['index']
+        args.tag=TAG
+        facade.metadata(args)
+        final=json.loads(args.output.read_text())
+        self.assertEqual(final['schema'],2)
+        self.assertEqual(final['releaseTargets'],list(i.TARGETS))
+        self.assertEqual(final['fieldValidation'],i.DEFERRED_FIELD_VALIDATION)
+        args.check_publish=True;facade.metadata(args);args.check_publish=False
+        args.release=False;args.tag=TAG;args.engine_image='registry.test:5443/owned@'+self.f.image['index']
         facade.metadata(args)
         alias=json.loads(args.output.read_text())
-        self.assertEqual(alias['qualifiedTargets'],[])
+        self.assertEqual(alias['releaseTargets'],[])
         self.assertEqual(alias['sourceHash'],self.f.record['sourceHash'])
         self.assertEqual(alias['engineImage'],args.engine_image)
-        args.qualified=True
+        args.release=True
         with self.assertRaises(ValueError):facade.metadata(args)
 
     def test_actions_zip_paths_and_duplicate_files(self):
@@ -162,6 +197,27 @@ class ReleaseRecordsTest(unittest.TestCase):
             dest=Path(self.temp.name)/'extract';dest.mkdir(exist_ok=True)
             with self.assertRaises(ValueError):candidate.extract_wrapper(path,dest)
             self.assertEqual(list(dest.iterdir()),[])
+
+    def test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away(self):
+        self.f.final_payload()
+        assets=self.f.p/'assets'
+        original={p.name:p.read_bytes() for p in assets.iterdir()}
+        receipt=(self.f.p/'publication.json').read_bytes()
+        for kind in ('notes','status','schema','reference'):
+            with self.subTest(kind=kind):
+                for name,data in original.items():(assets/name).write_bytes(data)
+                (self.f.p/'publication.json').write_bytes(receipt)
+                provenance=i.read_json(assets/'release-provenance.json')
+                if kind=='notes':(assets/'release-notes.md').write_bytes(readiness.evidence(self.f.q['releaseNotes']).read_bytes())
+                if kind=='status':provenance['fieldValidation']['user']='passed'
+                if kind=='schema':provenance['schema']=1
+                if kind=='reference':provenance['releaseReadiness']['sha256']='0'*64
+                provenance['members']=i.inventory(assets,('release-provenance.json','SHA256SUMS-nfs'))
+                i.write_json(assets/'release-provenance.json',provenance)
+                (assets/'SHA256SUMS-nfs').write_text(''.join(v['sha256']+'  '+n+'\n' for n,v in i.inventory(assets,('SHA256SUMS-nfs',)).items()))
+                publication=i.decode(receipt);publication['members']=i.inventory(self.f.p,('publication.json',))
+                i.write_json(self.f.p/'publication.json',publication)
+                with self.assertRaisesRegex(ValueError,'Provenance differs|Unreviewed release notes'):payload.verify(self.f.p,self.f.c)
 
     def test_payload_refuses_missing_checksums_signature_and_member(self):
         self.f.final_payload()

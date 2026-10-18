@@ -22,5 +22,8 @@ engine. Other FSAL/dev/debug build outputs are deliberately not distributed.
 
 Merge manifests once per candidate and retain those exact artifact bytes for
 native and Docker builds and eventual authorized publication. Changed package or
-recipe identities invalidate qualification. End users never run this recipe or
-need a compiler/PPA/package command. No artifact is qualified merely by building.
+recipe identities invalidate candidate/readiness applicability. The measured-engine
+lock command clears releaseReadiness; it never declares field or user validation. End users never run this recipe or
+need a compiler/PPA/package command. No artifact is field-qualified merely by building. The first official signed
+release precedes field/user testing under R3; current source/native/release-control,
+signing/integrity/public-download gates remain (see ../RELEASE.md).

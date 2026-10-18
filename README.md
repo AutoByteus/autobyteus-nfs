@@ -4,8 +4,11 @@ A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
 **Release status:** first normal **v0.1.0** release preparation is in progress;
-no successful public release is claimed by this change. The qualification lock is
-empty until current physical/platform and genuine user checks are accepted.
+no successful public release is claimed by this change. The release-readiness lock is
+empty until current native/build, release-control, source-review and release-first
+authorization evidence is accepted. Shared-filesystem/physical and user testing
+is **deferred until after publication**, not passed or a release prerequisite.
+Distribution/signature checks are not field qualification.
 The application Guide stays disabled; internal CI candidates are not public
 installers. See [release procedure](packaging/RELEASE.md).
 
@@ -23,10 +26,10 @@ storage sequentially. It is not independent-client, physical, Mac/cross-OS or
 publication qualification. Its results remain historical, not promoted by this
 move. The [archived original delivery](https://github.com/AutoByteus/autobyteus-workspace/blob/3712cd9bf0db998501d162db7f8655f169e3def6/tickets/done/shared-network-workspaces/handoff-summary.md)
 records that bounded evidence. No old application/editor campaign is a gate for
-this repository extraction. Public qualification remains separate under
+this repository extraction. Distribution readiness remains separate under
 [packaging/RELEASE.md](packaging/RELEASE.md); the app Guide stays unavailable.
 
-## Supported design and qualification targets
+## Intended host modes and downloadable build targets
 
 | Storage computer | Export engine | Source | Protocol |
 | --- | --- | --- | --- |
@@ -38,8 +41,9 @@ Native Mac/Linux host clients are included. Consumers use ordinary directories;
 container bind mappings are configured separately by their operator. Docker Desktop on Mac is not a storage-server option; use
 native Mac hosting instead. Windows, public/multi-tenant service, offline sync,
 HA, automatic remote notifications and application-node management are not
-included. Release metadata advertises only independently qualified CPU/OS targets;
-compilation for a target is not qualification.
+included. Release metadata advertises four distribution targets (darwin-amd64,
+darwin-arm64, linux-amd64, linux-arm64), not independently field-qualified support.
+Intended host floors above remain unchanged; compilation is not field validation.
 
 Linux engine delivery uses the reviewed Noble backport `4.3-8ubuntu1+autobyteus1`,
 not unpatched stock4.3. The matching packages are embedded in Linux release
@@ -69,7 +73,9 @@ do not disable Gatekeeper or promise offline first-use validation. Standalone
 binaries cannot have tickets stapled. No Go/Node/Python/Homebrew is required.
 Use an owned HOME for a download smoke and pass **version**, not an implicit setup.
 After installation choose create/connect explicitly with normal displayed consent;
-no installation smoke authorizes storage changes on the user's computer.
+no installation smoke authorizes storage changes on the user's computer. The
+installer emits a deferred-field/user-testing notice on stderr after successful
+manifest admission; `version` stdout remains the exact version.
 
 ## Intended first-use journey
 
@@ -223,10 +229,12 @@ is not whole-host reboot or mounted NFS qualification.
 Unit tests use temporary owned files and fake Docker HTTP responses; they do not
 mount/export storage or alter real containers. Cross-compilation and `version` smoke do not
 prove native NFS or installer behavior. Root [TESTING.md](TESTING.md) applies. The historical command-only
-increment and local extraction checks are distinct from broader publication qualification:
-current clean-machine installation/signature checks, independent physical
-Mac/Linux/Docker topology and explicit user verification are not established by
-those historical checks. This release does not reopen old application/editor or
+increment and local extraction checks do not establish field qualification.
+Current build/release-control, signing, integrity and public install/version checks
+remain publication gates. Independent physical Mac/Linux/Docker filesystem and
+genuine user tests follow publication, with findings fixed in a new release.
+Delivery carries the scoped follow-up to Solution Designer and the requesting PM;
+those deferred tests are not this first release task's closure prerequisite. This release does not reopen old application/editor or
 provider campaigns; the publication guide defines its current NFS-only gates. Do not run privileged setup
 or provider calls merely because a design review passed.
 

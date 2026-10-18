@@ -4,7 +4,7 @@ import shutil
 import re
 import tarfile
 
-from . import candidate, identity as i, qualification
+from . import candidate, identity as i, readiness
 
 
 def binary_hash(archive):
@@ -25,7 +25,7 @@ def signing_proof(proof, archive):
 
 
 def assemble(directory, candidate_dir, native_dir, source_commit, run_id, attempt):
-    q = qualification.validate(candidate_dir)
+    q = readiness.validate(candidate_dir)
     c = candidate.verify(candidate_dir)
     i.require(i.commit() == source_commit, 'Final source commit differs')
     i.require(not directory.exists(), 'Payload destination must be new')
@@ -53,11 +53,12 @@ def assemble(directory, candidate_dir, native_dir, source_commit, run_id, attemp
         shutil.copyfile(candidate_dir / 'engine' / arch / 'COPYRIGHT', assets / ('engine-COPYRIGHT-' + arch))
     for name in ('LICENSE', 'THIRD_PARTY_NOTICES'):
         shutil.copyfile(i.ROOT / name, assets / name)
-    shutil.copyfile(qualification.evidence(q['releaseNotes']), assets / 'release-notes.md')
-    provenance = {'schema': 1, 'repository': i.REPOSITORY, 'version': c['version'],
+    (assets / 'release-notes.md').write_text(readiness.release_notes(q))
+    provenance = {'schema': 2, 'repository': i.REPOSITORY, 'version': c['version'],
                   'sourceCommit': source_commit, 'candidate': q['candidate'],
                   'candidateCommit': c['sourceCommit'], 'sourceHash': c['sourceHash'], 'oci': c['oci'],
-                  'qualification': i.read_json(i.ROOT / 'packaging/release-lock.json')['qualification'],
+                  'releaseReadiness': i.read_json(i.ROOT / 'packaging/release-lock.json')['releaseReadiness'],
+                  'fieldValidation': q['fieldValidation'],
                   'signing': signatures, 'members': i.inventory(assets)}
     i.write_json(assets / 'release-provenance.json', provenance)
     checksums = ''.join(value['sha256'] + '  ' + name + '\n' for name, value in i.inventory(assets).items())
@@ -71,7 +72,7 @@ def assemble(directory, candidate_dir, native_dir, source_commit, run_id, attemp
 
 
 def verify(directory, candidate_dir):
-    q = qualification.validate(candidate_dir)
+    q = readiness.validate(candidate_dir)
     c = candidate.verify(candidate_dir)
     receipt = i.read_json(directory / 'publication.json')
     i.fields(receipt, 'schema repository workflow sourceCommit version runId runAttempt candidateRecordSha256 members')
@@ -86,12 +87,13 @@ def verify(directory, candidate_dir):
     i.require(all(name.startswith('assets/') and name.count('/') == 1 for name in receipt['members']),
               'Unexpected payload path')
     provenance = i.read_json(assets / 'release-provenance.json')
-    i.fields(provenance, 'schema repository version sourceCommit candidate candidateCommit sourceHash oci qualification signing members')
-    i.require(provenance['schema'] == 1 and provenance['repository'] == i.REPOSITORY and
+    i.fields(provenance, 'schema repository version sourceCommit candidate candidateCommit sourceHash oci releaseReadiness fieldValidation signing members')
+    i.require(provenance['schema'] == 2 and provenance['repository'] == i.REPOSITORY and
               provenance['version'] == c['version'] and provenance['sourceCommit'] == receipt['sourceCommit'] and
               provenance['candidate'] == q['candidate'] and provenance['candidateCommit'] == c['sourceCommit'] and
               provenance['sourceHash'] == c['sourceHash'] and provenance['oci'] == c['oci'] and
-              provenance['qualification'] == i.read_json(i.ROOT / 'packaging/release-lock.json')['qualification'],
+              provenance['releaseReadiness'] == i.read_json(i.ROOT / 'packaging/release-lock.json')['releaseReadiness'] and
+              provenance['fieldValidation'] == q['fieldValidation'],
               'Provenance differs')
     i.verify_inventory(assets, provenance['members'], ('release-provenance.json', 'SHA256SUMS-nfs'))
     checksums = ''.join(value['sha256'] + '  ' + name + '\n'
@@ -117,7 +119,7 @@ def verify(directory, candidate_dir):
     i.require(set(provenance['members']) == expected_names, 'Incomplete release payload')
     for name in ('LICENSE', 'THIRD_PARTY_NOTICES'):
         i.require((assets / name).read_bytes() == (i.ROOT / name).read_bytes(), 'Release license/notices differ')
-    i.require((assets / 'release-notes.md').read_bytes() == qualification.evidence(q['releaseNotes']).read_bytes(),
+    i.require((assets / 'release-notes.md').read_text() == readiness.release_notes(q),
               'Unreviewed release notes')
     i.require((assets / 'autobyteus-nfs-install.sh').read_text() ==
               (i.ROOT / 'scripts/public/nfs/install.sh').read_text().replace('__RELEASE_TAG__', c['version']),

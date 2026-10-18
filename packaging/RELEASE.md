@@ -2,8 +2,11 @@
 
 Normal versions only, first **v0.1.0**. No desktop version coupling, pre-created tag,
 public beta or automatic publication on push/tag. Follow root [RELEASE.md](../RELEASE.md).
-The current lock remains **unqualified**. These instructions describe the release
-path, not a claim that a candidate, notarization or public release has succeeded.
+The current lock remains **without release readiness**. These instructions describe the release
+path, not a claim that a current candidate, notarization or public release has succeeded.
+The user requests signed normal v0.1.0 first, then field/user testing and fixes.
+Shared-filesystem/physical and user tests are deferred, not publication or closure
+prerequisites; build availability is not field-qualified support.
 
 ## 1. Build-only candidate
 
@@ -45,78 +48,81 @@ python3 packaging/release.py --operation verify-candidate --directory retained-c
 Use a current reviewed source checkout and `GH_TOKEN` with Actions read. These
 commands verify actual API run event/conclusion/source and immutable wrapper,
 then bounded member/engine/OCI/native contents. The output candidate reference is
-not qualification. Missing/expired/changed data means a new candidate and affected
-qualification, never a silent rebuild or fabricated amd64 package.
+not release readiness. Missing/expired/changed data means a new candidate and affected
+release-boundary validation, never a silent rebuild or fabricated amd64 package.
 
-## 2. Current qualification (API evidence, Delivery acceptance)
+## 2. Current release readiness (API evidence, Delivery acceptance)
 
-Keep recipe/package pins. The lock's `engine` must exactly equal the measured
-candidate engine manifest. `qualifiedTargets` must be exactly, in canonical order:
-`darwin-amd64`, `darwin-arm64`, `linux-amd64`, `linux-arm64`.
-`qualifiedSourceHash`, `physicalEvidence`, `userVerified`, and the new `qualification`
-reference must come from reviewed **actual** evidence. Default `qualification:null`
-and empty targets refuse publication. The engine `lock` command clears the old
-qualification fields; an old leftover reference never suffices for the new gate.
+Keep recipe/package pins. The exact lock fields are ubuntuBaseImage,
+ubuntuPackages, engine, releaseReadiness and note. `engine` equals the measured
+candidate manifest. `releaseReadiness` defaults null and refuses publication;
+engine `manifest.py lock` clears it. No qualifiedTargets, qualifiedSourceHash,
+physicalEvidence, userVerified or qualification compatibility path exists.
 
-A reference is `{path, sha256}`, a bounded regular in-repository file without links
-or traversal. The referenced JSON record has these exact fields (see
-`release_support/qualification.py` for the executable contract):
+Delivery prepares **actual**, reviewed and sanitized records in stable
+`packaging/releases/v0.1.0/` after new API checks, not synthetic fixture copies or
+moving tickets/in-progress paths. A reference is `{path,sha256}` to a nonempty
+bounded regular in-repo file, without links/traversal. Human review establishes
+meaning/truth; parser checks only integrity/applicability. See singular owner
+`release_support/readiness.py`. Exact readiness fields:
 
-- `schema:1`, `candidate` = actual candidate-reference output above, `sourceHash`,
-  `engineManifestSha256`, `oci` = measured candidate identities.
-- `rows`: exactly six distinct `(target,mode)` rows: both Mac arches `mac-native`,
-  both Linux arches `linux-native` **and** `linux-docker`. A row contains target,
-  mode, actual osVersion (Mac>=26, Linux24.04), filesystem (APFS/ext4), backend
-  (apple-nfs3/ganesha-native/ganesha-docker), topology, cases, evidence reference,
-  actual binarySha256/manifestSha256 and engineImage used.
-- Topology names `kind` (physical/virtual), `serverHost`, `clientHost`, `serverKernel`,
-  `clientKernel`; hosts and boot/kernel-instance identities must be independent.
-  A Docker container is not another kernel. Physical rows must cover all three
-  modes; lock physicalEvidence matches their distinct raw evidence paths.
-- `cases` records actual pass outcomes for create-connect, reciprocal-bytes,
-  directory-visibility, permissions-locks-git, safe-detach-refusal,
-  restart-reconnect, private-state. Missing/failed/inapplicable rows refuse.
-- `userVerification`: kind `executed-user-check`, exact candidateRecordSha256,
-  genuine user statement, per-target checks, hashed evidence. Publication/secret
-  consent is not this check. Schema validation cannot establish truth; human
-  evidence judgement remains mandatory. Never copy synthetic unit fixtures here.
-- `review`: candidateCommit, sourceHash and a hashed source-review receipt covering
-  the intervening change. Candidate must be an ancestor of final HEAD. Final HEAD
-  is not put in a self-referential committed qualification record.
-- `releaseNotes`: hashed reviewed Markdown, without credentials or fabricated claims.
+- `schema:1`, `kind:"release-first"`, `version`, `targets`: exactly darwin-amd64,
+  darwin-arm64, linux-amd64, linux-arm64 in that order.
+- `candidate`: actual candidate-reference output above; `sourceHash`,
+  `engineManifestSha256`, `oci`: exact measured candidate identities.
+- `authorization`: kind `publish-before-field-testing`, requirementsRevision
+  `R3/SR004`, matching version, evidence reference to genuine user direction.
+  Permission to publish does not claim a user test was executed.
+- `checks`: exactly native and releaseControls, each `{status:"passed",evidence}`
+  referencing actual current CI/API records. Skipped/failed checks do not pass.
+- `fieldValidation`: exactly `{filesystem:"deferred",user:"deferred"}`. No
+  physical topology rows or executed-user placeholders, no passed shortcut.
+- `postpublicationPlan`: hashed approved scoped plan with Delivery → terminal
+  Solution Designer → requesting PM custody for assigned field/user tests and
+  fix-forward. This is not a prepublication campaign or authorization for live data.
+- `review`: candidateCommit, sourceHash and evidence reference covering actual
+  source review and intervening changes; candidate is an ancestor of final HEAD.
+- `releaseNotes`: hashed reviewed Markdown without private access/credentials or
+  false qualification claims. A deterministic deferral paragraph is appended to
+  public notes/body and verified again during payload/resume validation.
 
-For first-use Docker qualification, serve the exact retained OCI digest from an
-isolated test-owned registry. A generated qualification-only runtime manifest may
-change **only** the registry reference, keeping digest/version/source/package bytes
-and empty qualifiedTargets. Record that metadata difference and actual binary
-hashes. No runtime override or live-user daemon/DNS workaround. This is not a
-canonical public download check. Generate from the retained candidate with
-`--tag "$TAG" --engine-image "$OWNED_REGISTRY_DIGEST" --engine-manifest
-retained-candidate/engine/engine-manifest.json --candidate retained-candidate
---output cmd/autobyteus-nfs/release.json` (plus the matching Linux `--target` and
-`--engine-artifacts` when embedding); do not pass `--qualified`. The facade binds
-version/source/engine/digest to the candidate while permitting this unqualified
-registry alias. Final metadata uses
-`ghcr.io/autobyteus/autobyteus-nfs@sha256:...` and the audited four targets.
+Runtime manifest schema2 has schema, version, sourceHash, ubuntuPackages,
+engineImage, optional engine (development only), releaseTargets, fieldValidation.
+Candidates have empty releaseTargets and both statuses deferred; they run version
+but cannot pass public installer admission. Final metadata uses all four targets
+only after validated readiness and retains both deferred statuses. Generate it
+with `--release --candidate <retained-directory>` plus --tag, canonical immutable
+--engine-image and measured --engine-manifest (Linux also --target and
+--engine-artifacts). `--qualified` is removed, not an alias.
+
+Candidate-only metadata can still use an isolated registry alias with the exact
+OCI digest/source/engine and empty targets; omit --release. This is not a runtime
+override, canonical public download or prepublication physical-test requirement.
+The installer verifies bounded exact archive/checksums and typed embedded/loose
+metadata equality before writing. Current-schema release target admission is not
+field qualification: unknown/legacy/false statuses, candidate or wrong targets
+refuse. Successful verify-release prints the deferral notice on stderr; explicit
+version stdout remains exact, with no new prompt or flag. Host consent and private
+state/source/busy-detach protections are unchanged; no live setup is part of smoke.
 
 The production hash covers runtime sources, main/go.mod, installer, Dockerfile,
 engine recipe, release facade/all release_support code/signing script/workflow,
 filesystem contract, testdata connection contract and license/notices, plus pinned
 package/base/engine identities. Tests, generated release.json/embedded deb bytes,
-qualification/evidence, caches and output are excluded. OCI identity is separately
-mandatory (no hash cycle). Qualification/docs/test-only commits can follow a
+readiness/evidence, caches and output are excluded. OCI identity is separately
+mandatory (no hash cycle). Readiness/docs/test-only commits can follow a
 candidate only with unchanged production hash/engine/OCI, ancestry and reviewed
 diff. Any production change invalidates affected evidence.
 
 ## 3. Final payload and signing
 
-Dispatch `publish=true` only on reviewed **main**, with its exact SHA and qualified
+Dispatch `publish=true` only on reviewed **main**, with its exact SHA and current
 `candidate_run_id`. Preflight downloads that candidate and validates evidence
 before public effects. If an owned version tag exists, it resolves the original
 payload first; native rebuild/signing jobs are skipped on resume.
 
 On a fresh publication, all four native jobs use the same production source hash
-and exact engine bytes. Final qualified metadata and Mac signature change binary
+and exact engine bytes. Final release metadata and Mac signature change binary
 bytes; do not claim equality to the unsigned candidate. Native checks cover these
 deltas, not independent filesystem qualification.
 
@@ -139,7 +145,9 @@ archives, versioned installer, runtime/engine manifests, complete modified engin
 sources/build inventories/notices, LICENSE/THIRD_PARTY_NOTICES, reviewed notes,
 release-provenance.json and SHA256SUMS-nfs. Every public file except SHA256SUMS-nfs
 is checksummed. Provenance lists product members; the external publication receipt
-adds provenance/checksum hashes, avoiding self-hash cycles.
+adds provenance/checksum hashes, avoiding self-hash cycles. Provenance schema2
+binds releaseReadiness and explicit fieldValidation to the same validated record;
+notes and provenance cannot hide deferral on a same-byte retry.
 
 ## 4. Publication and same-payload recovery
 
@@ -165,7 +173,7 @@ cannot reach this job. Candidate jobs never rebuild on publication.
    for an org-wide change. Keep the GitHub release draft meanwhile.
 6. Publish normal/latest, verify exact tag/assets, anonymous versioned HTTPS downloads
    and owned-HOME explicit `version` installer smoke on the Ubuntu publisher. This
-   does not replace the other native/signature/physical receipts.
+   does not replace the other native/signature download receipts.
 
 `nfs-publication-receipt` records progress even on a later failure; an attempted
 write may have completed. Remote state is authoritative, not that local log. Retry
@@ -184,4 +192,7 @@ Relevant primary contracts: [Actions artifacts](https://docs.github.com/en/rest/
 [release creation](https://cli.github.com/manual/gh_release_create),
 [OCI copy](https://github.com/containers/skopeo/blob/main/docs/skopeo-copy.1.md).
 Actual hosted execution, package visibility, signing, supported-platform downloads
-and genuine user verification remain release gates, not claims made by these docs.
+remain release gates, not claims made by these docs. Field/user tests remain
+explicitly deferred with postpublication custody. Preserve historical Blocked/Fail
+results; changed production requires a new complete candidate, not relabeling an
+old run. Fixes discovered after publication use a new approved version.

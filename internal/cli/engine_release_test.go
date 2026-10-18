@@ -14,7 +14,7 @@ import (
 // Existing complete manifest equality includes both architecture package/source
 // identities; no independent unauthenticated sidecar metadata is accepted.
 func TestEngineIdentityParticipatesInVerifiedReleaseEquality(t *testing.T) {
-	base := setup.Release{Version: "fixture", QualifiedTargets: []string{runtime.GOOS + "-" + runtime.GOARCH}, Engine: &backend.EngineManifest{
+	base := setup.Release{Schema: 2, FieldValidation: setup.FieldValidation{Filesystem: "deferred", User: "deferred"}, Version: "fixture", ReleaseTargets: []string{runtime.GOOS + "-" + runtime.GOARCH}, Engine: &backend.EngineManifest{
 		Source:        backend.EngineSource{PatchCommit: "reviewed-commit", RecipeSHA256: "reviewed-recipe"},
 		Architectures: map[string]backend.EngineArchitecture{"arm64": {Packages: []backend.EnginePackage{{EngineFile: backend.EngineFile{File: "fixture.deb", SHA256: "reviewed-bytes", Size: 42}, Name: "nfs-ganesha", Version: "corrected", Architecture: "arm64"}}}},
 	}}

@@ -29,7 +29,17 @@ while (($#)); do case "$1" in -o) out="$2";shift 2;; https://*) url="$1";shift;;
 cp "$FIXTURE_DOWNLOADS/${url##*/}" "$out"
 ''')
             for f in bin_dir.iterdir():f.chmod(0o755)
-            binary=b'#!/bin/sh\nprintf "%s\\n" "$1" >> "$HOME/invocations"\n'
+            binary=b'''#!/bin/sh
+set -eu
+printf '%s\n' "$1" >> "$HOME/invocations"
+case "$1" in
+  verify-release)
+    test ! -e "$HOME/.local"
+    if [ "$FIXTURE_VARIANT" = verify-refusal ]; then exit 17; fi
+    echo 'Shared-filesystem/physical and user testing is deferred; distribution and signature checks are not field qualification.' >&2;;
+  version) printf 'v0.0.0\n';;
+esac
+'''
             if variant=='permissions':
                 binary=b'''#!/bin/sh
 set -eu
@@ -50,7 +60,7 @@ exec "$NFS_DIRECTORY_TEST_BINARY" -test.run '^TestInstallerDirectoryModeChild$' 
             (downloads/'autobyteus-nfs-manifest.json').write_text('{"bad":true}' if variant=='manifest-checksum' else '{}')
             if variant=='duplicate-checksum':
                 with (downloads/'SHA256SUMS-nfs').open('a') as out:out.write(checksum+'  '+archive.name+'\n')
-            env={'PATH':str(bin_dir)+':/usr/bin:/bin','HOME':str(home),'TMPDIR':root,'FIXTURE_DOWNLOADS':str(downloads)}
+            env={'PATH':str(bin_dir)+':/usr/bin:/bin','HOME':str(home),'TMPDIR':root,'FIXTURE_DOWNLOADS':str(downloads),'FIXTURE_VARIANT':variant}
             if variant=='permissions':
                 env['NFS_DIRECTORY_TEST_BINARY']=os.environ['NFS_DIRECTORY_TEST_BINARY']
             action='create' if variant=='permissions' else 'version'
@@ -61,19 +71,26 @@ exec "$NFS_DIRECTORY_TEST_BINARY" -test.run '^TestInstallerDirectoryModeChild$' 
                 self.assertEqual(result.returncode,0,result.stdout+result.stderr)
                 self.assertEqual((home/'invocations').read_text(),'verify-release\n'+action+'\n')
                 self.assertTrue((home/'.local/bin/autobyteus-nfs').is_symlink())
+                if variant=='valid':
+                    self.assertEqual(result.stdout,'v0.0.0\n')
+                    self.assertIn('user testing is deferred',result.stderr)
                 if variant=='permissions':
                     self.assertIn('private=0700 exec/parents=0755 receipt=0600',result.stdout)
                     self.assertEqual((home/'.local/lib').stat().st_mode & 0o777,0o700)
                     print(result.stdout)
             else:
                 self.assertNotEqual(result.returncode,0,result.stderr)
-                self.assertFalse((home/'invocations').exists())
+                if variant=='verify-refusal':
+                    self.assertEqual((home/'invocations').read_text(),'verify-release\n')
+                    self.assertEqual(result.returncode,17)
+                    self.assertEqual(result.stdout,'')
+                else:self.assertFalse((home/'invocations').exists())
                 self.assertFalse((home/'.local').exists())
     @unittest.skipIf(Path('/.dockerenv').exists(), 'installer deliberately refuses container-host context')
     def test_valid_fixture_installs_and_immediately_invokes(self):self.run_fixture('valid')
     @unittest.skipIf(Path('/.dockerenv').exists(), 'installer deliberately refuses container-host context')
     def test_corrupt_or_unsafe_archive_never_executes(self):
-        for case in ['checksum','symlink','extra','manifest-checksum','manifest-mismatch','duplicate-checksum']:
+        for case in ['checksum','symlink','extra','manifest-checksum','manifest-mismatch','duplicate-checksum','verify-refusal']:
             with self.subTest(case=case):self.run_fixture(case)
     @unittest.skipUnless(os.environ.get('NFS_DIRECTORY_TEST_BINARY'), 'invoked by Go platform bootstrap regression')
     def test_directory_modes_with_go_fixture(self):self.run_fixture('permissions')

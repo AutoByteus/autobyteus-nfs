@@ -1,1 +1,1 @@
-"""NFS release identities, retained candidates, qualification and publication."""
+"""NFS release identities, retained candidates, readiness and publication."""

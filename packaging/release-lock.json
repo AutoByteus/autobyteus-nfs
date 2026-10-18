@@ -3,11 +3,7 @@
   "ubuntuPackages": {
     "nfs-common": "1:2.6.4-3ubuntu5.1"
   },
-  "qualifiedTargets": [],
-  "qualifiedSourceHash": "",
-  "physicalEvidence": [],
-  "userVerified": false,
-  "note": "Unqualified. Populate only from reviewed current candidate, independent physical target/mode and actual user-check evidence. Release consent and CI are not qualification.",
   "engine": null,
-  "qualification": null
+  "releaseReadiness": null,
+  "note": "No release readiness recorded. Delivery must bind current candidate, real native/release-control/source-review evidence, R3/SR004 release-first authorization and deferred field/user testing plan."
 }

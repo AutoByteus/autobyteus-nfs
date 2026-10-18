@@ -1,4 +1,4 @@
-"""Synthetic records/bytes only. Never qualification or a native engine build."""
+"""Synthetic records/bytes only. Never readiness or a native engine build."""
 import io
 import json
 import hashlib
@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'packaging'))
-from release_support import candidate, identity as i, payload, qualification
+from release_support import candidate, identity as i, payload, readiness
 from source import source_identity, VERSION, NAMES
 
 SHA = 'a' * 40
@@ -91,25 +91,17 @@ class Fixture:
         self.record=candidate.assemble(self.c,TAG,SHA,SHA,42,1)
         self.envelope={'artifactId':43,'runId':42,'runAttempt':1,'workflowCommit':SHA,
                        'digest':'sha256:'+'b'*64,'expiresAt':'2099-01-01T00:00:00Z'}
-        self.q={'schema':1,'candidate':{'recordSha256':i.sha(self.c/'candidate.json'),'envelope':self.envelope},
+        self.q={'schema':1,'kind':'release-first','version':TAG,'targets':list(i.TARGETS),
+                'candidate':{'recordSha256':i.sha(self.c/'candidate.json'),'envelope':self.envelope},
                 'sourceHash':self.record['sourceHash'],'engineManifestSha256':self.record['engineManifestSha256'],
-                'oci':self.image,'rows':[]}
-        physical=[]
-        for target,mode in sorted(qualification.MODES):
-            ref=self.evidence(target+'-'+mode)
-            physical.append(ref['path'])
-            self.q['rows'].append({'target':target,'mode':mode,'osVersion':'26.0' if mode=='mac-native' else '24.04',
-              'filesystem':'APFS' if mode=='mac-native' else 'ext4',
-              'backend':{'mac-native':'apple-nfs3','linux-native':'ganesha-native','linux-docker':'ganesha-docker'}[mode],
-              'topology':{'kind':'physical','serverHost':'server','clientHost':'client','serverKernel':'server-boot','clientKernel':'client-boot'},
-              'cases':dict.fromkeys(qualification.CASES,'pass'),'evidence':ref,'binarySha256':'c'*64,'manifestSha256':'d'*64,
-              'engineImage':i.IMAGE+'@'+self.image['index']})
-        self.q['userVerification']={'kind':'executed-user-check','candidateRecordSha256':self.q['candidate']['recordSha256'],
-                                   'statement':'SYNTHETIC TEST ONLY','checks':dict.fromkeys(i.TARGETS,'pass'),'evidence':self.evidence('user')}
-        self.q['review']={'candidateCommit':SHA,'sourceHash':self.record['sourceHash'],'evidence':self.evidence('review')}
-        self.q['releaseNotes']=self.evidence('notes')
-        self.lock=lock|{'engine':measured,'qualifiedSourceHash':self.record['sourceHash'],'qualifiedTargets':list(i.TARGETS),
-                       'userVerified':True,'physicalEvidence':physical}
+                'oci':self.image,'fieldValidation':dict(i.DEFERRED_FIELD_VALIDATION),
+                'authorization':{'kind':'publish-before-field-testing','requirementsRevision':'R3/SR004',
+                                 'version':TAG,'evidence':self.evidence('authorization')},
+                'checks':{name:{'status':'passed','evidence':self.evidence(name)} for name in ('native','releaseControls')},
+                'postpublicationPlan':self.evidence('plan'),
+                'review':{'candidateCommit':SHA,'sourceHash':self.record['sourceHash'],'evidence':self.evidence('review')},
+                'releaseNotes':self.evidence('notes')}
+        self.lock=lock|{'engine':measured}
         self.save_q()
 
     def evidence(self,name):
@@ -117,8 +109,8 @@ class Fixture:
         return {'path':path.relative_to(self.repo).as_posix(),'sha256':i.sha(path)}
 
     def save_q(self):
-        path=self.repo/'evidence/qualification.json'; i.write_json(path,self.q)
-        self.lock['qualification']={'path':'evidence/qualification.json','sha256':i.sha(path)}
+        path=self.repo/'evidence/readiness.json'; i.write_json(path,self.q)
+        self.lock['releaseReadiness']={'path':'evidence/readiness.json','sha256':i.sha(path)}
         i.write_json(self.repo/'packaging/release-lock.json',self.lock)
 
     def final_payload(self):

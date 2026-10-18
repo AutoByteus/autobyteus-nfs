@@ -11,11 +11,11 @@ on:
         required: false
         type: string
       candidate_run_id:
-        description: 'Exact qualified build-only run; required for publication'
+        description: 'Exact current build-only run; required for publication'
         required: false
         type: string
       publish:
-        description: 'Authorized publication after current physical/user qualification'
+        description: 'Authorized signed release; field and user testing deferred'
         default: false
         type: boolean
 permissions:
@@ -202,7 +202,7 @@ jobs:
           image=$(python3 packaging/release.py --operation oci --directory work/candidate/engine.oci.tar | python3 -c 'import json,sys; print("ghcr.io/autobyteus/autobyteus-nfs@"+json.load(sys.stdin)["index"])')
           # Keep the array nonempty for Mac system Bash 3.2 under nounset.
           args=(--tag "$TAG" --engine-image "$image" --engine-manifest work/candidate/engine/engine-manifest.json --engine-artifacts work/candidate/engine --target "$TARGET" --output cmd/autobyteus-nfs/release.json)
-          if [[ "$MODE" == fresh ]]; then args+=(--qualified --candidate work/candidate); fi
+          if [[ "$MODE" == fresh ]]; then args+=(--release --candidate work/candidate); fi
           python3 packaging/release.py "${args[@]}"
           go test -race ./...
           go vet ./...

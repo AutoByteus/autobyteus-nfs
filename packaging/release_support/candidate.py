@@ -115,15 +115,15 @@ def materialize_oci(archive_path, destination):
     return identity
 
 
-def runtime_metadata(tag, image, measured, qualified=False):
+def runtime_metadata(tag, image, measured, release=False):
     i.version(tag)
     i.image_reference(image)
-    if qualified:
+    if release:
         i.require(image.startswith(i.IMAGE + '@sha256:'), 'Canonical engine image required for publication')
     lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
-    return {'version': tag, 'sourceHash': i.source_hash(measured),
+    return {'schema': 2, 'fieldValidation': dict(i.DEFERRED_FIELD_VALIDATION), 'version': tag, 'sourceHash': i.source_hash(measured),
             'ubuntuPackages': lock['ubuntuPackages'], 'engineImage': image,
-            'qualifiedTargets': list(i.TARGETS) if qualified else [], 'engine': measured}
+            'releaseTargets': list(i.TARGETS) if release else [], 'engine': measured}
 
 
 def native_archive(path, expected):
@@ -291,10 +291,10 @@ def extract_wrapper(wrapper, destination):
 
 
 def fetch(record, destination):
-    """Qualification supplies a content hash AND external envelope; both must match."""
+    """Readiness supplies a content hash AND external envelope; both must match."""
     i.fields(record, 'recordSha256 envelope')
     download(record['envelope'], CANDIDATE, destination)
-    i.require(i.sha(destination / 'candidate.json') == record['recordSha256'], 'Qualified candidate record differs')
+    i.require(i.sha(destination / 'candidate.json') == record['recordSha256'], 'Release candidate record differs')
     candidate = verify(destination)
     e = record['envelope']
     i.require((candidate['runId'], candidate['runAttempt'], candidate['workflowCommit']) ==

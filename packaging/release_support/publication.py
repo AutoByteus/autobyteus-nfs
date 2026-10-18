@@ -5,7 +5,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from . import candidate, identity as i, payload, qualification
+from . import candidate, identity as i, payload, readiness
 
 TAG_PREFIX = 'AutoByteus NFS retained payload\n'
 
@@ -54,11 +54,11 @@ def prepare(tag, source_commit, candidate_run, directory):
     i.require(os.environ.get('GITHUB_REPOSITORY') == i.REPOSITORY and
               os.environ.get('GITHUB_REF') == 'refs/heads/main' and
               os.environ.get('GITHUB_SHA') == source_commit == i.commit(), 'Publish must use exact dispatch main')
-    lock, q = qualification.load()
+    _, q = readiness.load()
     i.require(q['candidate']['envelope']['runId'] == i.positive(candidate_run), 'Selected candidate run differs')
     c = candidate.fetch(q['candidate'], directory / 'candidate')
     i.require(c['version'] == tag, 'Candidate version differs')
-    qualification.validate(directory / 'candidate')
+    readiness.validate(directory / 'candidate')
     binding = tag_binding(tag, source_commit)
     existing = release(tag)
     image = package_version(tag)
@@ -80,7 +80,7 @@ def prepare(tag, source_commit, candidate_run, directory):
     diff = i.command('git', 'diff', '--name-status', c['sourceCommit'], source_commit).decode()
     i.write_json(directory / 'preflight.json', {'mode': 'resume' if binding else 'fresh',
                  'sourceCommit': source_commit, 'candidateCommit': c['sourceCommit'],
-                 'productionHash': lock['qualifiedSourceHash'], 'interveningDiff': diff})
+                 'productionHash': q['sourceHash'], 'interveningDiff': diff})
     return 'resume' if binding else 'fresh'
 
 
@@ -194,7 +194,7 @@ def publish(directory, candidate_dir, binding, journal=None):
     receipt = payload.verify(directory, candidate_dir)
     i.require(binding['sourceCommit'] == receipt['sourceCommit'] and binding['version'] == receipt['version'] and
               binding['payloadSha256'] == i.sha(directory / 'publication.json'), 'Payload binding differs')
-    q = qualification.validate(candidate_dir)
+    q = readiness.validate(candidate_dir)
     ce = q['candidate']['envelope']
     i.require(candidate.envelope(ce['artifactId'], ce['runId'], ce['runAttempt'], ce['workflowCommit'],
                                 candidate.CANDIDATE) == ce, 'Candidate expired/changed before publication')

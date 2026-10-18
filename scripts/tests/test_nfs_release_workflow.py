@@ -213,7 +213,7 @@ sys.exit(int(os.environ['METADATA_EXIT']))
                                 '--engine-artifacts', 'work/candidate/engine', '--target', target,
                                 '--output', 'cmd/autobyteus-nfs/release.json']
                     if mode == 'fresh':
-                        expected += ['--qualified', '--candidate', 'work/candidate']
+                        expected += ['--release', '--candidate', 'work/candidate']
                     self.assertEqual(args, expected)
                     self.assertEqual(result.stdout, 'CONTINUED\n')
 

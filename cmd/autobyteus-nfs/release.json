@@ -1,5 +1,12 @@
 {
-  "version": "development-unqualified",
+  "schema": 2,
+  "version": "development",
+  "sourceHash": "",
   "ubuntuPackages": {},
-  "engineImage": ""
+  "engineImage": "",
+  "releaseTargets": [],
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  }
 }

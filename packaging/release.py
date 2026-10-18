@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""NFS release facade. Candidate/qualification/payload/publication have distinct owners."""
+"""NFS release facade. Candidate/readiness/payload/publication have distinct owners."""
 import argparse
 import json
 import os
@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from release_support import candidate, identity as i, payload, publication, qualification
+from release_support import candidate, identity as i, payload, publication, readiness
 from manifest import embed as embed_engine, validate as validate_engine
 
 
@@ -20,29 +20,29 @@ def metadata(args):
         print(i.source_hash(measured))
         return
     if args.check_publish:
-        qualification.load()  # Useful default refusal before a candidate is supplied.
+        readiness.load()  # Useful default refusal before a candidate is supplied.
         i.require(args.candidate is not None, 'Identified candidate is required')
-        qualification.validate(args.candidate)
+        readiness.validate(args.candidate)
         return
     i.version(args.tag)
-    qualified = False
-    if args.qualified:
-        i.require(args.candidate is not None, 'Qualified metadata requires identified candidate')
-        qualification.validate(args.candidate)
+    release = False
+    if args.release:
+        i.require(args.candidate is not None, 'Release metadata requires identified candidate')
+        readiness.validate(args.candidate)
         c = candidate.verify(args.candidate)
         i.require(args.tag == c['version'] and args.engine_image == i.IMAGE + '@' + c['oci']['index'] and
-                  measured == candidate.engine(args.candidate / 'engine'), 'Qualified metadata inputs differ')
-        qualified = True
+                  measured == candidate.engine(args.candidate / 'engine'), 'Release metadata inputs differ')
+        release = True
     if args.candidate is not None:
         c = candidate.verify(args.candidate)
         i.require(args.tag == c['version'] and args.engine_image.endswith('@' + c['oci']['index']) and
                   measured == candidate.engine(args.candidate / 'engine'), 'Candidate metadata inputs differ')
     if measured is None:
-        i.require(not args.qualified and not args.engine_image, 'Release metadata needs measured engine')
-        result = {'version': args.tag, 'sourceHash': i.source_hash(), 'ubuntuPackages': lock['ubuntuPackages'],
-                  'engineImage': '', 'qualifiedTargets': []}
+        i.require(not args.release and not args.engine_image, 'Release metadata needs measured engine')
+        result = {'schema': 2, 'fieldValidation': dict(i.DEFERRED_FIELD_VALIDATION), 'version': args.tag, 'sourceHash': i.source_hash(), 'ubuntuPackages': lock['ubuntuPackages'],
+                  'engineImage': '', 'releaseTargets': []}
     else:
-        result = candidate.runtime_metadata(args.tag, args.engine_image, measured, qualified)
+        result = candidate.runtime_metadata(args.tag, args.engine_image, measured, release)
     if args.target and args.target.startswith('linux-'):
         i.require(measured is not None and args.engine_artifacts is not None, 'Linux release requires matching engine bundle')
         embed_engine(measured, args.engine_artifacts, args.target.split('-')[1], i.ROOT / 'internal/backend/engine-assets')
@@ -62,7 +62,7 @@ def main():
     parser.add_argument('--engine-manifest', type=Path)
     parser.add_argument('--engine-artifacts', type=Path)
     parser.add_argument('--target', choices=i.TARGETS)
-    parser.add_argument('--qualified', action='store_true')
+    parser.add_argument('--release', action='store_true')
     parser.add_argument('--output', type=Path)
     parser.add_argument('--directory', type=Path)
     parser.add_argument('--candidate', type=Path)

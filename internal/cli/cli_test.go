@@ -26,8 +26,8 @@ func TestExplicitNoTTYInputsAndNoShellEvaluation(t *testing.T) {
 		t.Fatal("missing required source did not fail")
 	}
 }
-func TestReleaseManifestMustMatchAndQualifyActualArchitecture(t *testing.T) {
-	metadata := setup.Release{Version: "v1.2.3", QualifiedTargets: []string{runtime.GOOS + "-" + runtime.GOARCH}, SourceHash: "fixture"}
+func TestReleaseManifestMustMatchAndAdmitActualArchitecture(t *testing.T) {
+	metadata := setup.Release{Schema: 2, FieldValidation: setup.FieldValidation{Filesystem: "deferred", User: "deferred"}, Version: "v1.2.3", ReleaseTargets: []string{runtime.GOOS + "-" + runtime.GOARCH}, SourceHash: "fixture"}
 	p := filepath.Join(t.TempDir(), "release.json")
 	write := func(v setup.Release) {
 		b, _ := json.Marshal(v)
@@ -40,10 +40,10 @@ func TestReleaseManifestMustMatchAndQualifyActualArchitecture(t *testing.T) {
 		t.Fatal(err)
 	}
 	unavailable := metadata
-	unavailable.QualifiedTargets = nil
+	unavailable.ReleaseTargets = nil
 	write(unavailable)
 	if err := VerifyRelease(p, unavailable); err == nil {
-		t.Fatal("unqualified release accepted")
+		t.Fatal("candidate release accepted")
 	}
 	write(metadata)
 	metadata.Version = "v2.0.0"

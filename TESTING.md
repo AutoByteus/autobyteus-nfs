@@ -20,7 +20,7 @@ python3 packaging/release.py --source-hash
 With actionlint installed, run `actionlint .github/workflows/*.yml` for workflow
 syntax. Python workflow fixtures check a deliberate boolean subset, not hosted
 Actions. The placeholder installer and `python3 packaging/release.py
---check-publish` must refuse while the lock is unqualified; refusal is expected,
+--check-publish` must refuse while releaseReadiness is null; refusal is expected,
 not a working public install command.
 
 Use `CGO_ENABLED=0 GOOS=<darwin|linux> GOARCH=<arm64|amd64> go build -o
@@ -71,8 +71,8 @@ user verification, physical/platform qualification or release authorization.
 ## Release-control changes
 
 Run all `test_nfs_*.py` suites. Record fixtures parse real candidate/OCI/native
-archives, strict JSON and qualification references; the engine bytes/topologies/
-user statements in them are synthetic and must never enter the real lock.
+archives, strict JSON and readiness references; engine bytes/check receipts/
+authority statements in them are synthetic and must never enter the real lock.
 Publication fixtures double GitHub/registry boundaries and check same-payload
 retry, conflicting assets/images, stage order and main drift. Signing fixtures
 execute the actual shell with fake commands/credentials, checking Accepted-only
@@ -87,10 +87,12 @@ No fixture is a hosted run, public download or qualified physical platform.
 
 An independent source archive is sufficient for normal local checks; retain source
 identity/logs and tool versions. For release work, all four native hosted checks,
-current complete engine/OCI candidate, target/mode physical evidence, genuine user
-verification, real notarization and public downloads remain API/Delivery gates.
+current complete engine/OCI candidate, actual release-control/source-review
+evidence, real notarization and public downloads remain API/Delivery gates.
+Shared-filesystem/physical and user tests are explicitly deferred until after the
+first signed release, not inferred from builds or required for publication/closure.
 The release schema is documented in packaging/RELEASE.md. Do not fabricate receipts
-or automatically mark the qualification lock populated from test success.
+or automatically mark the readiness lock populated from test success.
 
 On macOS, place the independent source checkout/copy in an owned local APFS
 development directory, **outside** `/private` and `/tmp`. Source-binding fixtures
@@ -104,3 +106,12 @@ and create HOME/TMPDIR/cache **inside the guest filesystem**, not on a Docker
 Desktop host bind. Host-bridged file-lock behavior is not native Linux flock.
 Use read-only input archives and copy only owned result files out. Container-host
 installer refusals remain explicit skips, not host installer qualification.
+
+Current runtime schema2 uses releaseTargets and fieldValidation (filesystem/user
+both deferred). Native CLI tests exercise strict release-only decoding, legacy/
+unknown/duplicate claim refusal, target/equality checks, stderr notice and exact
+version stdout; installed host-state additive decoding stays unchanged. Payload
+fixtures rehash tampered notes/provenance to prove semantic deferral enforcement,
+and engine-lock fixtures execute the actual reset operation. These are local
+release-boundary checks, not field testing. Readiness must use genuine current
+records at stable paths, prepared by Delivery after affected API validation.

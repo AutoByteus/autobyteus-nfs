@@ -11,6 +11,7 @@ REPOSITORY = 'AutoByteus/autobyteus-nfs'
 WORKFLOW = '.github/workflows/release-nfs.yml'
 IMAGE = 'ghcr.io/autobyteus/autobyteus-nfs'
 TARGETS = ('darwin-amd64', 'darwin-arm64', 'linux-amd64', 'linux-arm64')
+DEFERRED_FIELD_VALIDATION = {'filesystem': 'deferred', 'user': 'deferred'}
 GO_VERSION = '1.27.2'
 JSON_LIMIT = 4 * 1024 * 1024
 ARTIFACT_LIMIT = 8 * 1024**3
