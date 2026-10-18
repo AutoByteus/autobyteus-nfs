@@ -211,3 +211,16 @@ records do not belong to this new Task.
   complete candidate and Delivery-owned readiness/actual signed release. Field/user
   deferral unchanged, not a blocker; both-Mac Accepted/signature/public receipts still
   required. No TaskDone/Terminal. Evidence: implementation-evidence/ir-005/.
+
+#### IR-005 supplemental receipt — DR-006, no new implementation round
+
+Delivery8f05549 records user-requested actual local existing-identity signing Pass
+on independent9fa4e69 (product identical75f4dbe): native arm64 development build,
+Developer ID/runtime/timestamp signature, strict verify and signed version passed;
+normal keychain search list unchanged and owned scratch removed. Evidence belongs
+to Delivery, not a new implementation execution. See delivery-evidence/dr-006/
+summary.md/checks.json/local-result.json/verify.log/details.log/cleanup.json.
+P12/password/ephemeral hosted keychain, Intel signing and notary remain unproven;
+DR005 actual cause unknown and full Delivery Blocked. Carry into existing source
+review/API continuation without restart, new source/approval, speculative secret
+changes or new IR classification. Only current handoff/history updated on receipt.

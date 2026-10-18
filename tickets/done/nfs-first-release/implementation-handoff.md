@@ -156,6 +156,26 @@ were added in evidence/ after the skill update; original raw evidence in ir-005 
 preserved. No cumulative upstream artifact index was created. Evidence and this handoff are
 committed on the ticket branch; the handoff message supplies the durable artifact commit.
 
+## Supplemental Delivery Evidence — DR-006 (no new implementation round)
+
+Received Delivery commit8f055495a33068fd967254a6fbbe2da3513972b1. Its independent
+snapshot9fa4e69 has identical non-ticket inputs to source75f4dbe. **Delivery**, not
+implementation, ran the user-requested local macOS26.5.2 arm64/Go1.27.2 development
+build, existing-login-keychain Developer ID signing, strict signature verification
+and signed version. Sign/verify/version passed; public details show expected team,
+hardened runtime and secure timestamp. Keychain search list unchanged; owned
+source/toolchain/binary/cache/HOME/TMP removed. See delivery-evidence/dr-006/
+summary.md, local-result.json, checks.json, details.log, verify.log and cleanup.json.
+
+This establishes only the local existing-identity path. It does NOT exercise
+GitHub's exported P12/password, temporary import/keychain path, Intel signing,
+notarization or final release payload/download. Original hosted stage/cause remains
+unknown and DR005 remains Blocked. No secret reprovisioning inference or current
+candidate/readiness/API acceptance follows. IR005 source review is already in
+progress: this supplements it without restarting review, tests or dispatch. No new
+implementation checks/source changes were made on receipt; earlier Checks Run rows
+remain unchanged and reusable for their exact scope.
+
 ## Downstream Work / Remaining Blocker
 
 1. Targeted source review of IR005 against retained R3/ARCH002 signing and confidentiality
