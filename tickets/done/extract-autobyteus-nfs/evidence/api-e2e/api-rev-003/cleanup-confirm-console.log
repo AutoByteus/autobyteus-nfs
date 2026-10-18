@@ -1,0 +1,5 @@
+E02 Started Confirm source/protected-state exactness and native quiescence, then remove only API003-owned resources N/A
+linux-final-inputs 0 expected 0
+remove-container 0 expected 0
+E02 Completed Own container/archive/toolchains/caches removed;108 inputs +535 upstream artifacts +PM/ignored cache preserved; D0 populated main unchanged, S retired Pass
+N01-linux Clarification Focused Linux selector executed30 hosted-config pass records; extra no-live-source-detach case is Darwin-only (31 there), not Linux coverage N/A

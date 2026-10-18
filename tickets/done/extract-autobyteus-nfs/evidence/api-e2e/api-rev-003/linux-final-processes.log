@@ -1,0 +1,4 @@
+  PID  PPID USER     STAT COMMAND
+    1     0 root     Ss   sleep infinity
+ 2898     1 checker  Zs   [go] <defunct>
+11649     0 root     Rs   ps -eo pid,ppid,user,stat,args

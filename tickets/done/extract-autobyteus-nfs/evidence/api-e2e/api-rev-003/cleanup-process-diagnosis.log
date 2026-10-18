@@ -1,0 +1,45 @@
+$ docker exec nfs-extract-api003-47u9du58 sh -c ps -eo pid,ppid,user,stat,args; cat /proc/2898/status
+  PID  PPID USER     STAT COMMAND
+    1     0 root     Ss   sleep infinity
+ 2898     1 checker  Zs   [go] <defunct>
+11635     0 root     Ss   sh -c ps -eo pid,ppid,user,stat,args; cat /proc/2898/status
+11641 11635 root     R    ps -eo pid,ppid,user,stat,args
+Name:	go
+State:	Z (zombie)
+Tgid:	2898
+Ngid:	0
+Pid:	2898
+PPid:	1
+TracerPid:	0
+Uid:	1001	1001	1001	1001
+Gid:	1001	1001	1001	1001
+FDSize:	0
+Groups:	1001 
+NStgid:	2898
+NSpid:	2898
+NSpgid:	2898
+NSsid:	2898
+Kthread:	0
+Threads:	1
+SigQ:	0/62859
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000000000
+SigCgt:	fffffffd7fc1feff
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+Seccomp_filters:	1
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	unknown
+Cpus_allowed:	3ff
+Cpus_allowed_list:	0-9
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	2
+nonvoluntary_ctxt_switches:	0

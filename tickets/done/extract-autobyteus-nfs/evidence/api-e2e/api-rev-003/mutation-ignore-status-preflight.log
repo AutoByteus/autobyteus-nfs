@@ -1,0 +1,35 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/ignore-status-preflight nfs-extract-api003-47u9du58 env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./internal/setup -run TestHostedConfigStatusRefusesBeforeReadiness -count=1 -v
+CWD /Users/normy/nfs-extract-api003-47u9du58
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing
+    hosted_config_test.go:144: missing config did not refuse before readiness expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing
+    hosted_config_test.go:144: missing config did not refuse before readiness expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed
+    hosted_config_test.go:147: status ignored hosted config expected host NFS source/protocol is not mounted
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current
+--- FAIL: TestHostedConfigStatusRefusesBeforeReadiness (0.10s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current (0.01s)
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.115s
+FAIL

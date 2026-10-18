@@ -1,0 +1,3 @@
+$ docker run -d --name nfs-extract-api003-47u9du58 --label autobyteus.validation=api003 --mount type=bind,src=/Users/normy/nfs-extract-api003-47u9du58,dst=/inputs,readonly ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55 sleep infinity
+CWD /Users/normy/nfs-extract-api003-47u9du58
+68c3dd18927f32fb1f2cccf303a19f2773c06050318c85f67bce9d341f44951f

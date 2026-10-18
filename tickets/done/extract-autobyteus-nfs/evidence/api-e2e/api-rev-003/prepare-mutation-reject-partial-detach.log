@@ -1,0 +1,2 @@
+$ docker exec nfs-extract-api003-47u9du58 bash -euc cp -a /inputs/reject-partial-detach /home/checker/reject-partial-detach && chown -R checker:checker /home/checker/reject-partial-detach
+CWD /Users/normy/nfs-extract-api003-47u9du58

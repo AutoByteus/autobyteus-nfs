@@ -1,0 +1,13 @@
+{
+  "rows": [
+    [
+      "2898",
+      "1",
+      "checker",
+      "Zs",
+      "[go] <defunct>"
+    ]
+  ],
+  "live_checker_processes": [],
+  "reason": "Exited zombies adopted by non-reaping sleep PID1; removal of owned container clears namespace"
+}

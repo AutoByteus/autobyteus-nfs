@@ -1,0 +1,31 @@
+{
+  "inputs": 108,
+  "source_mismatches": [],
+  "protected_ticket_count": 535,
+  "protected_ticket_mismatches": [],
+  "ignored_cache_mismatches": [],
+  "PM_count": 1,
+  "PM_mismatches": [],
+  "D0": {
+    "head": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+    "branch": "refs/heads/main"
+  },
+  "S_still_retired": true,
+  "owned_host_processes": [],
+  "owned_host_cwds": [],
+  "container": "nfs-extract-api003-47u9du58",
+  "container_id": "68c3dd18927f32fb1f2cccf303a19f2773c06050318c85f67bce9d341f44951f",
+  "container_removed": true,
+  "exited_zombies_removed": [
+    [
+      "2898",
+      "1",
+      "checker",
+      "Zs",
+      "[go] <defunct>"
+    ]
+  ],
+  "live_checker_processes": [],
+  "immutable_base_image": "Shared immutable cache retained; not a built/published image",
+  "scratch": "/Users/normy/nfs-extract-api003-47u9du58"
+}

@@ -1,0 +1,42 @@
+{
+  "linux": {
+    "packages_pass": 7,
+    "top_tests_pass": 47,
+    "all_tests_including_subtests_pass": 214,
+    "skip": [
+      {
+        "package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "test": "TestBootstrapDirectoryModes"
+      },
+      {
+        "package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "test": "TestInstallerDirectoryModeChild"
+      }
+    ],
+    "focus_pass_lines": 30,
+    "python_summary": [
+      "test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... skipped 'installer deliberately refuses container-host context'",
+      "test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'",
+      "test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... skipped 'installer deliberately refuses container-host context'",
+      "Ran 20 tests in 0.482s",
+      "OK (skipped=3)"
+    ]
+  },
+  "darwin": {
+    "packages_pass": 7,
+    "top_tests_pass": 59,
+    "all_tests_including_subtests_pass": 252,
+    "skip": [
+      {
+        "package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "test": "TestInstallerDirectoryModeChild"
+      }
+    ],
+    "focus_pass_lines": 31,
+    "python_summary": [
+      "test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest) ... skipped 'invoked by Go platform bootstrap regression'",
+      "Ran 20 tests in 3.933s",
+      "OK (skipped=1)"
+    ]
+  }
+}

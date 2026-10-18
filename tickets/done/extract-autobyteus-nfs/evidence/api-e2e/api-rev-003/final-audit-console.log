@@ -1,0 +1,31 @@
+{
+  "inputs": {
+    "count": 108,
+    "mismatches": []
+  },
+  "protected_ticket": {
+    "count": 535,
+    "mismatches": []
+  },
+  "ignored_cache": {
+    "count": 1,
+    "mismatches": []
+  },
+  "PM": {
+    "count": 1,
+    "mismatches": [
+      "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md"
+    ],
+    "disposition": "External post-cleanup change preserved; see external-PM-observation.json"
+  },
+  "head": "487e74c9bf926f98a10d7d39d5f62bbc14a9566d",
+  "branch": "codex/extract-autobyteus-nfs",
+  "prior_API_entries_byte_identical": true,
+  "counts_recomputed": true,
+  "D0_unchanged": true,
+  "S_still_retired": true,
+  "scratch_absent": true,
+  "container_absent": true,
+  "production_or_durable_API_delta": [],
+  "result": "Pass"
+}

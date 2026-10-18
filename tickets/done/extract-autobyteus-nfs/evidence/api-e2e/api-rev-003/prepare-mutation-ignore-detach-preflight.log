@@ -1,0 +1,2 @@
+$ docker exec nfs-extract-api003-47u9du58 bash -euc cp -a /inputs/ignore-detach-preflight /home/checker/ignore-detach-preflight && chown -R checker:checker /home/checker/ignore-detach-preflight
+CWD /Users/normy/nfs-extract-api003-47u9du58

@@ -1,0 +1,17 @@
+N01-linux Started Current fixture through actual linux mount-observation path, nonroot focused first then race/vet N/A
+linux-environment 0 expected 0
+linux-focused 0 expected 0
+N01-linux Checkpoint Focused hosted-config/no-live-source detach passed; native path exercised, broader package closure running N/A
+linux-race 0 expected 0
+linux-vet 0 expected 0
+N01-linux Completed Current focused plus all-package race/vet passed; skips retained separately Pass
+N02-linux Started Packaging/installer fixture controls, Bash/sourcehash and expected empty-qualification refusal N/A
+linux-python 0 expected 0
+linux-shell 0 expected 0
+linux-source-hash 0 expected 0
+linux-publish-refusal 1 expected 1
+N02-linux Completed Packaging/Bash/hash/refusal passed within explicit native/container skip limits Pass
+N03-linux Started Current native build/version, not live installed service or target qualification N/A
+linux-build 0 expected 0
+linux-version 0 expected 0
+N03-linux Completed Current native binary built/version executable passed; no service lifecycle invoked Pass
