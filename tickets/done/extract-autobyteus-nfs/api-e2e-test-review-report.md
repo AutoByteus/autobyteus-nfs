@@ -1,67 +1,72 @@
-# API/E2E Test Review Report — Extract AutoByteus NFS
+# API/E2E Test Review Report
 
 ## Review Meta
 
 - Date/reviewer: 2026-10-18, code reviewer; personal execution, no delegation.
-- Entry/round/current revision: successful API/E2E test-code review /2 / **CRR-006**.
-- Task: extract-autobyteus-nfs / project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8. **Large / High / Reviewed** unchanged.
-- Trigger: **API-REV-002 Pass95.00%**, current integrated R2 validation. N evidence commit8dcf1d0b645e3b2317970e3db5acd0b248315ead; unchanged N service83726b27400b405a7a6a79bd962d8e2419daa561; S60b67dabecaf5569a8e26128dbdb26117c988811. Both assigned codex/extract-autobyteus-nfs worktrees clean.
-- Requirements/investigation/solution history: [requirements-doc.md](requirements-doc.md), **replacement R2 Approved/SR003**; [investigation-notes.md](investigation-notes.md); [solution-revision-record.md](solution-revision-record.md).
-- Design/supplement: [design-spec.md](design-spec.md), **SR004 Ready**; [user-filesystem-boundary-correction.md](user-filesystem-boundary-correction.md); [solution-design-handoff.md](solution-design-handoff.md). Eight authority documents unchanged.
-- Architecture: [design-review-report.md](design-review-report.md), **ARCH-REV-002 Pass**; [architecture-review-revision-record.md](architecture-review-revision-record.md). R1/ARCH001 historical only.
-- Implementation: [implementation-handoff.md](implementation-handoff.md), [implementation-revision-record.md](implementation-revision-record.md), IR003 integration/IR004 bounded cleanup; earlier IR001/002 history retained.
-- Original source report: [code-review-report.md](code-review-report.md), **CRR005 Pass100%**, byte-unchanged by this review. [code-review-revision-record.md](code-review-revision-record.md) appends CRR006; prior CRR003 test report retained in Git a9bcd15b26e2a7cdd83ca34b7da865093296badc.
-- API investigation/report/ledger/history: [api-e2e-coverage-investigation.md](api-e2e-coverage-investigation.md), [api-e2e-execution-coverage-report.md](api-e2e-execution-coverage-report.md), [api-e2e-test-case-ledger.md](api-e2e-test-case-ledger.md), [api-e2e-revision-record.md](api-e2e-revision-record.md). API002 confidence95% and broader Not Required are API-owned, not rescored here.
-- Delivery re-entry: [delivery-revision-record.md](delivery-revision-record.md), DR001 Blocked/implementation-owned integration fix; new source/API gates satisfied, Delivery owns its resumed verdict and AC007.
-- Prior unresolved test-review findings: None. CRR003 no-delta result was for preintegration S; CRR004/005 independently reviewed the new integration/cleanup.
-- Guidelines: N root TESTING.md; current S root TESTING.md and server/web package instructions as recorded by investigation. Shared-foundation impact required all S01–06 reruns. Exact archives/current prerequisites/clean environments/skips respected; no policy conflict or waiver. No reviewer workflow rerun.
-- Supported scenario basis: **Yes**, unchanged R2 SCN001/002/003/006/007. SCN004 finalization remains Delivery-owned. The retained frontend tab is instructional guidance, not application ownership of NFS management.
+- Review round: successful-test round3, **CRR-008**. Trigger: API-REV-003 **Pass /95.00%**, affected native fixture recovery after IR005/CRR007/DR002.
+- Canonical location: **tickets/done/extract-autobyteus-nfs**. Archived location does not imply completed Delivery.
+- Task: extract-autobyteus-nfs / project_task_fdb2c737-fb08-48cf-8aca-e04df2d02ae8; **Large/High/Reviewed** unchanged.
+- Requirements/investigation/design context: [requirements-doc.md](requirements-doc.md), [investigation-notes.md](investigation-notes.md), [design-spec.md](design-spec.md), [solution-revision-record.md](solution-revision-record.md), [solution-design-handoff.md](solution-design-handoff.md), [user-filesystem-boundary-correction.md](user-filesystem-boundary-correction.md). **Approved R2/SR003, Ready SR004** unchanged.
+- Architecture: [design-review-report.md](design-review-report.md), [architecture-review-revision-record.md](architecture-review-revision-record.md), ARCH002 current; R1/ARCH001 historical.
+- Implementation: [implementation-handoff.md](implementation-handoff.md), [implementation-revision-record.md](implementation-revision-record.md), IR005 fixture correction. Source report [code-review-report.md](code-review-report.md) remains byte-identical **CRR007 Pass100 retained**; this gate assigns no source score.
+- Review history: [code-review-revision-record.md](code-review-revision-record.md); appends CRR008, preserving CRR001–007. Prior test report CRR006 remains in Git 1c055d2d2b2af978084af43e8dace63f9654f04a.
+- Execution context: [coverage investigation](api-e2e-coverage-investigation.md), [execution report](api-e2e-execution-coverage-report.md), [case ledger](api-e2e-test-case-ledger.md), [API revision record](api-e2e-revision-record.md), API003. API-owned confidence95% is not rescored here.
+- Delivery re-entry: [delivery-revision-record.md](delivery-revision-record.md), [handoff-summary.md](handoff-summary.md), [DR002 finalization receipt](delivery-evidence/dr-002/finalization.json). DR002 remains Blocked pending fix-forward/current hosted checks and final receipts.
+- Prior unresolved test-review findings: none. CRR007 already reviewed the sole IR005 durable fixture; API003 adds no durable changes.
+- Guidelines: current N TESTING.md and repository AGENTS.md, plus the workspace testing principles. Native Linux affected-boundary validation Required and Completed by API; isolated archives, current toolchains, explicit skips and cleanup respected. No conflict/waiver. S testing evidence carries API002 limits; no S recreation.
+- Supported scenario basis confirmed: **Yes**. R2 SCN001 contributor checks, SCN002 nonpublishing candidate gates, SCN006 host configuration/source-safe status/detach. Existing contracts, not a fixture-created product scenario. No new intended behavior.
 
 ## Changed Durable Test Scope
 
-**No durable test file changed during API-REV-002: Yes. Result: Not Applicable.**
+**No durable test file changed during API-REV-003: Yes. Result: Not Applicable.**
 
 | Durable test path | Change | Related scenario/requirement | Coherent responsibility | Notes |
 | --- | --- | --- | --- | --- |
-| None during API002 | N/A | Current integrated R2 execution | Existing reviewed coverage reused | No production, durable test, helper or test-configuration edit |
+| None during API003 | N/A | R2 SCN001/002/006 | Existing reviewed tests executed | No production, test/helper or test-configuration changes |
 
-[test-review-scope.md](evidence/api-e2e/api-rev-002/test-review-scope.md) names the three post-merge Brief/Claude/Codex fixture cleanups already reviewed under CRR004/005. They are not new API changes. All current assertions executed unchanged; evidence-only runners/logs/audits are not shipped test code. No review of all165 unrelated upstream commits or old filesystem/editor suites.
+[API test-review scope](evidence/api-e2e/api-rev-003/test-review-scope.md) identifies `internal/setup/hosted_config_test.go`, corrected in IR005 at09cac962 and accepted under CRR007. It is unchanged here. Temporary runners, mutation copies, cleanup guards and raw logs are evidence, not durable product-tree test changes.
 
-Personal read-only [package-audit.json](code-review-evidence/crr-006/package-audit.json):55 API changes since CRR005 handoff receipt062b5da are ticket-only; all108 N and7307 S source inputs match CRR005 aggregates. S remains60b67 and clean. Eight authorities and source report unchanged. API's15 command exits and raw log summaries agree; owned API002 scratch independently absent. This is a bounded package/delta verification, not a repeated implementation audit.
+Personal read-only [package-audit.json](code-review-evidence/crr-008/package-audit.json) confirms all91 changes since API intake487e74c are ticket-only; all108 non-ticket inputs equal CRR007, fixture bytes equal09cac962, eight authorities and source report unchanged. N evidence input1c055d2d2b2af978084af43e8dace63f9654f04a; runtime83726b27400b405a7a6a79bd962d8e2419daa561. No source re-audit or repeated runtime campaign.
 
 ## Proportional Test-Code Checks
 
 | Check | Result | Evidence/notes |
 | --- | --- | --- |
-| Scenario grouping and names | N/A | No changed API test code |
-| Assertions prove approved requirements | N/A | No changed or weakened assertions |
-| Meaningful fixtures/helpers reuse | N/A | No durable helper delta |
-| Appropriate isolation/determinism | N/A | No test-code delta; API isolated execution/cleanup receipts inspected |
-| Coherent/navigable files | N/A | No test-file growth/restructuring |
-| No stale/duplicated/disabled compatibility coverage | N/A | No stage delta; R2 integration cleanups already source-reviewed |
-| Coverage delta agrees with investigation/execution | Pass | Git/hash identity proves zero durable changes; all11 groups reconciled,8 fresh/3 carried |
-| Fixtures cannot establish their own supported scenario | N/A | No new scenario; unchanged independent R2 authority |
-| Real trigger and actor/event steps | N/A | No changed callers/setup; process/API/PTY layers retain their bounds |
+| Scenario grouping and names | N/A | No new test-code delta |
+| Assertions prove approved requirements | N/A | No changed/weakened assertions; CRR007 fixture review carries |
+| Meaningful fixture/helper reuse | N/A | No durable helper change |
+| Appropriate isolation/determinism | N/A | Existing fixture unchanged; execution/cleanup receipts inspected |
+| Coherent and navigable files | N/A | No test-file growth or restructuring |
+| No stale/duplicated/unreasonably disabled compatibility tests | N/A | No stage delta or new skip |
+| Coverage changes agree with investigation/execution | Pass | Git/hash check proves zero API durable changes; raw counts agree with report |
+| Independent supported-scenario basis | N/A | No new scenario; unchanged R2 authority |
+| Real trigger and actor/event steps | N/A | Existing reviewed boundary/setup reused |
 
-No changed assertion needs a focused command. No source-size limit, full source scorecard or confidence rescoring applies.
+No changed assertion needs a focused command. No source-file size threshold, full source scorecard, new confidence score or reviewer runtime rerun applies.
 
-API-owned current raw results:1666 units/6 gated AGY skips;21 integration;15 core;39 composed API;17 run-memory/native PTY/WebSocket;24 Guide;34 launcher executed/2 skips. Overlap28/narrow34 repeat within broad units, not unique-added counts. N01–03 carry only after exact108-input equality, with original privileged-double/compile/child-skip limits. No current failed execution; historical API001 setup failures remain preserved/resolved. Guide presentation bytes unchanged: fresh components/guards, prior IR001 renders attributed, no new browser/desktop qualification.
+### Current evidence and limits
 
-Cleanup receipt confirms source/replay/protected input equality and no owned processes/cwds; exact scratch path is absent. Reviewer started no resources and changed no source/tests. No mounted/cross-OS/physical/authenticated-provider/publication or end-user verification inferred.
+API-owned execution, not reviewer-executed tests:35 commands match their expected exits, including two expected publication refusals and three assertion-sensitive Linux mutants. Independently parsed race logs confirm Linux7packages/47top-level/214including-subtests Pass and Darwin7/59/252 Pass, with no candidate failures. Focused30Linux/31Darwin are repeated coverage, not additive unique tests. Linux Go2skips and Python17executed/20collected/3skips; Darwin direct child skip, with parent execution, and Python19/20/1skip remain explicit. Vet/native build/version/Bash/hash/refusal evidence is linked by the API report. Mutant raw logs contain the intended preflight/partial-detach assertion failures, not compilation failures.
+
+Nine fresh case/platform groups close the native fixture boundary. S01–06 and unchanged engine/four-target compile evidence carry only their prior exact-input limits. **Local native Linux arm64/Darwin arm64 does not complete hosted Ubuntu amd64 or the cancelled hosted macOS matrix.** Runs39097778705/39097779223 remain historical failed/cancelled runs. No live NFS, provider, physical, UI/editor or publication qualification inferred.
+
+API [cleanup](evidence/api-e2e/api-rev-003/cleanup.json), [final checks](evidence/api-e2e/api-rev-003/final-checks.json) and [attempts](evidence/api-e2e/api-rev-003/attempts.md) retain the initial non-reaping-container zombie guard failure and correction; all live checker processes still refused before exact namespace removal. Reviewer independently confirms scratch absent and S worktree retired. No reviewer resources started.
+
+[External PM observation](evidence/api-e2e/api-rev-003/external-PM-observation.json) records the board matching at cleanup but changing later with separate dashboard-task content. The author is not independently verified. This exception is not hidden by an all-files-unchanged claim; no reviewer PM write/restore/stage. Raw logs/failed guard evidence remain preserved.
 
 ## Findings
 
-None. Failure classification N/A. Source CR001/CR002 stay resolved under CRR005, not reclassified by this test-review result.
+None. Failure classification N/A. CR001/CR002 stay resolved; the DR002 fixture correction remains accepted under CRR007. No new source defect or design premise inferred.
 
 ## Follow-ups
 
-None; no Task-manager dispatch. The known obsolete R1 launcher/descriptor/pin tail in S RELEASE.md remains an existing Delivery docs-sync obligation, not a new Task or source finding.
+None; no Task-manager dispatch. The earlier stale R1 RELEASE prose was **already corrected by DR002**, not an outstanding request.
 
 ## Latest Authoritative Result
 
 - **Not Applicable — no API-authored durable test changes; successful-test review gate satisfied.**
 - Changed durable paths reviewed:0. Unresolved findings:none.
-- CRR005 source Pass100 and API002 current integrated Pass95 remain distinct authorities. CRR003/API001 remain historical for their inputs.
-- Recommended sole recipient: `/software_engineering_team/delivery_engineer`, normal continuation after fresh routing. Delivery must refresh targets, sync known RELEASE prose and perform AC007 ordered N then S finalization under its release policy; DR001 not overridden by this report.
-- Frontend instructions tab retained intentionally; no NFS management coupling restored. Qualification empty/Guide release disabled, no release authorization.
-- No target fetch/merge/push/tag/release/deploy/TaskDone/user-verification action or new approval/old VM/provider/editor campaign.
+- CRR007 source Pass100 and API003 native Pass95 remain separate authorities. DR002 remains Delivery-owned Blocked until its remaining gates pass.
+- Recommended sole recipient: `/software_engineering_team/delivery_engineer` after fresh routing, for **N fix-forward target refresh/current hosted CI and final receipts**. Do not replay completed N22e934b then S9b72c8d1→personal55bff1f5 pushes or recreate retired S worktree.
+- Preserve intentional instructional frontend tab, completed docs sync and exact S API002 evidence limits. No old filesystem/editor/VM/provider campaign or new approval loop.
+- **NO RELEASE**. No target fetch/merge/push/reset/tag/release/deploy/TaskDone/Terminal/user-verification action by this reviewer.

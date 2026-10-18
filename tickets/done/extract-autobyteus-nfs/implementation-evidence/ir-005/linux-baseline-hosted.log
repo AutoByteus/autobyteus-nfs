@@ -1,0 +1,91 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/baseline nfs-extract-ir005-au0s6fis env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./internal/setup -run TestHostedConfig -count=1 -v
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current
+    hosted_config_test.go:95: valid config did not reach mount check expected host NFS source/protocol is not mounted 0
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed
+=== RUN   TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current
+    hosted_config_test.go:95: valid config did not reach mount check expected host NFS source/protocol is not mounted 0
+--- FAIL: TestHostedConfigStatusRefusesBeforeReadiness (0.13s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/missing (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/old (0.02s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/different (0.02s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/malformed (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/missing (0.02s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/old (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/different (0.01s)
+    --- PASS: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/malformed (0.01s)
+    --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current (0.02s)
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending
+=== RUN   TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending
+--- PASS: TestHostedConfigDetachPreflightsBeforeEffects (0.16s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/saved (0.02s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/saved (0.02s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/old/pending (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/different/pending (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-native/malformed/pending (0.02s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/saved (0.02s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/saved (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/old/pending (0.02s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/different/pending (0.01s)
+    --- PASS: TestHostedConfigDetachPreflightsBeforeEffects/ganesha-docker/malformed/pending (0.01s)
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current
+    hosted_config_test.go:146: preflight prevented existing teardown checks unsafe configuration directory: /home/checker/tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks2862260098/001/private
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing
+    hosted_config_test.go:146: preflight prevented existing teardown checks unsafe configuration directory: /home/checker/tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks781007928/001/private
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current
+--- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks (0.04s)
+    --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current (0.02s)
+    --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing (0.02s)
+    --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current (0.01s)
+panic: runtime error: invalid memory address or nil pointer dereference [recovered, repanicked]
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x422b60]
+
+goroutine 68 [running]:
+testing.tRunner.func1.2({0x89c748, 0x9421b0})
+	/usr/local/go/src/testing/testing.go:2125 +0x2b8
+testing.tRunner.func1()
+	/usr/local/go/src/testing/testing.go:2128 +0x438
+panic({0x89c748?, 0x9421b0?})
+	/usr/local/go/src/runtime/panic.go:859 +0x120
+net/http.(*Client).do(0x0, 0xc0005a1180)
+	/usr/local/go/src/net/http/client.go:620 +0xc0
+net/http.(*Client).Do(...)
+	/usr/local/go/src/net/http/client.go:604
+github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).Call(0xc00059a078, {0x4f03f7, 0x3}, {0xc000590230, 0x4c}, {0x0, 0x0}, {0x83b350, 0xc00058f920})
+	/home/checker/baseline/internal/docker/client.go:64 +0x270
+github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).Inspect(0xc00059a078, {0xc0005a2240, 0x3b})
+	/home/checker/baseline/internal/docker/client.go:90 +0x108
+github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).DetachEngine(0xc00059a078, {{0xc0005822a0, 0x24}, {0xc0005822a0, 0x24}, {0xc0005948c0, 0x66}, {0x1, {0x0, 0x0}, ...}, ...}, ...)
+	/home/checker/baseline/internal/docker/engine.go:61 +0x60
+github.com/AutoByteus/autobyteus-nfs/internal/setup.(*Service).Detach(0xc000033ce8, 0x1)
+	/home/checker/baseline/internal/setup/lifecycle.go:127 +0x1210
+github.com/AutoByteus/autobyteus-nfs/internal/setup.TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks.func1(0xc000152008)
+	/home/checker/baseline/internal/setup/hosted_config_test.go:145 +0x148
+testing.tRunner(0xc000152008, 0xc0005ba3a0)
+	/usr/local/go/src/testing/testing.go:2195 +0x168
+created by testing.(*T).Run in goroutine 23
+	/usr/local/go/src/testing/testing.go:2260 +0x7c0
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.357s
+FAIL

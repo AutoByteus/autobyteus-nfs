@@ -1,0 +1,10 @@
+{
+  "scratch": "/Users/normy/autobyteus_org/nfs-extract-ir005-au0s6fis",
+  "scratch_removed": true,
+  "container": "nfs-extract-ir005-au0s6fis",
+  "container_removed": true,
+  "host_command_matches": [],
+  "host_cwd_matches": [],
+  "immutable_base_image": "Retained only as shared Docker pull cache; no built image or live resources retained",
+  "protected": "D0/PM/canonical app/retained engine/ignored cache not modified or removed"
+}

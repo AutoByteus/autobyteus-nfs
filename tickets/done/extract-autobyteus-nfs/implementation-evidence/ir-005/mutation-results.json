@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ignore-status-preflight",
+    "exit": 1,
+    "expected_failure": true,
+    "diagnostic": "status ignored hosted config"
+  },
+  {
+    "name": "ignore-detach-preflight",
+    "exit": 1,
+    "expected_failure": true,
+    "diagnostic": "detach touched dependencies before checking config"
+  },
+  {
+    "name": "reject-partial-detach",
+    "exit": 1,
+    "expected_failure": true,
+    "diagnostic": "did not stop at Linux mount boundary"
+  }
+]

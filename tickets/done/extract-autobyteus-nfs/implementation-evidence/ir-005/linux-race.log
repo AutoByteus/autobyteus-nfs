@@ -1,0 +1,9 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/candidate nfs-extract-ir005-au0s6fis env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./...
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.168s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.034s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.066s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.038s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	1.041s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.026s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.229s

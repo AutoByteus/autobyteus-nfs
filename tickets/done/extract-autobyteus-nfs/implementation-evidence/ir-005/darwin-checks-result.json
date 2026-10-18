@@ -1,0 +1,74 @@
+[
+  {
+    "name": "environment",
+    "command": [
+      "sh",
+      "-c",
+      "id; uname -a; go version; cc --version | head -1; python3 --version"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 1.55
+  },
+  {
+    "name": "focused",
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "./internal/setup",
+      "-run",
+      "TestHostedConfig|TestDetachDoesNotRequireLiveSource",
+      "-count=1",
+      "-v"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 20.115
+  },
+  {
+    "name": "race",
+    "command": [
+      "go",
+      "test",
+      "-race",
+      "./..."
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 9.08
+  },
+  {
+    "name": "vet",
+    "command": [
+      "go",
+      "vet",
+      "./..."
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 7.998
+  },
+  {
+    "name": "source-hash",
+    "command": [
+      "python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "seconds": 0.093
+  },
+  {
+    "name": "publish-refusal",
+    "command": [
+      "python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exit": 1,
+    "expected_exit": 1,
+    "seconds": 0.066
+  }
+]

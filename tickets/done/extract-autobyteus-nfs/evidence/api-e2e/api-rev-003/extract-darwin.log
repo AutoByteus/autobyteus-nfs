@@ -1,0 +1,2 @@
+$ tar -xzf /Users/normy/nfs-extract-api003-47u9du58/go1.27.2.darwin-arm64.tar.gz -C /Users/normy/nfs-extract-api003-47u9du58/tools
+CWD /Users/normy/nfs-extract-api003-47u9du58

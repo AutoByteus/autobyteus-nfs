@@ -1,0 +1,17 @@
+$ docker exec --user 1001:1001 --workdir /home/checker/reject-partial-detach nfs-extract-api003-47u9du58 env -i PATH=/usr/local/go/bin:/usr/bin:/bin HOME=/home/checker TMPDIR=/home/checker/tmp GOTOOLCHAIN=local go test -race ./internal/setup -run TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks -count=1 -v
+CWD /Users/normy/nfs-extract-api003-47u9du58
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing
+    hosted_config_test.go:200: did not stop at Linux mount boundary lstat /home/checker/tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks3702225161/001/private/ganesha/ganesha.conf: no such file or directory 0
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current
+=== RUN   TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/missing
+    hosted_config_test.go:200: did not stop at Linux mount boundary lstat /home/checker/tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks1165573156/001/private/ganesha/ganesha.conf: no such file or directory 0
+--- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks (0.11s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current (0.07s)
+    --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing (0.01s)
+    --- PASS: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current (0.01s)
+    --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/missing (0.01s)
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.131s
+FAIL

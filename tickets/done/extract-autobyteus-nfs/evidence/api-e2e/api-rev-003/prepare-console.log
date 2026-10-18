@@ -1,0 +1,8 @@
+E01 Started Prepare exact independent N source/toolchains; preserve archived ticket and completed targets N/A
+download-linux 0 expected 0
+download-darwin 0 expected 0
+extract-darwin 0 expected 0
+linux-container-create 0 expected 0
+linux-prepare 0 expected 0
+linux-input-integrity 0 expected 0
+E01 Completed Exact108-input N archives, verified native Go1.27.2;107 other inputs unchanged from blocker, one reviewed fixture delta Pass

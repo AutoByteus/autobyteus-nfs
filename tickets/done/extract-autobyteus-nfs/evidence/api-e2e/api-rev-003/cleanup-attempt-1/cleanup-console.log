@@ -1,0 +1,10 @@
+E02 Started Confirm source/protected-state exactness and native quiescence, then remove only API003-owned resources N/A
+linux-final-inputs 0 expected 0
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-owned.py", line 18, in <module>
+    assert not any('checker' in l for l in proc.splitlines()),proc
+AssertionError:   PID USER     COMMAND
+    1 root     sleep infinity
+ 2898 checker  [go] <defunct>
+11629 root     ps -eo pid,user,args
+

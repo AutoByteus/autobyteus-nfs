@@ -1,0 +1,79 @@
+{
+  "N_count": 108,
+  "N_unchanged_since_blocker": 107,
+  "runtime_workflow_pins_unchanged": true,
+  "API002_delta": [
+    "RELEASE.md",
+    "internal/setup/hosted_config_test.go"
+  ],
+  "RELEASE": "DR002 prose-only sync, not still pending",
+  "S": "API002 executed S60b67; DR002 docs9b72 tree-equal final personal55bff. No new S impact or recreation.",
+  "N01": "Rerun native Linux and Darwin; no prior native Linux API Pass inferred",
+  "N02": "Fresh native Linux/Darwin packaging/hash/refusal checks; existing container installer skips explicit",
+  "N03": "Fresh native build/version; old four-target/actual arm64 engine compile carries (source unchanged)",
+  "previous_hosted": "39097778705/39097779223 failed/cancelled, not closed locally",
+  "completed_targets": {
+    "at": "2026-10-18T04:40:39.596923+00:00",
+    "ordering": "N target push completed and remote-confirmed before S target push",
+    "N": {
+      "repository": "https://github.com/AutoByteus/autobyteus-nfs.git",
+      "service_source": "83726b27400b405a7a6a79bd962d8e2419daa561",
+      "ticket_commit": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+      "target": "origin/main",
+      "target_commit": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+      "method": "Initial history establishment after fresh absent main; no unrelated-history merge",
+      "ticket_push": "Completed",
+      "target_push": "Completed / ls-remote confirmed",
+      "default_branch": "main",
+      "default_branch_action": "Initial ticket push caused GitHub default codex/extract-autobyteus-nfs; gh repo edit --default-branch main corrected it to approved finalization branch",
+      "GitHub_content_probe": {
+        "html_url": "https://github.com/AutoByteus/autobyteus-nfs/blob/main/go.mod",
+        "path": "go.mod",
+        "sha": "2eab96b7a3d1a145a522d65b8415b9e4c22f2208"
+      },
+      "source_hash_after_docs": "348046594b470f7b294aa2162f78ec349eb57c4edf74aa2db32112a9dc9da90e"
+    },
+    "S": {
+      "repository": "AutoByteus/autobyteus-workspace",
+      "tested_source": "60b67dabecaf5569a8e26128dbdb26117c988811",
+      "ticket_commit": "9b72c8d1c8d6f7e294af2c23fb497211c67f930c",
+      "target": "origin/personal",
+      "target_commit": "55bff1f5eea1f140bab6e372e3faadeb7ea33465",
+      "parents": [
+        "2f211340ee36b81cef74a74b2e042b5102c269d3",
+        "9b72c8d1c8d6f7e294af2c23fb497211c67f930c"
+      ],
+      "method": "--no-ff",
+      "ticket_and_merge_tree": "be066bdd90e4f0dd0d0ea69cbd696c93efcbac7f",
+      "tree_equality": true,
+      "ticket_push": "Completed",
+      "target_push": "Completed / ls-remote confirmed"
+    },
+    "release": "None; no tag, version, publish dispatch, image, deploy or user verification",
+    "cleanup": "cleanup.json records completed S removal/local branches and safe N cache retention/D0 PM preservation",
+    "postpush_check": {
+      "result": "Blocked \u2014 Local Fix",
+      "runs": [
+        {
+          "id": 39097779223,
+          "head": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+          "branch": "codex/extract-autobyteus-nfs",
+          "conclusion": "failure",
+          "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39097779223",
+          "log_sha256": "67f861d716068fa32751242ee653730b66e26271513d7f466ea0503401fda3f9"
+        },
+        {
+          "id": 39097778705,
+          "head": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+          "branch": "main",
+          "conclusion": "failure",
+          "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39097778705",
+          "log_sha256": "d3736f2e97b3bec51098aa7fa12d95d23aa45c9d38c34c879c790dc2fb19cfc5"
+        }
+      ],
+      "failure": "Ubuntu native go test -race fails hosted_config_test.go status/detach fixture expectations and panics through unconfigured Docker HTTP client; cause requires implementation-owned correction, no runtime defect assumed solely from fixture failure",
+      "macOS": "Both job conclusions cancelled by matrix fail-fast; ticket run39097779223 native checks step success, main run39097778705 native step cancelled; not a completed macOS matrix Pass",
+      "recovery": "Preserve both finalized targets. No reset/force/revert or CI rerun. Local blocker checkpoint on recreated codex/extract-autobyteus-nfs; current evidence path remains archived."
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Preparation failed before Docker resource creation: N=E.parents[3] selected tickets rather than repository; FileNotFoundError tickets/packaging/release-lock.json. No tests executed. Both Go archives downloaded and verified. Corrected root calculation, removed only wrong owned baseline copy, reused verified toolchains.

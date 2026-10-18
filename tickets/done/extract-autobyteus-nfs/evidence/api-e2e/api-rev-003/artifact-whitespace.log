@@ -1,0 +1,634 @@
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-attempt-1/cleanup-console.log:10: new blank line at EOF.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-console.log:10: new blank line at EOF.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-process-diagnosis.log:17: trailing whitespace.
++Groups:	1001 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:7: trailing whitespace.
++ 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:14: space before tab in indent.
++ 	"errors"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:15: space before tab in indent.
++ 	"os"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:16: space before tab in indent.
++ 	"path/filepath"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:18: space before tab in indent.
++ 	"strings"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:19: space before tab in indent.
++ 	"testing"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:20: trailing whitespace.
++ 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:21: space before tab in indent.
++ 	"github.com/AutoByteus/autobyteus-nfs/internal/backend"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:22: space before tab in indent.
++ 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:23: space before tab in indent.
++ 	"github.com/AutoByteus/autobyteus-nfs/internal/docker"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:26: trailing whitespace.
++ 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:29: space before tab in indent.
++ 	id := "5544dadc-86b0-43ba-9799-74728b442227"
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:30: space before tab in indent.
++ 	a := config.Attachment{Connection: config.Connection{StorageID: id, Endpoint: "192.168.64.7", Export: "/autobyteus/" + id, Protocol: "4.1", MountRoot: config.DefaultMountRoot}, InstallationID: id, UserUID: 1000, UserGID: 1000}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:31: space before tab in indent.
++ 	runner := &configBoundaryRunner{}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:41: space before tab in indent.
++ 	s := Service{Store: config.Store{Directory: private, Owner: uint32(os.Getuid())}, Runner: runner, Docker: &docker.Client{}}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:42: space before tab in indent.
++ 	var h *config.HostedFilesystem
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:43: space before tab in indent.
++ 	if engine != "" {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:45: space before tab in indent.
++ 	return s, runner, p
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:47: trailing whitespace.
++ 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:84: space before tab in indent.
++ 	for _, engine := range []string{"ganesha-native", "ganesha-docker"} {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:85: space before tab in indent.
++ 		for _, content := range []string{"missing", "old", "different", "malformed", "current"} {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:87: space before tab in indent.
++ 					t.Fatal("unverified host reported ready", result, err)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:88: space before tab in indent.
++ 				}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:89: space before tab in indent.
++ 				if content == "current" {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:102: space before tab in indent.
++ 					}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:105: space before tab in indent.
++ 				}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:106: space before tab in indent.
++ 				after, _ := os.ReadFile(p)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:107: space before tab in indent.
++ 				if string(before) != string(after) {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:109: space before tab in indent.
++ 	for _, engine := range []string{"ganesha-native", "ganesha-docker"} {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:110: space before tab in indent.
++ 		for _, content := range []string{"current", "missing"} {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:111: space before tab in indent.
++ 			t.Run(engine+"/"+content, func(t *testing.T) {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:115: space before tab in indent.
++ 				for i := 0; i < 2; i++ {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:124: space before tab in indent.
++ 				}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:125: space before tab in indent.
++ 			})
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:126: space before tab in indent.
++ 		}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:128: trailing whitespace.
++ 
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:130: space before tab in indent.
++ 	for _, engine := range []string{"apple", ""} {
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:134: space before tab in indent.
++ 		result, err := s.Status()
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:145: space before tab in indent.
++ 		}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff:149: space before tab in indent.
++ 	}
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:116: trailing whitespace.
++(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4376 files and directories currently installed.)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:117: trailing whitespace.
++Preparing to unpack .../libssl3t64_3.0.13-0ubuntu3.16_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:118: trailing whitespace.
++Unpacking libssl3t64:arm64 (3.0.13-0ubuntu3.16) over (3.0.13-0ubuntu3.15) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:119: trailing whitespace.
++Setting up libssl3t64:arm64 (3.0.13-0ubuntu3.16) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:120: trailing whitespace.
++Selecting previously unselected package libpython3.12-minimal:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:121: trailing whitespace.
++(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4376 files and directories currently installed.)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:122: trailing whitespace.
++Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.17_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:123: trailing whitespace.
++Unpacking libpython3.12-minimal:arm64 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:124: trailing whitespace.
++Selecting previously unselected package libexpat1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:125: trailing whitespace.
++Preparing to unpack .../libexpat1_2.6.1-2ubuntu0.6_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:126: trailing whitespace.
++Unpacking libexpat1:arm64 (2.6.1-2ubuntu0.6) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:127: trailing whitespace.
++Selecting previously unselected package python3.12-minimal.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:128: trailing whitespace.
++Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.17_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:129: trailing whitespace.
++Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:130: trailing whitespace.
++Setting up libpython3.12-minimal:arm64 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:131: trailing whitespace.
++Setting up libexpat1:arm64 (2.6.1-2ubuntu0.6) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:132: trailing whitespace.
++Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:133: trailing whitespace.
++Selecting previously unselected package python3-minimal.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:134: trailing whitespace.
++(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4695 files and directories currently installed.)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:135: trailing whitespace.
++Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:136: trailing whitespace.
++Unpacking python3-minimal (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:137: trailing whitespace.
++Selecting previously unselected package media-types.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:138: trailing whitespace.
++Preparing to unpack .../1-media-types_10.1.0_all.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:139: trailing whitespace.
++Unpacking media-types (10.1.0) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:140: trailing whitespace.
++Selecting previously unselected package netbase.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:141: trailing whitespace.
++Preparing to unpack .../2-netbase_6.4_all.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:142: trailing whitespace.
++Unpacking netbase (6.4) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:143: trailing whitespace.
++Selecting previously unselected package tzdata.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:144: trailing whitespace.
++Preparing to unpack .../3-tzdata_2026e-0ubuntu0.24.04.1_all.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:145: trailing whitespace.
++Unpacking tzdata (2026e-0ubuntu0.24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:146: trailing whitespace.
++Selecting previously unselected package readline-common.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:147: trailing whitespace.
++Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:148: trailing whitespace.
++Unpacking readline-common (8.2-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:149: trailing whitespace.
++Selecting previously unselected package libreadline8t64:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:150: trailing whitespace.
++Preparing to unpack .../5-libreadline8t64_8.2-4build1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:151: trailing whitespace.
++Adding 'diversion of /lib/aarch64-linux-gnu/libhistory.so.8 to /lib/aarch64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:152: trailing whitespace.
++Adding 'diversion of /lib/aarch64-linux-gnu/libhistory.so.8.2 to /lib/aarch64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:153: trailing whitespace.
++Adding 'diversion of /lib/aarch64-linux-gnu/libreadline.so.8 to /lib/aarch64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:154: trailing whitespace.
++Adding 'diversion of /lib/aarch64-linux-gnu/libreadline.so.8.2 to /lib/aarch64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:155: trailing whitespace.
++Unpacking libreadline8t64:arm64 (8.2-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:156: trailing whitespace.
++Selecting previously unselected package libsqlite3-0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:157: trailing whitespace.
++Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2.8_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:158: trailing whitespace.
++Unpacking libsqlite3-0:arm64 (3.45.1-1ubuntu2.8) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:159: trailing whitespace.
++Selecting previously unselected package libpython3.12-stdlib:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:160: trailing whitespace.
++Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.17_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:161: trailing whitespace.
++Unpacking libpython3.12-stdlib:arm64 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:162: trailing whitespace.
++Selecting previously unselected package python3.12.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:163: trailing whitespace.
++Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.17_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:164: trailing whitespace.
++Unpacking python3.12 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:165: trailing whitespace.
++Selecting previously unselected package libpython3-stdlib:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:166: trailing whitespace.
++Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:167: trailing whitespace.
++Unpacking libpython3-stdlib:arm64 (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:168: trailing whitespace.
++Setting up python3-minimal (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:169: trailing whitespace.
++Selecting previously unselected package python3.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:170: trailing whitespace.
++(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5701 files and directories currently installed.)
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:171: trailing whitespace.
++Preparing to unpack .../00-python3_3.12.3-0ubuntu2.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:172: trailing whitespace.
++Unpacking python3 (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:173: trailing whitespace.
++Selecting previously unselected package openssl.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:174: trailing whitespace.
++Preparing to unpack .../01-openssl_3.0.13-0ubuntu3.16_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:175: trailing whitespace.
++Unpacking openssl (3.0.13-0ubuntu3.16) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:176: trailing whitespace.
++Selecting previously unselected package ca-certificates.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:177: trailing whitespace.
++Preparing to unpack .../02-ca-certificates_20260601~24.04.1_all.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:178: trailing whitespace.
++Unpacking ca-certificates (20260601~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:179: trailing whitespace.
++Selecting previously unselected package libjansson4:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:180: trailing whitespace.
++Preparing to unpack .../03-libjansson4_2.14-2build2_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:181: trailing whitespace.
++Unpacking libjansson4:arm64 (2.14-2build2) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:182: trailing whitespace.
++Selecting previously unselected package binutils-common:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:183: trailing whitespace.
++Preparing to unpack .../04-binutils-common_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:184: trailing whitespace.
++Unpacking binutils-common:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:185: trailing whitespace.
++Selecting previously unselected package libsframe1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:186: trailing whitespace.
++Preparing to unpack .../05-libsframe1_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:187: trailing whitespace.
++Unpacking libsframe1:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:188: trailing whitespace.
++Selecting previously unselected package libbinutils:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:189: trailing whitespace.
++Preparing to unpack .../06-libbinutils_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:190: trailing whitespace.
++Unpacking libbinutils:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:191: trailing whitespace.
++Selecting previously unselected package libctf-nobfd0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:192: trailing whitespace.
++Preparing to unpack .../07-libctf-nobfd0_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:193: trailing whitespace.
++Unpacking libctf-nobfd0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:194: trailing whitespace.
++Selecting previously unselected package libctf0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:195: trailing whitespace.
++Preparing to unpack .../08-libctf0_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:196: trailing whitespace.
++Unpacking libctf0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:197: trailing whitespace.
++Selecting previously unselected package libgprofng0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:198: trailing whitespace.
++Preparing to unpack .../09-libgprofng0_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:199: trailing whitespace.
++Unpacking libgprofng0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:200: trailing whitespace.
++Selecting previously unselected package binutils-aarch64-linux-gnu.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:201: trailing whitespace.
++Preparing to unpack .../10-binutils-aarch64-linux-gnu_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:202: trailing whitespace.
++Unpacking binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:203: trailing whitespace.
++Selecting previously unselected package binutils.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:204: trailing whitespace.
++Preparing to unpack .../11-binutils_2.42-4ubuntu2.10_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:205: trailing whitespace.
++Unpacking binutils (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:206: trailing whitespace.
++Selecting previously unselected package gcc-13-base:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:207: trailing whitespace.
++Preparing to unpack .../12-gcc-13-base_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:208: trailing whitespace.
++Unpacking gcc-13-base:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:209: trailing whitespace.
++Selecting previously unselected package libisl23:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:210: trailing whitespace.
++Preparing to unpack .../13-libisl23_0.26-3build1.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:211: trailing whitespace.
++Unpacking libisl23:arm64 (0.26-3build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:212: trailing whitespace.
++Selecting previously unselected package libmpfr6:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:213: trailing whitespace.
++Preparing to unpack .../14-libmpfr6_4.2.1-1build1.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:214: trailing whitespace.
++Unpacking libmpfr6:arm64 (4.2.1-1build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:215: trailing whitespace.
++Selecting previously unselected package libmpc3:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:216: trailing whitespace.
++Preparing to unpack .../15-libmpc3_1.3.1-1build1.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:217: trailing whitespace.
++Unpacking libmpc3:arm64 (1.3.1-1build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:218: trailing whitespace.
++Selecting previously unselected package cpp-13-aarch64-linux-gnu.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:219: trailing whitespace.
++Preparing to unpack .../16-cpp-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:220: trailing whitespace.
++Unpacking cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:221: trailing whitespace.
++Selecting previously unselected package cpp-13.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:222: trailing whitespace.
++Preparing to unpack .../17-cpp-13_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:223: trailing whitespace.
++Unpacking cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:224: trailing whitespace.
++Selecting previously unselected package cpp-aarch64-linux-gnu.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:225: trailing whitespace.
++Preparing to unpack .../18-cpp-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:226: trailing whitespace.
++Unpacking cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:227: trailing whitespace.
++Selecting previously unselected package cpp.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:228: trailing whitespace.
++Preparing to unpack .../19-cpp_4%3a13.2.0-7ubuntu1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:229: trailing whitespace.
++Unpacking cpp (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:230: trailing whitespace.
++Selecting previously unselected package libcc1-0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:231: trailing whitespace.
++Preparing to unpack .../20-libcc1-0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:232: trailing whitespace.
++Unpacking libcc1-0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:233: trailing whitespace.
++Selecting previously unselected package libgomp1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:234: trailing whitespace.
++Preparing to unpack .../21-libgomp1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:235: trailing whitespace.
++Unpacking libgomp1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:236: trailing whitespace.
++Selecting previously unselected package libitm1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:237: trailing whitespace.
++Preparing to unpack .../22-libitm1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:238: trailing whitespace.
++Unpacking libitm1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:239: trailing whitespace.
++Selecting previously unselected package libatomic1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:240: trailing whitespace.
++Preparing to unpack .../23-libatomic1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:241: trailing whitespace.
++Unpacking libatomic1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:242: trailing whitespace.
++Selecting previously unselected package libasan8:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:243: trailing whitespace.
++Preparing to unpack .../24-libasan8_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:244: trailing whitespace.
++Unpacking libasan8:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:245: trailing whitespace.
++Selecting previously unselected package liblsan0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:246: trailing whitespace.
++Preparing to unpack .../25-liblsan0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:247: trailing whitespace.
++Unpacking liblsan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:248: trailing whitespace.
++Selecting previously unselected package libtsan2:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:249: trailing whitespace.
++Preparing to unpack .../26-libtsan2_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:250: trailing whitespace.
++Unpacking libtsan2:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:251: trailing whitespace.
++Selecting previously unselected package libubsan1:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:252: trailing whitespace.
++Preparing to unpack .../27-libubsan1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:253: trailing whitespace.
++Unpacking libubsan1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:254: trailing whitespace.
++Selecting previously unselected package libhwasan0:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:255: trailing whitespace.
++Preparing to unpack .../28-libhwasan0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:256: trailing whitespace.
++Unpacking libhwasan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:257: trailing whitespace.
++Selecting previously unselected package libgcc-13-dev:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:258: trailing whitespace.
++Preparing to unpack .../29-libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:259: trailing whitespace.
++Unpacking libgcc-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:260: trailing whitespace.
++Selecting previously unselected package gcc-13-aarch64-linux-gnu.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:261: trailing whitespace.
++Preparing to unpack .../30-gcc-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:262: trailing whitespace.
++Unpacking gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:263: trailing whitespace.
++Selecting previously unselected package gcc-13.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:264: trailing whitespace.
++Preparing to unpack .../31-gcc-13_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:265: trailing whitespace.
++Unpacking gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:266: trailing whitespace.
++Selecting previously unselected package gcc-aarch64-linux-gnu.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:267: trailing whitespace.
++Preparing to unpack .../32-gcc-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:268: trailing whitespace.
++Unpacking gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:269: trailing whitespace.
++Selecting previously unselected package gcc.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:270: trailing whitespace.
++Preparing to unpack .../33-gcc_4%3a13.2.0-7ubuntu1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:271: trailing whitespace.
++Unpacking gcc (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:272: trailing whitespace.
++Selecting previously unselected package libc-dev-bin.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:273: trailing whitespace.
++Preparing to unpack .../34-libc-dev-bin_2.39-0ubuntu8.9_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:274: trailing whitespace.
++Unpacking libc-dev-bin (2.39-0ubuntu8.9) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:275: trailing whitespace.
++Selecting previously unselected package linux-libc-dev:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:276: trailing whitespace.
++Preparing to unpack .../35-linux-libc-dev_6.8.0-147.147_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:277: trailing whitespace.
++Unpacking linux-libc-dev:arm64 (6.8.0-147.147) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:278: trailing whitespace.
++Selecting previously unselected package libcrypt-dev:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:279: trailing whitespace.
++Preparing to unpack .../36-libcrypt-dev_1%3a4.4.36-4build1_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:280: trailing whitespace.
++Unpacking libcrypt-dev:arm64 (1:4.4.36-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:281: trailing whitespace.
++Selecting previously unselected package rpcsvc-proto.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:282: trailing whitespace.
++Preparing to unpack .../37-rpcsvc-proto_1.4.2-0ubuntu7_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:283: trailing whitespace.
++Unpacking rpcsvc-proto (1.4.2-0ubuntu7) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:284: trailing whitespace.
++Selecting previously unselected package libc6-dev:arm64.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:285: trailing whitespace.
++Preparing to unpack .../38-libc6-dev_2.39-0ubuntu8.9_arm64.deb ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:286: trailing whitespace.
++Unpacking libc6-dev:arm64 (2.39-0ubuntu8.9) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:287: trailing whitespace.
++Setting up media-types (10.1.0) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:288: trailing whitespace.
++Setting up libsqlite3-0:arm64 (3.45.1-1ubuntu2.8) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:289: trailing whitespace.
++Setting up binutils-common:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:290: trailing whitespace.
++Setting up linux-libc-dev:arm64 (6.8.0-147.147) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:291: trailing whitespace.
++Setting up libctf-nobfd0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:292: trailing whitespace.
++Setting up libgomp1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:293: trailing whitespace.
++Setting up libsframe1:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:294: trailing whitespace.
++Setting up libjansson4:arm64 (2.14-2build2) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:295: trailing whitespace.
++Setting up tzdata (2026e-0ubuntu0.24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:296: trailing whitespace.
++
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:297: trailing whitespace.
++Current default time zone: 'Etc/UTC'
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:298: trailing whitespace.
++Local time is now:      Sun Oct 18 04:59:17 UTC 2026.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:299: trailing whitespace.
++Universal Time is now:  Sun Oct 18 04:59:17 UTC 2026.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:300: trailing whitespace.
++Run 'dpkg-reconfigure tzdata' if you wish to change it.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:301: trailing whitespace.
++
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:302: trailing whitespace.
++Setting up rpcsvc-proto (1.4.2-0ubuntu7) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:303: trailing whitespace.
++Setting up gcc-13-base:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:304: trailing whitespace.
++Setting up libmpfr6:arm64 (4.2.1-1build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:305: trailing whitespace.
++Setting up libmpc3:arm64 (1.3.1-1build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:306: trailing whitespace.
++Setting up libatomic1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:307: trailing whitespace.
++Setting up libubsan1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:308: trailing whitespace.
++Setting up libhwasan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:309: trailing whitespace.
++Setting up libcrypt-dev:arm64 (1:4.4.36-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:310: trailing whitespace.
++Setting up libasan8:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:311: trailing whitespace.
++Setting up netbase (6.4) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:312: trailing whitespace.
++Setting up libtsan2:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:313: trailing whitespace.
++Setting up libbinutils:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:314: trailing whitespace.
++Setting up libisl23:arm64 (0.26-3build1.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:315: trailing whitespace.
++Setting up libc-dev-bin (2.39-0ubuntu8.9) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:316: trailing whitespace.
++Setting up openssl (3.0.13-0ubuntu3.16) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:317: trailing whitespace.
++Setting up readline-common (8.2-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:318: trailing whitespace.
++Setting up libcc1-0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:319: trailing whitespace.
++Setting up liblsan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:320: trailing whitespace.
++Setting up libitm1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:321: trailing whitespace.
++Setting up libctf0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:322: trailing whitespace.
++Setting up cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:323: trailing whitespace.
++Setting up ca-certificates (20260601~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:324: trailing whitespace.
++Updating certificates in /etc/ssl/certs...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:325: trailing whitespace.
++121 added, 0 removed; done.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:326: trailing whitespace.
++Setting up cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:327: trailing whitespace.
++Setting up libgprofng0:arm64 (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:328: trailing whitespace.
++Setting up libreadline8t64:arm64 (8.2-4build1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:329: trailing whitespace.
++Setting up libgcc-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:330: trailing whitespace.
++Setting up libc6-dev:arm64 (2.39-0ubuntu8.9) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:331: trailing whitespace.
++Setting up libpython3.12-stdlib:arm64 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:332: trailing whitespace.
++Setting up cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:333: trailing whitespace.
++Setting up python3.12 (3.12.3-1ubuntu0.17) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:334: trailing whitespace.
++Setting up binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:335: trailing whitespace.
++Setting up binutils (2.42-4ubuntu2.10) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:336: trailing whitespace.
++Setting up gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:337: trailing whitespace.
++Setting up gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:338: trailing whitespace.
++Setting up cpp (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:339: trailing whitespace.
++Setting up libpython3-stdlib:arm64 (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:340: trailing whitespace.
++Setting up gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:341: trailing whitespace.
++Setting up python3 (3.12.3-0ubuntu2.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:342: trailing whitespace.
++Setting up gcc (4:13.2.0-7ubuntu1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:343: trailing whitespace.
++Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:344: trailing whitespace.
++Processing triggers for ca-certificates (20260601~24.04.1) ...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:345: trailing whitespace.
++Updating certificates in /etc/ssl/certs...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:346: trailing whitespace.
++0 added, 0 removed; done.
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:347: trailing whitespace.
++Running hooks in /etc/ca-certificates/update.d...
+tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log:348: trailing whitespace.
++done.

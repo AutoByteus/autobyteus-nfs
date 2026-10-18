@@ -1,0 +1,2 @@
+$ docker exec nfs-extract-api003-47u9du58 bash -euc cp -a /inputs/ignore-status-preflight /home/checker/ignore-status-preflight && chown -R checker:checker /home/checker/ignore-status-preflight
+CWD /Users/normy/nfs-extract-api003-47u9du58

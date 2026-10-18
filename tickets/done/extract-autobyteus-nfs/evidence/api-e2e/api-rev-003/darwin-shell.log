@@ -1,0 +1,2 @@
+$ bash -n scripts/public/nfs/install.sh
+CWD /Users/normy/nfs-extract-api003-47u9du58/candidate

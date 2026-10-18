@@ -1,0 +1,25 @@
+{
+  "metadata_url": "https://go.dev/dl/?mode=json&include=all",
+  "downloads": [
+    {
+      "filename": "go1.27.2.linux-arm64.tar.gz",
+      "os": "linux",
+      "arch": "arm64",
+      "version": "go1.27.2",
+      "sha256": "94f3e30b8e374bc285e7dadc11e0865726b9bc6e85b841ccceaabc0214c6b7c8",
+      "size": 67076180,
+      "kind": "archive",
+      "url": "https://go.dev/dl/go1.27.2.linux-arm64.tar.gz"
+    },
+    {
+      "filename": "go1.27.2.darwin-arm64.tar.gz",
+      "os": "darwin",
+      "arch": "arm64",
+      "version": "go1.27.2",
+      "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+      "size": 68195916,
+      "kind": "archive",
+      "url": "https://go.dev/dl/go1.27.2.darwin-arm64.tar.gz"
+    }
+  ]
+}

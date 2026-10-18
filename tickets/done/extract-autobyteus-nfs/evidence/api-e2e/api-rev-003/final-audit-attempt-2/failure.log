@@ -1,0 +1,1 @@
+Final audit expected case-sensitive "No such" but Docker returned "error: no such object: nfs-extract-api003-47u9du58", exit1/stdout[]. Namespace is absent.

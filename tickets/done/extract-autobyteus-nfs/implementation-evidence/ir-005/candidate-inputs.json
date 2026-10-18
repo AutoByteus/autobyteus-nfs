@@ -1,0 +1,437 @@
+{
+  "commit": "09cac96225fe4f36fb0dcbe6ddec01248992874f",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "5565f88320a9f83693519817ef038539e7955b2c4ef480890a1b40c38ff45712"
+    },
+    {
+      "path": ".github/workflows/release-nfs.yml",
+      "sha256": "01bbf62e947c38096c70f07c71ea0d3acfff62098bd4a8c04e7c47bf74d41112"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "711b634c1ba9ed945e724059f5724fa18533c49db8e8720d922f083186611afe"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "599bda60f3251611e4733658cc48b606106238e0977785bc52eab878798c2b17"
+    },
+    {
+      "path": "CLA.md",
+      "sha256": "439f73144d7348ab13c53de17bb9afff0ea0839c4caa7cb4379bdf1b9d585240"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "e08b61ce6cbde1b92911d0a5d993292afc0e55bd2f4c069a93b3df029d114122"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "4e0c6995734940766e4f035a7036155b71fcfcb3475c573a6d1b5a5376efc819"
+    },
+    {
+      "path": "EXTRACTION.md",
+      "sha256": "3eff1c9d4b670c61e9c8747ee2d94e51df7210251cbe6e018a436f0d1c322c3f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "LICENSING.md",
+      "sha256": "f658b7ba84d05478a5a356ac17b174d2eec78e6a6b672cba20854bbf145ac78e"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "67eec521b5fdf580caf6d9d69f634133735948d7b6ee4d0418350001ebfadbd8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "82064458c95a3f96d3df0844a81a717b3b5e3e7f5ec7a109f8bc139754281ba2"
+    },
+    {
+      "path": "RELEASE.md",
+      "sha256": "ed1ba9ce328adf362557cf60d5b9eae972b45970f6afe114640f807d02aad677"
+    },
+    {
+      "path": "TESTING.md",
+      "sha256": "68c09792de9fe7e1781476e5eea4a06784c2f496ae6f565ef0bcbcecaebfb332"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES",
+      "sha256": "06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+    },
+    {
+      "path": "cmd/autobyteus-nfs/main.go",
+      "sha256": "251c7a78d81a5eb090ba8e89f58ded1dcddfa632842385d9228aaaa83480371d"
+    },
+    {
+      "path": "cmd/autobyteus-nfs/release.json",
+      "sha256": "534e86b9d8af6c3731eb2efcf368cc491386d75322f21d0504e17f48a6a35eb2"
+    },
+    {
+      "path": "docs/filesystem-usage.md",
+      "sha256": "d61ae3e8290527732925f06bb1115780325ef396569f04bfff9f45d752ccd423"
+    },
+    {
+      "path": "go.mod",
+      "sha256": "dc85f8e1879188655cf94c8d9f11b3490037e19a4a17fe2e7a56798f4b04b593"
+    },
+    {
+      "path": "internal/backend/apple.go",
+      "sha256": "6207246227696e561b4f1230d18fac6bf6c372249dde40aa709d808b5590cc9e"
+    },
+    {
+      "path": "internal/backend/apple_apply.go",
+      "sha256": "ef9aa9fc698fbc8ce0e116c593fdf991f442c512a4a54053fe85fc04063b9b64"
+    },
+    {
+      "path": "internal/backend/apple_startup.go",
+      "sha256": "c8f7f13082b8422d390277830f6442407dae337d80de6c8d165e8f55e7fa5945"
+    },
+    {
+      "path": "internal/backend/apple_startup_test.go",
+      "sha256": "d4005397139099380cb2406794759d8e919426cb12afb234ff577fe9838f9f1c"
+    },
+    {
+      "path": "internal/backend/backend_test.go",
+      "sha256": "2b2cd85b5fcc8f4639d5eca248b7e36c6cb7e6be04d28579a4b0aa6c69b2d321"
+    },
+    {
+      "path": "internal/backend/cleanup_test.go",
+      "sha256": "f1350c02ca025edfa121dbf5d3f97eabf377174d921bdcad9bb252ccc7ba84e8"
+    },
+    {
+      "path": "internal/backend/engine-assets/README",
+      "sha256": "22de479510e8bdfed493ba622260c786584314823ff7e533de4dabb9cbb682b1"
+    },
+    {
+      "path": "internal/backend/engine_assets_linux.go",
+      "sha256": "7392503e324b7d8194b58a17b8122ae5c881c704d859325f931f4c97e13b299c"
+    },
+    {
+      "path": "internal/backend/engine_assets_other.go",
+      "sha256": "b607970ec898ddd32ac0c08ec6b481e5084450f6d84ff05eb92a6e202dd3a579"
+    },
+    {
+      "path": "internal/backend/engine_bundle.go",
+      "sha256": "eb47b20109a121e879f4d5f6e4d43217d153e93db9cc7be541f18c585f9daab6"
+    },
+    {
+      "path": "internal/backend/engine_bundle_test.go",
+      "sha256": "4088a640852e8dd68a5fa4bcc70ebb21c9dcbb3e51575e291afbc9c92c8662d0"
+    },
+    {
+      "path": "internal/backend/engine_staging.go",
+      "sha256": "3b85a2e8d683e303ffaec8bd6e6460d57308365eb87cc54206098e45cc19edb2"
+    },
+    {
+      "path": "internal/backend/ganesha.go",
+      "sha256": "fd515d515e5ae3e2fa103f12c5c4983ad8a8c48b37586bafb85d1cb4ad9a7c88"
+    },
+    {
+      "path": "internal/backend/ganesha_native.go",
+      "sha256": "306ffd44a6038399d0e6178014234d92403ef78b3b03c9682fd0420c8ee18cdc"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages.go",
+      "sha256": "061699e59f2152df7f9e875f18f76d02b584be66af3de44857457fa85fba13e1"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages_test.go",
+      "sha256": "c5c02b98dbc729028acd54dd058d25d4a18b4e03dfcf76481a754d32645cf368"
+    },
+    {
+      "path": "internal/cli/cli_test.go",
+      "sha256": "be2da215d197ad7d36b693647ac0dfb43b5fa39b2560e6d2614ca8201eacff26"
+    },
+    {
+      "path": "internal/cli/engine_release_test.go",
+      "sha256": "a12f7271671fb7e06bc8ec573325f6c35eab820b5e0281e38a815f0df0b631b4"
+    },
+    {
+      "path": "internal/cli/inputs.go",
+      "sha256": "350c2e9b24882f852182097266ebb8c6ac03bcf3efe49e528f1fe2ac89cbf4ff"
+    },
+    {
+      "path": "internal/cli/install.go",
+      "sha256": "7f7cae4d304223491afaf589c3235e5b5c7d64e9d1eca2ce4590c55cc652633b"
+    },
+    {
+      "path": "internal/cli/install_state_test.go",
+      "sha256": "0d4183462e150ab72d9b143dbe60a5c6e377e5b1f82c8f47e256537707da203a"
+    },
+    {
+      "path": "internal/cli/interactive-setup.go",
+      "sha256": "c5e80baf32d99db6cde3689028815319204359036b85abfd9541e9d0a94004eb"
+    },
+    {
+      "path": "internal/cli/run.go",
+      "sha256": "d9087612d07c670eefc675bf01ffc63cfbf438329bacf1636266969a2cf8c54b"
+    },
+    {
+      "path": "internal/cli/terminal.go",
+      "sha256": "a506deed4b7a4d8b511fddbd4bbf32e3b5d75036b6662ece8e078264e241c713"
+    },
+    {
+      "path": "internal/cli/verify-release.go",
+      "sha256": "6ce90a944825587f82cc8222bc6596dfedb2e1a4392221bbd10f08f4265d8ee1"
+    },
+    {
+      "path": "internal/config/config_test.go",
+      "sha256": "7c5d9e4abec45eeb3e9a9f03835415d974a543a6d494afacff347e02ad9cf240"
+    },
+    {
+      "path": "internal/config/connection.go",
+      "sha256": "8e07298d2144f55a0feedb5f7151156a332e338dedef91759366ec5324686a97"
+    },
+    {
+      "path": "internal/config/installation_state.go",
+      "sha256": "05e3e6b4f6db99b4439302b008da1cee65e42d5e7020d70588d7c5b7b7d0f9d7"
+    },
+    {
+      "path": "internal/config/installation_state_test.go",
+      "sha256": "7ba4c1c505921a5d188d837a1221a47f674fb69ac4acb097c65cb4d6f1f7eeed"
+    },
+    {
+      "path": "internal/config/source-marker.go",
+      "sha256": "1ca541549adb980079a6624f2eb80675a4f9cb574fe1c367c9f6bfbecce1a071"
+    },
+    {
+      "path": "internal/config/source_identity.go",
+      "sha256": "2a6e07d551db6a821c639d365acf462652b72c7acfbc7b6c4e4de9425e07d619"
+    },
+    {
+      "path": "internal/config/source_identity_test.go",
+      "sha256": "804fdf3e0ad6838f5e5af12cd7c6664d5fb3a7579d7817a85aa3322d3d97496c"
+    },
+    {
+      "path": "internal/config/state.go",
+      "sha256": "9e99fecc6826b83ff839a2d88a9cb9600a383de415428e020d717dcd3c038581"
+    },
+    {
+      "path": "internal/config/store.go",
+      "sha256": "7962a19ab2966e2e6036893d6548cc2d504eceb01ed7542b1c8af7916e7d3141"
+    },
+    {
+      "path": "internal/docker/client.go",
+      "sha256": "dc2099bec074e31f922fe3d7d367294a62535ce89d407aff25604702314439ac"
+    },
+    {
+      "path": "internal/docker/docker_test.go",
+      "sha256": "3213729cf6179d22c84de145aed2f6761f0bdd061eaba8bb675f4fe7c771dd17"
+    },
+    {
+      "path": "internal/docker/engine.go",
+      "sha256": "bdf49026fa73c1f2cb94b028333a7d1be3895ff49f6973349f44d724f9a56ac3"
+    },
+    {
+      "path": "internal/docker/snapshot.go",
+      "sha256": "d926a8d76831f48487f26704049e58df4d66bc43c0e34e3cfbe645803e5256b9"
+    },
+    {
+      "path": "internal/platform/commands.go",
+      "sha256": "19d6b5b27a71b80dfc4fe831242e844f69ca3c0c753c626a8ae10912d2613f18"
+    },
+    {
+      "path": "internal/platform/directory_modes_test.go",
+      "sha256": "ed24cc6189cd24cd3f34108fe5188350e6c5a34ebd098a2a321c3360a18c7335"
+    },
+    {
+      "path": "internal/platform/filesystem_darwin.go",
+      "sha256": "897e96eff6a583b5a622bba52bbc09b285fc092eddf3acc6c18309dfb6a5bf44"
+    },
+    {
+      "path": "internal/platform/filesystem_linux.go",
+      "sha256": "10d3db6a6515bd317d6581fa7c56a92305ae7edbf861bd2e4dbeff5719c6162a"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_amd64.go",
+      "sha256": "5a4fdfd4d9c2acb1c4d2ccf71c9e2ea7d88b771ef66528be34610a82415ef8b4"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_arm64.go",
+      "sha256": "b5824f4049b80a37b8ae654e02f52bfa4f95c0339e23854eb42a28d02c61a56e"
+    },
+    {
+      "path": "internal/platform/handles_darwin.go",
+      "sha256": "7d15ccbf3b8d2d79607f2578e91697ee25e14e84465e65675449e73f9e20b3b4"
+    },
+    {
+      "path": "internal/platform/handles_linux.go",
+      "sha256": "1c041901d3ab4f22db06c41371aa5cd8a447573bdf1591bcc871198569846127"
+    },
+    {
+      "path": "internal/platform/jobs.go",
+      "sha256": "6c3ec40886761d83d5dbf4357a1e85d207998988c2b66dd66b0985ceea1fcd58"
+    },
+    {
+      "path": "internal/platform/lock.go",
+      "sha256": "c2639b9461b3bc6dba19ae05f2e1c019000852b345aaee5e8d8cf75976063cf5"
+    },
+    {
+      "path": "internal/platform/mount-observation.go",
+      "sha256": "95ea1dcfa1098c7422fd6d2c6ab876a66cb201810c6ce92d3564c83d9e881842"
+    },
+    {
+      "path": "internal/platform/mounts.go",
+      "sha256": "bfc9f52d51a028ddaa010cdf49dec2574c7790c95d30adaa61233370960cc5cf"
+    },
+    {
+      "path": "internal/platform/platform_test.go",
+      "sha256": "79912797799568b0c4c5ec991e0a41142185aded198688192c23bc6670ee2b1a"
+    },
+    {
+      "path": "internal/platform/source.go",
+      "sha256": "83cad9f862241b81263f98a95b59ee2519bd01d5f467771ed7639572a5228571"
+    },
+    {
+      "path": "internal/platform/source_darwin.go",
+      "sha256": "2ab1e02607dcd7820a921b594ccf195e47af2cb59599c0533848b999fd1daa21"
+    },
+    {
+      "path": "internal/platform/source_darwin_test.go",
+      "sha256": "a1ce3a855b2cef934f7224cd24622b1c39ea01cb67d72a955e0cf0a39478fcf2"
+    },
+    {
+      "path": "internal/platform/source_linux.go",
+      "sha256": "cff1b09a9856e8fb20f1c4e1f8d3634dedab22c93acb1b9f06bce1a2ad305cf1"
+    },
+    {
+      "path": "internal/platform/source_linux_test.go",
+      "sha256": "be0b0c2f27b83c42c490bfa79ad846b6fc74674dc766f85c73df39a12a2868ee"
+    },
+    {
+      "path": "internal/platform/volume_identity.go",
+      "sha256": "f96da913562c1e8160df1dc9c873127d7500ebde9660118a4d40e7ab0edc30d0"
+    },
+    {
+      "path": "internal/platform/volume_identity_test.go",
+      "sha256": "00ac149bd6ed9194e9b128b186bae39ec36494257d30f032b0f0c822e05f1eed"
+    },
+    {
+      "path": "internal/platform/volume_plist.go",
+      "sha256": "b955c7d3477ddb405b799fd125b02bbc4963740884c15b7b7736ca4e332b8415"
+    },
+    {
+      "path": "internal/service/probe.go",
+      "sha256": "a23d8d5dd158df79c279950ffb028943aa9f68c2bb52fadfd63296d271c322ed"
+    },
+    {
+      "path": "internal/service/probe_test.go",
+      "sha256": "e1abd32c0ec2448215faf5df3f4b2511e69df73e000457f61f9d2478979fdb45"
+    },
+    {
+      "path": "internal/service/supervisor.go",
+      "sha256": "3bda88c20c6b8deb5431441266c78fca55360a80c2a2d6dd1d22743a54959740"
+    },
+    {
+      "path": "internal/setup/apply.go",
+      "sha256": "590aed9bb769bbfcb99b502bb24d651bbb71a20478eeec818e056ab8e68ed8ca"
+    },
+    {
+      "path": "internal/setup/hosted_config_test.go",
+      "sha256": "4ffb18953b5c13127a42b76be156e0f56e9ec46ec4dca68cfdc8bf29ff01675e"
+    },
+    {
+      "path": "internal/setup/lifecycle.go",
+      "sha256": "f6f78cf51a97afa7637e3f355b1c27333f6074d1e25e29f477ca219637f3a6c4"
+    },
+    {
+      "path": "internal/setup/pending.go",
+      "sha256": "88f308f6917bd460966de29e8ef4af512b944bde9df6886173d7c425e6630a81"
+    },
+    {
+      "path": "internal/setup/plan.go",
+      "sha256": "3c4578398bb709de3a044e3fe0765579c0f8b95299cef32765000afa16d4530c"
+    },
+    {
+      "path": "internal/setup/service.go",
+      "sha256": "ef64c36008f237ca99950602b58047a59b7cf527fb82d6222945a2e6aa8e5165"
+    },
+    {
+      "path": "internal/setup/setup_test.go",
+      "sha256": "fb636317a4d6a4a5fdb5fbbd126cc98e9819fb130bae86d43c84f06dbe5b8dff"
+    },
+    {
+      "path": "internal/setup/source_binding_darwin_test.go",
+      "sha256": "6d66a61c6b071555e3388f50cf05a1e70348d61398dd44412d223fef0757201f"
+    },
+    {
+      "path": "internal/setup/standalone_state_test.go",
+      "sha256": "5115562ef6c4ceb53ac6f5350bd9e79ca5176596ab6cbe34a549303e3bb5c108"
+    },
+    {
+      "path": "internal/setup/status.go",
+      "sha256": "a7e4c8db574f8a8520f9b180e4260d57da925bfbca461d7c9b1933827f855af4"
+    },
+    {
+      "path": "packaging/Dockerfile",
+      "sha256": "93dbcb309038028095b3da6e22345173dfc63156d00efd57d6b3f0b047acb51d"
+    },
+    {
+      "path": "packaging/RELEASE.md",
+      "sha256": "2e037473f7f5aa0a7dc01affa6d3dd95f07827a45dc1e135812faac579b02cda"
+    },
+    {
+      "path": "packaging/engine/README.md",
+      "sha256": "dcb6cb313339cc5bdf1db0b1567c22d90762cbacfd7923120ee2f9f9bbc4cb38"
+    },
+    {
+      "path": "packaging/engine/build.py",
+      "sha256": "0607317c2a073df57247b570d5237afa2a3693c158c40ca6c31c3066b61aaa24"
+    },
+    {
+      "path": "packaging/engine/get-dir-delegation.patch",
+      "sha256": "ba682b5c64e7f800c927f4c90b2a7bfb4b8d2a323ddc48c3d591db3d75799031"
+    },
+    {
+      "path": "packaging/engine/manifest.py",
+      "sha256": "a43ad486a7d9a8033dc58f3adc6b6fda394b7777260973a99e4ad09c29998e1a"
+    },
+    {
+      "path": "packaging/engine/source-lock.json",
+      "sha256": "a341f9bf0bb419608ee9d3144419c6326135c5531f524206fc0ca8fe7dff4713"
+    },
+    {
+      "path": "packaging/engine/source.py",
+      "sha256": "ccaf799cda46e35e0b6858ff979e20ed0932db520400c987e18adf06c80dc5c7"
+    },
+    {
+      "path": "packaging/release-lock.json",
+      "sha256": "48e259f0564322432a1f7b790676bc9be35d54bcf481e8abbdcad3d2c53c6395"
+    },
+    {
+      "path": "packaging/release.py",
+      "sha256": "9e4a1dc422c01bda9cf3a69f889e0ec1be7fe0213bbfbeae98e5c09006733c38"
+    },
+    {
+      "path": "scripts/public/nfs/install.sh",
+      "sha256": "fe7f1cda14f1c06364119a943ec5794768e0e73d4fe7bd7541362d68e5d9f562"
+    },
+    {
+      "path": "scripts/tests/test_nfs_engine_packaging.py",
+      "sha256": "46e5de2f298c6f89c8c8d9569fa08941e98b58c536041cc73265b488c9cff5a3"
+    },
+    {
+      "path": "scripts/tests/test_nfs_installer_fixture.py",
+      "sha256": "e1625d1efd304a4b98c7aca0815191f9cfb45d83a27a1cf769194b1e8f2c18bf"
+    },
+    {
+      "path": "scripts/tests/test_nfs_packaging.py",
+      "sha256": "71b20d719a8138de2e96fe450d0c93d0516b3a5afedd1ff02db93e3794d912a0"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_workflow.py",
+      "sha256": "908fff11b05fbc9ff86ad6913940d8deef024d67631057326dc17ce400fc8b41"
+    },
+    {
+      "path": "scripts/tests/test_nfs_source_identity.py",
+      "sha256": "27a3dd6e091763b097dfe1f180a962743b8d6645b2937b4c8062a59acadc7876"
+    },
+    {
+      "path": "testdata/connection.json",
+      "sha256": "be6e16edb94d0a2aa4bc1030cf02f3e289c55bdb0681d26cb33b397740ad2d74"
+    }
+  ]
+}

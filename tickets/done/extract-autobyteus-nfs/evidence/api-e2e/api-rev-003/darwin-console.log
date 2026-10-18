@@ -1,0 +1,17 @@
+N01-darwin Started Current fixture through actual darwin mount-observation path, nonroot focused first then race/vet N/A
+darwin-environment 0 expected 0
+darwin-focused 0 expected 0
+N01-darwin Checkpoint Focused hosted-config/no-live-source detach passed; native path exercised, broader package closure running N/A
+darwin-race 0 expected 0
+darwin-vet 0 expected 0
+N01-darwin Completed Current focused plus all-package race/vet passed; skips retained separately Pass
+N02-darwin Started Packaging/installer fixture controls, Bash/sourcehash and expected empty-qualification refusal N/A
+darwin-python 0 expected 0
+darwin-shell 0 expected 0
+darwin-source-hash 0 expected 0
+darwin-publish-refusal 1 expected 1
+N02-darwin Completed Packaging/Bash/hash/refusal passed within explicit native/container skip limits Pass
+N03-darwin Started Current native build/version, not live installed service or target qualification N/A
+darwin-build 0 expected 0
+darwin-version 0 expected 0
+N03-darwin Completed Current native binary built/version executable passed; no service lifecycle invoked Pass

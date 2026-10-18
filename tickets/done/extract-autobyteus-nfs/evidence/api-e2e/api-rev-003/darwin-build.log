@@ -1,0 +1,2 @@
+$ go build -o /Users/normy/nfs-extract-api003-47u9du58/autobyteus-nfs ./cmd/autobyteus-nfs
+CWD /Users/normy/nfs-extract-api003-47u9du58/candidate

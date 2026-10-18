@@ -1,0 +1,11 @@
+# API-REV-003 attempts
+- No failed current candidate Go/Python/build/vet/refusal command. Refusal exit1 and3 mutant exit1 outcomes are expected controls, separately asserted.
+- E02 initial cleanup guard failed before removal on UID1001 exited Go zombie. Original script/log/inventory retained under cleanup-attempt-1. /proc status confirms State Z/PPid1/FDSize0, adopted by sleep-infinity PID1 without init reaper. Corrected evidence guard only: all live checker processes still refused, any retained entries must be adopted zombies; exact owned-container removal clears them. Final cleanup confirmed absent namespace/scratch and no host process/cwd. No candidate test or source change/rerun required.
+- Generic focused checkpoint wording included a Darwin-only no-live-source-detach selector; ledger/report explicitly distinguish actual30 Linux hosted records from31 Darwin. No claimed Linux execution of build-tag-excluded test.
+- IR005 wrong-root setup/baseline/mutant evidence and failed/cancelled hosted runs are historical, not rerun or relabeled.
+
+Final identity audit correction: pre-run prose called review-report commit d32309d the intake; machine input-audit.json correctly captured actual HEAD487e74c9bf926f98a10d7d39d5f62bbc14a9566d. The intervening commit changes only CRR007/routing.json, not any source/test. Current report/investigation corrected; original plan/runner text retained. No test validity impact.
+
+Final finalization audit first stopped on PM board hash change AFTER the successful cleanup check (cleanup05:02:05 UTC; PM mtime05:04:20 UTC). Current board includes a separate dashboard Task. Author not independently verified; API made no write. Kept external board untouched, preserved failed audit, and record final mismatch explicitly rather than restore another owner's work. See final-audit-attempt-1 and external-PM-observation.json. No source/test/evidence input change.
+
+Final audit attempt2 had a case-sensitive Docker absent-object string mismatch. Corrected to the actual lowercase diagnostic; exit must still be nonzero. Source-hash audit also reads the final value line rather than its command/cwd log header. No test/resource change; original audit failure retained.

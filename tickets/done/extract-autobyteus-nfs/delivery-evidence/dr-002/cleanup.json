@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-18T04:39:28.106324+00:00",
+  "D0": {
+    "populated": true,
+    "method": "git switch -c main --track origin/main (normal non-force checkout; no authorship)",
+    "head": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+    "PM_unchanged": true,
+    "PM_sha256": {
+      "board.md": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1"
+    },
+    "untracked_only": "task-plans/"
+  },
+  "S": {
+    "worktree": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "removed": true,
+    "local_ticket_and_finalize_branches": "Deleted safely after target ancestry/remote confirmation",
+    "remote_ticket_branch": "Retained; not required to delete"
+  },
+  "N": {
+    "worktree": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "retained_detached": true,
+    "local_ticket_branch": "Deleted safely",
+    "preexisting_ignored_cache_unchanged": true,
+    "cache": {
+      "test_nfs_installer_fixture.cpython-314.pyc": "0fc810f15d29307e347f88f0e905cf08d6c1759c54570df4e8d27ad2a50851bb"
+    },
+    "worktree_removal": "Not required: unowned preexisting cache retained in place; no force cleanup or relocation",
+    "remote_ticket_branch": "Retained; not required to delete"
+  },
+  "worktree_prune": "Not required: S removal unregisters; N intentionally retained; no stale registration",
+  "owned_runtime_resources": "None started by Delivery; API002 archive absent",
+  "protected_scope": "No canonical app checkout authorship, held-history rewrite, installed data/live mounts/VM/provider or old filesystem checkout mutation"
+}

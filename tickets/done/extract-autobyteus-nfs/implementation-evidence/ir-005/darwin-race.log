@@ -1,0 +1,9 @@
+$ go test -race ./...
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	3.736s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.379s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	2.440s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	3.320s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	8.062s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.674s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	4.797s

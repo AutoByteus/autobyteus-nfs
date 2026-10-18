@@ -1,0 +1,38 @@
+{
+  "review": "CRR-007",
+  "result": "Pass",
+  "source_score": "100 retained, not hosted qualification",
+  "selected_rule": {
+    "when": "When a test-code, stale-test, fixture, environment, execution, or reporting Local Fix is complete and API/E2E must rerun the affected validation.",
+    "recipient_address": "/software_engineering_team/api_e2e_engineer"
+  },
+  "reason": "Completed test/fixture Local Fix is more specific than generic source Pass; affected validation next. Single exact recipient.",
+  "reference_files": [
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/code-review-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/code-review-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/requirements-doc.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/design-spec.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-handoff.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/delivery-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/finalization.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-execution-coverage-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-test-case-ledger.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/validation-plan.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/checks-and-limits.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-baseline-hosted.log",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-checks-result.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-checks-result.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/mutation-results.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/review-audit.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/internal/setup/hosted_config_test.go"
+  ],
+  "delivery_status": "Delivered",
+  "review_commit": "d32309db1d938a7d975c0f1a06b15f9c74624b0b",
+  "receipt": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  }
+}

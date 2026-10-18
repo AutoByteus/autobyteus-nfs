@@ -12,6 +12,8 @@ The canonical code-review-report.md remains authoritative. History starts with t
 | CRR-004 | code-review-report.md | Integrated source re-audit / IR003 from DR001 | CRR002 source Pass; CRR003 test N/A | Fail — Local Fix,99.8/100 | CR-002; CR-001 stays resolved |
 | CRR-005 | code-review-report.md | Targeted cleanup re-review / IR004 | CRR004 Fail99.8 | Pass100/100 | CR002 resolved; CR001 stays resolved |
 | CRR-006 | api-e2e-test-review-report.md | Successful integrated API002 test gate | CRR003 N/A (prior S); CRR005 source Pass | Not Applicable — no API test changes; gate satisfied | None |
+| CRR-007 | code-review-report.md | DR002/IR005 native Linux fixture correction | CRR005 source Pass; DR002 hosted blocker | Pass100 retained; affected validation pending | DR002 fixture corrected; no product finding |
+| CRR-008 | api-e2e-test-review-report.md | Successful native API003 test gate after DR002/IR005 | CRR006 N/A; CRR007 source Pass | Not Applicable — no API test changes; gate satisfied | None |
 
 ## Revision Entries
 
@@ -128,3 +130,35 @@ None applicable to this no-delta test-review entry; no unresolved test-review fi
 
 - Recommended sole recipient `/software_engineering_team/delivery_engineer` after fresh successful-test routing. DR001/AC007/fresh targets/ordered N then S and known stale RELEASE prose remain Delivery-owned; retained frontend tab is instructions, not NFS management.
 - Prior CRR001–005 entries/source report preserved. No source/test edits, scratch/live resources, target actions/release/TaskDone/user verification. No old filesystem/editor/provider campaign or new approval loop.
+
+### CRR-007 — Hosted Linux fixture correction accepted
+
+- Date/reviewer2026-10-18, personal execution/no delegation. Canonical source report now at **tickets/done/extract-autobyteus-nfs/code-review-report.md**; archived path retained, not completion. Implementation-return/source round5/**Targeted Delta Review** of DR002/IR005 test-only recovery, no production interface/spine/data change.
+- R2/SR003 Approved, SR004/ARCH002, Large/High unchanged. N21ec9f7c05f959e2b4361f2e335a3d71209a8dd2/test09cac96225fe4f36fb0dcbe6ddec01248992874f; runtime83726b unchanged. API002/CRR006 retain exact S-input limits. DR002 remains Delivery Blocked until current hosted checks.
+- Prior source CRR005 Pass100; current **Pass100 retained**, no failure classification/source deduction. Full unchanged production structural evidence carries; fresh focused test structure/isolation/assertion/readiness review. Source/test file limits not applied to test.
+- Sole product-tree edit hosted_config_test.go. Actual Linux Mounts bypasses Runner and reads proc; old absent-target fixture escaped its intended boundary. Root Store refusal is correct and dummy Docker panic was fixture-only. Earlier source review missed the OS-specific seam; no product defect inferred.
+- Corrected fixture verifies existing unrelated /proc read-only and stops at real mismatch/refusal; Darwin runner trap retained. Exact config-error/ENOENT and call-count assertions, current/missing retry, Apple/connect and record/absence preservation controls. Three IR005 mutants fail intended assertions.
+
+#### Prior Finding Resolution
+
+CR001/CR002 remain resolved. DR002 fixture defect is corrected by IR005 and accepted here; independent affected API validation/current hosted CI remain pending. No new finding, follow-up, requirement/design change or runtime machinery.
+
+- E7/review-audit.json:108 inputs,107 unchanged from blocker; eight authorities unchanged; production/workflows/private safety unchanged. Personal sourcehash34804659…/expected publish refusal; IR005 native Linux/Darwin race7packages/vet and focused/mutation logs attributed, not reviewer rerun. Container/child/PowerShell/provider/platform limits not promoted.
+- Completed N22e934b push then S9b72c8d1→personal55bff1f5 --no-ff remain intact. S worktree retired; not recreated. Delivery already corrected stale R1 RELEASE prose. Current frontend Guide remains instructions. No paired operations replay, release or Terminal claim.
+- Sole next recipient API Engineer via fresh completed fixture/test Local Fix rule; affected N validation, no blanket S rerun. Delivery refreshes/fix-forwards N/current CI later. IR005 scratch absent; no reviewer source/test edits or live resources; prior history preserved.
+
+### CRR-008 — Native fixture validation success, no new durable test delta
+
+- Date/reviewer2026-10-18; personal execution, no delegation. Canonical **api-e2e-test-review-report.md**, successful-test round3, archived tickets/done path. Source report unchanged CRR007 Pass100 retained.
+- Trigger API003 Pass95, evidence commit1c055d2d2b2af978084af43e8dace63f9654f04a, actual intake487e74c. Fixture09cac962/runtime83726b unchanged after IR005/CRR007; DR002 fix-forward context. ApprovedR2/SR003, ReadySR004/ARCH002, Large/High unchanged.
+- Prior successful-test CRR006 N/A; current **Not Applicable — no API durable test changes; gate satisfied**. No failure classification/source-score change. No source/architecture/S/runtime re-audit.
+- Personal E8/package-audit.json:91 ticket-only changes, all108 non-ticket inputs equal CRR007, exact fixture/eight authorities/source report unchanged.35 API command exits match; raw race counts independently recomputed Linux7/47top/214incl and Darwin7/59/252, no candidate failures. Focused30/31 repeat, all Go/Python skips retained. Three fresh Linux mutant logs fail intended assertions. Execution attributed to API, not reviewer rerun.
+- Nine fresh native case/platform groups; S01–06 and engine/four-target compile proof carried with exact limits. Local arm64 does not complete hosted Ubuntu amd64 or cancelled macOS workflows. Old39097778705/39097779223 remain failed/cancelled; Delivery owns current hosted proof.
+
+#### Prior Finding Resolution
+
+No unresolved test-review findings. CR001/CR002 remain resolved; CRR007 fixture correction accepted. No new finding, follow-up or supported-scenario/material-premise change.
+
+- API cleanup's initial non-reaping-container zombie guard failure and correction retained, live processes still rejected; owned namespace/scratch removed. Reviewer independently confirms scratch absent/S retired. PM board equality at cleanup followed by disclosed later external edit; author unverified, no restore/stage. No new reviewer resources.
+- Sole recommended recipient `/software_engineering_team/delivery_engineer` after fresh successful-test routing: N fix-forward targetrefresh/current CI/terminal receipts. DR002 remains owner-authoritative until resumed gates. Completed N-first22e934b/S9b72→personal55bff pushes and synced RELEASE prose must not replay; no S recreation.
+- CRR001–007 entries/upstream evidence preserved. No source/test/PM edits, target operations, release/tag/deploy/TaskDone/Terminal/user verification. User wants no release; no old filesystem/editor/provider campaign or approval loop.

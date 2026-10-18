@@ -105,3 +105,65 @@ Current S TESTING.md shared-foundation rule invalidates all six recorded S group
 
 ## API-REV-002 final reconciliation
 Fresh E01/S01–06/E02 Pass at S60b67dabecaf5569a8e26128dbdb26117c988811; N01–03 carried API001 Pass only after exact108 independent N input equality. Seven fresh case checks plus E02 and three carried groups =11 groups. No failed, blocked, interrupted or unstarted current case. All15 current commands exit0. Narrow/overlap repeat inside broad; do not add as unique. See execution-summary.json and test-counts.json for exact fresh counts/skips. API002 Pass95% covers current executable extraction scope only. No new N campaign; copied E01 audit phrase is clarified in the report. AC007/DR001 and stale RELEASE docs remain Delivery-owned.
+
+## API-REV-003 pre-execution impact plan
+
+# API-REV-003 — archived fixture recovery plan (before execution)
+
+Task extract-autobyteus-nfs; canonical tickets/done/extract-autobyteus-nfs. Trigger CRR007 source Pass100 / IR005 / DR002 Blocked. R2/SR003 Approved, SR004 Ready/ARCH002, Large/High/Reviewed. Runtime83726b unchanged; current fixture09cac962; intake d32309d. Prior API002 Pass95 is local/exact-input evidence, not hosted Linux qualification.
+
+Read full current upstream handoff/review/history/DR002 and preserved requirements/investigation/design/solution history/supplement/ARCH002 basis; no authority change. N AGENTS/TESTING/DESIGN/README/go.mod/ci.yml; actual hosted fixture, Status/Detach/VerifyGanesha and mount-observation/Unmount paths. No closer instructions. Legacy/Compatibility/Persisted Data: host-only direct reader and bounded refusal remain, no migration, app binding or nil-client fallback.
+
+Linux Mounts reads /proc/self/mountinfo, not Darwin Runner. Old runner-only trap let valid config reach later unrelated effects. Current fixture verifies existing proc mount read-only then stops at actual source mismatch/unrelated-unmount refusal. Invalid Status config must fail verification/ENOENT, not a later error. Retry and Apple/connect controls preserve bytes and absence. No root/proc-write/live-mount bypass, no Linux skip. Existing tests now Still Valid; no API durable edit needed. No additional supported scenario uncovered. IR005 baseline/mutant execution is attributed to Implementation, not our Pass.
+
+| Case | Last exact proof | Impact / expected result |
+|---|---|---|
+| E01 | API002 input audit | Fresh current108 inputs;107 unchanged from blocker, only fixture; RELEASE prose from DR002 is only other delta from API002. Protect archived authorities/history, D0/PM and existing ignored cache |
+| N01-L | No prior API native Linux run; IR005 evidence inspected | Required fresh native Linux arm64 nonroot Ubuntu24.04 container; focused TestHostedConfig first, then race all7packages/vet; actual proc path, no later effects |
+| N01-D | API001 Darwin source83726 / old fixture | Rerun changed hosted-config + no-live-source-detach, all race/vet on native Darwin arm64 |
+| N02 | API001 root packaging/refusal | Fresh Python/Bash/sourcehash/refusal on both OSes; container-only skips not Pass. actionlint/workflow unchanged carries |
+| N03 | API001 compile/real arm64 artifact | Fresh native build/version on Linux/Darwin; four-target/engine manifest/embed unchanged carries; no new engine or platform qualification |
+| N04 | IR005 three mutants | Fresh isolated Linux controls: omit Status preflight, omit Detach preflight, reject missing partial-detach config; expect assertion failures, not compile failures |
+| S01–06 | API002 S60b67 | Still Valid; no S impact, DR002 docs-only finalization/tree receipt; no S worktree recreation/rerun |
+| E02 | Prior scratch receipts | Fresh own development-container/scratch cleanup, source/protected bytes and no-owned-process/cwd proof |
+
+Prepare independent exact N archive under own home scratch; official SHA-verified Go1.27.2 Darwin/Linux arm64 toolchains; private HOME/TMPDIR/cache. Linux immutable pinned Ubuntu24.04 image, own named development container, no host Docker socket/ports/privileged caps; apt compiler/python only inside it. Tests UID1001 with clean env. Darwin nonroot host, independent source/private env. Both may run concurrently as separate personally owned OS processes; builds serialize per copy. No installed CLI lifecycle invocation, live storage daemon, proc mutation, paid provider or user app. Preserve IR005 wrong-root attempt and baseline/mutant logs historically; no blind baseline rerun needed because independently established cause is exact fixture delta.
+
+Broader native Linux execution REQUIRED to close previous runner/mock gap; selected development container, not VM/storage campaign. Reassess after execution. Native Linux arm64 is not hosted Ubuntu amd64, Mac cancelled jobs remain cancelled; Delivery owns fresh current hosted CI and terminal receipts. No target fetch/push/merge/reset/finalization/release/TaskDone/Terminal/user verification. Completed paired pushes stand; D0 now populated, S retired, stale RELEASE prose already fixed. User wants NO RELEASE.
+
+## API-REV-003 Execution Events
+| UTC | Case | Event | Observation | Result | Evidence |
+|---|---|---|---|---|---|
+| 2026-10-18T04:58:35.751254+00:00 | E01 | Started | Prepare exact independent N source/toolchains; preserve archived ticket and completed targets | N/A |  |
+| 2026-10-18T04:59:29.984161+00:00 | E01 | Completed | Exact108-input N archives, verified native Go1.27.2;107 other inputs unchanged from blocker, one reviewed fixture delta | Pass | input-audit.json; archive-integrity.json; carry-validity.json; container.json; toolchains.json |
+| 2026-10-18T04:59:39.233852+00:00 | N01-linux | Started | Current fixture through actual linux mount-observation path, nonroot focused first then race/vet | N/A |  |
+| 2026-10-18T04:59:39.234408+00:00 | N01-darwin | Started | Current fixture through actual darwin mount-observation path, nonroot focused first then race/vet | N/A |  |
+| 2026-10-18T05:00:05.691166+00:00 | N01-darwin | Checkpoint | Focused hosted-config/no-live-source detach passed; native path exercised, broader package closure running | N/A | darwin-focused.log |
+| 2026-10-18T05:00:08.923468+00:00 | N01-linux | Checkpoint | Focused hosted-config/no-live-source detach passed; native path exercised, broader package closure running | N/A | linux-focused.log |
+| 2026-10-18T05:00:31.368334+00:00 | N01-linux | Completed | Current focused plus all-package race/vet passed; skips retained separately | Pass | linux-focused.log; linux-race.log; linux-vet.log |
+| 2026-10-18T05:00:31.369133+00:00 | N02-linux | Started | Packaging/installer fixture controls, Bash/sourcehash and expected empty-qualification refusal | N/A |  |
+| 2026-10-18T05:00:33.220857+00:00 | N01-darwin | Completed | Current focused plus all-package race/vet passed; skips retained separately | Pass | darwin-focused.log; darwin-race.log; darwin-vet.log |
+| 2026-10-18T05:00:33.220985+00:00 | N02-darwin | Started | Packaging/installer fixture controls, Bash/sourcehash and expected empty-qualification refusal | N/A |  |
+| 2026-10-18T05:00:33.434142+00:00 | N02-linux | Completed | Packaging/Bash/hash/refusal passed within explicit native/container skip limits | Pass | linux-python.log; linux-source-hash.log; linux-publish-refusal.log |
+| 2026-10-18T05:00:33.434295+00:00 | N03-linux | Started | Current native build/version, not live installed service or target qualification | N/A |  |
+| 2026-10-18T05:00:34.602406+00:00 | N03-linux | Completed | Current native binary built/version executable passed; no service lifecycle invoked | Pass | linux-build.log; linux-version.log |
+| 2026-10-18T05:00:38.322418+00:00 | N02-darwin | Completed | Packaging/Bash/hash/refusal passed within explicit native/container skip limits | Pass | darwin-python.log; darwin-source-hash.log; darwin-publish-refusal.log |
+| 2026-10-18T05:00:38.322881+00:00 | N03-darwin | Started | Current native build/version, not live installed service or target qualification | N/A |  |
+| 2026-10-18T05:00:39.952935+00:00 | N03-darwin | Completed | Current native binary built/version executable passed; no service lifecycle invoked | Pass | darwin-build.log; darwin-version.log |
+| 2026-10-18T05:00:48.287204+00:00 | N04 | Started | Independent native Linux assertion-sensitivity controls in three disposable mutated copies | N/A |  |
+| 2026-10-18T05:00:50.684432+00:00 | N04 | Checkpoint | ignore-status-preflight failed the intended assertion (expected exit1, not compilation failure) | N/A | mutation-ignore-status-preflight.log |
+| 2026-10-18T05:00:52.528259+00:00 | N04 | Checkpoint | ignore-detach-preflight failed the intended assertion (expected exit1, not compilation failure) | N/A | mutation-ignore-detach-preflight.log |
+| 2026-10-18T05:00:54.286831+00:00 | N04 | Checkpoint | reject-partial-detach failed the intended assertion (expected exit1, not compilation failure) | N/A | mutation-reject-partial-detach.log |
+| 2026-10-18T05:00:54.287160+00:00 | N04 | Completed | All3 actual Linux mutant controls caught missing/overstrict preflight; canonical production/tests unchanged | Pass | mutation-results.json; mutation-*.log |
+| 2026-10-18T05:01:32.546427+00:00 | E02 | Started | Confirm source/protected-state exactness and native quiescence, then remove only API003-owned resources | N/A |  |
+| 2026-10-18T05:01:59.622649+00:00 | E02 | Attempt stopped | Initial cleanup guard rejected exited Go zombie owned by UID1001; container not yet removed; no test failed | Fail | cleanup-attempt-1/cleanup-console.log; cleanup-process-diagnosis.log |
+| 2026-10-18T05:01:59.677771+00:00 | E02 | Started | Confirm source/protected-state exactness and native quiescence, then remove only API003-owned resources | N/A |  |
+| 2026-10-18T05:02:05.847113+00:00 | E02 | Completed | Own container/archive/toolchains/caches removed;108 inputs +535 upstream artifacts +PM/ignored cache preserved; D0 populated main unchanged, S retired | Pass | cleanup.json; cleanup-preflight.json; linux-final-inputs.log; linux-final-processes.log |
+| 2026-10-18T05:02:05.847417+00:00 | N01-linux | Clarification | Focused Linux selector executed30 hosted-config pass records; extra no-live-source-detach case is Darwin-only (31 there), not Linux coverage | N/A | test-counts.json; linux-focused.log; darwin-focused.log |
+
+## API-REV-003 final reconciliation
+Nine fresh platform/case groups Pass: E01,N01-linux/darwin,N02-linux/darwin,N03-linux/darwin,N04,E02. S01–06 carry API002 with exact limits, no rerun. Existing N03 cross-compilation/engine and N02 actionlint proof carry where unchanged; new native proof separately attributed. Initial E02 cleanup-guard failure resolved after diagnosed exited zombie and exact owned-container removal, raw attempt retained. No remaining failure/blocked/unstarted current local case. API003 Pass95%. DR002/hosted failed-cancelled runs/terminal gates remain Delivery-owned; source pushes and docs sync already completed; no release.
+
+Final identity audit correction: pre-run prose called review-report commit d32309d the intake; machine input-audit.json correctly captured actual HEAD487e74c9bf926f98a10d7d39d5f62bbc14a9566d. The intervening commit changes only CRR007/routing.json, not any source/test. Current report/investigation corrected; original plan/runner text retained. No test validity impact.
+
+Final finalization audit first stopped on PM board hash change AFTER the successful cleanup check (cleanup05:02:05 UTC; PM mtime05:04:20 UTC). Current board includes a separate dashboard Task. Author not independently verified; API made no write. Kept external board untouched, preserved failed audit, and record final mismatch explicitly rather than restore another owner's work. See final-audit-attempt-1 and external-PM-observation.json. No source/test/evidence input change.

@@ -1,0 +1,138 @@
+{
+  "revision": "API-REV-003",
+  "scope": "Focused current evidence only; not legacy cumulative reference manifest",
+  "files": [
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-coverage-investigation.md",
+      "sha256": "910e2f57d81e57aa34ee5f9a9d693d4cdb6ff3d04364155ec0c15e4f45356f02"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-execution-coverage-report.md",
+      "sha256": "46afdb8d2fbad674b79aa1cc1251e50bee92d01cb60bfa98525a13cb0e00acf4"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-test-case-ledger.md",
+      "sha256": "acf8e8426780431a23feb86c1962ff13f3fcd55034f6a0ab854bdbbc5278d189"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/api-e2e-revision-record.md",
+      "sha256": "67a58721fbabdb7e40f008672801b5fec2c037ca7f1bf871415e2fb089722148"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/validation-plan.md",
+      "sha256": "d9648298eba576664e4c1a198f45d68ca3c3cdec72134ebeac6430e3d2083ac3"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/checks-and-limits.md",
+      "sha256": "c16a8c3f99a271462396ea5cb613702ad702215ed4f76a1209b3736190a4620d"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/test-review-scope.md",
+      "sha256": "cf14c86743e68bc571d0e5da31294d03e23dfdada1f43efc00b9d885ebf904f8"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/input-audit.json",
+      "sha256": "6e3b76985fc59768e1c84e2588c798bf83d089baef7eafee0ab31b770407c779"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/carry-validity.json",
+      "sha256": "4120a3baf87a8a4e08432ff2a17b7aa1e8f398a29a13a237365f9e5883a88723"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/authority-audit.json",
+      "sha256": "fb734f5d833282204548f124dadbe30b3435aed3a48d5eeb5740f043d28741e9"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff",
+      "sha256": "f2b180dc7dbef7a17a1b271b9c802a338e535a1043547654d37d73b0a0c39bdc"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/execution-summary.json",
+      "sha256": "1ad9ed219576ba547a9098abbe61a463dbfb3a0bdcf220620cf7b383bfeaafc9"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/test-counts.json",
+      "sha256": "da08f26bcfd3898621973921b0df005c768fda141c485ab00c8cbcf8f896c805"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-environment.log",
+      "sha256": "ded8795ce721325e0d5841d9612821878f61df1eb6a869e2854640bdc748410f"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-focused.log",
+      "sha256": "0aa628603a0730d38429bcdae3057f3ad545308701a82a971d249d2cf1be8342"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-race.log",
+      "sha256": "b47a00eea75e747188576ba09cfb30fbd8c75b8b36dc465548c9ad3b0b9b4c92"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-environment.log",
+      "sha256": "09a43108832f7572893083d36d49a11d45ab5b33ab8b7173d1cf181986695d8e"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-focused.log",
+      "sha256": "e661b4c35394701d2e609b93fe648799b56d0bd34085e3ac60f424e3d7283237"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-race.log",
+      "sha256": "d0406bd9c68ceaf3fb816aaa19df8035343e6e96e9bb1250ab7b4b4da5c05bda"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-results.json",
+      "sha256": "1f3097e741876e83596364d310c3d4c287bdd7c37a7a6a60342eee60df3cc996"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-ignore-status-preflight.log",
+      "sha256": "6cc17bb6b37e728bf9e3e0913b1c07dba97e1cec90f9425640273dd1d75fb315"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-ignore-detach-preflight.log",
+      "sha256": "0a26dde6fc421b186b86847cd95f8f01e3dd1f4c5ea55ac12adc696e7d1f54fd"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-reject-partial-detach.log",
+      "sha256": "8aa59ac47ed879f06ecf3c73ff2e2568a5b8c3ecae598ac9568aa45177d05d69"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-publish-refusal.log",
+      "sha256": "a4d8c84e94633c6000ad9a4159e480f7d70d066d24f4fe6e5e9362a84b070fdb"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-publish-refusal.log",
+      "sha256": "f4dfc4839e322f80fd28ae12c367c75967e098c1faed678ce4d4e56666bba001"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-source-hash.log",
+      "sha256": "00cef6b5d868a0dcde344d8576e45c7c62e9a2626700dec244e8fe565c342e38"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-source-hash.log",
+      "sha256": "e2410c81292157dc1e21ab6565aab81d1f36a1b9cf6f8306704811334799b1c4"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup.json",
+      "sha256": "7cbb2821aa448205d5ad6aa8313d43e449239dc1c3cf51e48e9edbfbe03bad4f"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/attempts.md",
+      "sha256": "e4c7bb85177e9bcc010bfd29382ace6ef366515174fcc8bba483c686b89970a2"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-checks.json",
+      "sha256": "1447d1753913948cef5d9b3af822fc415961422df142366867c19675390b13f5"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/external-PM-observation.json",
+      "sha256": "fcc934276cbfc46fb1957fc7928b7f13f34b8c6ce14fa4cb829443000f623492"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/routing.json",
+      "sha256": "8126065aef11b870a0c31ea8a2058f3f4df5c30a710a6916f991cdcd87c329b5"
+    },
+    {
+      "path": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/artifact-whitespace.json",
+      "sha256": "f494fc2856e9f8fea21925424ba0e44a86352b3ad80e73537f6570e85e3a646d"
+    }
+  ]
+}

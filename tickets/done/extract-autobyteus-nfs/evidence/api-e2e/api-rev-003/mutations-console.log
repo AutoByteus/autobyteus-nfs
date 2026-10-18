@@ -1,0 +1,11 @@
+N04 Started Independent native Linux assertion-sensitivity controls in three disposable mutated copies N/A
+prepare-mutation-ignore-status-preflight 0 expected 0
+mutation-ignore-status-preflight 1 expected 1
+N04 Checkpoint ignore-status-preflight failed the intended assertion (expected exit1, not compilation failure) N/A
+prepare-mutation-ignore-detach-preflight 0 expected 0
+mutation-ignore-detach-preflight 1 expected 1
+N04 Checkpoint ignore-detach-preflight failed the intended assertion (expected exit1, not compilation failure) N/A
+prepare-mutation-reject-partial-detach 0 expected 0
+mutation-reject-partial-detach 1 expected 1
+N04 Checkpoint reject-partial-detach failed the intended assertion (expected exit1, not compilation failure) N/A
+N04 Completed All3 actual Linux mutant controls caught missing/overstrict preflight; canonical production/tests unchanged Pass

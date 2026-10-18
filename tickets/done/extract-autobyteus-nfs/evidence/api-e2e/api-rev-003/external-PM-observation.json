@@ -1,0 +1,8 @@
+{
+  "path": "/Users/normy/autobyteus_org/autobyteus-nfs/task-plans/board.md",
+  "before_sha256": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1",
+  "now_sha256": "f42d4829b2fb337736961f4f775a9850d680669005420bc31e845e5aa5864cf3",
+  "mtime_utc": "2026-10-18T05:04:20.814790+00:00",
+  "cleanup_mtime_utc": "2026-10-18T05:02:05.847012+00:00",
+  "disposition": "PM board changed after successful cleanup byte check; current content includes separate dashboard task. External edit observed, author not independently verified. API made no write and will not restore/stage it. Not candidate/test/cleanup failure."
+}
