@@ -1,0 +1,633 @@
+{
+  "revision": "DR-002",
+  "at": "2026-10-18T04:35:55.852781+00:00",
+  "result": "Sufficient evidence; verified for R2 extraction scope, AC007 still pending finalization",
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High",
+    "route": "Reviewed"
+  },
+  "authority": "R2 Approved/SR003; SR004 Ready; ARCH-REV-002 Pass; IR003/004; CRR005 source Pass100; API002 Pass95; CRR006 no-delta test gate Not Applicable/satisfied",
+  "integration": {
+    "N": "Fresh fetch and ls-remote: no heads/main; no artificial base",
+    "S_base": "2f211340ee36b81cef74a74b2e042b5102c269d3",
+    "S_candidate": "60b67dabecaf5569a8e26128dbdb26117c988811",
+    "method": "Already current after IR003 merge156ea2dacc0fb4989a6b5d8a7206fa143fde0c54",
+    "additional_runtime_rerun": "Not required: no new base commits and delivery changes only policy prose/ticket records. API002 reran all affected S01\u201306 at exact current S."
+  },
+  "pre_docs_input_identity": {
+    "N": {
+      "input_count": 108,
+      "mismatches": [],
+      "head": "1fd25610314bde15d26176ee189fb69a7250d74a"
+    },
+    "S": {
+      "input_count": 7307,
+      "mismatches": [],
+      "head": "60b67dabecaf5569a8e26128dbdb26117c988811"
+    }
+  },
+  "raw_evidence": [
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-focused",
+      "command": [
+        "go",
+        "test",
+        "-count=1",
+        "-v",
+        "./internal/config",
+        "./internal/cli",
+        "./internal/setup",
+        "-run",
+        "Standalone|InstallRefuses|BootstrapDirectoryModes"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-focused.log",
+      "sha256": "699d1f600d408261f81f6e5290d5c430ecfbb1cfcd9900fb3dc987219e9a6e0f",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-race",
+      "command": [
+        "go",
+        "test",
+        "-race",
+        "-count=1",
+        "-json",
+        "./..."
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-race.log",
+      "sha256": "c955b373597393b80d9a63c7df2d81f50856e98f7d4527d46807689c342cb787",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-vet",
+      "command": [
+        "go",
+        "vet",
+        "./..."
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-vet.log",
+      "sha256": "d281f6ff34d81f128c93e886090c5ce7a67362b52e45c61e8b334cebf6626022",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-python",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-python.log",
+      "sha256": "8350aa3c72e6261fa65f9c207af209c250d8ba41cbdcb5fbde5f4667116ab74a",
+      "summary": [
+        "Ran 20 tests in 2.641s",
+        "OK (skipped=1)"
+      ]
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-actionlint",
+      "command": [
+        "actionlint",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/repo/.github/workflows/release-nfs.yml",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/repo/.github/workflows/ci.yml"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-actionlint.log",
+      "sha256": "74a3d2fc0dcc14cbde7524c5d0280b13f4af8188ef999e7a5cb0bc3fd41f657c",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-shell",
+      "command": [
+        "bash",
+        "-n",
+        "scripts/public/nfs/install.sh"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-shell.log",
+      "sha256": "be0a41f769b9a186f5a5f36ef2bd61ab846f4b3ade8a261a9367d5c4f51e52c7",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-source-hash",
+      "command": [
+        "python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-source-hash.log",
+      "sha256": "87b21cb39993194bfafcd045cd23d5c794be10b316fb354fd7b308cf118392f9",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-publish-refusal",
+      "command": [
+        "python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "log": "evidence/api-e2e/api-rev-001/nfs-publish-refusal.log",
+      "sha256": "c66e0ea32d6c8431855a34446eb506a588a5362ed72f499920c34c5188a6995e",
+      "summary": [
+        "No qualified release targets; publishing unavailable."
+      ]
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-build-darwin-arm64",
+      "command": [
+        "go",
+        "build",
+        "-trimpath",
+        "-o",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-darwin-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-build-darwin-arm64.log",
+      "sha256": "0aae97fdaf8089054ae6b1d621b181b0bf91c681eeb7c2af062166053e6a6b21",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-build-darwin-amd64",
+      "command": [
+        "go",
+        "build",
+        "-trimpath",
+        "-o",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-darwin-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-build-darwin-amd64.log",
+      "sha256": "5ae310da8c558f8ac7f43040996b42b1e642dbdbd19e52361c644c5f02236e7e",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-build-linux-arm64",
+      "command": [
+        "go",
+        "build",
+        "-trimpath",
+        "-o",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-build-linux-arm64.log",
+      "sha256": "7bc4e530379cee7d791dac371ce1e0b8ad1d1cf6d73ce71bba72cc35acba8c8e",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-build-linux-amd64",
+      "command": [
+        "go",
+        "build",
+        "-trimpath",
+        "-o",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-build-linux-amd64.log",
+      "sha256": "92df6e1df694561abe463620b21197a5057493c5443ca1ece766e2b8ddeb2b29",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-version",
+      "command": [
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-darwin-arm64",
+        "version"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-version.log",
+      "sha256": "4e111dae5b4b1837fcebac6e0130cfce572d345e5d5c527091a7e632f6a8f0ed",
+      "summary": [
+        "development-unqualified"
+      ]
+    },
+    {
+      "revision": "api-rev-001",
+      "command_name": "nfs-build-embedded",
+      "command": [
+        "go",
+        "build",
+        "-trimpath",
+        "-o",
+        "/Users/normy/nfs-extract-api001-N-7r931pcc/autobyteus-nfs-linux-arm64-embedded",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-001/nfs-build-embedded.log",
+      "sha256": "edd446767778a83d1e510eb93af338f028230b4fe59e9bee859e1fca805cd2f9",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--store-dir",
+        "/Users/normy/nfs-extract-api002-S-bvh3zjh0/pnpm-store"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-install.log",
+      "sha256": "f42397366a91f439bd37b492c41871eede77c5e1a3b79a63b452f892f03b9a4f",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-build",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "test:integration:prepare"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-build.log",
+      "sha256": "282fe1dee8aef55bde235bdc369d24cbd81d0e5efee917191a923d8be2be4acc",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-typecheck",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "typecheck"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-typecheck.log",
+      "sha256": "285885113e7827f3cce9000afc536cb72260788ed4d4cb3461a1f6a0b48c9c0f",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-nuxt-prepare",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "exec",
+        "nuxt",
+        "prepare"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-nuxt-prepare.log",
+      "sha256": "9fe835cf1056027ebe6b6de7a78da12d49fc0f05bde36aba0a3c6b2665a0b298",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-overlap",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+        "tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-overlap.log",
+      "sha256": "d66da18994cc6337d1b8bf5a32c683435f7af608684a6fa555b07cf3d5ed8e95",
+      "summary": [
+        "Test Files  2 passed (2)",
+        "Tests  28 passed (28)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-narrow",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution/backends/shared/prepare-private-runtime-skills.test.ts",
+        "tests/unit/agent-execution/backends/shared/runtime-skill-profile.test.ts",
+        "tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts",
+        "tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts",
+        "tests/unit/agent-execution/backends/autobyteus/native-workspace-resolution.test.ts",
+        "tests/unit/agent-execution/backends/codex/codex-private-profile-process.test.ts",
+        "tests/unit/agent-execution/backends/grok/grok-private-profile-process.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-narrow.log",
+      "sha256": "3973e1dd61960e48c1ba7c4499e929943cdac7a63e961e560cbf28b027514705",
+      "summary": [
+        "Test Files  7 passed (7)",
+        "Tests  34 passed (34)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-unit",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution",
+        "tests/unit/workspaces",
+        "tests/unit/services/terminal-streaming",
+        "tests/unit/services/terminal/pty-session-manager.test.ts",
+        "tests/unit/runtime-management/codex",
+        "tests/unit/agent-memory",
+        "tests/unit/skill-update-notices",
+        "--maxWorkers=2",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-unit.log",
+      "sha256": "44fcff3086d455f071e3e0f3c2c0a1d0839a7959433f90461ed7f50b9d5a8e47",
+      "summary": [
+        "Test Files  168 passed | 4 skipped (172)",
+        "Tests  1666 passed | 6 skipped (1672)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-integration",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/integration/application-backend/brief-package-team-prompt.integration.test.ts",
+        "tests/integration/skill-update-notices",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-integration.log",
+      "sha256": "398965207432dc41a4417255cf8cf24b700ef662472680aa8deba928ddd3d184",
+      "summary": [
+        "Test Files  3 passed (3)",
+        "Tests  21 passed (21)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-core",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent/platform-input-preface-memory.test.ts",
+        "tests/unit/agent/loop/llm-response-stream-collector.test.ts",
+        "tests/unit/agent/pipelines/llm-response-pipeline.test.ts",
+        "--maxWorkers=2",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-core.log",
+      "sha256": "1f9d13c4222a2b330c9803cb66d4cd426276cf0f45ea5028e3c528fbe49f3d8b",
+      "summary": [
+        "Test Files  3 passed (3)",
+        "Tests  15 passed (15)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-routes",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/e2e/file-explorer/workspace-content-rest.e2e.test.ts",
+        "tests/e2e/skills/github-skill-sources-graphql.e2e.test.ts",
+        "tests/e2e/agent-definitions/agent-package-private-skills.e2e.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-routes.log",
+      "sha256": "14cf333670268388c7ff69db28341aecd1caa57f1bb31f88644f8b00003810b8",
+      "summary": [
+        "Test Files  3 passed (3)",
+        "Tests  39 passed (39)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-path-pty",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/integration/agent-execution/agent-run-manager.integration.test.ts",
+        "tests/integration/agent-execution/agent-run-manager.memory-layout.real.integration.test.ts",
+        "tests/e2e/terminal/terminal-websocket-lifecycle.e2e.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-path-pty.log",
+      "sha256": "1e557465250fcdeb1ff07300b6c73177ca619517047214def3e1e03ca74a5d57",
+      "summary": [
+        "Test Files  3 passed (3)",
+        "Tests  17 passed (17)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-launcher",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_public_docker_launcher_shared_workspace",
+        "scripts.tests.test_public_docker_launcher_stop",
+        "-v"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-launcher.log",
+      "sha256": "8a4584c12ad9a2d287a3fe96beba71badcc91e84d99f763cf979a1b08a2db117",
+      "summary": [
+        "Ran 36 tests in 31.255s",
+        "OK (skipped=2)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-guide",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "test:nuxt",
+        "components/settings/__tests__/NfsGuideCard.spec.ts",
+        "components/settings/__tests__/NodeManager.spec.ts",
+        "components/settings/__tests__/DockerNodeStartGuideCard.spec.ts",
+        "utils/__tests__/nfsLauncherCommands.spec.ts",
+        "--run",
+        "--maxWorkers=2"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-guide.log",
+      "sha256": "f85647c887817a89cabce0a0b8dcd7126f2cc7d6653e6174c7dbe90dc1ad14b7",
+      "summary": [
+        "Test Files  4 passed (4)",
+        "Tests  24 passed (24)"
+      ]
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-localization",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "guard:localization-boundary"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-localization.log",
+      "sha256": "0a723949b68a156166c6c4a577228914b6be3ef5ed41cd96d3b484c47e83e91f",
+      "summary": []
+    },
+    {
+      "revision": "api-rev-002",
+      "command_name": "consumer-web-boundary",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-web",
+        "guard:web-boundary"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "log": "evidence/api-e2e/api-rev-002/consumer-web-boundary.log",
+      "sha256": "b3eb161e779a70b2d7ceea18a5d3496b25370639a343f6207ffcd04791e9da2c",
+      "summary": []
+    }
+  ],
+  "N_carried_race": {
+    "packages_pass": 7,
+    "all_tests_pass": 252,
+    "top_level_pass": 59,
+    "skips": [
+      {
+        "Time": "2026-10-18T05:27:43.511714+02:00",
+        "Action": "skip",
+        "Package": "github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs",
+        "Elapsed": 0.009
+      },
+      {
+        "Time": "2026-10-18T05:27:50.240203+02:00",
+        "Action": "skip",
+        "Package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "Test": "TestInstallerDirectoryModeChild",
+        "Elapsed": 0
+      }
+    ]
+  },
+  "judgement": {
+    "AC001_002": "Independent N archive, race/vet/package/source-hash/refusal/four compile targets; actual retained engine hash/embedding, no sibling dependency",
+    "AC003_006": "Current integrated S builds/typecheck, ordinary selected-path errors and API/process/PTY boundaries, removed coupling audit",
+    "AC004_005": "47 contract checks; licenses/CLA/section7/engine pins retained, empty qualification/refused publication, disabled Guide",
+    "AC007": "Delivery-owned finalization.json required before completion",
+    "AC008": "Exact inputs, raw commands/exits/hashes, preserved attempts and cleanup",
+    "AC009": "Carried exact-source focused active/pending obligation refusal before binary/resource effects under locks; host lifecycle preserved",
+    "AC010": "Current configured private profiles, ownership pre-await, no-binding/collision/alias, actual child close/retry/release, source/project preservation"
+  },
+  "confidence": {
+    "API_overall": 95,
+    "each_API_category": 95,
+    "team_target": 95,
+    "critical_API_owned_gap": null,
+    "broader": "Not Required beyond executed repository-native boundaries",
+    "minimum_applicable_category": 90
+  },
+  "limits": [
+    "N privileged effects and external model/provider effects doubled where documented; no mounted/cross-OS/physical/live-upgrade/authenticated-provider/signing/publication qualification",
+    "Four target compile is not four platform execution; only native Darwin arm64 and retained actual arm64 engine identity/embedding",
+    "Six AGY-live skips; launcher PowerShell and occupied8001 skips; N child skip has distinct parent execution",
+    "28 overlap and34 narrow S tests overlap1666 broad units; no additive unique total",
+    "IR001 EN/zh wide/narrow render attribution only: unchanged presentation hash and current component checks, no fresh browser/desktop run",
+    "No old filesystem/editor campaign reopened or new live editor closure"
+  ],
+  "user_check": {
+    "required": false,
+    "performed": false,
+    "reason": "No missing only-user-reachable acceptance; evidence establishes scoped change"
+  },
+  "delivery_execution": "Evidence inspection and metadata/integrity verification, not repeated runtime tests"
+}

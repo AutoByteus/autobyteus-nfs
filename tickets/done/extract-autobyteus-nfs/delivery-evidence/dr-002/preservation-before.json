@@ -1,0 +1,16 @@
+{
+  "D0_path": "/Users/normy/autobyteus_org/autobyteus-nfs",
+  "D0_head_exists": false,
+  "D0_symbolic_head": "refs/heads/main",
+  "D0_status": "?? task-plans/",
+  "PM": {
+    "board.md": "5615746901607742a7e54b91faa7cd2094ea61bb603c5e99d6f0ca07d246f3f1"
+  },
+  "N_preexisting_ignored_cache": {
+    "test_nfs_installer_fixture.cpython-314.pyc": "0fc810f15d29307e347f88f0e905cf08d6c1759c54570df4e8d27ad2a50851bb"
+  },
+  "N_cache_policy": "Preserve in place; retain detached worktree if unowned content makes removal unsafe",
+  "S_status_with_ignored": "",
+  "baseline_N": "1fd25610314bde15d26176ee189fb69a7250d74a",
+  "baseline_S": "60b67dabecaf5569a8e26128dbdb26117c988811"
+}

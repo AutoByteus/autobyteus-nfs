@@ -1,0 +1,22 @@
+diff --git a/RELEASE.md b/RELEASE.md
+index 0b6d44f..417992b 100644
+--- a/RELEASE.md
++++ b/RELEASE.md
+@@ -16,7 +16,7 @@ Subsequent reviewed changes merge with `--no-ff` into a fresh finalize branch fr
+ origin/main. Record ticket/target commits and remote confirmation.
+ 
+ The extraction spans two repositories. Validate paired candidates first; establish
+-this repository's main, then finalize the source consumer's pinned integration
++this repository's main, then finalize the application's filesystem-only decoupling
+ under that repository's `origin/personal` / `--no-ff` policy. If the second step
+ fails, report partial finalization and preserve the first; never force rollback.
+ Only after remote finalization may the canonical still-unborn main be populated
+@@ -35,7 +35,7 @@ The maintainer must separately authorize/create the tag and existing GitHub
+ release before a publish dispatch; the workflow does not create either.
+ 
+ [packaging/RELEASE.md](packaging/RELEASE.md) defines the exact candidate reuse,
+-source/engine/consumer evidence, physical/user qualification, signing and
++service/engine/host evidence, physical/user qualification, signing and
+ existing-release gates. `workflow_dispatch` defaults `publish=false`. Do not
+ enable the app's unavailable Guide from build-only artifacts. No live rollout
+ is implied by extraction. Preserve installed paths/data; any later supported

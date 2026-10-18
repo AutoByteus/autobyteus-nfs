@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-18T04:37:34.894088+00:00",
+  "precommit_checks": {
+    "N_hygiene": {
+      "command": "python3 S/scripts/check_repository_artifact_hygiene.py (cwd N)",
+      "exit": 0,
+      "tracked_paths": 584,
+      "longest_path": 120
+    },
+    "S_hygiene": {
+      "command": "python3 scripts/check_repository_artifact_hygiene.py",
+      "exit": 0,
+      "tracked_paths": 71834,
+      "longest_path": 200
+    },
+    "S_license": {
+      "command": "python3 scripts/check_licensing.py",
+      "exit": 0,
+      "scanned": 6696
+    },
+    "delivery_owned_whitespace": {
+      "exit": 0,
+      "scope": "N RELEASE and delivery reports/JSON; S staged delta",
+      "exception": "Raw upstream logs/diffs retain original whitespace, not rewritten"
+    }
+  },
+  "archival": {
+    "from": "tickets/in-progress/extract-autobyteus-nfs",
+    "to": "tickets/done/extract-autobyteus-nfs",
+    "protected_ticket_files": 468,
+    "mismatches": [],
+    "initial_attempt": "git mv failed because tickets/done parent absent; no move/overwrite occurred. Created empty parent and repeated successfully."
+  },
+  "source_delta": "Only RELEASE.md prose in each repo; no production/test/dependency changes",
+  "held_histories": "N353dd2c/0c9fd27 and S390e0c76 remain ancestors",
+  "inspection_notes": "Read-only metadata inspection corrected after list/directory shape errors; no runtime/source effects."
+}
