@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-10-18T08:55:12.579982+00:00",
+  "runs": [
+    {
+      "id": 39113238863,
+      "name": "NFS Developer Checks",
+      "event": "push",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693",
+      "head_branch": "codex/nfs-first-release",
+      "run_attempt": 1,
+      "html_url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39113238863",
+      "path": ".github/workflows/ci.yml"
+    }
+  ],
+  "query": "GET repos/AutoByteus/autobyteus-nfs/actions/runs?head_sha=96c8de3a381f74ec8f2b9e93425fb90e17e7e693&per_page=30",
+  "exit": 0,
+  "deliveryManualDispatches": 0,
+  "note": "Push-triggered developer CI is not API002 candidate execution or qualification proof. Delivery did not wait for/reclassify a candidate run."
+}

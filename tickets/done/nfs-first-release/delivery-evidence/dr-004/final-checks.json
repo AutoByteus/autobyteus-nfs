@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-18T10:19:08.806123+00:00",
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--quiet",
+        "--",
+        ".",
+        ":(exclude)tickets/**"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "585d416c2746cf2963058d591b0753d0db8088f5\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": " M tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n M tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/delivery-evidence/\n?? tickets/in-progress/nfs-first-release/delivery-revision-record.md\n?? tickets/in-progress/nfs-first-release/docs-sync-report.md\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003/\n?? tickets/in-progress/nfs-first-release/handoff-summary.md\n?? tickets/in-progress/nfs-first-release/release-deployment-report.md\n",
+      "stderr": ""
+    }
+  ],
+  "deliveryOwnedDocsWhitespace": "Pass",
+  "noDeliveryStageCommitRestore": true,
+  "note": "Concurrent API activity observed and preserved, not reclassified; current source/index unchanged by Delivery."
+}

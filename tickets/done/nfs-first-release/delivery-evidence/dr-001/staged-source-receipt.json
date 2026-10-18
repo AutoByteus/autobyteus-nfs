@@ -1,0 +1,817 @@
+{
+  "schema": 1,
+  "task": "nfs-first-release",
+  "taskId": "project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5",
+  "revision": "DR-001",
+  "scope": "Execution prerequisite only: reviewed remote branch availability for API-owned publish=false candidate. Not API Pass, main finalization, qualification or release.",
+  "startedAt": "2026-10-18T08:22:45.840221+00:00",
+  "base": "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+  "dispatchCommit": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "productionCommit": "886b55e1cf88f3f696334bd5e7b8c374946a594d",
+  "sourceReviewCommit": "c1f1330b8310bfadf772cebb09d085821be8da92",
+  "remote": "https://github.com/AutoByteus/autobyteus-nfs.git",
+  "remoteRef": "refs/heads/codex/nfs-first-release",
+  "nonTicketInputs": 119,
+  "nonTicketDiffFromReviewedProduction": "",
+  "integration": "Already current; base ancestor; no merge or new source/test changes; no delivery test rerun needed for staging.",
+  "statusBefore": "?? tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n?? tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n?? tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/",
+  "apiOwnedSnapshotBefore": {
+    "tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "d0d96997ea642c799597a4c15336b885469917d0c19c1da665db591beb445eb5",
+      "size": 9175
+    },
+    "tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md": {
+      "sha256": "51dd28c8d537ec88dd8c90afc7312b9b551870289583982b7efef45a791a8d08",
+      "size": 7215
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/actionlint.log": {
+      "sha256": "b3fafd778feca7b1a522a6c02efafd8e2ece9148d41d86a2effacadf0c80f8e2",
+      "size": 140
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/docker-containers.log": {
+      "sha256": "2efcb88195a1e5e9cd96525fca8b09ad227b751537bc51801505470ba9b90b6f",
+      "size": 314
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/docker-context.log": {
+      "sha256": "ff4ad8124c08860e3de394d5d0240cf04385bb3df746757b47158839298fdaae",
+      "size": 36
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-build.log": {
+      "sha256": "e61b0e2c5b321e269b209f47f08bbff0df7f64e9746a966665884e5655f48425",
+      "size": 189
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-download-identity.json": {
+      "sha256": "0bfc03b4862503883bf3350cf35a4ea6eae94f90d8b5c8a3f5511ffc592fd88c",
+      "size": 310
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-download.log": {
+      "sha256": "4d87f278dfdcdd76fbfa9044984278bfee6ad0f1b2eb99e15cdcab0e0b60529a",
+      "size": 174
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-extract.log": {
+      "sha256": "dbce751d6708451e21a6eaab4512db4d3bcedd2564fd5c993bcac7c494f18772",
+      "size": 164
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-race.log": {
+      "sha256": "da720abf5d8d25de933f43dbc10d5448b05d132181e5670f8adb1355ebf80c4b",
+      "size": 268351
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-version.log": {
+      "sha256": "8daa9c86457191b612e040d6b226b693926fd38584bf2a73ced4751c116d6cb0",
+      "size": 142
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-vet.log": {
+      "sha256": "0c099205cde18884a8773f90bdcf23020eb8833136a10b6e23ae8c15028aebd1",
+      "size": 111
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/initialize.py": {
+      "sha256": "faace186106dc27d97b2a899dfe8ad773fb01969f5ad8035fe7aa69be459353e",
+      "size": 9076
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/input-audit.json": {
+      "sha256": "8b87019ad2315e780d122cb0dedd941cce62651b6a25b4b38d7afa7877d6de81",
+      "size": 143147
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/installer-syntax.log": {
+      "sha256": "a6a89d7cdba577402a9851f24a06e53872f861ce27d01d506eba265605067c3b",
+      "size": 95
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/inventory.json": {
+      "sha256": "0c45d23aca73b2d769bec73853fa37e57cbd431f17c6f6299c84a39a4c68b5b3",
+      "size": 23088
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/inventory.py": {
+      "sha256": "c393ef0ba7b41405746aead0fb5cc866c48c319744db31d1fc5d4bf591635519",
+      "size": 2360
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-arch.log": {
+      "sha256": "e5dbff172528a58fae2a039f09f3b841a74eb050ec76c4a2785e29a7bf77f05e",
+      "size": 17
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-console.log": {
+      "sha256": "46a0d2a93e1b99bdf6ea2e5e62d998f8d422988568d90d76315e8d1e3a2122ba",
+      "size": 256
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-disks.log": {
+      "sha256": "a00ee71091ac5d86343e1c93b4d980a844336c64d031fd37f14f247b59a52721",
+      "size": 79
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-kernel.log": {
+      "sha256": "68e34c8155ca5716df9b5a905fca347d9484802301837f95882b8927e8327d57",
+      "size": 18
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-os.log": {
+      "sha256": "cf6d52bb82989c2a64658f068f13fd050b892d8b83b0fe400c82000d277ed7f4",
+      "size": 75
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-results.json": {
+      "sha256": "6fb02e2cf4828b14f26a1c06ca6b65f0cef695386f5616c7f28c4193968fd836",
+      "size": 4176
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-tools.log": {
+      "sha256": "6f60c62b3754b8b88d71a8c814a6838aac1d81c4bc0ca0025cc696c83839f80e",
+      "size": 233
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-console.log": {
+      "sha256": "894f489f77fc34e3bdc892b20ce0381fbc6dffade09b51a26d09a1a6c50ff13e",
+      "size": 87
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-results.json": {
+      "sha256": "32d215d286a74f0f9f3bb71144ee40851fc5c5264830066dc245c3eb7b281027",
+      "size": 2237
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-version.log": {
+      "sha256": "0c0f712902af4c67dc6d18ee4f72667e52bf2c1dd4ad61897ab54111287be684",
+      "size": 142
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-beta.log": {
+      "sha256": "23be9bcde33efe331495dbdcac03c8e884902cb2deb4338a4dd00d44b4b2fca8",
+      "size": 345
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-non-main-publish.log": {
+      "sha256": "1d96c649c4832e3cab7764c85160b5f6bb9cd029a6bb94f41b0badad407ebde7",
+      "size": 332
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-old-workflow.log": {
+      "sha256": "ae60341ca4f5777780b7ba67f907cf15b6bc2760357db8a315ee2a2e47075ff4",
+      "size": 349
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-results.json": {
+      "sha256": "11ff175d004bce1ae49a86dc1e2ead566d731fddc42a19ee0eb87a28ea7ea7c2",
+      "size": 801
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-valid.log": {
+      "sha256": "c720e9f48372be577390f3f439563ece15e48ad3f99a7533bec3632afc1ce488",
+      "size": 466
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-wrong-event.log": {
+      "sha256": "f9201fc0d9c866246c2e286774c0ea58b3e210b4ab50c1c84859af02cd1b0690",
+      "size": 323
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/probe-prepare.py": {
+      "sha256": "3d835e8d9555f2272e70936a3f8d0e28cec0b1f17fc9e88a790a798f65c21d7b",
+      "size": 2650
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/publish-refusal.log": {
+      "sha256": "b32c824ca08a31f3f6d12d48495b1b4759893ca8afda59bc25a72064f6281dd5",
+      "size": 179
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-all.log": {
+      "sha256": "5f30bfbab766f55b9775dc78f4a17a3a0f151e52bcf09e9659d715b29fb4d40c",
+      "size": 4447
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-installer_fixture.log": {
+      "sha256": "4f39f3e771e87865084f82e7d6792e84f7de6dc0b2357e11326ec0dccd403a4c",
+      "size": 619
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_publication.log": {
+      "sha256": "5299bf67121839d7c7cfff478df3fe7e7bce3a1eecf201247410ac2c2714ccc5",
+      "size": 999
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_records.log": {
+      "sha256": "45ea6e80625be917856de0beb54087406d4d0ecf55d5f48fa9f8251c5a4c8f7a",
+      "size": 1516
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_signing.log": {
+      "sha256": "8e51d47e9f017b13dbff083e4236c8edf0168737f3fee1146890a7417dedd991",
+      "size": 541
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_workflow.log": {
+      "sha256": "48f0c3f36074e214162708f2df3c814a0f6d8ab932c190993a091f9ce5d6204c",
+      "size": 633
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-version.log": {
+      "sha256": "4426a46d8b42266c27864773fb169f7206790cad5b94ee901e0650b11ad3a3c0",
+      "size": 92
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-artifacts.log": {
+      "sha256": "67dbaf0412e81fe61e6b8ad16fa81df4b2cfac9cd0c0e9db3ef11719db292204",
+      "size": 103
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-refs.log": {
+      "sha256": "300ff83052406a18e7ca3ede5e8d685a83201baf854a260d7750609a1c017451",
+      "size": 148
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-releases.log": {
+      "sha256": "63fcc342bdd6f8132aa5dbe41216f63961ee15658b79af7dce1951ca3254ff45",
+      "size": 64
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-repo.log": {
+      "sha256": "8bd9e5cd17aa02ae433ebcbabaf85e44b9021a734549de594a109c850c44598c",
+      "size": 7307
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-runs.log": {
+      "sha256": "cd0b61a10cea23984be80769d29f76e2a773c7c0e16a10507a9bbf5dfc5898e4",
+      "size": 128
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-workflows.log": {
+      "sha256": "a159a0dcdf8b3543a171babd01b139b981865455e63e8f3553fa82a9e026250a",
+      "size": 1126
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/run-local.py": {
+      "sha256": "b08def7eff9a7a7f6f5c1f22361aa0571005f20ef925bd3728c4db3343efd9a2",
+      "size": 3135
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/run-native.py": {
+      "sha256": "530e6c73f8440e3c8a08fecb3e761156bb9c6e7ec88bfca1da4ce9e15fb18db6",
+      "size": 2850
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/scratch.json": {
+      "sha256": "b838295872c61e10368504e697c24e3ce951890818116314912d1a42222801ca",
+      "size": 221
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/shellcheck.log": {
+      "sha256": "b9d807954556708679885cdcbc8862d698c5be50feb3e25b7f922ae92de01de8",
+      "size": 135
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/signing-syntax.log": {
+      "sha256": "a8fe5877c49bf5e7bb24f9349a9d43eda246e07795dfd229f2df476cda0c967e",
+      "size": 89
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/source-hash.log": {
+      "sha256": "672ca52594a3cd1a00508081b8d21c84d094ad83088a5fa984e0a7b8f07b20e1",
+      "size": 169
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/validation-plan.md": {
+      "sha256": "793ac0b18297b0170aa34d434b61915ecda77acb8f55e8c17cc05d670812ecf7",
+      "size": 7454
+    }
+  },
+  "commands": [
+    {
+      "at": "2026-10-18T08:22:43.210064+00:00",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0,
+      "stdout": "https://github.com/AutoByteus/autobyteus-nfs.git\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.689415+00:00",
+      "argv": [
+        "git",
+        "fetch",
+        "origin"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.708883+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "7e375984be2bea7a4d536e43cc59d6bc2b116870\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.724257+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "518f4b51e251edaa6b5664f71c7171bde57bafc9\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.741745+00:00",
+      "argv": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+        "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.759605+00:00",
+      "argv": [
+        "git",
+        "diff",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.775587+00:00",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.789615+00:00",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "codex/nfs-first-release\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.815157+00:00",
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "886b55e1cf88f3f696334bd5e7b8c374946a594d",
+        "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+        "--",
+        ".",
+        ":(exclude)tickets/**"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:43.853197+00:00",
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+      ],
+      "exit": 0,
+      "stdout": ".github/workflows/ci.yml\n.github/workflows/release-nfs.yml\n.gitignore\nAGENTS.md\nCLA.md\nCONTRIBUTING.md\nDESIGN.md\nEXTRACTION.md\nLICENSE\nLICENSING.md\nNOTICE\nREADME.md\nRELEASE.md\nTESTING.md\nTHIRD_PARTY_NOTICES\ncmd/autobyteus-nfs/main.go\ncmd/autobyteus-nfs/release.json\ndocs/filesystem-usage.md\ngo.mod\ninternal/backend/apple.go\ninternal/backend/apple_apply.go\ninternal/backend/apple_startup.go\ninternal/backend/apple_startup_test.go\ninternal/backend/backend_test.go\ninternal/backend/cleanup_test.go\ninternal/backend/engine-assets/README\ninternal/backend/engine_assets_linux.go\ninternal/backend/engine_assets_other.go\ninternal/backend/engine_bundle.go\ninternal/backend/engine_bundle_test.go\ninternal/backend/engine_staging.go\ninternal/backend/ganesha.go\ninternal/backend/ganesha_native.go\ninternal/backend/ubuntu_packages.go\ninternal/backend/ubuntu_packages_test.go\ninternal/cli/cli_test.go\ninternal/cli/engine_release_test.go\ninternal/cli/inputs.go\ninternal/cli/install.go\ninternal/cli/install_state_test.go\ninternal/cli/interactive-setup.go\ninternal/cli/run.go\ninternal/cli/terminal.go\ninternal/cli/verify-release.go\ninternal/config/config_test.go\ninternal/config/connection.go\ninternal/config/installation_state.go\ninternal/config/installation_state_test.go\ninternal/config/source-marker.go\ninternal/config/source_identity.go\ninternal/config/source_identity_test.go\ninternal/config/state.go\ninternal/config/store.go\ninternal/docker/client.go\ninternal/docker/docker_test.go\ninternal/docker/engine.go\ninternal/docker/snapshot.go\ninternal/platform/commands.go\ninternal/platform/directory_modes_test.go\ninternal/platform/filesystem_darwin.go\ninternal/platform/filesystem_linux.go\ninternal/platform/handle_syscalls_linux_amd64.go\ninternal/platform/handle_syscalls_linux_arm64.go\ninternal/platform/handles_darwin.go\ninternal/platform/handles_linux.go\ninternal/platform/jobs.go\ninternal/platform/lock.go\ninternal/platform/mount-observation.go\ninternal/platform/mounts.go\ninternal/platform/platform_test.go\ninternal/platform/source.go\ninternal/platform/source_darwin.go\ninternal/platform/source_darwin_test.go\ninternal/platform/source_linux.go\ninternal/platform/source_linux_test.go\ninternal/platform/volume_identity.go\ninternal/platform/volume_identity_test.go\ninternal/platform/volume_plist.go\ninternal/service/probe.go\ninternal/service/probe_test.go\ninternal/service/supervisor.go\ninternal/setup/apply.go\ninternal/setup/hosted_config_test.go\ninternal/setup/lifecycle.go\ninternal/setup/pending.go\ninternal/setup/plan.go\ninternal/setup/service.go\ninternal/setup/setup_test.go\ninternal/setup/source_binding_darwin_test.go\ninternal/setup/standalone_state_test.go\ninternal/setup/status.go\npackaging/Dockerfile\npackaging/RELEASE.md\npackaging/engine/README.md\npackaging/engine/build.py\npackaging/engine/get-dir-delegation.patch\npackaging/engine/manifest.py\npackaging/engine/source-lock.json\npackaging/engine/source.py\npackaging/release-lock.json\npackaging/release.py\npackaging/release_support/__init__.py\npackaging/release_support/candidate.py\npackaging/release_support/identity.py\npackaging/release_support/payload.py\npackaging/release_support/publication.py\npackaging/release_support/qualification.py\npackaging/sign-macos.sh\nscripts/public/nfs/install.sh\nscripts/tests/nfs_release_fixture.py\nscripts/tests/test_nfs_engine_packaging.py\nscripts/tests/test_nfs_installer_fixture.py\nscripts/tests/test_nfs_packaging.py\nscripts/tests/test_nfs_release_publication.py\nscripts/tests/test_nfs_release_records.py\nscripts/tests/test_nfs_release_signing.py\nscripts/tests/test_nfs_release_workflow.py\nscripts/tests/test_nfs_source_identity.py\ntestdata/connection.json\ntickets/done/extract-autobyteus-nfs/api-e2e-coverage-investigation.md\ntickets/done/extract-autobyteus-nfs/api-e2e-execution-coverage-report.md\ntickets/done/extract-autobyteus-nfs/api-e2e-revision-record.md\ntickets/done/extract-autobyteus-nfs/api-e2e-test-case-ledger.md\ntickets/done/extract-autobyteus-nfs/api-e2e-test-review-report.md\ntickets/done/extract-autobyteus-nfs/architecture-review-revision-record.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/actionlint.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/artifact-whitespace.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/checks-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/checks-result.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/cleanup.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/go-race.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/run-standalone-checks.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/source-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/standalone-inputs.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-1/toolchain.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-2/audit-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempt-2/complete-source-audit.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/attempts.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/audit-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/audit-unused-imports.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/checks-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/checks-result.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/cleanup.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/complete-source-audit.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/final-checks.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/final-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/finalize-review.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/go-race.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/go-vet.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/input-identities.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/package-index.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/publish-refusal.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/python.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/run-standalone-checks.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/shell.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/source-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/source-hash.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/source-size-audit.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/standalone-inputs.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/toolchain.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-001/unused-imports.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/audit-delta.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/audit-input.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/audit-unused-imports.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/complete-review.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/delta-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/delta-audit.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/final-checks.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/input-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/source.diff\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/unused-imports.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/unused-imports.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-002/verify-final.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-003/audit-package.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-003/final-checks.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-003/package-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-003/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/assertions.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/audit-assertions.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/audit-source.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/audit-unused.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/complete-review.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/final-checks.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/manager.diff\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/source-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/unused-locals.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-004/unused-locals.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/audit-console.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/audit-delta.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/audit-unused.cjs\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/complete-review.py\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/delta-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/final-checks.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/source.diff\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/unused-locals.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-005/unused-locals.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-006/package-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-006/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/publish-refusal.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/review-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-007/source-hash.log\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-008/package-audit.json\ntickets/done/extract-autobyteus-nfs/code-review-evidence/crr-008/routing.json\ntickets/done/extract-autobyteus-nfs/code-review-report.md\ntickets/done/extract-autobyteus-nfs/code-review-revision-record.md\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-001/integration-state.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-001/routing.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-001/s-conflict.diff\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-001/s-integration.log\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/artifact-checks.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/ci/39097778705.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/ci/39097778705.log\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/ci/39097779223.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/ci/39097779223.log\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/cleanup.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/finalization.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/n-docs.diff\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/operations.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/preservation-before.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/routing.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/s-docs.diff\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-002/verification.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099812867-summary.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099812867.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099812867.log\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099923657-summary.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099923657.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/ci/39099923657.log\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/cleanup.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/finalization.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/operations.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/preservation-before.json\ntickets/done/extract-autobyteus-nfs/delivery-evidence/dr-003/verification.json\ntickets/done/extract-autobyteus-nfs/delivery-revision-record.md\ntickets/done/extract-autobyteus-nfs/design-review-report.md\ntickets/done/extract-autobyteus-nfs/design-spec.md\ntickets/done/extract-autobyteus-nfs/docs-sync-report.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/archive-integrity.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/attempts.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/audit-source.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/binaries.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/cases.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/cleanup-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/cleanup-owned.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/cleanup-preflight.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/cleanup.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/commands.jsonl\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/common.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-build.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-fixture-confirm.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-guide-confirm.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-guide.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-install.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-launcher.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-localization.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-narrow.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-nuxt-prepare.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-path-pty.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-resume-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-routes.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-typecheck.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-unit-confirm.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-unit.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/consumer-web-boundary.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/engine-check.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/environment.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/execution-summary.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/final-checks.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/finalize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/fixture-restoration.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/guide-resume-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/initialize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/input-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-actionlint.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-build-darwin-amd64.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-build-darwin-arm64.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-build-embedded.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-build-linux-amd64.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-build-linux-arm64.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-focused.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-python.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-race.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-shell.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-source-hash.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-version.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/nfs-vet.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/prepare-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/prepare.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/protected-inputs.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/restore-fixtures.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/resume-guide.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/routing.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/run-consumer-resume.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/run-consumer.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/run-nfs.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/source-audit-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/source-contract-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/summarize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/summary-attempt-1/summarize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/summary-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/test-review-scope.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/test-review-scope.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-001/toolchain.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/archive-integrity.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/artifact-whitespace.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/attempts.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/audit-final.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/audit-source.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/carry-validity.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/cleanup-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/cleanup-owned.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/cleanup-preflight.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/cleanup.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/commands.jsonl\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/common.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-build.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-core.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-guide.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-install.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-integration.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-launcher.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-localization.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-narrow.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-nuxt-prepare.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-overlap.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-path-pty.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-routes.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-typecheck.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-unit.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/consumer-web-boundary.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/environment.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/execution-summary.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/final-checks.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/finalize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/fixture-inputs.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/initialize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/input-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/integrated-changed-paths.txt\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/manager-integration.diff\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/package-index.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/prepare.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/prior-history.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/protected-inputs.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/routing.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/run-consumer.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/source-contract-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/summarize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/test-counts.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/test-review-scope.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/toolchain.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/validation-plan.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/archive-integrity.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/artifact-whitespace.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/attempts.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/authority-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/carry-validity.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-attempt-1/cleanup-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-attempt-1/cleanup-owned.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-attempt-1/linux-final-inputs.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-attempt-1/linux-final-processes.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-confirm-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-exited-children.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-owned.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-preflight.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup-process-diagnosis.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/cleanup.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/commands.jsonl\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/common.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/container.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-build.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-environment.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-focused.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-python.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-race.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-shell.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-source-hash.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-version.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/darwin-vet.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/download-darwin.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/download-linux.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/environment.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/execution-summary.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/external-PM-observation.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/extract-darwin.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit-attempt-1/failure.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit-attempt-1/final-audit.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit-attempt-2/failure.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit-attempt-2/final-audit.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-audit.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/final-checks.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/finalize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/fixture.diff\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/identity-correction.diff\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/initialize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/input-audit.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-build.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-container-create.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-environment.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-final-inputs.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-final-processes.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-focused.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-input-integrity.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-prepare.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-python.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-race.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-shell.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-source-hash.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-version.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/linux-vet.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-ignore-detach-preflight.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-ignore-status-preflight.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-reject-partial-detach.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutation-results.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/mutations-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/package-index.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prepare-console.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prepare-mutation-ignore-detach-preflight.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prepare-mutation-ignore-status-preflight.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prepare-mutation-reject-partial-detach.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prepare.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/prior-api-history.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/remove-container.log\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/routing.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/run-checks.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/run-mutations.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/summarize.py\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/test-counts.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/test-review-scope.md\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/toolchains.json\ntickets/done/extract-autobyteus-nfs/evidence/api-e2e/api-rev-003/validation-plan.md\ntickets/done/extract-autobyteus-nfs/handoff-summary.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/attempts.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-attempt-1/audit-source.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/audit-source.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/change-inventory.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/changed-typescript-parse.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup-owned.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/cleanup.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fifth.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-first.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-fourth.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-second.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-build-third.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-activation-terminal.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-build.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/consumer-final-inputs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-1/run-consumer-final.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-build.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-inputs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/consumer-final-typecheck.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-attempt-2/run-consumer-final.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-build.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-inputs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-local-routes.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration-physical-home.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-path-integration.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-typecheck.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-final-unit.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-install.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-launcher-localization.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api-second.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-narrow-runtime-api.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-staged-paths.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-type-web.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-first.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-second.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/consumer-unit-third.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/destination-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/edit-app-r2.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-fixture-docs.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-test-cleanup.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/editing-attempts/r2-tests.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/extract.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-refs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-actionlint.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-amd64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-darwin-arm64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-amd64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64-embedded.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-build-linux-arm64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-race.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-go-vet.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-python.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-shell.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-source-hash.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-standalone-version.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/final-toolchain.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/fresh-refs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/go-initial-r2.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/go-install-state.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/go-second-r2.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/go-third-r2.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-1440.png\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/en-390.png\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/nuxt.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-1440.png\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/guide-render/zh-390.png\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/hold-checkpoint.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/input-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/inspect-guide.mjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/n-final-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/package-index.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/parse-changed-typescript.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/permission-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/prepare-consumer.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/resume-toolchain.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-first-verification.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/retained-engine-verification.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/routing.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/run-consumer-final.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone-final.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/run-standalone.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/s-final-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/source-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/source-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-actionlint.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-archive.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-binaries.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-amd64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-darwin-arm64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-amd64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64-embedded.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-build-linux-arm64.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-archive.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-console.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-final-root.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-first-binaries.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-race.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-go-vet.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-python.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-shell.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-source-hash.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/standalone-version.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/sync-consumer.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/toolchain.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-001/update-test-constructors.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-1/audit-delta.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-1/delta.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-1/diagnostic.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/input-integrity.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/install.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/prisma.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/run-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempt-2/typecheck.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/attempts.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/audit-delta.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/audit-unused-imports.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/check-environment.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/cleanup.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/delta-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/delta.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/input-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/input-integrity.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/install.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/prior-implementation-handoff-ir001.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/prisma.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/resume-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/routing.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/run-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/source.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/toolchain.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/typecheck.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/unused-imports.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-002/unused-imports.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/attempts.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/audit-attempt-1/audit-integration.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/audit-integration.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/build.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/check-environment.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/cleanup.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/core-units.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/final-input-integrity.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/final-overlap.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/focused-final-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/focused-final.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/guide.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/input-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/input-integrity.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/install.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integrated-changed-paths.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integration-audit-final.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integration-audit-initial.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integration-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integration-audit.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/integration.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/launcher.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/localization.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/merge-conflict.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/merge-resolution.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/merge.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/n-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/nuxt-prepare.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/overlap.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/prior-implementation-handoff-ir002.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/protected-state.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/refresh.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/resolved-overlap.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/routing.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/run-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/run-focused-final.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/s-fetch.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/source-inputs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/test-counts.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/toolchain.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/typecheck.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/unit.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/validation-plan.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-003/web-boundary.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/attempts.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/audit-delta.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/audit-unused.cjs\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/check-environment.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/claude-bootstrapper.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/cleanup.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/cleanup.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/complete-handoff.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/delta-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/input-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/input-integrity.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/install.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/prebuild.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/prior-implementation-handoff-ir003.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/prior-implementation-revision-record.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/routing.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/run-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/source.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/toolchain.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/unused-after.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/unused-before.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/unused-before.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/unused-locals.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-004/validation-plan.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/artifact-whitespace-initial.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/artifact-whitespace.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/attempt-1/prepare-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/attempt-1/result.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/attempts.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/audit-and-cleanup.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/candidate-inputs.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/checks-and-limits.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/cleanup.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/complete-handoff.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-environment.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-focused.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-race.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-source-hash.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/darwin-vet.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/final-checks.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/input-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-baseline-hosted.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-build.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-checks-result.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-container.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-environment.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-final-processes.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-focused.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-prepare.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-publish-refusal.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-python.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-race.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-shell.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-source-hash.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-version.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/linux-vet.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/mutation-ignore-detach-preflight.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/mutation-ignore-status-preflight.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/mutation-reject-partial-detach.log\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/mutation-results.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/prepare-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/prior-implementation-handoff.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/prior-implementation-revision-record.md\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/routing.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/run-checks.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/run-mutations.py\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/scratch-path.txt\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/source-audit.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/source.diff\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/toolchain-downloads.json\ntickets/done/extract-autobyteus-nfs/implementation-evidence/ir-005/validation-plan.md\ntickets/done/extract-autobyteus-nfs/implementation-handoff.md\ntickets/done/extract-autobyteus-nfs/implementation-revision-record.md\ntickets/done/extract-autobyteus-nfs/investigation-notes.md\ntickets/done/extract-autobyteus-nfs/release-deployment-report.md\ntickets/done/extract-autobyteus-nfs/requirements-doc.md\ntickets/done/extract-autobyteus-nfs/solution-design-handoff.md\ntickets/done/extract-autobyteus-nfs/solution-revision-record.md\ntickets/done/extract-autobyteus-nfs/user-filesystem-boundary-correction.md\ntickets/in-progress/nfs-first-release/architecture-review-revision-record.md\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/actionlint.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/bash-syntax.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/checks-and-limits.md\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/checks-result.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/cleanup.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/final-audit.py\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/final-checks.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/handoff-receipt.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/input-audit.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/primary-contracts.md\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/publish-refusal.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/python-version.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/python.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/routing.json\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/scratch-path.txt\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/shellcheck.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/source-hash.log\ntickets/in-progress/nfs-first-release/code-review-evidence/crr-001/tools-and-signing-syntax.json\ntickets/in-progress/nfs-first-release/code-review-report.md\ntickets/in-progress/nfs-first-release/code-review-revision-record.md\ntickets/in-progress/nfs-first-release/design-review-report.md\ntickets/in-progress/nfs-first-release/design-spec.md\ntickets/in-progress/nfs-first-release/evidence/design-artifact-audit.json\ntickets/in-progress/nfs-first-release/evidence/design-routing.json\ntickets/in-progress/nfs-first-release/evidence/intake/apple-id-setting-receipt.json\ntickets/in-progress/nfs-first-release/evidence/intake/repository-release-preflight.json\ntickets/in-progress/nfs-first-release/evidence/intake/signing-certificate-upload-receipt.json\ntickets/in-progress/nfs-first-release/evidence/intake/signing-export-progress.json\ntickets/in-progress/nfs-first-release/evidence/intake/signing-metadata-setting-receipt.json\ntickets/in-progress/nfs-first-release/evidence/intake/signing-placeholders-receipt.json\ntickets/in-progress/nfs-first-release/evidence/intake/signing-reuse-preflight.json\ntickets/in-progress/nfs-first-release/evidence/poweroff-resume.json\ntickets/in-progress/nfs-first-release/evidence/poweroff-routing.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/actionlint.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/attempts.md\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/audit-source.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/bash-syntax.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/checks-and-limits.md\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/checks-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/cleanup.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/compile-darwin-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/compile-darwin-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/compile-identities.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/compile-linux-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/compile-linux-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/copied-oci.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/final-check-delta.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/final-checks.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/final-native-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/final-source-inputs.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/finalize-local.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/finalize-local.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/go-native-build.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/go-race.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/go-vet.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/input-oci.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/linux-checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/linux-checks.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/linux-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/linux-resource.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-1/run-linux-checks.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/linux-checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/linux-checks.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/linux-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/linux-resource.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-2/run-linux-checks.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/copied-oci.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/input-oci.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/linux-checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/linux-checks.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/linux-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-attempt-3/linux-resource.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-checks.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/linux-resource.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-fresh-main.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-image-preserve.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-notary-accepted.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-oci-blob-hash.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-user-consent.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutation-workflow-identity.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-fresh-main.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-image-preserve.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-notary-accepted.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-oci-blob-hash.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-user-consent.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutation-workflow-identity.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutations-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-attempt-1/mutations.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/mutations.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/actionlint.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/bash-syntax.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/checks-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/compile-darwin-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/compile-darwin-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/compile-linux-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/compile-linux-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/go-native-build.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/go-race.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/go-vet.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/native-version.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/publish-refusal.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/python.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/run-local-checks.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/shellcheck.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/source-hash.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-1/source-inputs.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/actionlint.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/bash-syntax.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/checks-result.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/compile-darwin-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/compile-darwin-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/compile-linux-amd64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/compile-linux-arm64.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/go-native-build.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/go-race.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/go-vet.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/native-version.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/publish-refusal.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/python.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/shellcheck.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/source-hash.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-attempt-2/source-inputs.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-source-root.txt\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/native-version.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/publication-attempt-1.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/publish-refusal.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/python-attempt-1.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/python-attempt-2.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/python-final.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/python-release-attempt-3.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/python.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/routing.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/run-linux-checks.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/run-local-checks.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/run-mutations.py\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/scratch-path.txt\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/shellcheck.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/source-audit-console.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/source-audit.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/source-hash.log\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/source-inputs.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/toolchain.json\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/validation-plan.md\ntickets/in-progress/nfs-first-release/implementation-evidence/ir-001/whitespace-audit.json\ntickets/in-progress/nfs-first-release/implementation-handoff.md\ntickets/in-progress/nfs-first-release/implementation-revision-record.md\ntickets/in-progress/nfs-first-release/investigation-notes.md\ntickets/in-progress/nfs-first-release/requirements-doc.md\ntickets/in-progress/nfs-first-release/solution-design-handoff.md\ntickets/in-progress/nfs-first-release/solution-revision-record.md\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:44.332487+00:00",
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "main",
+        "codex/nfs-first-release"
+      ],
+      "exit": 0,
+      "stdout": "7e375984be2bea7a4d536e43cc59d6bc2b116870\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:44.841595+00:00",
+      "argv": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/actions/workflows/release-nfs.yml"
+      ],
+      "exit": 0,
+      "stdout": "{\"id\":388178899,\"node_id\":\"W_kwDOVK4ms84XIyPT\",\"name\":\"AutoByteus NFS Release\",\"path\":\".github/workflows/release-nfs.yml\",\"state\":\"active\",\"created_at\":\"2026-10-18T06:38:52.000+02:00\",\"updated_at\":\"2026-10-18T06:38:52.000+02:00\",\"url\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/workflows/388178899\",\"html_url\":\"https://github.com/AutoByteus/autobyteus-nfs/blob/main/.github/workflows/release-nfs.yml\",\"badge_url\":\"https://github.com/AutoByteus/autobyteus-nfs/workflows/AutoByteus%20NFS%20Release/badge.svg\"}",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:45.354919+00:00",
+      "argv": [
+        "git",
+        "ls-remote",
+        "--tags",
+        "origin"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:45.808866+00:00",
+      "argv": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/releases?per_page=100"
+      ],
+      "exit": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:45.839986+00:00",
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": "?? tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n?? tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n?? tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:47.933655+00:00",
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "518f4b51e251edaa6b5664f71c7171bde57bafc9:refs/heads/codex/nfs-first-release"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "remote: \nremote: Create a pull request for 'codex/nfs-first-release' on GitHub by visiting:        \nremote:      https://github.com/AutoByteus/autobyteus-nfs/pull/new/codex/nfs-first-release        \nremote: \nTo https://github.com/AutoByteus/autobyteus-nfs.git\n * [new branch]      518f4b51e251edaa6b5664f71c7171bde57bafc9 -> codex/nfs-first-release\n"
+    },
+    {
+      "at": "2026-10-18T08:22:48.387387+00:00",
+      "argv": [
+        "git",
+        "ls-remote",
+        "--heads",
+        "origin",
+        "main",
+        "codex/nfs-first-release"
+      ],
+      "exit": 0,
+      "stdout": "518f4b51e251edaa6b5664f71c7171bde57bafc9\trefs/heads/codex/nfs-first-release\n7e375984be2bea7a4d536e43cc59d6bc2b116870\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:48.856338+00:00",
+      "argv": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=518f4b51e251edaa6b5664f71c7171bde57bafc9"
+      ],
+      "exit": 0,
+      "stdout": "{\"name\":\"release-nfs.yml\",\"path\":\".github/workflows/release-nfs.yml\",\"sha\":\"1a3539cd160d26360b2138b6308e75d4803b3a4d\",\"size\":16701,\"url\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=518f4b51e251edaa6b5664f71c7171bde57bafc9\",\"html_url\":\"https://github.com/AutoByteus/autobyteus-nfs/blob/518f4b51e251edaa6b5664f71c7171bde57bafc9/.github/workflows/release-nfs.yml\",\"git_url\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs/1a3539cd160d26360b2138b6308e75d4803b3a4d\",\"download_url\":\"https://raw.githubusercontent.com/AutoByteus/autobyteus-nfs/518f4b51e251edaa6b5664f71c7171bde57bafc9/.github/workflows/release-nfs.yml\",\"type\":\"file\",\"content\":\"bmFtZTogQXV0b0J5dGV1cyBORlMgUmVsZWFzZQpvbjoKICB3b3JrZmxvd19k\\naXNwYXRjaDoKICAgIGlucHV0czoKICAgICAgcmVsZWFzZV90YWc6CiAgICAg\\nICAgZGVzY3JpcHRpb246ICdOb3JtYWwgTkZTIHZlcnNpb24gKGZpcnN0IHYw\\nLjEuMCk7IG5vIHByZS1jcmVhdGVkIHRhZy9yZWxlYXNlIHJlcXVpcmVkJwog\\nICAgICAgIHJlcXVpcmVkOiB0cnVlCiAgICAgICAgdHlwZTogc3RyaW5nCiAg\\nICAgIHNvdXJjZV9zaGE6CiAgICAgICAgZGVzY3JpcHRpb246ICdGdWxsIHJl\\ndmlld2VkIHNvdXJjZSBjb21taXQ7IGVtcHR5IHNlbGVjdHMgdGhpcyBkaXNw\\nYXRjaCBTSEEnCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgdHlw\\nZTogc3RyaW5nCiAgICAgIGNhbmRpZGF0ZV9ydW5faWQ6CiAgICAgICAgZGVz\\nY3JpcHRpb246ICdFeGFjdCBxdWFsaWZpZWQgYnVpbGQtb25seSBydW47IHJl\\ncXVpcmVkIGZvciBwdWJsaWNhdGlvbicKICAgICAgICByZXF1aXJlZDogZmFs\\nc2UKICAgICAgICB0eXBlOiBzdHJpbmcKICAgICAgcHVibGlzaDoKICAgICAg\\nICBkZXNjcmlwdGlvbjogJ0F1dGhvcml6ZWQgcHVibGljYXRpb24gYWZ0ZXIg\\nY3VycmVudCBwaHlzaWNhbC91c2VyIHF1YWxpZmljYXRpb24nCiAgICAgICAg\\nZGVmYXVsdDogZmFsc2UKICAgICAgICB0eXBlOiBib29sZWFuCnBlcm1pc3Np\\nb25zOgogIGNvbnRlbnRzOiByZWFkCiAgYWN0aW9uczogcmVhZApjb25jdXJy\\nZW5jeToKICBncm91cDogJHt7IGlucHV0cy5wdWJsaXNoICYmICduZnMtcmVw\\nb3NpdG9yeS1wdWJsaWNhdGlvbicgfHwgZm9ybWF0KCduZnMtY2FuZGlkYXRl\\nLXswfScsIGdpdGh1Yi5ydW5faWQpIH19CiAgY2FuY2VsLWluLXByb2dyZXNz\\nOiBmYWxzZQpqb2JzOgogIHByZXBhcmU6CiAgICBydW5zLW9uOiB1YnVudHUt\\nMjQuMDQKICAgIHBlcm1pc3Npb25zOgogICAgICBjb250ZW50czogcmVhZAog\\nICAgICBhY3Rpb25zOiByZWFkCiAgICAgIHBhY2thZ2VzOiByZWFkCiAgICBv\\ndXRwdXRzOgogICAgICB0YWc6ICR7eyBzdGVwcy5wcmVwYXJlLm91dHB1dHMu\\ndGFnIH19CiAgICAgIHNvdXJjZTogJHt7IHN0ZXBzLnByZXBhcmUub3V0cHV0\\ncy5zb3VyY2UgfX0KICAgICAgbW9kZTogJHt7IHN0ZXBzLnByZXBhcmUub3V0\\ncHV0cy5tb2RlIH19CiAgICAgIGJhc2U6ICR7eyBzdGVwcy5wcmVwYXJlLm91\\ndHB1dHMuYmFzZSB9fQogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9u\\ncy9jaGVja291dEAxMWQ1OTYwYTMyNjc1MGQ1ODM4MDc4ZTM2Y2YzOGI4NWFm\\nNjc3MjYyCiAgICAgICAgd2l0aDoKICAgICAgICAgIHJlZjogJHt7IGlucHV0\\ncy5zb3VyY2Vfc2hhIHx8IGdpdGh1Yi5zaGEgfX0KICAgICAgICAgIGZldGNo\\nLWRlcHRoOiAwCiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxz\\nZQogICAgICAtIG5hbWU6IFJlbGVhc2UgYm91bmRhcnkgY2hlY2tzCiAgICAg\\nICAgcnVuOiBweXRob24zIC1tIHVuaXR0ZXN0IGRpc2NvdmVyIC1zIHNjcmlw\\ndHMvdGVzdHMgLXAgJ3Rlc3RfbmZzXyoucHknIC12CiAgICAgIC0gaWQ6IHBy\\nZXBhcmUKICAgICAgICBlbnY6CiAgICAgICAgICBUQUc6ICR7eyBpbnB1dHMu\\ncmVsZWFzZV90YWcgfX0KICAgICAgICAgIFNPVVJDRTogJHt7IGlucHV0cy5z\\nb3VyY2Vfc2hhIHx8IGdpdGh1Yi5zaGEgfX0KICAgICAgICAgIENBTkRJREFU\\nRV9SVU46ICR7eyBpbnB1dHMuY2FuZGlkYXRlX3J1bl9pZCB9fQogICAgICAg\\nICAgV0FOVF9QVUJMSVNIOiAke3sgaW5wdXRzLnB1Ymxpc2ggfX0KICAgICAg\\nICAgIEdIX1RPS0VOOiAke3sgZ2l0aHViLnRva2VuIH19CiAgICAgICAgcnVu\\nOiB8CiAgICAgICAgICBzZXQgLWV1byBwaXBlZmFpbAogICAgICAgICAgYXJn\\ncz0oKQogICAgICAgICAgaWYgW1sgIiRXQU5UX1BVQkxJU0giID09IHRydWUg\\nXV07IHRoZW4gYXJncys9KC0tcnVuLWlkICIkQ0FORElEQVRFX1JVTiIpOyBm\\naQogICAgICAgICAgcHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFzZS5weSAtLW9w\\nZXJhdGlvbiBwcmVwYXJlIC0tdGFnICIkVEFHIiAtLXNvdXJjZS1jb21taXQg\\nIiRTT1VSQ0UiIC0tZGlyZWN0b3J5IHdvcmsgIiR7YXJnc1tAXX0iCiAgICAg\\nIC0gdXNlczogYWN0aW9ucy91cGxvYWQtYXJ0aWZhY3RAZWExNjVmOGQ2NWI2\\nZTc1YjU0MDQ0OWU5MmI0ODg2ZjQzNjA3ZmEwMgogICAgICAgIGlmOiBzdGVw\\ncy5wcmVwYXJlLm91dHB1dHMubW9kZSAhPSAnY2FuZGlkYXRlJwogICAgICAg\\nIHdpdGg6CiAgICAgICAgICBuYW1lOiBuZnMtcHJlZmxpZ2h0CiAgICAgICAg\\nICBwYXRoOiB3b3JrLwogICAgICAgICAgcmV0ZW50aW9uLWRheXM6IDkwCiAg\\nICAgICAgICBpZi1uby1maWxlcy1mb3VuZDogZXJyb3IKICBlbmdpbmUtcGFj\\na2FnZXM6CiAgICBuZWVkczogcHJlcGFyZQogICAgaWY6IG5lZWRzLnByZXBh\\ncmUub3V0cHV0cy5tb2RlID09ICdjYW5kaWRhdGUnCiAgICBzdHJhdGVneToK\\nICAgICAgZmFpbC1mYXN0OiBmYWxzZQogICAgICBtYXRyaXg6CiAgICAgICAg\\naW5jbHVkZToKICAgICAgICAgIC0ge3J1bm5lcjogdWJ1bnR1LTI0LjA0LCBh\\ncmNoOiBhbWQ2NH0KICAgICAgICAgIC0ge3J1bm5lcjogdWJ1bnR1LTI0LjA0\\nLWFybSwgYXJjaDogYXJtNjR9CiAgICBydW5zLW9uOiAke3sgbWF0cml4LnJ1\\nbm5lciB9fQogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9ucy9jaGVj\\na291dEAxMWQ1OTYwYTMyNjc1MGQ1ODM4MDc4ZTM2Y2YzOGI4NWFmNjc3MjYy\\nCiAgICAgICAgd2l0aDoKICAgICAgICAgIHJlZjogJHt7IG5lZWRzLnByZXBh\\ncmUub3V0cHV0cy5zb3VyY2UgfX0KICAgICAgICAgIHBlcnNpc3QtY3JlZGVu\\ndGlhbHM6IGZhbHNlCiAgICAgIC0gbmFtZTogQnVpbGQgbWVhc3VyZWQgZW5n\\naW5lIHBhaXIgaW4gcGlubmVkIGRpc3Bvc2FibGUgYnVpbGRlcgogICAgICAg\\nIGVudjoKICAgICAgICAgIEJBU0U6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1\\ndHMuYmFzZSB9fQogICAgICAgIHJ1bjogfAogICAgICAgICAgc2V0IC1ldW8g\\ncGlwZWZhaWwKICAgICAgICAgIG1rZGlyIC1wICIkUlVOTkVSX1RFTVAvZW5n\\naW5lLW91dHB1dCIKICAgICAgICAgIGRvY2tlciBydW4gLS1ybSAtZSBCQVNF\\nPSIkQkFTRSIgXAogICAgICAgICAgICAtdiAiJFBXRC9wYWNrYWdpbmcvZW5n\\naW5lOi9yZWNpcGU6cm8iIFwKICAgICAgICAgICAgLXYgIiRSVU5ORVJfVEVN\\nUC9lbmdpbmUtb3V0cHV0Oi9vdXRwdXQiICIkQkFTRSIgYmFzaCAtZXVjICcK\\nICAgICAgICAgICAgICBzZWQgLWkgInMvXlR5cGVzOiBkZWIkL1R5cGVzOiBk\\nZWIgZGViLXNyYy8iIC9ldGMvYXB0L3NvdXJjZXMubGlzdC5kL3VidW50dS5z\\nb3VyY2VzCiAgICAgICAgICAgICAgYXB0LWdldCB1cGRhdGUKICAgICAgICAg\\nICAgICBERUJJQU5fRlJPTlRFTkQ9bm9uaW50ZXJhY3RpdmUgYXB0LWdldCBp\\nbnN0YWxsIC15IC0tbm8taW5zdGFsbC1yZWNvbW1lbmRzIGJ1aWxkLWVzc2Vu\\ndGlhbCBkZXZzY3JpcHRzIGZha2Vyb290IGN1cmwgY2EtY2VydGlmaWNhdGVz\\nIGxzYi1yZWxlYXNlCiAgICAgICAgICAgICAgREVCSUFOX0ZST05URU5EPW5v\\nbmludGVyYWN0aXZlIGFwdC1nZXQgYnVpbGQtZGVwIC15IG5mcy1nYW5lc2hh\\nPTQuMy04dWJ1bnR1MQogICAgICAgICAgICAgIHVzZXJhZGQgLW0gLXUgMTAw\\nMSBidWlsZGVyCiAgICAgICAgICAgICAgaW5zdGFsbCAtZCAtbyBidWlsZGVy\\nIC1nIGJ1aWxkZXIgL3dvcmsKICAgICAgICAgICAgICBzdSBidWlsZGVyIC1z\\nIC9iaW4vYmFzaCAtYyAicHl0aG9uMyAvcmVjaXBlL2J1aWxkLnB5IC0td29y\\nayAvd29yay9zb3VyY2UtYnVpbGQgLS1vdXRwdXQgL3dvcmsvb3V0cHV0IC0t\\nYmFzZSAkQkFTRSIKICAgICAgICAgICAgICBjcCAtYSAvd29yay9vdXRwdXQv\\nLiAvb3V0cHV0LwogICAgICAgICAgICAnCiAgICAgIC0gdXNlczogYWN0aW9u\\ncy91cGxvYWQtYXJ0aWZhY3RAZWExNjVmOGQ2NWI2ZTc1YjU0MDQ0OWU5MmI0\\nODg2ZjQzNjA3ZmEwMgogICAgICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBu\\nZnMtZW5naW5lLXBhY2thZ2UtJHt7IG1hdHJpeC5hcmNoIH19CiAgICAgICAg\\nICBwYXRoOiAke3sgcnVubmVyLnRlbXAgfX0vZW5naW5lLW91dHB1dC8KICAg\\nICAgICAgIHJldGVudGlvbi1kYXlzOiA5MAogICAgICAgICAgaWYtbm8tZmls\\nZXMtZm91bmQ6IGVycm9yCiAgZW5naW5lLWlucHV0czoKICAgIG5lZWRzOiBb\\ncHJlcGFyZSwgZW5naW5lLXBhY2thZ2VzXQogICAgaWY6ICR7eyAhY2FuY2Vs\\nbGVkKCkgJiYgbmVlZHMucHJlcGFyZS5yZXN1bHQgPT0gJ3N1Y2Nlc3MnICYm\\nIG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdjYW5kaWRhdGUnICYm\\nIG5lZWRzLmVuZ2luZS1wYWNrYWdlcy5yZXN1bHQgPT0gJ3N1Y2Nlc3MnIH19\\nCiAgICBydW5zLW9uOiB1YnVudHUtMjQuMDQKICAgIHN0ZXBzOgogICAgICAt\\nIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAMTFkNTk2MGEzMjY3NTBkNTgzODA3\\nOGUzNmNmMzhiODVhZjY3NzI2MgogICAgICAgIHdpdGg6CiAgICAgICAgICBy\\nZWY6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMuc291cmNlIH19CiAgICAg\\nICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAgICAtIHVzZXM6\\nIGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZhY3RAZDNmODZhMTA2YTBiYWM0NWI5\\nNzRhNjI4ODk2YzkwZGJkZjVjODA5MwogICAgICAgIHdpdGg6CiAgICAgICAg\\nICBwYXR0ZXJuOiBuZnMtZW5naW5lLXBhY2thZ2UtKgogICAgICAgICAgcGF0\\naDogZW5naW5lLXBhcnRzCiAgICAgIC0gcnVuOiBweXRob24zIHBhY2thZ2lu\\nZy9lbmdpbmUvbWFuaWZlc3QucHkgbWVyZ2UgLS1pbnB1dHMgZW5naW5lLXBh\\ncnRzL25mcy1lbmdpbmUtcGFja2FnZS1hbWQ2NCBlbmdpbmUtcGFydHMvbmZz\\nLWVuZ2luZS1wYWNrYWdlLWFybTY0IC0tb3V0cHV0IGVuZ2luZS1jYW5kaWRh\\ndGUKICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBlYTE2\\nNWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAgICAg\\nd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1lbmdpbmUtaW5wdXRzCiAgICAg\\nICAgICBwYXRoOiBlbmdpbmUtY2FuZGlkYXRlLwogICAgICAgICAgcmV0ZW50\\naW9uLWRheXM6IDkwCiAgICAgICAgICBpZi1uby1maWxlcy1mb3VuZDogZXJy\\nb3IKICBlbmdpbmU6CiAgICBuZWVkczogW3ByZXBhcmUsIGVuZ2luZS1pbnB1\\ndHNdCiAgICBpZjogJHt7ICFjYW5jZWxsZWQoKSAmJiBuZWVkcy5wcmVwYXJl\\nLnJlc3VsdCA9PSAnc3VjY2VzcycgJiYgbmVlZHMucHJlcGFyZS5vdXRwdXRz\\nLm1vZGUgPT0gJ2NhbmRpZGF0ZScgJiYgbmVlZHMuZW5naW5lLWlucHV0cy5y\\nZXN1bHQgPT0gJ3N1Y2Nlc3MnIH19CiAgICBydW5zLW9uOiB1YnVudHUtMjQu\\nMDQKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRA\\nMTFkNTk2MGEzMjY3NTBkNTgzODA3OGUzNmNmMzhiODVhZjY3NzI2MgogICAg\\nICAgIHdpdGg6CiAgICAgICAgICByZWY6ICR7eyBuZWVkcy5wcmVwYXJlLm91\\ndHB1dHMuc291cmNlIH19CiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxz\\nOiBmYWxzZQogICAgICAtIHVzZXM6IGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZh\\nY3RAZDNmODZhMTA2YTBiYWM0NWI5NzRhNjI4ODk2YzkwZGJkZjVjODA5Mwog\\nICAgICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBuZnMtZW5naW5lLWlucHV0\\ncwogICAgICAgICAgcGF0aDogZW5naW5lLWNhbmRpZGF0ZQogICAgICAtIHVz\\nZXM6IGRvY2tlci9zZXR1cC1xZW11LWFjdGlvbkBjN2M1MzQ2NDYyNWIzMmM3\\nYTdlOTQ0YWU2MmIzZTE3ZDJiNjAwMTMwCiAgICAgIC0gdXNlczogZG9ja2Vy\\nL3NldHVwLWJ1aWxkeC1hY3Rpb25AOGQyNzUwYzY4YTQyNDIyYzE0ZTg0N2Zl\\nNmM4YWMwNDAzYjRjYmQ2ZgogICAgICAtIHVzZXM6IGRvY2tlci9idWlsZC1w\\ndXNoLWFjdGlvbkAxMGU5MGUzNjQ1ZWFlMzRmMWU2MGVlYjAwNWJhM2EzZDMz\\nZjE3OGU4CiAgICAgICAgd2l0aDoKICAgICAgICAgIGNvbnRleHQ6IC4KICAg\\nICAgICAgIGZpbGU6IHBhY2thZ2luZy9Eb2NrZXJmaWxlCiAgICAgICAgICBw\\nbGF0Zm9ybXM6IGxpbnV4L2FtZDY0LGxpbnV4L2FybTY0CiAgICAgICAgICBw\\ndXNoOiBmYWxzZQogICAgICAgICAgcHJvdmVuYW5jZTogZmFsc2UKICAgICAg\\nICAgIHNib206IGZhbHNlCiAgICAgICAgICBvdXRwdXRzOiB0eXBlPW9jaSxk\\nZXN0PWVuZ2luZS5vY2kudGFyCiAgICAgICAgICBidWlsZC1hcmdzOiB8CiAg\\nICAgICAgICAgIFVCVU5UVV9CQVNFPSR7eyBuZWVkcy5wcmVwYXJlLm91dHB1\\ndHMuYmFzZSB9fQogICAgICAtIHJ1bjogcHl0aG9uMyBwYWNrYWdpbmcvcmVs\\nZWFzZS5weSAtLW9wZXJhdGlvbiBvY2kgLS1kaXJlY3RvcnkgZW5naW5lLm9j\\naS50YXIKICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBl\\nYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAg\\nICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1vY2kKICAgICAgICAgIHBh\\ndGg6IGVuZ2luZS5vY2kudGFyCiAgICAgICAgICByZXRlbnRpb24tZGF5czog\\nOTAKICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5kOiBlcnJvcgogIGJpbmFy\\naWVzOgogICAgbmVlZHM6IFtwcmVwYXJlLCBlbmdpbmUtaW5wdXRzLCBlbmdp\\nbmVdCiAgICBpZjogJHt7ICFjYW5jZWxsZWQoKSAmJiBuZWVkcy5wcmVwYXJl\\nLnJlc3VsdCA9PSAnc3VjY2VzcycgJiYgKChuZWVkcy5wcmVwYXJlLm91dHB1\\ndHMubW9kZSA9PSAnY2FuZGlkYXRlJyAmJiBuZWVkcy5lbmdpbmUtaW5wdXRz\\nLnJlc3VsdCA9PSAnc3VjY2VzcycgJiYgbmVlZHMuZW5naW5lLnJlc3VsdCA9\\nPSAnc3VjY2VzcycpIHx8IChuZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSA9\\nPSAnZnJlc2gnICYmIG5lZWRzLmVuZ2luZS1pbnB1dHMucmVzdWx0ID09ICdz\\na2lwcGVkJyAmJiBuZWVkcy5lbmdpbmUucmVzdWx0ID09ICdza2lwcGVkJykp\\nIH19CiAgICBzdHJhdGVneToKICAgICAgZmFpbC1mYXN0OiBmYWxzZQogICAg\\nICBtYXRyaXg6CiAgICAgICAgaW5jbHVkZToKICAgICAgICAgIC0ge3J1bm5l\\ncjogbWFjb3MtMTUsIG9zOiBkYXJ3aW4sIGFyY2g6IGFybTY0fQogICAgICAg\\nICAgLSB7cnVubmVyOiBtYWNvcy0xNS1pbnRlbCwgb3M6IGRhcndpbiwgYXJj\\naDogYW1kNjR9CiAgICAgICAgICAtIHtydW5uZXI6IHVidW50dS0yNC4wNCwg\\nb3M6IGxpbnV4LCBhcmNoOiBhbWQ2NH0KICAgICAgICAgIC0ge3J1bm5lcjog\\ndWJ1bnR1LTI0LjA0LWFybSwgb3M6IGxpbnV4LCBhcmNoOiBhcm02NH0KICAg\\nIHJ1bnMtb246ICR7eyBtYXRyaXgucnVubmVyIH19CiAgICBzdGVwczoKICAg\\nICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QDExZDU5NjBhMzI2NzUwZDU4\\nMzgwNzhlMzZjZjM4Yjg1YWY2NzcyNjIKICAgICAgICB3aXRoOgogICAgICAg\\nICAgcmVmOiAke3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLnNvdXJjZSB9fQog\\nICAgICAgICAgZmV0Y2gtZGVwdGg6IDAKICAgICAgICAgIHBlcnNpc3QtY3Jl\\nZGVudGlhbHM6IGZhbHNlCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9h\\nZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRm\\nNWM4MDkzCiAgICAgICAgaWY6IG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2Rl\\nID09ICdjYW5kaWRhdGUnCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6\\nIG5mcy1lbmdpbmUtaW5wdXRzCiAgICAgICAgICBwYXRoOiB3b3JrL2NhbmRp\\nZGF0ZS9lbmdpbmUKICAgICAgLSB1c2VzOiBhY3Rpb25zL2Rvd25sb2FkLWFy\\ndGlmYWN0QGQzZjg2YTEwNmEwYmFjNDViOTc0YTYyODg5NmM5MGRiZGY1Yzgw\\nOTMKICAgICAgICBpZjogbmVlZHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0g\\nJ2NhbmRpZGF0ZScKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZTogbmZz\\nLW9jaQogICAgICAgICAgcGF0aDogd29yay9jYW5kaWRhdGUKICAgICAgLSB1\\nc2VzOiBhY3Rpb25zL2Rvd25sb2FkLWFydGlmYWN0QGQzZjg2YTEwNmEwYmFj\\nNDViOTc0YTYyODg5NmM5MGRiZGY1YzgwOTMKICAgICAgICBpZjogbmVlZHMu\\ncHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0gJ2ZyZXNoJwogICAgICAgIHdpdGg6\\nCiAgICAgICAgICBuYW1lOiBuZnMtcHJlZmxpZ2h0CiAgICAgICAgICBwYXRo\\nOiB3b3JrCiAgICAgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1nb0A0MGYxNTgy\\nYjI0ODUwODlkZGU3YWJkOTdjMTUyOWFhNzY4ZTFiYWZmCiAgICAgICAgd2l0\\naDoKICAgICAgICAgIGdvLXZlcnNpb246ICcxLjI3LjInCiAgICAgICAgICBj\\nYWNoZTogZmFsc2UKICAgICAgLSBuYW1lOiBOYXRpdmUgY2hlY2tzIGFuZCBl\\neGFjdCBlbmdpbmUgbWV0YWRhdGEgKG5vdCBwaHlzaWNhbCBxdWFsaWZpY2F0\\naW9uKQogICAgICAgIGVudjoKICAgICAgICAgIFRBRzogJHt7IG5lZWRzLnBy\\nZXBhcmUub3V0cHV0cy50YWcgfX0KICAgICAgICAgIE1PREU6ICR7eyBuZWVk\\ncy5wcmVwYXJlLm91dHB1dHMubW9kZSB9fQogICAgICAgICAgVEFSR0VUOiAk\\ne3sgbWF0cml4Lm9zIH19LSR7eyBtYXRyaXguYXJjaCB9fQogICAgICAgIHJ1\\nbjogfAogICAgICAgICAgc2V0IC1ldW8gcGlwZWZhaWwKICAgICAgICAgIGlt\\nYWdlPSQocHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFzZS5weSAtLW9wZXJhdGlv\\nbiBvY2kgLS1kaXJlY3Rvcnkgd29yay9jYW5kaWRhdGUvZW5naW5lLm9jaS50\\nYXIgfCBweXRob24zIC1jICdpbXBvcnQganNvbixzeXM7IHByaW50KCJnaGNy\\nLmlvL2F1dG9ieXRldXMvYXV0b2J5dGV1cy1uZnNAIitqc29uLmxvYWQoc3lz\\nLnN0ZGluKVsiaW5kZXgiXSknKQogICAgICAgICAgYXJncz0oKQogICAgICAg\\nICAgaWYgW1sgIiRNT0RFIiA9PSBmcmVzaCBdXTsgdGhlbiBhcmdzKz0oLS1x\\ndWFsaWZpZWQgLS1jYW5kaWRhdGUgd29yay9jYW5kaWRhdGUpOyBmaQogICAg\\nICAgICAgcHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFzZS5weSAtLXRhZyAiJFRB\\nRyIgLS1lbmdpbmUtaW1hZ2UgIiRpbWFnZSIgLS1lbmdpbmUtbWFuaWZlc3Qg\\nd29yay9jYW5kaWRhdGUvZW5naW5lL2VuZ2luZS1tYW5pZmVzdC5qc29uIC0t\\nZW5naW5lLWFydGlmYWN0cyB3b3JrL2NhbmRpZGF0ZS9lbmdpbmUgLS10YXJn\\nZXQgIiRUQVJHRVQiIC0tb3V0cHV0IGNtZC9hdXRvYnl0ZXVzLW5mcy9yZWxl\\nYXNlLmpzb24gIiR7YXJnc1tAXX0iCiAgICAgICAgICBnbyB0ZXN0IC1yYWNl\\nIC4vLi4uCiAgICAgICAgICBnbyB2ZXQgLi8uLi4KICAgICAgICAgIHB5dGhv\\nbjMgLW0gdW5pdHRlc3QgZGlzY292ZXIgLXMgc2NyaXB0cy90ZXN0cyAtcCAn\\ndGVzdF9uZnNfKi5weScgLXYKICAgICAgICAgIG1rZGlyIC1wIG91dCBuYXRp\\ndmUKICAgICAgICAgIENHT19FTkFCTEVEPTAgZ28gYnVpbGQgLXRyaW1wYXRo\\nIC1vIG91dC9hdXRvYnl0ZXVzLW5mcyAuL2NtZC9hdXRvYnl0ZXVzLW5mcwog\\nICAgICAgICAgcHl0aG9uMyAtYyAnaW1wb3J0IG9zOyBhc3NlcnQgb3MucGF0\\naC5nZXRzaXplKCJvdXQvYXV0b2J5dGV1cy1uZnMiKSA8PSAxMDAqMTAyNCox\\nMDI0JwogICAgICAgICAgdGVzdCAiJChvdXQvYXV0b2J5dGV1cy1uZnMgdmVy\\nc2lvbikiID0gIiRUQUciCiAgICAgICAgICBjcCBjbWQvYXV0b2J5dGV1cy1u\\nZnMvcmVsZWFzZS5qc29uIExJQ0VOU0UgVEhJUkRfUEFSVFlfTk9USUNFUyBv\\ndXQvCiAgICAgICAgICBjYXQgIiQoZ28gZW52IEdPUk9PVCkvTElDRU5TRSIg\\nPj4gb3V0L1RISVJEX1BBUlRZX05PVElDRVMKICAgICAgICAgIGlmIFtbICIk\\nVEFSR0VUIiA9PSBsaW51eC0qIF1dOyB0aGVuIGNhdCAid29yay9jYW5kaWRh\\ndGUvZW5naW5lLyR7VEFSR0VUI2xpbnV4LX0vQ09QWVJJR0hUIiA+PiBvdXQv\\nVEhJUkRfUEFSVFlfTk9USUNFUzsgZmkKICAgICAgLSBuYW1lOiBEZXZlbG9w\\nZXIgSUQgYW5kIEFjY2VwdGVkIG5vdGFyaXphdGlvbiBiZWZvcmUgcHVibGlj\\nIGVmZmVjdHMKICAgICAgICBpZjogbWF0cml4Lm9zID09ICdkYXJ3aW4nICYm\\nIG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdmcmVzaCcKICAgICAg\\nICBlbnY6CiAgICAgICAgICBDRVJUSUZJQ0FURTogJHt7IHNlY3JldHMuTkZT\\nX01BQ19DRVJUSUZJQ0FURV9QMTJfQkFTRTY0IH19CiAgICAgICAgICBQQVNT\\nV09SRDogJHt7IHNlY3JldHMuTkZTX01BQ19DRVJUSUZJQ0FURV9QQVNTV09S\\nRCB9fQogICAgICAgICAgSURFTlRJVFk6ICR7eyBzZWNyZXRzLk5GU19NQUNf\\nU0lHTklOR19JREVOVElUWSB9fQogICAgICAgICAgQVBQTEVfSUQ6ICR7eyBz\\nZWNyZXRzLkFQUExFX0lEIH19CiAgICAgICAgICBBUFBMRV9BUFBfU1BFQ0lG\\nSUNfUEFTU1dPUkQ6ICR7eyBzZWNyZXRzLkFQUExFX0FQUF9TUEVDSUZJQ19Q\\nQVNTV09SRCB9fQogICAgICAgICAgQVBQTEVfVEVBTV9JRDogJHt7IHNlY3Jl\\ndHMuQVBQTEVfVEVBTV9JRCB9fQogICAgICAgICAgVEFSR0VUOiAke3sgbWF0\\ncml4Lm9zIH19LSR7eyBtYXRyaXguYXJjaCB9fQogICAgICAgIHJ1bjogYmFz\\naCBwYWNrYWdpbmcvc2lnbi1tYWNvcy5zaCBvdXQvYXV0b2J5dGV1cy1uZnMg\\nIm5hdGl2ZS8kVEFSR0VULW5vdGFyeS5qc29uIgogICAgICAtIHVzZXM6IGFj\\ndGlvbnMvdXBsb2FkLWFydGlmYWN0QGVhMTY1ZjhkNjViNmU3NWI1NDA0NDll\\nOTJiNDg4NmY0MzYwN2ZhMDIKICAgICAgICBpZjogJHt7IGFsd2F5cygpICYm\\nIG1hdHJpeC5vcyA9PSAnZGFyd2luJyAmJiBuZWVkcy5wcmVwYXJlLm91dHB1\\ndHMubW9kZSA9PSAnZnJlc2gnIH19CiAgICAgICAgd2l0aDoKICAgICAgICAg\\nIG5hbWU6IG5mcy1zaWduaW5nLSR7eyBtYXRyaXgub3MgfX0tJHt7IG1hdHJp\\neC5hcmNoIH19CiAgICAgICAgICBwYXRoOiBuYXRpdmUvKi1ub3RhcnkuanNv\\nbgogICAgICAgICAgcmV0ZW50aW9uLWRheXM6IDkwCiAgICAgICAgICBpZi1u\\nby1maWxlcy1mb3VuZDogd2FybgogICAgICAtIG5hbWU6IFBhY2thZ2UgZm91\\nciByZWd1bGFyIG1lbWJlcnMKICAgICAgICBlbnY6CiAgICAgICAgICBUQUc6\\nICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMudGFnIH19CiAgICAgICAgICBU\\nQVJHRVQ6ICR7eyBtYXRyaXgub3MgfX0tJHt7IG1hdHJpeC5hcmNoIH19CiAg\\nICAgICAgcnVuOiB0YXIgLWN6ZiAibmF0aXZlL2F1dG9ieXRldXMtbmZzLSR7\\nVEFHI3Z9LSR7VEFSR0VUfS50YXIuZ3oiIC1DIG91dCBMSUNFTlNFIFRISVJE\\nX1BBUlRZX05PVElDRVMgYXV0b2J5dGV1cy1uZnMgcmVsZWFzZS5qc29uCiAg\\nICAgIC0gdXNlczogYWN0aW9ucy91cGxvYWQtYXJ0aWZhY3RAZWExNjVmOGQ2\\nNWI2ZTc1YjU0MDQ0OWU5MmI0ODg2ZjQzNjA3ZmEwMgogICAgICAgIHdpdGg6\\nCiAgICAgICAgICBuYW1lOiBuZnMtbmF0aXZlLSR7eyBtYXRyaXgub3MgfX0t\\nJHt7IG1hdHJpeC5hcmNoIH19CiAgICAgICAgICBwYXRoOiBuYXRpdmUvCiAg\\nICAgICAgICByZXRlbnRpb24tZGF5czogOTAKICAgICAgICAgIGlmLW5vLWZp\\nbGVzLWZvdW5kOiBlcnJvcgogIGNhbmRpZGF0ZToKICAgIG5lZWRzOiBbcHJl\\ncGFyZSwgZW5naW5lLWlucHV0cywgZW5naW5lLCBiaW5hcmllc10KICAgIGlm\\nOiAke3sgIWNhbmNlbGxlZCgpICYmIG5lZWRzLnByZXBhcmUucmVzdWx0ID09\\nICdzdWNjZXNzJyAmJiBuZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSA9PSAn\\nY2FuZGlkYXRlJyAmJiBuZWVkcy5lbmdpbmUtaW5wdXRzLnJlc3VsdCA9PSAn\\nc3VjY2VzcycgJiYgbmVlZHMuZW5naW5lLnJlc3VsdCA9PSAnc3VjY2Vzcycg\\nJiYgbmVlZHMuYmluYXJpZXMucmVzdWx0ID09ICdzdWNjZXNzJyB9fQogICAg\\ncnVucy1vbjogdWJ1bnR1LTI0LjA0CiAgICBzdGVwczoKICAgICAgLSB1c2Vz\\nOiBhY3Rpb25zL2NoZWNrb3V0QDExZDU5NjBhMzI2NzUwZDU4MzgwNzhlMzZj\\nZjM4Yjg1YWY2NzcyNjIKICAgICAgICB3aXRoOgogICAgICAgICAgcmVmOiAk\\ne3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLnNvdXJjZSB9fQogICAgICAgICAg\\nZmV0Y2gtZGVwdGg6IDAKICAgICAgICAgIHBlcnNpc3QtY3JlZGVudGlhbHM6\\nIGZhbHNlCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9hZC1hcnRpZmFj\\ndEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRmNWM4MDkzCiAg\\nICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1lbmdpbmUtaW5wdXRz\\nCiAgICAgICAgICBwYXRoOiByZXRhaW5lZC9lbmdpbmUKICAgICAgLSB1c2Vz\\nOiBhY3Rpb25zL2Rvd25sb2FkLWFydGlmYWN0QGQzZjg2YTEwNmEwYmFjNDVi\\nOTc0YTYyODg5NmM5MGRiZGY1YzgwOTMKICAgICAgICB3aXRoOgogICAgICAg\\nICAgbmFtZTogbmZzLW9jaQogICAgICAgICAgcGF0aDogcmV0YWluZWQKICAg\\nICAgLSB1c2VzOiBhY3Rpb25zL2Rvd25sb2FkLWFydGlmYWN0QGQzZjg2YTEw\\nNmEwYmFjNDViOTc0YTYyODg5NmM5MGRiZGY1YzgwOTMKICAgICAgICB3aXRo\\nOgogICAgICAgICAgcGF0dGVybjogbmZzLW5hdGl2ZS0qCiAgICAgICAgICBw\\nYXRoOiByZXRhaW5lZC9uYXRpdmUKICAgICAgICAgIG1lcmdlLW11bHRpcGxl\\nOiB0cnVlCiAgICAgIC0gZW52OgogICAgICAgICAgVEFHOiAke3sgbmVlZHMu\\ncHJlcGFyZS5vdXRwdXRzLnRhZyB9fQogICAgICAgICAgU09VUkNFOiAke3sg\\nbmVlZHMucHJlcGFyZS5vdXRwdXRzLnNvdXJjZSB9fQogICAgICAgIHJ1bjog\\ncHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFzZS5weSAtLW9wZXJhdGlvbiBjYW5k\\naWRhdGUgLS1kaXJlY3RvcnkgcmV0YWluZWQgLS10YWcgIiRUQUciIC0tc291\\ncmNlLWNvbW1pdCAiJFNPVVJDRSIgLS13b3JrZmxvdy1jb21taXQgIiRHSVRI\\nVUJfU0hBIiAtLXJ1bi1pZCAiJEdJVEhVQl9SVU5fSUQiIC0tYXR0ZW1wdCAi\\nJEdJVEhVQl9SVU5fQVRURU1QVCIKICAgICAgLSB1c2VzOiBhY3Rpb25zL3Vw\\nbG9hZC1hcnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZm\\nNDM2MDdmYTAyCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1y\\nZWxlYXNlLWNhbmRpZGF0ZQogICAgICAgICAgcGF0aDogcmV0YWluZWQvCiAg\\nICAgICAgICByZXRlbnRpb24tZGF5czogOTAKICAgICAgICAgIGlmLW5vLWZp\\nbGVzLWZvdW5kOiBlcnJvcgogIHBheWxvYWQ6CiAgICBuZWVkczogW3ByZXBh\\ncmUsIGJpbmFyaWVzXQogICAgaWY6ICR7eyAhY2FuY2VsbGVkKCkgJiYgbmVl\\nZHMucHJlcGFyZS5yZXN1bHQgPT0gJ3N1Y2Nlc3MnICYmIG5lZWRzLnByZXBh\\ncmUub3V0cHV0cy5tb2RlID09ICdmcmVzaCcgJiYgbmVlZHMuYmluYXJpZXMu\\ncmVzdWx0ID09ICdzdWNjZXNzJyB9fQogICAgcnVucy1vbjogdWJ1bnR1LTI0\\nLjA0CiAgICBvdXRwdXRzOgogICAgICBhcnRpZmFjdDogJHt7IHN0ZXBzLnJl\\ndGFpbi5vdXRwdXRzLmFydGlmYWN0LWlkIH19CiAgICBzdGVwczoKICAgICAg\\nLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QDExZDU5NjBhMzI2NzUwZDU4Mzgw\\nNzhlMzZjZjM4Yjg1YWY2NzcyNjIKICAgICAgICB3aXRoOgogICAgICAgICAg\\ncmVmOiAke3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLnNvdXJjZSB9fQogICAg\\nICAgICAgZmV0Y2gtZGVwdGg6IDAKICAgICAgICAgIHBlcnNpc3QtY3JlZGVu\\ndGlhbHM6IGZhbHNlCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9hZC1h\\ncnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRmNWM4\\nMDkzCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1wcmVmbGln\\naHQKICAgICAgICAgIHBhdGg6IHdvcmsKICAgICAgLSB1c2VzOiBhY3Rpb25z\\nL2Rvd25sb2FkLWFydGlmYWN0QGQzZjg2YTEwNmEwYmFjNDViOTc0YTYyODg5\\nNmM5MGRiZGY1YzgwOTMKICAgICAgICB3aXRoOgogICAgICAgICAgcGF0dGVy\\nbjogbmZzLW5hdGl2ZS0qCiAgICAgICAgICBwYXRoOiBuYXRpdmUKICAgICAg\\nICAgIG1lcmdlLW11bHRpcGxlOiB0cnVlCiAgICAgIC0gZW52OgogICAgICAg\\nICAgU09VUkNFOiAke3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLnNvdXJjZSB9\\nfQogICAgICAgIHJ1bjogcHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFzZS5weSAt\\nLW9wZXJhdGlvbiBwYXlsb2FkIC0tZGlyZWN0b3J5IHdvcmsvcGF5bG9hZCAt\\nLWNhbmRpZGF0ZSB3b3JrL2NhbmRpZGF0ZSAtLW5hdGl2ZSBuYXRpdmUgLS1z\\nb3VyY2UtY29tbWl0ICIkU09VUkNFIiAtLXJ1bi1pZCAiJEdJVEhVQl9SVU5f\\nSUQiIC0tYXR0ZW1wdCAiJEdJVEhVQl9SVU5fQVRURU1QVCIKICAgICAgLSB1\\nc2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzVi\\nNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAgICAgaWQ6IHJldGFpbgog\\nICAgICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBuZnMtcmVsZWFzZS1wYXls\\nb2FkCiAgICAgICAgICBwYXRoOiB3b3JrL3BheWxvYWQvCiAgICAgICAgICBy\\nZXRlbnRpb24tZGF5czogOTAKICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5k\\nOiBlcnJvcgogIHB1Ymxpc2g6CiAgICBuZWVkczogW3ByZXBhcmUsIGJpbmFy\\naWVzLCBwYXlsb2FkXQogICAgaWY6ICR7eyAhY2FuY2VsbGVkKCkgJiYgbmVl\\nZHMucHJlcGFyZS5yZXN1bHQgPT0gJ3N1Y2Nlc3MnICYmICgobmVlZHMucHJl\\ncGFyZS5vdXRwdXRzLm1vZGUgPT0gJ2ZyZXNoJyAmJiBuZWVkcy5iaW5hcmll\\ncy5yZXN1bHQgPT0gJ3N1Y2Nlc3MnICYmIG5lZWRzLnBheWxvYWQucmVzdWx0\\nID09ICdzdWNjZXNzJykgfHwgKG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2Rl\\nID09ICdyZXN1bWUnICYmIG5lZWRzLmJpbmFyaWVzLnJlc3VsdCA9PSAnc2tp\\ncHBlZCcgJiYgbmVlZHMucGF5bG9hZC5yZXN1bHQgPT0gJ3NraXBwZWQnKSkg\\nfX0KICAgIHJ1bnMtb246IHVidW50dS0yNC4wNAogICAgcGVybWlzc2lvbnM6\\nCiAgICAgIGNvbnRlbnRzOiB3cml0ZQogICAgICBwYWNrYWdlczogd3JpdGUK\\nICAgICAgYWN0aW9uczogcmVhZAogICAgc3RlcHM6CiAgICAgIC0gdXNlczog\\nYWN0aW9ucy9jaGVja291dEAxMWQ1OTYwYTMyNjc1MGQ1ODM4MDc4ZTM2Y2Yz\\nOGI4NWFmNjc3MjYyCiAgICAgICAgd2l0aDoKICAgICAgICAgIHJlZjogJHt7\\nIG5lZWRzLnByZXBhcmUub3V0cHV0cy5zb3VyY2UgfX0KICAgICAgICAgIGZl\\ndGNoLWRlcHRoOiAwCiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBm\\nYWxzZQogICAgICAtIHVzZXM6IGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZhY3RA\\nZDNmODZhMTA2YTBiYWM0NWI5NzRhNjI4ODk2YzkwZGJkZjVjODA5MwogICAg\\nICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBuZnMtcHJlZmxpZ2h0CiAgICAg\\nICAgICBwYXRoOiB3b3JrCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9h\\nZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRm\\nNWM4MDkzCiAgICAgICAgaWY6IG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2Rl\\nID09ICdmcmVzaCcKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZTogbmZz\\nLXJlbGVhc2UtcGF5bG9hZAogICAgICAgICAgcGF0aDogd29yay9wYXlsb2Fk\\nCiAgICAgIC0gbmFtZTogSW5zdGFsbCBkaWdlc3QtcHJlc2VydmluZyByZWdp\\nc3RyeSB0cmFuc3BvcnQKICAgICAgICBydW46IHwKICAgICAgICAgIHN1ZG8g\\nYXB0LWdldCB1cGRhdGUKICAgICAgICAgIHN1ZG8gYXB0LWdldCBpbnN0YWxs\\nIC15IC0tbm8taW5zdGFsbC1yZWNvbW1lbmRzIHNrb3BlbwogICAgICAgICAg\\nc2tvcGVvIC0tdmVyc2lvbgogICAgICAtIG5hbWU6IEJpbmQgcmV0YWluZWQg\\ncGF5bG9hZCBhbmQgcmVjb25jaWxlIHB1YmxpY2F0aW9uCiAgICAgICAgZW52\\nOgogICAgICAgICAgR0hfVE9LRU46ICR7eyBnaXRodWIudG9rZW4gfX0KICAg\\nICAgICAgIE1PREU6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSB9\\nfQogICAgICAgICAgQVJUSUZBQ1Q6ICR7eyBuZWVkcy5wYXlsb2FkLm91dHB1\\ndHMuYXJ0aWZhY3QgfX0KICAgICAgICAgIFJFR0lTVFJZX0FVVEhfRklMRTog\\nJHt7IHJ1bm5lci50ZW1wIH19L25mcy1yZWdpc3RyeS1hdXRoLmpzb24KICAg\\nICAgICBydW46IHwKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAg\\nICAgICB1bWFzayAwNzcKICAgICAgICAgIHRyYXAgJ3JtIC1mICIkUkVHSVNU\\nUllfQVVUSF9GSUxFIicgRVhJVAogICAgICAgICAgcHJpbnRmICclcycgIiRH\\nSF9UT0tFTiIgfCBza29wZW8gbG9naW4gLS1hdXRoZmlsZSAiJFJFR0lTVFJZ\\nX0FVVEhfRklMRSIgLS11c2VybmFtZSAiJEdJVEhVQl9BQ1RPUiIgLS1wYXNz\\nd29yZC1zdGRpbiBnaGNyLmlvCiAgICAgICAgICBpZiBbWyAiJE1PREUiID09\\nIGZyZXNoIF1dOyB0aGVuCiAgICAgICAgICAgIHB5dGhvbjMgcGFja2FnaW5n\\nL3JlbGVhc2UucHkgLS1vcGVyYXRpb24gYmluZCAtLWRpcmVjdG9yeSB3b3Jr\\nL3BheWxvYWQgLS1jYW5kaWRhdGUgd29yay9jYW5kaWRhdGUgLS1hcnRpZmFj\\ndC1pZCAiJEFSVElGQUNUIiAtLXJ1bi1pZCAiJEdJVEhVQl9SVU5fSUQiIC0t\\nYXR0ZW1wdCAiJEdJVEhVQl9SVU5fQVRURU1QVCIgLS1vdXRwdXQgd29yay9i\\naW5kaW5nLmpzb24KICAgICAgICAgIGZpCiAgICAgICAgICBweXRob24zIHBh\\nY2thZ2luZy9yZWxlYXNlLnB5IC0tb3BlcmF0aW9uIHB1Ymxpc2ggLS1kaXJl\\nY3Rvcnkgd29yay9wYXlsb2FkIC0tY2FuZGlkYXRlIHdvcmsvY2FuZGlkYXRl\\nIC0tYmluZGluZyB3b3JrL2JpbmRpbmcuanNvbiAtLW91dHB1dCBwdWJsaWNh\\ndGlvbi1yZWNlaXB0Lmpzb24KICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9h\\nZC1hcnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2\\nMDdmYTAyCiAgICAgICAgaWY6IGFsd2F5cygpCiAgICAgICAgd2l0aDoKICAg\\nICAgICAgIG5hbWU6IG5mcy1wdWJsaWNhdGlvbi1yZWNlaXB0CiAgICAgICAg\\nICBwYXRoOiBwdWJsaWNhdGlvbi1yZWNlaXB0Lmpzb24KICAgICAgICAgIHJl\\ndGVudGlvbi1kYXlzOiA5MAogICAgICAgICAgaWYtbm8tZmlsZXMtZm91bmQ6\\nIHdhcm4K\\n\",\"encoding\":\"base64\",\"_links\":{\"self\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=518f4b51e251edaa6b5664f71c7171bde57bafc9\",\"git\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs/1a3539cd160d26360b2138b6308e75d4803b3a4d\",\"html\":\"https://github.com/AutoByteus/autobyteus-nfs/blob/518f4b51e251edaa6b5664f71c7171bde57bafc9/.github/workflows/release-nfs.yml\"}}",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:48.871781+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "518f4b51e251edaa6b5664f71c7171bde57bafc9:.github/workflows/release-nfs.yml"
+      ],
+      "exit": 0,
+      "stdout": "1a3539cd160d26360b2138b6308e75d4803b3a4d\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.380774+00:00",
+      "argv": [
+        "git",
+        "ls-remote",
+        "--tags",
+        "origin"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.903755+00:00",
+      "argv": [
+        "gh",
+        "api",
+        "repos/AutoByteus/autobyteus-nfs/releases?per_page=100"
+      ],
+      "exit": 0,
+      "stdout": "[]",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.916705+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "518f4b51e251edaa6b5664f71c7171bde57bafc9\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.935333+00:00",
+      "argv": [
+        "git",
+        "diff",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.950296+00:00",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "at": "2026-10-18T08:22:49.975333+00:00",
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": "?? tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n?? tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n?? tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/delivery-evidence/\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/\n",
+      "stderr": ""
+    }
+  ],
+  "result": "Prerequisite completed; full delivery remains Blocked / not yet eligible pending API and release gates",
+  "completedAt": "2026-10-18T08:22:49.954782+00:00",
+  "remoteHeadsAfter": {
+    "refs/heads/codex/nfs-first-release": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "refs/heads/main": "7e375984be2bea7a4d536e43cc59d6bc2b116870"
+  },
+  "mainUnchanged": true,
+  "workflow": {
+    "path": ".github/workflows/release-nfs.yml",
+    "id": 388178899,
+    "state": "active",
+    "workflowCommit": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "gitBlobSha": "1a3539cd160d26360b2138b6308e75d4803b3a4d",
+    "sha256": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944",
+    "contentVerifiedByGitHubAPI": true
+  },
+  "dispatchInputs": {
+    "ref": "codex/nfs-first-release",
+    "release_tag": "v0.1.0",
+    "source_sha": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "publish": false
+  },
+  "candidateRunId": "Not created by Delivery; API owns dispatch/execution",
+  "tagsUnchanged": true,
+  "releasesUnchanged": true,
+  "releaseCount": 0,
+  "apiOwnedSnapshotAfter": {
+    "tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "d0d96997ea642c799597a4c15336b885469917d0c19c1da665db591beb445eb5",
+      "size": 9175
+    },
+    "tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md": {
+      "sha256": "51dd28c8d537ec88dd8c90afc7312b9b551870289583982b7efef45a791a8d08",
+      "size": 7215
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/actionlint.log": {
+      "sha256": "b3fafd778feca7b1a522a6c02efafd8e2ece9148d41d86a2effacadf0c80f8e2",
+      "size": 140
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/docker-containers.log": {
+      "sha256": "2efcb88195a1e5e9cd96525fca8b09ad227b751537bc51801505470ba9b90b6f",
+      "size": 314
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/docker-context.log": {
+      "sha256": "ff4ad8124c08860e3de394d5d0240cf04385bb3df746757b47158839298fdaae",
+      "size": 36
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/finish-local.py": {
+      "sha256": "58d1bb726ecad1ab7c7b53a53665b24e787b3b5f17e6af210a973a10f6139866",
+      "size": 3865
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-build.log": {
+      "sha256": "e61b0e2c5b321e269b209f47f08bbff0df7f64e9746a966665884e5655f48425",
+      "size": 189
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-download-identity.json": {
+      "sha256": "0bfc03b4862503883bf3350cf35a4ea6eae94f90d8b5c8a3f5511ffc592fd88c",
+      "size": 310
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-download.log": {
+      "sha256": "4d87f278dfdcdd76fbfa9044984278bfee6ad0f1b2eb99e15cdcab0e0b60529a",
+      "size": 174
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-extract.log": {
+      "sha256": "dbce751d6708451e21a6eaab4512db4d3bcedd2564fd5c993bcac7c494f18772",
+      "size": 164
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-race.log": {
+      "sha256": "da720abf5d8d25de933f43dbc10d5448b05d132181e5670f8adb1355ebf80c4b",
+      "size": 268351
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-version.log": {
+      "sha256": "8daa9c86457191b612e040d6b226b693926fd38584bf2a73ced4751c116d6cb0",
+      "size": 142
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/go-vet.log": {
+      "sha256": "0c099205cde18884a8773f90bdcf23020eb8833136a10b6e23ae8c15028aebd1",
+      "size": 111
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/initialize.py": {
+      "sha256": "faace186106dc27d97b2a899dfe8ad773fb01969f5ad8035fe7aa69be459353e",
+      "size": 9076
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/input-audit.json": {
+      "sha256": "8b87019ad2315e780d122cb0dedd941cce62651b6a25b4b38d7afa7877d6de81",
+      "size": 143147
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/installer-syntax.log": {
+      "sha256": "a6a89d7cdba577402a9851f24a06e53872f861ce27d01d506eba265605067c3b",
+      "size": 95
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/inventory.json": {
+      "sha256": "0c45d23aca73b2d769bec73853fa37e57cbd431f17c6f6299c84a39a4c68b5b3",
+      "size": 23088
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/inventory.py": {
+      "sha256": "c393ef0ba7b41405746aead0fb5cc866c48c319744db31d1fc5d4bf591635519",
+      "size": 2360
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-arch.log": {
+      "sha256": "e5dbff172528a58fae2a039f09f3b841a74eb050ec76c4a2785e29a7bf77f05e",
+      "size": 17
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-console.log": {
+      "sha256": "46a0d2a93e1b99bdf6ea2e5e62d998f8d422988568d90d76315e8d1e3a2122ba",
+      "size": 256
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-disks.log": {
+      "sha256": "a00ee71091ac5d86343e1c93b4d980a844336c64d031fd37f14f247b59a52721",
+      "size": 79
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-kernel.log": {
+      "sha256": "68e34c8155ca5716df9b5a905fca347d9484802301837f95882b8927e8327d57",
+      "size": 18
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-os.log": {
+      "sha256": "cf6d52bb82989c2a64658f068f13fd050b892d8b83b0fe400c82000d277ed7f4",
+      "size": 75
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-results.json": {
+      "sha256": "6fb02e2cf4828b14f26a1c06ca6b65f0cef695386f5616c7f28c4193968fd836",
+      "size": 4176
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/local-tools.log": {
+      "sha256": "6f60c62b3754b8b88d71a8c814a6838aac1d81c4bc0ca0025cc696c83839f80e",
+      "size": 233
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-binary.json": {
+      "sha256": "add5547c9e5ac043810f826e384ef10d654ed9d93fad50a212613a36b7dd8373",
+      "size": 339
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-console.log": {
+      "sha256": "894f489f77fc34e3bdc892b20ce0381fbc6dffade09b51a26d09a1a6c50ff13e",
+      "size": 87
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-results.json": {
+      "sha256": "32d215d286a74f0f9f3bb71144ee40851fc5c5264830066dc245c3eb7b281027",
+      "size": 2237
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/native-version.log": {
+      "sha256": "0c0f712902af4c67dc6d18ee4f72667e52bf2c1dd4ad61897ab54111287be684",
+      "size": 142
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-beta.log": {
+      "sha256": "23be9bcde33efe331495dbdcac03c8e884902cb2deb4338a4dd00d44b4b2fca8",
+      "size": 345
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-non-main-publish.log": {
+      "sha256": "1d96c649c4832e3cab7764c85160b5f6bb9cd029a6bb94f41b0badad407ebde7",
+      "size": 332
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-old-workflow.log": {
+      "sha256": "ae60341ca4f5777780b7ba67f907cf15b6bc2760357db8a315ee2a2e47075ff4",
+      "size": 349
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-results.json": {
+      "sha256": "11ff175d004bce1ae49a86dc1e2ead566d731fddc42a19ee0eb87a28ea7ea7c2",
+      "size": 801
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-valid.log": {
+      "sha256": "c720e9f48372be577390f3f439563ece15e48ad3f99a7533bec3632afc1ce488",
+      "size": 466
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/prepare-wrong-event.log": {
+      "sha256": "f9201fc0d9c866246c2e286774c0ea58b3e210b4ab50c1c84859af02cd1b0690",
+      "size": 323
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/probe-prepare.py": {
+      "sha256": "3d835e8d9555f2272e70936a3f8d0e28cec0b1f17fc9e88a790a798f65c21d7b",
+      "size": 2650
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/publish-refusal.log": {
+      "sha256": "b32c824ca08a31f3f6d12d48495b1b4759893ca8afda59bc25a72064f6281dd5",
+      "size": 179
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-all.log": {
+      "sha256": "5f30bfbab766f55b9775dc78f4a17a3a0f151e52bcf09e9659d715b29fb4d40c",
+      "size": 4447
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-installer_fixture.log": {
+      "sha256": "4f39f3e771e87865084f82e7d6792e84f7de6dc0b2357e11326ec0dccd403a4c",
+      "size": 619
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_publication.log": {
+      "sha256": "5299bf67121839d7c7cfff478df3fe7e7bce3a1eecf201247410ac2c2714ccc5",
+      "size": 999
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_records.log": {
+      "sha256": "45ea6e80625be917856de0beb54087406d4d0ecf55d5f48fa9f8251c5a4c8f7a",
+      "size": 1516
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_signing.log": {
+      "sha256": "8e51d47e9f017b13dbff083e4236c8edf0168737f3fee1146890a7417dedd991",
+      "size": 541
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-release_workflow.log": {
+      "sha256": "48f0c3f36074e214162708f2df3c814a0f6d8ab932c190993a091f9ce5d6204c",
+      "size": 633
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/python-version.log": {
+      "sha256": "4426a46d8b42266c27864773fb169f7206790cad5b94ee901e0650b11ad3a3c0",
+      "size": 92
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-artifacts.log": {
+      "sha256": "67dbaf0412e81fe61e6b8ad16fa81df4b2cfac9cd0c0e9db3ef11719db292204",
+      "size": 103
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-refs.log": {
+      "sha256": "300ff83052406a18e7ca3ede5e8d685a83201baf854a260d7750609a1c017451",
+      "size": 148
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-releases.log": {
+      "sha256": "63fcc342bdd6f8132aa5dbe41216f63961ee15658b79af7dce1951ca3254ff45",
+      "size": 64
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-repo.log": {
+      "sha256": "8bd9e5cd17aa02ae433ebcbabaf85e44b9021a734549de594a109c850c44598c",
+      "size": 7307
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-runs.log": {
+      "sha256": "cd0b61a10cea23984be80769d29f76e2a773c7c0e16a10507a9bbf5dfc5898e4",
+      "size": 128
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/remote-workflows.log": {
+      "sha256": "a159a0dcdf8b3543a171babd01b139b981865455e63e8f3553fa82a9e026250a",
+      "size": 1126
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/run-local.py": {
+      "sha256": "b08def7eff9a7a7f6f5c1f22361aa0571005f20ef925bd3728c4db3343efd9a2",
+      "size": 3135
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/run-native.py": {
+      "sha256": "530e6c73f8440e3c8a08fecb3e761156bb9c6e7ec88bfca1da4ce9e15fb18db6",
+      "size": 2850
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/scratch.json": {
+      "sha256": "b838295872c61e10368504e697c24e3ce951890818116314912d1a42222801ca",
+      "size": 221
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/shellcheck.log": {
+      "sha256": "b9d807954556708679885cdcbc8862d698c5be50feb3e25b7f922ae92de01de8",
+      "size": 135
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/signing-syntax.log": {
+      "sha256": "a8fe5877c49bf5e7bb24f9349a9d43eda246e07795dfd229f2df476cda0c967e",
+      "size": 89
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/source-hash.log": {
+      "sha256": "672ca52594a3cd1a00508081b8d21c84d094ad83088a5fa984e0a7b8f07b20e1",
+      "size": 169
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/test-counts.json": {
+      "sha256": "61275b7215c39e6504b28c53777ac3a19b43a980d529d1cdf73d0278c9feb14a",
+      "size": 514
+    },
+    "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/validation-plan.md": {
+      "sha256": "793ac0b18297b0170aa34d434b61915ecda77acb8f55e8c17cc05d670812ecf7",
+      "size": 7454
+    }
+  },
+  "apiOwnedSnapshotsEqual": false,
+  "protectedAPIInterpretation": "No Delivery operation writes/stages API-owned files; any concurrent API changes are not restored.",
+  "statusAfter": "?? tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n?? tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n?? tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/delivery-evidence/\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/",
+  "physicalHostInventory": "No already-assigned test-owned physical host inventory available to Delivery. Local user host/existing Docker app nodes are not assigned disposable resources.",
+  "guides": {
+    "RELEASE.md": {
+      "revision": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+      "sha256": "25e9b079b6f93f688085b41a028c2f916a434ea3b9f08fe32d4db160288b36f3"
+    },
+    "packaging/RELEASE.md": {
+      "revision": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+      "sha256": "97f22d77f679e0eb2bcdd845b48b2a1e6c91ae895c74251c5fc3ce077ab38b0c"
+    },
+    "TESTING.md": {
+      "revision": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+      "sha256": "34fe03791ab403a95fb426eac1d9b7b737cb53a34c4b54cf81530819b04b7480"
+    }
+  },
+  "guideException": "Project guide explicitly permits staged source availability before full qualification. Only ticket ref pushed; no main merge, tag, release, dispatch, signing, registry write, qualification or TaskDone."
+}

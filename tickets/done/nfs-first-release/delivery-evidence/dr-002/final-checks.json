@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-18T08:55:47.645871+00:00",
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--quiet",
+        "--",
+        ".",
+        ":(exclude)tickets/**"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--quiet"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "96c8de3a381f74ec8f2b9e93425fb90e17e7e693\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit": 0,
+      "stdout": " M tickets/in-progress/nfs-first-release/api-e2e-coverage-investigation.md\n M tickets/in-progress/nfs-first-release/api-e2e-execution-coverage-report.md\n M tickets/in-progress/nfs-first-release/api-e2e-test-case-ledger.md\n?? tickets/in-progress/nfs-first-release/delivery-evidence/\n?? tickets/in-progress/nfs-first-release/delivery-revision-record.md\n?? tickets/in-progress/nfs-first-release/docs-sync-report.md\n?? tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/\n?? tickets/in-progress/nfs-first-release/handoff-summary.md\n?? tickets/in-progress/nfs-first-release/release-deployment-report.md\n",
+      "stderr": ""
+    }
+  ],
+  "dr001EvidenceUnchanged": true,
+  "canonicalDocsWhitespaceCheck": "Pass",
+  "noDeliveryStageCommitRestore": true,
+  "note": "API may continue concurrently; no API file restoration/staging or runtime cleanup. Delivery current docs changed only under ownership; source HEAD pinned."
+}

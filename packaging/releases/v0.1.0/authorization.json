@@ -1,0 +1,13 @@
+{
+  "approvalRecordGitCommit": "41714c79872dc055e6c09acc744639d981f3fc33",
+  "approvalRecordPath": "tickets/in-progress/nfs-first-release/approval-record-sr004.md",
+  "approvalRecordSHA256": "4519f245d632b9d4fb74b59afb0774812b6f1c11a862ae4097a447ccb261ac9f",
+  "decision": "publish-before-field-testing",
+  "meaning": "Explicit publication sequencing, not evidence of executed user or field testing.",
+  "requirementsRevision": "R3/SR004",
+  "userStatements": [
+    "please publish first, then we could test. and if we found problem, then we fix",
+    "create one official signed release first. please"
+  ],
+  "version": "v0.1.0"
+}

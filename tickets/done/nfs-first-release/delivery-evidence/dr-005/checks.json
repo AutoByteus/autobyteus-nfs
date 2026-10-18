@@ -1,0 +1,74 @@
+[
+  {
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--operation",
+      "verify-candidate",
+      "--directory",
+      "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate"
+    ],
+    "exit": 0,
+    "name": "candidate-reverify"
+  },
+  {
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--operation",
+      "candidate-envelope",
+      "--artifact-id",
+      "12133493094",
+      "--run-id",
+      "39118784695",
+      "--attempt",
+      "1",
+      "--workflow-commit",
+      "585d416c2746cf2963058d591b0753d0db8088f5"
+    ],
+    "exit": 0,
+    "name": "live-candidate-envelope"
+  },
+  {
+    "argv": [
+      "gh",
+      "api",
+      "repos/AutoByteus/autobyteus-nfs/actions/runs/39118784695/attempts/1/jobs?per_page=100"
+    ],
+    "exit": 0,
+    "name": "live-candidate-jobs"
+  },
+  {
+    "argv": [
+      "python3",
+      "packaging/engine/manifest.py",
+      "lock",
+      "--directory",
+      "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate/engine",
+      "--release-lock",
+      "packaging/release-lock.json"
+    ],
+    "exit": 0,
+    "name": "lock-exact-engine"
+  },
+  {
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate"
+    ],
+    "exit": 0,
+    "name": "readiness-check"
+  },
+  {
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "name": "measured-source-hash"
+  }
+]

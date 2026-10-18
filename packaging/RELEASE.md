@@ -2,8 +2,9 @@
 
 Normal versions only, first **v0.1.0**. No desktop version coupling, pre-created tag,
 public beta or automatic publication on push/tag. Follow root [RELEASE.md](../RELEASE.md).
-The current lock remains **without release readiness**. These instructions describe the release
-path, not a claim that a current candidate, notarization or public release has succeeded.
+The current lock binds the [audited v0.1.0 readiness record](releases/v0.1.0/readiness.json)
+and exact current candidate. This accepts prepublication checks only; actual
+signing/notarization and public release/download receipts remain separate gates.
 The user requests signed normal v0.1.0 first, then field/user testing and fixes.
 Shared-filesystem/physical and user tests are deferred, not publication or closure
 prerequisites; build availability is not field-qualified support.
