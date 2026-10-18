@@ -48,5 +48,7 @@
     "recipient_address": "/software_engineering_team/api_e2e_engineer"
   },
   "routing_policy": "Controlling single-most-specific-recipient instruction: primary API/E2E handoff only, no duplicate informational dispatch.",
-  "handoff_status": "Pending"
+  "handoff_status": "Delivered",
+  "handoff_receipt": "handoff-receipt.json",
+  "review_commit": "c1f1330b8310bfadf772cebb09d085821be8da92"
 }
