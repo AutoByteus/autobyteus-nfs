@@ -5,7 +5,7 @@ import json
 import re
 import shutil
 from pathlib import Path
-from source import LOCK, VERSION, NAMES, identity, source_identity
+from source import VERSION, NAMES, identity, source_identity
 
 DIGEST = re.compile(r'[a-f0-9]{64}')
 LIMIT = 40*1024*1024

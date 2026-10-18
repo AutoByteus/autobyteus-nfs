@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'packaging'))
-from release_support import candidate, identity as i, payload, readiness
+from release_support import candidate, identity as i, payload
 from source import source_identity, VERSION, NAMES
 
 SHA = 'a' * 40
