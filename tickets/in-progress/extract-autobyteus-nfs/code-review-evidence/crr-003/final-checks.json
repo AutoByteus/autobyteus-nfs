@@ -1,0 +1,13 @@
+{
+  "review": "CRR-003",
+  "test_review_result": "Not Applicable",
+  "review_gate_satisfied": true,
+  "API_score_preserved": 95,
+  "source_report_unchanged": true,
+  "protected_inputs_unchanged": 304,
+  "prior_CRR001_CRR002_entries_byte_identical": true,
+  "reference_files_exist": 21,
+  "reviewer_test_or_production_edits": false,
+  "new_live_resources": false,
+  "API_workflow_rerun": false
+}
