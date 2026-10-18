@@ -79,6 +79,10 @@ execute the actual shell with fake commands/credentials, checking Accepted-only
 behavior and cleanup, not Apple acceptance. Installer fixtures use actual tar/hash
 tools and an inert binary. Workflow truth tables cover candidate/fresh/resume modes
 and failed/cancelled/legitimate skipped ancestors; actionlint checks YAML separately.
+The workflow suite also executes the native metadata prefix with `/bin/bash`
+(including the Mac system Bash3.2) and inert release-command boundaries: exact
+candidate/fresh argv, command failure, missing input and pipeline failure. This
+is shell invocation coverage, not native metadata/build or hosted-matrix proof.
 No fixture is a hosted run, public download or qualified physical platform.
 
 An independent source archive is sufficient for normal local checks; retain source

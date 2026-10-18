@@ -1,13 +1,20 @@
-"""Nonpublishing NFS job-gate regression (stdlib only; no secrets/network/jobs).
+"""Nonpublishing NFS workflow regression (stdlib only; no secrets/network/jobs).
 Run: python3 -m unittest scripts/tests/test_nfs_release_workflow.py -v.
 Reads the workflow's actual single-line job needs/if fields and evaluates only
 its boolean-expression subset. Models GitHub's transitive default-success rule;
-not a hosted Actions runner, shell/signing test, or release qualification.
+not a hosted Actions runner or release qualification. Native metadata tests also
+execute the actual workflow prefix under /bin/bash (Mac system Bash3.2 included),
+doubling only the release.py OCI/metadata boundary, never signing or building.
 Contracts: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idneeds
 https://docs.github.com/en/actions/reference/workflows-and-actions/expressions#status-check-functions
 """
 import ast
+import json
 import re
+import subprocess
+import sys
+import tempfile
+import textwrap
 import unittest
 from pathlib import Path
 
@@ -146,5 +153,84 @@ class ReleaseWorkflowGatesTest(unittest.TestCase):
                 for dep in self.jobs[name]['needs']:
                     for state in ('failure','cancelled'):
                         self.assertFalse(eligible(self.jobs,name,dict(results,**{dep:state}),mode))
+
+
+class NativeMetadataShellTest(unittest.TestCase):
+    def setUp(self):
+        # Narrow literal-block reader, not a second YAML parser. Include the real
+        # strict-mode and OCI pipeline lines; stop before any native build/tests.
+        block = WORKFLOW.read_text().split(
+            '      - name: Native checks and exact engine metadata (not physical qualification)\n', 1)[1]
+        block = block.split('        run: |\n', 1)[1].split('          go test -race ./...\n', 1)[0]
+        self.prefix = textwrap.dedent(block)
+        self.assertIn('python3 packaging/release.py', self.prefix)
+
+    def run_prefix(self, mode, target='darwin-arm64', metadata_exit=0, oci_exit=0):
+        with tempfile.TemporaryDirectory(prefix='nfs-native-shell-') as scratch:
+            root = Path(scratch)
+            recorder = root / 'release-boundary.py'
+            recorder.write_text('''import json, os, sys
+from pathlib import Path
+args = sys.argv[1:]
+if args == ['packaging/release.py', '--operation', 'oci', '--directory', 'work/candidate/engine.oci.tar']:
+    print(json.dumps({'index': 'sha256:' + 'a' * 64}))
+    sys.exit(int(os.environ['OCI_EXIT']))
+Path(os.environ['ARGV_RECORD']).write_text(json.dumps(args))
+sys.exit(int(os.environ['METADATA_EXIT']))
+''')
+            # Use the real stdlib interpreter for the workflow's JSON pipeline;
+            # intercept only the packaging facade to avoid engine/metadata writes.
+            script = '''python3() {
+  if [[ "$1" == packaging/release.py ]]; then
+    "$TEST_PYTHON" "$RECORDER" "$@"
+  else
+    "$TEST_PYTHON" "$@"
+  fi
+}
+''' + self.prefix + "printf 'CONTINUED\\n'\n"
+            env = {'PATH': '/usr/bin:/bin', 'HOME': scratch, 'TMPDIR': scratch,
+                   'PYTHONDONTWRITEBYTECODE': '1', 'TEST_PYTHON': sys.executable,
+                   'RECORDER': str(recorder), 'ARGV_RECORD': str(root / 'argv.json'),
+                   'MODE': mode, 'TAG': 'v0.1.0', 'METADATA_EXIT': str(metadata_exit),
+                   'OCI_EXIT': str(oci_exit)}
+            if target is not None:
+                env['TARGET'] = target
+            result = subprocess.run(['/bin/bash', '-e', '-c', script], cwd=root,
+                                    env=env, capture_output=True, text=True, timeout=30)
+            args = json.loads((root / 'argv.json').read_text()) if (root / 'argv.json').exists() else None
+            return result, args
+
+    def test_candidate_and_fresh_metadata_argv(self):
+        # TARGET values exercise argument construction, not four native CPUs.
+        for target in ('darwin-arm64', 'darwin-amd64', 'linux-arm64', 'linux-amd64'):
+            for mode in ('candidate', 'fresh'):
+                with self.subTest(target=target, mode=mode):
+                    result, args = self.run_prefix(mode, target)
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    expected = ['packaging/release.py', '--tag', 'v0.1.0', '--engine-image',
+                                'ghcr.io/autobyteus/autobyteus-nfs@sha256:' + 'a' * 64,
+                                '--engine-manifest', 'work/candidate/engine/engine-manifest.json',
+                                '--engine-artifacts', 'work/candidate/engine', '--target', target,
+                                '--output', 'cmd/autobyteus-nfs/release.json']
+                    if mode == 'fresh':
+                        expected += ['--qualified', '--candidate', 'work/candidate']
+                    self.assertEqual(args, expected)
+                    self.assertEqual(result.stdout, 'CONTINUED\n')
+
+    def test_metadata_failure_stops_step(self):
+        for mode in ('candidate', 'fresh'):
+            with self.subTest(mode=mode):
+                result, args = self.run_prefix(mode, metadata_exit=17)
+                self.assertIsNotNone(args)
+                self.assertEqual(result.returncode, 17, result.stderr)
+                self.assertNotIn('CONTINUED', result.stdout)
+
+    def test_nounset_and_oci_pipefail_stop_before_metadata(self):
+        for options in ({'target': None}, {'oci_exit': 23}):
+            with self.subTest(options=options):
+                result, args = self.run_prefix('candidate', **options)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIsNone(args)
+                self.assertNotIn('CONTINUED', result.stdout)
 
 if __name__ == '__main__':unittest.main()
