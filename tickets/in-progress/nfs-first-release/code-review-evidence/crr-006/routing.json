@@ -7,7 +7,9 @@
     "when": "When post-API/E2E durable test-code review passes and the complete validated package is ready for delivery, documentation sync, finalization, or release work.",
     "recipient_address": "/software_engineering_team/delivery_engineer"
   },
-  "status": "Pending",
+  "status": "Delivered",
   "other_recipients": [],
-  "reason": "Single most-specific successful-test rule. Delivery owns remaining actual release checks; no source/API rerun absent new evidence."
+  "reason": "Single most-specific successful-test rule. Delivery owns remaining actual release checks; no source/API rerun absent new evidence.",
+  "review_commit": "d10dd455ce992bbce7b773a03724e9e0ae72acd6",
+  "receipt": "handoff-receipt.json"
 }
