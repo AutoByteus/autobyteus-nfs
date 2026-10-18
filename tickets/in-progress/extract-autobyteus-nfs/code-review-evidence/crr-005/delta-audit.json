@@ -1,0 +1,78 @@
+{
+  "review": "CRR-005",
+  "scope": "Targeted Delta Review",
+  "N_head": "4b08169dc7a6770aab2a0ddc6d32730178eeb024",
+  "N_service": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "S_head": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "S_prior": "5559abbf017566f0030d95b023614f7418d3f212",
+  "changed": [
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts"
+  ],
+  "exact_delta": "0 additions / 1 deletion",
+  "whole_file_equals_prior_minus_import": true,
+  "all_assertions_fixtures_and_domain_class_preserved": true,
+  "all_25_production_owners_unchanged": true,
+  "unused_diagnostics": [],
+  "input_identity": {
+    "N": {
+      "count": 108,
+      "sha256": "070f9b587743ef02fc561457aa9bedcf16f9f4df22fe4b1ececa7d011a15c048"
+    },
+    "S": {
+      "count": 7307,
+      "sha256": "3d43e378c3c2f0f6ed9efe64fe582a80c1a7d85d15245e3ecc0345d6a87b08b4"
+    }
+  },
+  "unchanged_authority_documents": 8,
+  "IR004_checks_inspected_not_reexecuted": [
+    {
+      "name": "install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--filter",
+        "autobyteus-server-ts...",
+        "--filter",
+        "@autobyteus/application-backend-sdk..."
+      ],
+      "exit": 0,
+      "seconds": 19.939
+    },
+    {
+      "name": "prebuild",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "prebuild"
+      ],
+      "exit": 0,
+      "seconds": 9.723
+    },
+    {
+      "name": "claude-bootstrapper",
+      "command": [
+        "pnpm",
+        "-C",
+        "autobyteus-server-ts",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+        "--maxWorkers=1",
+        "--no-watch"
+      ],
+      "exit": 0,
+      "seconds": 6.036
+    }
+  ],
+  "IR004_scratch_absent": true,
+  "protected_ticket_inputs": {
+    "count": 406,
+    "sha256": "cfad0be96a2a714b92696ada33181e7c406285e6890cf7f1bc4086accdd03b15"
+  },
+  "prior_history_sha256": "97ac22e43a75062c7f6a3588f19d30c2b55d0c96514d85ca6ed3e69efba28430",
+  "no_source_or_test_edits_by_reviewer": true,
+  "no_runtime_suite_rerun": true
+}

@@ -1,0 +1,26 @@
+{
+  "review": "CRR-005",
+  "decision": "Pass",
+  "source_score": 100,
+  "CR001": "Resolved",
+  "CR002": "Resolved",
+  "scope": "Targeted Delta Review",
+  "structural_pass": 24,
+  "unaffected_structural_checks_carried": 23,
+  "source_inputs_unchanged_during_review": true,
+  "protected_inputs_unchanged": 406,
+  "prior_CRR001_through_CRR004_entries_preserved": true,
+  "unused_audit_exit": 0,
+  "unused_diagnostics": 0,
+  "runtime_test_execution": "IR004 attributed 1-file/1-test Pass; no reviewer rerun",
+  "new_resources": false,
+  "source_test_edits_by_reviewer": false,
+  "current_integrated_API_validation_pending": true,
+  "artifact_whitespace_exception": {
+    "path": "tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-005/source.diff",
+    "lines": [
+      12
+    ],
+    "reason": "Single-space context in raw git diff"
+  }
+}

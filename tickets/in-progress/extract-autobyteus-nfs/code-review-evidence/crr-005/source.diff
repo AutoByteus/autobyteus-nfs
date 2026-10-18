@@ -1,0 +1,12 @@
+diff --git a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+index 5f3b47b5e4..01eac0161a 100644
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+@@ -4,7 +4,6 @@ import { AgentRunContext } from "../../../../../../src/agent-execution/domain/ag
+ import { ClaudeSessionBootstrapper } from "../../../../../../src/agent-execution/backends/claude/backend/claude-session-bootstrapper.js";
+ import { MemberExecutionContext } from "../../../../../../src/agent-collaboration/execution/domain/member-execution-context.js";
+ import { RuntimeKind } from "../../../../../../src/runtime-management/runtime-kind-enum.js";
+-import { Skill } from "../../../../../../src/skills/domain/models.js";
+ import type { ConfiguredAgentSkillBinding } from "../../../../../../src/skills/domain/configured-agent-skill-binding.js";
+ import { testMemberExecutionContext } from "../../../../../fixtures/current-team-run-fixtures.js";
+ 

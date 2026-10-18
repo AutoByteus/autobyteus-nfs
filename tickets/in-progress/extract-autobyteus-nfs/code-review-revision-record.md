@@ -10,6 +10,7 @@ The canonical code-review-report.md remains authoritative. History starts with t
 | CRR-002 | code-review-report.md | Targeted source re-review / IR-002 | CRR-001 Fail | Pass,100/100 | CR-001 resolved; none remaining |
 | CRR-003 | api-e2e-test-review-report.md | Successful API-REV-001 test review | N/A (first test review); source CRR002 Pass | Not Applicable — no API test changes; gate satisfied | None |
 | CRR-004 | code-review-report.md | Integrated source re-audit / IR003 from DR001 | CRR002 source Pass; CRR003 test N/A | Fail — Local Fix,99.8/100 | CR-002; CR-001 stays resolved |
+| CRR-005 | code-review-report.md | Targeted cleanup re-review / IR004 | CRR004 Fail99.8 | Pass100/100 | CR002 resolved; CR001 stays resolved |
 
 ## Revision Entries
 
@@ -93,3 +94,20 @@ None applicable to this test-review entry point. CR-001 stays resolved by CRR002
 - S RELEASE.md stale R1 consumer/pin tail is an acknowledged existing Delivery docs-sync obligation, not accepted contract or new source finding; must clear before completion.
 - Recipient: `/software_engineering_team/implementation_engineer` via fresh source Local Fix rule only. After source passes, current TESTING impact policy requires affected S API validation, particularly S04/S05; N cases remain valid with limits. No old VM/editor/provider campaign.
 - Source/test edits none; prior entries/upstream evidence preserved. IR003 scratch absent; reviewer accidental empty report-preparation file removed, no live resources. No targets/merge/push/tag/release/deploy/TaskDone/user verification.
+
+### CRR-005 — Exact test import cleanup verified
+
+- Date/reviewer: 2026-10-18, code reviewer; personal execution, no delegation.
+- Canonical source report code-review-report.md; Implementation Review/source round4/**Targeted Delta Review**. Prior CRR004 report retained in N95dd311879067672fd7572b7d042aa60bcfed1e4.
+- Trigger IR004 resolving soleCR002 after IR003/DR001 integration. R2 Approved/SR003, Ready SR004, ARCH002, Large/High unchanged. API001 Pass95/CRR003 successful-test N/A remain preintegration S authorities; DR001 still Delivery-owned.
+- Inputs N4b08169dc7a6770aab2a0ddc6d32730178eeb024/service83726b27400b405a7a6a79bd962d8e2419daa561 unchanged; S60b67dabecaf5569a8e26128dbdb26117c988811 atop5559abbf. Exactly one deletion in requested Claude test; no production/shared dependency/fixture/assertion changes.
+- Prior source **CRR004 Fail99.8% / Local Fix**; current **Pass100%**, failure classification N/A.23 unaffected structural checks/nine scores carry; cleanup revalidated9.8→10, affected fixture/readiness evidence inspected. No full source or1666-test rerun.
+
+#### Prior Finding Resolution
+
+- **CR002 resolved**: whole file equals predecessor minus only unused local Skill import; domain class/configured types/fixtures/assertions retained. Personal same29-file TS5.9.3 unused analysis exit0/zero diagnostics. Not semantic typecheck or runtime proof.
+- CR001 remains resolved, all25 R2 production owners unchanged/unused-clean. Earlier missed touched-test cleanup remains acknowledged historically; no new finding or follow-up.
+- Personal E5 delta-audit.json/source.diff/unused-locals.json: N108 unchanged, S7307 current hashes, eight unchanged authorities. IR004 install/prebuild/affected Claude1file1test Pass/0skips inspected and attributed, not rerun. IR004 owned scratch independently absent; remaining IR003 execution retains limits.
+- Supported scenario/material-premise changes: none; ENG-DEAD basis satisfied. No runtime, performance or architecture conclusion inferred from deleting an unused binding.
+- Recommended sole recipient `/software_engineering_team/api_e2e_engineer` under fresh sourcePass rule. Current affected S API validation still required, especially S04/S05; N01–03 unchanged proof carries. No old filesystem/editor/VM/provider campaign or new approval.
+- AC007/fresh targets/ordered N→S and known stale S RELEASE.md R1 tail remain Delivery-owned. No source/test edits by reviewer or live resources; prior entries preserved. No target merge/push/tag/release/deploy/TaskDone/user verification.
