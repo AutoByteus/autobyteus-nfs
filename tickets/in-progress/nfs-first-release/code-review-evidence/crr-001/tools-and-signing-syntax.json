@@ -1,0 +1,47 @@
+[
+  {
+    "argv": [
+      "sw_vers"
+    ],
+    "exit": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.5.2\nBuildVersion:\t\t25F84\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "uname",
+      "-m"
+    ],
+    "exit": 0,
+    "stdout": "arm64\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/bin/actionlint",
+      "-version"
+    ],
+    "exit": 0,
+    "stdout": "1.7.11\ninstalled by building from source\nbuilt with go1.26.0 compiler for darwin/arm64\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/bin/shellcheck",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "ShellCheck - shell script analysis tool\nversion: 0.11.0\nlicense: GNU General Public License, version 3\nwebsite: https://www.shellcheck.net\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "bash",
+      "-n",
+      "packaging/sign-macos.sh"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

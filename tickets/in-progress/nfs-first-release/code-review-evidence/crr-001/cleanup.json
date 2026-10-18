@@ -1,0 +1,7 @@
+{
+  "scratch": "/Users/normy/nfs-release-crr001-jox69gsx",
+  "scratch_absent": true,
+  "source_inputs_unchanged": 119,
+  "protected_ticket_inputs_unchanged": 775,
+  "resources": "Only owned source/HOME/TMPDIR; all subprocesses synchronous/completed. No hosted/VM/container/mount/provider/credential/registry action."
+}

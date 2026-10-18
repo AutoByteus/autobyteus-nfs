@@ -1,0 +1,92 @@
+{
+  "review": "CRR-001",
+  "source_archive": "/Users/normy/nfs-release-crr001-jox69gsx/source",
+  "input_count": 119,
+  "commands": [
+    {
+      "name": "python-version",
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.034
+    },
+    {
+      "name": "python",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 30.194
+    },
+    {
+      "name": "actionlint",
+      "argv": [
+        "actionlint",
+        ".github/workflows/release-nfs.yml"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.153
+    },
+    {
+      "name": "bash-syntax",
+      "argv": [
+        "bash",
+        "-n",
+        "scripts/public/nfs/install.sh",
+        "packaging/sign-macos.sh"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.007
+    },
+    {
+      "name": "shellcheck",
+      "argv": [
+        "shellcheck",
+        "scripts/public/nfs/install.sh",
+        "packaging/sign-macos.sh"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.101
+    },
+    {
+      "name": "source-hash",
+      "argv": [
+        "python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.088
+    },
+    {
+      "name": "publish-refusal",
+      "argv": [
+        "python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "exit": 1,
+      "expected": 1,
+      "seconds": 0.088
+    }
+  ],
+  "all_expected": true,
+  "go": "Not rerun: Go/runtime unchanged; current IR001 native race/vet/build evidence attributed, no Go on reviewer PATH.",
+  "limits": "Local Python/shell/static checks only. External/signing doubles do not qualify hosted/physical/public release."
+}
