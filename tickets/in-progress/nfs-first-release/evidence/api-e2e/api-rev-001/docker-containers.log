@@ -1,0 +1,5 @@
+$ docker ps --format {{.Names}}	{{.Image}}	{{.Status}}
+autobyteus-server-2	autobyteus/autobyteus-server:beta	Up 5 hours
+autobyteus-server-1	autobyteus/autobyteus-server:beta	Up 5 hours
+autobyteus-server-0	autobyteus/autobyteus-server:beta	Up 5 hours
+buildx_buildkit_multi-platform-builder0	de10faf919fc	Up 10 days

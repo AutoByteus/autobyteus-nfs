@@ -1,0 +1,21 @@
+{
+  "native_darwin": {
+    "packages_pass": 7,
+    "top_tests_pass": 59,
+    "all_tests_pass": 252,
+    "skips": [
+      {
+        "package": "github.com/AutoByteus/autobyteus-nfs/internal/platform",
+        "test": "TestInstallerDirectoryModeChild"
+      }
+    ]
+  },
+  "python": {
+    "collected": 38,
+    "executed": 37,
+    "skips": 1,
+    "skip_reason": "Standalone Go-child mode; fresh native Go parent executes it"
+  },
+  "narrow_tests": "Overlap broad; do not unique-add",
+  "actual_CLI_git_controls": 5
+}

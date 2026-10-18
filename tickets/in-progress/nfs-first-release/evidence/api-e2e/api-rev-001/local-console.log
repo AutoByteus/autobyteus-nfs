@@ -1,0 +1,13 @@
+python-version 0
+python-release_records 0
+python-release_publication 0
+python-release_signing 0
+python-release_workflow 0
+python-installer_fixture 0
+python-all 0
+actionlint 0
+installer-syntax 0
+signing-syntax 0
+shellcheck 0
+source-hash 0
+publish-refusal 1

@@ -1,0 +1,25 @@
+{
+  "workflowSha256": "7887028865429c43ecaed3653f58d3ce08141fd7105a78ed2592b8490d4d9944",
+  "exactExtractedLines": "args=()\nif [[ \"$MODE\" == fresh ]]; then args+=(--qualified --candidate work/candidate); fi\npython3 packaging/release.py --tag \"$TAG\" --engine-image \"$image\" --engine-manifest work/candidate/engine/engine-manifest.json --engine-artifacts work/candidate/engine --target \"$TARGET\" --output cmd/autobyteus-nfs/release.json \"${args[@]}\"\n",
+  "rows": [
+    {
+      "shell": "/bin/bash",
+      "version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "mode": "candidate",
+      "exit": 1,
+      "called": false,
+      "log": "mac-array-system-candidate.log"
+    },
+    {
+      "shell": "/bin/bash",
+      "version": "GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)",
+      "mode": "fresh",
+      "exit": 0,
+      "called": true,
+      "log": "mac-array-system-fresh.log"
+    }
+  ],
+  "scratch": "/Users/normy/nfs-first-array-api001-c_xe0cgc",
+  "scratchAbsent": true,
+  "scope": "Exact workflow shell expansion reproduction; stubbed python boundary, not filesystem/signing/engine proof"
+}

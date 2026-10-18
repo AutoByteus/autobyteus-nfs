@@ -1,0 +1,4 @@
+$ /bin/bash /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/mac-array-exact-snippet.sh
+GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)
+MODE=candidate
+/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/mac-array-exact-snippet.sh: line 5: args[@]: unbound variable

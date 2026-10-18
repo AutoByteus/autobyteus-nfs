@@ -1,0 +1,19 @@
+$ /usr/bin/python3 -m unittest discover -s scripts/tests -p test_nfs_release_records.py -v
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source
+test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest) ... /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/zipfile.py:1505: UserWarning: Duplicate name: 'a'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_complete_candidate_qualification_payload (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_executed_workflow_and_qualified_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_new_executables_invalidate_production_hash_not_qualification (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_qualification_missing_failed_duplicate_inapplicable_and_consent (test_nfs_release_records.ReleaseRecordsTest) ... ok
+test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.804s
+
+OK

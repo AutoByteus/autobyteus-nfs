@@ -1,0 +1,2 @@
+$ git ls-remote origin refs/heads/main refs/heads/codex/nfs-first-release refs/tags/v0.1.0
+7e375984be2bea7a4d536e43cc59d6bc2b116870	refs/heads/main

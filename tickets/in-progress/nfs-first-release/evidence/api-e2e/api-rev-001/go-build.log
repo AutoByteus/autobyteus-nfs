@@ -1,0 +1,2 @@
+$ /Users/normy/nfs-first-api001-bjhz2hiu/go/bin/go build -o /Users/normy/nfs-first-api001-bjhz2hiu/out/autobyteus-nfs ./cmd/autobyteus-nfs
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source

@@ -1,0 +1,206 @@
+[
+  {
+    "name": "python-version",
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.342,
+    "passed": true
+  },
+  {
+    "name": "python-release_records",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_release_records.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 2.181,
+    "passed": true
+  },
+  {
+    "name": "python-release_publication",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_release_publication.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 2.533,
+    "passed": true
+  },
+  {
+    "name": "python-release_signing",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_release_signing.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 7.319,
+    "passed": true
+  },
+  {
+    "name": "python-release_workflow",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_release_workflow.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.227,
+    "passed": true
+  },
+  {
+    "name": "python-installer_fixture",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_installer_fixture.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 4.139,
+    "passed": true
+  },
+  {
+    "name": "python-all",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 15.779,
+    "passed": true
+  },
+  {
+    "name": "actionlint",
+    "command": [
+      "/opt/homebrew/bin/actionlint",
+      ".github/workflows/release-nfs.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.185,
+    "passed": true
+  },
+  {
+    "name": "installer-syntax",
+    "command": [
+      "/bin/bash",
+      "-n",
+      "scripts/public/nfs/install.sh"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.011,
+    "passed": true
+  },
+  {
+    "name": "signing-syntax",
+    "command": [
+      "/bin/bash",
+      "-n",
+      "packaging/sign-macos.sh"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.01,
+    "passed": true
+  },
+  {
+    "name": "shellcheck",
+    "command": [
+      "/opt/homebrew/bin/shellcheck",
+      "packaging/sign-macos.sh",
+      "scripts/public/nfs/install.sh"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.133,
+    "passed": true
+  },
+  {
+    "name": "source-hash",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 0,
+    "expected": 0,
+    "seconds": 0.288,
+    "passed": true
+  },
+  {
+    "name": "publish-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "cwd": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "exit": 1,
+    "expected": 1,
+    "seconds": 0.281,
+    "passed": true
+  }
+]

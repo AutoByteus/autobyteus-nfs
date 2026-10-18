@@ -1,0 +1,11 @@
+$ /usr/bin/python3 -m unittest discover -s scripts/tests -p test_nfs_release_workflow.py -v
+cwd /Users/normy/nfs-first-api001-bjhz2hiu/source
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.012s
+
+OK

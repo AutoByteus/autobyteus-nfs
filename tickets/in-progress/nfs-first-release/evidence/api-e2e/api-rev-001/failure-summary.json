@@ -1,0 +1,30 @@
+{
+  "id": "R03-F001",
+  "case": "R03",
+  "acceptanceCriteria": [
+    "AC001",
+    "AC007"
+  ],
+  "secondaryBlocked": [
+    "AC002",
+    "AC003",
+    "AC004",
+    "AC005",
+    "AC006"
+  ],
+  "preliminaryClassification": "Local Fix",
+  "recommendedOwner": "implementation_engineer after code_reviewer failure-origin review",
+  "origin": "Release workflow executable shell path, not NFS filesystem/runtime, signing credentials or physical-host dependency",
+  "source": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "run": 39111348848,
+  "attempt": 1,
+  "jobs": [
+    117628928559,
+    117628928627
+  ],
+  "expected": "Candidate-mode native job generates unqualified metadata then runs native race/vet/Python/build/version/archive on both Mac arches",
+  "observed": "System /bin/bash aborts exact empty args[@] expansion with set -u before metadata/native checks; both exit1. Linux jobs succeed; candidate/payload/publish skipped.",
+  "reproduction": "python3 tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-001/probe-mac-array.py",
+  "remoteEffects": "Build-only artifacts retained; no complete candidate; tag/release/main unchanged; publisher skipped, build push false; no signing or registry login path executed.",
+  "next": "Fix supported Mac candidate shell invocation and add bounded executable regression through supported shell; source/workflow hash changes require new current candidate and relevant rerun, no reuse as complete qualification."
+}

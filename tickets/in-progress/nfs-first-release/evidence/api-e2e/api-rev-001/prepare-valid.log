@@ -1,0 +1,8 @@
+$ /usr/bin/python3 packaging/release.py --operation prepare --tag v0.1.0 --source-commit 518f4b51e251edaa6b5664f71c7171bde57bafc9 --directory /Users/normy/nfs-first-api001-bjhz2hiu/valid-work
+cwd /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release
+{
+  "tag": "v0.1.0",
+  "source": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "mode": "candidate",
+  "base": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55"
+}

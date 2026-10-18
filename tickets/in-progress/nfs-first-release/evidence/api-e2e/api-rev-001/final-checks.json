@@ -1,0 +1,118 @@
+{
+  "sourceCount": 119,
+  "sourceMismatches": [],
+  "protected_ticketCount": 795,
+  "protected_ticketMismatches": [],
+  "concurrentDeliveryFiles": {
+    "tickets/in-progress/nfs-first-release/docs-sync-report.md": "9f6469a2675b755ea6ae9a21f3f4c3cc8e2f683ffec4bf58bc67f6664ab99dac",
+    "tickets/in-progress/nfs-first-release/handoff-summary.md": "5de7d55a708bcd230be1cdf7b7f2c4c7967ac3074688aa78d2512511e4deb919",
+    "tickets/in-progress/nfs-first-release/release-deployment-report.md": "8a470e30fcf754f44bbc79704685dcf8fa07c4bc1350a074b91f87594554c142",
+    "tickets/in-progress/nfs-first-release/delivery-revision-record.md": "c68101dd24350bbd3c6b0bad0d81c11a643c9d42761b1b648cb381f272f6118d",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/post-staging-observation.json": "984b91577532b3d5e409dee7a42f3c9b75b14acca80c1d2e29e4cfe9545b3b1b",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/staged-source-receipt.json": "832f48366e4839588a26ab131ccfe5a14922b538c75a79af8e8ae95d0a19bba1",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/final-checks.json": "4d03671a0c1d8e69f8fb8b0a2fecb8de8644901fea34737e3c56024c596f4d82",
+    "tickets/in-progress/nfs-first-release/delivery-evidence/dr-001/routing.json": "7461989d741e11255f24804be09f8648f139b9509f8d6bf4f89181e89cd8daa8"
+  },
+  "initialScratchRecord": {
+    "path": "/Users/normy/nfs-first-api001-bjhz2hiu",
+    "source": "/Users/normy/nfs-first-api001-bjhz2hiu/source",
+    "owner": "API001 personal local release checks",
+    "head": "518f4b51e251edaa6b5664f71c7171bde57bafc9"
+  },
+  "localCleanup": {
+    "utc": "2026-10-18T08:22:51.087882+00:00",
+    "source_inputs": 119,
+    "source_mismatches": [],
+    "protected_inputs": 795,
+    "protected_changes": [],
+    "external_owner_change": "Reviewer appended handoff receipt in518f4b5; inspected exact docs-only delta, preserved",
+    "head": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+    "head_delta_paths": [],
+    "own_host_processes": [],
+    "own_cwds": [],
+    "scratch": "/Users/normy/nfs-first-api001-bjhz2hiu",
+    "containers_created": 0,
+    "shared_live_containers_untouched": true,
+    "real_candidate_created": false,
+    "qualification_lock_unchanged": true,
+    "scratch_removed": true
+  },
+  "arrayScratchAbsent": true,
+  "ownedContainersCreated": 0,
+  "ownedMountedStorageCreated": 0,
+  "runningOwnedMonitors": [],
+  "runId": 39111348848,
+  "runAttempt": 1,
+  "runConclusion": "failure",
+  "jobCounts": {
+    "success": 7,
+    "failure": 2,
+    "skipped": 3,
+    "cancelled": 0
+  },
+  "noCompleteCandidate": true,
+  "retainedRemoteArtifacts": [
+    {
+      "id": 12131060083,
+      "name": "nfs-native-linux-amd64",
+      "digest": "sha256:4091a9a6b89fcba5ad60f312dd7f29decac62472f14ab9b66cdc1b769d818ea5",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 6948891
+    },
+    {
+      "id": 12130498280,
+      "name": "nfs-engine-inputs",
+      "digest": "sha256:9590ff2c28c37fbaf0ebf6c13a02c0b70b09c950fa46d15ef32a8e58de282626",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 5266265
+    },
+    {
+      "id": 12130483509,
+      "name": "nfs-oci",
+      "digest": "sha256:a3640d32635b687a7becd60b27d235851060b1ca19201f6d6717dd791314f5fc",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 96322900
+    },
+    {
+      "id": 12130413582,
+      "name": "nfs-engine-package-amd64",
+      "digest": "sha256:0e59b6057a0e248c69c8fa34e91cd07ed452028629328bf3ac6f2c0a86b1a5a6",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 2654365
+    },
+    {
+      "id": 12130219457,
+      "name": "AutoByteus~autobyteus-nfs~EH9B2J.dockerbuild",
+      "digest": "sha256:8dabc2a7341c14f146aa4562f8308d448b3c9bfd6274f0b7d0b9ed75bbfe3a0d",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 60287
+    },
+    {
+      "id": 12130049974,
+      "name": "nfs-native-linux-arm64",
+      "digest": "sha256:4f8b3d0bce96f1ba317c5b949fcb49e1ee7160b98d70671a0727ef19324dbb2d",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 6343289
+    },
+    {
+      "id": 12130003189,
+      "name": "nfs-engine-package-arm64",
+      "digest": "sha256:3a48c105b8af0d8e25b92351371633dc53d1186da29c0427d9d6978af70e9b64",
+      "expiresAt": "2027-01-16T08:24:58Z",
+      "size": 2611842
+    }
+  ],
+  "retentionLimit": "Partial failed-attempt build artifacts only. Not qualified, no complete candidate, no successful envelope. Kept on Actions, no local download; expiry authoritative.",
+  "ledgerPlannedRows": 50,
+  "ledgerFinalStates": {
+    "Pass": 3,
+    "Fail": 1,
+    "Blocked": 43,
+    "Not Tested": 3
+  },
+  "credentialPatternFiles": [],
+  "utc": "2026-10-18T08:35:43.833831+00:00",
+  "head": "518f4b51e251edaa6b5664f71c7171bde57bafc9",
+  "productAndDurableChangesByAPI": [],
+  "pass": true
+}
