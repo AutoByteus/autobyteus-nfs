@@ -53,3 +53,11 @@ Independent architecture review of SR003 against R2 and NFS design/testing/relea
 
 ## Routing
 Fresh get_handoff_rules returned the Large/High Architecture Design Complete rule. Only that rule matches; exact recipient **/software_engineering_team/architecture_reviewer**. Requirements R2 are approved, design SR003 is complete and the package is ready for independent architecture review. Raw rules and selection are persisted in evidence/design-routing.json. Send this handoff plus the four own canonical documents and two selected intake receipts; no implementation/API/PM duplicate dispatch. The send_message_to tool receipt is the delivery record. Stop after successful handoff.
+
+
+## User-requested resume after power interruption
+Observed 2026-10-18T07:16:50.146034+00:00. User: “continue sorry there was a poweroff”. Saved design commit cbf7b35edc3fae86d90800003a1720528666d67e is intact; worktree was clean. No local review/implementation report was present at this checkpoint; this is not proof of the reviewer’s in-memory state. All six GitHub secret names/timestamps still exactly match the successful provisioning receipt; no secret reset/export/re-entry needed. Temporary private export directory remains absent.
+
+Resume the **existing SR003 review** from its durable checkpoint; this is not a new design round or a request to repeat completed work. If review/forwarding already finished, reconcile/report that existing outcome rather than duplicate dispatch. Requirements/design/classification unchanged. Fresh routing will be recorded in evidence/poweroff-routing.json; evidence/poweroff-resume.json records the narrow restart checks. All original scope/approval/workspace/evidence/next-output context above remains controlling.
+
+Fresh routing selected only `/software_engineering_team/architecture_reviewer` under the unchanged Large/High Architecture Design Complete rule. Resume request is directed to that existing owner; no other specialist or PM notification.

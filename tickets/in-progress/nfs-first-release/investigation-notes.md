@@ -138,3 +138,7 @@ All paths relative to this ticket unless absolute. Owner SD; all evidence-only/n
 
 ## Current result / remaining uncertainty
 Architecture Design Complete / SR003 / Large / High, requirements R2 Approved. Ready for independent architecture review, not publication. No code/test/CI/runtime check or successful signing/qualification claim. No owned runtime resources; certificate temporary files cleaned. Worktree contains only SD task artifacts. Remaining execution prerequisites: actual candidate, applicable physical/independent host-mode/user verification, real credential validation, exact GHCR public visibility and hosted/public download proof. The design specifies failure dispositions without inventing unavailable hosts or closing the Task. Core next action is independent design review, then configured implementation/validation/delivery.
+
+
+## Administrative poweroff recovery evidence (no new solution round)
+User requested continuation. evidence/poweroff-resume.json (SD; REQ010/AC008; evidence-only) records intact clean cbf7b35 checkpoint, unchanged six-secret metadata and absent owned export folder. No local review/implementation report was present; reviewer running state is unknown. Existing SR003/R2 authority unchanged. Fresh routing is recorded in evidence/poweroff-routing.json (SD; administrative only). No credentials read/replaced, tests/CI/runtime/publication performed, or old Task reopened.

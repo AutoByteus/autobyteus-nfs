@@ -44,3 +44,7 @@
 - Review artifacts: N/A — not yet applicable to this task. Prior extraction Pass is not reused as release/platform qualification. No implementation/source tests/CI/publication/runtime action by SD.
 - Result: Architecture Design Complete. Next expected independent architecture review under freshly retrieved rules; route recorded in solution-design-handoff/evidence/design-routing.json. If review passes, configured downstream specialist owns implementation handoff; no duplicate forwarding on informational Pass.
 - Remaining prerequisites: actual retained candidate; current physical/independent host-mode evidence and genuine user verification; real signing/notary; GHCR anonymous publication access; actual hosted release and public-download/install proof. Missing execution prerequisites do not block this completed technical design and never authorize silent target/gate reduction or Task closure.
+
+
+## Administrative resume after power interruption (SR003 unchanged)
+User explicitly requested continuation after poweroff. Saved cbf7b35 design checkpoint intact and initially clean; credential metadata unchanged and temporary export still absent. No requirements/design change or new solution round. evidence/poweroff-resume.json and the handoff resume section instruct existing review checkpoint recovery without duplicated completed work or credential setup.
