@@ -1,0 +1,32 @@
+{
+  "review": "CRR-004",
+  "decision": "Fail",
+  "classification": "Local Fix",
+  "source_score": 99,
+  "open_findings": [
+    "CR-002"
+  ],
+  "basis": "R3/SR004 Approved / SR004 Ready / ARCH002",
+  "source_commit": "3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3",
+  "source_inputs_unchanged": 120,
+  "protected_prior_ticket_unchanged": 1109,
+  "intentional_authoritative_updates": [
+    "tickets/in-progress/nfs-first-release/code-review-report.md",
+    "tickets/in-progress/nfs-first-release/code-review-revision-record.md"
+  ],
+  "prior_history_prefix_unchanged_bytes": 9350,
+  "delivery_untracked_unchanged_unstaged": 16,
+  "structural_checks": 24,
+  "score_categories": 10,
+  "current_product_commands": 13,
+  "all_product_commands_expected": true,
+  "static_cleanup_audit": "Two corroborated unused imports remain, sole CR-002",
+  "review_document_hashes": {
+    "code-review-report.md": "d0f6fe6c016d0034e285ce306e0ddb543a2c83ed855c1751e4915753d997d1ad",
+    "code-review-revision-record.md": "06a9c19b8134c4cfd769d3a49bdea3cacc729f02053477b28c3ce6c92d739e7e"
+  },
+  "source_test_edits_by_reviewer": false,
+  "scope": "standalone NFS only",
+  "scratch_removed": true,
+  "remote_live_signing_release_actions": false
+}

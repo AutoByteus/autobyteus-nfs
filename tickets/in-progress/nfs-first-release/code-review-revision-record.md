@@ -83,3 +83,27 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision ID | Canonical Review Report | Entry Point / Trigger | Prior Result | Current Result | Affected Finding IDs |
 | --- | --- | --- | --- | --- | --- |
 | CRR-003 | code-review-report.md | Implementation Review / IR-002 Local Fix | CRR002 Fail | Pass100 — source scope only | CR-001 resolved |
+
+
+### CRR-004 — R3 release-first implementation full re-audit
+
+- Date2026-10-18. Implementation Review / round4 / **Full Re-Audit**: replacement cross-language readiness/runtime/provenance contracts span owners, not just CR-001. Current canonical code-review-report.md authoritative.
+- Trigger IR003, R3/SR004 Approved / SR004 Ready / ARCH-REV-002 Pass; approval-record-sr004/postpublication-testing-plan and DR003 exact direction. Large/High unchanged. Only NFS repository; no application/Guide/superrepo/old-field campaign.
+- Input7cc8826ba381dd3e3531aba5e04d5d07782d19b2; source3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3 versus prior8436d0cf. Prior CRR003 Pass100 covered R2; current **Fail99 / Local Fix**. Old API002 Blocked73.57/build39113335636/artifact12131531399 not relabeled; no new API result.
+- BEH001–006 confirmed; DS1–5/ownership/current-schema/transition/disclosure/signing/immutable-publication inspected. Full24 structural checks and10-category scorecard completed. No runtime behavior/design gap established; sole deduction Cleanup9.0 for CG012/CR-002.
+
+#### Prior Finding Resolution
+
+| Finding | Prior status | Current status | Evidence / related revisions |
+| --- | --- | --- | --- |
+| CR-001 | Source-resolved CRR003/IR002 | Remains resolved | Nonempty Bash3.2 argv retained; current prefix tests now assert exact --release flag. Old API001 failure unchanged. |
+
+- New **CR-002 Open**: remove only unused LOCK import at packaging/engine/manifest.py:8 and unused readiness import at scripts/tests/nfs_release_fixture.py:13. Core7/touched-file contract makes this ticket cleanup even for pre-existing LOCK; no user failure invented. AST/caller inspection corroborated; actual source.LOCK/readiness owners remain live. Low-severity implementation-owned Local Fix, no design/approval change.
+- Reviewer personally executed exact120-input independent APFS copy: Macarm64 Go1.27.2 race7packages/vet/build/version; Python45collected44executed1childskip; actionlint/Bash/ShellCheck/hash/null-readiness refusal. All product checks pass. Initial unused-import audit assertion identified the finding, not failed product behavior. IR003 Linux/compile/mutations are attributed only, not extra reviewer runs.
+- Source hash d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac is default-null-engine/readiness, not a real candidate. Any production import cleanup changes engine recipe/hash; new candidate already required after re-review.
+- Own scratch/toolchain/cache removed; source120/prior-ticket inputs and16 Delivery untracked files preserved. Four raw Go whitespace lines explicitly excepted, no output altered. Prior CRR001–003 byte prefix preserved. No live resource/credentials/CI/remote/merge/push/release/TaskDone/Terminal action.
+- Fresh most-specific source Local Fix rule selects Implementation only, recorded in code-review-evidence/crr-004/routing.json. No duplicate API/Designer/Delivery/PM dispatch. Postpublication field/user plan custody unchanged; no host questionnaire.
+
+| Revision | Canonical report | Trigger | Prior result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-004 | code-review-report.md | IR003 / R3 shared contract replacement | CRR003 Pass100 (R2) | Fail99 / Local Fix | CR-002 Open; CR-001 remains resolved |

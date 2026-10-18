@@ -1,0 +1,10 @@
+# CR-002 — unused local import bindings
+
+Independent governing contract: code-reviewer/shared design Core Principle7 and Ticket Scope require removing dead imports in touched files, including pre-existing imports. This is a structural contract finding, not a hypothesized user failure.
+
+- packaging/engine/manifest.py:8 imports LOCK from source but never loads that name. All functions use VERSION, NAMES, identity or source_identity. Existing external callers import embed/validate/verify_files or access those functions via manifest; no manifest.LOCK, from-manifest LOCK import or reflective public/config entry exists. Source.py LOCK and build.py LOCK remain live and MUST NOT be removed. This unused local binding was already present in IR002 but IR003 edits the file's lock writer, so touched-file cleanup is mandatory now.
+- scripts/tests/nfs_release_fixture.py:13 replaces old unused qualification binding with unused readiness. Fixture uses candidate/i/payload only. Both test consumers import Fixture/TAG/SHA (records also make_oci), then import readiness directly from release_support for their actual assertions. No fixture readiness re-export/reflective consumer. payload already imports readiness; removing the unused fixture binding does not remove readiness validation.
+
+AST binding/use audit across every changed Python source/test found precisely these two candidates, followed by whole current non-ticket caller searches and source inspection. There is no repository configured Python unused-import linter; this is an explicit source audit, not a compiler diagnostic. No runtime/test/assertion or module deletion requested. Remove only the two names from their existing import statements; preserve live owner imports and behavior.
+
+Initial production-import audit assertion stopped on LOCK. The observation was then expanded to all changed Python files and corroborated, yielding readiness too. This was a finding-discovery signal, not a failed product test or a harness correction. All independently executed current product tests completed successfully. Raw tool output retained in conversation; structured observations in unused-imports.json.

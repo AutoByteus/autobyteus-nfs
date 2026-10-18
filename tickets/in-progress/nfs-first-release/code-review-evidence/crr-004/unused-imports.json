@@ -1,0 +1,15 @@
+{
+  "method": "AST import bindings versus Name references, followed by caller/dynamic/public-entry inspection",
+  "observations": [
+    {
+      "path": "packaging/engine/manifest.py",
+      "line": 8,
+      "binding": "LOCK"
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "line": 13,
+      "binding": "readiness"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:168: space before tab in indent.
++    	comma-separated trusted private hosts/subnets
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:170: space before tab in indent.
++    	apple, ganesha-native, ganesha-docker
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:172: space before tab in indent.
++    	nonsecret printed connection JSON
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:174: space before tab in indent.
++    	selected local Unix daemon socket
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:176: space before tab in indent.
++    	export/mount users are drained and interruption approved
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:178: space before tab in indent.
++    	private IPv4 reachable by all clients
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:180: space before tab in indent.
++    	structured result
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:182: space before tab in indent.
++    	actual client root
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:184: space before tab in indent.
++    	chosen source folder (existing files stay in place)
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:186: space before tab in indent.
++    	explicit setup administration consent
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:190: space before tab in indent.
++    	comma-separated trusted private hosts/subnets
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:192: space before tab in indent.
++    	apple, ganesha-native, ganesha-docker
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:194: space before tab in indent.
++    	nonsecret printed connection JSON
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:196: space before tab in indent.
++    	selected local Unix daemon socket
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:198: space before tab in indent.
++    	export/mount users are drained and interruption approved
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:200: space before tab in indent.
++    	private IPv4 reachable by all clients
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:202: space before tab in indent.
++    	structured result
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:204: space before tab in indent.
++    	actual client root
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:206: space before tab in indent.
++    	chosen source folder (existing files stay in place)
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:208: space before tab in indent.
++    	explicit setup administration consent
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:366: trailing whitespace.
++        
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:369: trailing whitespace.
++        
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:383: trailing whitespace.
++        
+tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log:384: trailing whitespace.
++        

@@ -1,0 +1,16 @@
+{
+  "exceptions": [
+    {
+      "file": "tickets/in-progress/nfs-first-release/code-review-evidence/crr-004/go-race.log",
+      "lines": [
+        366,
+        369,
+        383,
+        384
+      ],
+      "sha256": "0b1ef5f43af89e35f2f13cc3ec417cdc156ad59684ad11a1f87926eadf9ae9da",
+      "reason": "Raw Go diagnostic whitespace preserved verbatim; not source/code whitespace."
+    }
+  ],
+  "nonraw_clean": true
+}
