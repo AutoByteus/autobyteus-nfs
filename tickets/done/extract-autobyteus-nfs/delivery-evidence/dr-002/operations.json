@@ -1,0 +1,545 @@
+[
+  {
+    "at": "2026-10-18T04:37:59.175368+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:37:59.719997+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:00.220925+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:00.717938+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:02.731841+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "personal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From github.com-ryan:AutoByteus/autobyteus-workspace\n * branch                  personal   -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-18T04:38:02.750351+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/personal"
+    ],
+    "exit": 0,
+    "stdout": "2f211340ee36b81cef74a74b2e042b5102c269d3\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:02.771103+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "origin/personal",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:02.786793+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:02.803303+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "9b72c8d1c8d6f7e294af2c23fb497211c67f930c\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:07.229946+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "push",
+      "-u",
+      "origin",
+      "codex/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "branch 'codex/extract-autobyteus-nfs' set up to track 'origin/codex/extract-autobyteus-nfs'.\n",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n * [new branch]      codex/extract-autobyteus-nfs -> codex/extract-autobyteus-nfs\n"
+  },
+  {
+    "at": "2026-10-18T04:38:07.758432+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:08.245268+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:09.995012+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "remote: \nremote: Create a pull request for 'main' on GitHub by visiting:        \nremote:      https://github.com/AutoByteus/autobyteus-nfs/pull/new/main        \nremote: \nTo https://github.com/AutoByteus/autobyteus-nfs.git\n * [new branch]      HEAD -> main\n"
+  },
+  {
+    "at": "2026-10-18T04:38:10.474053+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:28.853077+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:33.166889+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "push",
+      "-u",
+      "origin",
+      "codex/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "branch 'codex/extract-autobyteus-nfs' set up to track 'origin/codex/extract-autobyteus-nfs'.\n",
+    "stderr": "remote: \nremote: Create a pull request for 'codex/extract-autobyteus-nfs' on GitHub by visiting:        \nremote:      https://github.com/AutoByteus/autobyteus-workspace/pull/new/codex/extract-autobyteus-nfs        \nremote: \nremote: GitHub found 956 vulnerabilities on AutoByteus/autobyteus-workspace's default branch (24 critical, 425 high, 437 moderate, 70 low). To find out more, visit:        \nremote:      https://github.com/AutoByteus/autobyteus-workspace/security/dependabot        \nremote: \nTo github.com-ryan:AutoByteus/autobyteus-workspace.git\n * [new branch]            codex/extract-autobyteus-nfs -> codex/extract-autobyteus-nfs\n"
+  },
+  {
+    "at": "2026-10-18T04:38:35.086156+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "personal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From github.com-ryan:AutoByteus/autobyteus-workspace\n * branch                  personal   -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-18T04:38:35.109738+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/personal"
+    ],
+    "exit": 0,
+    "stdout": "2f211340ee36b81cef74a74b2e042b5102c269d3\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:35.417015+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "finalize/extract-autobyteus-nfs",
+      "origin/personal"
+    ],
+    "exit": 0,
+    "stdout": "branch 'finalize/extract-autobyteus-nfs' set up to track 'origin/personal'.\n",
+    "stderr": "Switched to a new branch 'finalize/extract-autobyteus-nfs'\n"
+  },
+  {
+    "at": "2026-10-18T04:38:36.180213+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "merge",
+      "--no-ff",
+      "codex/extract-autobyteus-nfs",
+      "-m",
+      "Merge standalone NFS extraction and filesystem-only application boundary"
+    ],
+    "exit": 0,
+    "stdout": "Merge made by the 'ort' strategy.\n .github/workflows/release-nfs.yml                  | 283 ---------\n RELEASE.md                                         |  23 +-\n autobyteus-nfs/.gitignore                          |   3 -\n autobyteus-nfs/LICENSE                             | 661 ---------------------\n autobyteus-nfs/README.md                           | 236 --------\n autobyteus-nfs/THIRD_PARTY_NOTICES                 |  31 -\n autobyteus-nfs/cmd/autobyteus-nfs/main.go          |  26 -\n autobyteus-nfs/cmd/autobyteus-nfs/release.json     |   5 -\n autobyteus-nfs/go.mod                              |   3 -\n autobyteus-nfs/internal/backend/apple.go           | 146 -----\n autobyteus-nfs/internal/backend/apple_apply.go     | 141 -----\n autobyteus-nfs/internal/backend/apple_startup.go   | 105 ----\n .../internal/backend/apple_startup_test.go         | 169 ------\n autobyteus-nfs/internal/backend/backend_test.go    |  74 ---\n autobyteus-nfs/internal/backend/cleanup_test.go    | 170 ------\n .../internal/backend/engine-assets/README          |   3 -\n .../internal/backend/engine_assets_linux.go        |   6 -\n .../internal/backend/engine_assets_other.go        |  10 -\n autobyteus-nfs/internal/backend/engine_bundle.go   | 115 ----\n .../internal/backend/engine_bundle_test.go         | 136 -----\n autobyteus-nfs/internal/backend/engine_staging.go  |  55 --\n autobyteus-nfs/internal/backend/ganesha.go         |  58 --\n autobyteus-nfs/internal/backend/ganesha_native.go  | 150 -----\n autobyteus-nfs/internal/backend/ubuntu_packages.go | 159 -----\n .../internal/backend/ubuntu_packages_test.go       | 151 -----\n autobyteus-nfs/internal/cli/cli_test.go            |  53 --\n autobyteus-nfs/internal/cli/engine_release_test.go |  48 --\n autobyteus-nfs/internal/cli/inputs.go              | 166 ------\n autobyteus-nfs/internal/cli/install.go             | 126 ----\n autobyteus-nfs/internal/cli/interactive-setup.go   |  94 ---\n autobyteus-nfs/internal/cli/launcher.go            |  46 --\n autobyteus-nfs/internal/cli/run.go                 | 196 ------\n autobyteus-nfs/internal/cli/terminal.go            |  53 --\n autobyteus-nfs/internal/cli/verify-release.go      |  39 --\n autobyteus-nfs/internal/config/config_test.go      | 111 ----\n autobyteus-nfs/internal/config/connection.go       | 148 -----\n autobyteus-nfs/internal/config/source-marker.go    |  40 --\n autobyteus-nfs/internal/config/source_identity.go  |  23 -\n .../internal/config/source_identity_test.go        |  66 --\n autobyteus-nfs/internal/config/state.go            |  92 ---\n autobyteus-nfs/internal/config/store.go            | 128 ----\n autobyteus-nfs/internal/docker/attachment.go       |  93 ---\n autobyteus-nfs/internal/docker/client.go           | 140 -----\n autobyteus-nfs/internal/docker/docker_test.go      | 229 -------\n autobyteus-nfs/internal/docker/engine.go           | 149 -----\n autobyteus-nfs/internal/docker/exec.go             |  82 ---\n autobyteus-nfs/internal/docker/ownership.go        |  21 -\n autobyteus-nfs/internal/docker/probe_cleanup.go    |  52 --\n autobyteus-nfs/internal/docker/recovery.go         |  90 ---\n autobyteus-nfs/internal/docker/recreate.go         | 201 -------\n autobyteus-nfs/internal/docker/snapshot.go         | 221 -------\n .../internal/docker/start_observation.go           | 127 ----\n autobyteus-nfs/internal/docker/start_recovery.go   |  96 ---\n .../internal/docker/start_recovery_test.go         | 414 -------------\n autobyteus-nfs/internal/docker/volume.go           |  47 --\n autobyteus-nfs/internal/platform/commands.go       |  92 ---\n .../internal/platform/directory_modes_test.go      | 193 ------\n .../internal/platform/filesystem_darwin.go         |  33 -\n .../internal/platform/filesystem_linux.go          |  37 --\n .../platform/handle_syscalls_linux_amd64.go        |   5 -\n .../platform/handle_syscalls_linux_arm64.go        |   5 -\n autobyteus-nfs/internal/platform/handles_darwin.go |   4 -\n autobyteus-nfs/internal/platform/handles_linux.go  |  51 --\n autobyteus-nfs/internal/platform/jobs.go           | 114 ----\n autobyteus-nfs/internal/platform/lock.go           |  23 -\n .../internal/platform/mount-observation.go         | 110 ----\n autobyteus-nfs/internal/platform/mounts.go         | 160 -----\n autobyteus-nfs/internal/platform/platform_test.go  |  75 ---\n autobyteus-nfs/internal/platform/source.go         |  67 ---\n autobyteus-nfs/internal/platform/source_darwin.go  |  75 ---\n .../internal/platform/source_darwin_test.go        | 181 ------\n autobyteus-nfs/internal/platform/source_linux.go   |  14 -\n .../internal/platform/source_linux_test.go         |  44 --\n .../internal/platform/volume_identity.go           |  28 -\n .../internal/platform/volume_identity_test.go      |  57 --\n autobyteus-nfs/internal/platform/volume_plist.go   | 189 ------\n autobyteus-nfs/internal/service/probe.go           | 161 -----\n autobyteus-nfs/internal/service/probe_test.go      |  53 --\n autobyteus-nfs/internal/service/supervisor.go      |  31 -\n autobyteus-nfs/internal/setup/apply.go             | 216 -------\n autobyteus-nfs/internal/setup/detach_nodes.go      |  81 ---\n autobyteus-nfs/internal/setup/detach_nodes_test.go | 120 ----\n .../internal/setup/hosted_config_test.go           | 190 ------\n autobyteus-nfs/internal/setup/lifecycle.go         | 163 -----\n autobyteus-nfs/internal/setup/pending.go           | 148 -----\n autobyteus-nfs/internal/setup/plan.go              | 185 ------\n autobyteus-nfs/internal/setup/reconnect_nodes.go   |  68 ---\n .../internal/setup/reconnect_nodes_test.go         | 135 -----\n autobyteus-nfs/internal/setup/service.go           |  49 --\n autobyteus-nfs/internal/setup/setup_test.go        |  46 --\n .../internal/setup/source_binding_darwin_test.go   | 336 -----------\n autobyteus-nfs/internal/setup/status.go            |  80 ---\n autobyteus-nfs/packaging/Dockerfile                |  26 -\n autobyteus-nfs/packaging/RELEASE.md                |  77 ---\n autobyteus-nfs/packaging/engine/README.md          |  26 -\n autobyteus-nfs/packaging/engine/build.py           |  78 ---\n .../packaging/engine/get-dir-delegation.patch      |  22 -\n autobyteus-nfs/packaging/engine/manifest.py        |  97 ---\n autobyteus-nfs/packaging/engine/source-lock.json   |  27 -\n autobyteus-nfs/packaging/engine/source.py          |  71 ---\n autobyteus-nfs/packaging/release-lock.json         |  12 -\n autobyteus-nfs/packaging/release.py                | 102 ----\n autobyteus-nfs/testdata/attachment.json            |   7 -\n .../docs/modules/shared_network_workspaces.md      |  96 ++-\n .../acp/backend/acp-agent-run-backend-factory.ts   |  18 +-\n .../backend/agy-agent-run-backend-factory.ts       |   6 +-\n .../autobyteus-agent-run-backend-factory.ts        |   6 +-\n .../backends/autobyteus/native-shared-workspace.ts |  13 -\n .../backend/claude-agent-run-backend-factory.ts    |   8 +-\n .../claude/backend/claude-agent-run-context.ts     |   4 -\n .../claude/backend/claude-session-bootstrapper.ts  |  29 +-\n .../backends/claude/claude-workspace-resolver.ts   |   3 +-\n .../claude/claude-workspace-skill-materializer.ts  |  22 -\n .../claude/session/claude-session-cleanup.ts       |  11 +-\n .../claude/session/claude-session-manager.ts       |  13 +-\n .../claude/session/claude-session-query-options.ts |   4 +-\n .../backend/codex-agent-run-backend-factory.ts     |  18 +-\n .../codex/backend/codex-agent-run-context.ts       |  12 +-\n .../codex/backend/codex-thread-bootstrapper.ts     | 150 -----\n .../backends/codex/backend/codex-thread-cleanup.ts |  47 --\n .../backends/codex/backend/index.ts                |   1 -\n .../backends/codex/codex-workspace-resolver.ts     |   3 +-\n .../codex/codex-workspace-skill-materializer.ts    |  22 -\n .../backends/codex/thread/codex-thread-manager.ts  |   9 -\n .../grok/grok-build-agent-run-backend-factory.ts   |   2 -\n .../grok/grok-workspace-skill-materializer.ts      |  18 -\n .../backends/provider-preparation-guard.ts         |   4 -\n .../shared/prepare-private-runtime-skills.ts       |  11 +-\n .../backends/shared/runtime-skill-profile.ts       |  17 +\n .../providers/agent-provider-factory-builder.ts    |  16 -\n .../agent-execution/services/agent-run-manager.ts  |   7 +-\n .../services/shared-run-workspace-admission.ts     |  15 -\n ...reate-process-agent-provider-factory-builder.ts |   8 -\n .../client/codex-app-server-client-manager.ts      |   4 +-\n .../shared/scoped-project-git-environment.ts       |  11 -\n .../terminal-streaming/pty-session-manager.ts      |   5 +-\n .../src/workspaces/shared-workspace-binding.ts     |  79 ---\n .../shared-workspace-mount-observation.ts          |  47 --\n .../agent-package-private-skills.e2e.test.ts       |  60 +-\n .../tests/e2e/helpers/claude-live-agent-harness.ts |   6 +-\n .../codex-live-memory-persistence.e2e.test.ts      |  39 +-\n ...de-agent-websocket-interrupt-resume.e2e.test.ts |   6 +-\n .../codex-interrupted-compaction.e2e.test.ts       |   6 +-\n .../e2e/skills/github-skill-runtime-harness.ts     |  34 +-\n .../github-skill-sources-graphql.e2e.test.ts       |  12 +-\n .../tests/fixtures/codex-owned-terminal-cli.mjs    |   5 +\n .../tests/fixtures/grok-acp/fake-acp-agent.mjs     |  12 +-\n ...e-agent-run-backend-factory.integration.test.ts |   8 +-\n .../claude-session-manager.integration.test.ts     |  15 +-\n ...x-agent-run-backend-factory.integration.test.ts |  62 +-\n .../codex-thread-bootstrapper.integration.test.ts  | 523 ----------------\n .../brief-package-team-prompt.integration.test.ts  |  19 +-\n .../thread/codex-long-turn-cadence.probe.test.ts   |   5 +-\n .../codex-raw-vs-backend-cadence.probe.test.ts     |   5 +-\n .../codex-thread-manager.integration.test.ts       |  15 +-\n .../thread/codex-thread.integration.test.ts        |  25 +-\n .../agent-provider-factory-builder.test.ts         |  16 -\n .../acp/acp-agent-run-backend-factory.test.ts      |   4 +-\n .../autobyteus/native-workspace-resolution.test.ts |  17 +\n .../backend/claude-session-bootstrapper.test.ts    |  65 +-\n .../claude-workspace-skill-materializer.test.ts    |  42 --\n .../session/claude-input-terminal-release.test.ts  |  20 +-\n .../claude/session/claude-session-cleanup.test.ts  |  10 +-\n .../claude/session/claude-session-manager.test.ts  |   6 +-\n .../backend/codex-thread-bootstrapper.test.ts      | 251 +-------\n .../codex/codex-input-terminal-release.test.ts     |  15 +-\n .../codex/codex-private-profile-process.test.ts    |  48 ++\n .../codex-workspace-skill-materializer.test.ts     |  42 --\n .../codex/thread/codex-thread-manager.test.ts      |  59 +-\n .../grok/grok-build-runtime-registration.test.ts   |  26 +-\n .../grok/grok-private-profile-process.test.ts      |  51 ++\n .../shared/prepare-private-runtime-skills.test.ts  |  73 ++-\n .../shared/private-skill-bootstrappers.test.ts     |  76 +++\n .../shared/registered-workspace-resolvers.test.ts  |  19 +\n .../shared/shared-workspace-resolvers.test.ts      |  30 -\n .../shared/scoped-project-git-environment.test.ts  |  11 -\n .../workspaces/shared-workspace-binding.test.ts    |  67 ---\n .../localization/messages/en/settings.ts           |  14 +-\n .../localization/messages/zh-CN/settings.ts        |  14 +-\n .../docker/autobyteus-docker.d/bash/commands.sh    |   2 +-\n .../autobyteus-docker.d/bash/container-config.sh   |   4 -\n .../autobyteus-docker.d/bash/docker-runtime.sh     |   1 -\n .../autobyteus-docker.d/bash/nfs-attachment.sh     |  36 --\n scripts/public/docker/autobyteus-docker.sh         |   2 +-\n scripts/public/nfs/install.sh                      |  45 --\n scripts/tests/test_nfs_engine_packaging.py         | 107 ----\n scripts/tests/test_nfs_installer_fixture.py        |  79 ---\n scripts/tests/test_nfs_packaging_and_launcher.py   |  87 ---\n scripts/tests/test_nfs_release_workflow.py         | 150 -----\n ...test_public_docker_launcher_shared_workspace.py |   1 -\n scripts/tests/test_public_docker_launcher_stop.py  |  34 ++\n 191 files changed, 590 insertions(+), 13004 deletions(-)\n delete mode 100644 .github/workflows/release-nfs.yml\n delete mode 100644 autobyteus-nfs/.gitignore\n delete mode 100644 autobyteus-nfs/LICENSE\n delete mode 100644 autobyteus-nfs/README.md\n delete mode 100644 autobyteus-nfs/THIRD_PARTY_NOTICES\n delete mode 100644 autobyteus-nfs/cmd/autobyteus-nfs/main.go\n delete mode 100644 autobyteus-nfs/cmd/autobyteus-nfs/release.json\n delete mode 100644 autobyteus-nfs/go.mod\n delete mode 100644 autobyteus-nfs/internal/backend/apple.go\n delete mode 100644 autobyteus-nfs/internal/backend/apple_apply.go\n delete mode 100644 autobyteus-nfs/internal/backend/apple_startup.go\n delete mode 100644 autobyteus-nfs/internal/backend/apple_startup_test.go\n delete mode 100644 autobyteus-nfs/internal/backend/backend_test.go\n delete mode 100644 autobyteus-nfs/internal/backend/cleanup_test.go\n delete mode 100644 autobyteus-nfs/internal/backend/engine-assets/README\n delete mode 100644 autobyteus-nfs/internal/backend/engine_assets_linux.go\n delete mode 100644 autobyteus-nfs/internal/backend/engine_assets_other.go\n delete mode 100644 autobyteus-nfs/internal/backend/engine_bundle.go\n delete mode 100644 autobyteus-nfs/internal/backend/engine_bundle_test.go\n delete mode 100644 autobyteus-nfs/internal/backend/engine_staging.go\n delete mode 100644 autobyteus-nfs/internal/backend/ganesha.go\n delete mode 100644 autobyteus-nfs/internal/backend/ganesha_native.go\n delete mode 100644 autobyteus-nfs/internal/backend/ubuntu_packages.go\n delete mode 100644 autobyteus-nfs/internal/backend/ubuntu_packages_test.go\n delete mode 100644 autobyteus-nfs/internal/cli/cli_test.go\n delete mode 100644 autobyteus-nfs/internal/cli/engine_release_test.go\n delete mode 100644 autobyteus-nfs/internal/cli/inputs.go\n delete mode 100644 autobyteus-nfs/internal/cli/install.go\n delete mode 100644 autobyteus-nfs/internal/cli/interactive-setup.go\n delete mode 100644 autobyteus-nfs/internal/cli/launcher.go\n delete mode 100644 autobyteus-nfs/internal/cli/run.go\n delete mode 100644 autobyteus-nfs/internal/cli/terminal.go\n delete mode 100644 autobyteus-nfs/internal/cli/verify-release.go\n delete mode 100644 autobyteus-nfs/internal/config/config_test.go\n delete mode 100644 autobyteus-nfs/internal/config/connection.go\n delete mode 100644 autobyteus-nfs/internal/config/source-marker.go\n delete mode 100644 autobyteus-nfs/internal/config/source_identity.go\n delete mode 100644 autobyteus-nfs/internal/config/source_identity_test.go\n delete mode 100644 autobyteus-nfs/internal/config/state.go\n delete mode 100644 autobyteus-nfs/internal/config/store.go\n delete mode 100644 autobyteus-nfs/internal/docker/attachment.go\n delete mode 100644 autobyteus-nfs/internal/docker/client.go\n delete mode 100644 autobyteus-nfs/internal/docker/docker_test.go\n delete mode 100644 autobyteus-nfs/internal/docker/engine.go\n delete mode 100644 autobyteus-nfs/internal/docker/exec.go\n delete mode 100644 autobyteus-nfs/internal/docker/ownership.go\n delete mode 100644 autobyteus-nfs/internal/docker/probe_cleanup.go\n delete mode 100644 autobyteus-nfs/internal/docker/recovery.go\n delete mode 100644 autobyteus-nfs/internal/docker/recreate.go\n delete mode 100644 autobyteus-nfs/internal/docker/snapshot.go\n delete mode 100644 autobyteus-nfs/internal/docker/start_observation.go\n delete mode 100644 autobyteus-nfs/internal/docker/start_recovery.go\n delete mode 100644 autobyteus-nfs/internal/docker/start_recovery_test.go\n delete mode 100644 autobyteus-nfs/internal/docker/volume.go\n delete mode 100644 autobyteus-nfs/internal/platform/commands.go\n delete mode 100644 autobyteus-nfs/internal/platform/directory_modes_test.go\n delete mode 100644 autobyteus-nfs/internal/platform/filesystem_darwin.go\n delete mode 100644 autobyteus-nfs/internal/platform/filesystem_linux.go\n delete mode 100644 autobyteus-nfs/internal/platform/handle_syscalls_linux_amd64.go\n delete mode 100644 autobyteus-nfs/internal/platform/handle_syscalls_linux_arm64.go\n delete mode 100644 autobyteus-nfs/internal/platform/handles_darwin.go\n delete mode 100644 autobyteus-nfs/internal/platform/handles_linux.go\n delete mode 100644 autobyteus-nfs/internal/platform/jobs.go\n delete mode 100644 autobyteus-nfs/internal/platform/lock.go\n delete mode 100644 autobyteus-nfs/internal/platform/mount-observation.go\n delete mode 100644 autobyteus-nfs/internal/platform/mounts.go\n delete mode 100644 autobyteus-nfs/internal/platform/platform_test.go\n delete mode 100644 autobyteus-nfs/internal/platform/source.go\n delete mode 100644 autobyteus-nfs/internal/platform/source_darwin.go\n delete mode 100644 autobyteus-nfs/internal/platform/source_darwin_test.go\n delete mode 100644 autobyteus-nfs/internal/platform/source_linux.go\n delete mode 100644 autobyteus-nfs/internal/platform/source_linux_test.go\n delete mode 100644 autobyteus-nfs/internal/platform/volume_identity.go\n delete mode 100644 autobyteus-nfs/internal/platform/volume_identity_test.go\n delete mode 100644 autobyteus-nfs/internal/platform/volume_plist.go\n delete mode 100644 autobyteus-nfs/internal/service/probe.go\n delete mode 100644 autobyteus-nfs/internal/service/probe_test.go\n delete mode 100644 autobyteus-nfs/internal/service/supervisor.go\n delete mode 100644 autobyteus-nfs/internal/setup/apply.go\n delete mode 100644 autobyteus-nfs/internal/setup/detach_nodes.go\n delete mode 100644 autobyteus-nfs/internal/setup/detach_nodes_test.go\n delete mode 100644 autobyteus-nfs/internal/setup/hosted_config_test.go\n delete mode 100644 autobyteus-nfs/internal/setup/lifecycle.go\n delete mode 100644 autobyteus-nfs/internal/setup/pending.go\n delete mode 100644 autobyteus-nfs/internal/setup/plan.go\n delete mode 100644 autobyteus-nfs/internal/setup/reconnect_nodes.go\n delete mode 100644 autobyteus-nfs/internal/setup/reconnect_nodes_test.go\n delete mode 100644 autobyteus-nfs/internal/setup/service.go\n delete mode 100644 autobyteus-nfs/internal/setup/setup_test.go\n delete mode 100644 autobyteus-nfs/internal/setup/source_binding_darwin_test.go\n delete mode 100644 autobyteus-nfs/internal/setup/status.go\n delete mode 100644 autobyteus-nfs/packaging/Dockerfile\n delete mode 100644 autobyteus-nfs/packaging/RELEASE.md\n delete mode 100644 autobyteus-nfs/packaging/engine/README.md\n delete mode 100644 autobyteus-nfs/packaging/engine/build.py\n delete mode 100644 autobyteus-nfs/packaging/engine/get-dir-delegation.patch\n delete mode 100644 autobyteus-nfs/packaging/engine/manifest.py\n delete mode 100644 autobyteus-nfs/packaging/engine/source-lock.json\n delete mode 100644 autobyteus-nfs/packaging/engine/source.py\n delete mode 100644 autobyteus-nfs/packaging/release-lock.json\n delete mode 100644 autobyteus-nfs/packaging/release.py\n delete mode 100644 autobyteus-nfs/testdata/attachment.json\n delete mode 100644 autobyteus-server-ts/src/agent-execution/backends/autobyteus/native-shared-workspace.ts\n delete mode 100644 autobyteus-server-ts/src/agent-execution/backends/claude/claude-workspace-skill-materializer.ts\n delete mode 100644 autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-thread-cleanup.ts\n delete mode 100644 autobyteus-server-ts/src/agent-execution/backends/codex/codex-workspace-skill-materializer.ts\n delete mode 100644 autobyteus-server-ts/src/agent-execution/backends/grok/grok-workspace-skill-materializer.ts\n delete mode 100644 autobyteus-server-ts/src/agent-execution/services/shared-run-workspace-admission.ts\n delete mode 100644 autobyteus-server-ts/src/runtime-management/shared/scoped-project-git-environment.ts\n delete mode 100644 autobyteus-server-ts/src/workspaces/shared-workspace-binding.ts\n delete mode 100644 autobyteus-server-ts/src/workspaces/shared-workspace-mount-observation.ts\n delete mode 100644 autobyteus-server-ts/tests/integration/agent-execution/codex-thread-bootstrapper.integration.test.ts\n create mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/autobyteus/native-workspace-resolution.test.ts\n delete mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/claude/claude-workspace-skill-materializer.test.ts\n create mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/codex/codex-private-profile-process.test.ts\n delete mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/codex/codex-workspace-skill-materializer.test.ts\n create mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/grok/grok-private-profile-process.test.ts\n create mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/shared/private-skill-bootstrappers.test.ts\n create mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/shared/registered-workspace-resolvers.test.ts\n delete mode 100644 autobyteus-server-ts/tests/unit/agent-execution/backends/shared/shared-workspace-resolvers.test.ts\n delete mode 100644 autobyteus-server-ts/tests/unit/runtime-management/shared/scoped-project-git-environment.test.ts\n delete mode 100644 autobyteus-server-ts/tests/unit/workspaces/shared-workspace-binding.test.ts\n delete mode 100644 scripts/public/docker/autobyteus-docker.d/bash/nfs-attachment.sh\n delete mode 100755 scripts/public/nfs/install.sh\n delete mode 100644 scripts/tests/test_nfs_engine_packaging.py\n delete mode 100644 scripts/tests/test_nfs_installer_fixture.py\n delete mode 100644 scripts/tests/test_nfs_packaging_and_launcher.py\n delete mode 100644 scripts/tests/test_nfs_release_workflow.py\n create mode 100644 scripts/tests/test_public_docker_launcher_stop.py\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:36.204729+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "55bff1f5eea1f140bab6e372e3faadeb7ea33465\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:36.230013+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "be066bdd90e4f0dd0d0ea69cbd696c93efcbac7f\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:36.255949+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "codex/extract-autobyteus-nfs^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "be066bdd90e4f0dd0d0ea69cbd696c93efcbac7f\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:36.281328+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-list",
+      "--parents",
+      "-n",
+      "1",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "55bff1f5eea1f140bab6e372e3faadeb7ea33465 2f211340ee36b81cef74a74b2e042b5102c269d3 9b72c8d1c8d6f7e294af2c23fb497211c67f930c\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:38.270559+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "personal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From github.com-ryan:AutoByteus/autobyteus-workspace\n * branch                  personal   -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-18T04:38:38.332995+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/personal"
+    ],
+    "exit": 0,
+    "stdout": "2f211340ee36b81cef74a74b2e042b5102c269d3\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:38:41.163189+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:personal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "remote: \nremote: GitHub found 956 vulnerabilities on AutoByteus/autobyteus-workspace's default branch (24 critical, 425 high, 437 moderate, 70 low). To find out more, visit:        \nremote:      https://github.com/AutoByteus/autobyteus-workspace/security/dependabot        \nremote: \nTo github.com-ryan:AutoByteus/autobyteus-workspace.git\n   2f211340ee..55bff1f5ee  HEAD -> personal\n"
+  },
+  {
+    "at": "2026-10-18T04:38:42.814419+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "personal"
+    ],
+    "exit": 0,
+    "stdout": "55bff1f5eea1f140bab6e372e3faadeb7ea33465\trefs/heads/personal\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:18.957882+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "?? task-plans/\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:19.534251+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "fetch",
+      "origin"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:19.552796+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:19.773407+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "main",
+      "--track",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "branch 'main' set up to track 'origin/main'.\nYour branch is up to date with 'origin/main'.\n",
+    "stderr": "Already on 'main'\n"
+  },
+  {
+    "at": "2026-10-18T04:39:19.847464+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "?? task-plans/\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:20.405609+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:20.422759+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "55bff1f5eea1f140bab6e372e3faadeb7ea33465\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:20.598303+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "switch",
+      "--detach",
+      "origin/personal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "HEAD is now at 55bff1f5ee Merge standalone NFS extraction and filesystem-only application boundary\n"
+  },
+  {
+    "at": "2026-10-18T04:39:20.737562+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "branch",
+      "-d",
+      "codex/extract-autobyteus-nfs",
+      "finalize/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "Deleted branch codex/extract-autobyteus-nfs (was 9b72c8d1c8).\nDeleted branch finalize/extract-autobyteus-nfs (was 55bff1f5ee).\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:27.919349+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-workspace-superrepo",
+    "command": [
+      "git",
+      "worktree",
+      "remove",
+      "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:28.044678+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "switch",
+      "--detach",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "HEAD is now at 22e934b docs(delivery): verify integrated extraction and archive evidence\n"
+  },
+  {
+    "at": "2026-10-18T04:39:28.068848+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "branch",
+      "-d",
+      "codex/extract-autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "Deleted branch codex/extract-autobyteus-nfs (was 22e934b).\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:28.105526+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs",
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--ignored"
+    ],
+    "exit": 0,
+    "stdout": "!! scripts/tests/__pycache__/\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-18T04:39:28.122797+00:00",
+    "repository": "/Users/normy/autobyteus_org/autobyteus-nfs",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,58 @@
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	﻿2026-10-18T04:38:26.4636100Z ##[group]Run go test -race ./...
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4636569Z [36;1mgo test -race ./...[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4636873Z [36;1mgo vet ./...[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4637435Z [36;1mgo build -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4637805Z [36;1mout/autobyteus-nfs version[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4638197Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4638642Z [36;1mbash -n scripts/public/nfs/install.sh[0m
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4801837Z shell: /usr/bin/bash -e {0}
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:26.4802252Z ##[endgroup]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:41.8947428Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:43.0343935Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.136s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:43.3667864Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.023s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:43.3776684Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.033s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:43.4037012Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.016s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2749603Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.238s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2750570Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.012s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2751160Z --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness (0.04s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2752020Z     --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-native/current (0.01s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2753104Z         hosted_config_test.go:95: valid config did not reach mount check expected host NFS source/protocol is not mounted 0
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2753858Z     --- FAIL: TestHostedConfigStatusRefusesBeforeReadiness/ganesha-docker/current (0.00s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2754870Z         hosted_config_test.go:95: valid config did not reach mount check expected host NFS source/protocol is not mounted 0
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2755527Z --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks (0.01s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2756346Z     --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/current (0.00s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2757783Z         hosted_config_test.go:146: preflight prevented existing teardown checks unsafe configuration directory: /tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks1405600968/001/private
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2758976Z     --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-native/missing (0.00s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2760476Z         hosted_config_test.go:146: preflight prevented existing teardown checks unsafe configuration directory: /tmp/TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks28092748/001/private
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2761662Z     --- FAIL: TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks/ganesha-docker/current (0.00s)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2762393Z panic: runtime error: invalid memory address or nil pointer dereference [recovered, repanicked]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2762969Z [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x91490e]
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2763303Z 
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2763404Z goroutine 64 [running]:
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2763737Z testing.tRunner.func1.2({0xdeccc0, 0xe8e010})
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2764238Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/testing/testing.go:2125 +0x419
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2764686Z testing.tRunner.func1()
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2765122Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/testing/testing.go:2128 +0x65f
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2765483Z panic({0xdeccc0?, 0xe8e010?})
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2765954Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/runtime/panic.go:859 +0x125
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2766346Z net/http.(*Client).do(0x0, 0xc00045b680)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2766842Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/net/http/client.go:620 +0x12e
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2767308Z net/http.(*Client).Do(...)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2767663Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/net/http/client.go:604
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2768477Z github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).Call(0xc00045c198, {0xa1f3f7, 0x3}, {0xc0004505a0, 0x4c}, {0x0, 0x0}, {0xd8b6c0, 0xc000466780})
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2769825Z 	/home/runner/work/autobyteus-nfs/autobyteus-nfs/internal/docker/client.go:64 +0x345
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2770639Z github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).Inspect(0xc00045c198, {0xc0003d28c0, 0x3b})
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2771321Z 	/home/runner/work/autobyteus-nfs/autobyteus-nfs/internal/docker/client.go:90 +0x12c
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2772090Z github.com/AutoByteus/autobyteus-nfs/internal/docker.(*Client).DetachEngine(0xc00045c198, {{0xc0003f8390, 0x24}, {0xc0003f8390, 0x24}, {0xc0004b6480, 0x5a}, {0x1, {0x0, 0x0}, ...}, ...}, ...)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2772956Z 	/home/runner/work/autobyteus-nfs/autobyteus-nfs/internal/docker/engine.go:61 +0xa6
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2773522Z github.com/AutoByteus/autobyteus-nfs/internal/setup.(*Service).Detach(0xc000045d00, 0x1)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2774119Z 	/home/runner/work/autobyteus-nfs/autobyteus-nfs/internal/setup/lifecycle.go:127 +0x1d0b
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2774922Z github.com/AutoByteus/autobyteus-nfs/internal/setup.TestHostedConfigDetachCurrentOrPartialRetryReachesExistingChecks.func1(0xc0003e0b48)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2775702Z 	/home/runner/work/autobyteus-nfs/autobyteus-nfs/internal/setup/hosted_config_test.go:145 +0x25f
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2776174Z testing.tRunner(0xc0003e0b48, 0xc0003f4900)
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2776570Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/testing/testing.go:2195 +0x21d
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2776952Z created by testing.(*T).Run in goroutine 61
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2777392Z 	/opt/hostedtoolcache/go/1.27.2/x64/src/testing/testing.go:2260 +0xb13
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2777829Z FAIL	github.com/AutoByteus/autobyteus-nfs/internal/setup	0.100s
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.2778189Z FAIL
+checks (ubuntu-24.04)	Native checks (no live mounts or nodes)	2026-10-18T04:38:46.3726234Z ##[error]Process completed with exit code 1.

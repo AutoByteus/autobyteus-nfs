@@ -1,7 +1,7 @@
 {
   "revision": "DR-002",
   "at": "2026-10-18T04:35:55.852781+00:00",
-  "result": "Sufficient evidence; verified for R2 extraction scope, AC007 still pending finalization",
+  "result": "Initial pre-push evidence sufficient for recorded API scope; terminal verification now BLOCKED by subsequent native Ubuntu CI failure",
   "classification": {
     "task_size": "Large",
     "architectural_risk": "High",
@@ -629,5 +629,10 @@
     "performed": false,
     "reason": "No missing only-user-reachable acceptance; evidence establishes scoped change"
   },
-  "delivery_execution": "Evidence inspection and metadata/integrity verification, not repeated runtime tests"
+  "delivery_execution": "Evidence inspection and metadata/integrity verification, not repeated runtime tests",
+  "post_push_override": {
+    "classification": "Local Fix",
+    "evidence": "delivery-evidence/dr-002/ci/39097779223.log",
+    "result": "No Delivery Completed until implementation correction and relevant successful native checks; earlier API00295 remains attributed to original exact-input/local scope, not promoted to Linux hosted proof"
+  }
 }

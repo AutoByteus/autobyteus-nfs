@@ -1,0 +1,144 @@
+{
+  "conclusion": "failure",
+  "event": "push",
+  "headBranch": "main",
+  "headSha": "22e934b9f2b95daf3c72a840788ee155cbd4ff6d",
+  "jobs": [
+    {
+      "completedAt": "2026-10-18T04:38:49Z",
+      "conclusion": "failure",
+      "databaseId": 117587682980,
+      "name": "checks (ubuntu-24.04)",
+      "startedAt": "2026-10-18T04:38:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:38:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:38:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-18T04:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:26Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-go@v5",
+          "number": 3,
+          "startedAt": "2026-10-18T04:38:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:46Z",
+          "conclusion": "failure",
+          "name": "Native checks (no live mounts or nodes)",
+          "number": 4,
+          "startedAt": "2026-10-18T04:38:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:46Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-go@v5",
+          "number": 7,
+          "startedAt": "2026-10-18T04:38:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 8,
+          "startedAt": "2026-10-18T04:38:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-18T04:38:46Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39097778705/job/117587682980"
+    },
+    {
+      "completedAt": "2026-10-18T04:39:50Z",
+      "conclusion": "cancelled",
+      "databaseId": 117587683126,
+      "name": "checks (macos-15)",
+      "startedAt": "2026-10-18T04:38:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T04:38:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T04:38:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:27Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-18T04:38:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:38:54Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-go@v5",
+          "number": 3,
+          "startedAt": "2026-10-18T04:38:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:39:44Z",
+          "conclusion": "cancelled",
+          "name": "Native checks (no live mounts or nodes)",
+          "number": 4,
+          "startedAt": "2026-10-18T04:38:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:39:44Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-go@v5",
+          "number": 7,
+          "startedAt": "2026-10-18T04:39:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:39:44Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 8,
+          "startedAt": "2026-10-18T04:39:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T04:39:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "startedAt": "2026-10-18T04:39:44Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39097778705/job/117587683126"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39097778705"
+}

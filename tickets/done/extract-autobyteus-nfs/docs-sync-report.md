@@ -43,5 +43,6 @@ The Guide is instructional; release availability stays disabled and qualificatio
 
 ## Result
 **Pass — docs synchronized to integrated R2.** No outstanding docs ambiguity.
+Post-push native Ubuntu CI subsequently failed; docs Pass is not Delivery Completed.
 Finalization/cleanup receipts and terminal eligibility are owned by
 [release-deployment-report.md](release-deployment-report.md), not inferred here.
