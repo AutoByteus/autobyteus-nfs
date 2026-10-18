@@ -1,0 +1,13 @@
+{
+  "review": "CRR-006",
+  "result": "Pass",
+  "entry": "Successful API/E2E cumulative R3 test-code review",
+  "fresh_rules": true,
+  "selected_rule": {
+    "when": "When post-API/E2E durable test-code review passes and the complete validated package is ready for delivery, documentation sync, finalization, or release work.",
+    "recipient_address": "/software_engineering_team/delivery_engineer"
+  },
+  "status": "Pending",
+  "other_recipients": [],
+  "reason": "Single most-specific successful-test rule. Delivery owns remaining actual release checks; no source/API rerun absent new evidence."
+}

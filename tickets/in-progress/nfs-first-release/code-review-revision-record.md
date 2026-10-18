@@ -132,3 +132,20 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-005 | code-review-report.md | IR004 / CR-002 bounded cleanup | CRR004 Fail99 | Pass100 — source scope | CR-002 resolved; CR-001 remains resolved |
+
+
+### CRR-006 — Successful cumulative R3 durable-test review
+
+- Date2026-10-18. **Successful API/E2E Test-Code Review**, first test-review result/overall round6; canonical **api-e2e-test-review-report.md**. Trigger API-REV-003 Pass95.00% for affected prepublication scope. Source report CRR005 Pass100 remains unchanged; no full source score/audit or failure-origin classification.
+- R3/SR004 Approved/Ready; ARCH002; IR003/004; CRR005; API003; DR004 staging context. Large/High/Reviewed confirmed. Current intake8c45d866b20ee878d425d2c0c099fadeee805615; tested source/workflow585d416c2746cf2963058d591b0753d0db8088f5 equals current product850dfeb97e2ec396b2b134e760dc9ee802873d6b across120 non-ticket inputs.
+- **Pass**,11 cumulative durable paths (1added/10updated) since96c8de3..850dfeb. API authored no production/durable delta; explicitly requested cumulative R3 gate is not treated as an invented API change or Not Applicable. No prior successful-test report existed; no assumed prior Pass.
+- Reviewed schema2/claims/targets/notice/equality; engine readiness reset/pins; actual installer pre-write failure; shared R3 fixtures; current authority/ref/source/OCI binding; rehashed payload semantic disclosure; publication-body disclosure; exact Bash --release argv and source-input controls. Nine proportional checks Pass; no size thresholds/full source scorecard or unrelated campaign.
+- Existing success evidence sufficient; no test/hosted rerun by reviewer. API local45collected44executed1skip, focused7+12 overlap. Actual run39118784695/1 at585d416 has10success/0fail/0cancel/2expected payload/publish skips; four native package/Python checks and complete candidate. Real artifact/API/downloaded CLI controls inspected; no individual Go counts inferred. Fake signing/publication fixtures are not actual Apple/publication proof.
+- No test-review finding or follow-up. CR-001/CR-002 remain source-resolved; their histories retained. Old API001Fail/API002Blocked not relabeled. No new implementation/design/approval loop.
+- Candidate12133493094 retained by API at /Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate; reviewer did not traverse/modify it. Current candidate and readiness refs/signing/publication applicability remain Delivery obligations, not assumed from score.
+- Only NFS review artifacts written. Source report/API authorities and20Delivery untracked files preserved; prior CRR001–005 full16368-byte prefix retained. No product/test edits, scratch/runtime resources, external/secret/live storage, push/merge/signing/release/TaskDone/Terminal actions. Personal review, no delegation.
+- Fresh most-specific successful-test rule selects Delivery only; routing/receipt in code-review-evidence/crr-006. Delivery owns D01/D02 real signing/Acceptednotary/finalpayload/currentmain/immutable publication/public downloads/docs/finalization and deferred-plan custody. Six secrets provisioned; field/user work Deferred, not prepublication/closure gate. No duplicate API/Implementation/Designer/PM dispatch.
+
+| Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-006 | api-e2e-test-review-report.md | API003 prepublication Pass95 / cumulative R3 | N/A — first successful-test result | Pass — test-code gate only | None |
