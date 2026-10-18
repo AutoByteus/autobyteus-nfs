@@ -1,0 +1,12 @@
+[
+  {
+    "path": "packaging/engine/manifest.py",
+    "removedBinding": "LOCK",
+    "otherASTIdentical": true
+  },
+  {
+    "path": "scripts/tests/nfs_release_fixture.py",
+    "removedBinding": "readiness",
+    "otherASTIdentical": true
+  }
+]

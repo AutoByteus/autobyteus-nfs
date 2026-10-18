@@ -18,20 +18,27 @@ Project project_6416db5b-926a-4865-8705-d8ebb2425780. Worktree
 - Supplement postpublication-testing-plan.md; Delivery's DR003 exact user direction
   remains untracked and untouched. All16 Delivery-owned files are excluded from
   implementation commits. Six signing entries already provisioned; no new request.
-- Trigger **approved Behavior Change**, not another CRR002 Local Fix. Historical
-  IR002/CRR003 Pass covered R2 only. API002 Blocked73.57 and its complete old-source
-  candidate are historical, not acceptance for this delta. Related DR003 is
-  sequencing/context only; no Delivery outcome overwritten.
+- Trigger **CRR-004 Fail99 / CR-002 implementation-owned Local Fix**: exactly two
+  unused Python import bindings. Review484c85c; stable intake includes its receipt
+  0d8d927a17b5737547df03fdbc25cc7fdf666d1e. R3 behavior/design is unchanged.
+  API002 Blocked73.57 and its complete old-source candidate remain historical,
+  not current acceptance. Related DR003 is context only; no outcome overwritten.
 - Remote target last reported7e375984be2bea7a4d536e43cc59d6bc2b116870; not fetched,
   merged or pushed by this round. Delivery must refresh current main later.
 
 ## Current Implementation Summary
 
-**IR-003 Implementation Complete / ready for independent Code Review.**
-Source **3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3**. Cycle Rework; cumulative
-implementation-revision-record.md preserves IR001/IR002 byte prefix. Related
-SR004/ARCH002; current-delta CRR/API result **N/A — not executed yet**; prior
-CRR003/API002/DR003 retained as attributed context. Triggering finding ID N/A.
+**IR-004 Local Fix Complete / ready for targeted independent source re-review.**
+Source **850dfeb97e2ec396b2b134e760dc9ee802873d6b**; prior source3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3.
+Cycle Rework; cumulative implementation-revision-record.md preserves IR001–003
+byte prefix. Related SR004/ARCH002/CRR004, finding **CR-002**. CRR004 Fail99 remains
+reviewer's current verdict; current-delta API result **N/A — not executed yet**.
+
+Only `LOCK` in packaging/engine/manifest.py and `readiness` in
+scripts/tests/nfs_release_fixture.py were removed from local imports. Surviving
+imports preserve module execution; live LOCK/readiness owners, callers, runtime
+logic and assertions remain. No broader cleanup, requirement/design change or
+new runtime behavior. Prior IR003 handoff is retained in ir-004 evidence.
 
 One release-first readiness owner now replaces qualification across metadata,
 preflight, payload and publication/resume. Native distribution schema2 separates
@@ -48,17 +55,21 @@ anonymous access → normal release/public download checks. No unsigned fallback
 clobber, stale candidate, bypass flag, new framework or live-host behavior change.
 
 Current source hash with null engine/readiness:
-`d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac`.
-Real measured engine changes the real candidate hash. Engine manifest writer/docs
-changed, so recipe identity also changes normally; pins/patch unchanged. Old API002
-candidate remains untouched and stale, not reused/relabelled for this source.
+`c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60`.
+Real measured engine changes the real candidate hash. Current engine recipe hash:
+`299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274`.
+Removing the manifest import changes that recipe input even though behavior is
+unchanged; pins/patch remain unchanged. No new engine was built. Old API002 candidate
+remains untouched and stale, not reused/relabelled. Actual hash transitions are
+recorded in ir-004/hash-transition.json; NEW complete current-source hosted
+candidate remains required.
 
 ## Routing Classification
 
 - **Large / High — Confirmed** against SR004 Task Size And Architectural Risk.
   Cross-language distribution schema/authorization/signing/immutable-publication
   contract remains material despite bounded delta. No downgrade from local Pass.
-- Selected route **Code Review**, fresh rule saved ir-003/routing.json at handoff.
+- Selected route **Code Review**, fresh rule saved ir-004/routing.json at handoff.
 - Direct-route lightweight review N/A; implementation self-check completed, not a
   substitute for independent source review. New Design Impact/Requirement Gap None.
 
@@ -92,13 +103,16 @@ campaign, dashboard/app/Guide change, paid infrastructure or credential re-expor
 
 ## Design Health / Legacy / Transition Check
 
-Behavior Change; reviewed boundary/claim coupling and bounded refactor confirmed.
+IR003 Behavior Change retained; IR004 is only mandatory touched-file import cleanup.
+Reviewed boundary/claim coupling and bounded refactor remain confirmed.
 No challenge to SR004 or new fallback needed. One readiness authority, tight named
 Go validation values; no overlapping qualified/userVerified fields, --qualified
 alias, topology/user-pass code or old module retained. Dead touched qualification
-constants/loops removed; no unrelated dead-code work found. Shared guidance applied.
-All changed implementation files below500 effective lines and changed-line deltas
-below220 (source-audit.json); tests excluded from that hard size limit.
+constants/loops were removed in IR003. CRR004 identified the two remaining unused
+local bindings, now removed under Core7; no broader unused-code work. AST/reference
+checks confirm all other code unchanged. The manifest file does not grow and remains
+below500 effective lines; its two-line diff is below220. Test files are outside the
+hard source-file limit.
 
 Transition **Discard or Rebuild**: release control and generated distribution
 metadata/candidates only. Empty lock replaced, current schema rebuilt; legacy
@@ -108,33 +122,30 @@ Usable — No Migration**, preserved. No deviation from approved transition.
 
 ## Local Checks / Environment / Limits
 
-Details and raw-command paths in implementation-evidence/ir-003/checks-and-limits.md.
-- Independent source copy, private HOME/TMPDIR/caches. Native macOS26.5.2 arm64
-  Go1.27.2 seven-package race/vet/build/version pass, focused admission rerun pass.
-- Owned Ubuntu24.04 arm64 container guest filesystem: final seven-package
-  race/vet/build/version pass, Python45 collected42 executed3 container/child skips.
-  No host socket/privileged mode, live mounts or independent-host qualification.
-- Mac final Python45 collected44 executed1 Go-child skip (parent covers child).
-  `/usr/bin/python3`3.9.6 suite; Go-child PATH Python3.14.2. Actual Bash3.2.57 shell
-  regression passes; actionlint/Bash syntax/shellcheck pass; empty readiness refuses.
-- Four-target compilation passes, **not** four-native execution. Eight bounded
-  invariant mutations detected. Current payload disclosure test rehashes tampered
-  notes/provenance to reach semantic guards rather than only inventory checks.
-- Three final test-only enhancements then final45 Mac/Linux suites; last fetch
-  docstring wording correction then current45 Mac suite/hash rerun. No executable
-  code changed after native checks; precise attribution in final-comment-delta.json.
-- No failed product/test attempt this round; intentionally failing mutants retained.
-  Earlier failed evidence remains untouched. Raw apt progress whitespace excepted.
-- Cleanup recorded ir-003/cleanup.json. Source/license/pins and16 Delivery files
-  preservation audit; historical candidate path never altered. No binaries/assets
-  committed. No new API score, physical/user claim or release acceptance inferred.
+Current evidence: implementation-evidence/ir-004/checks-and-limits.md.
+- Independent exact120-file source copy, private HOME/TMPDIR, no sibling checkout;
+  system Python3.9.6. Full Python45 collected,44 executed,1 expected standalone
+  Go-child skip. All executed tests pass; no new Go-parent run is claimed.
+- AST import-use audit across16 extant IR003-changed Python sources/tests has no
+  unused local imports after the two removals. Direct caller/reference inspection
+  corroborates no relied-on re-export. Normalized AST is otherwise identical.
+- Actual source/recipe hash commands pass and both change; default null-readiness
+  `--check-publish` refuses as expected. Empty lock remains empty; no false evidence.
+- Other118 source/docs/test inputs and all16 untracked Delivery files unchanged.
+  Prior IR history byte prefix retained. Owned scratch removed, no new resources
+  retained. No failed attempt or weakened/skipped new check beyond declared child skip.
+- Proportional scope: no Go/Linux/native build/actionlint rerun for two unused
+  imports. Prior IR003 native Mac/Linux/four-target compile/eight-mutant results
+  and CRR004 independent Go/actionlint checks remain exact-input historical evidence,
+  not new IR004 executions. Runtime/Go/workflow/assertion inputs are unchanged.
+- These are implementation checks, not current API/hosted/signing/field acceptance.
 
 Frontend rendered-result **Not Applicable**: CLI/packaging, no rendered interface.
-CLI interaction (stderr notice/exact version) exercised without live setup.
+Prior IR003 CLI interaction (stderr notice/exact version) remains attributed; not rerun here.
 
 ## Downstream Work / Remaining Risks
 
-1. Independent source review of IR003 against SR004; current code/handoff authoritative,
+1. Targeted source re-review of IR004/CR-002 against SR004; current code/handoff authoritative,
    history is an index only. Preserve prior source/API outcomes as exact-input history.
 2. API updates current ledger for R3 and executes changed release/admission cases plus
    a **NEW complete current-source four-native hosted candidate**. Prior run39113335636/1,

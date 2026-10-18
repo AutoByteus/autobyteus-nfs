@@ -1,0 +1,67 @@
+[
+  {
+    "name": "python-version",
+    "command": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "passed": true,
+    "seconds": 0.58
+  },
+  {
+    "name": "python-all",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_*.py",
+      "-v"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "passed": true,
+    "seconds": 35.25
+  },
+  {
+    "name": "source-hash",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "passed": true,
+    "seconds": 0.35
+  },
+  {
+    "name": "recipe-hash",
+    "command": [
+      "/usr/bin/python3",
+      "-c",
+      "import sys;sys.path.insert(0,\"packaging/engine\");import source;print(source.recipe_hash())"
+    ],
+    "exitCode": 0,
+    "expected": 0,
+    "passed": true,
+    "seconds": 0.22
+  },
+  {
+    "name": "readiness-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "packaging/release.py",
+      "--check-publish"
+    ],
+    "exitCode": 1,
+    "expected": 1,
+    "passed": true,
+    "seconds": 0.33
+  }
+]

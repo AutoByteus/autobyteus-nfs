@@ -140,3 +140,37 @@ records do not belong to this new Task.
   hosted candidate and Delivery actual readiness/signed publication/public receipts.
   Field/shared-filesystem/physical/user tests deferred—not publication/closure gates;
   Delivery→terminalSD→requestingPM owns the approved plan. No TaskDone/Terminal claim.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-004 | Code Reviewer / code-review-report.md / CRR004 | CR-002 | Local Fix | R3/SR004, ARCH002, CRR004; API002/DR003 historical context | Two-import cleanup complete; local checks pass; targeted source re-review required |
+
+### IR-004 — Remove two unused Python local bindings
+
+- Trigger CRR004 Fail99, review484c85c and receipt0d8d927. Prior IR003 implementation
+  complete/source3d2710b; current reviewer Fail99 solely mandatory Core7 cleanup.
+  No runtime/design defect established, no new approval or broad unused-code work.
+- Current result **Local Fix Complete / ready for targeted source re-review**;
+  source850dfeb97e2ec396b2b134e760dc9ee802873d6b. R3/SR004 Approved / SR004 Ready / ARCH002,
+  **Large/High confirmed**. No requirement/design/behavior change.
+- Delta: only manifest.py `LOCK` and nfs_release_fixture.py `readiness` local import
+  bindings removed. Live source.py/build.py LOCK, readiness module/consumers and all
+  assertions preserved. BEH001–006/AC001–008 unchanged; recipe/source identity changes
+  affect BEH001/002/AC001 next-candidate provenance, not intended runtime behavior.
+- Fresh checks: independent120-input/private HOME/TMP copy, Python3.9.6 full45
+  collected44 executed1 expected Go-child skip; all executed tests pass. AST/use
+  and reference checks, otherwise identical AST, current source/recipe hashes and
+  expected null-readiness refusal pass. No fresh Go/Linux/hosted/signing/field run.
+- Current default source hash c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60;
+  recipe hash 299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274. Both
+  changed; no new engine built. Other118 source inputs unchanged. NEW complete
+  current-source candidate/affected API still required; old API002 remains historical.
+- Prior history byte prefix and16 Delivery untracked files preserved; own scratch
+  removed. No new resources, source push, target merge, release or credential work.
+- Next fresh configured Large/High Local Fix source-review route (ir-004/routing.json).
+  API current-delta N/A—not executed; DR003 remains context, no outcome overwritten.
+  Both Mac actual signatures/Accepted notarization, final payload/publication/download
+  and current-main gates remain. Deferred field/user plan is not a closure hold.
+  No TaskDone/user verification/Terminal. Detailed evidence: ir-004/checks-and-limits.md.

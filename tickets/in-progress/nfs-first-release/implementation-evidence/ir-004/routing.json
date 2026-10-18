@@ -1,0 +1,8 @@
+{
+  "outcome": "IR-004 implementation-owned Local Fix complete; Large/High confirmed; implementation-scoped validation complete",
+  "ruleSource": "Fresh get_handoff_rules after implementation and checks",
+  "selectedRule": "When an implementation-owned Local Fix requested by the code reviewer or delivery engineer is complete, the existing package is task_size=Large or architectural_risk=High, and the updated implementation must return for source review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "specificity": "Local Fix rule is more specific than general Large/High completion rule",
+  "otherRecipients": []
+}

@@ -1,0 +1,42 @@
+{
+  "result": "Pass \u2014 bounded implementation self-check, not independent review/API",
+  "inputHead": "0d8d927a17b5737547df03fdbc25cc7fdf666d1e",
+  "sourceCommit": "850dfeb97e2ec396b2b134e760dc9ee802873d6b",
+  "currentSourceInputs": 120,
+  "exactChangedSourceInputs": [
+    "packaging/engine/manifest.py",
+    "scripts/tests/nfs_release_fixture.py"
+  ],
+  "other118InputsUnchanged": true,
+  "otherASTIdentical": true,
+  "protectedDeliveryUntrackedFiles": 16,
+  "protectedHashesUnchangedAndNotTracked": true,
+  "priorImplementationHistoryBytePrefixPreserved": true,
+  "priorHandoffSnapshotExact": true,
+  "unexpectedTrackedDelta": [],
+  "localChecksPassed": true,
+  "pythonCollected": 45,
+  "pythonExecuted": 44,
+  "pythonSkipped": 1,
+  "skip": "standalone Go-child fixture; no new Go parent run",
+  "manifestEffectiveNonEmptyLines": 89,
+  "hashTransition": {
+    "sourceBefore": "d75c50c83a5848d45209e85511f271f36d5d99362fd87f41b8e24263203591ac",
+    "sourceAfter": "c7fd64e87b62509165d8655cc576fba9261867a306f13a93ad420776304e4a60",
+    "recipeBefore": "a1e24a5b0d82b74ad0558f499d991095ac0fcda8b99de5b7bb892db15c1e985d",
+    "recipeAfter": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+    "delta": [
+      "packaging/engine/manifest.py",
+      "scripts/tests/nfs_release_fixture.py"
+    ],
+    "other118InputsUnchanged": true,
+    "note": "Actual recipe/source hash changed. No new engine built; NEW complete current-source hosted candidate remains required."
+  },
+  "ownedScratchAbsent": true,
+  "noRemoteOrLiveActions": true,
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High"
+  },
+  "remaining": "Targeted source review; new complete current-source hosted candidate and affected API; actual signed release/public receipts remain outstanding."
+}
