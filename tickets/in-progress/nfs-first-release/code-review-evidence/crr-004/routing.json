@@ -45,6 +45,7 @@
     }
   ],
   "single_most_specific_rule": true,
-  "status": "Pending",
-  "no_duplicate_dispatch": true
+  "status": "Delivered",
+  "no_duplicate_dispatch": true,
+  "review_commit": "484c85c152b047b79a701cace6430d2f3ccdb667"
 }
