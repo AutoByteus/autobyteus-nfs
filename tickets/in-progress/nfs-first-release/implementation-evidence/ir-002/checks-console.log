@@ -1,0 +1,12 @@
+{'name': 'shell-version', 'argv': ['/bin/bash', '--version'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.01}
+{'name': 'python-version', 'argv': ['/usr/bin/python3', '--version'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.34}
+{'name': 'actionlint-version', 'argv': ['/opt/homebrew/bin/actionlint', '-version'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.04}
+{'name': 'python-all', 'argv': ['/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_*.py', '-v'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 20.67}
+{'name': 'actionlint', 'argv': ['/opt/homebrew/bin/actionlint', '.github/workflows/ci.yml', '.github/workflows/release-nfs.yml'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.18}
+{'name': 'prefix-bash-syntax', 'argv': ['/bin/bash', '-n', '/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/native-prefix.sh'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.01}
+{'name': 'prefix-shellcheck', 'argv': ['/opt/homebrew/bin/shellcheck', '-s', 'bash', '/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/native-prefix.sh'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.04}
+{'name': 'source-hash', 'argv': ['/usr/bin/python3', 'packaging/release.py', '--source-hash'], 'exitCode': 0, 'expected': 0, 'pass': True, 'seconds': 0.23}
+{'name': 'publish-refusal', 'argv': ['/usr/bin/python3', 'packaging/release.py', '--check-publish'], 'exitCode': 1, 'expected': 1, 'pass': True, 'seconds': 0.23}
+{'name': 'mutation-fresh-arguments', 'argv': ['/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_release_workflow.py', '-v'], 'exitCode': 1, 'expected': 1, 'pass': True, 'seconds': 2.42}
+{'name': 'mutation-nounset', 'argv': ['/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_release_workflow.py', '-v'], 'exitCode': 1, 'expected': 1, 'pass': True, 'seconds': 2.41}
+{'name': 'mutation-pipefail', 'argv': ['/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_release_workflow.py', '-v'], 'exitCode': 1, 'expected': 1, 'pass': True, 'seconds': 2.55}

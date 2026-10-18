@@ -18,20 +18,26 @@ branch `codex/nfs-first-release`; target `origin/main`. Canonical ticket is
 - Relevant supplement: evidence/intake/signing-certificate-upload-receipt.json.
   All six entries provisioned; import/password pairing/notary not yet validated.
   Do not repeat credential provisioning absent an actual validation failure.
-- Triggering rework/finding: **N/A**, initial implementation.
-- Input review2051fd9559f4f4fa7beae68723429f8199b50004, design cbf7b35,
+- Triggering rework: code-review-report.md / code-review-revision-record.md **CRR002 Fail**,
+  CR-001 = API001 R03-F001; actual failed candidate39111348848/attempt1.
+  Input reviewca048be893516d79bc1ea895b929af17580e25dd; API72dc48b.
+  DR001 staged reviewed branch518f4b51 only; eight Delivery untracked files remain
+  unmodified/unstaged. No main merge is required for that staging prerequisite.
+- Original architecture-review input2051fd9559f4f4fa7beae68723429f8199b50004, design cbf7b35,
   approved base origin/main7e375984be2bea7a4d536e43cc59d6bc2b116870. Remote target
   was not refreshed/finalized by implementation; Delivery must check it afresh.
 
 ## Current Implementation Summary
 
-**Implementation Complete — ready for independent source review**, not release
-acceptance. Source commit **886b55e1cf88f3f696334bd5e7b8c374946a594d**. Personal
+**IR-002 Local Fix Complete — ready for targeted source re-review**, not release
+acceptance. Source commit **8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34**. Personal
 execution only; no delegation, push, hosted dispatch, release/tag or live-user action.
 
-- Cycle Initial; implementation-revision-record.md **IR-001**.
+- Cycle Rework; implementation-revision-record.md **IR-002**, preserving IR001 baseline.
 - Solution R2/SR002 + SR003; architecture ARCH-REV-001.
-- CRR/API-REV/DR and triggering findings **N/A** for this Task.
+- CRR001 Pass100 is historical; **CRR002 Fail / API001 Fail62.86%** remain
+  current downstream verdicts until their respective owners re-review/re-execute.
+  Finding CR-001/R03-F001 corrected locally, not independently closed. DR001 is staging context.
 - Replaced existing-tag/clobber/early-image publication with manual build-only
   candidate → exact qualification → final signed retained payload → annotated
   exact tag/draft/assets → identical OCI/anonymous availability → normal release.
@@ -40,15 +46,35 @@ execution only; no delegation, push, hosted dispatch, release/tag or live-user a
   the exact measured engine packages and OCI, never rebuilt under old evidence.
 - Default lock remains engine=null, qualification=null, no qualified targets or
   physical/user proof. Source hash with that **unqualified** lock is
-  `8c1bcc13194f919c41cf4de9ad825a48acb4281bd558374ac77cbb1426820bac`.
+  `26af7e5bcab00ae22d4bdebe1820c6d38b0dc51a44f1b834036334ea79528298`.
+
+## Current Bounded Correction — IR-002
+
+Actual supported Mac candidate aborted under `/bin/bash` before metadata/native
+checks: empty optional array expansion with nounset. The workflow now starts its
+argument array with the mandatory metadata arguments, appends only the exact
+fresh qualification flags, and invokes the quoted nonempty array. Strict mode,
+all four runners and qualification/cancellation/publication gates are unchanged.
+No shell-version branch, error masking or runtime/engine change.
+
+The new executable regression reads the actual workflow prefix (strict mode and
+OCI JSON pipeline included), doubles only release.py OCI/metadata, and asserts
+exact candidate/fresh argv and failure propagation under `/bin/bash`. Original
+source fails with five assertions; corrected suite passes. TARGET strings do not
+constitute native execution for those architectures. TESTING.md documents scope.
+
+Workflow is production-hashed: a **NEW reviewed current hosted candidate** is
+required. Do not relabel/hand-assemble API001's seven failed-run partial artifacts.
+They remain retained failure evidence. Physical host assignment/user verification,
+real signing, public payload/publication and Delivery current-main gates remain.
 
 ## Routing Classification
 
 - **Task size Large; architectural risk High; Confirmed** against design's Task
-  Size And Architectural Risk and current implementation/source-audit.json.
+  Size And Architectural Risk and current ir-002/final-checks.json (IR001 structural audit retained).
 - Irreversible cross-service publication, evidence/signing trust, failure recovery
   and four-target scope remain material; no downgrade from local green checks.
-- Selected route **Code Review** by fresh rules (ir-001/routing.json).
+- Selected route **Code Review** by fresh rules (ir-002/routing.json).
 - Direct-route lightweight self-review **Not Applicable**; ordinary implementation
   self-check completed, not a substitute for independent review.
 - New Design Impact/Requirement Gap: **None**. Rootless OCI materialization is the
@@ -58,7 +84,7 @@ execution only; no delegation, push, hosted dispatch, release/tag or live-user a
 
 | Behavior | Approved change / preserved outcome | Actual path | Implementation result / limits |
 | --- | --- | --- | --- |
-| BEH001 / REQ001–002 / AC001 | No pre-created release; nonpublic candidate | release-nfs.yml prepare/engine/binaries/candidate; release.py; identity.py/candidate.py | Exact source/workflow/run/attempt/member identities and external artifact envelope; no write permissions/secrets in candidate mode. Actual hosted build still required |
+| BEH001 / REQ001–002 / AC001 | No pre-created release; nonpublic candidate | release-nfs.yml prepare/engine/binaries/candidate; release.py; identity.py/candidate.py | IR002 corrects native candidate argv under Bash3.2; exact flags/strict failures locally tested. Earlier actual hosted candidate failed; NEW current hosted aggregate still required. Identity and nonpublication gates retained |
 | BEH002 / REQ003–004/006 / AC002–003/006 | Applicable current evidence and real signing gates | qualification.py; release-lock.json; candidate.py; sign-macos.sh | Exact six target/mode rows/four targets, independent host/kernel and physical categories, actual-user statement references; Accepted-only signing. Fixtures cannot prove receipts true; real qualification/signing pending |
 | BEH003 / REQ001/005–006 / AC004/006 | Normal publication with safe same-input retry | payload.py; publication.py; workflow payload/publish | Retain final complete bytes before effects; fresh-main check, tag annotation binding, draft normal/verify-tag, no-clobber assets, all-child preserve-digests/anonymous OCI, public downloads. Missing/expired/conflicting input refuses. New manual dispatch resumes original payload; no actual remote effects exercised |
 | BEH004 / REQ005/007–008 / AC005/007 | Exact supported prebuilt download/install | install.sh; payload.py; README; packaging/RELEASE.md | Strict normal version, downloaded manifest/archive checksums, bounded four-member regular archive, exact metadata equality before CLI admission; no-setup explicit version smoke. Real final/public native smoke pending |
@@ -119,7 +145,7 @@ whether a referenced physical/user receipt is truthful; API/Delivery must do so.
   audit green. No unrelated dead-code cleanup/follow-up invented.
 - Shared structures tight: runtime Release unchanged; candidate, qualification,
   final payload and external retention envelope carry different explicit meanings.
-- Shared design principles reapplied. Size guardrails **Yes**: source max358
+- Shared design principles reapplied. Size guardrails **Yes**: source max359
   nonempty lines. Candidate268/publication235 and workflow delta exceed220 signal;
   assessed as cohesive artifact/effect/scheduling owners. Final payload split out
   to121 lines. No >500 source file or broad generic framework.
@@ -135,6 +161,32 @@ Per design Persisted Data / State Transition Decision:
 - Follows approved decision **Yes**, no deviation/migration implementation.
 
 ## Environment And Local Implementation Checks
+
+### IR-002 current delta checks
+
+Evidence root `implementation-evidence/ir-002/`: checks-and-limits.md,
+checks-result.json, final-checks.json, source-inputs.json and cleanup.json.
+- Mac system Bash3.2.57 arm64: original prefix fails new7test suite with5assertions;
+  fixed7pass, including candidate/fresh four TARGET strings, metadata failure17,
+  missing TARGET and OCI valid-output/nonzero pipeline refusal.
+- Independent119-input copy/private HOME/TMP, Python3.9.6: all41 collected,
+  40executed+1Go-child-only skip. No native Go rerun in this bounded round.
+- actionlint, extracted-prefix Bash syntax/shellcheck, source hash and expected
+  empty-lock refusal pass. Removing fresh flags, nounset or pipefail is detected
+  by three independent-copy mutation runs (assertions, not harness errors).
+- Other116 source inputs unchanged; no unused touched-test import. Workflow359
+  nonempty lines, production delta5lines; no size/refactor pressure introduced.
+- Eight Delivery-owned untracked files preserved byte-for-byte/unstaged; IR001
+  history prefix preserved; own scratch removed. No hosted/remote/live actions.
+- No unexpected failed attempt. Baseline/mutations are intentional red controls.
+  Current results do not reclassify API001 or claim hosted/source-review Pass.
+
+### IR-001 historical broader implementation checks — unchanged owners only
+
+These remain attributed to source886b55e, not a new acceptance run of the current
+workflow. Broader native/OCI/compile checks were not repeated solely for this argv
+correction; the current shell and packaging boundary was exercised above.
+
 
 Evidence root: `implementation-evidence/ir-001/`; canonical detailed report
 checks-and-limits.md; current final-checks.json, checks-result.json,
@@ -161,9 +213,10 @@ linux-checks-result.json, source-audit.json, mutations.json, cleanup.json.
   source and host-bridged-lock failures were harness placement, not weakened guards.
   Current results supersede intermediate snapshots without erasing them.
 
-These are **implementation-local checks**, not API/E2E sign-off. No physical
+All listed local checks are **implementation-local checks**, not API/E2E sign-off. No physical
 hosting, genuine user verification, real credential/notary, hosted build or public
-release check was executed. No secrets read or re-provisioned. Owned scratch and
+release check was executed by implementation. API001’s later hosted failure is
+separately attributed above. No secrets read or re-provisioned. Owned scratch and
 containers removed; canonical/PM/history/old assets/shared cache preserved.
 
 ## Frontend Rendered-Result Check
@@ -173,10 +226,11 @@ UI interaction, Guide activation or dashboard changes.
 
 ## Downstream Coverage And Execution Still Required
 
-1. Independent source review, including new durable tests and all failure/effect
-   boundaries. No duplicate Designer/API dispatch from implementation.
-2. API scoped actual hosted build-only candidate on current reviewed source:
-   actual engine pairs/full OCI/artifact envelope, native four-runner checks,
+1. Targeted independent source re-review of IR002/CR-001 and the new executable
+   shell regression; prior unrelated source review remains historical. No duplicate Designer/API dispatch from implementation.
+2. API NEW scoped actual hosted build-only candidate on current reviewed source:
+   full aggregation after both Mac jobs; actual engine pairs/full OCI/artifact
+   envelope, native four-runner checks,
    no public effects. Inventory authorized independent physical/test registry
    resources; execute complete candidate target/mode ledger and genuine user checks.
 3. Verify current source/engine/OCI and metadata-only registry alias evidence;

@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34",
+  "historyPrefixPreserved": true,
+  "sourceCopyStillExact": true,
+  "deliveryUntrackedPreserved": 8,
+  "trackedChanges": [
+    ".github/workflows/release-nfs.yml",
+    "TESTING.md",
+    "scripts/tests/test_nfs_release_workflow.py",
+    "tickets/in-progress/nfs-first-release/implementation-handoff.md",
+    "tickets/in-progress/nfs-first-release/implementation-revision-record.md"
+  ],
+  "sourceHash": "26af7e5bcab00ae22d4bdebe1820c6d38b0dc51a44f1b834036334ea79528298",
+  "cleanupComplete": true
+}

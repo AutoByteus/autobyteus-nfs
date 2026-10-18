@@ -1,0 +1,147 @@
+test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) ... test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='darwin-arm64', mode='fresh')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/source/scripts/tests/test_nfs_release_workflow.py", line 217, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(args, expected)
+AssertionError: Lists differ: ['pac[339 chars]/release.json'] != ['pac[339 chars]/release.json', '--qualified', '--candidate', 'work/candidate']
+
+Second list contains 3 additional elements.
+First extra element 13:
+'--qualified'
+
+  ['packaging/release.py',
+   '--tag',
+   'v0.1.0',
+   '--engine-image',
+   'ghcr.io/autobyteus/autobyteus-nfs@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+   '--engine-manifest',
+   'work/candidate/engine/engine-manifest.json',
+   '--engine-artifacts',
+   'work/candidate/engine',
+   '--target',
+   'darwin-arm64',
+   '--output',
+-  'cmd/autobyteus-nfs/release.json']
+?                                   ^
+
++  'cmd/autobyteus-nfs/release.json',
+?                                   ^
+
++  '--qualified',
++  '--candidate',
++  'work/candidate']
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='darwin-amd64', mode='fresh')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/source/scripts/tests/test_nfs_release_workflow.py", line 217, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(args, expected)
+AssertionError: Lists differ: ['pac[339 chars]/release.json'] != ['pac[339 chars]/release.json', '--qualified', '--candidate', 'work/candidate']
+
+Second list contains 3 additional elements.
+First extra element 13:
+'--qualified'
+
+  ['packaging/release.py',
+   '--tag',
+   'v0.1.0',
+   '--engine-image',
+   'ghcr.io/autobyteus/autobyteus-nfs@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+   '--engine-manifest',
+   'work/candidate/engine/engine-manifest.json',
+   '--engine-artifacts',
+   'work/candidate/engine',
+   '--target',
+   'darwin-amd64',
+   '--output',
+-  'cmd/autobyteus-nfs/release.json']
+?                                   ^
+
++  'cmd/autobyteus-nfs/release.json',
+?                                   ^
+
++  '--qualified',
++  '--candidate',
++  'work/candidate']
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='linux-arm64', mode='fresh')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/source/scripts/tests/test_nfs_release_workflow.py", line 217, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(args, expected)
+AssertionError: Lists differ: ['pac[338 chars]/release.json'] != ['pac[338 chars]/release.json', '--qualified', '--candidate', 'work/candidate']
+
+Second list contains 3 additional elements.
+First extra element 13:
+'--qualified'
+
+  ['packaging/release.py',
+   '--tag',
+   'v0.1.0',
+   '--engine-image',
+   'ghcr.io/autobyteus/autobyteus-nfs@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+   '--engine-manifest',
+   'work/candidate/engine/engine-manifest.json',
+   '--engine-artifacts',
+   'work/candidate/engine',
+   '--target',
+   'linux-arm64',
+   '--output',
+-  'cmd/autobyteus-nfs/release.json']
+?                                   ^
+
++  'cmd/autobyteus-nfs/release.json',
+?                                   ^
+
++  '--qualified',
++  '--candidate',
++  'work/candidate']
+
+======================================================================
+FAIL: test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest) (target='linux-amd64', mode='fresh')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir002-check-82tdmree/source/scripts/tests/test_nfs_release_workflow.py", line 217, in test_candidate_and_fresh_metadata_argv
+    self.assertEqual(args, expected)
+AssertionError: Lists differ: ['pac[338 chars]/release.json'] != ['pac[338 chars]/release.json', '--qualified', '--candidate', 'work/candidate']
+
+Second list contains 3 additional elements.
+First extra element 13:
+'--qualified'
+
+  ['packaging/release.py',
+   '--tag',
+   'v0.1.0',
+   '--engine-image',
+   'ghcr.io/autobyteus/autobyteus-nfs@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+   '--engine-manifest',
+   'work/candidate/engine/engine-manifest.json',
+   '--engine-artifacts',
+   'work/candidate/engine',
+   '--target',
+   'linux-amd64',
+   '--output',
+-  'cmd/autobyteus-nfs/release.json']
+?                                   ^
+
++  'cmd/autobyteus-nfs/release.json',
+?                                   ^
+
++  '--qualified',
++  '--candidate',
++  'work/candidate']
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.197s
+
+FAILED (failures=4)
