@@ -1,0 +1,13 @@
+{
+  "scratch": "/Users/normy/autobyteus_org/nfs-extract-ir004-5birkela",
+  "env": {
+    "PATH": "/Users/normy/.nvm/versions/node/v22.21.1/bin:/opt/homebrew/bin:/usr/bin:/bin",
+    "HOME": "/Users/normy/autobyteus_org/nfs-extract-ir004-5birkela/home",
+    "TMPDIR": "/Users/normy/autobyteus_org/nfs-extract-ir004-5birkela/tmp",
+    "CI": "true",
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+  "source_head": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "input_count": 7307,
+  "manifest_sha256": "dd2987d47247ba6fe6d92500803888799d1096c8e6a6d0d7c0096240232bba21"
+}

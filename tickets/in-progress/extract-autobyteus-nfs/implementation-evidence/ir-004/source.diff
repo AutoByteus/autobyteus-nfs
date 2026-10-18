@@ -1,0 +1,6 @@
+diff --git a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+index 5f3b47b5e4..01eac0161a 100644
+--- a/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
++++ b/autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts
+@@ -7 +6,0 @@ import { RuntimeKind } from "../../../../../../src/runtime-management/runtime-ki
+-import { Skill } from "../../../../../../src/skills/domain/models.js";

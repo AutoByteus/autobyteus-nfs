@@ -1,0 +1,18 @@
+{
+  "initial_staged_check_exit": 2,
+  "initial_validator": "Trailing-space-only scanner missed blank EOF; assertion failed before commit. No source/test failure.",
+  "raw_log_exceptions": [
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-004/claude-bootstrapper.log",
+      "trailing_whitespace_lines": [],
+      "blank_line_at_EOF": true,
+      "reason": "Unmodified raw command log; retain exact bytes"
+    },
+    {
+      "path": "tickets/in-progress/extract-autobyteus-nfs/implementation-evidence/ir-004/prebuild.log",
+      "trailing_whitespace_lines": [],
+      "blank_line_at_EOF": true,
+      "reason": "Unmodified raw command log; retain exact bytes"
+    }
+  ]
+}

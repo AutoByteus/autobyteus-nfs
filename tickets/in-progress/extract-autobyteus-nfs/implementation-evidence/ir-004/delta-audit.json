@@ -1,0 +1,16 @@
+{
+  "S_head": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "S_prior": "5559abbf017566f0030d95b023614f7418d3f212",
+  "N_head_before_handoff": "5c2c95895422a9f51857546e3bd38fa98a51e591",
+  "N_service": "83726b27400b405a7a6a79bd962d8e2419daa561",
+  "changed": [
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts"
+  ],
+  "numstat": "0\t1\tautobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+  "entire_test_equals_prior_minus_one_unused_import": true,
+  "all_assertions_and_fixtures_unchanged": true,
+  "Skill_domain_class_unchanged": true,
+  "N_product_inputs_unchanged": true,
+  "before_sha256": "5eeec52f2fffe11fea3da26e7ad740a89892f32faf37edc2f313fed26d5f61d8",
+  "after_sha256": "d45045575ef10f78af74a257877231d1ceed9f38256db72151753abd8663b68d"
+}

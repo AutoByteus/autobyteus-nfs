@@ -1,0 +1,43 @@
+[
+  {
+    "name": "install",
+    "command": [
+      "pnpm",
+      "install",
+      "--frozen-lockfile",
+      "--filter",
+      "autobyteus-server-ts...",
+      "--filter",
+      "@autobyteus/application-backend-sdk..."
+    ],
+    "exit": 0,
+    "seconds": 19.939
+  },
+  {
+    "name": "prebuild",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "prebuild"
+    ],
+    "exit": 0,
+    "seconds": 9.723
+  },
+  {
+    "name": "claude-bootstrapper",
+    "command": [
+      "pnpm",
+      "-C",
+      "autobyteus-server-ts",
+      "exec",
+      "vitest",
+      "run",
+      "tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+      "--maxWorkers=1",
+      "--no-watch"
+    ],
+    "exit": 0,
+    "seconds": 6.036
+  }
+]

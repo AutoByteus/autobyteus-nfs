@@ -1,0 +1,26 @@
+{
+  "revision": "IR-004",
+  "finding": "CR-002",
+  "result": "Ready for targeted source re-review",
+  "S_head": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "N_service_unchanged": true,
+  "history_byte_prefix_preserved": true,
+  "unchanged_upstream_ticket_inputs": [
+    "code-review-report.md",
+    "code-review-revision-record.md",
+    "requirements-doc.md",
+    "design-spec.md",
+    "design-review-report.md",
+    "solution-revision-record.md"
+  ],
+  "unused_diagnostics": 0,
+  "affected_test_files": 1,
+  "affected_tests_passed": 1,
+  "affected_tests_skipped": 0,
+  "copied_input_count": 7307,
+  "scratch_removed": true,
+  "classification": "Large/High",
+  "remaining_API": "Integrated S04/S05 and current affected S validation remain downstream; unchanged N evidence carries with limits",
+  "AC007": "Delivery pending",
+  "no_target_or_release_actions": true
+}

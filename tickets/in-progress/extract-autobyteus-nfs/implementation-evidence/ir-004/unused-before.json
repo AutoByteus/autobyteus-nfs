@@ -1,0 +1,45 @@
+{
+  "typescript": "5.9.3",
+  "scope": "Read-only compiler unused-local analysis of the25 R2 production files plus4 overlapping test files. Not a full semantic typecheck.",
+  "production": [
+    "autobyteus-server-ts/src/agent-execution/backends/acp/backend/acp-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/antigravity/backend/agy-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/autobyteus/autobyteus-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-agent-run-context.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/backend/claude-session-bootstrapper.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/claude-workspace-resolver.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-cleanup.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-manager.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/claude/session/claude-session-query-options.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-agent-run-context.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/backend/codex-thread-bootstrapper.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/backend/index.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/codex-workspace-resolver.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/codex/thread/codex-thread-manager.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/grok/grok-build-agent-run-backend-factory.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/provider-preparation-guard.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/shared/prepare-private-runtime-skills.ts",
+    "autobyteus-server-ts/src/agent-execution/backends/shared/runtime-skill-profile.ts",
+    "autobyteus-server-ts/src/agent-execution/providers/agent-provider-factory-builder.ts",
+    "autobyteus-server-ts/src/agent-execution/services/agent-run-manager.ts",
+    "autobyteus-server-ts/src/compositions/create-process-agent-provider-factory-builder.ts",
+    "autobyteus-server-ts/src/runtime-management/codex/client/codex-app-server-client-manager.ts",
+    "autobyteus-server-ts/src/services/terminal-streaming/pty-session-manager.ts"
+  ],
+  "tests": [
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/backend/codex-thread-bootstrapper.test.ts",
+    "autobyteus-server-ts/tests/unit/agent-execution/backends/codex/thread/codex-thread-manager.test.ts",
+    "autobyteus-server-ts/tests/integration/application-backend/brief-package-team-prompt.integration.test.ts"
+  ],
+  "diagnostics": [
+    {
+      "path": "autobyteus-server-ts/tests/unit/agent-execution/backends/claude/backend/claude-session-bootstrapper.test.ts",
+      "line": 7,
+      "code": 6133,
+      "message": "'Skill' is declared but its value is never read."
+    }
+  ]
+}
