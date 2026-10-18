@@ -1,0 +1,127 @@
+[
+  {
+    "name": "candidate-envelope",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--operation",
+      "candidate-envelope",
+      "--artifact-id",
+      "12131531399",
+      "--run-id",
+      "39113335636",
+      "--attempt",
+      "1",
+      "--workflow-commit",
+      "96c8de3a381f74ec8f2b9e93425fb90e17e7e693",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/candidate-envelope.json"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "candidate-fetch",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--operation",
+      "fetch-candidate",
+      "--envelope",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/candidate-envelope.json",
+      "--directory",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/candidate-reference.json"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "candidate-verify",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--operation",
+      "verify-candidate",
+      "--directory",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/actual-candidate.json"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "candidate-metadata-alias",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--tag",
+      "v0.1.0",
+      "--engine-image",
+      "registry.invalid/owned-api002/nfs@sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb",
+      "--engine-manifest",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate/engine/engine-manifest.json",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-002/candidate-metadata-alias.json"
+    ],
+    "exit": 0,
+    "expected": 0,
+    "pass_": true
+  },
+  {
+    "name": "candidate-metadata-wrong-digest",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--tag",
+      "v0.1.0",
+      "--engine-image",
+      "registry.invalid/owned-api002/nfs@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "--engine-manifest",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate/engine/engine-manifest.json",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass_": true
+  },
+  {
+    "name": "candidate-metadata-wrong-version",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--tag",
+      "v0.1.1",
+      "--engine-image",
+      "registry.invalid/owned-api002/nfs@sha256:4bb90b6ca4a3598e69701500fea877a1e908c80e132bd11938a728de09a4b3bb",
+      "--engine-manifest",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate/engine/engine-manifest.json",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass_": true
+  },
+  {
+    "name": "candidate-unqualified-refusal",
+    "command": [
+      "/usr/bin/python3",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate"
+    ],
+    "exit": 1,
+    "expected": 1,
+    "pass_": true
+  }
+]

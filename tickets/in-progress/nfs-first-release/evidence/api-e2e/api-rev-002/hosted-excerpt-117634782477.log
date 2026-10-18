@@ -1,0 +1,11 @@
+2026-10-18T09:00:47.6136140Z [36;1mtest "$(out/autobyteus-nfs version)" = "$TAG"[0m
+2026-10-18T09:01:02.8639010Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.193s
+2026-10-18T09:01:03.0238190Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.034s
+2026-10-18T09:01:03.0426870Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.043s
+2026-10-18T09:01:03.9716080Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.100s
+2026-10-18T09:01:06.6390150Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.605s
+2026-10-18T09:01:06.6391080Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.039s
+2026-10-18T09:01:06.6391770Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.307s
+2026-10-18T09:01:16.8831920Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+2026-10-18T09:01:27.6328080Z Ran 41 tests in 11.314s
+2026-10-18T09:01:27.6328660Z OK (skipped=1)

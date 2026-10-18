@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,hashlib,subprocess,datetime,re,os
+E=Path(__file__).resolve().parent;N=E.parents[5];T=E.parents[2]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+a=json.loads((E/'input-audit.json').read_text());out={}
+for key in ['source','protected']:
+ bad=[p for p,h in a[key].items() if not (N/p).is_file() or sha(N/p)!=h];out[key+'Count']=len(a[key]);out[key+'Mismatches']=bad;assert not bad,(key,bad)
+oldhist=subprocess.check_output(['git','show',a['head']+':'+str((T/'api-e2e-revision-record.md').relative_to(N))],cwd=N);assert (T/'api-e2e-revision-record.md').read_bytes().startswith(oldhist);out['API001HistoryPrefixPreserved']=True
+external=[T/n for n in ['delivery-revision-record.md','docs-sync-report.md','handoff-summary.md','release-deployment-report.md']]+[p for p in (T/'delivery-evidence').rglob('*') if p.is_file()]
+out['deliveryCurrentHashes']={str(p.relative_to(N)):sha(p) for p in external};out['deliveryOwnerChanges']=[p for p,h in a['deliveryUntracked'].items() if out['deliveryCurrentHashes'].get(p)!=h];assert all(Path(p).name in ['delivery-revision-record.md','docs-sync-report.md','handoff-summary.md','release-deployment-report.md'] for p in out['deliveryOwnerChanges']);out['deliveryAddedFiles']=sorted(set(out['deliveryCurrentHashes'])-set(a['deliveryUntracked']));out['externalOwnershipDisposition']='DR002 owner updates preserved/unmodified/unstaged; not API edits.'
+clean=json.loads((E/'cleanup-local.json').read_text());smoke=json.loads((E/'candidate-native-version.json').read_text());assert not Path(clean['root']).exists() and not Path(smoke['scratch']).exists();out['localTemporaryScratchAbsent']=True
+root=Path(json.loads((E/'retained-candidate-resource.json').read_text())['root']);candidate=root/'candidate';assert candidate.is_dir() and not (root/'candidate.zip').exists() and not (root/'refused-envelope-destination').exists()
+args=['/usr/bin/python3','packaging/release.py','--operation','verify-candidate','--directory',str(candidate)];p=subprocess.run(args,cwd=N,capture_output=True,text=True,timeout=120,env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1'});(E/'final-candidate-verify.log').write_text('$ '+' '.join(args)+'\n'+p.stdout+p.stderr);assert p.returncode==0,p.stderr
+record=json.loads(p.stdout);assert record==json.loads((E/'actual-candidate.json').read_text());out['retainedCandidateFinalVerification']=True;out['retainedRoot']=str(root);out['rootMode']=oct(root.stat().st_mode&0o777);out['retainedCandidateFiles']=len([x for x in candidate.rglob('*') if x.is_file()]);out['retainedCandidateBytes']=sum(x.stat().st_size for x in candidate.rglob('*') if x.is_file());out['generatedAliasRetainedOutsideRepo']=str(root/'metadata-alias-control.json');assert (root/'metadata-alias-control.json').is_file() and not (E/'candidate-metadata-alias.json').exists()
+f=json.loads((E/'hosted-final.json').read_text());out['run']=f['run']['id'];out['attempt']=f['run']['run_attempt'];out['runConclusion']=f['run']['conclusion'];assert out['runConclusion']=='success';out['jobCounts']={s:sum(j['conclusion']==s for j in f['jobs']['jobs']) for s in ['success','failure','skipped','cancelled']};assert out['jobCounts']=={'success':10,'failure':0,'skipped':2,'cancelled':0}
+rows=[l for l in (T/'api-e2e-test-case-ledger.md').read_text().splitlines() if re.match(r'\| (?:R0[1-4]|Q\d{2}-\d{2}|U01|D01|D02|C01) \|',l)];out['ledgerCount']=len(rows);out['ledgerStates']={s:sum(l.split('|')[3].strip().startswith(s) for l in rows) for s in ['Pass','Fail','Blocked','Not Tested']};assert len(rows)==50 and out['ledgerStates']=={'Pass':5,'Fail':0,'Blocked':42,'Not Tested':3}
+patterns=[r'gh[pousr]_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]{20,}',r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'];hits=[]
+for p in E.rglob('*'):
+ if not p.is_file() or p.name=='finalize-audit.py':continue
+ if any(re.search(rx,p.read_text(errors='replace')) for rx in patterns):hits.append(str(p.relative_to(E)))
+out['credentialPatternFiles']=hits;assert not hits
+out['ownedRuntimeResourcesCreated']=[];out['ownedTemporaryProcessesCompleted']=True;out['platformRunnerDisposal']='Post-job cleanup logged; provider disposal not independently audited';out['productOrDurableEditsByAPI']=[];out['utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();out['headBeforeEvidenceCommit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=N,text=True).strip();out['pass']=True
+(E/'final-checks.json').write_text(json.dumps(out,indent=2)+'\n')
+canonical=['api-e2e-coverage-investigation.md','api-e2e-execution-coverage-report.md','api-e2e-test-case-ledger.md','api-e2e-revision-record.md'];index={'canonical':{n:sha(T/n) for n in canonical},'evidence':{str(p.relative_to(E)):sha(p) for p in E.rglob('*') if p.is_file() and p.name!='package-index.json'},'result':'Blocked73.57%','route':'User resource dependency; no result teammate handoff','fullActualCandidate':str(candidate)};(E/'package-index.json').write_text(json.dumps(index,indent=2)+'\n')
+print(json.dumps({k:v for k,v in out.items() if k!='deliveryCurrentHashes'},indent=2))

@@ -1,0 +1,2 @@
+$ /opt/homebrew/bin/actionlint .github/workflows/ci.yml .github/workflows/release-nfs.yml
+cwd /Users/normy/nfs-first-api002-_6zv884g/source

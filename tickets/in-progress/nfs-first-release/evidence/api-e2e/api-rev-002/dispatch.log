@@ -1,0 +1,1 @@
+$ gh workflow run release-nfs.yml --repo AutoByteus/autobyteus-nfs --ref codex/nfs-first-release -f release_tag=v0.1.0 -f source_sha=96c8de3a381f74ec8f2b9e93425fb90e17e7e693 -f publish=false

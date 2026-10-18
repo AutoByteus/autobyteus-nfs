@@ -1,59 +1,59 @@
 # API/E2E case ledger — nfs-first-release
 
-API-REV-001 reconciled result: Fail62.86%. Initial plan preceded execution; events below preserve checkpoints. D01/D02 downstream-owned, not silently waived. 50planned cases:3Pass/1Fail/43Blocked/3NotTested; supplements are not extra unique cases.
+API-REV-002 current result: Blocked73.57%. Same50cases:5Pass/0Fail/42Blocked/3NotTested. API001 events/history remain intact below. Supplements are not extra unique cases.
 
 | Case | Expected | State | Evidence |
 |---|---|---|---|
-| R01 | Current release/control/installer fixtures pass | Pass — local only | local-results.json, python-all.log |
-| R02 | Static/hash/refusal plus native Go and real CLI preflight | Pass — local only | local-results.json, native-results.json, prepare-results.json |
-| R03 | Exact hosted candidate: two engine arches/whole OCI/four native targets | Fail | hosted-final.json, hosted-log-index.json |
-| R04 | Fetch/verify complete actual candidate | Blocked — no candidate artifact after R03 failure | hosted-final.json |
-| Q01-01 | Q01 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-02 | Q01 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-03 | Q01 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-04 | Q01 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-05 | Q01 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-06 | Q01 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q01-07 | Q01 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-01 | Q02 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-02 | Q02 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-03 | Q02 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-04 | Q02 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-05 | Q02 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-06 | Q02 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q02-07 | Q02 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-01 | Q03 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-02 | Q03 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-03 | Q03 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-04 | Q03 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-05 | Q03 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-06 | Q03 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q03-07 | Q03 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-01 | Q04 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-02 | Q04 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-03 | Q04 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-04 | Q04 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-05 | Q04 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-06 | Q04 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q04-07 | Q04 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-01 | Q05 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-02 | Q05 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-03 | Q05 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-04 | Q05 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-05 | Q05 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-06 | Q05 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q05-07 | Q05 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-01 | Q06 mode/operation01 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-02 | Q06 mode/operation02 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-03 | Q06 mode/operation03 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-04 | Q06 mode/operation04 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-05 | Q06 mode/operation05 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-06 | Q06 mode/operation06 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| Q06-07 | Q06 mode/operation07 per investigation | Blocked — no complete candidate/assigned disposable pair | hosted-final.json; inventory.json |
-| U01 | Genuine user execution against identified candidate | Not Tested | No usable candidate; no user-test receipt |
+| R01 | Current release/control/installer fixtures pass | Pass — API002 current local/hosted | api-rev-002/local-results.json, python-all.log, hosted-execution-summary.json |
+| R02 | Current static/hash/refusal; earlier CLI preflight limits retained | Pass — API002 current | api-rev-002/local-results.json; API001 supplemental probes historical |
+| R03 | Exact hosted candidate: two engine arches/whole OCI/four native targets | Pass — API002 current | api-rev-002/hosted-final.json; prior API001 remains failed |
+| R04 | Fetch/verify complete actual candidate | Pass — API002 current | api-rev-002/candidate-reference.json, candidate-validation-results.json, candidate-native-version.json |
+| Q01-01 | Q01 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-02 | Q01 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-03 | Q01 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-04 | Q01 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-05 | Q01 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-06 | Q01 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q01-07 | Q01 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-01 | Q02 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-02 | Q02 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-03 | Q02 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-04 | Q02 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-05 | Q02 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-06 | Q02 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q02-07 | Q02 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-01 | Q03 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-02 | Q03 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-03 | Q03 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-04 | Q03 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-05 | Q03 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-06 | Q03 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q03-07 | Q03 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-01 | Q04 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-02 | Q04 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-03 | Q04 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-04 | Q04 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-05 | Q04 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-06 | Q04 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q04-07 | Q04 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-01 | Q05 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-02 | Q05 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-03 | Q05 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-04 | Q05 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-05 | Q05 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-06 | Q05 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q05-07 | Q05 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-01 | Q06 mode/operation01 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-02 | Q06 mode/operation02 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-03 | Q06 mode/operation03 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-04 | Q06 mode/operation04 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-05 | Q06 mode/operation05 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-06 | Q06 mode/operation06 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| Q06-07 | Q06 mode/operation07 per investigation | Blocked — no assigned disposable pair | api-rev-002/resource-blocker.json |
+| U01 | Genuine user execution against identified candidate | Not Tested | Candidate available; genuine user-test receipt absent |
 | D01 | Delivery final signing/publication/recovery | Not Tested | Downstream gates; publisher skipped |
 | D02 | Final public downloads/receipts | Not Tested | No release; post-run-remote.json |
-| C01 | Owned cleanup/source preservation | Pass | cleanup-local.json; mac-array-reproduction.json; final-checks.json |
+| C01 | Owned cleanup/source preservation and explicit candidate retention | Pass — API002 current | api-rev-002/cleanup-local.json, candidate-local-retention.json, final-checks.json |
 
 ## Execution events
 | UTC | Case | Result/checkpoint | Evidence |
@@ -99,3 +99,40 @@ API-REV-001 reconciled result: Fail62.86%. Initial plan preceded execution; even
 | 2026-10-18T08:31:34.553157+00:00 | R03 | Hosted checkpoint completed/failure; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-010.json |
 | 2026-10-18T08:32:14.088624+00:00 | R03 | Fail exact run39111348848/attempt1: both Mac native checks fail; both Linux native jobs/engine pair/OCI pass; candidate/payload/publish skipped. No forced cancellation or reduced matrix. Investigating original logs. | hosted-final.json |
 | 2026-10-18T08:32:50.270992+00:00 | R03-F001 | Reproduced candidate empty-array exit1 before command entry on system Bash; fresh-mode nonempty control exit0. No fix. | mac-array-reproduction.json |
+
+## API-REV-002 events — same case IDs; pending new execution
+
+| UTC | Case | Result/checkpoint | Evidence (api-rev-002) |
+|---|---|---|---|
+| 2026-10-18T08:53:11.787762+00:00 | R03-F001 | Source correction accepted CRR003; actual execution closure pending. Current remote branch still old518f4b51; staging prerequisite needed. | input-audit.json; validation-plan.md |
+| 2026-10-18T08:53:32.059934+00:00 | R02 | Pass bash-version | bash-version.log |
+| 2026-10-18T08:53:32.396089+00:00 | R02 | Pass python-version | python-version.log |
+| 2026-10-18T08:53:34.711026+00:00 | R03-F001 | Pass workflow-current | workflow-current.log |
+| 2026-10-18T08:53:55.526808+00:00 | R01 | Pass python-all | python-all.log |
+| 2026-10-18T08:53:55.716521+00:00 | R02 | Pass actionlint | actionlint.log |
+| 2026-10-18T08:53:55.724619+00:00 | R02 | Pass prefix-syntax | prefix-syntax.log |
+| 2026-10-18T08:53:55.756471+00:00 | R02 | Pass prefix-shellcheck | prefix-shellcheck.log |
+| 2026-10-18T08:53:56.272713+00:00 | R02 | Pass source-hash | source-hash.log |
+| 2026-10-18T08:53:56.510765+00:00 | R02 | Pass publish-refusal | publish-refusal.log |
+| 2026-10-18T08:55:43.837361+00:00 | R03 | Running hosted build-only run 39113335636 attempt 1; dispatch accepted NOT Pass | dispatch-receipt.json |
+| 2026-10-18T08:55:50.415117+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-001.json |
+| 2026-10-18T08:56:21.717592+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-002.json |
+| 2026-10-18T08:57:56.215700+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-005.json |
+| 2026-10-18T08:58:27.490495+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-006.json |
+| 2026-10-18T09:00:33.652232+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-010.json |
+| 2026-10-18T09:01:37.682675+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-012.json |
+| 2026-10-18T09:02:09.245267+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-013.json |
+| 2026-10-18T09:03:44.166090+00:00 | R03 | Hosted checkpoint in_progress/None; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-016.json |
+| 2026-10-18T09:04:15.832492+00:00 | R03 | Hosted checkpoint completed/success; completed job conclusions retained; no run Pass inferred | hosted-checkpoint-017.json |
+| 2026-10-18T09:04:55.299120+00:00 | R03 / R03-F001 | Pass NEW current run39113335636/attempt1: all four native jobs plus candidate aggregate succeed (10success/2expected publication skips). Prior empty-array failure resolved in actual execution; old39111348848 stays failed. | hosted-final.json |
+| 2026-10-18T09:05:03.358187+00:00 | R04 | Pass candidate-envelope | candidate-envelope.log |
+| 2026-10-18T09:05:42.460143+00:00 | R04 | Pass candidate-fetch | candidate-fetch.log |
+| 2026-10-18T09:05:42.886424+00:00 | R04 | Pass candidate-verify | candidate-verify.log |
+| 2026-10-18T09:05:43.281083+00:00 | R04 | Pass candidate-metadata-alias | candidate-metadata-alias.log |
+| 2026-10-18T09:05:43.666310+00:00 | R04 | Pass candidate-metadata-wrong-digest | candidate-metadata-wrong-digest.log |
+| 2026-10-18T09:05:44.019002+00:00 | R04 | Pass candidate-metadata-wrong-version | candidate-metadata-wrong-version.log |
+| 2026-10-18T09:05:44.099526+00:00 | R04 | Pass candidate-unqualified-refusal | candidate-unqualified-refusal.log |
+| 2026-10-18T09:05:44.104696+00:00 | R04 | Pass actual artifact/engine/full OCI/four archives verified; alias-only admission and refusals; no host/first-pull qualification | candidate-validation-results.json; candidate-local-retention.json |
+| 2026-10-18T09:05:55.094189+00:00 | R04-native | Pass actual retained Darwinarm64 CLI version on local Mac; owned scratch removed, no physical NFS qualification | candidate-native-version.json |
+| 2026-10-18T09:06:33.301829+00:00 | R04-negative | Pass actual API envelope mismatch refused before destination/download; correct candidate untouched | actual-envelope-refusal.json |
+| 2026-10-18T09:08:51.972217+00:00 | Q01–Q06 | Blocked ENV-001: actual candidate now available, but no assigned independent/physical pairs; user resource request made, no live-host substitute | resource-blocker.json |
