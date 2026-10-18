@@ -11,6 +11,7 @@ The canonical code-review-report.md remains authoritative. History starts with t
 | CRR-003 | api-e2e-test-review-report.md | Successful API-REV-001 test review | N/A (first test review); source CRR002 Pass | Not Applicable — no API test changes; gate satisfied | None |
 | CRR-004 | code-review-report.md | Integrated source re-audit / IR003 from DR001 | CRR002 source Pass; CRR003 test N/A | Fail — Local Fix,99.8/100 | CR-002; CR-001 stays resolved |
 | CRR-005 | code-review-report.md | Targeted cleanup re-review / IR004 | CRR004 Fail99.8 | Pass100/100 | CR002 resolved; CR001 stays resolved |
+| CRR-006 | api-e2e-test-review-report.md | Successful integrated API002 test gate | CRR003 N/A (prior S); CRR005 source Pass | Not Applicable — no API test changes; gate satisfied | None |
 
 ## Revision Entries
 
@@ -111,3 +112,19 @@ None applicable to this test-review entry point. CR-001 stays resolved by CRR002
 - Supported scenario/material-premise changes: none; ENG-DEAD basis satisfied. No runtime, performance or architecture conclusion inferred from deleting an unused binding.
 - Recommended sole recipient `/software_engineering_team/api_e2e_engineer` under fresh sourcePass rule. Current affected S API validation still required, especially S04/S05; N01–03 unchanged proof carries. No old filesystem/editor/VM/provider campaign or new approval.
 - AC007/fresh targets/ordered N→S and known stale S RELEASE.md R1 tail remain Delivery-owned. No source/test edits by reviewer or live resources; prior entries preserved. No target merge/push/tag/release/deploy/TaskDone/user verification.
+
+### CRR-006 — Integrated API success, no new durable test delta
+
+- Date/reviewer:2026-10-18, code reviewer; personal execution, no delegation.
+- Canonical report **api-e2e-test-review-report.md**, successful-test round2. Source report remains byte-identical CRR005 Pass100; no implementation scorecard reassignment.
+- Trigger API-REV-002 Pass95, N8dcf1d0b645e3b2317970e3db5acd0b248315ead/service83726b unchanged, S60b67dabecaf5569a8e26128dbdb26117c988811. IR003/004 integrated recovery, DR001 context. R2/SR003, SR004/ARCH002, Large/High unchanged.
+- Prior successful-test CRR003 N/A applied to preintegration Sa2023. Current **Not Applicable — no API durable test changes; successful-test gate satisfied**. No failure classification or score change. API002 current S Pass95 remains API-owned.
+- Personal E6/package-audit.json:55 ticket-only API paths, N108/S7307 source aggregates match CRR005, eight authorities/source report unchanged. Three post-merge fixture cleanups already source-reviewed; no new test delta, source rereview or workflow rerun.
+- Inspected current API report/proof table/plan/history, exact15 exits/raw summaries/cleanup. All11 groups reconciled:8 fresh,3 unchanged N carried. Overlap28/narrow34 not unique-added. API001 corrected failures/skips and current process/provider/compile/render limits preserved. API002 scratch independently absent.
+
+#### Prior Finding Resolution
+
+None applicable to this no-delta test-review entry; no unresolved test-review finding. CR001/CR002 remain resolved under CRR005. No new supported-scenario premise, defect attribution, follow-up or extra machinery.
+
+- Recommended sole recipient `/software_engineering_team/delivery_engineer` after fresh successful-test routing. DR001/AC007/fresh targets/ordered N then S and known stale RELEASE prose remain Delivery-owned; retained frontend tab is instructions, not NFS management.
+- Prior CRR001–005 entries/source report preserved. No source/test edits, scratch/live resources, target actions/release/TaskDone/user verification. No old filesystem/editor/provider campaign or new approval loop.

@@ -1,0 +1,32 @@
+{
+  "review": "CRR-006",
+  "result": "Not Applicable \u2014 no durable API test changes; successful-test gate satisfied",
+  "source_authority": "CRR005 Pass100",
+  "API_authority": "API002 Pass95 current integrated S",
+  "selected_rule": {
+    "when": "When post-API/E2E durable test-code review passes and the complete validated package is ready for delivery, documentation sync, finalization, or release work.",
+    "recipient_address": "/software_engineering_team/delivery_engineer"
+  },
+  "selection_basis": "Successful-test gate, not a new source review; Not Applicable has normal Delivery route per skill. Only this recipient.",
+  "reference_files": [
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/api-e2e-test-review-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/requirements-doc.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/design-spec.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/solution-design-handoff.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-handoff.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/implementation-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/api-e2e-execution-coverage-report.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/api-e2e-test-case-ledger.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/api-e2e-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/delivery-revision-record.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/handoff-summary.md",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/execution-summary.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/evidence/api-e2e/api-rev-002/cleanup.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/tickets/in-progress/extract-autobyteus-nfs/code-review-evidence/crr-006/package-audit.json",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/extract-autobyteus-nfs/RELEASE.md",
+    "/Users/normy/autobyteus_org/autobyteus-worktrees/extract-autobyteus-nfs/RELEASE.md"
+  ],
+  "delivery_status": "Not yet sent"
+}

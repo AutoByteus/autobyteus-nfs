@@ -1,0 +1,97 @@
+{
+  "review": "CRR-006",
+  "entry": "Successful API/E2E test-code review",
+  "N_head": "8dcf1d0b645e3b2317970e3db5acd0b248315ead",
+  "N_prior_source_handoff": "062b5da0c9ba78bf5573feafaf0356fee2cf88f9",
+  "S_head": "60b67dabecaf5569a8e26128dbdb26117c988811",
+  "N_API_changes_count": 55,
+  "N_API_changes_ticket_only": true,
+  "durable_test_changes": [],
+  "production_changes": [],
+  "input_identity": {
+    "N": {
+      "count": 108,
+      "sha256": "070f9b587743ef02fc561457aa9bedcf16f9f4df22fe4b1ececa7d011a15c048",
+      "matches_CRR005": true
+    },
+    "S": {
+      "count": 7307,
+      "sha256": "3d43e378c3c2f0f6ed9efe64fe582a80c1a7d85d15245e3ecc0345d6a87b08b4",
+      "matches_CRR005": true
+    }
+  },
+  "authorities_unchanged": 8,
+  "source_report_unchanged_sha256": "8de3919138b25f85503e6fa094aafd235b9a0efd89cbf79f79988a52c7cd5e51",
+  "API_current_commands_exit0": 15,
+  "raw_log_summaries_match": {
+    "consumer-install": [],
+    "consumer-build": [],
+    "consumer-typecheck": [],
+    "consumer-nuxt-prepare": [],
+    "consumer-overlap": [
+      "Test Files  2 passed (2)",
+      "Tests  28 passed (28)",
+      "Duration  5.85s (transform 2.82s, setup 35ms, import 4.74s, tests 17ms, environment 0ms)"
+    ],
+    "consumer-narrow": [
+      "Test Files  7 passed (7)",
+      "Tests  34 passed (34)",
+      "Duration  9.84s (transform 3.27s, setup 70ms, import 8.09s, tests 687ms, environment 0ms)"
+    ],
+    "consumer-unit": [
+      "Test Files  168 passed | 4 skipped (172)",
+      "Tests  1666 passed | 6 skipped (1672)",
+      "Duration  177.67s (transform 8.27s, setup 1.53s, import 71.21s, tests 88.43s, environment 13ms)"
+    ],
+    "consumer-integration": [
+      "Test Files  3 passed (3)",
+      "Tests  21 passed (21)",
+      "Duration  8.27s (transform 2.92s, setup 38ms, import 5.39s, tests 2.18s, environment 0ms)"
+    ],
+    "consumer-core": [
+      "Test Files  3 passed (3)",
+      "Tests  15 passed (15)",
+      "Duration  619ms (transform 449ms, setup 49ms, import 624ms, tests 24ms, environment 0ms)"
+    ],
+    "consumer-routes": [
+      "Test Files  3 passed (3)",
+      "Tests  39 passed (39)",
+      "Duration  14.31s (transform 5.38s, setup 36ms, import 10.21s, tests 3.45s, environment 0ms)"
+    ],
+    "consumer-path-pty": [
+      "Test Files  3 passed (3)",
+      "Tests  17 passed (17)",
+      "Duration  7.89s (transform 3.20s, setup 39ms, import 5.91s, tests 1.21s, environment 0ms)"
+    ],
+    "consumer-launcher": [
+      "Ran 36 tests in 31.255s",
+      "OK (skipped=2)"
+    ],
+    "consumer-guide": [
+      "Test Files  4 passed (4)",
+      "Tests  24 passed (24)",
+      "Duration  9.04s (transform 3.69s, setup 15.91s, collect 183ms, tests 105ms, environment 784ms, prepare 428ms)"
+    ],
+    "consumer-localization": [],
+    "consumer-web-boundary": []
+  },
+  "fresh_groups": 8,
+  "carried_N_groups": 3,
+  "API_confidence_attributed": 95,
+  "API_scratch_absent": true,
+  "protected_ticket_inputs": {
+    "count": 468,
+    "sha256": "b6436cb4ea1066940268ba6045f9203f2702dd5a4c63d9d1535a203d75c815ad"
+  },
+  "prior_history_sha256": "1c9504911fca0202d0dab9be758183faeb6268c6678287335a9c798856c16970",
+  "result": "Not Applicable \u2014 no API durable test changes; successful-test gate satisfied",
+  "reviewer_source_test_edits": false,
+  "reviewer_runtime_execution": false,
+  "final_integrity": {
+    "prior_CRR001_through_CRR005_entries_preserved": true,
+    "source_report_unchanged": true,
+    "protected_inputs_unchanged": 468,
+    "source_inputs_unchanged_during_review": true,
+    "reviewer_resources_created": false
+  }
+}
