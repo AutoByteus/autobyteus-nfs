@@ -78,3 +78,5 @@ Retain NEW `/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate` (parent0
 Compact prepublication receipt: evidence/R03-05-prepublication-result.json (not readiness or release authorization). Own evidence audit: evidence/C01-05-artifact-checks.json; raw-log whitespace exceptions preserved explicitly.
 
 Precommit whitespace check also caught five header-only generated excerpts with blank EOF; excerpts were populated from existing full raw artifact/digest lines and formatting corrected. No original job log or product/test edit, no test rerun, no failed commit or outcome handoff. See C01-05-audit-attempts.log.
+
+Fresh routing after evidence commit6599f3f92b09f9d7051413adb4b9ad713574f5f5 selects only /software_engineering_team/code_reviewer (Large/High successful-test rule); evidence/C01-05-routing.json. Request proportional review of IR006 signing-test delta, then Delivery for unresolved actual signing/release.
