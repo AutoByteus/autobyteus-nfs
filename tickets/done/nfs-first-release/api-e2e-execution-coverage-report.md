@@ -81,4 +81,4 @@ New candidate retained at `/Users/normy/nfs-first-candidate-api004-a7bxyrbb/cand
 
 AC002 final readiness, AC003 actual hosted/signature evidence, AC004/006 actual publication/equality, AC005 public install, AC007 completion/custody and AC008 finalization portions remain NotProven downstream. D01/D02 must complete before release/task success. Field/user Q42/U01 Deferred, not Passed. No API main push/replay, signing, publication, deployment, TaskDone, user-verification or Terminal.
 
-Next: fresh rules after evidence commit; Large/High proportional successful-test review, then normal Delivery fix-forward. Delivery DR008 staging was prerequisite only, not full Delivery completion.
+Next: exact fresh most-specific rule after evidence commit587b1a9fb191297ca7928335a031a98b020df707 selects /software_engineering_team/code_reviewer alone for Large/High proportional successful-test review, then normal Delivery fix-forward. Receipt: evidence/C01-04-routing.json. Delivery DR008 staging was prerequisite only, not full Delivery completion.

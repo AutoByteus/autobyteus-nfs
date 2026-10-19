@@ -1,0 +1,21 @@
+{
+  "case": "API-REV-004/C01",
+  "step": "Fresh post-evidence-commit successful result route",
+  "utc": "2026-10-19T05:21:06.755Z",
+  "environment": "NFS ticket only",
+  "evidenceCommit": "587b1a9fb191297ca7928335a031a98b020df707",
+  "result": "Pass",
+  "confidencePercent": 95,
+  "scope": "Affected prepublication validation; full actual signing/publication not proven",
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High",
+    "route": "Reviewed"
+  },
+  "selected": {
+    "when": "When API/E2E validation passes, the carried classification is task_size=Large or architectural_risk=High, and the cumulative evidence package requires proportional test-code review.",
+    "recipient_address": "/software_engineering_team/code_reviewer"
+  },
+  "reason": "Current API cases completed successfully; IR005 two changed durable suites require proportional successful-test review. No new source/design review requested.",
+  "otherOutcomeRecipients": []
+}
