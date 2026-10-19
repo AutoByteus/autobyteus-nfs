@@ -2,179 +2,177 @@
 
 ## Review Round Meta
 
-- Date **2026-10-19**; task **autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**.
-- **Implementation Review / CRR-007 / round7 / Full Re-Audit of the affected release boundary.** The requested review remains bounded to IR005. Full structural checklist and scorecard are re-evaluated because the new signing failure/cleanup lifecycle is beyond the prior CR-002 import finding; this does not reopen architecture, unrelated source, or field testing.
-- Current intake **55e45c13297e9f588a61461c41ddb8a754eb647c**; product **75f4dbe5527a7159f536bafcf9448bc2d6a01604**; implementation evidence **9fa4e6968f3239ad1517fc33077eb527d0d76502** plus docs-only DR006/007 supplements. All127 non-ticket inputs match the tested product tree.
-- Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`, target origin/main. Canonical ticket **tickets/done/nfs-first-release**; archival does not imply completed release.
-- Authority: **R3/SR004 Approved/Ready; ARCH-REV-002 Pass**. Requirements, design, approval/postpublication supplement, investigation/solution history, design review/architecture history, implementation handoff/IR005 and prior canonical reviews form the unchanged basis. Updated code-reviewer SKILL and handoff-references, shared principles, NFS AGENTS/DESIGN/TESTING applied. No guideline conflict.
-- Trigger **DR005 Blocked / Local Fix**, actual publish run39121007787/1 at7683494: both Mac signing commands exited1 without stage/notary receipt. Trigger evidence is `delivery-evidence/dr-005/failure-assessment.json`; source/path assessment `implementation-evidence/ir-005/diagnosis.md`. This is not a new API failure-origin or successful-test review.
-- Prior source result **CRR005 Pass100** and separate **CRR006 test Pass / API003 prepublication95** retain their exact-input scope. Their results do not qualify IR005. DR006/007 local diagnostics are bounded supplemental evidence, not final release acceptance.
+- **2026-10-19 / CRR-009 / Implementation Review / round9 / Full Re-Audit of affected signing boundary.** Requested bounded IR006 source review; all structural checks/scorecard re-evaluated because this adds a diagnostic shape/parser to the prior IR005 correction. No full runtime, architecture or field campaign.
+- Task autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch codex/nfs-first-release, target origin/main. Canonical archive `tickets/done/nfs-first-release`; archival is not completion.
+- Intake **fdcc416d3057bee172d00a76d4ac65ffc2b50bf4**; source **2c12ec61f6339d0d264280b7117787ec821425af**, base **b279d556e2c0f5e90ca24b61c7e67bc809644947**. All127 current non-ticket files match tested source. Already-finalized mainf830c50/7683494 preserved, not replayed or reset.
+- **R3/SR004 Approved/Ready / ARCH-REV-002 Pass**, unchanged requirements/design/approval/postpublication supplement, investigation/solution and architecture history. Current implementation handoff Checks Run/IR006, prior report/history, DR009 failure receipts and IMP06 evidence reviewed. Root AGENTS/DESIGN/TESTING, updated reviewer skill/shared principles apply; no guideline conflict.
+- Trigger **DR009 Blocked / Local Fix diagnostic portion**: run39204643596/1, both Mac jobs117904866164/117904866080 produce `stage=sign, exitCode=1, cleanup=complete`; notary not reached. Delivery failure-assessment/signing-artifact-receipts are independent evidence. Original cause remains **unknown**; no credential/chain/ACL attribution.
+- Prior **CRR007 sourcePass100 / CRR008 testPass / API004 prepublication95** remain exact-input history. Current entry is not successful-test or API failure-origin review. DR005/009 failed histories and DR007 development-only Accepted remain unchanged.
 
 ## Routing Classification Review
 
-**Large / High / Reviewed confirmed.** Overall release/signing/immutable-publication risk is unchanged. Independent source review is required. Current result **Pass100 — source scope only**, no failure classification. Fresh most-specific source-Pass rule determines next recipient; normal continuation is affected API validation, not direct publication.
+**Large / High / Reviewed confirmed**; independent source review required. Current outcome **Pass100 — diagnostic source scope only**, failure classification N/A. Next affected API/new complete current-source candidate through the fresh most-specific rule; no automatic main merge/publication.
 
 ## Review Scope
 
-Exactly six NFS-only paths versus b2c6fdf: `packaging/sign-macos.sh`, `.github/workflows/release-nfs.yml`, their two existing Python suites, `TESTING.md`, and `packaging/RELEASE.md`. Rechecked the complete relevant caller path through workflow native job, signer, upload, payload/signing proof, readiness and publication gates; unchanged owners use prior source evidence plus current identity verification. No test/source edits by reviewer.
+Four NFS-only paths: signer, existing signing Python suite, TESTING.md and packaging/RELEASE.md. Reviewed codesign capture → bounded parser → shell allowlist → original exit → cleanup/receipt, plus unchanged native-job/payload gate applicability from prior review and byte identity. Workflow/runtime/engine/installer/lock/readiness source unchanged from intake. No application/frontend/Guide/superrepo/PM writes or generic cleanup.
 
-No application/frontend/Guide/superrepo/PM changes. No Go, installed host state, engine recipe/pins, installer, target/channel, authorization or field-test change. No reviewer credentials/keychain/signing/notary action, retained candidate access, remote fetch/push/dispatch, main merge, release/tag, live storage, TaskDone or Terminal. No delegation. Existing published-source finalization7683494 must not be replayed or undone.
+Implementation's user-requested historical superrepo/Apple-Actions comparison (IMP-06-18) is read-only supporting context, **not proof of a hosted cause**. No search-list replacement, broad key access, timestamp disablement or Electron behavior is adopted. No source/test edits or test/Apple/remote/retained-candidate actions by reviewer. No delegation.
 
 ## Upstream Behavior And Production-Path Basis Confirmation
 
-**Confirmed**, no changed intended behavior or material ambiguity for this bounded correction. R3 signed-release-first remains governing; field/shared-filesystem/physical/user testing is Deferred, not a release prerequisite. Actual signing, identity, public bytes and completion gates remain.
+**Confirmed**; no new intended behavior or material ambiguity affecting this source result. The change observes an already-supported failed signing path, not a cause-specific repair.
 
-| Behavior | Status | Current path / lifecycle evidence |
+| Behavior | Status | Current path / preserved outcome |
 | --- | --- | --- |
-| BEH001 | Confirmed | Manual candidate → four native checks and complete engine/OCI retention. Production signing/workflow hash changed; NEW complete candidate required. |
-| BEH002 | Confirmed | Candidate verification → readiness exact source/engine/refs → final admission. Existing recorded a425e3 source differs from bf6b17; no automatic lock rewrite. |
-| BEH003 | Confirmed | Fresh native metadata → signer private commands → cleanup → safe diagnostic on failure or Accepted proof on success → archive → payload → immutable publication. Failed signer/cleanup blocks archive/payload; upload is diagnostic only. |
-| BEH004 | Confirmed | Existing versioned download/checksum/manifest → strict CLI admission → deferral notice/install/version unchanged. |
-| BEH005 | Confirmed | All host source/config/pending/consent/mount/detach guards byte-preserved; no migration or live invocation. |
-| BEH006 | Confirmed | Updated testing/release prose describes receipt limits; approved postpublication custody and truthful release status retained. |
+| BEH001 | Confirmed | Manual fixed-source candidate → complete native4/engine/OCI retention; new hashed signer requires new complete candidate. |
+| BEH002 | Confirmed | Verified candidate → genuine readiness/source/engine/refs → admission; old record not rewritten or relabelled. |
+| BEH003 | Confirmed | Final metadata → actual codesign → success continues strict verification/notary; nonzero privately captured/classified then exits original code → cleanup/sanitized receipt. Workflow/payload success gates unchanged. |
+| BEH004 | Confirmed | Installer checksum/manifest/current release admission/deferral notice/version unchanged. |
+| BEH005 | Confirmed | Go host/source/config/pending/consent/mount/detach protection byte-preserved; no live state change. |
+| BEH006 | Confirmed | Two guides describe literal observation categories/limits; final evidence and deferred-plan custody unchanged. |
 
 ## Supported Product Scenario And Reachability Gate
 
-| Scenario / contract | Independent actor / event and goal | Supported entry → forward path / lifecycle / expected consequence | Validity / use |
+| Scenario / contract | Independent actor/event and coherent goal | Supported entry → forward path / lifecycle / consequence | Validity / use |
 | --- | --- | --- | --- |
-| SCN001 / REQ001/002 | Maintainer requests current candidate | Manual publish=false → fixed source/workflow → engine/OCI/native checks → retained identified candidate without public effects | Supported Normal Scenario; Use |
-| SCN002/003 / REQ004/006 | Maintainer requests authorized signed v0.1.0 | Manual fresh publish → readiness/native metadata → real signing/keychain/notary → successful cleanup → retained payload/publication; only actual Accepted allows success | Supported Normal Scenario; Use |
-| SCN003/007 / REQ004/010; design D3 cleanup/privacy contract | Observed signing job failure during authorized release; operator needs precise unfinished stage without leaking credentials | Real run39121007787 → script exits before notary → cleanup → fixed diagnostic stderr/receipt → always-upload → next bounded diagnosis; no publication from failure | Supported Explicit Edge Scenario; Use; actual failure independent of new fixture |
-| SCN005 / REQ006; D3 | Signing command or cleanup operation fails under the retained fail-closed/resource-preservation contract | Native signing → search-list capture/ephemeral keychain → unsuccessful operation → restore only completed snapshot/delete owned resources → preserve primary code, reject cleanup failure | Supported Explicit Edge Scenario; Use; command failure is an existing signing contract, not a fabricated user action |
-| SCN006 / REQ006 | Operator resumes interrupted publication | Same-input dispatch → original bound payload → exact missing-stage reconciliation or conflict/expiry refusal; no rebuild/re-sign of bound payload | Supported Explicit Edge Scenario; Use; unchanged owner |
-| SCN004/007/008 | User downloads or Delivery reports/releases and hands off later testing | Verified versioned bytes → no-setup smoke → actual receipt → terminal SD → requesting PM plan custody | Supported Normal Scenario; Use; downstream obligations, not local test claims |
+| SCN001 / REQ001/002 | Maintainer asks for current candidate | Manual publish=false → fixed reviewed source/workflow → native checks/engine/OCI → retained candidate, no publication | Supported Normal Scenario; Use |
+| SCN002/003 / REQ004/006 | Maintainer asks for official signed normal v0.1.0 | Authorized fresh dispatch → readiness/final build → signing/strict verify/Accepted → final payload/publication | Supported Normal Scenario; Use |
+| SCN003/007 / REQ004/010, D3 privacy/cleanup | Actual DR009 codesign command fails; operator needs safe evidence of failing boundary | Both real hosted jobs reach sign and exit1 → suppressed tool output → cleanup and receipt. New private parse retains fixed observations without revealing raw data or allowing publication | Supported Explicit Edge Scenario; Use; actual run establishes trigger independently of tests |
+| SCN005 / REQ006, D3 | Failed command or unavailable/unrecognized diagnostic input under fail-closed/private-output contract | Signing nonzero → bounded read/decode/allowlist or explicit unavailable → same nonzero preserved; no fallback or secret dump | Supported Explicit Edge Scenario; Use; defensive parsing is an evidence-handling contract, not a new user workflow |
+| SCN006 / REQ006 | Operator resumes interrupted publication | Same-input dispatch → original bound payload → exact missing-stage reconciliation or conflict/expiry refusal | Supported Explicit Edge Scenario; Use; unchanged mechanism |
+| SCN004 / REQ007 | User downloads a released binary | Versioned download → checksum/manifest admission → notice/install/version; no automatic storage setup | Supported Normal Scenario; Use; unchanged path |
+| SCN008 / REQ009/010 | Delivery transfers later testing after actual release | Actual publication receipt → terminal SD → requesting PM deferred-plan custody | Supported Normal Scenario; Use; downstream obligation |
 
 ### Candidate Finding And Mechanism Gate
 
-| Candidate | Observation / mechanism | Independent basis → path / consequence | Evidence | Disposition / scope |
+| Candidate | Observation / mechanism | Independent basis / consequence | Evidence | Disposition / scope |
 | --- | --- | --- | --- | --- |
-| CG013 | Safe fixed diagnostic surviving cleanup | Actual DR005 failure + SCN003/007 privacy/diagnosability; private tool output was deleted, so failure stage unavailable. New saved stderr and exclusive sidecar expose only stage/code/cleanup. | sign-macos.sh:6–45,46–125; IMP-05-09 baseline missing receipt; IMP-05-01/02/08 controls | Promote mechanism — this ticket, satisfactory; no new finding |
-| CG014 | Pending search-list capture and cleanup failure status | D3 preservation/fail-closed contract during real signing: failed strict pipeline can leave partial JSON; applying it would restore an untrusted snapshot. Only successful capture moves into cleanup eligibility; primary failure survives cleanup error. | script:19–31,57–59; command-failure/cleanup tests; failed-capture and errexit mutants | Promote mechanism — this ticket, satisfactory; not alleged as DR005 root cause |
-| CG015 | Preserve rejected/nonzero notary result and prevent diagnostic artifact promotion | REQ004/006 signing gate: command exit and Accepted status are both required. Notary receipt can exist on failure but workflow native success/payload gates still block. | script:100–120; workflow native/always-upload/payload conditions; payload.signing_proof; notary/cleanup controls | Promote mechanism — this ticket, satisfactory; no gate weakened |
+| CG016 | Privately classify actual codesign failure | DR009 sign-stage receipt + D3 privacy/diagnosability: operator cannot infer cause from exit1; bounded literals provide observations without exposing raw private tool data | sign-macos.sh:84–127; DR009 two receipts; IMP06-02/09/10 | Promote mechanism — this ticket; satisfactory, no finding |
+| CG017 | Bound decoding and independent output allowlist | REQ006/D3 fail-closed confidentiality: diagnostic handling must neither leak input nor replace actual command status. Read65537 detects >65536; exact-line match; undecodable/read/parser errors explicit; shell accepts fixed vocabulary only | script:90–126; category/bound/decode/parser/success tests and four mutants | Promote mechanism — this ticket; satisfactory, no finding |
 
-No new actionable finding or held premise affecting the source verdict. The original hosted cause remains unestablished: this review does not diagnose credentials from duration, local success or a secret-update timestamp, and prescribes no secret changes. That outstanding execution result does not invalidate the independently established diagnostic correction.
+Recognized exact chain warning takes precedence over the accompanying generic error; it remains a **warning observation**, not a certificate verdict. Multiple distinct recognized error categories without that warning are unclassified. Prefix/suffix text is not a match. The64KiB limit is a **parser-read limit**, not a promised on-disk output quota. No speculative keychain/trust repair or unsupported concurrency machinery is required. Original actual cause is still unknown, but source review of this independently justified diagnostic mechanism is not blocked by that fact.
 
 ## Prior Finding Resolution
 
-| Finding / boundary | Previous status | Current verification |
+| Finding / boundary | Prior | Current evidence / disposition |
 | --- | --- | --- |
-| CR-001 / API001 Mac Bash3.2 empty array | Source resolved CRR003; actual candidate green API003 | Remains resolved: native nonempty args and strict invocation unchanged; existing actual-prefix controls retained in reused Python suite. |
-| CR-002 unused imports | Resolved CRR005/IR004 | Remains resolved; import-owning files unchanged. No new dead binding in touched shell/tests found. |
-| DR005 diagnostic/cleanup boundary (no prior CR ID) | Unlocalized actual signing failure; Local Fix requested | IR005 diagnostic and cleanup correction accepted at source scope. Original run remains failed and actual hosted cause unresolved, not marked fixed. |
+| CR-001 Mac empty array | Resolved | Native mandatory argv unchanged; existing current workflow tests retained. |
+| CR-002 unused imports | Resolved | Import owners unchanged; no new dead binding in touched script/test or embedded Python. |
+| DR005 stage/cleanup diagnostic | IR005 source accepted; original cause unknown | Actual DR009 sanitized artifacts now establish sign/exit1/cleanup complete on both Macs; does not prove DR005 had the same cause. |
+| DR009 missing safe codesign observation (no CR ID) | Local Fix requested | IR006 source accepted for diagnostic portion only. Real codesign failure and release remain unresolved. |
 
 ## Structural / Design Checks
 
-All24 mandatory checks and full scorecard re-evaluated for the affected release boundary. Byte-identical unrelated owners retain earlier evidence; no repeated product execution is claimed.
+All24 checks/full scorecard re-evaluated at affected signing boundary. Unchanged owners retain previous evidence with byte-identity applicability; no repeat runtime audit or product execution claimed.
 
 | Check | Result | Evidence | Required action |
 | --- | --- | --- | --- |
-| Task design health assessment is present, evidence-backed, and preserved by the implementation | Pass | R3 release-first design-health decision preserved; DR005 adds only bounded diagnosis/cleanup within the existing signing owner. | None |
-| Implementation matches approved behavior-defining supplemental artifacts | Pass | Approval SR004 and postpublication plan preserved; no restored physical/user gate, no unsigned fallback. | None |
-| Data-flow spine inventory clarity and preservation under shared principles | Pass | DS1 candidate → DS2 readiness → DS3 final metadata/signing/payload/publication; DS4 installer and DS5 original-payload resume retained. Local failure return path now explicit. | None |
-| Ownership boundary preservation and clarity | Pass | Shell owns ephemeral signing lifecycle; workflow schedules and retains allowlisted results; payload verifies final proof; publication owns external effects. | None |
-| Off-spine concern clarity (off-spine concerns serve clear owners and stay off the main line) | Pass | Fixed diagnostics observe signing without becoming admission authority or exposing private command output. | None |
-| Existing capability/subsystem reuse check (no fresh helper where an existing subsystem should own it) | Pass | Existing signing script and upload step extended; no second signer, secret handler or framework. | None |
-| Reusable owned structures check (repeated structures extracted into the right owned file instead of copied across files) | Pass | One cleanup trap and reusable run_case/FAKE fixtures; no repeated command-failure implementation per stage. | None |
-| Shared-structure/data-model tightness check (no kitchen-sink base, no overlapping parallel shapes, specialization/composition used meaningfully) | Pass | Failure sidecar has only schema/status/stage/exitCode/cleanup. Existing sanitized notary shape remains separate, not a merged success/failure authority. | None |
-| Repeated coordination ownership check (shared policy has a clear owner instead of being repeated across callers) | Pass | Signing acceptance remains command success + Accepted + successful cleanup; downstream payload retains independent exact-binary proof. | None |
-| Empty indirection check (no pass-through-only boundary) | Pass | sign_and_notarize owns private-output/strict-command boundary, not pass-through indirection. | None |
-| Scope-appropriate separation of concerns and file responsibility clarity | Pass | Two production paths remain cohesive: shell for local signing; YAML for job sequencing. No host/runtime change. | None |
-| Ownership-driven dependency check (no forbidden shortcuts or unjustified cycles) | Pass | Workflow calls signer; payload reads sanitized proof. No runtime or application imports, registry effects or alternate signing caller. | None |
-| Authoritative Boundary Rule check (callers do not depend on both an outer owner and that owner's internal manager/repository/helper/lower-level concern) | Pass | Public release entry still uses facade/readiness/payload; diagnostic sidecar cannot bypass those owners or authorize publication. | None |
-| File placement check (file/folder path matches owning concern or explicitly justified shared boundary) | Pass | packaging/sign-macos.sh and its existing tests are appropriate owners; no new generic helper folder. | None |
-| Flat-vs-over-split layout judgment (layout is readable for the scope and not artificially fragmented) | Pass | 126-line script and existing test fixture are readable without arbitrary splitting. | None |
-| Interface/API/query/command/service-method boundary clarity (one subject, one responsibility, explicit identity shape) | Pass | BINARY and SANITIZED_RECEIPT interface unchanged; separate exclusive failure JSON and numeric exit contract explicit. | None |
-| Naming quality and naming-to-responsibility alignment check (files, folders, APIs, types, functions, parameters, variables) | Pass | Fixed stage labels map to concrete operations; pending versus completed search snapshot distinguishes cleanup eligibility. | None |
-| No unjustified duplication of code / repeated structures in changed scope | Pass | One trap handles cleanup and one fixed formatter emits diagnostics; tests share fixture machinery. | None |
-| Patch-on-patch complexity control | Pass | Replaces deleted/private-only failure logging with one bounded diagnostic path; preserves nonconditional errexit, no fallback or retry overlay. | None |
-| Dead code removed in the touched files and modules (Core Principle 7) | Pass | Replaced private import/partition/sign logs and old failure test removed; current stage variables/functions/imports have direct uses. No obsolete owner or disabled control found. | None |
-| Relevant test scenarios and assertions are clear and requirement-aligned | Pass | Actual shell tests cover exact stage/code, hostile output exclusion, notary rejection, signals and cleanup; upload patterns exclude private files. | None |
-| Test fixtures/helpers are reasonably reusable and test structure remains coherent | Pass | Owned TemporaryDirectory plus fake security/codesign/xcrun/ditto/openssl; only external effects doubled, actual Bash execution retained. | None |
-| No stale, duplicated, or compatibility-only tests are retained in changed scope | Pass | Old coarse failure case replaced by specific controls; accepted path and six-input preflight retained. No compatibility-only or unexplained skip added. | None |
-| API/E2E readiness for the next workflow stage | Pass | IMP05 final checks reuse exact127 unchanged inputs; new hosted current-source candidate and affected API are still needed, not replaced by fixtures. | None |
+| Task design health assessment is present, evidence-backed, and preserved by the implementation | Pass | R3 release-first design health and DR009 bounded diagnostic need remain evidence-backed; no new release policy. | None |
+| Implementation matches approved behavior-defining supplemental artifacts | Pass | R3 approval/postpublication plan retained: actual signing mandatory, field/user work Deferred. | None |
+| Data-flow spine inventory clarity and preservation under shared principles | Pass | DS3 workflow → signer → cleanup/receipt → native job/payload/publication traced; diagnostic return does not become a success path. Other DS1/2/4/5 owners unchanged. | None |
+| Ownership boundary preservation and clarity | Pass | Signer owns private capture and diagnostic translation; workflow retains only receipts; payload/publisher still own admission/effects. | None |
+| Off-spine concern clarity (off-spine concerns serve clear owners and stay off the main line) | Pass | Embedded parser is local observation logic inside signing, not a competing error-recovery coordinator. | None |
+| Existing capability/subsystem reuse check (no fresh helper where an existing subsystem should own it) | Pass | Existing scratch/trap/receipt/stdlib Python reused; no new dependency or external process service. | None |
+| Reusable owned structures check (repeated structures extracted into the right owned file instead of copied across files) | Pass | One mapping and shared SigningTest fixture; no duplicate per-platform diagnostic implementations. | None |
+| Shared-structure/data-model tightness check (no kitchen-sink base, no overlapping parallel shapes, specialization/composition used meaningfully) | Pass | One additive diagnostic enum in failure receipt; notary success proof and release readiness remain separate shapes. | None |
+| Repeated coordination ownership check (shared policy has a clear owner instead of being repeated across callers) | Pass | Original codesign exit owns failure; parser cannot authorize success or choose a credential repair. | None |
+| Empty indirection check (no pass-through-only boundary) | Pass | Parser performs bounded decoding/translation/privacy enforcement, not pass-through wrapping. | None |
+| Scope-appropriate separation of concerns and file responsibility clarity | Pass | 169-line signer remains one coherent lifecycle; tests and two docs stay in existing owners. | None |
+| Ownership-driven dependency check (no forbidden shortcuts or unjustified cycles) | Pass | No application, engine or runtime dependency; no new remote/keychain call from parser. | None |
+| Authoritative Boundary Rule check (callers do not depend on both an outer owner and that owner's internal manager/repository/helper/lower-level concern) | Pass | Existing caller uses signer boundary; diagnostic receipt is not read as readiness or payload authorization. | None |
+| File placement check (file/folder path matches owning concern or explicitly justified shared boundary) | Pass | Private codesign parsing belongs beside existing signing command and cleanup. | None |
+| Flat-vs-over-split layout judgment (layout is readable for the scope and not artificially fragmented) | Pass | No unnecessary module/class split for43 added nonempty lines; no generic logging framework. | None |
+| Interface/API/query/command/service-method boundary clarity (one subject, one responsibility, explicit identity shape) | Pass | Two-argument command unchanged; fixed category field and original numeric exit explicit. | None |
+| Naming quality and naming-to-responsibility alignment check (files, folders, APIs, types, functions, parameters, variables) | Pass | Observation labels, not root-cause names or recommendations; unavailable/unclassified are honest states. | None |
+| No unjustified duplication of code / repeated structures in changed scope | Pass | Python mapping and shell output allowlist serve different trust checks; no copied signing coordination. | None |
+| Patch-on-patch complexity control | Pass | Extension after real DR009 receipt is bounded; no retry/fallback/keychain repair layered onto failure. | None |
+| Dead code removed in the touched files and modules (Core Principle 7) | Pass | Changed imports/variables/branches used; old bare command replaced; no dormant wrapper or disabled test retained. | None |
+| Relevant test scenarios and assertions are clear and requirement-aligned | Pass | Exact-line, prefix rejection, multi-error,64KiB overflow,decode/parser failure,private mode and success-precedence controls correspond to explicit diagnostics contract. | None |
+| Test fixtures/helpers are reasonably reusable and test structure remains coherent | Pass | Existing temp/fake command fixture extended; expected record shadowing corrected without product change. | None |
+| No stale, duplicated, or compatibility-only tests are retained in changed scope | Pass | Prior stage/TERM/no-clobber/Accepted/cleanup controls retained; no new skipped or compatibility-only case. | None |
+| API/E2E readiness for the next workflow stage | Pass | Exact committed source56/55executed/1skip,21overlapping focused and four mutants clear; current candidate/affected API still required. | None |
 
 ## Source File Size And Structure Audit
 
-Conservative nonempty lines include comments. Current-delta basis b2c6fdf; `code-review-evidence/crr-007/source-audit.json` records exact Git deltas. Test/fixture/docs sizes are exempt.
-
-| Changed source | Before | After | >500 | Added+deleted / >220 | Ownership / placement | Action |
+| Source file | Before nonempty | After | >500 | Added+deleted / >220 | Ownership / placement | Action |
 | --- | --- | --- | --- | --- | --- | --- |
-| packaging/sign-macos.sh | 75 | 126 | Pass | 125, below trigger | Cohesive existing signer and ephemeral lifecycle | None |
-| .github/workflows/release-nfs.yml | 359 | 361 | Pass | 4, below trigger | Existing orchestration; receipt allowlist only | None |
+| packaging/sign-macos.sh | 126 | 169 | Pass | 47+4=51, below trigger | One signing lifecycle; narrow local diagnostic block in existing owner | None |
 
-Earlier cumulative workflow delta above220 was already reviewed; this change does not fragment ownership. No forced split is warranted.
+Base b279d55, current2c12ec6; conservative nonempty includes comments. Test/fixture/docs exempt from source thresholds. Exact audit in code-review-evidence/crr-009/source-audit.json. No forced split warranted.
 
 ## Legacy / Backward-Compatibility Verdict
 
 | Check | Result | Notes |
 | --- | --- | --- |
-| No backward compatibility mechanism | Pass | One current signer; no alternate shell/version/signing fallback. |
-| No legacy old-behavior retention | Pass | Old private-only failure logging replaced; no unsigned bypass. |
-| Dead code removed in touched files | Pass | Obsolete local logs/coarse fixture replaced; all current variables/functions/imports have live use. |
-| Approved persisted transition followed | Pass | Host state Not Affected; generated release evidence rebuilt/reaccepted for new source. |
-| No version-specific dual reads/writes/fallback | Pass | New failure sidecar is a diagnostic, not a compatibility admission shape. |
-| Transition mechanics match design | Pass | Preserve old candidates/readiness/history; no relabeling or migration. |
+| No backward compatibility mechanism | Pass | One signer/current diagnostic; unknown output is explicit observation failure, not legacy execution. |
+| No old-behavior retention | Pass | Bare discarded codesign output replaced by private capture; no second signing path. |
+| Dead code removed in touched files | Pass | Changed shell/embedded/test imports and variables all used; no disabled obsolete control. |
+| Approved persisted transition followed | Pass | Host state Not Affected; diagnostic receipt not release-admission schema; generated readiness/candidate reaccepted for current source. |
+| No version-specific dual reads/writes/fallback | Pass | No historical diagnostic reader or root-cause fallback added. |
+| Transition mechanics match design | Pass | Old evidence/candidates/readiness retained; no migration/relabel. |
 
 ## Dead / Obsolete Items Requiring Removal
 
-None found in this review's touched scope. No unrelated cleanup expansion.
+None found in the touched scope; no unrelated cleanup expansion.
 
 ## Docs-Impact Verdict
 
-**Yes, addressed** in TESTING.md and packaging/RELEASE.md: fixed diagnostic fields, exclusive receipts, pending-capture cleanup and mocked-versus-real limits are described. Caught EXIT/INT/TERM cleanup is covered; no SIGKILL or physical-host guarantee is claimed by the review. Delivery retains official finalization/release docs and actual public evidence ownership.
+**Yes, addressed** by TESTING.md and packaging/RELEASE.md. They distinguish category from cause, parser read bound, private capture removal, original exit and successful-command precedence. Actual hosted success, final release and public bytes still need evidence. No field-test prerequisite restored.
 
 ## Additional Material Premise Validation
 
-No new architecture premise or scenario reclassification. Prior immutable-payload/current-source/signing premises remain confirmed. CG013–015 contain the new bounded diagnostic/cleanup mechanism evidence. DR007 does not establish the hosted exported-P12/import path or original failure cause.
+No architecture premise reclassified. CG016/017 capture the diagnostic/privacy extension. Historical-project search-list differences are a lead only, not an independent basis for assigning this failure or changing trust/credential policy. No runtime or behavior-basis discrepancy found.
 
 ## Review Scorecard
 
-**10.0/10 = 100.00/100**, simple mean of ten categories for source-quality visibility only; not an execution confidence or release acceptance percentage. No in-scope evidenced defect warrants a deduction. Scores do not waive downstream gates.
+**10.0/10 = 100.00/100**, simple mean for source-quality visibility; not API confidence or release completion. No supported evidenced source defect warrants a deduction.
 
-| Priority | Category | Score | Evidence / weakness / improvement |
+| Priority | Category | Score | Rationale / weakness / improvement |
 | --- | --- | --- | --- |
-| 1 | Data-Flow Spine Inventory and Clarity | 10 | Full signing-to-publication path and failure return explicit; no source deficiency found. |
-| 2 | Ownership Clarity and Boundary Encapsulation | 10 | Existing signer owns cleanup; workflow/payload/publisher roles remain separate. |
-| 3 | API / Interface / Query / Command Clarity | 10 | Stable two-argument invocation; explicit fixed diagnostic and exit contract. |
-| 4 | Separation of Concerns and File Placement | 10 | Bounded existing script/workflow ownership, no application coupling. |
-| 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10 | Small distinct diagnostic/notary shapes and shared test fixture. |
-| 6 | Naming Quality and Local Readability | 10 | Fixed stages and pending snapshot clearly describe lifecycle. |
-| 7 | API/E2E Readiness | 10 | Current local evidence reusable; package ready for new hosted candidate/affected API, not release. |
-| 8 | Runtime Correctness And Behavioral Fidelity | 10 | Strict failure, privacy, cleanup and Accepted-only semantics preserved at reviewed boundary. Actual hosted cause remains execution work. |
-| 9 | No Backward-Compatibility / No Legacy Retention | 10 | Single path, obsolete logging removed, no bypass. |
-| 10 | Cleanup Completeness | 10 | Owned scratch cleanup and error handling covered; no source cleanup finding. |
+| 1 | Data-Flow Spine Inventory and Clarity | 10 | Complete failure return and unchanged success/publication path explicit. |
+| 2 | Ownership Clarity and Boundary Encapsulation | 10 | Signer owns capture/translation/cleanup; downstream owners unchanged. |
+| 3 | API / Interface / Query / Command Clarity | 10 | Fixed enum and original exit, no private string output or new caller requirement. |
+| 4 | Separation of Concerns and File Placement | 10 | Bounded observation in existing signing owner. |
+| 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10 | Minimal additive diagnostic; single mapping/shared fixture, no generic error framework. |
+| 6 | Naming Quality and Local Readability | 10 | Observations and unavailable/unclassified states do not claim diagnosis. |
+| 7 | API/E2E Readiness | 10 | Exact-source controls clear; next current candidate/affected API ready, not complete. |
+| 8 | Runtime Correctness And Behavioral Fidelity | 10 | Command status wins; parsing cannot bypass strict verification/notary/payload. No known source defect; real cause unresolved. |
+| 9 | No Backward-Compatibility / No Legacy Retention | 10 | No old/new execution branch or recovery fallback. |
+| 10 | Cleanup Completeness | 10 | Same owned scratch/trap removes raw capture; failed cleanup remains failure. No cleanup gap established. |
 
 ## Evidence And Checks
 
-The implementation **Checks Run was read before any check execution**. No repeated product check is needed: inputs unchanged, outcomes clear, no new finding requires a reproduction. Reviewer executed **zero product tests/builds/lints/signing/hosted checks**. Only read-only review identity/size and reviewer-artifact checks are new.
+Read implementation **Checks Run before execution**. Inputs unchanged and results clear; no new finding requires a reproduction. **Zero reviewer product tests/lints/builds/Apple/hosted checks**. Only reviewer source/own-artifact audits performed.
 
-| ID / owner | Scope and exact source | Result / limits | Primary evidence |
-| --- | --- | --- | --- |
-| IMP-05-01/02, implementation | 75f4dbe; full Python and focused actual shell/workflow with external command doubles | 52 collected/51 executed/1 standalone Go-child skip; focused17 overlap. Bash3.2.57. Not Apple/hosted proof. | evidence/IMP-05-01-python-full.log; IMP-05-02-signing-workflow.log |
-| IMP-05-03–07, implementation | Same tree; Bash syntax/ShellCheck/actionlint/source/recipe/required-input refusal | Final checks pass. No-candidate refusal says only missing candidate, NOT an executed stale-candidate test. | Headered evidence/IMP-05-03 through07; ir-005/checks-result.json |
-| IMP-05-08/09, implementation | Four deliberately mutated copies; baseline production + corrected new fixture | Four intended assertion failures detected; baseline missing receipt fails. These are negative controls, not candidate failures. | evidence/IMP-05-08-summary.md and mutations.log; IMP-05-09-baseline-control.log |
-| IMP-05-10/11, implementation | Retained iterations, final exact-input/cleanup audit | Earlier hidden stderr/fake-input/ShellCheck corrections disclosed; raw15 diagnostic-whitespace exceptions retained. | evidence/IMP-05-10-attempts.md; IMP-05-11-final-audit.log |
-| DR006/007, Delivery and user | Current development arm64 build, existing local Developer ID key; subsequent actual Apple submission | Local sign/verify/version passed; actual Accepted/exit0 at2026-10-19T04:57:21Z, submission16cd8853-b4f7-41a3-b676-e99029765633. First HTTP401 preserved. Not official release/hosted P12/Intel proof. | delivery-evidence/dr-007/summary.md, verification.json, apple-accepted-response.json; dr-006/local-result.json |
-| CR-07-01, reviewer | Current55e45c1 vs tested75f4dbe; Git identity/current-byte inspection | All127 non-ticket inputs identical; exact six-path delta and two-source size audit. | code-review-evidence/crr-007/source-audit.json |
+| Evidence / owner | Scope / result | Limits |
+| --- | --- | --- |
+| IMP-06-01/02 implementation | Exact source2c12ec6; final full56 collected55 executed1 expected standalone Go-child skip; focused21 overlaps; actual Bash3.2/Python3.9.6 independent copy | External commands doubled; not Apple/P12/hosted proof. Final Python log includes command/header/outcome. |
+| IMP-06-03–08/11 implementation | Bash/ShellCheck/actionlint/hash/recipe checks pass; no-candidate facade expected refusal | No-candidate refusal is not actual stale-candidate execution. Sourcehash uses current preserved measured engine. |
+| IMP-06-09/10 implementation | Four mutants detected; old signer/new test missing diagnostic field fails | Expected assertion controls, not current product failures or credential evidence. |
+| IMP-06-12/13/17 implementation | Copy identity, own scratch cleanup, four-path/import/size/history audit pass | No live signing/storage resource; four raw diagnostic whitespace exceptions retained. |
+| IMP-06-14–16/18 implementation | DR009 investigation/installed contracts; fixture-shadowing failure and correction; historical-project comparison | First46 assertion failures were fixture expected-record shadowing, corrected without product change. Comparison does not prove cause. |
+| DR009 Delivery | Actual run39204643596/1 and both failure artifact receipts | Import/partition/selected-identity stages returned before sign failed; no notary; internal codesign cause unknown. |
+| CR-09-01 reviewer |127 current non-ticket files equal tested source; exact four-path delta, size/history/report checks | Read-only review audit, not new product execution. |
 
-Original raw logs remain at their linked paths. No new cumulative manifest, copied retained binary or inferred suite count. The read-only attempt to open a nonexistent ir-005/source-audit.json was corrected to actual source-check.json/final-checks.json; it was not a product/test failure.
+Full commands/raw outputs linked by implementation Checks Run under evidence/IMP-06-*; no cumulative manifest or duplicated logs. Prior CRR007/008/API004/DR007 histories keep exact-input scope.
 
 ## Findings / Follow-ups
 
-**None new.** CR-001 and CR-002 remain resolved. No follow-up Task or duplicate notification required; approved postpublication plan already has custody route.
+**None new.** No new finding ID, score deduction or cause-specific prescription. CR-001/002 stay resolved. Existing postpublication plan custody retained; no extra Task or duplicate notification.
 
 ## Classification / Recommended Recipient
 
-Review outcome **Pass**; failure classification **N/A**. Next is existing reviewed **affected API/new current-source candidate** route, exact recipient selected by fresh handoff rules. No new design/approval loop or direct reviewer publication. Only one most-specific outcome recipient under controlling team instructions.
+**Pass**, failure classification N/A. Fresh most-specific source-Pass route → affected API/new complete current-source candidate. Delivery later owns genuine readiness/current-main/authorized hosted signing to obtain actual category or success. A remaining failure must return its concrete evidence; no raw-secret logging or speculative credential change.
 
 ## Residual Risks
 
-- Current sourcehash **bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62** differs from recorded **a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e**. Recipe **299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274** unchanged. Existing candidates/readiness preserved, not current acceptance.
-- NEW complete current-source candidate/affected API required. Delivery owns staging/fresh main/genuine readiness and actual both-Mac Developer ID + Accepted, final payload and immutable public bytes/OCI/download/signature/install evidence.
-- DR007 secret-update timestamp2026-10-19T04:58:54Z proves metadata change only, not password equality or hosted authentication. Six secrets already provisioned; no speculative reprovisioning.
-- DR005 original failed run stays failed; local development signing/notarization does not close it or prove finalv0.1.0. Retained private local diagnostic and prior candidates untouched.
-- Field/shared-filesystem/physical/user tests Deferred, not release blockers or Passed. Postpublication plan custody remains Delivery → terminal Solution Designer → requesting PM. Overall release incomplete.
+- Current preserved-engine sourcehash **dd6cde88374cce42ec8b44c24e41abff3af6f01803890824dd783848e0d101a5** differs from old **d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd**. Recipe **299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274** unchanged. Future newly measured candidate identity governs new readiness; do not infer reproducibility or reuse API004/old lock.
+- Both real Mac Developer ID/Accepted, final payload, immutable public release/OCI/download/install/signature receipts remain mandatory. DR009 codesign failure is not fixed by this source Pass; original DR005 cause also unproven.
+- Six secrets provisioned; no reprovision absent concrete evidence. DR007 local development Accepted does not prove hosted ephemeral keychain/Intel/final bytes.
+- Field/shared-filesystem/physical/user tests Deferred, not Passed or release/closure blockers. Later custody Delivery → terminal SD → requesting PM unchanged.
+- No reviewer source/test edits, runtime resource, credentials, retained-candidate/diagnostic action, remote fetch/push/dispatch, target merge/reset/tag/release, TaskDone/user verification/Terminal. Only NFS review artifacts changed; existing finalized main retained.
 
 ## Latest Authoritative Result
 
-**CRR-007 / Implementation Review / Pass100.00**, supported-scenario and material-premise gates **Pass**. IR005 diagnostic/cleanup correction accepted, original hosted signing cause not attributed. Full24 structural checks/ten-category scorecard complete; current API/signing/publication evidence remains downstream. Canonical successful-test report CRR006 and API/Delivery authorities are not overwritten. Only NFS review artifacts changed; no TaskDone/user verification/Terminal claim.
+**CRR-009 / Implementation Review / Pass100.00**, supported-scenario and material-premise gates Pass. Diagnostic portion accepted; actual hosted cause/release unresolved. Canonical successful-test CRR008 and API/Delivery reports remain separate and unchanged. Continue normal affected validation, not an architecture restart or direct publication.
