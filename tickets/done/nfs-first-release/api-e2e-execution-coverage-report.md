@@ -9,7 +9,7 @@ Plan and upstream inventory: api-e2e-coverage-investigation.md. History: api-e2e
 
 ## Routing classification
 - Task size: **Large**; architectural risk: **High**; input: **Reviewed**.
-- Successful output: **Code Review**; Proportional test-code review: **Required** for the seven IR009 paths listed below. Fresh exact route will be recorded after evidence commit.
+- Successful output: **Code Review**; Proportional test-code review: **Required** for the seven IR009 paths listed below. Fresh rule selects `/software_engineering_team/code_reviewer` only; see evidence/C01-07-routing.json. Evidence commit `66ba73a38321656b223b34fd51d2248d5f47cb5d`.
 
 ## Environments / identities / emulation
 | Environment | Exact execution | Limits |
