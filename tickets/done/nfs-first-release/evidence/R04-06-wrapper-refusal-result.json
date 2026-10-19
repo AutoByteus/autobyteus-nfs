@@ -1,0 +1,22 @@
+{
+  "case": "R04",
+  "step": "wrapper-refusal",
+  "utc": "2026-10-19T07:14:11.279338+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "environment": "local Macarm64/Actions API where invoked",
+  "command": [
+    "/usr/bin/python3",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+    "--operation",
+    "fetch-candidate",
+    "--envelope",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/evidence/R04-06-wrong-envelope.json",
+    "--directory",
+    "/Users/normy/nfs-first-candidate-api006-a8aune30/refused-destination"
+  ],
+  "exit": 1,
+  "expected": 1,
+  "stdout": "",
+  "stderr": "Release refused: Retained artifact envelope differs\n",
+  "pass": true
+}

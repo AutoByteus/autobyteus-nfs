@@ -1,0 +1,54 @@
+{
+  "case": "C01",
+  "step": "Candidate/cleanup/ownership audit, no product suite repeat",
+  "date": "2026-10-19T07:14:17.361170+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "productCommit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "environment": "NFS worktree/actual completed hosted receipts",
+  "sourceCount": 127,
+  "nonTicketDelta": [],
+  "DeliveryProtectedFiles": 10,
+  "DeliveryUnchanged": true,
+  "priorAPIHistoryPrefixPreserved": true,
+  "oldCandidates": [
+    {
+      "revision": "002",
+      "candidate": "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate",
+      "recordAndMembersPreserved": true
+    },
+    {
+      "revision": "003",
+      "candidate": "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate",
+      "recordAndMembersPreserved": true
+    },
+    {
+      "revision": "004",
+      "candidate": "/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate",
+      "recordAndMembersPreserved": true
+    },
+    {
+      "revision": "005",
+      "candidate": "/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate",
+      "recordAndMembersPreserved": true
+    }
+  ],
+  "localNotaryDiagnostic": "Untouched; not accessed for credentials or current proof",
+  "ownedRetainedCandidate": {
+    "case": "R04",
+    "step": "Owned candidate retained for Delivery",
+    "utc": "2026-10-19T07:13:26.229480+00:00",
+    "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+    "root": "/Users/normy/nfs-first-candidate-api006-a8aune30",
+    "candidate": "/Users/normy/nfs-first-candidate-api006-a8aune30/candidate",
+    "run": 39213489075,
+    "attempt": 1,
+    "artifact": 12168544425,
+    "environment": "private local APFS parent0700",
+    "owner": "API006; preserve through release"
+  },
+  "candidateReverified": true,
+  "ownedNativeScratchAbsent": true,
+  "ownedPersistentRuntimeResources": [],
+  "hosted": "All jobs completed; provider post-job logs retained, provider disposal not independently audited",
+  "pass": true
+}

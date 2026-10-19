@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-19T06:35:21.685193+00:00",
+  "ticketCommit": "a55d753683d1e62982187fcab9c36c225a7ccd51",
+  "freshTargetBefore": "f830c50bf1238270343afce151dd05b65b10237a",
+  "mergeCommit": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "mergePolicy": "fresh finalize branch --no-ff; exact ticket tree equality",
+  "remoteHeads": {
+    "refs/heads/codex/nfs-first-release": "a55d753683d1e62982187fcab9c36c225a7ccd51",
+    "refs/heads/main": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2"
+  },
+  "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3",
+  "postMergeReadinessAndSourceCheck": "Pass",
+  "remoteWorkflowBytesEqual": true,
+  "workflowSha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+  "localTicketNowContainsFinalizedMain": true,
+  "canonicalCheckoutUntouched": true,
+  "sourceFinalization": "Completed",
+  "actualRelease": "Not yet dispatched"
+}

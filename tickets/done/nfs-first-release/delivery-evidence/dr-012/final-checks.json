@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-19T07:01:53.247514+00:00",
+  "headUnchanged": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "indexEmpty": true,
+  "apiHashesStillEqual": true,
+  "observedConcurrentApiChanges": [],
+  "priorRevisionPrefixUnchanged": true,
+  "releaseNotesUnchanged": true,
+  "ownModifiedDocs": [
+    "handoff-summary.md",
+    "release-deployment-report.md",
+    "delivery-revision-record.md",
+    "docs-sync-report.md"
+  ],
+  "newOwnedEvidencePrefix": "tickets/done/nfs-first-release/delivery-evidence/dr-012",
+  "status": " M tickets/done/nfs-first-release/api-e2e-coverage-investigation.md\n M tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md\n M tickets/done/nfs-first-release/api-e2e-test-progress.md\n M tickets/done/nfs-first-release/delivery-revision-record.md\n M tickets/done/nfs-first-release/docs-sync-report.md\n M tickets/done/nfs-first-release/handoff-summary.md\n M tickets/done/nfs-first-release/release-deployment-report.md\n?? tickets/done/nfs-first-release/delivery-evidence/dr-012/\n?? tickets/done/nfs-first-release/evidence/C01-06-ownership.json\n",
+  "noProductionOrOtherRepoEdit": true
+}

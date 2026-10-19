@@ -1,0 +1,71 @@
+{
+  "review": "CRR-011",
+  "intake": "bf6aea661f3551ee7aab2f35f8e537a23b59dce4",
+  "source": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "base": "79e35392bfe4f795464fecd8c034670b622c1684",
+  "currentSourceCount": 127,
+  "sourceMismatches": [],
+  "changedPaths": [
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "signerNonemptyBefore": 169,
+  "signerNonemptyAfter": 179,
+  "signerNumstat": "11\t1\tpackaging/sign-macos.sh",
+  "main72Ancestor": true,
+  "protectedBaseline": {
+    "code-review-revision-record.md": {
+      "sha256": "a0a751592bc65f16b106358a03def94b37a6fb38884eaf8b73cb9cc40b3c9ecb",
+      "bytes": 33428
+    },
+    "code-review-report.md": {
+      "sha256": "ebd37eeb0ccea688dbe101c5b4b22fec75075199772861bacf2b08cc546110f2",
+      "bytes": 22575
+    },
+    "api-e2e-test-review-report.md": {
+      "sha256": "1958e09e635c0c121d1a3bcda7564a1e3351e18a84b9d66c92202a9be9a90abd",
+      "bytes": 11545
+    },
+    "api-e2e-execution-coverage-report.md": {
+      "sha256": "4d979826c656dc909f4d011d2e6809635250041081b859d5bf3e2f90f3dfae08",
+      "bytes": 14419
+    },
+    "api-e2e-revision-record.md": {
+      "sha256": "d0d513d9616a0f8d379bf7f3770cdf584c6ab61caaeb53bb0ecdf3aa12d2c93a",
+      "bytes": 15757
+    },
+    "delivery-revision-record.md": {
+      "sha256": "88dc2054867f010b49d4ad06f8a42313ab12e737610def1e53ef70179b94d1f4",
+      "bytes": 37138
+    },
+    "release-deployment-report.md": {
+      "sha256": "c11648fefdbf677ef20448a5b1075c37d48fe09ef4871d7ec68a097f32c82fbb",
+      "bytes": 33224
+    },
+    "handoff-summary.md": {
+      "sha256": "7a5703857d19cab4f66f720e6c40c30e953cecd6b6d2879c3eb35ffc417bdc71",
+      "bytes": 26709
+    },
+    "requirements-doc.md": {
+      "sha256": "e5627e4e98fbbb03a93af1f5b97bda589682619e60388e0f2b8b6cd17701b4f3",
+      "bytes": 16974
+    },
+    "design-spec.md": {
+      "sha256": "5ab8b12e003f50c65a7eaa2a776b4c34bbb50265da6e383e01dca298b1b4621d",
+      "bytes": 36351
+    },
+    "design-review-report.md": {
+      "sha256": "9779f64a8aa822ba35cff163e5ba8f2b2de5ec1f3eb84fbd6feb574ad9f7664d",
+      "bytes": 28544
+    },
+    "approval-record-sr004.md": {
+      "sha256": "4519f245d632b9d4fb74b59afb0774812b6f1c11a862ae4097a447ccb261ac9f",
+      "bytes": 2001
+    }
+  },
+  "productCheckReruns": 0,
+  "reviewerRuntimeResources": [],
+  "readAttempt": "Initially guessed IMP-07-20-metadata-notes.md absent; listed actual IMP-07-20 evidence and read it. Read-only filename correction, not product/test failure."
+}

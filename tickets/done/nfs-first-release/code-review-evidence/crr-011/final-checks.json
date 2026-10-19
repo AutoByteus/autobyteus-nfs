@@ -1,0 +1,20 @@
+{
+  "review": "CRR-011",
+  "ownWhitespace": "Pass",
+  "structuralChecks": 24,
+  "scorecardCategories": 10,
+  "all127SourceInputsEqualReviewedCommit": true,
+  "priorHistoryPrefixPreserved": {
+    "sha256": "a0a751592bc65f16b106358a03def94b37a6fb38884eaf8b73cb9cc40b3c9ecb",
+    "bytes": 33428
+  },
+  "testApiDeliveryAuthoritiesUnchanged": true,
+  "productDelta": [],
+  "reviewerProductRuns": 0,
+  "reviewerOwnedResources": [],
+  "sourceSizeNonempty": 179,
+  "sourceDelta": 12,
+  "actualHostedCause": "Unresolved",
+  "actualHostedSigningRelease": "Not proven by review",
+  "scope": "NFS-only review artifacts"
+}

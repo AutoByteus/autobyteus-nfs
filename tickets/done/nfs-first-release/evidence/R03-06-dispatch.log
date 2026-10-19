@@ -1,0 +1,4 @@
+# Case R03; source 7bd486e2e27743441a870f7cd8db1f6c4ee0b493; local gh CLI; 2026-10-19T07:02:55.146625+00:00; cwd /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release
+$ gh workflow run release-nfs.yml --repo AutoByteus/autobyteus-nfs --ref codex/nfs-first-release -f release_tag=v0.1.0 -f source_sha=7bd486e2e27743441a870f7cd8db1f6c4ee0b493 -f publish=false
+
+Exit: 0

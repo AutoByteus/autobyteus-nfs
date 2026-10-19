@@ -1,0 +1,20 @@
+{
+  "check": "IMP-07-01",
+  "input": "79e35392bfe4f795464fecd8c034670b622c1684",
+  "date": "2026-10-19",
+  "environment": "Darwin arm64",
+  "scope": "Empty disposable keychain and own binary copy only; no user signing key, P12, trust change, timestamp request or notary",
+  "createExit": 0,
+  "exactPathExists": true,
+  "doubledSuffixExists": false,
+  "createdKeychainInSearchList": false,
+  "priorEntriesRetained": true,
+  "missingIdentityExit": 1,
+  "identityPrefixedNoIdentityFound": true,
+  "binaryUnchanged": true,
+  "restoreExit": 0,
+  "deleteExit": 0,
+  "searchListExactlyRestored": true,
+  "ownedScratchRemoved": true,
+  "command": "python3 tickets/done/nfs-first-release/evidence/IMP-07-01-keychain-probe.py"
+}

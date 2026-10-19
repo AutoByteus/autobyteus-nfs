@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-19T07:19:55.608431+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_nfs_*.py",
+    "-v"
+  ],
+  "exit": 0,
+  "passed": true,
+  "collected": 58,
+  "executed": 57,
+  "expectedStandaloneGoChildSkip": 1,
+  "durationSeconds": 121.43,
+  "logSha256": "39dcca967987cfd0aa70131eb1d5a3e305f7367be6f1a53a72992418d714d89a",
+  "scratchRemoved": true,
+  "scope": "Independent current-source plus actual readiness/engine-lock data check, not Apple/field/publication"
+}

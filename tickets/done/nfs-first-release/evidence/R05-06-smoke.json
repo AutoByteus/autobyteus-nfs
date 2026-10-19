@@ -1,0 +1,15 @@
+{
+  "case": "R05",
+  "step": "Actual new downloaded native smoke",
+  "utc": "2026-10-19T07:14:16.468682+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "environment": "ProductName:\t\tmacOS\nProductVersion:\t\t26.5.2\nBuildVersion:\t\t25F84\n",
+  "archiveSha256": "99605364d66d99587327e6d304cc3d0918b36055265ae5e02e213cb48ba3f2e2",
+  "binarySha256": "f4ec0be57fc9abd7ff64f2484288c701c664999628a5ede5949101d88f251d28",
+  "versionStdout": "v0.1.0\n",
+  "candidateAdmissionRefused": true,
+  "noHomeWrites": true,
+  "scratch": "/Users/normy/nfs-first-api006-smoke-l0gwnokf",
+  "pass": true,
+  "scratchAbsent": true
+}

@@ -234,3 +234,46 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-010 | api-e2e-test-review-report.md | API005 prepublication Pass95 / IR006 signing suite | CRR008 Pass | Pass — test-code gate only | None; actual signing unresolved |
+
+
+### CRR-011 — IR007 owned-keychain lookup source review
+
+- Date2026-10-19; **Implementation Review / round11 / Full Re-Audit of affected signing boundary**. Search-list configuration layered on earlier diagnostic fixes requires all24 structural checks/full10 scorecard; bounded four-path review, not runtime/design/field campaign.
+- **Pass100.00 — source scope only.** R3/SR004 Approved/Ready, ARCH002, IR007; Large/High unchanged. Intakebf6aea661f3551ee7aab2f35f8e537a23b59dce4; source3f67e36193c246ca08b49cda818be5c0f94eba51 versus79e35392. Trigger DR011 actual39210821088/1 at main72b8a4, bothMac sign/exit1/cleanupcomplete/unclassified. Original cause unknown, raw capture deleted.
+- Prior source result CRR009 Pass100 and separate CRR010 testPass/API00595 retain exact scope; this is not new API/hosted success. Canonical code-review-report.md updated, test/API/Delivery authorities unchanged.
+- CG018 promotes bounded owned-keychain membership/restore under required signing/cleanup contracts: actual local A/B/A synthetic identity failure1→sign0/verify0/runtime→failure1 supports lookup repair. CG019 accepts exact observed identity-prefixed no-identity literal. Neither attributes deleted hosted output or proves real Developer ID/Intel/timestamp/notary. Existing source --timestamp/identity/team/runtime/Accepted gates preserved.
+- Current mechanism preserves all prior entries/order/argv, configures before lookup, exits original configuration failure before signing, restores exact list before own deletion. Private diagnostics/no-clobber/strict failure retained; no broad access, trust change, retry or fallback.
+
+#### Prior Finding Resolution
+
+| Reference | Prior | Current | Evidence |
+| --- | --- | --- | --- |
+| CR-001/CR-002 | Resolved | Still resolved | Unchanged mandatory argv/import owners; touched bindings used. |
+| DR009 diagnostic portion | Source accepted | Actual DR011 safe unclassified artifact path executed; original cause remains unknown | DR011 failure-assessment/receipts. |
+| DR011 lookup/diagnosis request, no CR ID | Local Fix requested | Bounded lookup source repair accepted; original hosted cause/release NOT marked resolved | IMP07-01/02/03 and current configure/cleanup/diagnostic controls. |
+
+- No new findings/follow-ups/deductions. No material approval/design-basis change. Checks Run read first; reused exact58collected57executed1skip,23overlap,fourmutants/original control and native probe receipts. No reviewer product rerun; only read-only source/own-artifact audit. All127 source inputs equal3f67e36; signer169→179nonempty,11add+1delete=12.
+- Sourcehash7cb7b6d25794cbacbcf0286d9d0760347d9f15999eb51e981765e4ba8ed37a1a uses preserved engine; recipe299db701… unchanged. NEW current-source complete candidate/affected API and genuine readiness required; no API005/old candidate relabel. Main72b8a4/f830/768 ancestor preserved, no replay.
+- CRR001–010 entire33428-byte prefix retained. No source/test/other-owner writes, runtime/credential/keychain/retained-candidate/remote/publication actions. A guessed IMP07-20 filename was absent; corrected by listing actual evidence, read-only and not a test failure.
+- Recommended/fresh most-specific recipient: API only; routing/receipt in code-review-evidence/crr-011. Later Delivery owns real BOTH-Mac Developer ID/Accepted/finalpayload/public bytes/OCI/download/signature/install/custody. Field/user Deferred; no questionnaire, speculative secret reprovision, TaskDone/Terminal or duplicate dispatch.
+
+| Revision | Canonical report | Trigger | Prior source result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-011 | code-review-report.md | IR007 / DR011 lookup repair | CRR009 Pass100 | Pass100 — source scope | None new; original hosted cause/release unverified |
+
+
+### CRR-012 — IR007 successful signing-test review
+
+- Date2026-10-19; **Successful API/E2E Test-Code Review**, fourth test gate/overall round12; scope N/A — proportional test review. Canonical api-e2e-test-review-report.md updated, source code-review-report.md CRR011 unchanged.
+- Trigger API-REV-006 prepublication Pass95.00%; R3/SR004 Approved/Ready, ARCH002, IR007, CRR011; DR011 unresolved hosted failure/DR012 staging. Large/High unchanged. Intake08594fd388d3babdd4b4e83ef94b9f3e800c6a78; tested7bd486e2e27743441a870f7cd8db1f6c4ee0b493; product3f67e36193c246ca08b49cda818be5c0f94eba51, all127 current inputs equal.
+- **Pass**, prior applicable test result CRR010 Pass. One updated durable suite scripts/tests/test_nfs_release_signing.py; API authored no durable/production delta. Nine proportional checks pass; no source scorecard/size threshold or re-audit.
+- Stateful actual-shell fixture proves owned membership, preserved original paths/order/argv, configure failure exit/no downstream calls, exact restore and observed diagnostic privacy; prior strict signing/Accepted/cleanup controls remain. Approved signing/cleanup contracts and local native A/B/A support the scenario, not a claim about deleted hosted output.
+- Prior test finding resolution: **None**. New/remaining findings/follow-ups: **None**. Source CR-001/002 remain resolved; no score/classification change. Original hosted cause and actual signed release remain unverified.
+- Checks Run read first; reused IMP58collected57executed1skip,23overlap,4mutants/original controls. No reviewer product/keychain rerun. Actual API00639213489075/1 native4+engine2/fullOCI/aggregation pass; real signer/receipt-upload skipped. No actual DeveloperID/Accepted inference.
+- Candidate12168544425 retained at /Users/normy/nfs-first-candidate-api006-a8aune30/candidate,19files128137754bytes; measured sourceHash3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086 governs new readiness, not preserved-engine7cb7b6/oldAPI005. No reproducibility claim.
+- Prior CRR001–011 entire37230-byte prefix preserved; source/API/Delivery authorities and nine currently uncommitted Delivery files protected. NFS reviewer artifacts only; no source/test/candidate/credential/remote/runtime/publication action.
+- Fresh most-specific successful-test route selects Delivery only; code-review-evidence/crr-012 route/receipt. Genuine readiness/freshmain/actual bothMac signing+Accepted/finalpayload/publicbytes/OCI/signature/install/custody remain mandatory. Field/user Deferred; no main replay, secret speculation, questionnaire, TaskDone/Terminal or duplicate notification.
+
+| Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-012 | api-e2e-test-review-report.md | API006 prepublication Pass95 / IR007 signing suite | CRR010 Pass | Pass — test-code gate only | None; actual hosted cause/release unverified |

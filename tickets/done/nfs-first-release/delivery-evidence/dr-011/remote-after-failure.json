@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-19T06:41:28.719022+00:00",
+  "endpoints": [
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "exit": 1,
+      "body": {
+        "message": "Not Found",
+        "documentation_url": "https://docs.github.com/rest/git/refs#get-a-reference",
+        "status": "404"
+      },
+      "stderr": "gh: Not Found (HTTP 404)"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/tags/v0.1.0",
+      "exit": 1,
+      "body": {
+        "message": "Not Found",
+        "documentation_url": "https://docs.github.com/rest/releases/releases#get-a-release-by-tag-name",
+        "status": "404"
+      },
+      "stderr": "gh: Not Found (HTTP 404)"
+    },
+    {
+      "endpoint": "orgs/AutoByteus/packages/container/autobyteus-nfs",
+      "exit": 1,
+      "body": {
+        "message": "Package not found.",
+        "documentation_url": "https://docs.github.com/rest/packages/packages#get-a-package-for-an-organization",
+        "status": "404"
+      },
+      "stderr": "gh: Package not found. (HTTP 404)"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "exit": 0,
+      "body": {
+        "ref": "refs/heads/main",
+        "node_id": "REF_kwDOVK4ms69yZWZzL2hlYWRzL21haW4",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/heads/main",
+        "object": {
+          "sha": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+          "type": "commit",
+          "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/codex/nfs-first-release",
+      "exit": 0,
+      "body": {
+        "ref": "refs/heads/codex/nfs-first-release",
+        "node_id": "REF_kwDOVK4ms9oAInJlZnMvaGVhZHMvY29kZXgvbmZzLWZpcnN0LXJlbGVhc2U",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/heads/codex/nfs-first-release",
+        "object": {
+          "sha": "a55d753683d1e62982187fcab9c36c225a7ccd51",
+          "type": "commit",
+          "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/a55d753683d1e62982187fcab9c36c225a7ccd51"
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "lsRemote": "a55d753683d1e62982187fcab9c36c225a7ccd51\trefs/heads/codex/nfs-first-release\n72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2\trefs/heads/main\n"
+}

@@ -1,0 +1,18 @@
+{
+  "check": "IMP-07-intake",
+  "command": "git rev-parse/status; DR011 authority read",
+  "inputCommit": "79e35392bfe4f795464fecd8c034670b622c1684",
+  "environment": "Darwin arm64",
+  "date": "2026-10-19",
+  "trigger": "DR011 Blocked/Local Fix",
+  "classification": "Large/High/Reviewed",
+  "basis": "R3/SR004 Approved/Ready/ARCH002",
+  "plannedSourcePaths": [
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py",
+    "TESTING.md",
+    "packaging/RELEASE.md"
+  ],
+  "protectedFinalizedMain": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "remoteActions": false
+}

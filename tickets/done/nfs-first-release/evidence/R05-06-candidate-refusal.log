@@ -1,0 +1,4 @@
+# Case R05; command ['/Users/normy/nfs-first-api006-smoke-l0gwnokf/autobyteus-nfs', 'verify-release', '/Users/normy/nfs-first-api006-smoke-l0gwnokf/release.json']; cwd /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release; source7bd486e2e27743441a870f7cd8db1f6c4ee0b493; local macOS26.5.2 arm64/Python3.9.6; 2026-10-19T07:14:16.468226+00:00
+AutoByteus NFS incomplete: this release does not admit the current computer/CPU; no installation performed
+
+Exit: 1

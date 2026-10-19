@@ -1,0 +1,27 @@
+{
+  "check": "IMP-07",
+  "command": "IMP-07-run-checks.py",
+  "commit": "79e35392bfe4f795464fecd8c034670b622c1684",
+  "environment": "Darwin arm64 independent copy, private HOME/TMP",
+  "date": "2026-10-19",
+  "checks": [
+    {
+      "check": "IMP-07-04-focused",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing",
+        "scripts.tests.test_nfs_release_workflow",
+        "-v"
+      ],
+      "commit": "79e35392bfe4f795464fecd8c034670b622c1684",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 92.16,
+      "log": "IMP-07-04-focused.log"
+    }
+  ],
+  "inputClarification": "Precommit independent copy from dirty worktree at HEAD79e3539; checked signer/tests are identical to later3f67e36193c246ca08b49cda818be5c0f94eba51. Only package guide wrapping changed before commit."
+}

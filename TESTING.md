@@ -83,7 +83,11 @@ also check literal diagnostic categories, unrecognized/oversized/non-UTF8 output
 parser failure and successful-command precedence. These categories describe tool
 observations, not a proven root cause; all raw output stays in private transient
 scratch and is removed. Checks cover keychain-list
-capture/restore plus cleanup failure refusal. Workflow receipt glob checks exclude
+capture/configure/restore with multiple prior paths (including spaces and shell
+metacharacters), configuration failure before signing, and cleanup failure refusal.
+The codesign double requires owned-keychain search membership, matching the
+controlled native synthetic-identity reproduction; this is not real Developer ID
+or hosted signing proof. Workflow receipt glob checks exclude
 private files; only actual hosted execution proves artifact upload and real signing.
 Installer fixtures use actual tar/hash
 tools and an inert binary. Workflow truth tables cover candidate/fresh/resume modes

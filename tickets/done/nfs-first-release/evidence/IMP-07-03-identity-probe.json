@@ -1,0 +1,48 @@
+{
+  "check": "IMP-07-03",
+  "input": "79e35392bfe4f795464fecd8c034670b622c1684",
+  "date": "2026-10-19",
+  "environment": "Darwin arm64",
+  "scope": "Synthetic self-signed identity generated in owned scratch; no real Developer ID key/P12/trust store/notary; no timestamp request; never a release fallback",
+  "generateExit": 0,
+  "syntheticP12Exit": 0,
+  "createExit": 0,
+  "unlockExit": 0,
+  "importExit": 0,
+  "partitionExit": 0,
+  "findIdentityExit": 0,
+  "exactIdentityInExplicitValidQuery": false,
+  "findAllIdentityExit": 0,
+  "exactIdentityInExplicitQuery": true,
+  "original": {
+    "signExit": 1,
+    "identityPrefixedNoIdentityFound": true,
+    "chainWarning": false,
+    "internalComponent": false,
+    "runtimeFlag": null,
+    "verifyExit": null
+  },
+  "addOwnedMembershipExit": 0,
+  "with-owned-keychain": {
+    "signExit": 0,
+    "identityPrefixedNoIdentityFound": false,
+    "chainWarning": false,
+    "internalComponent": false,
+    "runtimeFlag": true,
+    "verifyExit": 0
+  },
+  "removeOwnedMembershipExit": 0,
+  "removed-again": {
+    "signExit": 1,
+    "identityPrefixedNoIdentityFound": true,
+    "chainWarning": false,
+    "internalComponent": false,
+    "runtimeFlag": null,
+    "verifyExit": null
+  },
+  "restoreExit": 0,
+  "deleteExit": 0,
+  "searchListExactlyRestored": true,
+  "ownedScratchRemoved": true,
+  "command": "python3 tickets/done/nfs-first-release/evidence/IMP-07-03-identity-probe.py"
+}

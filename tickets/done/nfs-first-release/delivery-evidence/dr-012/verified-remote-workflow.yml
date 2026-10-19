@@ -1,0 +1,361 @@
+name: AutoByteus NFS Release
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Normal NFS version (first v0.1.0); no pre-created tag/release required'
+        required: true
+        type: string
+      source_sha:
+        description: 'Full reviewed source commit; empty selects this dispatch SHA'
+        required: false
+        type: string
+      candidate_run_id:
+        description: 'Exact current build-only run; required for publication'
+        required: false
+        type: string
+      publish:
+        description: 'Authorized signed release; field and user testing deferred'
+        default: false
+        type: boolean
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ inputs.publish && 'nfs-repository-publication' || format('nfs-candidate-{0}', github.run_id) }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+      packages: read
+    outputs:
+      tag: ${{ steps.prepare.outputs.tag }}
+      source: ${{ steps.prepare.outputs.source }}
+      mode: ${{ steps.prepare.outputs.mode }}
+      base: ${{ steps.prepare.outputs.base }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ inputs.source_sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Release boundary checks
+        run: python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v
+      - id: prepare
+        env:
+          TAG: ${{ inputs.release_tag }}
+          SOURCE: ${{ inputs.source_sha || github.sha }}
+          CANDIDATE_RUN: ${{ inputs.candidate_run_id }}
+          WANT_PUBLISH: ${{ inputs.publish }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [[ "$WANT_PUBLISH" == true ]]; then args+=(--run-id "$CANDIDATE_RUN"); fi
+          python3 packaging/release.py --operation prepare --tag "$TAG" --source-commit "$SOURCE" --directory work "${args[@]}"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.prepare.outputs.mode != 'candidate'
+        with:
+          name: nfs-preflight
+          path: work/
+          retention-days: 90
+          if-no-files-found: error
+  engine-packages:
+    needs: prepare
+    if: needs.prepare.outputs.mode == 'candidate'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {runner: ubuntu-24.04, arch: amd64}
+          - {runner: ubuntu-24.04-arm, arch: arm64}
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          persist-credentials: false
+      - name: Build measured engine pair in pinned disposable builder
+        env:
+          BASE: ${{ needs.prepare.outputs.base }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/engine-output"
+          docker run --rm -e BASE="$BASE" \
+            -v "$PWD/packaging/engine:/recipe:ro" \
+            -v "$RUNNER_TEMP/engine-output:/output" "$BASE" bash -euc '
+              sed -i "s/^Types: deb$/Types: deb deb-src/" /etc/apt/sources.list.d/ubuntu.sources
+              apt-get update
+              DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential devscripts fakeroot curl ca-certificates lsb-release
+              DEBIAN_FRONTEND=noninteractive apt-get build-dep -y nfs-ganesha=4.3-8ubuntu1
+              useradd -m -u 1001 builder
+              install -d -o builder -g builder /work
+              su builder -s /bin/bash -c "python3 /recipe/build.py --work /work/source-build --output /work/output --base $BASE"
+              cp -a /work/output/. /output/
+            '
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfs-engine-package-${{ matrix.arch }}
+          path: ${{ runner.temp }}/engine-output/
+          retention-days: 90
+          if-no-files-found: error
+  engine-inputs:
+    needs: [prepare, engine-packages]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && needs.prepare.outputs.mode == 'candidate' && needs.engine-packages.result == 'success' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: nfs-engine-package-*
+          path: engine-parts
+      - run: python3 packaging/engine/manifest.py merge --inputs engine-parts/nfs-engine-package-amd64 engine-parts/nfs-engine-package-arm64 --output engine-candidate
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfs-engine-inputs
+          path: engine-candidate/
+          retention-days: 90
+          if-no-files-found: error
+  engine:
+    needs: [prepare, engine-inputs]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && needs.prepare.outputs.mode == 'candidate' && needs.engine-inputs.result == 'success' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: nfs-engine-inputs
+          path: engine-candidate
+      - uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f
+      - uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8
+        with:
+          context: .
+          file: packaging/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: false
+          provenance: false
+          sbom: false
+          outputs: type=oci,dest=engine.oci.tar
+          build-args: |
+            UBUNTU_BASE=${{ needs.prepare.outputs.base }}
+      - run: python3 packaging/release.py --operation oci --directory engine.oci.tar
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfs-oci
+          path: engine.oci.tar
+          retention-days: 90
+          if-no-files-found: error
+  binaries:
+    needs: [prepare, engine-inputs, engine]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && ((needs.prepare.outputs.mode == 'candidate' && needs.engine-inputs.result == 'success' && needs.engine.result == 'success') || (needs.prepare.outputs.mode == 'fresh' && needs.engine-inputs.result == 'skipped' && needs.engine.result == 'skipped')) }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {runner: macos-15, os: darwin, arch: arm64}
+          - {runner: macos-15-intel, os: darwin, arch: amd64}
+          - {runner: ubuntu-24.04, os: linux, arch: amd64}
+          - {runner: ubuntu-24.04-arm, os: linux, arch: arm64}
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: needs.prepare.outputs.mode == 'candidate'
+        with:
+          name: nfs-engine-inputs
+          path: work/candidate/engine
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: needs.prepare.outputs.mode == 'candidate'
+        with:
+          name: nfs-oci
+          path: work/candidate
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: needs.prepare.outputs.mode == 'fresh'
+        with:
+          name: nfs-preflight
+          path: work
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+        with:
+          go-version: '1.27.2'
+          cache: false
+      - name: Native checks and exact engine metadata (not physical qualification)
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+          MODE: ${{ needs.prepare.outputs.mode }}
+          TARGET: ${{ matrix.os }}-${{ matrix.arch }}
+        run: |
+          set -euo pipefail
+          image=$(python3 packaging/release.py --operation oci --directory work/candidate/engine.oci.tar | python3 -c 'import json,sys; print("ghcr.io/autobyteus/autobyteus-nfs@"+json.load(sys.stdin)["index"])')
+          # Keep the array nonempty for Mac system Bash 3.2 under nounset.
+          args=(--tag "$TAG" --engine-image "$image" --engine-manifest work/candidate/engine/engine-manifest.json --engine-artifacts work/candidate/engine --target "$TARGET" --output cmd/autobyteus-nfs/release.json)
+          if [[ "$MODE" == fresh ]]; then args+=(--release --candidate work/candidate); fi
+          python3 packaging/release.py "${args[@]}"
+          go test -race ./...
+          go vet ./...
+          python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v
+          mkdir -p out native
+          CGO_ENABLED=0 go build -trimpath -o out/autobyteus-nfs ./cmd/autobyteus-nfs
+          python3 -c 'import os; assert os.path.getsize("out/autobyteus-nfs") <= 100*1024*1024'
+          test "$(out/autobyteus-nfs version)" = "$TAG"
+          cp cmd/autobyteus-nfs/release.json LICENSE THIRD_PARTY_NOTICES out/
+          cat "$(go env GOROOT)/LICENSE" >> out/THIRD_PARTY_NOTICES
+          if [[ "$TARGET" == linux-* ]]; then cat "work/candidate/engine/${TARGET#linux-}/COPYRIGHT" >> out/THIRD_PARTY_NOTICES; fi
+      - name: Developer ID and Accepted notarization before public effects
+        if: matrix.os == 'darwin' && needs.prepare.outputs.mode == 'fresh'
+        env:
+          CERTIFICATE: ${{ secrets.NFS_MAC_CERTIFICATE_P12_BASE64 }}
+          PASSWORD: ${{ secrets.NFS_MAC_CERTIFICATE_PASSWORD }}
+          IDENTITY: ${{ secrets.NFS_MAC_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          TARGET: ${{ matrix.os }}-${{ matrix.arch }}
+        run: bash packaging/sign-macos.sh out/autobyteus-nfs "native/$TARGET-notary.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: ${{ always() && matrix.os == 'darwin' && needs.prepare.outputs.mode == 'fresh' }}
+        with:
+          name: nfs-signing-${{ matrix.os }}-${{ matrix.arch }}
+          path: |
+            native/*-notary.json
+            native/*-notary-failure.json
+          retention-days: 90
+          if-no-files-found: warn
+      - name: Package four regular members
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+          TARGET: ${{ matrix.os }}-${{ matrix.arch }}
+        run: tar -czf "native/autobyteus-nfs-${TAG#v}-${TARGET}.tar.gz" -C out LICENSE THIRD_PARTY_NOTICES autobyteus-nfs release.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfs-native-${{ matrix.os }}-${{ matrix.arch }}
+          path: native/
+          retention-days: 90
+          if-no-files-found: error
+  candidate:
+    needs: [prepare, engine-inputs, engine, binaries]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && needs.prepare.outputs.mode == 'candidate' && needs.engine-inputs.result == 'success' && needs.engine.result == 'success' && needs.binaries.result == 'success' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: nfs-engine-inputs
+          path: retained/engine
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: nfs-oci
+          path: retained
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: nfs-native-*
+          path: retained/native
+          merge-multiple: true
+      - env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+          SOURCE: ${{ needs.prepare.outputs.source }}
+        run: python3 packaging/release.py --operation candidate --directory retained --tag "$TAG" --source-commit "$SOURCE" --workflow-commit "$GITHUB_SHA" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfs-release-candidate
+          path: retained/
+          retention-days: 90
+          if-no-files-found: error
+  payload:
+    needs: [prepare, binaries]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && needs.prepare.outputs.mode == 'fresh' && needs.binaries.result == 'success' }}
+    runs-on: ubuntu-24.04
+    outputs:
+      artifact: ${{ steps.retain.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: nfs-preflight
+          path: work
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: nfs-native-*
+          path: native
+          merge-multiple: true
+      - env:
+          SOURCE: ${{ needs.prepare.outputs.source }}
+        run: python3 packaging/release.py --operation payload --directory work/payload --candidate work/candidate --native native --source-commit "$SOURCE" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        id: retain
+        with:
+          name: nfs-release-payload
+          path: work/payload/
+          retention-days: 90
+          if-no-files-found: error
+  publish:
+    needs: [prepare, binaries, payload]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && ((needs.prepare.outputs.mode == 'fresh' && needs.binaries.result == 'success' && needs.payload.result == 'success') || (needs.prepare.outputs.mode == 'resume' && needs.binaries.result == 'skipped' && needs.payload.result == 'skipped')) }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      packages: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: nfs-preflight
+          path: work
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: needs.prepare.outputs.mode == 'fresh'
+        with:
+          name: nfs-release-payload
+          path: work/payload
+      - name: Install digest-preserving registry transport
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends skopeo
+          skopeo --version
+      - name: Bind retained payload and reconcile publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODE: ${{ needs.prepare.outputs.mode }}
+          ARTIFACT: ${{ needs.payload.outputs.artifact }}
+          REGISTRY_AUTH_FILE: ${{ runner.temp }}/nfs-registry-auth.json
+        run: |
+          set -euo pipefail
+          umask 077
+          trap 'rm -f "$REGISTRY_AUTH_FILE"' EXIT
+          printf '%s' "$GH_TOKEN" | skopeo login --authfile "$REGISTRY_AUTH_FILE" --username "$GITHUB_ACTOR" --password-stdin ghcr.io
+          if [[ "$MODE" == fresh ]]; then
+            python3 packaging/release.py --operation bind --directory work/payload --candidate work/candidate --artifact-id "$ARTIFACT" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" --output work/binding.json
+          fi
+          python3 packaging/release.py --operation publish --directory work/payload --candidate work/candidate --binding work/binding.json --output publication-receipt.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: nfs-publication-receipt
+          path: publication-receipt.json
+          retention-days: 90
+          if-no-files-found: warn

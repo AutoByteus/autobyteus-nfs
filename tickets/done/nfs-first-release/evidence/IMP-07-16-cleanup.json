@@ -1,0 +1,12 @@
+{
+  "check": "IMP-07-16",
+  "command": "remove owned independent source/HOME/TMP",
+  "commit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "environment": "Darwin arm64",
+  "date": "2026-10-19",
+  "scratch": "/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc",
+  "absent": true,
+  "realKeychainOrAppleAccess": false,
+  "retainedCandidatesTouched": false,
+  "remoteActions": false
+}

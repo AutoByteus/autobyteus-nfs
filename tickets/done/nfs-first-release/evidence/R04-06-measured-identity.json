@@ -1,0 +1,22 @@
+{
+  "case": "R04",
+  "step": "Actual measured engine vs preserved lock, no product mutation",
+  "date": "2026-10-19T07:14:17.360596+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "environment": "read-only current candidate/lock",
+  "priorSourceHashWithPreservedEngine": "7cb7b6d25794cbacbcf0286d9d0760347d9f15999eb51e981765e4ba8ed37a1a",
+  "newSourceHash": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086",
+  "engineManifestDifferences": [
+    {
+      "path": "/architectures/amd64/buildInventory/sha256",
+      "prior": "3a2d15d24d3fc1c1dafd8ba4a871bdaa454335aacf209a0afa577c5d97641921",
+      "current": "929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86"
+    },
+    {
+      "path": "/architectures/arm64/buildInventory/sha256",
+      "prior": "ca96c622d920864c6073639bba32f7f054102c95fb0cee439fe703edf71d4596",
+      "current": "1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509"
+    }
+  ],
+  "scope": "New real measured candidate governs readiness; no reproducibility or old identity promotion."
+}

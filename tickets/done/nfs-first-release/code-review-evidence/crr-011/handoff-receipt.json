@@ -1,0 +1,13 @@
+{
+  "review": "CRR-011",
+  "reviewCommit": "f8366fca2ba6e9a4d3a5b17584edde50444b6b45",
+  "recipient": "/software_engineering_team/api_e2e_engineer",
+  "result": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  },
+  "scope": "Bounded lookup source repair accepted; original hosted cause and actual release remain unverified.",
+  "duplicateDispatch": false
+}

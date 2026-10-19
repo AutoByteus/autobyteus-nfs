@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-19T06:42:57.412200+00:00",
+  "classification": "Local Fix",
+  "owner": "implementation_engineer",
+  "observed": "Both hosted Mac targets sign/exit1/cleanupcomplete/diagnostic=unclassified; five native/preflight raw log hashes and both diagnostic artifact ZIP/member hashes verified",
+  "newProof": "Actual IR006 private capture/classifier/sanitized upload boundary executed, but emitted no usable specific category. This is not a signing repair or root-cause identification.",
+  "inference": "At exact reviewed signer, unclassified covers zero or multiple recognized error literals without recognized chain warning. It does not establish absent errors, invalid credentials, chain/ACL faults, timestamp fault or another specific cause. Notary was never reached.",
+  "rootCause": "Unknown; DR011 does not resolve original DR009 or DR005 cause.",
+  "request": "Targeted diagnosis and minimal repair of actual hosted codesign boundary. Determine why genuine command output is not represented by current safe observations; use a private bounded investigation and controlled sanitized evidence rather than further guess-only pattern additions or same-input blind reruns. Preserve original exit, cleanup, no-clobber, real DeveloperID/secure timestamp/Accepted-only gates and four targets. Do not print/upload raw private output, secrets/P12/keychain contents or xtrace. No speculative credential reprovision or broad access/trust changes.",
+  "referenceLead": "User-requested historical superrepo/Apple-Actions search-list membership difference remains a lead only; no actual chain category was observed here. Do not label that difference the cause without evidence.",
+  "scope": "NFS-only packaging Local Fix; no architecture/API-repeat/field/approval loop solely for current prepublication success",
+  "preserve": "Completed main72b8a4/f830/768 ancestry and actual failed runs; API005 candidate and DR007 private local diagnostic; future hashed product change needs applicable fresh candidate/readiness",
+  "publicEffects": "None from this run; payload/publisher skipped; fresh tag/release/package404",
+  "nextOwner": "Fresh most-specific Local Fix rule; single implementation recipient only"
+}

@@ -1,0 +1,13 @@
+{
+  "review": "CRR-012",
+  "reviewCommit": "49c92d60fb46b4166194c9378f7c4fc44be2e0f7",
+  "recipient": "/software_engineering_team/delivery_engineer",
+  "result": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/delivery_engineer.",
+    "target_agent_run_id": "delivery_engineer_97aea298f55141d4be9a3662f140848f"
+  },
+  "scope": "Successful IR007 signing-test gate only; original hosted cause and actual signed release unverified.",
+  "duplicateDispatch": false
+}

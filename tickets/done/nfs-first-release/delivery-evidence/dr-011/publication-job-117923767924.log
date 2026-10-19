@@ -1,0 +1,374 @@
+﻿2026-10-19T06:36:30.1450495Z Current runner version: '2.337.0'
+2026-10-19T06:36:30.1479730Z ##[group]Runner Image Provisioner
+2026-10-19T06:36:30.1480863Z Hosted Compute Agent
+2026-10-19T06:36:30.1481533Z Version: 20261012.601
+2026-10-19T06:36:30.1482401Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T06:36:30.1483196Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T06:36:30.1484033Z Worker ID: {22421c12-a323-4b73-90b8-5532e34d9d9d}
+2026-10-19T06:36:30.1484867Z Region: northcentralus
+2026-10-19T06:36:30.1485528Z Cloud: Azure
+2026-10-19T06:36:30.1486304Z ##[endgroup]
+2026-10-19T06:36:30.1489218Z ##[group]Operating System
+2026-10-19T06:36:30.1490106Z Ubuntu
+2026-10-19T06:36:30.1490693Z 24.04.5
+2026-10-19T06:36:30.1491422Z LTS
+2026-10-19T06:36:30.1492006Z ##[endgroup]
+2026-10-19T06:36:30.1492697Z ##[group]Runner Image
+2026-10-19T06:36:30.1493401Z Image: ubuntu-24.04-arm
+2026-10-19T06:36:30.1494060Z Version: 20261012.149.1
+2026-10-19T06:36:30.1495594Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20261012.149/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+2026-10-19T06:36:30.1497388Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20261012.149
+2026-10-19T06:36:30.1498803Z ##[endgroup]
+2026-10-19T06:36:30.1500220Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T06:36:30.1503213Z Actions: read
+2026-10-19T06:36:30.1504050Z Contents: read
+2026-10-19T06:36:30.1504701Z Metadata: read
+2026-10-19T06:36:30.1505418Z ##[endgroup]
+2026-10-19T06:36:30.1508524Z Secret source: Actions
+2026-10-19T06:36:30.1509850Z Cache mode: write
+2026-10-19T06:36:30.1511441Z Prepare workflow directory
+2026-10-19T06:36:30.1878332Z Prepare all required actions
+2026-10-19T06:36:30.1928476Z Getting action download info
+2026-10-19T06:36:30.4392586Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T06:36:30.5690333Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T06:36:30.9013931Z Download action repository 'actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+2026-10-19T06:36:31.3026603Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T06:36:31.5182831Z Complete job name: binaries (ubuntu-24.04-arm, linux, arm64)
+2026-10-19T06:36:31.6087006Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-19T06:36:31.6088956Z with:
+2026-10-19T06:36:31.6089729Z   ref: 72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2
+2026-10-19T06:36:31.6090616Z   fetch-depth: 0
+2026-10-19T06:36:31.6091289Z   persist-credentials: false
+2026-10-19T06:36:31.6092050Z   repository: AutoByteus/autobyteus-nfs
+2026-10-19T06:36:31.6096082Z   token: ***
+2026-10-19T06:36:31.6096692Z   ssh-strict: true
+2026-10-19T06:36:31.6097389Z   ssh-user: git
+2026-10-19T06:36:31.6098277Z   clean: true
+2026-10-19T06:36:31.6099049Z   sparse-checkout-cone-mode: true
+2026-10-19T06:36:31.6099832Z   fetch-tags: false
+2026-10-19T06:36:31.6100521Z   show-progress: true
+2026-10-19T06:36:31.6101217Z   lfs: false
+2026-10-19T06:36:31.6101885Z   submodules: false
+2026-10-19T06:36:31.6102574Z   set-safe-directory: true
+2026-10-19T06:36:31.6103302Z   allow-unsafe-pr-checkout: false
+2026-10-19T06:36:31.6104573Z ##[endgroup]
+2026-10-19T06:36:31.7000400Z Syncing repository: AutoByteus/autobyteus-nfs
+2026-10-19T06:36:31.7003337Z ##[group]Getting Git version info
+2026-10-19T06:36:31.7004610Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-19T06:36:31.7006194Z [command]/usr/bin/git version
+2026-10-19T06:36:31.7048066Z git version 2.55.0
+2026-10-19T06:36:31.7069562Z ##[endgroup]
+2026-10-19T06:36:31.7083767Z Temporarily overriding HOME='/home/runner/work/_temp/17468ed5-5a48-4b1c-b644-ca40ece9c132' before making global git config changes
+2026-10-19T06:36:31.7085493Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T06:36:31.7089866Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T06:36:31.7120656Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-19T06:36:31.7125521Z ##[group]Initializing the repository
+2026-10-19T06:36:31.7130134Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T06:36:31.7195050Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T06:36:31.7205384Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T06:36:31.7215894Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T06:36:31.7217583Z hint: call:
+2026-10-19T06:36:31.7218656Z hint:
+2026-10-19T06:36:31.7219550Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T06:36:31.7220341Z hint:
+2026-10-19T06:36:31.7221253Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T06:36:31.7222422Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T06:36:31.7223493Z hint:
+2026-10-19T06:36:31.7224129Z hint: 	git branch -m <name>
+2026-10-19T06:36:31.7224886Z hint:
+2026-10-19T06:36:31.7225720Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T06:36:31.7227063Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+2026-10-19T06:36:31.7229765Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+2026-10-19T06:36:31.7241355Z ##[endgroup]
+2026-10-19T06:36:31.7242474Z ##[group]Disabling automatic garbage collection
+2026-10-19T06:36:31.7245749Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T06:36:31.7271488Z ##[endgroup]
+2026-10-19T06:36:31.7272651Z ##[group]Setting up auth
+2026-10-19T06:36:31.7276522Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T06:36:31.7313145Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T06:36:31.7566853Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T06:36:31.7595635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T06:36:31.7778167Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T06:36:31.7807418Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T06:36:31.7993813Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T06:36:31.8030602Z ##[endgroup]
+2026-10-19T06:36:31.8032561Z ##[group]Fetching the repository
+2026-10-19T06:36:31.8039534Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-19T06:36:32.8368095Z From https://github.com/AutoByteus/autobyteus-nfs
+2026-10-19T06:36:32.8370848Z  * [new branch]      codex/extract-autobyteus-nfs -> origin/codex/extract-autobyteus-nfs
+2026-10-19T06:36:32.8373017Z  * [new branch]      codex/nfs-first-release -> origin/codex/nfs-first-release
+2026-10-19T06:36:32.8374617Z  * [new branch]      main                    -> origin/main
+2026-10-19T06:36:32.8379439Z [command]/usr/bin/git rev-parse --verify --quiet 72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2^{object}
+2026-10-19T06:36:32.8401811Z 72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2
+2026-10-19T06:36:32.8405390Z ##[endgroup]
+2026-10-19T06:36:32.8406837Z ##[group]Determining the checkout info
+2026-10-19T06:36:32.8408724Z ##[endgroup]
+2026-10-19T06:36:32.8410904Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T06:36:32.8451407Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T06:36:32.8479846Z ##[group]Checking out the ref
+2026-10-19T06:36:32.8482777Z [command]/usr/bin/git checkout --progress --force 72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2
+2026-10-19T06:36:32.9528989Z Note: switching to '72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2'.
+2026-10-19T06:36:32.9530229Z 
+2026-10-19T06:36:32.9531017Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-19T06:36:32.9532921Z changes and commit them, and you can discard any commits you make in this
+2026-10-19T06:36:32.9534802Z state without impacting any branches by switching back to a branch.
+2026-10-19T06:36:32.9535945Z 
+2026-10-19T06:36:32.9536701Z If you want to create a new branch to retain commits you create, you may
+2026-10-19T06:36:32.9538621Z do so (now or later) by using -c with the switch command. Example:
+2026-10-19T06:36:32.9539623Z 
+2026-10-19T06:36:32.9540192Z   git switch -c <new-branch-name>
+2026-10-19T06:36:32.9540882Z 
+2026-10-19T06:36:32.9541336Z Or undo this operation with:
+2026-10-19T06:36:32.9541979Z 
+2026-10-19T06:36:32.9542382Z   git switch -
+2026-10-19T06:36:32.9542882Z 
+2026-10-19T06:36:32.9543702Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-19T06:36:32.9544859Z 
+2026-10-19T06:36:32.9545846Z HEAD is now at 72b8a4a Merge reviewed NFS codesign diagnostics and current release readiness
+2026-10-19T06:36:32.9549834Z ##[endgroup]
+2026-10-19T06:36:32.9584010Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T06:36:32.9607763Z 72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2
+2026-10-19T06:36:32.9616194Z ##[group]Removing auth
+2026-10-19T06:36:32.9619737Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T06:36:32.9648730Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T06:36:32.9830552Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T06:36:32.9850970Z http.https://github.com/.extraheader
+2026-10-19T06:36:32.9858574Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T06:36:32.9892001Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T06:36:33.0073371Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T06:36:33.0110181Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T06:36:33.0299374Z ##[endgroup]
+2026-10-19T06:36:33.0628599Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-19T06:36:33.0629993Z with:
+2026-10-19T06:36:33.0630640Z   name: nfs-preflight
+2026-10-19T06:36:33.0631356Z   path: work
+2026-10-19T06:36:33.0632026Z   merge-multiple: false
+2026-10-19T06:36:33.0632833Z   repository: AutoByteus/autobyteus-nfs
+2026-10-19T06:36:33.0633705Z   run-id: 39210821088
+2026-10-19T06:36:33.0634407Z ##[endgroup]
+2026-10-19T06:36:33.1906535Z Downloading single artifact
+2026-10-19T06:36:33.2045533Z (node:2337) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T06:36:33.3276702Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T06:36:33.3288371Z Preparing to download the following artifacts:
+2026-10-19T06:36:33.3290356Z - nfs-preflight (ID: 12167841285, Size: 127165917, Expected Digest: sha256:c28397c9e3c91cba7434fe48b9329cc13b7775afd9d83a49cd9900c574a7c857)
+2026-10-19T06:36:33.5034762Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/539be761-c4c1-4b95-8789-ae01bb3e97e1/workflow-job-run-ce84e638-7388-549b-941c-148d4de2b83f/artifacts/1356632f2bda9b3b2acf159f4f7d4c37f28eccc621e9795cdc63c3e7a42a4d4b.zip
+2026-10-19T06:36:33.5039117Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/work
+2026-10-19T06:36:33.6356686Z (node:2337) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T06:36:35.3131382Z SHA256 digest of downloaded artifact is c28397c9e3c91cba7434fe48b9329cc13b7775afd9d83a49cd9900c574a7c857
+2026-10-19T06:36:35.3132184Z Artifact download completed successfully.
+2026-10-19T06:36:35.3132493Z Total of 1 artifact(s) downloaded
+2026-10-19T06:36:35.3136407Z Download artifact has finished successfully
+2026-10-19T06:36:35.3289002Z ##[group]Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+2026-10-19T06:36:35.3289426Z with:
+2026-10-19T06:36:35.3289646Z   go-version: 1.27.2
+2026-10-19T06:36:35.3289866Z   cache: false
+2026-10-19T06:36:35.3290076Z   check-latest: false
+2026-10-19T06:36:35.3292545Z   token: ***
+2026-10-19T06:36:35.3292757Z ##[endgroup]
+2026-10-19T06:36:35.4397047Z Setup go version spec 1.27.2
+2026-10-19T06:36:35.4404941Z Attempting to download 1.27.2...
+2026-10-19T06:36:35.4511844Z (node:2349) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T06:36:35.4512579Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T06:36:36.0305359Z matching 1.27.2...
+2026-10-19T06:36:36.0325505Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-linux-arm64.tar.gz
+2026-10-19T06:36:36.5508710Z Extracting Go...
+2026-10-19T06:36:36.5608809Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/bc24095f-ab93-4562-9716-d8413f3058f5 -f /home/runner/work/_temp/5a362ec2-d90b-45bd-bc67-dc36f23005dc
+2026-10-19T06:36:37.7242322Z Successfully extracted go to /home/runner/work/_temp/bc24095f-ab93-4562-9716-d8413f3058f5
+2026-10-19T06:36:37.7243087Z Adding to the cache ...
+2026-10-19T06:36:41.8496740Z Successfully cached go to /opt/hostedtoolcache/go/1.27.2/arm64
+2026-10-19T06:36:41.8500728Z Added go to the path
+2026-10-19T06:36:41.8502856Z Successfully set up Go version 1.27.2
+2026-10-19T06:36:41.8695813Z go version go1.27.2 linux/arm64
+2026-10-19T06:36:41.8696049Z 
+2026-10-19T06:36:41.8696390Z ##[group]go env
+2026-10-19T06:36:42.6681862Z AR='ar'
+2026-10-19T06:36:42.6682170Z CC='gcc'
+2026-10-19T06:36:42.6682528Z CGO_CFLAGS='-O2 -g'
+2026-10-19T06:36:42.6682773Z CGO_CPPFLAGS=''
+2026-10-19T06:36:42.6683028Z CGO_CXXFLAGS='-O2 -g'
+2026-10-19T06:36:42.6683256Z CGO_ENABLED='1'
+2026-10-19T06:36:42.6683463Z CGO_FFLAGS='-O2 -g'
+2026-10-19T06:36:42.6683721Z CGO_LDFLAGS='-O2 -g'
+2026-10-19T06:36:42.6683935Z CXX='g++'
+2026-10-19T06:36:42.6684141Z GCCGO='gccgo'
+2026-10-19T06:36:42.6684370Z GO111MODULE=''
+2026-10-19T06:36:42.6684584Z GOARCH='arm64'
+2026-10-19T06:36:42.6684787Z GOARM64='v8.0'
+2026-10-19T06:36:42.6684989Z GOAUTH='netrc'
+2026-10-19T06:36:42.6685206Z GOBIN='/home/runner/go/bin'
+2026-10-19T06:36:42.6685472Z GOCACHE='/home/runner/.cache/go-build'
+2026-10-19T06:36:42.6685744Z GOCACHEPROG=''
+2026-10-19T06:36:42.6685947Z GODEBUG=''
+2026-10-19T06:36:42.6686164Z GOENV='/home/runner/.config/go/env'
+2026-10-19T06:36:42.6686420Z GOEXE=''
+2026-10-19T06:36:42.6686612Z GOEXPERIMENT=''
+2026-10-19T06:36:42.6686830Z GOFIPS140='off'
+2026-10-19T06:36:42.6687030Z GOFLAGS=''
+2026-10-19T06:36:42.6687657Z GOGCCFLAGS='-fPIC -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3074834929=/tmp/go-build -gno-record-gcc-switches'
+2026-10-19T06:36:42.6688518Z GOHOSTARCH='arm64'
+2026-10-19T06:36:42.6688746Z GOHOSTOS='linux'
+2026-10-19T06:36:42.6688965Z GOINSECURE=''
+2026-10-19T06:36:42.6689290Z GOMOD='/home/runner/work/autobyteus-nfs/autobyteus-nfs/go.mod'
+2026-10-19T06:36:42.6689655Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-10-19T06:36:42.6690274Z GONOPROXY=''
+2026-10-19T06:36:42.6690476Z GONOSUMDB=''
+2026-10-19T06:36:42.6690673Z GOOS='linux'
+2026-10-19T06:36:42.6690872Z GOPACKAGESDRIVER=''
+2026-10-19T06:36:42.6691101Z GOPATH='/home/runner/go'
+2026-10-19T06:36:42.6691330Z GOPRIVATE=''
+2026-10-19T06:36:42.6691598Z GOPROXY='https://proxy.golang.org,direct'
+2026-10-19T06:36:42.6691929Z GOROOT='/opt/hostedtoolcache/go/1.27.2/arm64'
+2026-10-19T06:36:42.6692230Z GOSUMDB='sum.golang.org'
+2026-10-19T06:36:42.6692465Z GOTELEMETRY='local'
+2026-10-19T06:36:42.6692735Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-10-19T06:36:42.6693041Z GOTMPDIR=''
+2026-10-19T06:36:42.6693243Z GOTOOLCHAIN='auto'
+2026-10-19T06:36:42.6693573Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.2/arm64/pkg/tool/linux_arm64'
+2026-10-19T06:36:42.6693940Z GOVCS=''
+2026-10-19T06:36:42.6694370Z GOVERSION='go1.27.2'
+2026-10-19T06:36:42.6694668Z GOWORK=''
+2026-10-19T06:36:42.6694880Z PKG_CONFIG='pkg-config'
+2026-10-19T06:36:42.6695036Z 
+2026-10-19T06:36:42.6695493Z ##[endgroup]
+2026-10-19T06:36:42.6891071Z ##[group]Run set -euo pipefail
+2026-10-19T06:36:42.6891544Z [36;1mset -euo pipefail[0m
+2026-10-19T06:36:42.6892390Z [36;1mimage=$(python3 packaging/release.py --operation oci --directory work/candidate/engine.oci.tar | python3 -c 'import json,sys; print("ghcr.io/autobyteus/autobyteus-nfs@"+json.load(sys.stdin)["index"])')[0m
+2026-10-19T06:36:42.6893320Z [36;1m# Keep the array nonempty for Mac system Bash 3.2 under nounset.[0m
+2026-10-19T06:36:42.6894261Z [36;1margs=(--tag "$TAG" --engine-image "$image" --engine-manifest work/candidate/engine/engine-manifest.json --engine-artifacts work/candidate/engine --target "$TARGET" --output cmd/autobyteus-nfs/release.json)[0m
+2026-10-19T06:36:42.6895226Z [36;1mif [[ "$MODE" == fresh ]]; then args+=(--release --candidate work/candidate); fi[0m
+2026-10-19T06:36:42.6895667Z [36;1mpython3 packaging/release.py "${args[@]}"[0m
+2026-10-19T06:36:42.6895979Z [36;1mgo test -race ./...[0m
+2026-10-19T06:36:42.6896288Z [36;1mgo vet ./...[0m
+2026-10-19T06:36:42.6896625Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+2026-10-19T06:36:42.6897014Z [36;1mmkdir -p out native[0m
+2026-10-19T06:36:42.6897394Z [36;1mCGO_ENABLED=0 go build -trimpath -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+2026-10-19T06:36:42.6898225Z [36;1mpython3 -c 'import os; assert os.path.getsize("out/autobyteus-nfs") <= 100*1024*1024'[0m
+2026-10-19T06:36:42.6898705Z [36;1mtest "$(out/autobyteus-nfs version)" = "$TAG"[0m
+2026-10-19T06:36:42.6899124Z [36;1mcp cmd/autobyteus-nfs/release.json LICENSE THIRD_PARTY_NOTICES out/[0m
+2026-10-19T06:36:42.6899586Z [36;1mcat "$(go env GOROOT)/LICENSE" >> out/THIRD_PARTY_NOTICES[0m
+2026-10-19T06:36:42.6900183Z [36;1mif [[ "$TARGET" == linux-* ]]; then cat "work/candidate/engine/${TARGET#linux-}/COPYRIGHT" >> out/THIRD_PARTY_NOTICES; fi[0m
+2026-10-19T06:36:42.6986416Z shell: /usr/bin/bash -e {0}
+2026-10-19T06:36:42.6986726Z env:
+2026-10-19T06:36:42.6986939Z   TAG: v0.1.0
+2026-10-19T06:36:42.6987149Z   MODE: fresh
+2026-10-19T06:36:42.6987344Z   TARGET: linux-arm64
+2026-10-19T06:36:42.6987562Z ##[endgroup]
+2026-10-19T06:36:58.0222662Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+2026-10-19T06:37:00.0954765Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	2.069s
+2026-10-19T06:37:00.0955506Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.595s
+2026-10-19T06:37:00.0956556Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.544s
+2026-10-19T06:37:00.0957055Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.018s
+2026-10-19T06:37:02.7174099Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.198s
+2026-10-19T06:37:02.7174618Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.012s
+2026-10-19T06:37:02.7175066Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.112s
+2026-10-19T06:37:12.3531864Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+2026-10-19T06:37:12.3533399Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+2026-10-19T06:37:12.3747318Z test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets) ... ok
+2026-10-19T06:37:12.5511938Z test_measured_engine_lock_clears_readiness_and_preserves_pins (test_nfs_engine_packaging.EnginePackagingTest.test_measured_engine_lock_clears_readiness_and_preserves_pins) ... ok
+2026-10-19T06:37:12.5556953Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+2026-10-19T06:37:12.5558508Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+2026-10-19T06:37:12.8705198Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+2026-10-19T06:37:12.8706495Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+2026-10-19T06:37:12.9325945Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+2026-10-19T06:37:12.9332020Z test_missing_readiness_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_missing_readiness_cannot_publish) ... ok
+2026-10-19T06:37:12.9333575Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+2026-10-19T06:37:12.9804579Z test_removed_qualified_flag_is_not_an_alias (test_nfs_packaging.NfsPackagingTest.test_removed_qualified_flag_is_not_an_alias) ... ok
+2026-10-19T06:37:12.9817362Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+2026-10-19T06:37:13.1305765Z test_annotated_tag_exact_sha_and_retained_identity (test_nfs_release_publication.PublicationTest.test_annotated_tag_exact_sha_and_retained_identity) ... ok
+2026-10-19T06:37:13.2759833Z test_draft_identity_and_nonclobber_creation (test_nfs_release_publication.PublicationTest.test_draft_identity_and_nonclobber_creation) ... ok
+2026-10-19T06:37:13.4510579Z test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest.test_exact_oci_copy_and_anonymous_all_children) ... ok
+2026-10-19T06:37:13.5936963Z test_fresh_main_no_stale_write_permission (test_nfs_release_publication.PublicationTest.test_fresh_main_no_stale_write_permission) ... ok
+2026-10-19T06:37:13.7425231Z test_native_asset_conflicts_never_upload_or_clobber (test_nfs_release_publication.PublicationTest.test_native_asset_conflicts_never_upload_or_clobber) ... ok
+2026-10-19T06:37:14.1247443Z test_publisher_stage_order_failed_promotion_and_same_payload_retry (test_nfs_release_publication.PublicationTest.test_publisher_stage_order_failed_promotion_and_same_payload_retry) ... ok
+2026-10-19T06:37:14.3513776Z test_resume_downloads_original_payload_before_build_and_refuses_lost_input (test_nfs_release_publication.PublicationTest.test_resume_downloads_original_payload_before_build_and_refuses_lost_input) ... ok
+2026-10-19T06:37:14.3997411Z test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest.test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry) ... ok
+2026-10-19T06:37:14.4596642Z test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest.test_actions_zip_paths_and_duplicate_files) ... /usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'a'
+2026-10-19T06:37:14.4598257Z   return self._open_to_write(zinfo, force_zip64=force_zip64)
+2026-10-19T06:37:14.4683936Z ok
+2026-10-19T06:37:14.5468253Z test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest.test_candidate_mutations_refused) ... ok
+2026-10-19T06:37:14.7652366Z test_complete_candidate_readiness_payload (test_nfs_release_records.ReleaseRecordsTest.test_complete_candidate_readiness_payload) ... ok
+2026-10-19T06:37:14.9592850Z test_executed_workflow_and_release_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest.test_executed_workflow_and_release_metadata_cannot_drift) ... ok
+2026-10-19T06:37:15.0959811Z test_new_executables_invalidate_production_hash_not_readiness (test_nfs_release_records.ReleaseRecordsTest.test_new_executables_invalidate_production_hash_not_readiness) ... ok
+2026-10-19T06:37:15.1502894Z test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest.test_oci_graph_not_just_declared_digest) ... ok
+2026-10-19T06:37:15.3277586Z test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest.test_payload_refuses_missing_checksums_signature_and_member) ... ok
+2026-10-19T06:37:15.6360652Z test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest.test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away) ... ok
+2026-10-19T06:37:16.0697099Z test_readiness_missing_failed_stale_false_claims_and_authority (test_nfs_release_records.ReleaseRecordsTest.test_readiness_missing_failed_stale_false_claims_and_authority) ... ok
+2026-10-19T06:37:16.1505312Z test_readiness_references_are_hashed_regular_stable_and_nonempty (test_nfs_release_records.ReleaseRecordsTest.test_readiness_references_are_hashed_regular_stable_and_nonempty) ... ok
+2026-10-19T06:37:16.1980178Z test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest.test_strict_version_paths_json_and_sizes) ... ok
+2026-10-19T06:37:16.6651090Z test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest.test_accepted_and_sanitized_receipt) ... ok
+2026-10-19T06:37:16.7021381Z test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest.test_all_six_missing_placeholder_values_fail_before_keychain) ... ok
+2026-10-19T06:37:18.2301842Z test_cleanup_failure_cannot_succeed_or_hide_primary_failure (test_nfs_release_signing.SigningTest.test_cleanup_failure_cannot_succeed_or_hide_primary_failure) ... ok
+2026-10-19T06:37:18.8979313Z test_codesign_capture_bound_and_decode_failure_preserve_exit (test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit) ... ok
+2026-10-19T06:37:22.9152449Z test_codesign_diagnostics_are_allowlisted_not_private_output (test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output) ... ok
+2026-10-19T06:37:23.2523677Z test_codesign_parser_failure_does_not_hide_signing_exit (test_nfs_release_signing.SigningTest.test_codesign_parser_failure_does_not_hide_signing_exit) ... ok
+2026-10-19T06:37:23.7219086Z test_codesign_success_does_not_turn_warning_into_failure (test_nfs_release_signing.SigningTest.test_codesign_success_does_not_turn_warning_into_failure) ... ok
+2026-10-19T06:37:26.7230842Z test_command_failures_report_exact_stage_and_exit (test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit) ... ok
+2026-10-19T06:37:26.9513341Z test_failure_receipt_never_clobbers_existing_evidence (test_nfs_release_signing.SigningTest.test_failure_receipt_never_clobbers_existing_evidence) ... ok
+2026-10-19T06:37:27.1810800Z test_import_failure_receipt_and_secret_safety (test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety) ... ok
+2026-10-19T06:37:29.2511761Z test_rejected_or_pending_notary_retains_known_receipt_but_fails (test_nfs_release_signing.SigningTest.test_rejected_or_pending_notary_retains_known_receipt_but_fails) ... ok
+2026-10-19T06:37:29.5630561Z test_signal_reports_current_stage_and_cleans_up (test_nfs_release_signing.SigningTest.test_signal_reports_current_stage_and_cleans_up) ... ok
+2026-10-19T06:37:31.6068331Z test_validation_failures_are_not_credential_dumps (test_nfs_release_signing.SigningTest.test_validation_failures_are_not_credential_dumps) ... ok
+2026-10-19T06:37:32.0215798Z test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest.test_candidate_and_fresh_metadata_argv) ... ok
+2026-10-19T06:37:32.1282969Z test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest.test_metadata_failure_stops_step) ... ok
+2026-10-19T06:37:32.1887072Z test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest.test_nounset_and_oci_pipefail_stop_before_metadata) ... ok
+2026-10-19T06:37:32.1904620Z test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_all_modes) ... ok
+2026-10-19T06:37:32.1977966Z test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failure_cancellation_and_unexpected_skip_never_publish) ... ok
+2026-10-19T06:37:32.1999390Z test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_legitimate_skips_do_not_accept_failures) ... ok
+2026-10-19T06:37:32.2008479Z test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_and_permissions) ... ok
+2026-10-19T06:37:32.2025376Z test_signing_upload_retains_only_sanitized_receipts_on_failure (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_signing_upload_retains_only_sanitized_receipts_on_failure) ... ok
+2026-10-19T06:37:32.2290999Z test_declared_owned_boundary_and_default_readiness (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_readiness) ... ok
+2026-10-19T06:37:32.2749576Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+2026-10-19T06:37:32.4381225Z test_owned_input_changes_invalidate_readiness (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_readiness) ... ok
+2026-10-19T06:37:32.4381836Z 
+2026-10-19T06:37:32.4382015Z ----------------------------------------------------------------------
+2026-10-19T06:37:32.4382362Z Ran 56 tests in 20.093s
+2026-10-19T06:37:32.4382503Z 
+2026-10-19T06:37:32.4382594Z OK (skipped=1)
+2026-10-19T06:37:40.7411143Z ##[group]Run tar -czf "native/autobyteus-nfs-${TAG#v}-${TARGET}.tar.gz" -C out LICENSE THIRD_PARTY_NOTICES autobyteus-nfs release.json
+2026-10-19T06:37:40.7412064Z [36;1mtar -czf "native/autobyteus-nfs-${TAG#v}-${TARGET}.tar.gz" -C out LICENSE THIRD_PARTY_NOTICES autobyteus-nfs release.json[0m
+2026-10-19T06:37:40.7447078Z shell: /usr/bin/bash -e {0}
+2026-10-19T06:37:40.7447336Z env:
+2026-10-19T06:37:40.7447519Z   TAG: v0.1.0
+2026-10-19T06:37:40.7447951Z   TARGET: linux-arm64
+2026-10-19T06:37:40.7448185Z ##[endgroup]
+2026-10-19T06:37:41.1292130Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T06:37:41.1292568Z with:
+2026-10-19T06:37:41.1292778Z   name: nfs-native-linux-arm64
+2026-10-19T06:37:41.1293017Z   path: native/
+2026-10-19T06:37:41.1293213Z   retention-days: 90
+2026-10-19T06:37:41.1293437Z   if-no-files-found: error
+2026-10-19T06:37:41.1293672Z   compression-level: 6
+2026-10-19T06:37:41.1293892Z   overwrite: false
+2026-10-19T06:37:41.1294109Z   include-hidden-files: false
+2026-10-19T06:37:41.1294351Z ##[endgroup]
+2026-10-19T06:37:41.2650645Z (node:11564) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T06:37:41.2651531Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T06:37:41.2740160Z With the provided path, there will be 1 file uploaded
+2026-10-19T06:37:41.2757644Z Artifact name is valid!
+2026-10-19T06:37:41.2758409Z Root directory input is valid!
+2026-10-19T06:37:41.5061014Z Beginning upload of artifact content to blob storage
+2026-10-19T06:37:41.6745900Z (node:11564) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T06:37:42.0411365Z Uploaded bytes 6347548
+2026-10-19T06:37:42.0712073Z Finished uploading artifact content to blob storage!
+2026-10-19T06:37:42.0712941Z SHA256 digest of uploaded artifact zip is ef9a7a687c3cbdb635e092fa1300ef45f697a97a175c4c6e941fbb1a53fbc622
+2026-10-19T06:37:42.0714615Z Finalizing artifact upload
+2026-10-19T06:37:42.2959574Z Artifact nfs-native-linux-arm64.zip successfully finalized. Artifact ID 12167074622
+2026-10-19T06:37:42.2960343Z Artifact nfs-native-linux-arm64 has been successfully uploaded! Final size is 6347548 bytes. Artifact ID is 12167074622
+2026-10-19T06:37:42.2967985Z Artifact download URL: https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39210821088/artifacts/12167074622
+2026-10-19T06:37:42.3118342Z Post job cleanup.
+2026-10-19T06:37:42.4127603Z (node:11577) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T06:37:42.4128514Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T06:37:42.4256422Z Post job cleanup.
+2026-10-19T06:37:42.4945604Z [command]/usr/bin/git version
+2026-10-19T06:37:42.4980337Z git version 2.55.0
+2026-10-19T06:37:42.5010954Z Temporarily overriding HOME='/home/runner/work/_temp/fa16bb36-ef1e-4e72-b631-7a3eb6d5a543' before making global git config changes
+2026-10-19T06:37:42.5012039Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T06:37:42.5018092Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T06:37:42.5053884Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T06:37:42.5118858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T06:37:42.5310496Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T06:37:42.5348565Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T06:37:42.5589911Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T06:37:42.5610437Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T06:37:42.5926770Z Cleaning up orphan processes
+2026-10-19T06:37:42.6243781Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

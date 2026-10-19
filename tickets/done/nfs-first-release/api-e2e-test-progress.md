@@ -78,3 +78,33 @@ Introduced during API003 after the skill update. Earlier starts/events remain in
 | 2026-10-19T06:27:23.714102+00:00 | R05 | Completed | Pass | Exact v0.1.0 stdout; candidate admission refused, no HOME writes; scratch removed. R05-05-smoke.json. |
 | 2026-10-19T06:27:23.758606+00:00 | C01 | Started | Not Tested | Final candidate verification/owned cleanup/source and Delivery preservation, no product suite repeat. |
 | 2026-10-19T06:27:24.603467+00:00 | C01 | Completed | Pass | Candidate reverified;127 source inputs and Delivery10 files preserved; oldAPI002/003/004 untouched; owned native scratch absent. |
+
+## API-REV-006 — IR007/CRR011 keychain lookup repair
+
+| Time | Case | Event | Result | Note |
+|---|---|---|---|---|
+| 2026-10-19T07:00:25.303572+00:00 | R01 | Started | Not Tested | Read Checks Run/prior failures first; exact product applicability and native mechanism limits. |
+| 2026-10-19T07:02:31.425874+00:00 | R01 | Completed | Pass | IMP07 exact127input applicability confirmed; R01-06-reuse.json; reuse not product/keychain rerun. |
+| 2026-10-19T07:02:31.425996+00:00 | R02 | Started | Not Tested | Reuse IMP07 static/hash/no-candidate controls; execute actual old API005 admission refusal. |
+| 2026-10-19T07:02:31.689610+00:00 | R02 | Completed | Pass | Actual API005 source/engine mismatch refusal; no stale evidence promotion; static/hash controls reused. |
+| 2026-10-19T07:02:50.228170+00:00 | R03 | Started | Not Tested | DR012 exact7bd486e staged; NEW publish=false all4native candidate, not actual signing/root-cause closure. |
+| 2026-10-19T07:02:59.567102+00:00 | R03 | Checkpoint | Not Tested | Dispatched exact source7bd486e2e27743441a870f7cd8db1f6c4ee0b493, run39213489075/attempt1; acceptance is not Pass. |
+| 2026-10-19T07:03:03.873731+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:03:35.327135+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 queued/None; R03-06-observations.jsonl |
+| 2026-10-19T07:04:06.630915+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:05:41.005243+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:06:12.442834+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:08:18.434065+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 queued/None; R03-06-observations.jsonl |
+| 2026-10-19T07:08:49.892855+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:09:52.804010+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:10:24.330704+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:10:55.733728+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:12:30.421569+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 in_progress/None; R03-06-observations.jsonl |
+| 2026-10-19T07:13:02.064756+00:00 | R03 | Checkpoint | Not Tested | Run39213489075/1 completed/success; R03-06-observations.jsonl |
+| 2026-10-19T07:13:19.265828+00:00 | R03 | Completed | Pass | Run39213489075/attempt1 all4native/engine2/fullOCI/aggregation success; R03-06-summary.json. Signing not entered. |
+| 2026-10-19T07:13:25.879855+00:00 | R04 | Started | Not Tested | Fetch and verify unique actual current candidate via existing facade, not old-source metadata. |
+| 2026-10-19T07:14:11.281190+00:00 | R04 | Completed | Pass | Actual complete candidate/reference verified; corrupt copied envelope refused before destination; retained for Delivery; R04-06-verification.json. |
+| 2026-10-19T07:14:15.886473+00:00 | R05 | Started | Not Tested | New downloaded native Darwinarm64 version/candidate admission; owned HOME, no setup. |
+| 2026-10-19T07:14:16.490900+00:00 | R05 | Completed | Pass | Exact v0.1.0 stdout; candidate admission refused, no HOME writes; scratch removed. R05-06-smoke.json. |
+| 2026-10-19T07:14:16.532672+00:00 | C01 | Started | Not Tested | Final candidate/ownedcleanup/input/Delivery/history/oldcandidate preservation. |
+| 2026-10-19T07:14:17.361475+00:00 | C01 | Completed | Pass | Candidate reverified;127inputs/Delivery10files preserved; oldAPI002–005 intact; owned native scratch absent. |

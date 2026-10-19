@@ -1,0 +1,77 @@
+{
+  "case": "R01/R02/R03/R04/R05/C01",
+  "step": "Current actual prepublication evidence plus attributed reuse; NOT release readiness",
+  "date": "2026-10-19T07:14:17.361758+00:00",
+  "environment": "hosted native4/engine2/OCI, local Actions facade/native smoke; reused shell doubles/native synthetic mechanism",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "workflowCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "productCommit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "runId": 39213489075,
+  "runAttempt": 1,
+  "sourceHash": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086",
+  "engineManifestSha256": "95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:17315b54c7276efafc893e75021549e1c2675d50d32d4ba9b0763788ab07b557",
+      "linux-arm64": "sha256:93bb50f867a255a3b01652602ee95191263c9195ad32fd474dadbf738ddea42f"
+    },
+    "index": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec"
+  },
+  "candidate": {
+    "envelope": {
+      "artifactId": 12168544425,
+      "digest": "sha256:f6294686e10c8c4c3dac98122dd2adbccfab1d78f1846dd56473f8ec68705ef8",
+      "expiresAt": "2027-01-17T07:02:55Z",
+      "runAttempt": 1,
+      "runId": 39213489075,
+      "workflowCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493"
+    },
+    "recordSha256": "67eb4dd2f120a0d33a3d99eeac3cb055162ad7d3a9a3d66821e8f7686afff58b"
+  },
+  "candidateDirectory": "/Users/normy/nfs-first-candidate-api006-a8aune30/candidate",
+  "native": {
+    "status": "passed",
+    "targets": [
+      "binaries (ubuntu-24.04, linux, amd64)",
+      "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "binaries (macos-15-intel, darwin, amd64)",
+      "binaries (macos-15, darwin, arm64)"
+    ],
+    "evidence": "R03-06-summary.json + full job logs/excerpts",
+    "scope": "Each native:race7packages/vet/Python58(57executed1expectedchildskip)/build/version/archive; not signing/physical"
+  },
+  "releaseControls": {
+    "status": "passed",
+    "reused": [
+      "IMP-07-04",
+      "IMP-07-05",
+      "IMP-07-12",
+      "IMP-07-13",
+      "IMP-07-06",
+      "IMP-07-07",
+      "IMP-07-08",
+      "IMP-07-09",
+      "IMP-07-10",
+      "IMP-07-11",
+      "IMP-07-14"
+    ],
+    "supporting": "IMP07-01\u201303 native synthetic A/B/A and exact restoration",
+    "ownCases": [
+      "Actual stale candidate refusal",
+      "Actual wrapper refusal/envelope/fetch/verify",
+      "New native version/candidate admission refusal",
+      "Cleanup/ownership verification"
+    ],
+    "limits": "Native synthetic mechanism not actual DeveloperID/hosted cause; Apple/publisher commands doubled in controls"
+  },
+  "result": "Pass",
+  "confidencePercent": 95.0,
+  "scope": "Affected prepublication validation only",
+  "notReadinessOrReleaseAuthorization": true,
+  "signingFailure": "DR01139210821088/1 still failed/unclassified; original cause UNKNOWN, no build-only closure",
+  "downstream": "Delivery current readiness/freshmain/real bothMac signing+Accepted/finalpayload/immutablepublication/publicbytes+OCI/signatures/install/custody",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  }
+}
