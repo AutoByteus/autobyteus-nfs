@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-19T07:31:25.463610+00:00",
+  "classification": "Blocked / code-packaging Local Fix",
+  "run": 39215470944,
+  "source": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "actualSigning": "Both Mac Developer ID/Accepted and downloaded retained-payload signatures proven",
+  "releaseOutcome": "Partial: immutable annotated tag and empty draft exist; no public assets/image/release",
+  "failingStage": "tag-confirmed; draft-reconciliation-attempted",
+  "error": "Release refused: 'NoneType' object is not subscriptable",
+  "sourceLocation": "packaging/release_support/publication.py release()/reconcile_release(); tag-only lookup returns None for draft then indexes it",
+  "readOnlyReproduction": {
+    "publicationReleaseByTag": null,
+    "listedExactDraftId": 417014769,
+    "directIdEqualsList": true,
+    "draftTag": "v0.1.0",
+    "draftBodyExactlyMatchesOwnedPayload": true,
+    "assetCount": 0,
+    "tagObject": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+    "tagTarget": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+  },
+  "primaryDocumentation": {
+    "url": "https://docs.github.com/en/rest/releases/releases#get-a-release-by-tag-name",
+    "tagEndpointScope": "published releases",
+    "draftInventory": "https://docs.github.com/en/rest/releases/releases#list-releases"
+  },
+  "payload": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "retainedPayload": "/Users/normy/nfs-first-final-dr013-gmvotux9/payload",
+  "constraints": [
+    "Preserve tag/draft/original payload/candidate; never move/delete tag, clobber assets, rebuild/re-sign under v0.1.0",
+    "Do not rerun unchanged broken lookup or repeat already-passed signing/candidate campaigns",
+    "Fix draft discovery/reconciliation and test actual draft-by-tag 404 with list/id success; maintain conflict/ambiguity/binding/integrity checks",
+    "Recovery must consume exact annotation-bound signed payload/source. A publisher-source change changes production hash: do not silently weaken readiness/hash/source equality to force it",
+    "If safe same-payload recovery requires design authority, route that narrow question upstream; do not invent new version authorization",
+    "No credentials/Apple/P12 issue demonstrated by this new publisher failure",
+    "Field/user remain Deferred, not blockers; no host questionnaire"
+  ]
+}

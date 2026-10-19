@@ -1,0 +1,812 @@
+{
+  "run": 39215470944,
+  "attempt": 1,
+  "conclusion": "failure",
+  "source": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "jobs": [
+    {
+      "id": 117938185371,
+      "name": "prepare",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:21:38Z",
+          "completed_at": "2026-10-19T07:21:39Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:21:39Z",
+          "completed_at": "2026-10-19T07:21:40Z"
+        },
+        {
+          "name": "Release boundary checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T07:21:40Z",
+          "completed_at": "2026-10-19T07:21:57Z"
+        },
+        {
+          "name": "Run set -euo pipefail",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T07:21:57Z",
+          "completed_at": "2026-10-19T07:22:02Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:22:02Z",
+          "completed_at": "2026-10-19T07:22:06Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T07:22:06Z",
+          "completed_at": "2026-10-19T07:22:06Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T07:22:06Z",
+          "completed_at": "2026-10-19T07:22:06Z"
+        }
+      ],
+      "log": "publication-job-117938185371.log",
+      "sha256": "15efd7c53f0489288fd0745cf05693f32f5ed666beab1173a54a81f654373fd4",
+      "packageLines": [],
+      "testSummary": [
+        "2026-10-19T07:21:57.8147303Z Ran 58 tests in 16.892s",
+        "2026-10-19T07:21:57.8147495Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117938369130,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:22:16Z",
+          "completed_at": "2026-10-19T07:22:19Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:22:19Z",
+          "completed_at": "2026-10-19T07:22:22Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-19T07:22:22Z",
+          "completed_at": "2026-10-19T07:22:22Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-19T07:22:22Z",
+          "completed_at": "2026-10-19T07:22:22Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:22:22Z",
+          "completed_at": "2026-10-19T07:22:33Z"
+        },
+        {
+          "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T07:22:33Z",
+          "completed_at": "2026-10-19T07:22:56Z"
+        },
+        {
+          "name": "Native checks and exact engine metadata (not physical qualification)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T07:22:56Z",
+          "completed_at": "2026-10-19T07:24:41Z"
+        },
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T07:24:41Z",
+          "completed_at": "2026-10-19T07:25:03Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T07:25:03Z",
+          "completed_at": "2026-10-19T07:25:05Z"
+        },
+        {
+          "name": "Package four regular members",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T07:25:05Z",
+          "completed_at": "2026-10-19T07:25:05Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T07:25:05Z",
+          "completed_at": "2026-10-19T07:25:08Z"
+        },
+        {
+          "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T07:25:08Z",
+          "completed_at": "2026-10-19T07:25:08Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-19T07:25:08Z",
+          "completed_at": "2026-10-19T07:25:09Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-19T07:25:09Z",
+          "completed_at": "2026-10-19T07:25:09Z"
+        }
+      ],
+      "log": "publication-job-117938369130.log",
+      "sha256": "b211376a54e1ea80ede80a641c398804a48150acbc79ef4f1e91cdad7a5e6aad",
+      "packageLines": [
+        "2026-10-19T07:23:20.8356430Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.177s",
+        "2026-10-19T07:23:21.3051880Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.109s",
+        "2026-10-19T07:23:21.3955730Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.078s",
+        "2026-10-19T07:23:21.8866870Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.049s",
+        "2026-10-19T07:23:25.1010580Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.787s",
+        "2026-10-19T07:23:25.1011260Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.093s",
+        "2026-10-19T07:23:25.1011810Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.459s"
+      ],
+      "testSummary": [
+        "2026-10-19T07:24:25.8643070Z Ran 58 tests in 44.838s",
+        "2026-10-19T07:24:25.8644700Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117938369163,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:23:02Z",
+          "completed_at": "2026-10-19T07:23:07Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:23:07Z",
+          "completed_at": "2026-10-19T07:23:14Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-19T07:23:14Z",
+          "completed_at": "2026-10-19T07:23:14Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-19T07:23:14Z",
+          "completed_at": "2026-10-19T07:23:14Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:23:14Z",
+          "completed_at": "2026-10-19T07:23:30Z"
+        },
+        {
+          "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T07:23:30Z",
+          "completed_at": "2026-10-19T07:24:09Z"
+        },
+        {
+          "name": "Native checks and exact engine metadata (not physical qualification)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T07:24:09Z",
+          "completed_at": "2026-10-19T07:27:42Z"
+        },
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-19T07:27:42Z",
+          "completed_at": "2026-10-19T07:28:04Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-19T07:28:04Z",
+          "completed_at": "2026-10-19T07:28:05Z"
+        },
+        {
+          "name": "Package four regular members",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T07:28:05Z",
+          "completed_at": "2026-10-19T07:28:06Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T07:28:06Z",
+          "completed_at": "2026-10-19T07:28:09Z"
+        },
+        {
+          "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T07:28:09Z",
+          "completed_at": "2026-10-19T07:28:09Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-19T07:28:09Z",
+          "completed_at": "2026-10-19T07:28:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-19T07:28:10Z",
+          "completed_at": "2026-10-19T07:28:11Z"
+        }
+      ],
+      "log": "publication-job-117938369163.log",
+      "sha256": "a99f3802678e4b4e378ff70bfdb2b95e2f058e5225fbba0b536b2d5fd5246ce0",
+      "packageLines": [
+        "2026-10-19T07:25:00.6481710Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.553s",
+        "2026-10-19T07:25:02.0691060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.371s",
+        "2026-10-19T07:25:02.0741050Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.371s",
+        "2026-10-19T07:25:02.0789190Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.205s",
+        "2026-10-19T07:25:05.4643760Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.764s",
+        "2026-10-19T07:25:05.4689980Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.091s",
+        "2026-10-19T07:25:05.4722650Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.301s"
+      ],
+      "testSummary": [
+        "2026-10-19T07:27:15.2874060Z Ran 58 tests in 97.035s",
+        "2026-10-19T07:27:15.2880500Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117938369165,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:22:11Z",
+          "completed_at": "2026-10-19T07:22:13Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:22:13Z",
+          "completed_at": "2026-10-19T07:22:16Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-19T07:22:16Z",
+          "completed_at": "2026-10-19T07:22:16Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-19T07:22:16Z",
+          "completed_at": "2026-10-19T07:22:16Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:22:16Z",
+          "completed_at": "2026-10-19T07:22:19Z"
+        },
+        {
+          "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T07:22:19Z",
+          "completed_at": "2026-10-19T07:22:34Z"
+        },
+        {
+          "name": "Native checks and exact engine metadata (not physical qualification)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T07:22:34Z",
+          "completed_at": "2026-10-19T07:23:49Z"
+        },
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-19T07:23:49Z",
+          "completed_at": "2026-10-19T07:23:49Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-19T07:23:49Z",
+          "completed_at": "2026-10-19T07:23:49Z"
+        },
+        {
+          "name": "Package four regular members",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T07:23:49Z",
+          "completed_at": "2026-10-19T07:23:50Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T07:23:50Z",
+          "completed_at": "2026-10-19T07:23:52Z"
+        },
+        {
+          "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T07:23:52Z",
+          "completed_at": "2026-10-19T07:23:52Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-19T07:23:52Z",
+          "completed_at": "2026-10-19T07:23:52Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-19T07:23:52Z",
+          "completed_at": "2026-10-19T07:23:52Z"
+        }
+      ],
+      "log": "publication-job-117938369165.log",
+      "sha256": "ff322e329d0c8630d7615af2368a62e094ac8bda73dca8b7a1f149868fcf4251",
+      "packageLines": [
+        "2026-10-19T07:22:56.6010279Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.119s",
+        "2026-10-19T07:22:57.0953266Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.045s",
+        "2026-10-19T07:22:57.0954732Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.041s",
+        "2026-10-19T07:22:57.0955686Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.024s",
+        "2026-10-19T07:23:00.3742337Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.771s",
+        "2026-10-19T07:23:00.3743143Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.026s",
+        "2026-10-19T07:23:00.3743829Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.793s"
+      ],
+      "testSummary": [
+        "2026-10-19T07:23:38.7442471Z Ran 58 tests in 24.803s",
+        "2026-10-19T07:23:38.7443038Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117938369364,
+      "name": "engine-packages",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117938369382,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:22:14Z",
+          "completed_at": "2026-10-19T07:22:16Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:22:16Z",
+          "completed_at": "2026-10-19T07:22:18Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-19T07:22:18Z",
+          "completed_at": "2026-10-19T07:22:18Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-19T07:22:18Z",
+          "completed_at": "2026-10-19T07:22:18Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:22:18Z",
+          "completed_at": "2026-10-19T07:22:24Z"
+        },
+        {
+          "name": "Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T07:22:24Z",
+          "completed_at": "2026-10-19T07:22:32Z"
+        },
+        {
+          "name": "Native checks and exact engine metadata (not physical qualification)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T07:22:32Z",
+          "completed_at": "2026-10-19T07:23:36Z"
+        },
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-19T07:23:36Z",
+          "completed_at": "2026-10-19T07:23:36Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-19T07:23:36Z",
+          "completed_at": "2026-10-19T07:23:36Z"
+        },
+        {
+          "name": "Package four regular members",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T07:23:36Z",
+          "completed_at": "2026-10-19T07:23:36Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T07:23:36Z",
+          "completed_at": "2026-10-19T07:23:38Z"
+        },
+        {
+          "name": "Post Run actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-19T07:23:38Z",
+          "completed_at": "2026-10-19T07:23:38Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-19T07:23:38Z",
+          "completed_at": "2026-10-19T07:23:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-19T07:23:38Z",
+          "completed_at": "2026-10-19T07:23:38Z"
+        }
+      ],
+      "log": "publication-job-117938369382.log",
+      "sha256": "51e8a25f3286a3d640d971e5e3e8d5d5b598de5070df6fefadfc35422d0ba63c",
+      "packageLines": [
+        "2026-10-19T07:22:49.8798202Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.094s",
+        "2026-10-19T07:22:50.2312616Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.032s",
+        "2026-10-19T07:22:50.2313122Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.031s",
+        "2026-10-19T07:22:50.2313579Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+        "2026-10-19T07:22:53.3101646Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.280s",
+        "2026-10-19T07:23:03.3620851Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+        "2026-10-19T07:23:03.3621691Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.124s"
+      ],
+      "testSummary": [
+        "2026-10-19T07:23:27.2975726Z Ran 58 tests in 23.944s",
+        "2026-10-19T07:23:27.2975965Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117938370337,
+      "name": "engine-inputs",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117938370377,
+      "name": "engine",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117940491787,
+      "name": "payload",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:28:22Z",
+          "completed_at": "2026-10-19T07:28:24Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:28:24Z",
+          "completed_at": "2026-10-19T07:28:27Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T07:28:27Z",
+          "completed_at": "2026-10-19T07:28:32Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T07:28:32Z",
+          "completed_at": "2026-10-19T07:28:34Z"
+        },
+        {
+          "name": "Run python3 packaging/release.py --operation payload --directory work/payload --candidate work/candidate --native native --source-commit \"$SOURCE\" --run-id \"$GITHUB_RUN_ID\" --attempt \"$GITHUB_RUN_ATTEMPT\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:28:34Z",
+          "completed_at": "2026-10-19T07:28:36Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T07:28:36Z",
+          "completed_at": "2026-10-19T07:28:38Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-19T07:28:38Z",
+          "completed_at": "2026-10-19T07:28:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-19T07:28:38Z",
+          "completed_at": "2026-10-19T07:28:38Z"
+        }
+      ],
+      "log": "publication-job-117940491787.log",
+      "sha256": "2a7e66860925a2e12688171be37be47bd7c0815916c2a2832da8bacdcb2d2b6d",
+      "packageLines": [],
+      "testSummary": [],
+      "errors": []
+    },
+    {
+      "id": 117940493708,
+      "name": "candidate",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117940608133,
+      "name": "publish",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T07:28:43Z",
+          "completed_at": "2026-10-19T07:28:44Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T07:28:44Z",
+          "completed_at": "2026-10-19T07:28:46Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T07:28:46Z",
+          "completed_at": "2026-10-19T07:28:49Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T07:28:49Z",
+          "completed_at": "2026-10-19T07:28:51Z"
+        },
+        {
+          "name": "Install digest-preserving registry transport",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T07:28:51Z",
+          "completed_at": "2026-10-19T07:28:58Z"
+        },
+        {
+          "name": "Bind retained payload and reconcile publication",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-10-19T07:28:58Z",
+          "completed_at": "2026-10-19T07:29:10Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T07:29:10Z",
+          "completed_at": "2026-10-19T07:29:11Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T07:29:11Z",
+          "completed_at": "2026-10-19T07:29:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-19T07:29:11Z",
+          "completed_at": "2026-10-19T07:29:11Z"
+        }
+      ],
+      "log": "publication-job-117940608133.log",
+      "sha256": "fffe387b9194b6bd0d73cf253d6798f9db7b656101906d6362bcb4e243d099e9",
+      "packageLines": [],
+      "testSummary": [],
+      "errors": [
+        "2026-10-19T07:29:10.7521985Z Release refused: 'NoneType' object is not subscriptable",
+        "2026-10-19T07:29:10.7616935Z ##[error]Process completed with exit code 1."
+      ]
+    }
+  ],
+  "counts": {
+    "success": 6,
+    "failure": 1,
+    "cancelled": 0,
+    "skipped": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "/Users/normy/nfs-first-final-dr013-gmvotux9",
+  "directory": "/Users/normy/nfs-first-final-dr013-gmvotux9/payload",
+  "mode": "0o700",
+  "retain": "Exact already tag-bound signed payload; no rebuild/re-sign or cleanup before recovery"
+}

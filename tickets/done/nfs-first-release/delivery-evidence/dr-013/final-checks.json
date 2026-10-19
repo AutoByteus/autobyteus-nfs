@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-19T07:32:34.864121+00:00",
+  "currentHead": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "remoteMain": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "protectedTrackedUnchanged": 1935,
+  "priorDR001Through012PrefixPreserved": true,
+  "indexEmptyBeforeCheckpoint": true,
+  "onlyOwnFinalRecordsModified": [
+    "tickets/done/nfs-first-release/delivery-revision-record.md",
+    "tickets/done/nfs-first-release/docs-sync-report.md",
+    "tickets/done/nfs-first-release/handoff-summary.md",
+    "tickets/done/nfs-first-release/release-deployment-report.md"
+  ],
+  "newEvidenceOnly": "tickets/done/nfs-first-release/delivery-evidence/dr-013",
+  "portablePathsChecked": 2011,
+  "readinessScratchAbsent": true,
+  "signatureScratchRemoved": true,
+  "retainedPayloadRecordStillMatches": true,
+  "liveMonitors": [],
+  "releaseState": "Partial owned tag/empty draft; actual BOTH-Mac Accepted; no public assets/image/install",
+  "cleanup": "Retain active worktree/branches/candidate/signed payload for recovery; no credential/PM/application/other-repo change"
+}

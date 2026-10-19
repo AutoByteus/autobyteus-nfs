@@ -1,0 +1,185 @@
+{
+  "total_count": 9,
+  "artifacts": [
+    {
+      "id": 12170026019,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3MDAyNjAxOQ==",
+      "name": "nfs-publication-receipt",
+      "size_in_bytes": 620,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12170026019",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12170026019/zip",
+      "expired": false,
+      "digest": "sha256:16028d19a2afc7734b44622b5b726cb875b4563b3fef1de955caec43b7fa7760",
+      "created_at": "2026-10-19T07:29:11Z",
+      "updated_at": "2026-10-19T07:29:11Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169940199,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTk0MDE5OQ==",
+      "name": "nfs-native-darwin-arm64",
+      "size_in_bytes": 5925045,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169940199",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169940199/zip",
+      "expired": false,
+      "digest": "sha256:00c52431127b751e27b5e0dddb22e02175dd3cf3e3bab1b166c1401bc8d5fed7",
+      "created_at": "2026-10-19T07:25:08Z",
+      "updated_at": "2026-10-19T07:25:08Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169916979,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTkxNjk3OQ==",
+      "name": "nfs-native-darwin-amd64",
+      "size_in_bytes": 6452145,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169916979",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169916979/zip",
+      "expired": false,
+      "digest": "sha256:1f62e2f97de57739448184cd834492da8cd90bf7dc4fad79511d4b7871945eb4",
+      "created_at": "2026-10-19T07:28:09Z",
+      "updated_at": "2026-10-19T07:28:09Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169845352,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTg0NTM1Mg==",
+      "name": "nfs-native-linux-arm64",
+      "size_in_bytes": 6347608,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169845352",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169845352/zip",
+      "expired": false,
+      "digest": "sha256:23beafa8ab31e1d2e9b363f77e70f93e87ef6f91cd603cd26ed15618871f407f",
+      "created_at": "2026-10-19T07:23:38Z",
+      "updated_at": "2026-10-19T07:23:38Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169472209,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTQ3MjIwOQ==",
+      "name": "nfs-release-payload",
+      "size_in_bytes": 29594283,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169472209",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169472209/zip",
+      "expired": false,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "created_at": "2026-10-19T07:28:38Z",
+      "updated_at": "2026-10-19T07:28:38Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169468241,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTQ2ODI0MQ==",
+      "name": "nfs-signing-darwin-amd64",
+      "size_in_bytes": 315,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169468241",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169468241/zip",
+      "expired": false,
+      "digest": "sha256:db910aeabe1d92ace21f7398675bcd103a06247bbbc30762c4b5516d737c39db",
+      "created_at": "2026-10-19T07:28:06Z",
+      "updated_at": "2026-10-19T07:28:06Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169407899,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTQwNzg5OQ==",
+      "name": "nfs-native-linux-amd64",
+      "size_in_bytes": 6951068,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169407899",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169407899/zip",
+      "expired": false,
+      "digest": "sha256:e5d8550889e6aa103075c5053fb8aaede2356d95d10ccac8867c9966c1c970d1",
+      "created_at": "2026-10-19T07:23:51Z",
+      "updated_at": "2026-10-19T07:23:51Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169253316,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTI1MzMxNg==",
+      "name": "nfs-preflight",
+      "size_in_bytes": 127170243,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169253316",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169253316/zip",
+      "expired": false,
+      "digest": "sha256:fb98f9bee349e33da030aeb52b6b44a736676ef52d700eb035d3350eb1c8b3b0",
+      "created_at": "2026-10-19T07:22:06Z",
+      "updated_at": "2026-10-19T07:22:06Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    },
+    {
+      "id": 12169197566,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE2OTE5NzU2Ng==",
+      "name": "nfs-signing-darwin-arm64",
+      "size_in_bytes": 315,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169197566",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12169197566/zip",
+      "expired": false,
+      "digest": "sha256:9c14365ac53e5da46a445fbd6ce88f3c8264976ef14ad6cf1dad74076035e76d",
+      "created_at": "2026-10-19T07:25:05Z",
+      "updated_at": "2026-10-19T07:25:05Z",
+      "expires_at": "2027-01-17T07:21:36Z",
+      "workflow_run": {
+        "id": 39215470944,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      }
+    }
+  ]
+}
