@@ -1,0 +1,23 @@
+{
+  "case": "R04",
+  "step": "Explain new measured-engine identity versus prior preserved lock, not a source edit",
+  "utc": "2026-10-19T05:19:29.557649+00:00",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "environment": "read-only actual candidate/lock JSON",
+  "priorSourceHashWithOldEngine": "bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62",
+  "newSourceHash": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd",
+  "engineManifestDifferences": [
+    {
+      "path": "/architectures/amd64/buildInventory/sha256",
+      "prior": "eea118eb6b34814f0ca67d6a7f9d5c24c385de85e348cc0fc459692f76734364",
+      "current": "b61ff97a162e2ab7e5545be11cd7c376f489088c9e5c9ab5694074e4249b6e23"
+    },
+    {
+      "path": "/architectures/arm64/buildInventory/sha256",
+      "prior": "2bfee929a699be216e09874a250f679dad9ad43f16cd801ede2e6c68bef9e932",
+      "current": "d1ece1409d3bfaf167fdf1f243fd82998960f650a01c0352f0dc4d6345492fec"
+    }
+  ],
+  "recipeUnchanged": true,
+  "scope": "Fresh actual measured candidate identity is authoritative for new readiness. Do not copy bf6b from prior-engine local checks. No inference of reproducible-build equality to old engine."
+}

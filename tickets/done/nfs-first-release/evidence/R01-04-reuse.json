@@ -1,0 +1,33 @@
+{
+  "case": "R01",
+  "step": "Reuse current implementation Checks Run; no product suite rerun",
+  "utc": "2026-10-19T05:06:31.461100+00:00",
+  "currentCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "testedProductCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "environment": "local read-only Git/evidence comparison",
+  "command": "git diff --name-only 75f4dbe 44e2487b4b30da99797c149c17fa0c8bcaa6a87f -- ':!tickets'",
+  "nonTicketDelta": [],
+  "nonTicketCount": 127,
+  "reused": [
+    "IMP-05-01",
+    "IMP-05-02",
+    "IMP-05-08",
+    "IMP-05-09"
+  ],
+  "R02Reusable": [
+    "IMP-05-03",
+    "IMP-05-04",
+    "IMP-05-05",
+    "IMP-05-06",
+    "IMP-05-07"
+  ],
+  "testCounts": {
+    "fullCollected": 52,
+    "fullExecuted": 51,
+    "fullStandaloneSkip": 1,
+    "focusedOverlap": 17
+  },
+  "currentChecksExpectedOutcomes": 14,
+  "limits": "Command doubles, not real Apple/P12/hosted upload; baseline/mutants are expected failures. DR007 is local development diagnostic only.",
+  "pass": true
+}

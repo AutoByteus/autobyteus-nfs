@@ -1,0 +1,24 @@
+{
+  "case": "R04",
+  "step": "fetch",
+  "utc": "2026-10-19T05:18:33.261183+00:00",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "environment": "local Macarm64/Actions API where invoked",
+  "command": [
+    "/usr/bin/python3",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py",
+    "--operation",
+    "fetch-candidate",
+    "--envelope",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/evidence/R04-04-envelope.json",
+    "--directory",
+    "/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate",
+    "--output",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/evidence/R04-04-reference.json"
+  ],
+  "exit": 0,
+  "expected": 0,
+  "stdout": "",
+  "stderr": "",
+  "pass": true
+}
