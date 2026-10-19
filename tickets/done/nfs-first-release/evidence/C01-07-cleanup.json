@@ -1,0 +1,39 @@
+{
+  "case": "C01",
+  "date": "2026-10-19T08:50:23.819538+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "NFS local/GitHub read-only",
+  "step": "Own inspection/clone cleanup and immutable-resource/source/owner preservation",
+  "sourceInputsUnchanged": 130,
+  "protectedOtherOwnerFiles": 67,
+  "protectedUnchanged": true,
+  "historyPrefixPreserved": true,
+  "originalPayloadAndCandidateExactlyMatchFreshDownload": true,
+  "olderCandidates": [
+    {
+      "revision": "002",
+      "memberBytesPreserved": true
+    },
+    {
+      "revision": "003",
+      "memberBytesPreserved": true
+    },
+    {
+      "revision": "004",
+      "memberBytesPreserved": true
+    },
+    {
+      "revision": "005",
+      "memberBytesPreserved": true
+    }
+  ],
+  "inspectionRoot": "/Users/normy/nfs-api007-inspect-m50i0aqe",
+  "inspectionRemoved": true,
+  "emulatedCloneRemoved": true,
+  "realRecoveryAuthorizationAbsent": true,
+  "remoteUnchanged": true,
+  "realWrites": 0,
+  "localNotaryDiagnostic": "Untouched; not accessed",
+  "ownedPersistentRuntimeResources": [],
+  "pass": true
+}

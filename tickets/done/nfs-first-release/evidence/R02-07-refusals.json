@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-19T08:44:59.167164+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "macOS26.5.2arm64 current facade; actual read-only API",
+  "command": "R02-07-resume.py; reuse earlier actual CLI refusal, no repeat",
+  "case": "R02",
+  "candidateExit": 1,
+  "candidateStderr": "Executed workflow differs from hashed source",
+  "authorityRefusal": "Reviewed recovery authorization required",
+  "actualReadOnlyRequests": [
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET",
+      "result": {
+        "ref": "refs/tags/v0.1.0",
+        "node_id": "REF_kwDOVK4ms7ByZWZzL3RhZ3MvdjAuMS4w",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/tags/v0.1.0",
+        "object": {
+          "sha": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+          "type": "tag",
+          "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514"
+        }
+      }
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET",
+      "result": {
+        "node_id": "TA_kwDOVK4ms9oAKGY0YTA0ZmQwYzgwYTY2MjU3MDhiYTAwMmI0Y2VmNTUwN2EwM2Y1MTQ",
+        "sha": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+        "tagger": {
+          "name": "github-actions[bot]",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2026-10-19T07:29:08Z"
+        },
+        "object": {
+          "sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+          "type": "commit",
+          "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/238bdc183e8affac99ffdee9be9cb333b0eb126f"
+        },
+        "tag": "v0.1.0",
+        "message": "AutoByteus NFS retained payload\n{\"envelope\": {\"artifactId\": 12169472209, \"digest\": \"sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336\", \"expiresAt\": \"2027-01-17T07:21:36Z\", \"runAttempt\": 1, \"runId\": 39215470944, \"workflowCommit\": \"238bdc183e8affac99ffdee9be9cb333b0eb126f\"}, \"payloadSha256\": \"3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8\", \"repository\": \"AutoByteus/autobyteus-nfs\", \"sourceCommit\": \"238bdc183e8affac99ffdee9be9cb333b0eb126f\", \"version\": \"v0.1.0\"}",
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      }
+    }
+  ],
+  "realAuthorizationAbsent": true,
+  "pass": true
+}

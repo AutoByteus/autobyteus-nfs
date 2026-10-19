@@ -1,0 +1,947 @@
+{
+  "binding": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "case": "R07",
+  "command": "R07-07-worker.py in isolated clone",
+  "completedRetryNoWrites": true,
+  "date": "2026-10-19T08:48:26.838950+00:00",
+  "endpointCalls": [
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769/assets?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769/assets?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "PATCH"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769/assets?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769/assets?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/heads/main",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/releases/417014769/assets?per_page=100&page=1",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/ref/tags/v0.1.0",
+      "method": "GET"
+    },
+    {
+      "endpoint": "repos/AutoByteus/autobyteus-nfs/git/tags/f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "method": "GET"
+    }
+  ],
+  "environment": "Private HOME/TMP, actual retained bytes; all external effects EMULATED",
+  "excludedDriftRefusal": "Unreviewed recovery change: cmd/autobyteus-nfs/release.json",
+  "executorHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+  "firstEffects": [
+    "STREAM LICENSE",
+    "STREAM SHA256SUMS-nfs",
+    "STREAM THIRD_PARTY_NOTICES",
+    "STREAM autobyteus-nfs-0.1.0-darwin-amd64.tar.gz",
+    "STREAM autobyteus-nfs-0.1.0-darwin-arm64.tar.gz",
+    "STREAM autobyteus-nfs-0.1.0-linux-amd64.tar.gz",
+    "STREAM autobyteus-nfs-0.1.0-linux-arm64.tar.gz",
+    "STREAM autobyteus-nfs-engine-manifest.json",
+    "STREAM autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+    "STREAM autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+    "STREAM autobyteus-nfs-install.sh",
+    "STREAM autobyteus-nfs-manifest.json",
+    "STREAM engine-COPYRIGHT-amd64",
+    "STREAM engine-COPYRIGHT-arm64",
+    "STREAM engine-build-amd64.txt",
+    "STREAM engine-build-arm64.txt",
+    "STREAM release-notes.md",
+    "STREAM release-provenance.json",
+    "EMULATED OCI",
+    "PATCH417014769",
+    "EMULATED PUBLIC READ"
+  ],
+  "limits": "Not actual hosted dispatch, permission, write/publication, registry/public HTTP or installer execution; synthetic records never leave removed clone",
+  "missingKnownRefusal": "Known release is missing; cannot recreate",
+  "pass": true,
+  "preflight": {
+    "authorization": {
+      "path": "packaging/recovery/v0.1.0/authorization.json",
+      "sha256": "d33af4463f9a5dccfd6a3f02388127ea377315728afed8c48b48ca012d63f9c5"
+    },
+    "draftInventory": "non-authoritative; deferred to publisher",
+    "executor": {
+      "commit": "9a830501c689f3bee9f4c5a8b792cc8bb00b983f",
+      "runAttempt": "1",
+      "runId": "7007",
+      "sourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+      "workflow": ".github/workflows/release-nfs.yml",
+      "workflowCommit": "9a830501c689f3bee9f4c5a8b792cc8bb00b983f"
+    },
+    "mode": "recover",
+    "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+    "tag": {
+      "binding": {
+        "envelope": {
+          "artifactId": 12169472209,
+          "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+          "expiresAt": "2027-01-17T07:21:36Z",
+          "runAttempt": 1,
+          "runId": 39215470944,
+          "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+        },
+        "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+        "repository": "AutoByteus/autobyteus-nfs",
+        "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+        "version": "v0.1.0"
+      },
+      "object": "f4a04fd0c80a6625708ba002b4cef5507a03f514"
+    }
+  },
+  "publicAssetCount": 18,
+  "realAuthorizationCreated": false,
+  "realPayloadSource": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "result": {
+    "authorization": {
+      "path": "packaging/recovery/v0.1.0/authorization.json",
+      "sha256": "d33af4463f9a5dccfd6a3f02388127ea377315728afed8c48b48ca012d63f9c5"
+    },
+    "executor": {
+      "commit": "9a830501c689f3bee9f4c5a8b792cc8bb00b983f",
+      "runAttempt": "1",
+      "runId": "7007",
+      "sourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+      "workflow": ".github/workflows/release-nfs.yml",
+      "workflowCommit": "9a830501c689f3bee9f4c5a8b792cc8bb00b983f"
+    },
+    "image": {
+      "digest": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+      "emulated": true
+    },
+    "installerSmoke": "owned HOME, explicit version only, Ubuntu amd64 publisher",
+    "mode": "recover",
+    "payload": {
+      "envelope": {
+        "artifactId": 12169472209,
+        "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+        "expiresAt": "2027-01-17T07:21:36Z",
+        "runAttempt": 1,
+        "runId": 39215470944,
+        "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      },
+      "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+      "version": "v0.1.0"
+    },
+    "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "releaseId": 417014769,
+    "releaseUrl": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/untagged-47cca8eae1c7894bf544",
+    "remaining": "Delivery must verify other native installer/signature downloads on owned hosts",
+    "result": "published",
+    "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+    "stages": [
+      "validating-before-effects",
+      "tag-confirmed; draft-reconciliation-attempted",
+      "draft-confirmed; asset-reconciliation-attempted",
+      "assets-confirmed; image-promotion-and-anonymous-read-attempted",
+      "image-public-confirmed; release-publication-attempted",
+      "release-published; public-download-verification-attempted"
+    ],
+    "tag": {
+      "binding": {
+        "envelope": {
+          "artifactId": 12169472209,
+          "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+          "expiresAt": "2027-01-17T07:21:36Z",
+          "runAttempt": 1,
+          "runId": 39215470944,
+          "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+        },
+        "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+        "repository": "AutoByteus/autobyteus-nfs",
+        "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+        "version": "v0.1.0"
+      },
+      "object": "f4a04fd0c80a6625708ba002b4cef5507a03f514"
+    }
+  },
+  "retainedInputsUnchanged": true,
+  "reviewedH": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "syntheticAuthorityOnly": true,
+  "syntheticDriftCommit": "84ca507359352fcce5a488f19d4df8a26e594d2a",
+  "syntheticE": "9a830501c689f3bee9f4c5a8b792cc8bb00b983f"
+}
