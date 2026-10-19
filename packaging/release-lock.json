@@ -4,7 +4,7 @@
       "amd64": {
         "buildInventory": {
           "file": "engine-build-amd64.txt",
-          "sha256": "eea118eb6b34814f0ca67d6a7f9d5c24c385de85e348cc0fc459692f76734364",
+          "sha256": "b61ff97a162e2ab7e5545be11cd7c376f489088c9e5c9ab5694074e4249b6e23",
           "size": 40381
         },
         "correspondingSource": {
@@ -34,7 +34,7 @@
       "arm64": {
         "buildInventory": {
           "file": "engine-build-arm64.txt",
-          "sha256": "2bfee929a699be216e09874a250f679dad9ad43f16cd801ede2e6c68bef9e932",
+          "sha256": "d1ece1409d3bfaf167fdf1f243fd82998960f650a01c0352f0dc4d6345492fec",
           "size": 40134
         },
         "correspondingSource": {
@@ -88,10 +88,10 @@
       "version": "4.3-8ubuntu1"
     }
   },
-  "note": "v0.1.0 genuine R3 release-first readiness. Field/filesystem/user validation deferred, not passed.",
+  "note": "v0.1.0 actual API004/CRR008 release-first readiness; field/filesystem/user validation deferred, not passed.",
   "releaseReadiness": {
     "path": "packaging/releases/v0.1.0/readiness.json",
-    "sha256": "9941d6987d59d5f796d8d662a7e3bf07989f05aae5838cb5a65d82c812be46c3"
+    "sha256": "751ea6831bdf2da3bed555eb57469d2f67003a34e804a760562ad6615c4d3fdc"
   },
   "ubuntuBaseImage": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
   "ubuntuPackages": {

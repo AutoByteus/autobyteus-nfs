@@ -1,0 +1,26 @@
+{
+  "case": "C01",
+  "step": "Ownership baseline after DR008 source staging; these files must stay outside API edits/commits",
+  "utc": "2026-10-19T05:08:14.224168+00:00",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "environment": "local N ticket",
+  "DeliveryFiles": {
+    "tickets/done/nfs-first-release/delivery-revision-record.md": "6ff50ad6a5a5cad248b791892a3b50e313167dc5825b756967868ec1e6719926",
+    "tickets/done/nfs-first-release/docs-sync-report.md": "924e733d62c3b16eed14428d4e4878ebaa6bca032e9b6d42a761533283aa8aea",
+    "tickets/done/nfs-first-release/handoff-summary.md": "8da21ddf53e25b1e9dfab38a5e7f16ac7efdca59b2ca4bbee0b684ed2ab252da",
+    "tickets/done/nfs-first-release/release-deployment-report.md": "a5c65c1eed2773bb3bdddb5f810696202e5612c76235251e9c933a5333e0b8ef",
+    "tickets/done/nfs-first-release/release-notes.md": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/commands.json": "8c0e9b2011aeb73177e28dc83eb85b1a8cf5540f0b1226c76275737d8c6a0016",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/staged-source-receipt.json": "73888c2d196ed5bd9234beb4c638b72960bc4e5355219982662c83b9c7a9c0b1",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/verified-remote-workflow.yml": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/final-checks.json": "210779cbc0f52255caebefc67750b99301844321975f7e32eac8378dff9f8be0",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/routing.json": "1897b7cdfb5e19821d8c6e58ed79e6874d96707364944e29cddaf48d45331d6b"
+  },
+  "historySha256": "ae9f3b7b2bcc371a4f33ae705b6623bf16e649dfc01d9f3410777056bd96c292",
+  "historyBytes": 10274,
+  "protectedRetainedRoots": [
+    "/Users/normy/nfs-local-notary-xq_ym2f6",
+    "/Users/normy/nfs-first-candidate-api002-n940gd8s",
+    "/Users/normy/nfs-first-candidate-api003-p_t67xqw"
+  ]
+}

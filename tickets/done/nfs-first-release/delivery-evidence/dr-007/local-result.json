@@ -1,0 +1,10 @@
+{
+  "localSigning": "Passed",
+  "signExit": 0,
+  "signedBinarySha256": "c75fbcace7b803eec45e5717c78c1b2c59b1f0e9a0f0278694974a1e65d17322",
+  "notarization": "Not executed; no locally assigned credential/profile",
+  "hostedCause": "Not established by existing-keychain path",
+  "publication": "None",
+  "scratch": "/Users/normy/nfs-local-notary-xq_ym2f6",
+  "keychainSearchListUnchanged": true
+}

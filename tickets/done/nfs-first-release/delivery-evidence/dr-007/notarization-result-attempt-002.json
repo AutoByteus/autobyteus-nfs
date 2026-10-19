@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-19T04:57:21.180604+00:00",
+  "commandExit": 0,
+  "scope": "User-requested local signed arm64 development diagnostic; no GitHub publication or CI P12 import",
+  "binarySha256": "c75fbcace7b803eec45e5717c78c1b2c59b1f0e9a0f0278694974a1e65d17322",
+  "archiveSha256": "6b0c7f5132f3efe56d8aa077608c8aa13769fb8c1c65f67c3d00b2a0856746c0",
+  "status": "Accepted",
+  "submissionId": "16cd8853-b4f7-41a3-b676-e99029765633",
+  "attempt": 2
+}

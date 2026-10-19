@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-18T10:59:32.060165+00:00",
+  "ownedReadinessScratchRemoved": true,
+  "ownedMonitoringProcesses": "completed",
+  "worktreeRetention": "required active recovery",
+  "candidateRetention": [
+    "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate",
+    "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate"
+  ],
+  "candidateOwnership": "API handed current for release; old historical preserved",
+  "canonicalCheckoutOrPMEdits": false,
+  "otherWorktreesChanged": false,
+  "liveStorageOrServiceEffects": false,
+  "credentialsReadOrModifiedLocally": false,
+  "hostedKeychainCleanup": "script cleanup defined; post-job complete; deletion not independently observed",
+  "terminalEligible": false
+}

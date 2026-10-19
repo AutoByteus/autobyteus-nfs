@@ -1,0 +1,7 @@
+Check: IMP-05-03
+Command/steps: /bin/bash -n packaging/sign-macos.sh
+Commit tested: 75f4dbe5527a7159f536bafcf9448bc2d6a01604 (identical uncommitted source tree at b2c6fdf; committed after checks)
+Environment: Darwin arm64; Bash3.2.57; Python3.9.6; independent private HOME/TMP where stated
+Recorded UTC: 2026-10-18T11:10:49.946492+00:00
+
+--- Raw bash-syntax.log ---

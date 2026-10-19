@@ -1,0 +1,16 @@
+{
+  "headUnchanged": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "indexEmpty": true,
+  "apiPathsUntouchedByDelivery": true,
+  "apiObservationDifferencesSincePush": [],
+  "ownReportsUpdated": true,
+  "ownChangesIntentionallyUncommitted": true,
+  "noRuntimeResourceCreated": true,
+  "concurrentApiEvidenceNewPathsObserved": [
+    "evidence/R01-04-reuse.json",
+    "evidence/R01-04-reuse.py",
+    "evidence/R02-04-stale-candidate.log",
+    "evidence/R02-04-stale-result.json"
+  ],
+  "note": "API-owned concurrent files left untouched/unstaged; no author inference from snapshots"
+}

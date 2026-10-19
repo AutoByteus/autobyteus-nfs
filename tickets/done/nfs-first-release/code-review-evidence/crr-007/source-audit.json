@@ -1,0 +1,49 @@
+{
+  "checkId": "CR-07-01",
+  "atUTC": "2026-10-19T05:02:42.063670+00:00",
+  "steps": [
+    "git status --porcelain --untracked-files=no",
+    "git diff --name-only b2c6fdf 75f4dbe -- . :!tickets",
+    "git diff --name-only 75f4dbe HEAD -- . :!tickets",
+    "Compare each non-ticket git ls-tree source path with git show source:path and current bytes; count nonempty source lines and git diff --numstat"
+  ],
+  "input": "55e45c13297e9f588a61461c41ddb8a754eb647c",
+  "source": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "base": "b2c6fdf79e8dc5df845700d2dc27176770404a47",
+  "nonTicketInputs": 127,
+  "allCurrentInputsMatchTestedSource": true,
+  "changedPaths": [
+    ".github/workflows/release-nfs.yml",
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py",
+    "scripts/tests/test_nfs_release_workflow.py"
+  ],
+  "sizeAudit": [
+    {
+      "path": ".github/workflows/release-nfs.yml",
+      "beforeNonempty": 359,
+      "afterNonempty": 361,
+      "added": 3,
+      "deleted": 1,
+      "delta": 4
+    },
+    {
+      "path": "packaging/sign-macos.sh",
+      "beforeNonempty": 75,
+      "afterNonempty": 126,
+      "added": 88,
+      "deleted": 37,
+      "delta": 125
+    }
+  ],
+  "priorRevisionBytes": 19704,
+  "priorRevisionSha256": "5b8e10b44148bbcc5612d48f965815971549c7b42a4ea57698d8ed1ae846bcb7",
+  "priorSourceReportSha256": "38a020ba17aa48b9219241d1134c02aabf6e026abe9d7f3cbecb70467c2f1de4",
+  "testReportSha256": "7634ac132cce3ef23c245f41a559eb2d1826b223d89e49a5652049e7f8aa7073",
+  "productTestExecutionsByReviewer": 0,
+  "reusedChecks": "IMP-05-01 through IMP-05-09; final source unchanged. IMP-05-10 retained iterations; IMP-05-11 preservation audit. No recorded check rerun just to confirm.",
+  "deliverySupplement": "DR006 local existing-key signing; DR007 local development arm64 Apple Accepted; neither proves hosted/final release",
+  "inspectionCorrection": "Prior read attempted nonexistent IR005/source-audit.json; used actual source-check.json and final-checks.json. Read-only inspection error, not product/test failure."
+}

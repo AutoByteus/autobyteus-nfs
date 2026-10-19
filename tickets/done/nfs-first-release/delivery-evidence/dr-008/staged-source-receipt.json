@@ -1,0 +1,116 @@
+{
+  "completedAt": "2026-10-19T05:06:53.276957+00:00",
+  "task": "nfs-first-release",
+  "revision": "DR-008",
+  "result": "Execution prerequisite completed; full Delivery Blocked pending current API/test gate/signing/publication",
+  "repository": "AutoByteus/autobyteus-nfs",
+  "dispatchSourceWorkflowCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "review": "CRR007 Pass100 / IR005",
+  "productCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "nonTicketInputsEqualProduct": 127,
+  "sourceHash": "bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62",
+  "remoteHeadsBefore": {
+    "refs/heads/codex/nfs-first-release": "b599e4761a947bfb1a477606db9ed4605b66bd1c",
+    "refs/heads/main": "7683494050b85a298ed08a55592e70f86a010a7a"
+  },
+  "remoteHeadsAfter": {
+    "refs/heads/codex/nfs-first-release": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+    "refs/heads/main": "7683494050b85a298ed08a55592e70f86a010a7a"
+  },
+  "integration": {
+    "freshFetchedMain": "7683494050b85a298ed08a55592e70f86a010a7a",
+    "alreadyAncestor": true,
+    "mergeRequired": false,
+    "rerun": "No new base/product delta; source-identity only, API owns executable validation"
+  },
+  "workflow": {
+    "id": 388178899,
+    "state": "active",
+    "path": ".github/workflows/release-nfs.yml",
+    "gitBlobSha": "dc9acc3b3390806b80db759fc38038c5b675bae8",
+    "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "githubApiEndpoint": "repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+    "remoteBytesEqualReviewedCommit": true
+  },
+  "dispatchInputs": {
+    "ref": "codex/nfs-first-release",
+    "release_tag": "v0.1.0",
+    "source_sha": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+    "publish": false
+  },
+  "mainUnchanged": true,
+  "tagsUnchanged": true,
+  "releasesUnchanged": true,
+  "apiOwnedBefore": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "5ce50c4eff750efd0624c391224faddd79fee86ee960557b8bec189ef7277213",
+      "size": 6504
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "765f10a84e24a6484190aa7004e967950bfb439aab98ca359cadaaf997d73a72",
+      "size": 2196
+    },
+    "tickets/done/nfs-first-release/api-e2e-revision-record.md": {
+      "sha256": "ae9f3b7b2bcc371a4f33ae705b6623bf16e649dfc01d9f3410777056bd96c292",
+      "size": 10274
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-case-ledger.md": {
+      "sha256": "f3dfb35aadfe57f13321c5742e2a01b686a54fe01ee72bc8cd978e108d7294ab",
+      "size": 21256
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "e917d8315e644acd1c53c6b051b4d5f11293c9cf2619c1804311262803e07569",
+      "size": 4433
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-review-report.md": {
+      "sha256": "7634ac132cce3ef23c245f41a559eb2d1826b223d89e49a5652049e7f8aa7073",
+      "size": 12731
+    }
+  },
+  "apiOwnedAfter": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "5ce50c4eff750efd0624c391224faddd79fee86ee960557b8bec189ef7277213",
+      "size": 6504
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "765f10a84e24a6484190aa7004e967950bfb439aab98ca359cadaaf997d73a72",
+      "size": 2196
+    },
+    "tickets/done/nfs-first-release/api-e2e-revision-record.md": {
+      "sha256": "ae9f3b7b2bcc371a4f33ae705b6623bf16e649dfc01d9f3410777056bd96c292",
+      "size": 10274
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-case-ledger.md": {
+      "sha256": "f3dfb35aadfe57f13321c5742e2a01b686a54fe01ee72bc8cd978e108d7294ab",
+      "size": 21256
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "e917d8315e644acd1c53c6b051b4d5f11293c9cf2619c1804311262803e07569",
+      "size": 4433
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-review-report.md": {
+      "sha256": "7634ac132cce3ef23c245f41a559eb2d1826b223d89e49a5652049e7f8aa7073",
+      "size": 12731
+    }
+  },
+  "apiConcurrentDifferences": [],
+  "apiPreservation": "No edit/stage/commit/restore of API files; snapshot differences, if any, attributed only to concurrent observation",
+  "actionsNotPerformed": [
+    "main merge/push",
+    "workflow dispatch",
+    "readiness modification",
+    "signing/notary",
+    "secret reprovisioning",
+    "tag/release/registry publication",
+    "deployment",
+    "TaskDone",
+    "Terminal"
+  ],
+  "scope": "NFS-only source-availability exception; no full delivery completion; R3 field/user deferred",
+  "guide": {
+    "path": "RELEASE.md",
+    "commit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+    "sha256": "008c70046e48aa84423cd00647984f8ca482755d07c306e88ada5b99cf083640"
+  },
+  "cleanup": "No live resource or scratch created; active worktree/candidates retained"
+}

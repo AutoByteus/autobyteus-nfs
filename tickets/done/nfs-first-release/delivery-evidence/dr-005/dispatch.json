@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-18T10:53:04.832682+00:00",
+  "argv": [
+    "gh",
+    "workflow",
+    "run",
+    "release-nfs.yml",
+    "--repo",
+    "AutoByteus/autobyteus-nfs",
+    "--ref",
+    "main",
+    "-f",
+    "release_tag=v0.1.0",
+    "-f",
+    "source_sha=7683494050b85a298ed08a55592e70f86a010a7a",
+    "-f",
+    "candidate_run_id=39118784695",
+    "-f",
+    "publish=true"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": ""
+}

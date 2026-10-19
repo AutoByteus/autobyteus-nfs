@@ -1,0 +1,9 @@
+{
+  "result": "Pass",
+  "files": 25,
+  "noBinaryPayload": true,
+  "portableEvidenceNames": true,
+  "mainUnchanged": "7683494050b85a298ed08a55592e70f86a010a7a",
+  "handoff": "Existing implementation Local Fix owner only; supplemental proof and resume request, not duplicate review dispatch",
+  "priorAttemptsRetained": true
+}

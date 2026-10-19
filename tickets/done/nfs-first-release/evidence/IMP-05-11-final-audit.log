@@ -1,0 +1,57 @@
+Check: IMP-05-11
+Command/steps: bounded git diff/source identity/history/check outcomes/cleanup audit
+Commit: 75f4dbe5527a7159f536bafcf9448bc2d6a01604
+Environment: Darwin arm64 task worktree; no remote action
+Date UTC: 2026-10-18T11:11:17.561721+00:00
+
+{
+  "checkId": "IMP-05-11",
+  "dateUTC": "2026-10-18T11:11:17.561721+00:00",
+  "command": "bounded git diff/source identity/history/check outcomes/cleanup audit",
+  "commit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "environment": "Darwin arm64 task worktree; no remote action",
+  "result": "Pass \u2014 local implementation evidence only",
+  "sourceDelta": [
+    ".github/workflows/release-nfs.yml",
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py",
+    "scripts/tests/test_nfs_release_workflow.py"
+  ],
+  "priorHistoryPrefixPreserved": true,
+  "otherTrackedInputsUnchanged": true,
+  "newSourceHash": "bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62",
+  "recordedReadinessSourceHash": "a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e",
+  "recordedReadinessStale": true,
+  "engineRecipeHash": "299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274",
+  "pythonCollected": 52,
+  "pythonExecuted": 51,
+  "pythonSkipped": 1,
+  "fourMutantsDetected": true,
+  "unusedTestImports": {
+    "scripts/tests/test_nfs_release_signing.py": [],
+    "scripts/tests/test_nfs_release_workflow.py": []
+  },
+  "ownedScratchAbsent": true,
+  "actualSigningCause": "Unknown; needs authorized new-source hosted evidence",
+  "whitespaceRawExceptions": [
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/baseline-diagnostic-control.log:11",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-accept-invalid-notary.log:1",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-accept-invalid-notary.log:10",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-accept-invalid-notary.log:20",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-accept-invalid-notary.log:30",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-ignore-errexit.log:11",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/baseline-harness-attempt1.log:11",
+    "tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-restore-failed-capture.log:1",
+    "tickets/done/nfs-first-release/evidence/IMP-05-09-baseline-control.log:18",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:36",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:44",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:61",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:70",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:80",
+    "tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log:90"
+  ],
+  "task_size": "Large",
+  "architectural_risk": "High"
+}

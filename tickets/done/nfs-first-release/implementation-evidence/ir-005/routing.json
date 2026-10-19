@@ -1,0 +1,10 @@
+{
+  "when": "When an implementation-owned Local Fix requested by the code reviewer or delivery engineer is complete, the existing package is task_size=Large or architectural_risk=High, and the updated implementation must return for source review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "checkId": "IMP-05-11",
+  "command": "get_handoff_rules; most-specific completed Large/High Local Fix rule",
+  "commit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "environment": "implementation engineer routing",
+  "dateUTC": "2026-10-18T11:11:41.226646+00:00",
+  "otherRecipients": []
+}

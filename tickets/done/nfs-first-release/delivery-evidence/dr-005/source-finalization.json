@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-18T10:53:02.022237+00:00",
+  "ticketCommit": "b599e4761a947bfb1a477606db9ed4605b66bd1c",
+  "target": "origin/main",
+  "before": "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+  "merge": "7683494050b85a298ed08a55592e70f86a010a7a",
+  "mergeParents": [
+    "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+    "b599e4761a947bfb1a477606db9ed4605b66bd1c"
+  ],
+  "treeEqual": true,
+  "remoteVerified": "7683494050b85a298ed08a55592e70f86a010a7a",
+  "checkPublishExit": 0,
+  "sourceHash": "a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e",
+  "remoteWorkflowSha256": "84397682b5f67e5d9108ec8808e048d71d529f50d30dd82b1db2b0b342dd34f8",
+  "archive": "tickets/done/nfs-first-release",
+  "noCanonicalCheckoutOrPMWrites": true,
+  "fullDeliveryComplete": false
+}

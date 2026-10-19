@@ -1,0 +1,13 @@
+{
+  "review": "CRR-007",
+  "reviewCommit": "4ed7319a75b6de680c069cee845c2f28c693de5e",
+  "recipient": "/software_engineering_team/api_e2e_engineer",
+  "result": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  },
+  "scope": "IR005 source Pass; affected API/new candidate next; original hosted signing cause unresolved; DR007 bounded local development acceptance carried",
+  "duplicateDispatch": false
+}

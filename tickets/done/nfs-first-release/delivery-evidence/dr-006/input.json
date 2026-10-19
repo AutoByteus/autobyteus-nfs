@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-18T11:12:53.188701+00:00",
+  "sourceCommit": "9fa4e6968f3239ad1517fc33077eb527d0d76502",
+  "sourceInputCount": 127,
+  "buildMetadata": "development: diagnostic only, not release payload",
+  "unsignedBinarySha256": "e665fbfe83e4440781c0e367429c18edaa8257bb45ccf83a0627964c22f71607",
+  "identitySha1": "37C9698B12C2CE90D9B9E9F882B67C65C9F5B4FA",
+  "existingKeychain": "/Users/normy/Library/Keychains/login.keychain-db",
+  "noKeyExportOrPasswordRead": true,
+  "knownLimit": "Existing-identity signing does not test hosted P12/password import or Apple notarization. User directly authorized local signing diagnostic."
+}

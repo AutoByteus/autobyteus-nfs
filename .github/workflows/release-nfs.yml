@@ -229,7 +229,9 @@ jobs:
         if: ${{ always() && matrix.os == 'darwin' && needs.prepare.outputs.mode == 'fresh' }}
         with:
           name: nfs-signing-${{ matrix.os }}-${{ matrix.arch }}
-          path: native/*-notary.json
+          path: |
+            native/*-notary.json
+            native/*-notary-failure.json
           retention-days: 90
           if-no-files-found: warn
       - name: Package four regular members

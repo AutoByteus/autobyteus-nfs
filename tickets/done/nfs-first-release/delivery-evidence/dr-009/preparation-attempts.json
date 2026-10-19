@@ -1,0 +1,10 @@
+[
+  {
+    "attempt": 1,
+    "result": "Evidence-reader assertion failed before readiness/lock writes",
+    "assumption": "Four mutants each report exactly one unittest failure",
+    "actual": "Three mutants report one failure; accept-invalid-notary reports three subcase failures, all four process exits1 as expected",
+    "correction": "Match actual raw summaries (three failures=1, one failures=3), not invented equal assertion count",
+    "productFailure": false
+  }
+]

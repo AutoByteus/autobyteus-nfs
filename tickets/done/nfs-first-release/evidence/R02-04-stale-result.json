@@ -1,0 +1,19 @@
+{
+  "case": "R02",
+  "step": "Actual retained old-candidate admission",
+  "utc": "2026-10-19T05:06:31.661538+00:00",
+  "commit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "environment": "local macOS/current facade; read-only old API003 candidate",
+  "command": [
+    "/usr/bin/python3",
+    "packaging/release.py",
+    "--check-publish",
+    "--candidate",
+    "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "Release refused: Executed workflow differs from hashed source\n",
+  "pass": true,
+  "limit": "Actual old retained candidate is refused at workflow-byte binding before readiness/public effects; not a credential diagnosis. Missing-input IMP05 control reused separately."
+}

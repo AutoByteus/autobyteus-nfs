@@ -1,0 +1,9 @@
+{
+  "attempt": 1,
+  "source": "User-pasted local Terminal error, paired with original notarization-result.json",
+  "httpStatus": 401,
+  "classification": "Apple authentication rejected; exact credential component not established",
+  "status": "Unconfirmed",
+  "notAppleBinaryRejection": true,
+  "priorReceiptPreserved": true
+}

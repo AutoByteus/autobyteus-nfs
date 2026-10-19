@@ -1,25 +1,41 @@
 {
-  "apiRevision": "API-REV-003",
+  "apiRevision": "API-REV-004",
   "cases": {
-    "C01": "Owned cleanup/source preservation; candidate intentionally retained",
-    "R01": "45 collected44executed1skip; focused7+12 overlap",
-    "R02": "Static/source/readiness controls; invalid recipe subcommand corrected and preserved",
-    "R04": "Actual envelope/download/engine/OCI/member verification; wrapper/digest/version/null-readiness expected refusals",
-    "R05": "Downloaded Darwinarm64 v0.1.0; candidate/false/legacy admission refusal"
+    "C01": "Owned cleanup/history/source/Delivery/retained-candidate preservation",
+    "R01": "Actual shell signing/cleanup/privacy fixtures reused at exact inputs",
+    "R02": "Actual retained old-candidate workflow mismatch refusal",
+    "R04": "New exact envelope/member/engine/wholeOCI verification; corrupt wrapper refusal",
+    "R05": "Actual downloaded Darwinarm64 version/candidate admission refusal/noHOMEwrites"
   },
-  "evidenceGitCommit": "e1addb8e96d3c0d32fb5c28e6e221b0a8d96eaf8",
-  "evidenceGitDirectory": "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003",
-  "limits": "Apple/registry/GitHub publication and positive installer fixture effects doubled; actual signing/public release remains downstream.",
+  "evidenceGitCommit": "587b1a9fb191297ca7928335a031a98b020df707",
+  "evidenceGitDirectory": "tickets/done/nfs-first-release/evidence",
+  "limits": "Actual Apple/P12/hosted signing/diagnostic upload/publication/public final installation remains Delivery, not inferred from fixtures.",
   "rawEvidenceHashes": {
-    "actual-envelope-refusal.json": "724eba27dd1de502f7102d8cdbed79fb83a79aa54e065d53fbaf42e2c9b5d6de",
-    "candidate-native-version.json": "825a5872e1c15d05d5d8b30ce61bc9f37b293c8c23498efb1680b39e2e0a6720",
-    "candidate-validation-results.json": "423a70bd9708402e527d21c9fb03961764807339bf0f66066db3a9dbdd436e83",
-    "final-checks.json": "f8c48933da49272c60c4d67161af2ce4f8532f51ab70ccb0162e6f6412b7459e",
-    "local-control-results.json": "2b411d923a036e731b73509f6f7b8e16f8b6eb05ab1fdc8f3c0eaee9e91c7c08",
-    "python-all.log": "bc78a95568dcee7859ff5d027f48149b79ae5000410e7207af071adebbc4b5ef",
-    "records-focused.log": "c36375bbd680a67ef16b91b51d8608914b025cf6c6e227dc090a860f3cd93c99",
-    "workflow-current.log": "0687d37a71f796a573f3bc2304926c89ece14e33afe446084baecd0fe26f2025"
+    "C01-04-cleanup.json": "8dce48b146e9c4f789b15e763e4d303bb4adb18feaa18a8976127e7808416704",
+    "IMP-05-01-python-full.log": "5460f10ba41f1dcf08b0f9485f33581d79ac461415b8647cc2acf71c804cb39d",
+    "IMP-05-02-signing-workflow.log": "f12ddbdfbe15410767a9bfeccc528e6f41c78ed932fa2f865bae4aa26b824b0c",
+    "IMP-05-08-mutations.log": "ac7627683afe8fb1b4a409622dff3195044eaed03043edb44f760ae700cd4751",
+    "IMP-05-09-baseline-control.log": "335e8210b8c1840173c9dd4751bbeaefd60fc8fe24d1e8ed96e9b57c91282c00",
+    "R02-04-stale-result.json": "4999c4c9a9dd98c9f945a94563f667f6c121b1f9b081f2d5b0861968fa5a7ec3",
+    "R04-04-reference.json": "2fd7ee3504f5f1bc32bfee6ff677dfc320a991a8cfa5eb55fc4a59b590d506a3",
+    "R04-04-wrapper-refusal-result.json": "e61d76c441daf98cda8eb3f7fd76e68aec7947b23f3b2adf0c9df5d480949129",
+    "R05-04-smoke.json": "77f68c40ab97d191a94d4bf4665c0c92bf897faddfc98ee9b18ea9e0280e78c0"
   },
   "result": "passed",
-  "sourceCommit": "585d416c2746cf2963058d591b0753d0db8088f5"
+  "reusedImplementation": {
+    "checks": [
+      "IMP-05-01",
+      "IMP-05-02",
+      "IMP-05-03",
+      "IMP-05-04",
+      "IMP-05-05",
+      "IMP-05-06",
+      "IMP-05-07",
+      "IMP-05-08",
+      "IMP-05-09"
+    ],
+    "counts": "52 collected51executed1childskip; focused17overlap;4detected mutants/expected baseline failure",
+    "productCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604"
+  },
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f"
 }

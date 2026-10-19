@@ -1,0 +1,327 @@
+test_accepted_and_sanitized_receipt (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) ... test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) ... test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_signal_reports_current_stage_and_cleans_up (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_validation_failures_are_not_credential_dumps (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='CERTIFICATE', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='CERTIFICATE', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='PASSWORD', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='PASSWORD', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='IDENTITY', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='IDENTITY', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_ID', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_ID', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_APP_SPECIFIC_PASSWORD', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_APP_SPECIFIC_PASSWORD', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_TEAM_ID', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_TEAM_ID', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 125, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=validate-inputs exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains:restore')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 134, in test_cleanup_failure_cannot_succeed_or_hide_primary_failure
+    self.run_case('import-certificate', 5, cleanup='failed', FAIL='security:import,'+command)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=import-certificate exit=5 cleanup=failed' not found in ''
+
+======================================================================
+FAIL: test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:delete-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 134, in test_cleanup_failure_cannot_succeed_or_hide_primary_failure
+    self.run_case('import-certificate', 5, cleanup='failed', FAIL='security:import,'+command)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=import-certificate exit=5 cleanup=failed' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=read-search-list exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='openssl:rand')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=keychain-password exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:create-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=create-keychain exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:unlock-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=unlock-keychain exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:set-key-partition-list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=partition-key exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:find-identity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=find-identity exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--force')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=sign exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--verify')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=verify-signature exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:-d')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=inspect-signature exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='ditto:-c')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-archive exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='xcrun:notarytool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 103, in test_command_failures_report_exact_stage_and_exit
+    'xcrun:notarytool':'notary-submit'}
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-submit exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 93, in test_import_failure_receipt_and_secret_safety
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=import-certificate exit=5 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 117, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    for status in ('Invalid', 'Rejected', 'In Progress'):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-accepted exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Rejected')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 117, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    for status in ('Invalid', 'Rejected', 'In Progress'):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-accepted exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='In Progress')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 117, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    for status in ('Invalid', 'Rejected', 'In Progress'):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-accepted exit=1 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 118, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    with self.subTest(status=status):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=notary-submit exit=7 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_signal_reports_current_stage_and_cleans_up (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 128, in test_signal_reports_current_stage_and_cleans_up
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=sign exit=143 cleanup=complete' not found in ''
+
+======================================================================
+FAIL: test_validation_failures_are_not_credential_dumps (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 106, in test_validation_failures_are_not_credential_dumps
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_signing.py", line 70, in run_case
+    self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
+AssertionError: 'Signing failed: stage=decode-certificate exit=1 cleanup=complete' not found in ''
+
+----------------------------------------------------------------------
+Ran 8 tests in 53.964s
+
+FAILED (failures=32)

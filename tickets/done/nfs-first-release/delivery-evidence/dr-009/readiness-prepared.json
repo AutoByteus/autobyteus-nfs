@@ -1,0 +1,13 @@
+{
+  "actualSigningPublicationPending": true,
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "readiness": {
+    "path": "packaging/releases/v0.1.0/readiness.json",
+    "sha256": "751ea6831bdf2da3bed555eb57469d2f67003a34e804a760562ad6615c4d3fdc"
+  },
+  "semanticallyAudited": true,
+  "sourceHash": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd"
+}

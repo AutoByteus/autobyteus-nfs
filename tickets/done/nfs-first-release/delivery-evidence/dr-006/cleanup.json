@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-18T11:13:55.242229+00:00",
+  "ownedScratchRemoved": "/Users/normy/nfs-local-signing-fmmpqlnd",
+  "sourceToolchainHomeTmpCacheBinaryRemoved": true,
+  "keychainSearchListUnchanged": true,
+  "keychainSettingsModified": false,
+  "certificatePrivateKeyExported": false,
+  "credentialsRead": false,
+  "secretReprovisioned": false,
+  "notarySubmission": false,
+  "publicEffects": false,
+  "existingCandidatesPreserved": true,
+  "otherOwnerChangesPreserved": true
+}

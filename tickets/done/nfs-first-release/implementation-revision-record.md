@@ -174,3 +174,74 @@ records do not belong to this new Task.
   Both Mac actual signatures/Accepted notarization, final payload/publication/download
   and current-main gates remain. Deferred field/user plan is not a closure hold.
   No TaskDone/user verification/Terminal. Detailed evidence: ir-004/checks-and-limits.md.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-005 | Delivery / release-deployment-report.md / DR005 | N/A — named signing diagnostic boundary | Local Fix | R3/SR004, ARCH002; CRR005/006, API003 exact-input context; DR005 | Diagnostic correction locally complete; targeted source review required; actual signing remains unresolved |
+
+### IR-005 — Safe signing-stage and cleanup failure diagnostics
+
+- Trigger DR005 Blocked after actual publish=true run39121007787/1 failed both Mac
+  signing steps without any stage/notary receipt. Inputb2c6fdf, already-finalized
+  main7683494 retained. Canonical ticket now tickets/done/nfs-first-release; not TaskDone.
+- Prior IR004 complete/source850dfeb, CRR005sourcePass100/CRR006testPass and API003
+  prepublication95 retain their scope; no actual signing pass established. Current
+  source 75f4dbe5527a7159f536bafcf9448bc2d6a01604; **Large/High confirmed**, no new design/approval.
+- Current result Local Fix complete for diagnostics, ready for source review. Actual
+  signing stage/cause remains unknown until authorized hosted continuation; no false
+  root-cause/credential diagnosis. Current-delta CRR/API N/A—not executed.
+- BEH003/AC003/004/006/008: fixed stage+exit+cleanup on safe stderr and exclusive
+  failure JSON; private output suppressed. Workflow retains only sanitized notary/
+  failure JSON. Accepted/notary exit0/cleanup success still required; original command
+  exit preserved. Failed search-list capture cannot be restored during cleanup.
+- Only existing sign shell/workflow, two affected tests and TESTING/package release
+  guidance changed. No Go/runtime/host guard/engine/installer/authorization change.
+- Validation: baseline missing receipt detected; current17 focused and independent52
+  Python tests (51exec+1expectedGo-childskip) pass; Bash3.2 syntax/ShellCheck/actionlint;
+  four mutants detected. Attempts disclosed, no actual Apple/hosted/field execution.
+- Source hash bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62;
+  prior a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e; engine recipe
+  299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274 unchanged. Stable
+  readiness/engine/candidates preserved but stale for new source; no invented records.
+- Own scratch removed; no live keychain/storage/credentials/remote effects. Prior
+  history byte prefix retained; Delivery documents and previously pushed main untouched.
+- Next fresh Large/High Local Fix source-review route, then current affected API/new
+  complete candidate and Delivery-owned readiness/actual signed release. Field/user
+  deferral unchanged, not a blocker; both-Mac Accepted/signature/public receipts still
+  required. No TaskDone/Terminal. Evidence: implementation-evidence/ir-005/.
+
+#### IR-005 supplemental receipt — DR-006, no new implementation round
+
+Delivery8f05549 records user-requested actual local existing-identity signing Pass
+on independent9fa4e69 (product identical75f4dbe): native arm64 development build,
+Developer ID/runtime/timestamp signature, strict verify and signed version passed;
+normal keychain search list unchanged and owned scratch removed. Evidence belongs
+to Delivery, not a new implementation execution. See delivery-evidence/dr-006/
+summary.md/checks.json/local-result.json/verify.log/details.log/cleanup.json.
+P12/password/ephemeral hosted keychain, Intel signing and notary remain unproven;
+DR005 actual cause unknown and full Delivery Blocked. Carry into existing source
+review/API continuation without restart, new source/approval, speculative secret
+changes or new IR classification. Only current handoff/history updated on receipt.
+
+#### IR-005 supplemental receipt — DR-007, no new implementation round
+
+Delivery14a5661 records actual local Apple Accepted/exit0 at2026-10-19T04:57:21Z,
+submission16cd8853-b4f7-41a3-b676-e99029765633, for the arm64 development diagnostic
+on unchanged75f4dbe product. Delivery verified binary/ZIP and9 preparation-log
+hashes; implementation only read the saved evidence. DR006 local signing evidence
+now has this supplemental local notary result; failed attempt1 HTTP401 is retained.
+User requests official-release continuation and reports updating GitHub password;
+metadata time04:58:54Z does not prove value equality or hosted authentication.
+See delivery-evidence/dr-007/summary.md, verification.json,
+apple-accepted-response.json and github-secret-update-metadata.json.
+
+Prior/current implementation result and Large/High/R3/ARCH002 classification are
+unchanged: IR005 diagnostics locally complete, existing targeted source review and
+current affected API/new complete candidate still required. No new code/tests/IR
+round or duplicate dispatch. DR005 original cause, hosted import/keychain and both
+Mac final signing/Accepted/publication remain unresolved; full Delivery Blocked.
+Retained local diagnostic/candidates, Delivery evidence and pushed main preserved;
+no credential read/change, remote action or field questionnaire. Only own handoff
+and revision record updated; supplemental receipt goes to the existing reviewer.

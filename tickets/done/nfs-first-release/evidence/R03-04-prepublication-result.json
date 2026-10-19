@@ -1,0 +1,67 @@
+{
+  "case": "R03/R01/R02/R04/R05/C01",
+  "step": "Evidence summary for later Delivery acceptance; NOT readiness or release result",
+  "utc": "2026-10-19T05:20:26.503064+00:00",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "productCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "environment": "Reused current IMP Darwin checks plus actual native4 hosted/read-only facade/local CLI",
+  "result": "Pass",
+  "confidencePercent": 95,
+  "scope": "Affected prepublication validation only",
+  "run": 39202907777,
+  "attempt": 1,
+  "candidateReference": {
+    "envelope": {
+      "artifactId": 12165175911,
+      "digest": "sha256:6c6a882fdd72efb06c4f0194d255d7e0fa9a27d30aca9f399921b431f0f84607",
+      "expiresAt": "2027-01-17T05:07:32Z",
+      "runAttempt": 1,
+      "runId": 39202907777,
+      "workflowCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f"
+    },
+    "recordSha256": "523f9cb2aa3cf92eab87264b94c87f1dfff13554a4a339158c3a88ab19f9f1df"
+  },
+  "sourceHash": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd",
+  "engineManifestSha256": "ffeb62714b4853ae8f71b3bddd385451da407de21073de331f38e9bc96a8c179",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:2bfd0091afda13d6d48bae5c629e6e805ee91528fb14bc11daae747f5c3c3738",
+      "linux-arm64": "sha256:f04a3e7f551bc540298b568bfc23d0fb412d05bfe9f6ba9fe7f2960ed032e5c7"
+    },
+    "index": "sha256:2ab8d6aa1ac7cd387f5a48bac17e6c9560c3b4a5b574474c4399c746a980b20e"
+  },
+  "checks": {
+    "native": {
+      "status": "passed",
+      "evidence": "R03-04-summary.json",
+      "targets": [
+        "darwin-amd64",
+        "darwin-arm64",
+        "linux-amd64",
+        "linux-arm64"
+      ],
+      "go": "1.27.2",
+      "racePackagesPerTarget": 7
+    },
+    "releaseControls": {
+      "status": "passed",
+      "repositoryChecks": "Reused IMP-05-01\u201309, exact input; focused17 overlaps full52",
+      "pythonCollected": 52,
+      "pythonExecuted": 51,
+      "pythonStandaloneSkip": 1,
+      "actualAdditionalEvidence": [
+        "R02-04-stale-result.json",
+        "R04-04-verification.json",
+        "R05-04-smoke.json"
+      ]
+    }
+  },
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "actualHostedSigningNotarization": "Not Tested by API004; original DR005 cause UNKNOWN",
+  "publication": "Not Tested; D01/D02 mandatory downstream",
+  "readinessAccepted": false,
+  "apiDurableChanges": []
+}

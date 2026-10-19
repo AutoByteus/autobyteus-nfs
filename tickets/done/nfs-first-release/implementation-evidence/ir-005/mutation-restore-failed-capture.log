@@ -1,0 +1,15 @@
+test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 109, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir005-5fk10slw/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertNotIn('security:list-keychains:restore', trace)
+AssertionError: 'security:list-keychains:restore' unexpectedly found in ['security:list-keychains', 'security:list-keychains:restore']
+
+----------------------------------------------------------------------
+Ran 1 test in 25.726s
+
+FAILED (failures=1)

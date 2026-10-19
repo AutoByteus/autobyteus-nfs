@@ -1,0 +1,9 @@
+{
+  "head": "b2c6fdf79e8dc5df845700d2dc27176770404a47",
+  "branch": "codex/nfs-first-release",
+  "trackedClean": true,
+  "trigger": "DR-005 Local Fix: missing safe signing-stage diagnostics; actual failure cause unknown",
+  "historySha256": "c85d28727dd1bb89deb3999a24b856ee0f812497c5af743b8ca7a2fb6c5f10ab",
+  "fieldTests": "Deferred, not blocker",
+  "remoteActions": "none"
+}

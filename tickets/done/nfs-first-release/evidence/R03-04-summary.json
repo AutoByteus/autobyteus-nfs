@@ -1,0 +1,168 @@
+{
+  "case": "R03",
+  "step": "Completed job log collection",
+  "utc": "2026-10-19T05:17:48.640921+00:00",
+  "source": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "run": 39202907777,
+  "attempt": 1,
+  "jobs": [
+    {
+      "job": 117899501022,
+      "name": "prepare",
+      "conclusion": "success",
+      "log": "R03-04-job-117899501022.log",
+      "excerpt": "R03-04-excerpt-117899501022.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [
+        "2026-10-19T05:07:53.5957512Z Ran 52 tests in 13.616s",
+        "2026-10-19T05:07:53.5957808Z OK (skipped=1)"
+      ],
+      "errors": [],
+      "rawBodySha256": "b390354ff817625cdd5cf8a19ca9d95eaf7e076dc43d5d9cbcc3685520869af2"
+    },
+    {
+      "job": 117899588807,
+      "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117899588807.log",
+      "excerpt": "R03-04-excerpt-117899588807.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [],
+      "errors": [],
+      "rawBodySha256": "cbe6ec822899cf0d8406e35c8c107cc188f29e2b2dd17abc262fd9d38e7db1b4"
+    },
+    {
+      "job": 117899588897,
+      "name": "engine-packages (ubuntu-24.04, amd64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117899588897.log",
+      "excerpt": "R03-04-excerpt-117899588897.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [],
+      "errors": [],
+      "rawBodySha256": "8d87a347f156551bfa6507cc814c1e3c6a977b37c9ce311d0c9267d3856190bf"
+    },
+    {
+      "job": 117900186242,
+      "name": "engine-inputs",
+      "conclusion": "success",
+      "log": "R03-04-job-117900186242.log",
+      "excerpt": "R03-04-excerpt-117900186242.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [],
+      "errors": [],
+      "rawBodySha256": "8e3e855a9833b2a88a820c7189e877805fbdd73aada9458ec5c039949ed2ac6f"
+    },
+    {
+      "job": 117900235988,
+      "name": "engine",
+      "conclusion": "success",
+      "log": "R03-04-job-117900235988.log",
+      "excerpt": "R03-04-excerpt-117900235988.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [],
+      "errors": [],
+      "rawBodySha256": "640abe072f0c531aa59c0d46f48afd3f9af9595435a4fc96f6f498c7acca6f07"
+    },
+    {
+      "job": 117900833165,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117900833165.log",
+      "excerpt": "R03-04-excerpt-117900833165.log",
+      "nativePackagePassLines": [
+        "2026-10-19T05:13:48.4933150Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.261s",
+        "2026-10-19T05:13:48.8717060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.094s",
+        "2026-10-19T05:13:48.9091280Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.070s",
+        "2026-10-19T05:13:49.6536500Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.156s",
+        "2026-10-19T05:13:52.6007900Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.722s",
+        "2026-10-19T05:13:52.6036560Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.130s",
+        "2026-10-19T05:13:52.6061030Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.385s"
+      ],
+      "pythonSummary": [
+        "2026-10-19T05:14:29.7023200Z Ran 52 tests in 22.879s",
+        "2026-10-19T05:14:29.7024440Z OK (skipped=1)"
+      ],
+      "errors": [],
+      "rawBodySha256": "d11fb3d377c3521ee7ef3759fa6d7ed37cc0eb1e850ffa74e3e32a0e17095bc0"
+    },
+    {
+      "job": 117900833244,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117900833244.log",
+      "excerpt": "R03-04-excerpt-117900833244.log",
+      "nativePackagePassLines": [
+        "2026-10-19T05:13:19.3982479Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.501s",
+        "2026-10-19T05:13:19.3982985Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.092s",
+        "2026-10-19T05:13:19.3983434Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.093s",
+        "2026-10-19T05:13:19.3984104Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+        "2026-10-19T05:13:22.5438306Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.235s",
+        "2026-10-19T05:13:22.5438833Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.013s",
+        "2026-10-19T05:13:22.5440674Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.124s"
+      ],
+      "pythonSummary": [
+        "2026-10-19T05:13:46.8560514Z Ran 52 tests in 14.390s",
+        "2026-10-19T05:13:46.8561023Z OK (skipped=1)"
+      ],
+      "errors": [],
+      "rawBodySha256": "dd0f1007ea1742f51b6e22f2c1a81adf43f366958bbce938c7f7f5addb1adf74"
+    },
+    {
+      "job": 117900833252,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117900833252.log",
+      "excerpt": "R03-04-excerpt-117900833252.log",
+      "nativePackagePassLines": [
+        "2026-10-19T05:14:44.0713710Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.383s",
+        "2026-10-19T05:14:44.8015780Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.172s",
+        "2026-10-19T05:14:44.9024070Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.212s",
+        "2026-10-19T05:14:44.9041780Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.156s",
+        "2026-10-19T05:14:48.4519760Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.358s",
+        "2026-10-19T05:14:48.4546380Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.187s",
+        "2026-10-19T05:14:48.4574980Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.154s"
+      ],
+      "pythonSummary": [
+        "2026-10-19T05:15:50.2486200Z Ran 52 tests in 40.376s",
+        "2026-10-19T05:15:50.2486850Z OK (skipped=1)"
+      ],
+      "errors": [],
+      "rawBodySha256": "6aaa7c3b1e46c4bfce7e66120c7e6ec3c4980278c71cadf2ac6ee7738fb588ec"
+    },
+    {
+      "job": 117900833294,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "conclusion": "success",
+      "log": "R03-04-job-117900833294.log",
+      "excerpt": "R03-04-excerpt-117900833294.log",
+      "nativePackagePassLines": [
+        "2026-10-19T05:13:23.2891634Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.095s",
+        "2026-10-19T05:13:23.8155209Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.041s",
+        "2026-10-19T05:13:23.8168636Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.044s",
+        "2026-10-19T05:13:23.8169556Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.024s",
+        "2026-10-19T05:13:26.4885428Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.196s",
+        "2026-10-19T05:13:26.4886392Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+        "2026-10-19T05:13:26.4887305Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.124s"
+      ],
+      "pythonSummary": [
+        "2026-10-19T05:13:58.4165840Z Ran 52 tests in 17.351s",
+        "2026-10-19T05:13:58.4166268Z OK (skipped=1)"
+      ],
+      "errors": [],
+      "rawBodySha256": "dcd735ce5c4e67d381912a148813f3af9efd8285f4b4b99016a5279355946b2d"
+    },
+    {
+      "job": 117901771324,
+      "name": "candidate",
+      "conclusion": "success",
+      "log": "R03-04-job-117901771324.log",
+      "excerpt": "R03-04-excerpt-117901771324.log",
+      "nativePackagePassLines": [],
+      "pythonSummary": [],
+      "errors": [],
+      "rawBodySha256": "bcbfa59f217c0bab19ac3ce02a7ef555173429e546a2588d8dcabc41e3d0743c"
+    }
+  ],
+  "limits": "Actual hosted candidate/native checks, no signing/diagnostic artifact upload or public release proof"
+}

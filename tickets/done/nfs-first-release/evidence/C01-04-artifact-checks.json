@@ -1,0 +1,66 @@
+{
+  "case": "C01",
+  "step": "Final report/evidence/ownership audit",
+  "utc": "2026-10-19T05:20:26.503064+00:00",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "environment": "N ticket only, no runtime rerun",
+  "sourceUnchanged": true,
+  "Delivery10FilesPreserved": true,
+  "historyBytePrefixPreserved": true,
+  "sixCasesCompleted": true,
+  "evidenceJSONValid": true,
+  "secretPatternHits": [],
+  "rawLogWhitespaceExceptions": [
+    {
+      "file": "R03-04-job-117899501022.log",
+      "trailingWhitespaceLines": 10,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900833165.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117899588897.log",
+      "trailingWhitespaceLines": 78,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117901771324.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117899588807.log",
+      "trailingWhitespaceLines": 80,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900833252.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900833244.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900186242.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900833294.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Original captured output; not authored-source whitespace"
+    },
+    {
+      "file": "R03-04-job-117900235988.log",
+      "trailingWhitespaceLines": 62,
+      "reason": "Original captured output; not authored-source whitespace"
+    }
+  ],
+  "pass": true
+}
