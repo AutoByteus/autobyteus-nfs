@@ -1,0 +1,37 @@
+Check: IMP-07-12-mutant-skip-restore
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order', '-v']
+Commit: 3f67e36193c246ca08b49cda818be5c0f94eba51
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_temporary_keychain_preserves_existing_search_entries_and_order (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_temporary_keychain_preserves_existing_search_entries_and_order (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc/source/scripts/tests/test_nfs_release_signing.py", line 134, in test_temporary_keychain_preserves_existing_search_entries_and_order
+    trace = self.run_case()
+  File "/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc/source/scripts/tests/test_nfs_release_signing.py", line 96, in run_case
+    self.assertEqual(json.loads(search_state.read_text()), original_search, 'prior search list changed')
+AssertionError: Lists differ: ['/Users/normy/autobyteus_org/nfs-release-ir[162 chars]-db"] != ['/owned/original.keychain-db', "/owned/a sp[25 chars]-db"]
+
+First differing element 0:
+'/Users/normy/autobyteus_org/nfs-release-ir[87 chars]n-db'
+'/owned/original.keychain-db'
+
+First list contains 1 additional elements.
+First extra element 2:
+"/owned/a space and 'quote;$.keychain-db"
+
++ ['/owned/original.keychain-db', "/owned/a space and 'quote;$.keychain-db"]
+- ['/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc/tmp/nfs-sign-fixture-z_nw_l0v/scratch/nfs-signing.aUGDExP2/signing.keychain-db',
+-  '/owned/original.keychain-db',
+-  "/owned/a space and 'quote;$.keychain-db"] : prior search list changed
+
+----------------------------------------------------------------------
+Ran 1 test in 5.421s
+
+FAILED (failures=1)
+
+Observed exit: 1; expected exit: 1

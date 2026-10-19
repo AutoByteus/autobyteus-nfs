@@ -1,0 +1,11 @@
+{
+  "check": "IMP-07-21",
+  "command": "get_handoff_rules; select single most-specific matching result",
+  "commit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "environment": "team routing",
+  "date": "2026-10-19",
+  "result": "Implementation-owned Local Fix completed; Large/High retained; local checks complete; actual hosted signing unverified",
+  "selectedWhen": "When an implementation-owned Local Fix requested by the code reviewer or delivery engineer is complete, the existing package is task_size=Large or architectural_risk=High, and the updated implementation must return for source review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "duplicateDispatch": false
+}

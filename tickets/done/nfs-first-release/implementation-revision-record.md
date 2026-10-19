@@ -286,3 +286,46 @@ and revision record updated; supplemental receipt goes to the existing reviewer.
   Apple-Actions63fff01 comparison recorded in IMP-06-18. Search-list difference
   remains a lead, not actual root proof; no -A/timestamp weakening/raw-output or
   Electron behavior copied. Same IR006/source, no new dispatch or approval.
+
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-007 | Delivery / release-deployment-report.md / DR011 | N/A — actual hosted sign/unclassified failure | Local Fix | R3/SR004, ARCH002; IR006/CRR009/010/API005 scoped prior results | Local lookup defect corrected; targeted source review; hosted cause/signing unverified |
+
+### IR-007 — Explicit owned-keychain search membership
+
+- Intake79e35392bfe4f795464fecd8c034670b622c1684; source3f67e36193c246ca08b49cda818be5c0f94eba51.
+  Prior IR006 diagnostic-only result and CRR009/010/API005 remain historical exact
+  input. DR011 actual run39210821088/1 failed both Macs sign1/unclassified; notary
+  never reached. No private raw output recovered or cause inferred from that enum.
+- Real native empty/synthetic-keychain probes now establish a local lookup defect:
+  create does not add membership; A/B/A only changing owned membership gives
+  sign1 → sign0/strict verify0/runtime flag → sign1. Synthetic -v validity was
+  false; timestamp was disabled only in this owned non-release probe. No real
+  credential read/export/trust or Apple request. Exact prior lists restored and
+  all owned keys/P12s/keychains/copies removed. Evidence IMP-07-01/02/03/17.
+- BEH003/AC003/004/006: existing signer prepends only the temporary keychain to
+  captured prior list before identity/signing, refuses on configuration failure,
+  preserves exit and exact cleanup restoration. Adds only observed exact
+  identity-prefixed no-identity diagnostic. No -A/default-keychain/trust change,
+  retry, credential reprovision or timestamp/DeveloperID/Accepted weakening.
+- Four paths: sign-macos.sh, signing tests, TESTING.md, packaging/RELEASE.md.
+  All other runtime/engine/workflow/lock/readiness boundaries unchanged. R3/SR004,
+  ARCH002, Large/High/Reviewed confirmed; no new intended behavior or design gap.
+- Local23 focused and58 full (57 executed/1 expected Go-child skip) pass on
+  independent copies; committed final3f67e36. Bash/ShellCheck/actionlint pass;
+  four mutants and original signer fail as required; source hash refreshed to
+  7cb7b6d25794cbacbcf0286d9d0760347d9f15999eb51e981765e4ba8ed37a1a,
+  recipe299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274 unchanged.
+  No unexpected failed product check. Metadata/precommit clarifications in20.
+- Current Local Fix is ready for targeted source review, NOT actual hosted signing
+  or original-root-cause proof. Current-delta CRR/API pending. New applicable
+  current-source complete candidate/readiness and actual BOTH-Mac DeveloperID/
+  Accepted/publication checks remain through API/Delivery. No unchanged Go/Linux,
+  old campaign or field/user repeat; field/user Deferred, not a gate.
+- Current main72b8a4 and prior f830/768 finalizations preserved; no push/dispatch,
+  reset/replay/target merge, release, PM mutation, TaskDone or Terminal. Retained
+  candidates/local diagnostic and other owners untouched; all owned scratch gone.
+  Evidence IMP-07-*; previous handoff retained under implementation-evidence/ir-007/.

@@ -1,0 +1,25 @@
+Check: IMP-07-12-mutant-replace-original-list
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order', '-v']
+Commit: 3f67e36193c246ca08b49cda818be5c0f94eba51
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_temporary_keychain_preserves_existing_search_entries_and_order (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_temporary_keychain_preserves_existing_search_entries_and_order (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc/source/scripts/tests/test_nfs_release_signing.py", line 134, in test_temporary_keychain_preserves_existing_search_entries_and_order
+    trace = self.run_case()
+  File "/Users/normy/autobyteus_org/nfs-release-ir007-_gnedegc/source/scripts/tests/test_nfs_release_signing.py", line 93, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 1 != 0 : Signing failed: stage=configure-search-list exit=1 cleanup=complete diagnostic=not-collected
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.865s
+
+FAILED (failures=1)
+
+Observed exit: 1; expected exit: 1

@@ -1,0 +1,22 @@
+Check: IMP-07-18
+Command: sw_vers; uname -m; /bin/bash --version; python3 --version; openssl version; installed codesign --keychain manual excerpt
+Commit: 3f67e36193c246ca08b49cda818be5c0f94eba51
+Environment: local Darwin; Date: 2026-10-19
+
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+arm64
+GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)
+Python 3.9.6
+LibreSSL 3.3.6
+     --keychain filename
+	     During signing, only search for the signing identity in the
+	     keychain file specified. This can be used to break any matching
+	     ties if you have multiple similarly-named identities in several
+	     keychains on the user's search list.  Note that the standard
+	     keychain search path is still consulted while constructing the
+	     certificate chain being embedded in the signature.
+	     Note that filename will not be searched to resolve the signing
+	     identity's certificate chain unless it is also on the user's
+	     keychain search list.

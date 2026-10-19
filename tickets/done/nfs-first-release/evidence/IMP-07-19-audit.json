@@ -1,0 +1,21 @@
+{
+  "check": "IMP-07-19",
+  "command": "python3 evidence/IMP-07-19-audit.py",
+  "commit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "environment": "Darwin arm64 worktree, source-only inspection",
+  "date": "2026-10-19",
+  "changedPaths": [
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "signNonemptyLines": 179,
+  "unusedTouchedTestImports": [],
+  "priorHistoryPrefixPreserved": true,
+  "finalizedMainAncestor": true,
+  "workflowEngineRuntimeLockReadinessUnchanged": true,
+  "noUserCredentialOrRemoteAction": true,
+  "ownedSyntheticKeychainProbesCleaned": true,
+  "rawDiagnosticWhitespaceExceptions": []
+}
