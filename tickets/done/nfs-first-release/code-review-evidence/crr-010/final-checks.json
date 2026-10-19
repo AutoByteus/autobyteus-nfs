@@ -1,0 +1,15 @@
+{
+  "review": "CRR-010",
+  "protectedFilesUnchanged": true,
+  "deliveryUncommittedFilesPreserved": 9,
+  "priorHistoryPrefixBytes": 30385,
+  "priorHistoryPrefixSha256": "c8c5aae19c595f0ec47b2a1c71b62b52dcf6c1e14ef309ca66a002b385dc44c9",
+  "sourceReportUnchanged": true,
+  "apiAuthoritiesUnchanged": true,
+  "productDelta": [],
+  "reviewerProductExecutions": 0,
+  "ownedRuntimeResources": [],
+  "retainedCandidateAccess": false,
+  "ownWhitespace": "Pass",
+  "scope": "NFS reviewer artifacts only; diagnostic test gate, not actual signing or release Pass"
+}
