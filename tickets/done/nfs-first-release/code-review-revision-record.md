@@ -149,3 +149,29 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-006 | api-e2e-test-review-report.md | API003 prepublication Pass95 / cumulative R3 | N/A — first successful-test result | Pass — test-code gate only | None |
+
+
+### CRR-007 — IR005 signing diagnostics and cleanup source review
+
+- Date2026-10-19; **Implementation Review / round7 / Full Re-Audit of affected release boundary**. Existing bounded IR005 request continues; new signing lifecycle is beyond prior CR-002 imports, so all24 structural checks/full10-category scorecard re-evaluated. No full runtime/architecture/field campaign or new approval.
+- R3/SR004 Approved/Ready / ARCH002; Large/High/Reviewed unchanged. Trigger DR005 actual failed run39121007787/1; IR005 source75f4dbe5527a7159f536bafcf9448bc2d6a01604, evidence9fa4e6968f3239ad1517fc33077eb527d0d76502; docs-only current intake55e45c13297e9f588a61461c41ddb8a754eb647c carries DR006/007.
+- **Pass100.00 — source scope only**, no new findings/follow-ups. Prior CRR005 sourcePass100/CRR006 testPass/API00395 remain exact-input history; no actual hosted cause or final-release success inferred.
+- Six NFS-only paths: signer, workflow, two Python suites and TESTING/package release docs. Fixed stage/code/cleanup diagnostics survive private redirection; sidecar is exclusive; only completed search-list snapshots may restore; primary nonzero survives cleanup failure; Accepted+command0+cleanup success mandatory. No Go/engine/installer/pin/target/authorization change.
+
+#### Prior Finding Resolution
+
+| Finding / boundary | Prior | Current | Evidence |
+| --- | --- | --- | --- |
+| CR-001 Mac empty argv | Resolved | Still resolved | Nonempty mandatory argv unchanged; existing Bash prefix controls retained. |
+| CR-002 imports | Resolved CRR005 | Still resolved | Import owners unchanged; no new touched-file dead binding. |
+| DR005 diagnostic boundary (no CR ID) | Local Fix requested; actual cause unknown | Diagnostic/cleanup source accepted; actual hosted cause remains unknown | CG013–015, script/workflow/payload trace, IMP05 checks; old failed run remains failed. |
+
+- Read implementation Checks Run first. Reused exact75f4dbe IMP05 Python52collected/51executed/1expectedskip and17overlapping focused, Bash3.2/lint/hash/refusal/fourmutants/baseline controls; no repeated product check merely for independence. Reviewer ran only source/size/own-artifact audits; all127 current non-ticket bytes match. Raw failed attempts and whitespace exceptions retained, not source failures.
+- DR006 local existing-key sign/verify/version and DR007 actual Apple Accepted/exit0 (16cd8853-b4f7-41a3-b676-e99029765633) are Delivery/user **development arm64** evidence, not reviewer/implementation execution or official/hosted/Intel qualification. First HTTP401 preserved; secret metadata update proves no value equality. No secret read/reprovision request.
+- Current sourcehashbf6b1732… differs from recordeda425e3…; recipe299db701… unchanged. Require new complete current-source candidate/affected API, then Delivery genuine readiness/current-main/both-Mac sign+Accepted/finalpayload/immutable release/public checks. Do not relabel candidates or replay completed main7683494 finalization. Field/user work remains Deferred; plan custody unchanged.
+- Prior CRR001–006 entire19704-byte prefix retained; canonical test report/source/API/Delivery inputs preserved except this intended source-report update. No source/test edits, remote/live/keychain/credential/retained-diagnostic action or reviewer runtime resource. Only NFS review artifacts. No release/TaskDone/Terminal.
+- Fresh most-specific source-Pass rule selects one API recipient; routing/receipt in code-review-evidence/crr-007. No duplicate Implementation/Designer/Delivery/PM dispatch. Local notarization supplement does not restart the review.
+
+| Revision | Canonical report | Trigger | Prior applicable result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-007 | code-review-report.md | IR005 / DR005 diagnostic correction; DR006/007 supplements | CRR005 Pass100 (prior source) | Pass100 — source scope | None new; CR-001/002 remain resolved |
