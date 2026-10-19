@@ -1,0 +1,20 @@
+Check: IMP-09-05/omit-admission
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'test_nfs_release_recovery.RecoveryTest.test_missing_authorization_blocks_effects_but_inspection_is_read_only', '-v']
+Commit: 4c665e0eb23adf1f9bb45363a496b7786e76b138 plus isolated mutant publication.py
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:25:12.461509+00:00
+
+test_missing_authorization_blocks_effects_but_inspection_is_read_only (test_nfs_release_recovery.RecoveryTest) ... FAIL
+
+======================================================================
+FAIL: test_missing_authorization_blocks_effects_but_inspection_is_read_only (test_nfs_release_recovery.RecoveryTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/scripts/tests/test_nfs_release_recovery.py", line 75, in test_missing_authorization_blocks_effects_but_inspection_is_read_only
+    with self.assertRaisesRegex(ValueError,'authorization required'):p.publish(self.f.p,self.f.c,self.f.binding)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 4.584s
+
+FAILED (failures=1)

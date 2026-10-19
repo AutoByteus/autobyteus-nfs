@@ -1,0 +1,7 @@
+Check: IMP-09-10/whitespace
+Command: ['git', 'diff', '--check', '22205cc84a29e6aa66ba5673b0a60c8db95ddc80^', '22205cc84a29e6aa66ba5673b0a60c8db95ddc80']
+Commit: 22205cc84a29e6aa66ba5673b0a60c8db95ddc80
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:29:41.389558+00:00
+
+Evidence note: command produced no output; exit 0 recorded in the checks result.

@@ -1,0 +1,17 @@
+{
+  "check": "IMP-09-14",
+  "step": "git diff --cached --check; exact 2 raw-log exceptions; staged path ownership and prior revision-prefix assertions",
+  "date": "2026-10-19T08:33:57.340892+00:00",
+  "commit": "22205cc84a29e6aa66ba5673b0a60c8db95ddc80",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "result": "pass with disclosed raw-log whitespace exceptions",
+  "rawWhitespaceWarnings": [
+    "tickets/done/nfs-first-release/evidence/IMP-09-03-python.log:47: trailing whitespace.",
+    "+test_exact_authority_schema_binding_and_evidence (test_nfs_release_recovery.RecoveryTest) ... ",
+    "tickets/done/nfs-first-release/evidence/IMP-09-05-recreate-known-draft.log:7: trailing whitespace.",
+    "+test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest) ... "
+  ],
+  "stagedPathsOwned": true,
+  "priorIR001to008PrefixPreserved": true,
+  "productionAndOtherOwnersUnstagedAndUnchanged": true
+}

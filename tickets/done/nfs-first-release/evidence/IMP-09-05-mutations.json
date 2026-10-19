@@ -1,0 +1,54 @@
+{
+  "check": "IMP-09-05",
+  "date": "2026-10-19T08:25:12.461509+00:00",
+  "commit": "4c665e0eb23adf1f9bb45363a496b7786e76b138",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "scratch": "/Users/normy/nfs-ir009-mutants-2wbif1uq",
+  "checks": [
+    {
+      "mutant": "omit-admission",
+      "test": "test_nfs_release_recovery.RecoveryTest.test_missing_authorization_blocks_effects_but_inspection_is_read_only",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-omit-admission.log"
+    },
+    {
+      "mutant": "omit-full-tree-scope",
+      "test": "test_nfs_release_recovery.RecoveryTest.test_excluded_generated_drift_is_rejected_by_admission",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-omit-full-tree-scope.log"
+    },
+    {
+      "mutant": "verify-payload-at-executor",
+      "test": "test_nfs_release_recovery.RecoveryTest.test_distinct_git_context_full_chain_and_fresh_refusal",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-verify-payload-at-executor.log"
+    },
+    {
+      "mutant": "published-only-discovery",
+      "test": "test_nfs_release_publication.PublicationTest.test_published_only_404_does_not_hide_draft",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-published-only-discovery.log"
+    },
+    {
+      "mutant": "recreate-known-draft",
+      "test": "test_nfs_release_recovery.RecoveryTest.test_missing_known_draft_wrong_job_and_main_dispatch_refuse",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-recreate-known-draft.log"
+    },
+    {
+      "mutant": "omit-main-freshness",
+      "test": "test_nfs_release_publication.PublicationTest.test_fresh_resume_completed_and_stage_drift",
+      "exit": 1,
+      "detected": true,
+      "log": "IMP-09-05-omit-main-freshness.log"
+    }
+  ],
+  "result": "pass",
+  "cleanup": "owned mutant clone/home/tmp/cache removed"
+}

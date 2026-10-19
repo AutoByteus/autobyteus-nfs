@@ -1,0 +1,20 @@
+Check: IMP-09-05/omit-full-tree-scope
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'test_nfs_release_recovery.RecoveryTest.test_excluded_generated_drift_is_rejected_by_admission', '-v']
+Commit: 4c665e0eb23adf1f9bb45363a496b7786e76b138 plus isolated mutant recovery.py
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:25:12.461509+00:00
+
+test_excluded_generated_drift_is_rejected_by_admission (test_nfs_release_recovery.RecoveryTest) ... FAIL
+
+======================================================================
+FAIL: test_excluded_generated_drift_is_rejected_by_admission (test_nfs_release_recovery.RecoveryTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/scripts/tests/test_nfs_release_recovery.py", line 124, in test_excluded_generated_drift_is_rejected_by_admission
+    with self.assertRaisesRegex(ValueError,'Unreviewed recovery change'):self.admit()
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 6.216s
+
+FAILED (failures=1)

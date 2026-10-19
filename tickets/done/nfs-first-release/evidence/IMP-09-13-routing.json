@@ -1,0 +1,11 @@
+{
+  "check": "IMP-09-13",
+  "step": "Fresh get_handoff_rules; select single most-specific matching completed Large/High implementation Local Fix route.",
+  "date": "2026-10-19T08:33:35.704273+00:00",
+  "commit": "22205cc84a29e6aa66ba5673b0a60c8db95ddc80",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "when": "When an implementation-owned Local Fix requested by the code reviewer or delivery engineer is complete, the existing package is task_size=Large or architectural_risk=High, and the updated implementation must return for source review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "classification": "Large/High confirmed; DR013 repair completed under SR005/ARCH003 after IR008 design return",
+  "otherRoutes": "General completed Large/High shares same recipient but Local Fix is more specific; Low/direct and Design Impact do not match. No other outcome recipient."
+}

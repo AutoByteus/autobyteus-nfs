@@ -370,3 +370,46 @@ and revision record updated; supplemental receipt goes to the existing reviewer.
   changes. Delivery owns remaining actual publication checks; field/user Deferred.
 - Route only Solution Designer for this demonstrated technical gap. No duplicate
   source/API/Delivery dispatch, no delegation, TaskDone or Terminal claim.
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-009 | Architecture Reviewer / design-review-report.md / ARCH-REV-003, after DR013/IR008 | IMP-08-02; actual draft-discovery failure | Rework; Large/High confirmed | R3/SR004 Approved; SR005 Ready; ARCH003; prior IR007/API006/CRR012/DR013 carried; current CRR/API N/A pending | Implementation Complete; Ready for independent source review |
+
+### IR-009 — Reviewed executor and immutable payload recovery
+
+- Prior result IR008 Design Impact; SR005/ARCH003 resolves that technical authority
+  gap without new user behavior/version approval. Input630cc997; implementation
+  ccf3d5b then4c665e0; final source/tests22205cc84a29e6aa66ba5673b0a60c8db95ddc80.
+- BEH001–003/006, AC001–004/006: explicit Git-proven SourceContext through the full
+  existing validators; recovery admission fixes P/H/E ancestry, full-tree scope,
+  unchanged original lock/releases and H/E executable hash equality. Read-only
+  inspect-bound is not authority. No real authorization created by implementation.
+- Publisher replaces by-tag draft assumption with bounded unique list/direct-ID
+  discovery; known417014769 absence refuses. Exact-ID streamed uploads/readback,
+  attempted-effect journal and E-main/original-tag/release guards protect same-byte
+  recovery. Workflow uses E checkouts and recover skips build/native/sign/payload/bind.
+  Guides and endpoint/full-path real-Git fixtures changed together. No old-code
+  execution, ROOT/hash bypass, fallback schema or source-hash exclusion.
+- BEH004/005 runtime/installer/host safety, engine/signer/pins/licenses and original
+  readiness/payload bytes unchanged. Executor hash e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21;
+  original P hash3e1af43a… retained. Source size max388 nonempty; publication's
+  >220 delta assessed with designed projection/admission split. No dead imports.
+- Independent clone full Python at4c665:72 collected/71 executed/1 expected Go-child
+  skip, all executed pass. Test-only22205cc preserves four older meaningful refusal
+  controls explicitly; affected publication15/15 pass. Actionlint/Bash/hash/whitespace
+  pass. Six isolated mutants detected. Current full validators pass actual retained
+  candidate/payload and saved DR013 job/draft proof; original inputs unchanged,
+  actual authorization absent/refused. Evidence IMP-09-05/06/07/10/11.
+- Initial owned-temp alias failure disclosed/fixed (01); initial focused54 pass(02).
+  User-interrupted03 has no verdict; partial log retained and owned scratch cleaned.
+  Earlier04/08 checks retain their exact source attribution; no relabelling.
+- Actual BOTH-Mac signing/Accepted remains DR013 evidence, not rerun. No fresh remote,
+  hosted recover, public upload/OCI/install, actual authorization or release verdict.
+  Prior main238/72/f830/768, immutable tag/draft/artifact12169472209 and retained
+  candidates/payload/local diagnostic untouched. All owned scratch removed.
+- Next configured Code Review then affected API; Delivery owns genuine H→E admission,
+  fresh targets and same-byte publication/public verification. Large/High unchanged,
+  no new design impact. Field/user Deferred, no questionnaire/campaign. No push,
+  finalization replay, PM/other-repo/live-storage changes, TaskDone or Terminal.
