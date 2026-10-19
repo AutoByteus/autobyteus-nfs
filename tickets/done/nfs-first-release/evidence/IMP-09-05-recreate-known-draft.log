@@ -1,0 +1,19 @@
+Check: IMP-09-05/recreate-known-draft
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'test_nfs_release_recovery.RecoveryTest.test_missing_known_draft_wrong_job_and_main_dispatch_refuse', '-v']
+Commit: 4c665e0eb23adf1f9bb45363a496b7786e76b138 plus isolated mutant publication.py
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:25:12.461509+00:00
+
+test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest) ... 
+======================================================================
+FAIL: test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest) (kind='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/scripts/tests/test_nfs_release_recovery.py", line 168, in test_missing_known_draft_wrong_job_and_main_dispatch_refuse
+    with self.assertRaises(ValueError):p.publish(self.f.p,self.f.c,self.f.binding)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 29.950s
+
+FAILED (failures=1)

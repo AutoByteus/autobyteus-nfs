@@ -8,6 +8,7 @@ The canonical `design-review-report.md` is authoritative. This record indexes co
 | --- | --- | --- | --- | --- | --- |
 | ARCH-REV-001 | 1 — original design handoff, resumed after poweroff | SR-002 / SR-003 | N/A | Pass | None |
 | ARCH-REV-002 | 2 — approved release-first readiness/install-admission delta | SR004 / R3 | Pass (SR003 only) | Pass | None |
+| ARCH-REV-003 | 3 — IR008 immutable-publication executor/draft recovery | SR005; R3/SR004 unchanged | Pass (SR004 only) | Pass | None; IMP-08-02 design addressed |
 
 ## Revision Entries
 
@@ -58,3 +59,31 @@ None.
 - Fresh routing: primary implementation-ready Pass rule selects **`/software_engineering_team/implementation_engineer`**. Controlling single-most-specific-recipient convention: only that replacement-basis handoff; no duplicate informational/SD/PM/API/Delivery dispatch. Tool receipt is the forwarding record.
 - Remaining evidence: NEW reviewed-source candidate and affected API controls, actual final Developer ID/Accepted notarization, public downloads/OCI and release/finalization/cleanup. Historical API002 Blocked73.57/build39113335636/artifact12131531399 and old candidate remain untouched, not repurposed as current Pass. Field/user tests remain Deferred with Delivery → terminal SD → PM custody.
 - Final document checks: all28 template sections in order; prior ARCH001 entry unchanged; only two reviewer tracked files changed; whitespace clean; all16 Delivery-owned untracked file hashes unchanged.
+
+
+### ARCH-REV-003 — Corrected executor, immutable original payload and draft-ID recovery
+
+- Date/review round: **2026-10-19 / 3**.
+- Canonical design review report: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/design-review-report.md`. Existing canonical archived folder is active recovery authority; historical path strings above remain unchanged.
+- Triggering role/report: Solution Designer SR005 handoff following Implementation IR008 hold, `evidence/IMP-08-02-design-impact.md`; actual DR013 tag/draft failure, not a speculative lifecycle. Related solution revision **SR005**, approved **R3/SR004 unchanged**.
+- Reviewed HEAD `8a2d504679961556f9aacd385a342b869c6d69cd`; prior intake032c4e50; local non-ticket source equals immutable payload P238bdc183e8affac99ffdee9be9cb333b0eb126f. Remote freshness remains DR013.
+- Prior authoritative decision: **ARCH-REV-002 Pass, SR004 only**. Current decision: **Pass, ARCH-REV-003 / SR005**. No product reapproval or source success inferred.
+- Changed result/basis: confirmed R3 same-payload SCN006/REQ006/AC004, affected BEH003/006 and retained BEH001/002/004/005. Traced actual post-draft failure and all implicit source/HEAD readers. D2 propagates Git-proven P SourceContext through current full validators; D3 separately binds reviewed H/current E with fixed repair scope and genuine authorization. D4 corrects visibility/discovery and all asset effects to one uniquely correlated release ID. D5 skips build/sign/payload/bind on recover and records E versus P externally. Fresh current-source rules and original bytes/records remain strict.
+
+#### Prior Finding Resolution
+
+No prior unresolved architecture finding.
+
+| Item | Prior status | Current disposition | Verification evidence |
+| --- | --- | --- | --- |
+| IMP-08-02 (Implementation diagnosis) | Dependent implementation held for Design Impact | Addressed in design; implementation/proof still pending | SR005 D2–5/DS5, independent source trace and saved actual DR013 state |
+| MP001 interrupted publication | Supported existing recovery premise | Extended to actual corrected-executor gap; Reachable | Actual successful payload then tag/draft/failure; old candidate/payload/main identity coupling |
+| MP004 draft invisibility | Newly explicit material premise | Reachable; design response proportionate | DR013 list/direct-ID vs by-tag404, current release()/reconcile_release(), official API contract |
+| MP002 / MP003 | Physical prerequisite superseded / installer claim separation retained | Unchanged; no new work | R3 deferral and excluded unchanged runtime/installer scope |
+
+- Checks: source/doc/evidence read-only analysis; current Git source-scope check; official GitHub release/assets/attempt-jobs contracts; no product tests/builds/CI/signing/credentials/remote repository/publication or retained-payload actions. Source CRR011/test CRR012 and API006 reused only at their scopes.
+- Carried success: actual DR013 both Mac Developer ID/Accepted and exact downloaded retained-payload binary hashes examined. Earlier signing failures/unknown causes remain historical, not recreated or relabelled. Publication remains incomplete.
+- New/remaining architecture finding IDs: **None**. Failure classification **N/A**; **Large / High** retained.
+- Fresh routing selects **`/software_engineering_team/implementation_engineer`**, primary implementation-ready Pass rule. Single most-specific recipient only; no duplicate SD/PM/API/Delivery outcome notification. Tool receipt records delivery.
+- Remaining risk/evidence: corrected context/admission/transport/workflow implementation and affected API proof, genuine Delivery authorization, fresh remote state and exact same-byte hosted publication/public downloads/OCI/signatures/install/cleanup. Preserve P/tag/draft417014769/job117940491787/artifact12169472209 and retained paths. No repeat signing/candidate/engine campaign solely for executor repair. Field/user Deferred custody unchanged; no new product question/version or NFS-external work.
+- Final artifact checks: all28 report sections in order, prior ARCH001/002 entries preserved, only two reviewer paths changed, whitespace clean; non-ticket source unchanged at P238. No new evidence manifest or copied history.

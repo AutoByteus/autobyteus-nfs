@@ -1,0 +1,36 @@
+[
+  {
+    "artifactId": 12169468241,
+    "name": "nfs-signing-darwin-amd64",
+    "wrapperSha256": "db910aeabe1d92ace21f7398675bcd103a06247bbbc30762c4b5516d737c39db",
+    "members": [
+      {
+        "name": "darwin-amd64-notary.json",
+        "sha256": "aefcd926f29858ea48b7928cc9ea4f46f8e59a8a11755c769871f66f5249e552",
+        "receipt": {
+          "status": "Accepted",
+          "submissionId": "563db88f-7ded-48ba-9d90-bcdbf8705961",
+          "teamId": "7Y86YBQ7B4",
+          "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e"
+        }
+      }
+    ]
+  },
+  {
+    "artifactId": 12169197566,
+    "name": "nfs-signing-darwin-arm64",
+    "wrapperSha256": "9c14365ac53e5da46a445fbd6ce88f3c8264976ef14ad6cf1dad74076035e76d",
+    "members": [
+      {
+        "name": "darwin-arm64-notary.json",
+        "sha256": "709ad85c8805b2c83885a6e310972055ae342e9c8ef86640b4718caf5f2f6d28",
+        "receipt": {
+          "status": "Accepted",
+          "submissionId": "52450985-4e16-482e-b22a-d7b15b8791b7",
+          "teamId": "7Y86YBQ7B4",
+          "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408"
+        }
+      }
+    ]
+  }
+]

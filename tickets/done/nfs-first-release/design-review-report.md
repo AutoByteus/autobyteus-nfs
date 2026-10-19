@@ -3,275 +3,280 @@
 ## Review Round Meta
 
 - Task: `autobyteus-nfs-3` / `project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5`.
-- Date / reviewer: 2026-10-18 / architecture reviewer; personal execution, no delegation.
-- Workspace: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`; branch `codex/nfs-first-release`.
-- Upstream Requirements Doc: `requirements-doc.md`, **R3/SR004 Approved**.
-- Upstream Investigation Notes: `investigation-notes.md`, especially E19–22 and current supplement inventory; E01–18 retained historical context.
-- Upstream Solution Revision Record: `solution-revision-record.md`, SR004 changed-basis recovery.
-- Reviewed Design Spec: `design-spec.md`, **SR004 Ready**; `solution-design-handoff.md`.
-- Supplemental Task Artifacts Reviewed: `approval-record-sr004.md`, `postpublication-testing-plan.md`, Delivery's exact `delivery-evidence/dr-003/user-publish-first-direction.json`, API002 coverage report, current code-review report, SR004 artifact audit; prior signing provisioning receipts and ARCH001 retained as scoped context.
-- Relevant Solution Revision IDs: **SR004** replaces SR003's physical/user prepublication requirement, not its signing/integrity/host-safety contract.
-- Architecture Review Revision Record: `architecture-review-revision-record.md`.
-- Current Architecture Review Revision ID / round: **ARCH-REV-002 / 2**.
-- Trigger: approved release-first direction and corresponding readiness/install-admission design change, not poweroff continuation or a retroactive R2 source defect.
-- Prior Review Round Reviewed: **ARCH-REV-001 Pass**, SR003 only, committed in `2051fd9559f4f4fa7beae68723429f8199b50004` and already dispatched. No unresolved findings. This is a replacement-basis dispatch, not another original implementation copy.
-- Latest Authoritative Round: this report / **ARCH-REV-002**. ARCH001 remains historical in Git and the cumulative record.
-- Reviewed HEAD: `bc1f1bbb13bb35180625b71ad12117452e79780c`; intake `a5f57097578f9503eff0beb120dbc9e33e194eef`; prior product `8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34` / IR002 / CRR003. Last reported main `7e375984be2bea7a4d536e43cc59d6bc2b116870`; no fresh remote/main claim by this review.
-- Current-State Evidence Basis: current approval/requirements/design/history/plan; root AGENTS/DESIGN/TESTING/RELEASE and packaging release guidance; focused current `release.py`, `release_support/{qualification,candidate,payload,publication,identity}.py`, engine manifest lock writer, installer, `setup.Release`, `VerifyRelease`, CLI dispatch and `config.Decode`. Inspected the complete affected caller/metadata chain, not a new full runtime/source audit. Shared review principles/template and Example 9 applied.
-- Validation limits: read-only code/document analysis and reviewer artifact checks only. No product tests/builds, CI dispatch, credential access, live storage, retained-candidate modification or publication. ARCH001's unchanged external-contract review is reused, not represented as a new remote audit. Six secret entries are provisioned; import/notary success is still unproven.
+- Date / reviewer: **2026-10-19**, architecture reviewer; personal execution, no delegation.
+- Workspace / branch: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, `codex/nfs-first-release`.
+- Canonical ticket: `tickets/done/nfs-first-release` (T below). This location is not a completed-release verdict; do not recreate the historical in-progress path.
+- Upstream Requirements Doc: T/requirements-doc.md, **R3/SR004 Approved unchanged**; SR005 evidence-only context explicitly supersedes stale baseline observations, not requirements.
+- Upstream Investigation Notes: T/investigation-notes.md, E23–26 and supplement inventory; prior context retained.
+- Upstream Solution Revision Record: T/solution-revision-record.md, SR005 technical Design Impact recovery.
+- Reviewed Design Spec: T/design-spec.md, **SR005 Ready**, D1–5 and DS1–5/5a/5b; T/solution-design-handoff.md.
+- Supplemental Task Artifacts Reviewed: unchanged approval-record-sr004.md/postpublication-testing-plan.md; IMP-08-02-design-impact.md; DR013 failure, draft reconciliation, publication/job, retained-payload/signing records; prior review history; API006 and source CRR011/test CRR012 authorities at their stated scopes.
+- Relevant Solution Revision IDs: **SR005**, approved basis R3/SR004. Prior SR004 design remains applicable only where retained.
+- Architecture Review Revision Record: T/architecture-review-revision-record.md.
+- Current Architecture Review Revision ID / round: **ARCH-REV-003 / 3**.
+- Trigger: IR008 hold following actual DR013 post-tag/draft publication failure and corrected-executor/source identity gap. No new business decision or credential request.
+- Prior Review Round Reviewed: **ARCH-REV-002 Pass for SR004**, no unresolved findings; ARCH001/002 entries preserved, not inferred or rewritten.
+- Latest Authoritative Round: this report / ARCH-REV-003.
+- Reviewed HEAD: `8a2d504679961556f9aacd385a342b869c6d69cd`; SD intake `032c4e50b265f045277241f30b4982449af495c3`. Local Git non-ticket diff from payload source `238bdc183e8affac99ffdee9be9cb333b0eb126f` is empty. Last remote freshness is DR013, not this review.
+- Current-State Evidence Basis: root AGENTS/DESIGN/TESTING/RELEASE and packaging/RELEASE; complete affected facade/workflow and identity/candidate/readiness/payload/publication chains; engine validator/pins relationship; publication fixtures that mock the defective lookup; saved actual DR013 observations. Shared principles/template, Example 9 and updated handoff-references read. No full runtime/signing re-audit.
+- Limits: read-only source/evidence/primary-document inspection and reviewer-document checks. No product tests, reproduction rerun, retained-candidate/payload access or mutation, builds, signing/secret operations, CI dispatch, remote repository actions, live storage or publication.
+
+Independent primary checks on 2026-10-19 confirm that by-tag retrieval is for published releases, draft listings require push access, and list/direct-ID APIs support D4's distinct discovery boundary. Read-token absence is not draft absence. [GitHub releases API](https://docs.github.com/en/rest/releases/releases). Release-ID asset inventory and release-specific raw upload URLs support ID-scoped transport; duplicate filenames refuse, while a failed upload may leave an incomplete asset. SR005 deliberately refuses that state rather than deleting it. [GitHub release assets API](https://docs.github.com/en/rest/releases/assets). Exact-attempt job listings expose job IDs/status/conclusion for original-payload admission. [GitHub workflow jobs API](https://docs.github.com/en/rest/actions/workflow-jobs#list-jobs-for-a-workflow-run-attempt). These are contract checks, not fresh observations of the task's remote state.
 
 ## Routing Classification Review
 
-- Task size: **Large**. Architectural risk: **High**. Independent Architecture Review: **Yes**.
-- Rationale confirmed: one changed policy crosses lock/readiness records, candidate/final metadata, Go installer admission, payload/provenance, immutable publication and truthful follow-up. Privileged tooling becomes publicly installable before field testing; signing and source identity remain consequential boundaries.
-- Proportionate delta review is appropriate. No classification correction, reopening of extraction, or broad filesystem campaign is warranted.
+- **Large / High; independent review required: Yes.** Retained whole-task classification is also justified by this delta: explicit source context across multiple validators, corrected-executor admission, workflow lifecycle and immutable external effects.
+- Payload/evidence volume is not the rationale. The two new files own concrete snapshot and authorization responsibilities, not a new release platform. No classification correction required.
 
 ## Upstream Behavior And Production-Path Basis Confirmation
 
-**Overall: Confirmed.** Exact user direction approves official signed publication before field/user testing; it is not a test receipt. R3's UC001–005, SCN001–008, scope guardrail and review authority align with D1–4. Normal-only v0.1.0/four targets remain; actual field/physical/user tests are **Deferred**, not release-task closure prerequisites. Current-source checks, signing/Accepted notarization, integrity, actual publication/downloads and named follow-up custody remain required. No outstanding intended-behavior ambiguity. Every prospective Design Impact must trace to R3 or a retained contract; none remains.
+**Overall: Confirmed.** R3 requires same-payload recovery (SCN006/REQ006/AC004), not a frozen defective publisher. The already-bound product is distinct from tools completing its publication. R3's normal v0.1.0/four targets, release-first/field-deferred decision, signatures, exact engine/OCI and host protection remain. SR005 changes the technical execution boundary only. No new version, re-signing, field campaign or user approval is required by this design. Scope is NFS-only: no workspace/shared skill/agent package/superrepo/app/PM mutation. Every prospective Design Impact is traceable to these approved contracts; none remains.
 
 | Behavior ID | Kind | Intent alignment | Approved trigger / current evidence | Target outcome / spine coherence | Status | Required action |
 | --- | --- | --- | --- | --- | --- | --- |
-| BEH001 | Operational | Pass | Pass — SCN001 candidate dispatch; API002 proves old candidate flow, identity/candidate source readers reject changed inputs | Pass — DS1 new four-target candidate; no publication or field claim | Confirmed | New actual candidate after implementation, not old-record edits |
-| BEH002 | Contract | Pass | Pass — REQ003/004/006; qualification currently requires physical/user success at every effect boundary | Pass — DS2 singular readiness validates retained actual checks, release-first authority and explicit deferrals | Confirmed | Implement D1; genuine evidence remains API/Delivery-owned |
-| BEH003 | Operational | Pass | Pass — SCN003/006; current payload/publication owns staged signing and immutable retry | Pass — DS3/5 reuse those owners, replacing only readiness/provenance consumption | Confirmed | Preserve retained payload and non-clobber ordering |
-| BEH004 | User | Pass | Pass — SCN004 versioned install calls VerifyRelease before writes; current QualifiedTargets rejects empty candidate metadata | Pass — DS4 schema2 releaseTargets admits distribution, explicit deferred notice, unchanged integrity | Confirmed | Implement producer/consumer changes together; no false qualification |
-| BEH005 | Contract | Pass | Pass — REQ007/010; Release supplies engine pins/image, not installed host-record schema; config.Decode is tolerant for host records | Pass — strict release-only admission leaves host decoder, state, consent and storage behavior untouched | Confirmed | No host-state migration or live setup |
-| BEH006 | Operational | Pass | Pass — SCN007/008; explicit user test-after-publication instruction plus approved custody plan | Pass — policy docs/notes align; Delivery → terminal Solution Designer → requesting PM carries follow-up | Confirmed | Record actual identities/custody; no premature Task completion |
+| BEH001 | Operational | Pass | Pass — SCN001 ordinary candidate dispatch and current source hashing | Pass — DS1 fresh candidate remains current-context strict; recovery cannot generate old-source binaries | Confirmed | Preserve fresh-mode negative controls |
+| BEH002 | Contract | Pass | Pass — REQ003/004/006; original readiness/candidate and DR013 signing are identity-bound | Pass — DS2/D2 verifies original inputs in P; H/E evidence is separate, no rewritten old readiness | Confirmed | Current verifiers, full context propagation |
+| BEH003 | Operational | Pass | Pass — actual authorized run stopped after tag/draft, saved DR013 + current release/reconcile path | Pass — DS5 separately admits E/H and verifies P, then reconciles exact selected release ID | Confirmed | Implement D2–5; no arbitrary source override |
+| BEH004 | User | Pass | Pass — public installer/version contract from R3 | Pass — DS4 original signed payload/installer/metadata unchanged | Confirmed | Final public-byte checks remain Delivery-owned |
+| BEH005 | Contract | Pass | Pass — host/runtime/source guards remain approved | Pass — fixed repair scope excludes runtime, engine, installer, signing and host records | Confirmed | No migration or live setup |
+| BEH006 | Operational | Pass | Pass — SCN007/008 truthful receipts/custody | Pass — external receipt distinguishes executor E/H from product P; existing field follow-up unchanged | Confirmed | No false source attribution or TaskDone |
 
-Prior unresolved findings were checked after confirming this basis: **None**. Old R2 prerequisites are superseded authority, not defects to repair or findings to carry forward.
+Prior unresolved architecture findings rechecked after establishing the basis: **None**. IMP-08-02 is a downstream design-impact diagnosis addressed by the new design, not a claim that implementation is fixed. Earlier signing uncertainties do not override the later exact DR013 success evidence.
 
 ## Supplemental Artifact Coherence Verdict
 
-| Artifact | Purpose/scope | Linked | Complete | Consistent | Status/approval clear | Required action |
+| Artifact | Purpose/scope clear | Linked | Complete | Consistent | Status/approval clear | Required action |
 | --- | --- | --- | --- | --- | --- | --- |
-| approval-record-sr004.md + exact Delivery direction | Pass | Pass | Pass | Pass | Pass | No renewed publication/host questionnaire |
-| postpublication-testing-plan.md | Pass | Pass | Pass | Pass | Pass | Delivery binds actual release identities; terminal SD transfers once to PM; no invented Task ID |
-| API002 report / retained candidate | Pass | Pass | Pass | Pass | Pass | Preserve historical Blocked73.57 and actual build; new source requires new result/candidate |
-| IR002 / CRR003 / ARCH001 histories | Pass | Pass | Pass | Pass | Pass | Old-basis evidence only; new changes need applicable checks/review |
-| SR004 administrative audit / E19–22 | Pass | Pass | Pass | Pass | Pass | Source/preservation assertions are not executable proof |
-| Signing receipts / prior intake | Pass | Pass | Pass | Pass | Pass | Provisioned, not signed/notarized; no credential reprovisioning absent real failure |
+| R3 approval / postpublication plan | Pass | Pass | Pass | Pass | Pass | Retain field/user Deferred and existing custody |
+| IMP-08-02 diagnosis and linked offline probe | Pass | Pass | Pass | Pass | Pass | Actual-path diagnosis, not repaired-product acceptance |
+| DR013 failure/draft/publication observations | Pass | Pass | Pass | Pass | Pass | Preserve tag/draft/body/binding; refresh only through execution owner |
+| DR013 retained-payload verification / two notary receipts / downloaded codesign logs / jobs | Pass | Pass | Pass | Pass | Pass | Carry both actual Mac successes by exact bytes/attempt; not public-download completion |
+| API006 / CRR011 source / CRR012 successful-test authority | Pass | Pass | Pass | Pass | Pass | Old exact-input scopes only, not SR005 proof |
+| ARCH002 / solution history / E26 inventory | Pass | Pass | Pass | Pass | Pass | Historical verdict retained; current report replaces its scope |
 
-Canonical inventory identifies each supplement's purpose and authority. No UI supplement is applicable. Delivery's untracked four reports and evidence remain owned by Delivery, not adopted as reviewer outputs.
+DR013 records payload job117940491787 completed/success in run39215470944/1 while publish117940608133 failed. Both downloaded Mac binaries match the Accepted receipts and strict Developer ID/runtime/timestamp checks. That is sufficient architecture context for exact-byte reuse; no repeat signing campaign is justified. Public distribution and the corrected executor remain unvalidated. Requirements' SR005 context expressly labels older observations as baseline, avoiding a new credential prerequisite.
 
 ## Task Design Health Assessment Verdict
 
 | Assessment area | Result | Evidence | Required action |
 | --- | --- | --- | --- |
-| Current posture explicit | Pass | Behavior Change under R3, not retroactive R2 defect | None |
-| Root cause evidence-backed | Pass | Publisher and installer currently conflate qualification with admission | None |
-| Refactor decision explicit | Pass | Bounded readiness replacement plus typed distribution metadata now | Implement mapped delta only |
-| Concrete design supports decision | Pass | D1/D2, caller/removal maps and transition table; existing staged publication remains healthy | No new policy framework or runtime refactor |
+| Current posture present | Pass | Bug Fix plus bounded identity-boundary refactor, not new release policy | None |
+| Root cause explicit/evidenced | Pass | Published-only lookup plus implicit ROOT/HEAD conflate executor and payload across five owners | None |
+| Refactor decision explicit | Pass | SourceContext and separate recovery admission now; publication retains sequencing | Implement designated split |
+| Concrete design follows assessment | Pass | D2 propagation map, D3 fixed scope/authorization, D4 ID flow, D5 workflow gates | No generic bypass or broader framework |
 
 ## Spine Inventory Verdict
 
-| Spine | Scope | Readable | Narrative | Facade/owner | Subject naming | Ownership | Off-spine separation | Verdict |
+| Spine | Scope | Readable | Narrative | Facade/owner | Naming | Ownership | Off-spine separation | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DS1 | Primary candidate dispatch → new identified build/native artifacts | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS2 | Primary verified candidate/actual checks/approval/plan → readiness preflight | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS3 | Primary readiness → final metadata/signing/payload → tag/draft/assets/OCI/public downloads | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS4 | Primary versioned download → integrity/schema/target verification → notice/install/version | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
-| DS5 | Local under DS3: observe partial stages → retained exact payload → reconcile or refuse | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS1 | Primary current source → candidate/native/engine artifacts | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS2 | Primary candidate/actual evidence → audited readiness/preflight | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS3 | Primary fresh E=P dispatch → final signing/payload → publication/downloads | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS4 | Primary user download → unchanged admission/install/version | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS5 | Primary reviewed repair/authority → E/P resolution → original proof → exact draft/assets/OCI → dual-identity receipt | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS5a | Local: bounded inventory → unique ID → correlation → ID effect/readback | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| DS5b | Local: original proof/executor admission → repeated freshness/binding/state checks → effects/stages | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
 
-No new runtime return/event spine. Deferred-testing custody is a human handoff, not a release-blocking callback/worker.
+Promoting DS5 to a primary recovery journey is justified by its independently supported operator goal and actual partial state. No event/callback subsystem is introduced.
 
 ## Boundary Encapsulation Verdict
 
 | Boundary / owner | Public entry clear | Internals internal | Bypass controlled | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| release.py → readiness.py | Pass | Pass | Pass | Pass | Facade dispatches; one validator used by metadata, preflight, payload and publication |
-| Candidate / payload / publisher | Pass | Pass | Pass | Pass | Build identity, final signed bytes and external effects remain distinct |
-| VerifyRelease / installer | Pass | Pass | Pass | Pass | Local strict schema/equality/status/target admission before install writes; no remote evidence lookup |
-| Host config / setup | Pass | Pass | Pass | Pass | No global strict-decoder change or host migration; guards remain with existing owners |
-| API / Delivery | Pass | Pass | Pass | Pass | Execute and judge actual evidence; parser cannot manufacture its meaning |
+| Facade → publication | Pass | Pass | Pass | Pass | prepare/inspect-bound/publish own mode resolution; no caller-chosen old source |
+| SourceContext | Pass | Pass | Pass | Pass | Git-proven bounded read-only data projection; no publication authority or old-code import |
+| recovery.py | Pass | Pass | Pass | Pass | Fixed P/H/E admission and evidence/scope; no mutation or record manufacture |
+| Existing candidate/readiness/payload | Pass | Pass | Pass | Pass | Same schemas/full validators with explicit context; no weak recovery parser |
+| Publication adapters | Pass | Pass | Pass | Pass | Owner-authorized ID effects; untrusted preflight/inventory cannot supply permission |
 
 ## Dependency Direction / Forbidden Shortcut Verdict
 
-| Boundary | Allowed dependencies | Forbidden shortcuts | Direction coherent | Verdict | Notes |
+| Boundary | Allowed direction | Forbidden shortcuts | Coherent | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Workflow → facade → release owners | Pass | Pass | Pass | Pass | No skip-tests flag, inline alternative policy or automatic publication |
-| Readiness → candidate/identity/evidence | Pass | Pass | Pass | Pass | No fake physical/user Pass, stale source exception or test execution in validator |
-| Payload/publication → readiness | Pass | Pass | Pass | Pass | Every consumer changes; no publisher-only bypass or re-signing bound retry |
-| Installer → CLI release admission | Pass | Pass | Pass | Pass | No GitHub/PM/test-ledger coupling, app protocol or installed-state conversion |
+| Workflow → facade → publication | Pass | Pass | Pass | Pass | All executing checkouts E; recover skips builds/signing/payload/bind |
+| Publication → recovery/context/validators | Pass | Pass | Pass | Pass | No mutable ROOT/commit impersonation, hash exemption or old script execution |
+| Recovery/context → identity primitives | Pass | Pass | Pass | Pass | No circular workflow/effect dependency |
+| Candidate/readiness/payload | Pass | Pass | Pass | Pass | Do not import recovery/publication; engine validator remains unchanged E code |
 
 ## Interface Boundary Verdict
 
-| Interface | Subject clear | Singular responsibility | Explicit identity | Generic risk | Verdict |
+| Interface / value | Subject clear | Singular responsibility | Explicit identity | Generic risk | Verdict |
 | --- | --- | --- | --- | --- | --- |
-| readiness load/validate + check-publish | Pass | Pass | Pass — exact candidate/authority/check refs/source/engine/OCI | Low | Pass |
-| --release --candidate / runtime_metadata | Pass | Pass | Pass — schema2 release permission separate from field status | Low | Pass |
-| Payload assemble/verify and publication prepare/bind/publish | Pass | Pass | Pass — provenance2, retained payload and observed remote state | Low | Pass |
-| VerifyRelease / successful verification notice | Pass | Pass | Pass — bounded equal manifest/current target/status; stderr only | Low | Pass |
+| SourceContext {root, commit, repository} | Pass | Pass | Pass — byte root distinct from Git/ancestry authority | Low | Pass |
+| PublicationContext | Pass | Pass | Pass — E/P/mode/tag and validated authorization | Low | Pass |
+| Recovery admission | Pass | Pass | Pass — P→H→E, H/E exact executable identity, pinned original binding/job/release | Low | Pass |
+| inspect-bound | Pass | Pass | Pass — tag-derived original inputs, no admission permission | Low | Pass |
+| Selected-ID release/asset reconciliation | Pass | Pass | Pass — exact repo/tag/ID/body/binding and upload host/path | Low | Pass |
 
 ## Existing Capability / Subsystem Reuse Verdict
 
 | Concern | Existing checked | Reuse/extension sound | New piece justified | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Readiness | Pass | Pass | Pass | Pass | Replace existing qualification owner, not add competing orchestration |
-| Candidate/source/engine/OCI | Pass | Pass | N/A | Pass | Existing full traversal/hash/engine validators retained; new candidate required |
-| Signing/publication/retry | Pass | Pass | N/A | Pass | Existing narrowly owned mechanics retained; final native/signature proof still required |
-| Installer/CLI | Pass | Pass | Pass | Pass | Extend current metadata boundary and notice, not setup/runtime semantics |
+| Source/hash/readiness/payload validation | Pass | Pass | Pass | Pass | Propagate one context through existing owners; preserve source set/algorithm |
+| Corrected-executor authority | Pass | Pass | Pass | Pass | Real additional invariant from bound publisher defect, not generic exception facility |
+| Release discovery/effects | Pass | Pass | N/A | Pass | Correct existing publication owner; no duplicate release controller |
+| Engine/OCI/signing/runtime | Pass | Pass | N/A | Pass | Exact bytes and unchanged validation reused; no repeated campaign |
 
 ## Subsystem / Capability-Area Allocation Verdict
 
 | Capability | Allocation clear | Reuse/extend/create sound | Correct spine owner | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| packaging/release_support | Pass | Pass | Pass | Pass | Extend single control owner and affected consumers |
-| Engine/signing | Pass | Pass | Pass | Pass | Reuse; only engine lock's obsolete readiness reset fields change |
-| Existing Go release admission | Pass | Pass | Pass | Pass | Typed statuses and local strict decoder stay at distribution boundary |
-| Durable release evidence | Pass | Pass | Pass | Pass | New stable data directory, not subsystem/service |
-| Postpublication work | Pass | Pass | Pass | Pass | Delivery/SD/PM custody, later scoped executable validation |
+| Source projection | Pass | Pass | Pass | Pass | source_context.py owns bounds/Git projection/lifetime |
+| Recovery authorization | Pass | Pass | Pass | Pass | recovery.py owns admission, not effects |
+| Publication | Pass | Pass | Pass | Pass | Retains mode, original attempt proof, sequencing/receipts and ID adapters |
+| Workflow | Pass | Pass | Pass | Pass | Transport and explicit gating, not alternate policy |
+| API / Delivery | Pass | Pass | Pass | Pass | Actual executor proof then genuine stable authorization/finalization/public effects |
 
 ## Reusable Owned Structures Verdict
 
 | Repeated logic | Extraction evaluated | Shared file sound | Owner clear | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Evidence/path/hash/shape checks | Pass | Pass | Pass | Pass | Existing identity helpers and readiness owner; no generic utility expansion |
-| Generated runtime metadata | Pass | Pass | Pass | Pass | candidate.runtime_metadata plus Go setup.Release; no shell serializer |
-| Disclosure/provenance consistency | Pass | Pass | Pass | Pass | Derived from validated readiness and checked on payload verification/resume |
+| Source/root/commit assumptions | Pass | Pass | Pass | Pass | One SourceContext across all named readers, not scattered optional-root overrides |
+| Identity/path/shape/engine checks | Pass | Pass | Pass | Pass | Reuse current bounded primitives/engine validator |
+| Draft/asset discovery | Pass | Pass | Pass | Pass | One publication-owned ID reconciliation path used throughout lifecycle |
+| Admission versus observed evidence | Pass | Pass | Pass | Pass | inspect-bound shares verification, never grants publish permission |
 
 ## Shared Structure / Data Model Tightness Verdict
 
-| Structure | One meaning per field | Redundancy controlled | Overlap controlled | Composition sound | Verdict | Notes |
+| Structure | One meaning/field | Redundancy controlled | Overlap controlled | Composition sound | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| ReleaseReadiness schema1 | Pass | Pass | Pass | Pass | Pass | Explicit release-first authority, actual checks, deferred status and plan; no physical-success placeholders |
-| Lock releaseReadiness reference | Pass | Pass | Pass | Pass | Pass | Replaces all old qualification fields, null until real evidence; engine relock clears it |
-| ReleaseManifest schema2 | Pass | Pass | Pass | Pass | Pass | releaseTargets means distribution, named fieldValidation means unperformed field/user checks |
-| Candidate / provenance2 / PublicationIdentity | Pass | Pass | Pass | Pass | Pass | Cross-checked identity assertions, not alternative authorities; final signed bytes distinct from candidate |
+| SourceContext / PublicationContext | Pass | Pass | Pass | Pass | Pass | No overloaded source field or nullable bag inside candidate record |
+| Recovery authorization schema1 | Pass | Pass | Pass | Pass | Pass | Separate E/H permission from immutable P; fixed path/scope not user-defined allowlist |
+| Original candidate/readiness/provenance/publication | Pass | Pass | Pass | Pass | Pass | Unchanged schemas and byte identities; cross-assertions compared rather than selectable |
+| External execution receipt | Pass | Pass | Pass | Pass | Pass | New executor/sourceHash/run/attempt/H/authority versus unchanged P/tag/release stage; no false build provenance |
 
-Exactly deferred field statuses are the one current approved contract, not a general multi-policy platform. Strict release decoding does not redefine the host-state additive-field policy.
+H precedes E, preventing a self-referential authorization commit. Hashes bind records; actual architecture/source/API/Delivery judgement still establishes meaning, explicitly not inferred from a boolean or hash alone.
 
 ## File Responsibility Mapping Verdict
 
 | File / group | Singular | Matches owner | Re-tightened | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| qualification.py → readiness.py | Pass | Pass | Pass | Pass | One control owner, old module/imports removed |
-| candidate.py / identity.py / release.py | Pass | Pass | Pass | Pass | Metadata, shared identity and thin facade remain distinct |
-| payload.py / publication.py | Pass | Pass | Pass | Pass | Provenance/disclosure and effect reconciliation consume same readiness |
-| release-lock.json / engine/manifest.py | Pass | Pass | Pass | Pass | Current record and reset semantics; engine recipe unchanged |
-| setup/service.go; cli/verify-release.go; cli/run.go; cmd release.json | Pass | Pass | Pass | Pass | Typed manifest, strict admission, stderr notice, non-installable dev stub |
-| Installer / workflow / tests / policy docs | Pass | Pass | Pass | Pass | Update existing callers and expectations; preserve signing/retry/host controls |
+| source_context.py / recovery.py | Pass | Pass | Pass | Pass | Concrete projection and admission split avoids publication overload |
+| identity.py | Pass | Pass | Pass | Pass | Narrow root/commit primitives; no new hash algorithm/source exemptions |
+| candidate.py / readiness.py / payload.py | Pass | Pass | Pass | Pass | Context reaches workflow, lock/hash/native/license/notes/ancestry/source checks |
+| publication.py | Pass | Pass | Pass | Pass | Mode/original attempt proof and bounded ID effects; no rebuild/sign/bind on recover |
+| release.py / release-nfs.yml | Pass | Pass | Pass | Pass | Thin commands and job gating, explicit E/P outputs |
+| Recovery evidence / tests / named guides | Pass | Pass | Pass | Pass | Genuine Delivery-owned data after validation; tests model actual endpoint semantics |
 
 ## Subsystem / Folder / File Placement Verdict
 
 | Path / item | Placement clear | Owning boundary | Mixed/over-split risk | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| packaging/release_support | Pass | Pass | Low | Pass | Compact existing subject owners, no parallel qualification service |
-| packaging/releases/v0.1.0 | Pass | Pass | Low | Pass | Archive-stable sanitized evidence/notes/plan; no binaries or credentials |
-| internal/cli / internal/setup / cmd | Pass | Pass | Low | Pass | Existing distribution value/admission boundary, not host schema |
-| Workflows/scripts/tests/guides | Pass | Pass | Low | Pass | Transport, public entry, validation and documentation remain separate |
+| packaging/release_support | Pass | Pass | Low | Pass | Existing cohesive group, two substantive owners added |
+| packaging/recovery/v0.1.0 | Pass | Pass | Low | Pass | Stable audit data, not executable policy or old payload rewrite |
+| scripts/tests and named release/testing guides | Pass | Pass | Low | Pass | Affected proof/instructions, no unrelated scope |
+| tickets/done/nfs-first-release | Pass | Pass | Low | Pass | Existing canonical review/history; no task move or copied manifest |
 
 ## Removal / Decommission Completeness Verdict
 
 | Item | Removal named | Replacement clear | Scope explicit | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| qualification.py and all live imports | Pass | Pass | Pass | Pass | readiness.py, no dormant physical/user branch |
-| qualifiedTargets/qualifiedSourceHash/physicalEvidence/userVerified/qualification lock fields | Pass | Pass | Pass | Pass | Pins/engine plus single readiness ref; engine lock reset included |
-| --qualified / QualifiedTargets / old generated shape | Pass | Pass | Pass | Pass | --release / releaseTargets / schema2 and explicit statuses |
-| Old gate-only constants/topology logic/fixtures/prose | Pass | Pass | Pass | Pass | Current admission controls and deferred plan; raw historical evidence retained |
+| Published-only release lookup as draft authority | Pass | Pass | Pass | Pass | Unique publisher inventory + direct ID; by-tag only final published correlation |
+| Tag-addressed upload / truncated embedded asset reliance | Pass | Pass | Pass | Pass | Selected-ID bounded inventory/raw upload/readback |
+| Implicit current-root/HEAD verification | Pass | Pass | Pass | Pass | Explicit source context throughout affected readers |
+| Same executor/source requirement for corrected bound recovery | Pass | Pass | Pass | Pass | Separate admission; equality remains for fresh/same-executor resume |
+| Semantic lookup mocks / obsolete retry prose | Pass | Pass | Pass | Pass | Real adapter endpoint tests and dual-identity instructions |
 
-These are reached R2 behaviors explicitly superseded by R3, not falsely described as already-dead code. The source-derived caller/removal map covers facade, candidate generation, preflight, payload/resume, runtime decoder, workflow and engine lock writer. No additional dead-code prescription is justified by the inspected delta.
+These are reached paths being replaced under SCN006, not code falsely declared dead. No unrelated dead removal is evidenced; remove obsolete touched imports/callers when replacing them. No general backward-compatibility, arbitrary recovery selector or source override remains.
 
 ## Legacy / Backward-Compatibility Verdict
 
-| Area | Dual path / compatibility retained | Clean cut explicit | Verdict | Notes |
+| Area | Dual schema / compatibility wrapper | Clean cut explicit | Verdict | Notes |
 | --- | --- | --- | --- | --- |
-| Readiness and metadata | No | Pass | Pass | Old flags/schema/claim fields refuse; no emergency override or conversion |
-| Historical records / old candidate | Evidence only | Pass | Pass | Retained unchanged, not a live admission fallback |
-| Installed host records | No new compatibility path | Pass | Pass | Existing tolerant decoder remains; not legacy retention introduced by this task |
+| Existing immutable records | No | Pass | Pass | One current validator per existing schema, context is source authority not schema generation |
+| Fresh/resume/recover | No legacy fallback | Pass | Pass | Current lifecycle modes; invalid/conflicting tag cannot fall back to fresh |
+| Source/hash selection | No | Pass | Pass | Fixed Git-proven inputs and single algorithm; no ROOT monkeypatch or old execution |
+| Runtime/installed state | None added | Pass | Pass | Entirely outside change |
 
 ## Persisted-Data Transition Verdict (When Applicable)
 
-| Stored subject | Decision | Reader/invariant evidence | Proportionate | Migration safety | Verdict | Notes |
+| Stored subject | Decision | Evidence sufficient | Proportionate | Migration safety | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Empty release-control lock | Discard or Rebuild control fields | Pass | Pass | N/A | Pass | No published release obligations at intake; preserve pins/engine, readiness null |
-| Generated release manifests/candidates | Discard or Rebuild new candidate | Pass | Pass | N/A | Pass | Actual writer/VerifyRelease chain examined; source change invalidates old candidate, not history |
-| Development metadata stub | Rebuild minimal current defaults | Pass | Pass | N/A | Pass | Empty targets, not installable release proof |
-| Host/pending/source records and user data | Not Affected | Pass | Pass | N/A | Pass | Release value not persisted there; no scan, upgrade or migration gate |
-| Tags/assets/OCI/secrets/history | Directly Usable — No Migration | Pass | Pass | N/A | Pass | Preserve existing identity/ownership; future immutable reconciliation unchanged |
+| Original candidate/readiness/payload/tag | Directly Usable — No Migration | Pass | Pass | N/A | Pass | Saved actual signed records, existing readers, original P bytes; rebuilding is forbidden |
+| Draft417014769 / eventual assets | Directly Usable — No Migration | Pass | Pass | N/A | Pass | Reconcile exact ID/body/binding, add missing only; known missing ID blocks |
+| Recovery authorization | New separate data | Pass | Pass | N/A | Pass | Delivery-owned genuine evidence after H review/API; no old-field conversion |
+| Source projection/preflight scratch | Discard or Rebuild | Pass | Pass | N/A | Pass | Bounded Git object projection and remote envelope transport, not independent authority |
+| Host state/user data/secrets | Not Affected | Pass | Pass | N/A | Pass | No storage read/write or credential operation needed |
 
-No migration machinery is warranted. Stable readiness/evidence paths avoid breaking published identity references when ticket directories move during finalization. This does not authorize editing or deleting historical candidate/evidence bytes.
+Actual state disproves treating the old signed payload as disposable. Source snapshots use regular Git blobs, bounded inventory/bytes and explicit ancestry; no imports/hooks from P. Original release-lock and packaging/releases bytes must remain equal across P/H/E, including non-hashed inputs enforced by full-tree scope checks.
 
 ## Change / Refactor Safety Verdict
 
 | Area | Sequence realistic | Temporary seams explicit | Cleanup explicit | Verdict |
 | --- | --- | --- | --- | --- |
-| Readiness/lock/engine reset → all consumers | Pass | Pass | Pass | Pass |
-| Metadata/Go admission/notice → fixtures/workflow/guides | Pass | Pass | Pass | Pass |
-| Source review → new API candidate/controls → durable readiness | Pass | Pass | Pass | Pass |
-| Fresh-main final payload/signing → immutable publication/downloads | Pass | Pass | Pass | Pass |
-| Release receipt/owned cleanup → explicit postpublication custody | Pass | Pass | Pass | Pass |
+| Context/admission → affected readers | Pass | Pass | Pass | Pass |
+| Draft/asset ID semantics → workflow gates/guides | Pass | Pass | Pass | Pass |
+| Reviewed H / real inspect-bound proof → Delivery authorization → E | Pass | Pass | Pass | Pass |
+| Recover skip build/sign/bind → repeated admission → same-byte effects | Pass | Pass | Pass | Pass |
+| Dual-identity receipt/public proof → owned cleanup/follow-up | Pass | Pass | Pass | Pass |
 
-No publisher-only bypass or interval of falsely qualified metadata. Production changes require a new complete candidate; only reviewed equal-production-hash/engine/OCI evidence-only descendants can advance later. Actual signing changes final binary bytes and requires final metadata/version/signature checks, not a false byte-equality claim. Other-owner files and retained API002 candidate remain untouched.
+Read-only inspect-bound breaks the evidence-authorization cycle without granting writes. H→E permits no executable drift; full-tree comparisons enforce the fixed repair scope even for source-hash exclusions. Fresh mode still rejects old candidates after production changes. Bound recovery checks P instead of pretending old binaries were built by E. Current main and tag object/binding are separately rechecked before effects; concurrency is not claimed transactional.
 
 ## Example Adequacy Verdict
 
-| Topic | Needed | Clear example | Avoided shape | Verdict | Notes |
+| Topic | Needed | Example clear | Avoided shape clear | Verdict | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Distribution versus field claim | Yes | Pass | Pass | Pass | releaseTargets + deferred statuses versus fake qualifiedTargets/userVerified |
-| Candidate applicability | Yes | Pass | Pass | Pass | New actual run/result versus relabeled API002 or hash exclusions |
-| Immutable retry | Yes | Pass | Pass | Pass | Annotation-bound same bytes versus re-sign/rebuild under existing tag |
+| E/H versus P/C | Yes | Pass | Pass | Pass | New executor, unchanged P238/source hash; no tag retargeting or source-hash exclusion |
+| Draft endpoint semantics | Yes | Pass | Pass | Pass | By-tag404 plus unique list/direct ID; not None→create again |
+| Ambiguous write / immutable retry | Yes | Pass | Pass | Pass | Stop and retain attempted-effect receipt; no blind POST retry/re-sign |
 
 ## Material Premise Validation (Only When Needed)
 
-No new speculative machinery. Existing supported recovery premise is retained; the affected installer premise was traced independently. Example 9 applied.
+### MP001 — Interrupted publication requires a corrected executor while original payload remains bound (updated)
 
-### MP001 — Publication can leave a tag before a release is complete (retained)
+- Approved authority / behavior: SCN006, REQ006/AC004/006, BEH003; **Supported Explicit Edge Scenario**.
+- Initiating basis: **Operational** — Delivery's authorized normal-release workflow_dispatch to publish v0.1.0, followed by the supported operator goal of completing that interrupted release without replacing bytes.
+- Independent support: DR013 actual job/receipt/tag/draft records, not a synthetic failure or the proposed recovery mechanism. Run39215470944/1 at P238 completed native/signing/payload, created annotated tag and draft, then publisher failed.
+- Forward path: authorized dispatch → current source/readiness validation → successful signed payload job → bound tag → draft POST → published-only lookup/refusal. A normal code correction changes hashed publication inputs; retry under current prepare/candidate/payload/fresh_main then rejects original P against corrected E. Running P instead repeats the defect.
+- Lifecycle/consequence: original immutable tag/body/artifact already exists; rebuilding, re-signing or retargeting violates REQ006, while single-check removal leaves other validators contradictory.
+- Reachability: **Reachable**, observed actual partial lifecycle and source-derived verification chain.
+- Proportionate response: D2/D3 explicit Git-proven P context plus reviewed H/current E admission and fixed repair scope; same current validators, separate external receipt, no general override. Design addresses IMP-08-02; executable proof remains pending.
 
-- Related authority / behavior: REQ006/AC004, SCN006, BEH003; explicit supported interrupted-release contract.
-- Initiating basis: **Operational** — maintainer retries an interrupted authorized publish dispatch, a supported user-facing workflow action independent of the recovery implementation.
-- Forward path: authorized dispatch → readiness validation → final signed retained payload → acknowledged annotated tag creation → separate draft/assets/registry/release operations. Interruption after tag creation can leave an incomplete release; tag and release/registry effects are not one transaction.
-- Lifecycle/consequence: a version ref already exists; rebuilding/re-signing can change bytes. A failed run or existing tag is not proof of completion.
-- Reachability: **Reachable**, from SCN006 and the separate effect boundaries checked in ARCH001 and retained in current publication code.
-- Response: D3 retains bound exact payload, observation and missing-only reconciliation/refusal; no rollback/clobber. No finding.
+### MP004 — Published-by-tag absence does not imply absence of the owned draft
 
-### MP002 — First-use Docker image pull (prior disposition)
+- Approved authority / behavior: SCN006/REQ006/AC004, BEH003; **Supported Explicit Edge Scenario**.
+- Initiating basis: **Contract exercised by Operational action** — the approved release workflow creates a draft before assets, then needs to observe it to continue; GitHub's published-only by-tag contract applies to that actual caller.
+- Support: DR013 records draft417014769/zero assets and exact body through listing/direct ID while by-tag returns404; publication.release/reconcile_release and its mocked test explain the unhandled None. GitHub's documented visibility distinction independently confirms it. [GitHub releases API](https://docs.github.com/en/rest/releases/releases#get-a-release-by-tag-name).
+- Forward path: authorized release → draft created → by-tag lookup excludes draft → None; naive absent→create retry could act on a draft already known to exist. Prepare's read-token result cannot establish write-token draft absence either.
+- Lifecycle/consequence: an owned draft exists after a valid create, but the wrong lookup cannot identify it; repeating create or adopting a guessed/first ID would lose the approved immutable identity.
+- Reachability: **Reachable**, actual state plus governing endpoint contract.
+- Proportionate response: D4 bounded complete publisher inventory, unique exact tag, direct-ID correlation and pinned expected ID, ID-directed uploads/readback; known missing/hidden/ambiguous draft blocks. No new write privilege for prepare, automatic deletion or multi-writer framework.
 
-The prior production path remains supported, but its use as a **prepublication field-qualification prerequisite is superseded** by R3. No new registry/physical-host allocation or qualifying campaign follows from this review. Later SCN008 testing owns first-use behavior; actual anonymous distribution of the canonical OCI remains a distinct retained release-integrity check. No new mechanism or finding is driven by this retired release-premise use.
-
-### MP003 — Publisher-only removal of qualification would leave normal installer admission blocked
-
-- Related authority / behavior: REQ003/007, AC005, SCN004, BEH002/004.
-- Initiating basis: **User** — download and run the public versioned installer for the released CLI, an exposed supported product surface under UC004.
-- Support evidence: `scripts/public/nfs/install.sh` downloads/extracts/checks the release and calls the binary's `verify-release` before installation; `internal/cli/verify-release.go` currently requires this runtime target in `QualifiedTargets`.
-- Forward current path: versioned public download → archive/checksum/embedded-manifest verification → VerifyRelease target loop → empty candidate QualifiedTargets yields refusal before writes. Bypassing only publisher prerequisites does not change this installed-binary admission path.
-- Lifecycle/consequence: the R3 release intentionally has no physical/user qualification proof. Filling the old claim merely to admit the installer would misstate evidence; leaving it empty would not meet R3 installability.
-- Reachability: **Reachable** from the normal approved install journey, not inferred from the proposed readiness module.
-- Response: D1/D2 replace all claim producers/consumers with schema2 releaseTargets and explicit deferred status, preserving pre-write integrity. Bounded and sufficient; no finding.
+Prior MP002 physical-registry prerequisite remains superseded by R3; no field campaign follows. MP003 installer/claim separation remains implemented and byte-preserved, not reopened. No additional unsupported failure scenario drives machinery or a finding.
 
 ## Unresolved Approved-Behavior Or Current-State Gaps
 
-**None blocking design.** Actual new candidate/checks, signing/import/notary, final public download/OCI access and release execution remain downstream proof obligations, not unclear product intent. Physical/shared-filesystem/user tests are explicitly deferred with approved custody, not prerequisites reintroduced by this review.
+**None blocking architecture.** Real current remote visibility/retention, corrected-executor implementation/admission and actual hosted recovery/public-download results remain execution obligations, not permission to broaden scope or declare success. Saved DR013 state is explicitly not fresh remote evidence.
 
 ## Review Decision
 
-**Pass — ARCH-REV-002 / R3/SR004.** The bounded changed-basis design is ready for implementation. No blocking findings. This is not source-review, API Pass, signing/publication, Delivery Completed or TaskDone.
+**Pass — ARCH-REV-003 / SR005 on unchanged R3/SR004.** Ready for bounded IR008 recovery implementation. No blocking findings. Not a repaired-source verdict, new API Pass, publication, Delivery Completed or Terminal/TaskDone.
 
 ## Findings
 
-None. No approval questionnaire, additional host prerequisite, credential setup, migration mechanism or adjacent-task scope is requested.
+None. IMP-08-02's design boundary is addressed by D2–5; actual correction still requires implementation/review/validation. No new version, product approval, credential/signing campaign, host allocation or workspace work requested.
 
 ## Classification
 
-Pass; failure classification **N/A**. **Large / High** retained.
+**Pass; Large / High retained; failure classification N/A.**
 
 ## Recommended Recipient
 
-Fresh `get_handoff_rules` selects the primary implementation-ready Pass rule: **`/software_engineering_team/implementation_engineer`**. Apply the controlling single-most-specific-recipient instruction: one replacement-basis handoff to the existing implementation owner; no duplicate informational/SD/PM/API/Delivery dispatch. Only this report and cumulative review history are reviewer-owned changes. The tool receipt establishes delivery; this paragraph does not preclaim it.
+Fresh `get_handoff_rules` selects **`/software_engineering_team/implementation_engineer`**, the primary implementation-ready Pass rule. Apply the controlling single-most-specific-recipient convention: one handoff to the existing owner for SR005/IR008; no duplicate SD/PM/API/Delivery outcome notification. Both reviewer documents accompany the selected handoff; source/evidence stays linked in the canonical ticket, not bulk-forwarded. The tool receipt establishes delivery.
 
 ## Residual Risks
 
-- Field/physical/shared-filesystem and genuine user behavior are unqualified by this release. Publication-first is the explicit approved tradeoff; notices do not remove runtime uncertainty. Carry the plan through Delivery → terminal SD → requesting PM without silently dropping it or blocking this release on it.
-- API002 **Blocked73.57** and successful run **39113335636/1**, artifact **12131531399**, remain historical under their old basis. A **new actual candidate and affected validation result** are required after these production changes; no reused confidence/blanket Pass. Retained candidate remains owned by API.
-- Actual six-secret import/identity/password/notary validation remains unperformed. Both Mac final assets require Developer ID/Accepted evidence and downloaded-signature checks. No repeat private-input request absent an actual validation failure.
-- Current native/release-control checks and final manifest/version/integrity/disclosure tests must exercise the replacement contracts, including negative cases and Bash3.2 regression. Hosted native success is not field-platform qualification.
-- Unchanged immutable external effects can fail partially; retain actual payload/receipts and refuse conflicts/expiry. Public registry visibility/anonymous children and downloaded assets require real proof, not JSON claims.
-- Delivery must prepare genuine sanitized archive-stable readiness references, finalize fresh reviewed main, complete actual signed normal release/public checks and owned cleanup. This review does not stage Delivery's 16 untracked files, modify its reports or close the Task.
+- Correctness depends on complete P context propagation and actual H/E admission, not merely a new root argument. Source/current-workflow/hash/scope/ancestry and metadata/engine/readiness/signing negatives must exercise the full path; actual original bytes must be inspected read-only by current code before Delivery authorizes effects.
+- DR013 proves BOTH Mac Developer ID/Accepted and downloaded retained-payload identity; do not repeat signing or reprovision credentials. This carry applies only to exact original bytes, not current-executor acceptance or public downloads. API006/CRR012 retain their scoped histories.
+- Draft visibility, safe authenticated raw upload transport, pagination, post-create observation and ambiguous POST handling need implementation/API proof. Endpoint fixtures must not mock away the actual semantic boundary again. Failed/expired/conflicting original inputs remain blockers, never recreate/rebuild authorization.
+- E main, tag object, release/body/assets and OCI can drift externally. Rechecks plus no-clobber detect conflicts but are not a transaction. Preserve attempted-stage receipts and use a fresh manual dispatch; no failed-job-only replay or second draft if417014769 is missing.
+- P=`238bdc183e8affac99ffdee9be9cb333b0eb126f`, tag object=`f4a04fd0c80a6625708ba002b4cef5507a03f514`, draft=`417014769`, payload job=`117940491787`, artifact=`12169472209`, run=`39215470944/1` and original body/publication binding remain immutable. Retained payload `/Users/normy/nfs-first-final-dr013-gmvotux9/payload` and candidate `/Users/normy/nfs-first-candidate-api006-a8aune30/candidate` were not accessed or changed by this reviewer.
+- Genuine archive-stable recovery authorization, current-main integration, same-byte hosted publication/OCI/public installs/signatures and owned cleanup remain Delivery work. Field/user testing stays **Deferred** with existing Delivery → terminal SD → requesting PM custody. No release completion inferred from archived ticket location or this Pass.
 
 ## Latest Authoritative Result
 
 - Review Decision: **Pass**.
 - Material-Premise Gate: **Pass**.
-- Current round: **ARCH-REV-002**, changed R3/SR004 basis; prior **ARCH-REV-001 Pass for SR003 only**.
-- Notes: no findings; unchanged original architecture/external checks reused proportionately; current affected code paths independently inspected. Only reviewer report/history updated. No product execution or external-state change claimed.
-- Artifact checks: all **28** template sections match in order; prior ARCH001 entry preserved; whitespace clean; only these two reviewer documents changed among tracked files. All **16** pre-existing Delivery-owned untracked files independently retain their before-review SHA-256 values. These are administrative checks, not product tests.
+- Current round: **ARCH-REV-003**, SR005 immutable-publication recovery; prior ARCH-REV-002 Pass applies to SR004 only.
+- Notes: no findings; updated handoff guidance applied; only reviewer report/history authored. Current affected architecture inspected independently, unchanged product/signing obligations reused proportionately. No product execution or remote task-state mutation by reviewer.
+- Artifact checks: all28 template sections match in order; prior ARCH001/002 entries unchanged; only two reviewer tracked paths changed, no untracked/prior staged inputs; whitespace clean. Non-ticket source still equals P238. Administrative checks only, not product validation.

@@ -1,0 +1,30 @@
+/Users/normy/nfs-dr013-signature-check-q4c0d17d/darwin-arm64/autobyteus-nfs: valid on disk
+/Users/normy/nfs-dr013-signature-check-q4c0d17d/darwin-arm64/autobyteus-nfs: satisfies its Designated Requirement
+Executable=/Users/normy/nfs-dr013-signature-check-q4c0d17d/darwin-arm64/autobyteus-nfs
+Identifier=autobyteus-nfs
+Format=Mach-O thin (arm64)
+CodeDirectory v=20500 size=81786 flags=0x10000(runtime) hashes=2550+2 location=embedded
+VersionPlatform=1
+VersionMin=851968
+VersionSDK=1704448
+Hash type=sha256 size=32
+CandidateCDHash sha256=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047a
+CandidateCDHashFull sha256=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047ad9a58cf900af8aacc9b86236
+Hash choices=sha256
+CMSDigest=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047ad9a58cf900af8aacc9b86236
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=5767168
+Executable Segment flags=0x1
+Page size=4096
+CDHash=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047a
+Signature size=9037
+Authority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=19. Oct 2026 at 09:24:42
+Info.plist=not bound
+TeamIdentifier=7Y86YBQ7B4
+Runtime Version=26.2.0
+Sealed Resources=none
+Internal requirements count=1 size=176

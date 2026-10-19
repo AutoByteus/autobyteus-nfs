@@ -277,3 +277,48 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-012 | api-e2e-test-review-report.md | API006 prepublication Pass95 / IR007 signing suite | CRR010 Pass | Pass — test-code gate only | None; actual hosted cause/release unverified |
+
+
+### CRR-013 — SR005 immutable-publication recovery source review
+
+- Date2026-10-19; **Implementation Review / round13 / Full Re-Audit**, all24 structural checks/full10 scorecard. Canonical code-review-report updated; separate CRR012 test/API006 authorities unchanged.
+- **Pass100.00**, no new/remaining findings. R3/SR004 Approved, SR005 Ready, ARCH-REV-003, IR009; Large/High. Trigger IR008 held Design Impact plus actual DR013 failure after immutable tag/draft, not a new signing failure.
+- Intake08dca3db37701b425219428de89f48caef81f96d; source/tests22205cc84a29e6aa66ba5673b0a60c8db95ddc80, production4c665e0eb23adf1f9bb45363a496b7786e76b138. Full recovery versusP238bdc183e8affac99ffdee9be9cb333b0eb126f;19NFS-only paths,130current non-ticket inputs equal22205cc.
+- Prior sourceCRR011Pass100/testCRR012Pass retain exact scopes. Context/admission and selected-ID reconciliation replace conflated source/published-only lookup. CG020–022 promoted under SCN006/REQ006/AC004/006; MP001/MP004 Confirmed; no new behavior/approval or speculative concurrency machinery.
+
+#### Prior Finding Resolution
+
+| Reference | Prior | Current | Evidence/revisions |
+| --- | --- | --- | --- |
+| CR-001 native argv | Resolved | Still resolved | Nonempty mandatory native args/control preserved. |
+| CR-002 imports | Resolved | Still resolved | Current bindings used; IMP09-11/caller inspection. |
+| IR008 Design Impact | Held | Addressed in source scope | SR005/ARCH003 D2–5, explicit context/admission path. |
+| DR013 draft/identity defect | Publication Blocked | Source correction accepted for API; actual recovery unverified | Full P validators, fixed E/H scope, ID discovery; IMP09 proof. |
+
+- Reused Checks Run: full72collected71executed1Gochildskip at4c665,15publication tests after22205cc four-control delta (overlap, not full76rerun), sixmutants/static/hash/actual retained-byte validation. Saved endpoints doubled. No reviewer product rerun/retainedasset/keychain/credential/remote action or source/test change.
+- Publication235→388nonempty/delta441 assessed; projection85/admission59 separated; all9 changed implementation/configuration files below500, tests exempt. No follow-up/deduction.
+- OriginalP/tag/draft417014769/payloadjob117940491787/artifact12169472209 preserved. Actual bothMac Accepted/signatures carry DR013 exact bytes; no repeat signing. Runtime/installer/engine/signer/original lock/releases unchanged. Executor hashe3e814… distinct from product3e1af43a…; no real authorization created.
+- PriorCRR001–012 entire40189-byte prefix retained SHA62a05cf4431f1f5df09da5f0e57c68ca68cfdc2cbd60c512709d7755fee24fbe. Own generator25-versus24 separator-count error corrected before report/history writes; no product failure. NFS-only reviewer artifacts, other-owner authorities unchanged.
+- Fresh primary source-Pass route→affected API; current inspect-bound/admission proof then Delivery genuine H authority/freshE/current remote/same-byte hosted recovery/publicOCI/download/install/signatures/custody. No new candidate/native/signing solely for executor repair, direct release or duplicate dispatch. Field/user Deferred; no TaskDone/Terminal.
+
+| Revision | Canonical report | Trigger | Prior source result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-013 | code-review-report.md | IR009/SR005 ARCH003/DR013 | CRR011Pass100 | Pass100 — source scope | None; publication incomplete |
+
+
+### CRR-014 — SR005 successful recovery-test/evidence review
+
+- Date2026-10-19; **Successful API/E2E Test-Code Review / round14**, proportional seven-path cumulative IR009 scope, no source scorecard or full-source re-audit. Canonical api-e2e-test-review-report.md updated; source report CRR013 unchanged.
+- **Pass**. Trigger API007 affected executorPass95; R3/SR004 Approved, SR005 Ready/ARCH003, IR009, DR013. Large/High unchanged. Intakef8ea0cce8a9d04b171a365b6710251b5d5561e30; tested6cb497f4a0bb83d52ddfc41b5aaad95a8e482440; source/tests22205cc84a29e6aa66ba5673b0a60c8db95ddc80, production4c665e0. All130 current non-ticket inputs equal both final source/tests and tested executor.
+- Prior applicable test result CRR012 Pass; prior unresolved test findings **None**. New findings/follow-ups **None**, no failure classification/deduction. Source CR-001/002 remain resolved, CRR013Pass100 remains separate authority.
+- Reviewed fixture, packaging, publication, records, recovery, workflow and source-identity tests. Actual DR013 interruption/SCN006 and identity/immutability contracts establish the scenario; nine proportional checks pass. API authored no durable/source delta. R07 temporary probe reviewed as evidence only.
+- Checks Run read first; reused full72collected71executed1expectedGo-childskip at4c665 plus finalpublication15 at22205cc (overlap, not full76), sixmutants/static controls. No reviewer product rerun, retained-asset access or remote execution.
+- Fresh API inspect-bound/GET proof verifies original P payload/envelope/job and exact draft417014769/0assets; missing authority/default candidate refuse. DR013 actual both-Mac Accepted/signatures carry through fresh exact archive/binary equality, not a new Apple or public download run.
+- R07 traverses actual current full admission/prepare/publish on actual retained bytes with synthetic authority only in removed clone.18 actual-byte streams reach fake HTTPS; all external mutations/OCI/public-download/install effects emulated. Synthetic published result is NOT real release evidence. Known-missing/no-recreate, completed retry no writes and hash-excluded drift controls pass.
+- API0078 scoped casesPass/43Deferred/2Downstream; actual DR013 publication remains Blocked. Delivery still owns genuine reviewed-H authority/fresh E integration/authorized same-byte hosted recovery/wholeOCI/public bytes/downloads/install/signatures/finalization/custody. Preserve P/tag/draft/artifact12169472209 and retained original bytes; no new candidate/build/sign solely for executor repair.
+- CRR001–013 entire43621-byte prefix preserved, SHA2e9279e045ed5db3ee16e14253b42ebc3e53af4ac2bec69e208ca8a94b137970. NFS reviewer artifacts only; source/API/Delivery authorities preserved. No live resources, external writes, credential/field/app campaign, actual publication or TaskDone/Terminal.
+- Recommended fresh successful-test route: Delivery only; audit/routing/receipt in code-review-evidence/crr-014. No duplicate API/implementation/Designer/PM outcome dispatch.
+
+| Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-014 | api-e2e-test-review-report.md | API007 affected executor Pass95 / IR009 | CRR012 Pass | Pass — proportional test/evidence gate | None; actual publication incomplete |

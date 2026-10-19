@@ -1,51 +1,49 @@
-# Architecture Design Complete — release-first recovery SR004
+# Solution Design Handoff — SR005 immutable signed-publication recovery
 
-## Identity / outcome
-**nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**; Project6416db5b-926a-4865-8705-d8ebb2425780. Requested by `/project_task_manager`, run project_task_manager_a5f6d9d306e54970bafdad895bdf731d.
+## Result and requested action
+**Architecture Design Complete / R3 Approved unchanged / SR005 Ready / Large / High.**
+Review the narrow corrected-executor/source and draft-discovery design before dependent implementation. This is IR008 Design Impact recovery, not new product approval, signing repair, field campaign, Delivery Completed or Terminal. No new version is authorized. Prior ARCH002 Pass covers SR004 only; new review artifact N/A — not yet produced.
 
-**R3/SR004 Approved; SR004 design Ready; Large / High.** Changed basis needs its configured review; previous ARCH001 is not a Pass for it. Result is Architecture Design Complete, not implementation completion, API Pass, Delivery Completed, release or TaskDone.
+Task nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Original PM request: enable independent NFS automation and actually deliver first signed downloadable normal release. User chose no beta and explicitly instructed official signed v0.1.0 first, tests/fixes afterward. R3/SR004 and approval-record-sr004.md remain authority; existing postpublication-testing-plan.md retains field/user Deferred and named custody. No re-questioning settled release intent.
 
-Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`. Ticket `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/in-progress/nfs-first-release`. Recovery intake a5f57097578f9503eff0beb120dbc9e33e194eef; reviewed prior product8436d0cf6048cd3b4cadbf28815e3d9f82ba6b34/IR002/CRR003. Last Delivery-refreshed base/main7e375984be2bea7a4d536e43cc59d6bc2b116870, finalization origin/main after fresh Delivery checks. SD final doc commit is supplied in the message, no main merge/push.
+## Workspace and ownership
+- NFS task worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`.
+- Canonical ticket `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release`; do not recreate/move the old in-progress path or reopen extraction.
+- Intake032c4e50b265f045277241f30b4982449af495c3 (IR008 docs). Last finalized/Delivery-observed main238bdc183e8affac99ffdee9be9cb333b0eb126f. Non-ticket source unchanged from that main. SD made no new remote freshness claim, source/test edit, build/signing/publication or finalization action. Finalization target remains origin/main under RELEASE.md.
+- **NFS only. No workspace/shared skill, agent-package, superrepo/app/GitHub-config edits or work on the separately fixed workspace bug.** Do not reprovision secrets, mutate live mounts/exports/data/nodes, or touch PM/unowned files.
+- Own five docs are the authority: requirements-doc.md, investigation-notes.md E23–26, design-spec.md, solution-revision-record.md SR005 and this handoff. Other owners' reports/history are retained and linked, not rewritten. Updated handoff-references.md read in full; selected attachments only.
 
-## Original goal and exact changed approval
-User originally authorized enabling and **publishing** the first independently versioned NFS release; normal-only v0.1.0, no beta. After Delivery explained successful candidate and unavailable physical test hosts, user said:
+## Established problem, carried success and completed design
+Delivery DR013 created annotated v0.1.0 and empty owned draft; publisher then failed because published-by-tag lookup returns None for a draft. IR008 reproduced that actual endpoint mismatch offline and correctly held implementation: the publisher is production-hashed, and the old architecture requires executing source/main, candidate source and immutable payload/tag source to coincide. Blindly fixing code/new candidate cannot satisfy the original tag without breaking immutability.
 
-> please publish first, then we could test. and if we found problem, then we fix
+SR005 fixes the full boundary:
+1. **E**, reviewed current main executor, and **P**, immutable original payload source, are explicit. Current verifier code reads a bounded Git-proven P snapshot as data only; full original source/candidate/readiness/engine/OCI/payload/signing proof remains checked. Fresh mode stays strict and all corrected code remains hashed.
+2. Delivery later records a finite audited authorization binding original tag/payload/job/draft to **H**, reviewed corrected code; actual E must retain H's exact executable identity, permitted scope and fresh main. Original runtime/installer/engine/signing/lock/readiness remain byte-identical. No manual bypass, old-code execution, record edit, rebind, re-sign or rebuild.
+3. Publisher uses bounded unique draft inventory plus direct-ID reconciliation and ID-directed asset upload/readback. Known draft417014769 missing/hidden/ambiguous is a blocker, not permission to recreate it. Read-only prepare never treats absent published results as proof no draft exists.
+4. New workflow recover mode skips candidate/native/signing/payload/bind and revalidates all inputs before effects. Read-only inspect-bound permits API to validate actual retained bytes before final executor authorization; it grants no write permission. External execution receipt names both identities; original public assets/body/provenance/checksums stay unchanged.
 
-> create one official signed release first. please
+**Both Mac signing/notarization already succeeded** in39215470944/1 at238: DeveloperID/team/runtime/securetimestamp/strictverify and Accepted; ARM52450985-4e16-482e-b22a-d7b15b8791b7, Intel563db88f-7ded-48ba-9d90-bcdbf8705961. DR013 downloaded-binary evidence carries; no repeat successful signing campaign. Old failed/unknown histories remain original. API006/CRR012 exact source scope remains, not acceptance of new SR005 code.
 
-Exact source `delivery-evidence/dr-003/user-publish-first-direction.json`. R3/approval-record-sr004 records this approval, not a user test. Do not repeat the same release decision or physical-host questionnaire as a prepublication gate. No new product question is open. The approved supplement postpublication-testing-plan.md retains scoped testing/fix custody.
+## Immutable inputs to preserve
+- P238bdc183e8affac99ffdee9be9cb333b0eb126f; annotated tag objectf4a04fd0c80a6625708ba002b4cef5507a03f514; owned draft417014769, exact body, last observed zero assets.
+- Original successful payload job117940491787; artifact12169472209 / run39215470944 / attempt1; wrapper sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336, expires2027-01-17T07:21:36Z; publication.json SHA3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8.
+- Original source hash3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086; candidate run39213489075/1, artifact12168544425. Full original candidate/engine/OCI refs in unchanged packaging/releases/v0.1.0/readiness.json and investigation E24.
+- Retained payload `/Users/normy/nfs-first-final-dr013-gmvotux9/payload`; retained candidate `/Users/normy/nfs-first-candidate-api006-a8aune30/candidate`. Do not delete/alter. No new remote freshness claim by SD.
 
-Goal remains real official signed v0.1.0 assets through actual workflow, then field/user testing and fix-forward. Preserve all four Mac/Linux build targets, unchanged intended OS floors, Developer ID/Accepted notarization, source/artifact/engine/OCI integrity, immutable tag/assets, recovery and host-data safety. Release-first does not mean unsigned, beta, silently qualified or no checks. No live storage change, dashboard, app/superrepo coupling, new backend, paid hosts or secret reprovisioning.
+## Review focus and next outputs
+Evaluate D2–D5 and DS5 against unchanged SCN006/REQ006/AC004: full context propagation, authoritative fixed repair scope and H/E admission, old-job/retention/ready/signing evidence, fresh-mode nonregression, draft visibility/uniqueness/direct-ID/post-create failures, no-clobber effects and precise receipt. Assess source-context/recovery owner split for proportionate complexity; do not repeat settled business/signing work.
 
-## Evidence and narrow completed design
-- Current qualification.py and all publisher/payload call sites require physical/user Pass, and VerifyRelease requires QualifiedTargets. These are correct old-R2 behavior, now contradicted by explicit new intent. A publisher-only bypass would leave installer blocked or require a false qualification claim.
-- Replace that single control owner with readiness.py: real current candidate/native/release-control/source-review evidence, actual release-first authority and deferred field/user status; no synthetic pass rows/userVerified. Null/mismatched/stale references still refuse.
-- Clean-cut generated/runtime schema2: releaseTargets distinguishes install permission from fieldValidation={filesystem:deferred,user:deferred}. --release replaces --qualified; candidate targets empty. Keep exact manifest/engine equality/strict admission at existing VerifyRelease and show a concise stderr notice. No host-state migration or runtime filesystem logic change; no extra confirmation prompt.
-- Current effect ordering/signing/OCI retention/same-payload recovery reused. Public notes/provenance declare deferred status. Stable packaging/releases/v0.1.0 readiness/evidence paths prevent archive-induced broken references. Implementation updates root/package/README/TESTING policy simultaneously; SD has not changed/bypassed executable gates.
-- Source hash includes changed runtime/control/workflow/installer: **a NEW actual reviewed candidate is required**. Do not relabel API002 candidate as current or exclude changed files from hashing. After that, same-production-hash evidence-only descendants may advance normally.
-- API validates affected release/admission/workflow scope and current candidate, not another full field/application campaign. Delivery owns actual credentials/signing/publication/download/finalization. Field/user tests are deferred with custody, not release-task closure prerequisites; terminal SD hands the scoped follow-up once to PM.
+After passing review, use your configured route for implementation. Implementation/source review/API own current code/tests; Delivery owns genuine stable authorization/integration, actual same-payload hosted run/public OCI/download/install/signature checks and cleanup. No product tests or executable acceptance by SD. Historical candidate/failed runs must not be relabelled. Field/user follow-up remains separate, no new PM Task or dispatch.
 
-Concrete contracts, removal plan, migration decision, production paths, file map and validation intent are in design-spec.md. Existing safety/signing rules are retained, not reinvented. This scope merits Large/High independent delta review; do not restart settled product choices or dispatch directly around review.
+The requested finished user outcome is still actual release URL/version/four available platforms and exact install/run guidance. It is **not yet delivered**. Remaining execution risks are remote drift/expiry/access and new executor validation, not a missing user product decision. Preserve partial state on failure and report precise blocker.
 
-## Current execution state / custody
-API002 report remains **Blocked73.57**, API001 Fail62.86 historical. Actual build-only run39113335636/attempt1 on96c8de3a381f74ec8f2b9e93425fb90e17e7e693 and artifact12131531399 succeeded; signatures/physical/user/publication not proven. API retained candidate `/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate` stays untouched; it becomes historical after new production changes, not silently deleted. Intake read-only GitHub releases/tags counts0/0.
-
-All six signing secrets already provisioned. Import/password/account/Accepted notarization not yet validated; use intended jobs, do not ask to re-enter credentials absent an actual failure. No credential values read/written in this round.
-
-**Other-owner work:** Delivery's untracked handoff-summary.md, docs-sync-report.md, release-deployment-report.md, delivery-revision-record.md and delivery-evidence/dr001–003 belong to Delivery. Preserve/exclude from unrelated staging. API/source/review history, canonical checkout, PM boards, archives/unowned caches remain intact. SD changed only own solution documents/supplements/admin evidence; no production, product tests/builds/CI/live resources/remote effects. Source/preservation audit is administrative only.
-
-## Canonical documents / selected references
-All paths below are within the absolute ticket folder above unless stated otherwise:
-- Own authorities: requirements-doc.md, investigation-notes.md, solution-revision-record.md, design-spec.md, this solution-design-handoff.md.
-- Approval and deferred scope: approval-record-sr004.md, postpublication-testing-plan.md.
-- Exact external direction: delivery-evidence/dr-003/user-publish-first-direction.json (Delivery-owned).
-- API evidence/retained candidate and raw links: api-e2e-execution-coverage-report.md (API002).
-- Prior review basis: design-review-report.md and architecture-review-revision-record.md (ARCH001, historical SR003 only). New review artifact N/A — not yet applicable.
-Implementation-handoff.md/revision-record, code-review-report.md/revision-record and Delivery handoff/history remain available for scoped context; no forwarding of all raw files. Earlier SD authority snapshots are under evidence/release-first/sr004; old finalized tasks are read-only.
-
-## Expected next output
-Configured architecture review of **R3/SR004 delta**, then reviewed implementation → independent affected validation → Delivery actual signed release. Review concerns must trace to approved R3/AC or retained safety; release-first is settled direction, not a request for more host allocation. Missing real signing/access/integrity prerequisites remain exact blockers; no fabricated readiness or premature task closure. Reviewer owns configured Pass→implementation handoff; informational Pass must not cause SD duplicate dispatch.
+## Selected supporting references
+All relative paths below are within the absolute canonical ticket above:
+- approval-record-sr004.md; postpublication-testing-plan.md — unchanged approval/deferral basis.
+- design-review-report.md — ARCH002 prior basis only.
+- evidence/IMP-08-02-design-impact.md — current implementation diagnosis, links offline probes.
+- delivery-evidence/dr-013/failure-assessment.json and draft-reconciliation-observation.json — actual partial state/signing carry.
+Other source is in the worktree; implementation-handoff.md/history and API execution report Cases/progress/coverage links lead to any further evidence. No need to forward historical source files or entire evidence folders.
 
 ## Routing
-Fresh get_handoff_rules selects only **/software_engineering_team/architecture_reviewer**: Architecture Design Complete, Large/High, R3 and supplement approved. Focused SR004 delta review, then reviewer-owned configured implementation handoff. Raw rules/decision in evidence/release-first/sr004/routing.json. No API/Implementation/PM/Delivery duplicate dispatch. Stop after successful send.
+Fresh get_handoff_rules selects exactly **/software_engineering_team/architecture_reviewer**: Architecture Design Complete with Large or High and approved aligned package. Low-risk direct implementation and Delivery receipt-gap rules do not match. Exact returned rules/selection are in evidence/design-recovery/sr005/routing.json. Send only this review route, then stop; no duplicate Implementation/API/Delivery/PM notification. The authoring commit is supplied in the dispatch message to avoid a self-referential commit record.

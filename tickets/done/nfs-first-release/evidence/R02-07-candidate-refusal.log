@@ -1,0 +1,4 @@
+# R02; ['/usr/bin/python3', 'packaging/release.py', '--operation', 'verify-candidate', '--directory', '/Users/normy/nfs-first-candidate-api006-a8aune30/candidate']; commit6cb497f4a0bb83d52ddfc41b5aaad95a8e482440; cwd/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release; local Macarm64;2026-10-19T08:44:12.439243+00:00
+Release refused: Executed workflow differs from hashed source
+
+Exit:1

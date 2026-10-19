@@ -4,6 +4,7 @@ Run: python3 -m unittest scripts/tests/test_nfs_source_identity.py -v
 import importlib.util
 import json
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -36,6 +37,15 @@ class SourceIdentityTest(unittest.TestCase):
         lock=json.loads(self.lock_path.read_text())
         lock.update(engine=None,releaseReadiness=None)
         self.lock_path.write_text(json.dumps(lock))
+        def git(*args):
+            return subprocess.run(['git', *args], cwd=self.root, check=True, capture_output=True).stdout
+        git('init', '-q')
+        git('config', 'user.name', 'Synthetic Source Fixture')
+        git('config', 'user.email', 'fixture@example.invalid')
+        files = [str(p.relative_to(self.root)) for p in self.root.rglob('*')
+                 if p.is_file() and '.git' not in p.relative_to(self.root).parts and '__pycache__' not in p.parts]
+        git('add', '--', *files)
+        git('commit', '-qm', 'synthetic source fixture')
 
     def test_declared_owned_boundary_and_default_readiness(self):
         self.assertEqual(set(release.SOURCES), {

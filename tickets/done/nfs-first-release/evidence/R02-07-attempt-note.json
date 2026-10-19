@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-19T08:44:55.462661+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "macOS26.5.2arm64 current facade; actual read-only API",
+  "command": "R02-07-resume.py; reuse earlier actual CLI refusal, no repeat",
+  "case": "R02",
+  "initialHarnessAssertion": "Expected later source/engine differs but actual earlier guard says Executed workflow differs from hashed source",
+  "classification": "Test-orchestrator expectation corrected, no product failure or guard weakening",
+  "preserved": "R01-07-repository.py and R02-07-candidate-refusal.log",
+  "cliRerun": false
+}

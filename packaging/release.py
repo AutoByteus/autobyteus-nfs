@@ -54,7 +54,7 @@ def metadata(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--operation', choices=['prepare', 'candidate', 'verify-candidate', 'payload', 'bind', 'publish', 'oci', 'candidate-envelope', 'fetch-candidate'])
+    parser.add_argument('--operation', choices=['inspect-bound', 'prepare', 'candidate', 'verify-candidate', 'payload', 'bind', 'publish', 'oci', 'candidate-envelope', 'fetch-candidate'])
     parser.add_argument('--source-hash', action='store_true')
     parser.add_argument('--check-publish', action='store_true')
     parser.add_argument('--tag')
@@ -85,17 +85,23 @@ def main():
         i.require(i.command('git', 'show', workflow_commit + ':' + i.WORKFLOW) == (i.ROOT / i.WORKFLOW).read_bytes(),
                   'Dispatch workflow differs from checked-out release source')
         mode = 'candidate'
+        payload_source = source
         if os.environ.get('WANT_PUBLISH') == 'true':
-            mode = publication.prepare(tag, source, args.run_id, args.directory)
+            report = publication.prepare(tag, source, args.run_id, args.directory)
+            mode = report['mode']
+            payload_source = report['payloadSourceCommit']
         lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
-        result = {'tag': tag, 'source': source, 'mode': mode, 'base': lock['ubuntuBaseImage']}
+        result = {'tag': tag, 'executor': source, 'payload_source': payload_source, 'mode': mode, 'base': lock['ubuntuBaseImage']}
         with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             for name, value in result.items():
                 i.text(value)
                 output.write(name + '=' + value + '\n')
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
             summary.write(f'## NFS release inputs\n\nVersion: `{tag}`\n\n'
-                          f'Source: `{source}`\n\nWorkflow: `{workflow_commit}`\n\nMode: `{mode}`\n')
+                          f'Executor: `{source}`\n\nPayload source: `{payload_source}`\n\n'
+                          f'Workflow: `{workflow_commit}`\n\nMode: `{mode}`\n')
+    elif args.operation == 'inspect-bound':
+        result = publication.inspect_bound(i.version(args.tag), args.directory)
     elif args.operation == 'candidate':
         result = candidate.assemble(args.directory, args.tag, args.source_commit,
                                     args.workflow_commit, args.run_id, args.attempt)

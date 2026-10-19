@@ -4,6 +4,7 @@ import json
 import hashlib
 import shutil
 import sys
+import subprocess
 import tarfile
 from pathlib import Path
 from unittest.mock import patch
@@ -13,7 +14,6 @@ sys.path.insert(0, str(ROOT / 'packaging'))
 from release_support import candidate, identity as i, payload
 from source import source_identity, VERSION, NAMES
 
-SHA = 'a' * 40
 TAG = 'v0.1.0'
 
 
@@ -66,8 +66,9 @@ class Fixture:
             if src.is_dir(): shutil.copytree(src, dst, ignore=shutil.ignore_patterns('__pycache__','*.deb'))
             else: shutil.copyfile(src,dst)
         self.root_patch = patch.object(i, 'ROOT', self.repo); self.root_patch.start()
-        self.commit_patch = patch.object(i, 'commit', return_value=SHA); self.commit_patch.start()
-        self.git_patch = patch.object(i, 'command', side_effect=lambda *args, **kwargs: (self.repo/i.WORKFLOW).read_bytes() if args[:2]==('git','show') else b''); self.git_patch.start()
+        self.git('init', '-q')
+        self.git('config', 'user.name', 'Synthetic Fixture')
+        self.git('config', 'user.email', 'fixture@example.invalid')
         self.c = root/'candidate'; (self.c/'engine').mkdir(parents=True); (self.c/'native').mkdir()
         lock = i.read_json(self.repo/'packaging/release-lock.json')
         measured = {'source': source_identity(lock['ubuntuBaseImage']), 'architectures': {}}
@@ -84,12 +85,14 @@ class Fixture:
             measured['architectures'][arch]={'packages':records,'correspondingSource':{'file':source.name,**i.file_record(source)},
                                            'buildInventory':{'file':build.name,**i.file_record(build)}}
         i.write_json(self.c/'engine/engine-manifest.json',measured)
+        i.write_json(self.repo/'packaging/release-lock.json',lock|{'engine':measured, 'releaseReadiness':None})
+        self.c_commit = self.commit_all()
         make_oci(self.c/'engine.oci.tar')
         self.image=candidate.oci(self.c/'engine.oci.tar')
         self.metadata=candidate.runtime_metadata(TAG,i.IMAGE+'@'+self.image['index'],measured)
         for target in i.TARGETS: make_native(self.c/'native'/i.archive_name(TAG,target),self.metadata)
-        self.record=candidate.assemble(self.c,TAG,SHA,SHA,42,1)
-        self.envelope={'artifactId':43,'runId':42,'runAttempt':1,'workflowCommit':SHA,
+        self.record=candidate.assemble(self.c,TAG,self.c_commit,self.c_commit,42,1)
+        self.envelope={'artifactId':43,'runId':42,'runAttempt':1,'workflowCommit':self.c_commit,
                        'digest':'sha256:'+'b'*64,'expiresAt':'2099-01-01T00:00:00Z'}
         self.q={'schema':1,'kind':'release-first','version':TAG,'targets':list(i.TARGETS),
                 'candidate':{'recordSha256':i.sha(self.c/'candidate.json'),'envelope':self.envelope},
@@ -99,18 +102,19 @@ class Fixture:
                                  'version':TAG,'evidence':self.evidence('authorization')},
                 'checks':{name:{'status':'passed','evidence':self.evidence(name)} for name in ('native','releaseControls')},
                 'postpublicationPlan':self.evidence('plan'),
-                'review':{'candidateCommit':SHA,'sourceHash':self.record['sourceHash'],'evidence':self.evidence('review')},
+                'review':{'candidateCommit':self.c_commit,'sourceHash':self.record['sourceHash'],'evidence':self.evidence('review')},
                 'releaseNotes':self.evidence('notes')}
         self.lock=lock|{'engine':measured}
         self.save_q()
+        self.source = self.commit_all()
 
     def evidence(self,name):
-        path=self.repo/'evidence'/name; path.parent.mkdir(exist_ok=True); path.write_text('synthetic '+name+'\n')
+        path=self.repo/'packaging/releases'/TAG/name; path.parent.mkdir(parents=True,exist_ok=True); path.write_text('synthetic '+name+'\n')
         return {'path':path.relative_to(self.repo).as_posix(),'sha256':i.sha(path)}
 
     def save_q(self):
-        path=self.repo/'evidence/readiness.json'; i.write_json(path,self.q)
-        self.lock['releaseReadiness']={'path':'evidence/readiness.json','sha256':i.sha(path)}
+        path=self.repo/'packaging/releases'/TAG/'readiness.json'; i.write_json(path,self.q)
+        self.lock['releaseReadiness']={'path':'packaging/releases/'+TAG+'/readiness.json','sha256':i.sha(path)}
         i.write_json(self.repo/'packaging/release-lock.json',self.lock)
 
     def final_payload(self):
@@ -121,10 +125,21 @@ class Fixture:
             if target.startswith('darwin'):
                 i.write_json(native/(target+'-notary.json'),{'status':'Accepted','submissionId':'12345678-1234-1234-1234-123456789abc',
                              'teamId':'ABCDEFG123','binarySha256':payload.binary_hash(archive)})
-        self.p=self.root/'payload';payload.assemble(self.p,self.c,native,SHA,99,1)
-        self.binding={'repository':i.REPOSITORY,'version':TAG,'sourceCommit':SHA,'payloadSha256':i.sha(self.p/'publication.json'),
-                      'envelope':self.envelope|{'artifactId':100,'runId':99}}
+        self.p=self.root/'payload';payload.assemble(self.p,self.c,native,self.source,99,1)
+        self.binding={'repository':i.REPOSITORY,'version':TAG,'sourceCommit':self.source,'payloadSha256':i.sha(self.p/'publication.json'),
+                      'envelope':self.envelope|{'artifactId':100,'runId':99,'workflowCommit':self.source}}
         return self.p
 
+    def git(self, *args):
+        return subprocess.run(['git', *args], cwd=self.repo, capture_output=True, check=True).stdout
+
+    def commit_all(self):
+        paths = self.git('ls-files', '--modified', '--others', '--exclude-standard', '-z').split(b'\0')
+        paths = [p.decode() for p in paths if p]
+        if paths:
+            self.git('add', '--', *paths)
+        self.git('commit', '-qm', 'synthetic fixture', '--allow-empty')
+        return self.git('rev-parse', 'HEAD').decode().strip()
+
     def close(self):
-        self.git_patch.stop(); self.commit_patch.stop(); self.root_patch.stop()
+        self.root_patch.stop()

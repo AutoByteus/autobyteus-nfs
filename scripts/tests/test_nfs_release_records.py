@@ -9,8 +9,8 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
-from nfs_release_fixture import Fixture, TAG, SHA, make_oci
-from release_support import candidate, identity as i, payload, readiness
+from nfs_release_fixture import Fixture, TAG, make_oci
+from release_support import candidate, identity as i, payload, readiness, source_context
 
 
 class ReleaseRecordsTest(unittest.TestCase):
@@ -50,14 +50,15 @@ class ReleaseRecordsTest(unittest.TestCase):
             with self.subTest(value=bad),self.assertRaises(ValueError):i.positive(bad)
         for bad in (b'{"x":1,"x":2}',b'{"x":NaN}',b'{} trailing'):
             with self.subTest(value=bad),self.assertRaises(ValueError):i.decode(bad)
-        link=self.f.repo/'evidence/link';link.symlink_to(self.f.repo/'evidence/authorization')
-        with self.assertRaises(ValueError):readiness.evidence({'path':'evidence/link','sha256':i.sha(link)})
+        link=self.f.repo/'packaging/releases/v0.1.0/link';link.symlink_to(self.f.repo/'packaging/releases/v0.1.0/authorization')
+        with self.assertRaises(ValueError):readiness.evidence({'path':'packaging/releases/v0.1.0/link','sha256':i.sha(link)})
 
     def test_new_executables_invalidate_production_hash_not_readiness(self):
         before=i.source_hash(self.f.lock['engine'])
         for name in ('packaging/release_support/identity.py','packaging/release_support/candidate.py',
                      'packaging/release_support/readiness.py','packaging/release_support/payload.py',
-                     'packaging/release_support/publication.py','packaging/sign-macos.sh',i.WORKFLOW):
+                     'packaging/release_support/publication.py','packaging/release_support/source_context.py',
+                     'packaging/release_support/recovery.py','packaging/sign-macos.sh',i.WORKFLOW):
             path=self.f.repo/name;old=path.read_bytes();path.write_bytes(old+b'\n# mutation\n')
             self.assertNotEqual(before,i.source_hash(self.f.lock['engine']),name)
             with self.assertRaises(ValueError):candidate.verify(self.f.c)
@@ -118,8 +119,8 @@ class ReleaseRecordsTest(unittest.TestCase):
             with self.assertRaises(ValueError):readiness.validate(self.f.c)
         for name in ('tickets/in-progress/task/evidence.json','../escape'):
             with self.assertRaises(ValueError):readiness.evidence({'path':name,'sha256':'0'*64})
-        empty=self.f.repo/'evidence/empty';empty.write_bytes(b'')
-        with self.assertRaises(ValueError):readiness.evidence({'path':'evidence/empty','sha256':i.sha(empty)})
+        empty=self.f.repo/'packaging/releases/v0.1.0/empty';empty.write_bytes(b'')
+        with self.assertRaises(ValueError):readiness.evidence({'path':'packaging/releases/v0.1.0/empty','sha256':i.sha(empty)})
         self.f.q=original;self.f.save_q()
         self.f.lock['qualifiedTargets']=list(i.TARGETS);self.f.save_q()
         with self.assertRaises(ValueError):readiness.load()
@@ -147,13 +148,13 @@ class ReleaseRecordsTest(unittest.TestCase):
     def test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry(self):
         e=self.f.envelope
         run={'id':42,'run_attempt':1,'repository':{'full_name':i.REPOSITORY},'head_repository':{'full_name':i.REPOSITORY},
-             'path':i.WORKFLOW,'event':'workflow_dispatch','head_sha':SHA,'status':'completed','conclusion':'success',
+             'path':i.WORKFLOW,'event':'workflow_dispatch','head_sha':self.f.c_commit,'status':'completed','conclusion':'success',
              'run_started_at':'2026-10-01T00:00:00Z'}
-        artifact={'id':43,'name':candidate.CANDIDATE,'workflow_run':{'id':42,'head_sha':SHA},'expired':False,
+        artifact={'id':43,'name':candidate.CANDIDATE,'workflow_run':{'id':42,'head_sha':self.f.c_commit},'expired':False,
                   'created_at':'2026-10-01T01:00:00Z','expires_at':e['expiresAt'],'digest':e['digest'],'size_in_bytes':100}
         def check(r,a):
             with patch.object(candidate,'api',side_effect=[r,a]):
-                return candidate.envelope(43,42,1,SHA,candidate.CANDIDATE)
+                return candidate.envelope(43,42,1,self.f.c_commit,candidate.CANDIDATE)
         self.assertEqual(check(run,artifact),e)
         for key,value in [('event','push'),('run_attempt',2),('head_sha','0'*40),('conclusion','failure'),('status','in_progress')]:
             with self.subTest(key=key),self.assertRaises(ValueError):check(run|{key:value},artifact)
@@ -162,7 +163,7 @@ class ReleaseRecordsTest(unittest.TestCase):
             with self.subTest(key=key),self.assertRaises(ValueError):check(run,artifact|{key:value})
 
     def test_executed_workflow_and_release_metadata_cannot_drift(self):
-        with patch.object(i,'command',return_value=b'other workflow'),self.assertRaisesRegex(ValueError,'Executed workflow'):
+        with patch.object(source_context.SourceContext,'blob',return_value=b'other workflow'),self.assertRaisesRegex(ValueError,'Executed workflow'):
             candidate.verify(self.f.c)
         import importlib.util
         from types import SimpleNamespace

@@ -1,0 +1,35 @@
+{
+  "case": "C01",
+  "step": "Fresh post-commit handoff selection",
+  "date": "2026-10-19T08:53:27.463Z",
+  "commit": "66ba73a38321656b223b34fd51d2248d5f47cb5d",
+  "environment": "NFS ticket only; no remote writes",
+  "result": "Pass",
+  "scope": "Affected executor validation only; actual publication remains unproven",
+  "confidence": 95,
+  "task_size": "Large",
+  "architectural_risk": "High",
+  "rules": [
+    {
+      "when": "When API/E2E validation passes, the carried classification is task_size=Large or architectural_risk=High, and the cumulative evidence package requires proportional test-code review.",
+      "recipient_address": "/software_engineering_team/code_reviewer"
+    },
+    {
+      "when": "When API/E2E validation fails and the complete failure package requires focused failure-origin review by the code reviewer.",
+      "recipient_address": "/software_engineering_team/code_reviewer"
+    },
+    {
+      "when": "When API/E2E validation passes on the direct route, the carried classification is task_size=Small or Medium and architectural_risk=Low, no durable test-code review is required by policy, and the complete validated package is ready for delivery, documentation sync, finalization, or release work.",
+      "recipient_address": "/software_engineering_team/delivery_engineer"
+    },
+    {
+      "when": "When coverage investigation or test-validity analysis establishes a Requirement Gap, Design Impact or Unclear upstream issue before executable validation can proceed. Include the supported scenario basis and concrete evidence. Execution failures still follow the Code Reviewer failure-origin route.",
+      "recipient_address": "/software_engineering_team/solution_designer"
+    }
+  ],
+  "selected": {
+    "when": "When API/E2E validation passes, the carried classification is task_size=Large or architectural_risk=High, and the cumulative evidence package requires proportional test-code review.",
+    "recipient_address": "/software_engineering_team/code_reviewer"
+  },
+  "reason": "Successful affected validation; cumulative seven IR009 durable test/fixture paths require proportional review. API added no durable code. No other matching outcome dispatched."
+}

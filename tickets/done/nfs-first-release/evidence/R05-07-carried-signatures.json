@@ -1,0 +1,37 @@
+{
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "date": "2026-10-19T08:46:16.439565+00:00",
+  "environment": "localMacarm64 actual downloaded retained original bytes / liveGET",
+  "command": "R05-07-observe.py",
+  "case": "R05",
+  "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+  "signatures": {
+    "darwin-arm64": {
+      "archiveSha256": "cb320f7b0ef66814ef17dc476582bb220738e1faf20d99600bb18056e7d5468d",
+      "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408",
+      "codesignStrictExit": 0,
+      "DeveloperIdTeamTimestampRuntimeVerified": true,
+      "notary": {
+        "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408",
+        "status": "Accepted",
+        "submissionId": "52450985-4e16-482e-b22a-d7b15b8791b7",
+        "teamId": "7Y86YBQ7B4"
+      }
+    },
+    "darwin-amd64": {
+      "archiveSha256": "785fe38550e253194b4d08fb75e8f89f740d1c504bd931989c36e47348a1c71b",
+      "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e",
+      "codesignStrictExit": 0,
+      "DeveloperIdTeamTimestampRuntimeVerified": true,
+      "notary": {
+        "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e",
+        "status": "Accepted",
+        "submissionId": "563db88f-7ded-48ba-9d90-bcdbf8705961",
+        "teamId": "7Y86YBQ7B4"
+      }
+    }
+  },
+  "archiveAndBinaryMatchesFreshDownload": true,
+  "attribution": "DR013 actual codesign/Accepted; current API only reads/hashes bytes; not new Apple or public download proof",
+  "pass": true
+}

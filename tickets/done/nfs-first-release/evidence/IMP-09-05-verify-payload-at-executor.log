@@ -1,0 +1,28 @@
+Check: IMP-09-05/verify-payload-at-executor
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'test_nfs_release_recovery.RecoveryTest.test_distinct_git_context_full_chain_and_fresh_refusal', '-v']
+Commit: 4c665e0eb23adf1f9bb45363a496b7786e76b138 plus isolated mutant payload.py
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:25:12.461509+00:00
+
+test_distinct_git_context_full_chain_and_fresh_refusal (test_nfs_release_recovery.RecoveryTest) ... ERROR
+
+======================================================================
+ERROR: test_distinct_git_context_full_chain_and_fresh_refusal (test_nfs_release_recovery.RecoveryTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/scripts/tests/test_nfs_release_recovery.py", line 50, in test_distinct_git_context_full_chain_and_fresh_refusal
+    self.assertEqual(payload.verify(self.f.p,self.f.c,source)['sourceCommit'],self.f.source)
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/packaging/release_support/payload.py", line 77, in verify
+    q = readiness.validate(candidate_dir, context)
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/packaging/release_support/readiness.py", line 35, in validate
+    c = candidate.verify(directory, context)
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/packaging/release_support/candidate.py", line 189, in verify
+    i.require(i.sha(directory / 'engine/engine-manifest.json') == record['engineManifestSha256'] and
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/packaging/release_support/identity.py", line 27, in require
+    raise ValueError(message)
+ValueError: Candidate source/engine differs
+
+----------------------------------------------------------------------
+Ran 1 test in 3.261s
+
+FAILED (errors=1)

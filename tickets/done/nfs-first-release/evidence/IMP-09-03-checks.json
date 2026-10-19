@@ -1,0 +1,13 @@
+{
+  "check": "IMP-09-03",
+  "date": "2026-10-19T08:04:41.244223+00:00",
+  "commit": "ccf3d5b2a6603ab02d5bf6faa80856167af99140",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "scratch": "/Users/normy/nfs-ir009-checks-kb55eymi",
+  "checks": [],
+  "result": "interrupted; no final verdict",
+  "continuationDate": "2026-10-19T08:24:34.808325+00:00",
+  "interruption": "User turn interrupted execution; unified session unavailable and no associated process remains. Partial log retained.",
+  "cleanup": "owned interrupted clone/home/tmp/cache removed after process absence check"
+}

@@ -1,0 +1,73 @@
+{
+  "case": "R01-R07/C01",
+  "date": "2026-10-19T08:50:23.820189+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "Current executor; actual read-only APIs/downloads and actual-byte local emulation",
+  "step": "Summarize affected API proof, NOT authorization/publication",
+  "productSourceTests": "22205cc84a29e6aa66ba5673b0a60c8db95ddc80",
+  "production": "4c665e0eb23adf1f9bb45363a496b7786e76b138",
+  "executorHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+  "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "binding": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "result": "Pass",
+  "confidencePercent": 95,
+  "scope": "Affected executor validation only",
+  "actualInspection": {
+    "authorization": null,
+    "executor": {
+      "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+      "runAttempt": null,
+      "runId": null,
+      "sourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+      "workflow": ".github/workflows/release-nfs.yml",
+      "workflowCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440"
+    },
+    "executorPublicationAdmission": "not performed",
+    "mode": "recover",
+    "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "reviewedCommit": null,
+    "tag": {
+      "binding": {
+        "envelope": {
+          "artifactId": 12169472209,
+          "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+          "expiresAt": "2027-01-17T07:21:36Z",
+          "runAttempt": 1,
+          "runId": 39215470944,
+          "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+        },
+        "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+        "repository": "AutoByteus/autobyteus-nfs",
+        "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+        "version": "v0.1.0"
+      },
+      "object": "f4a04fd0c80a6625708ba002b4cef5507a03f514"
+    },
+    "verifiedPayloadJobId": 117940491787
+  },
+  "actualDraftId": 417014769,
+  "actualAssetCount": 0,
+  "realAuthorizationAbsent": true,
+  "emulationResult": "R07-07-result.json is SYNTHETIC authority and EMULATED effects; never a real published receipt",
+  "signedProof": "DR013 exact original bothMac Accepted/signatures carried through fresh downloaded-byte equality",
+  "broader": "Required and executed",
+  "cleanup": "C01-07-cleanup.json",
+  "downstream": "Genuine stable authorization/freshE/actual same-byte hosted recovery/public OCI/assets/download/install/signature/custody by Delivery",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  }
+}

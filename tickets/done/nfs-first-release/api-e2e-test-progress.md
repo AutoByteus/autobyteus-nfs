@@ -108,3 +108,25 @@ Introduced during API003 after the skill update. Earlier starts/events remain in
 | 2026-10-19T07:14:16.490900+00:00 | R05 | Completed | Pass | Exact v0.1.0 stdout; candidate admission refused, no HOME writes; scratch removed. R05-06-smoke.json. |
 | 2026-10-19T07:14:16.532672+00:00 | C01 | Started | Not Tested | Final candidate/ownedcleanup/input/Delivery/history/oldcandidate preservation. |
 | 2026-10-19T07:14:17.361475+00:00 | C01 | Completed | Pass | Candidate reverified;127inputs/Delivery10files preserved; oldAPI002–005 intact; owned native scratch absent. |
+
+## API-REV-007 — SR005 bound executor recovery
+
+| Time | Case | Event | Result | Note |
+|---|---|---|---|---|
+| 2026-10-19T08:43:24.199128+00:00 | R01 | Started | Not Tested | Checks Run/prior failure/DR013 signed success read first; exact130inputs reuse audit. |
+| 2026-10-19T08:44:12.272438+00:00 | R01 | Completed | Pass | IMP09 exact applicability confirmed; no duplicate suite for independence. |
+| 2026-10-19T08:44:12.272532+00:00 | R02 | Started | Not Tested | Current facade strict candidate and real tag-derived absent-authority refusal; no effects. |
+| 2026-10-19T08:44:55.463279+00:00 | R02 | Checkpoint | Not Tested | Initial orchestrator expected later hash guard; actual workflow guard correctly refuses first. Preserve raw result; resume without repeating completed R01/CLI. |
+| 2026-10-19T08:44:59.168446+00:00 | R02 | Completed | Pass | Current strict candidate/absent real authority refuse, GET-only; no authorization created. |
+| 2026-10-19T08:44:59.168545+00:00 | R03 | Started | Not Tested | Carry API006 original product build/candidate by exact record/member identity; not new executor build. |
+| 2026-10-19T08:45:01.488559+00:00 | R03 | Completed | Pass | Original API006 record/members/hash matchP; unchanged exact product evidence carries. |
+| 2026-10-19T08:45:11.685039+00:00 | R04 | Started | Not Tested | Actual inspect-bound, new owned APFS path; exact envelopes/full P validators/jobs, no admission/effects. |
+| 2026-10-19T08:45:58.846411+00:00 | R04 | Completed | Pass | Actual original envelopes/downloads/full P validators/job/signing proof; admission not performed. |
+| 2026-10-19T08:46:16.439901+00:00 | R05 | Started | Not Tested | Carry DR013 actual Accepted/signatures by matching newly inspected original archives/binaries, no new signing. |
+| 2026-10-19T08:46:16.570691+00:00 | R05 | Completed | Pass | Both original signed-byte proof exact; carried DR013 scope, not new Apple/public install. |
+| 2026-10-19T08:46:16.570759+00:00 | R06 | Started | Not Tested | Fresh actual bounded inventory/direct-ID/tag/main/artifact/job GETs; current discovery known417014769. |
+| 2026-10-19T08:46:24.212725+00:00 | R06 | Completed | Pass | Actual current list/directID fixes observed draft lookup; live retained job proof/expiry, no effects; run remains failed. |
+| 2026-10-19T08:47:48.500483+00:00 | R07 | Started | Not Tested | Independent clone/current code/actual signed bytes; synthetic authority and all external writes locally emulated only. |
+| 2026-10-19T08:48:27.870601+00:00 | R07 | Completed | Pass | Actual-byte complete current orchestration/admission with emulated effects; known-missing/excluded drift safeguards; no real authority/effects, clone removed. |
+| 2026-10-19T08:50:20.394515+00:00 | C01 | Started | Not Tested | Fresh no-effect remote correlation, exact owned/retained bytes, source/history/other-owner preservation and cleanup. |
+| 2026-10-19T08:50:23.819873+00:00 | C01 | Completed | Pass | Own inspection/clone removed; original signed payload/API002–006/source130/other-owner67files unchanged; actual remote main/tag/draft/assets unchanged; no real authority. |

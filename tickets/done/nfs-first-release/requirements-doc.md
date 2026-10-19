@@ -10,6 +10,9 @@
 - Approval details and scoped deferred-test supplement: `approval-record-sr004.md`, `postpublication-testing-plan.md`. SD notification in this conversation: publish-first gates will replace physical/user prerequisites; signing/integrity/host protections remain, deferred tests are not passed.
 - Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch `codex/nfs-first-release`; intake HEAD `a5f57097578f9503eff0beb120dbc9e33e194eef`, integration target `origin/main`, last Delivery-refreshed base `7e375984be2bea7a4d536e43cc59d6bc2b116870`. Fresh fetch/integration remains Delivery-owned. Canonical checkout/PM boards/old archives are not authoring workspaces.
 
+## Current recovery context — SR005 (evidence only, R3 unchanged)
+IR008/IMP-08-02 identifies a publisher defect after an immutable v0.1.0 tag and draft exist. DR013 now proves both Mac signing/Accepted notarization; publishing is incomplete. SCN006/REQ006/AC004 already govern recovery with the same signed bytes. SR005 changes the technical executor/source contract only; it authorizes no new version, changed asset, new field campaign or signing waiver. Earlier Current evidence/intake statements below describe the R3 baseline, not today's credential/signing or remote state. Canonical task folder is now `tickets/done/nfs-first-release`; current local intake032c4e50b265f045277241f30b4982449af495c3, last Delivery-observed main238bdc183e8affac99ffdee9be9cb333b0eb126f. Fresh remote/finalization remains Delivery-owned.
+
 ## Problem And Desired Outcome
 The implemented release path can build candidates but currently prevents publication and installer admission without independent physical and executed-user qualification. The first complete candidate succeeded, yet API002 remained Blocked73.57 because assigned physical/independent test hosts were absent. GitHub has no public release at this recovery intake.
 
@@ -33,6 +36,8 @@ Publish a real official signed normal v0.1.0 through the reviewed workflow after
 | UC003 | Publish and safely recover the independent version | SCN003/006 |
 | UC004 | Download, verify and install released CLI | SCN004/005 |
 | UC005 | Reconcile policy, report release evidence, retain follow-up and finalize | SCN007/008 |
+
+Explicit boundary: **NFS only; do not edit workspace/shared skills, agent packages, superrepo/application files or GitHub configuration, or the separately owned workspace-bug fix.** Reading workflow instructions is not permission to change them.
 
 Allowed delta: release-readiness/evidence policy, packaging metadata, installer admission, workflow wording/necessary plumbing, affected tests and documentation. No current runtime filesystem capability change. No manual gate bypass: implement the changed authority coherently before publication.
 

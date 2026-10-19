@@ -1,0 +1,21 @@
+{
+  "case": "R04",
+  "command": [
+    "/usr/bin/python3",
+    "packaging/release.py",
+    "--operation",
+    "inspect-bound",
+    "--tag",
+    "v0.1.0",
+    "--directory",
+    "/Users/normy/nfs-api007-inspect-m50i0aqe/inspection",
+    "--output",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/evidence/R04-07-inspection.json"
+  ],
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "date": "2026-10-19T08:45:58.835789+00:00",
+  "environment": "localAPFS/live read-only GitHub Actions",
+  "exit": 0,
+  "stdout": "",
+  "stderr": ""
+}

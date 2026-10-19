@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "revision": "ARCH-REV-003",
+  "design": "SR005 Ready",
+  "requirements": "R3/SR004 Approved unchanged",
+  "report": {
+    "path": "tickets/done/nfs-first-release/design-review-report.md",
+    "sha256": "9de5c16f663694f26ed2c64267fb4fc96f178f5fc88fd2a62f2b84f27cf2cd57",
+    "gitCommit": "630cc997eddbd936002d14123a3702973112fc38"
+  },
+  "designSpec": {
+    "path": "tickets/done/nfs-first-release/design-spec.md",
+    "sha256": "252f693f2419277d7b121ac77b29edc955556dfe95d3de8bc7eab457785507ac",
+    "gitCommit": "8a2d504679961556f9aacd385a342b869c6d69cd"
+  },
+  "judgement": "Reviewed executor E/H distinct from immutable product P; no new product/version, re-signing or field prerequisite."
+}

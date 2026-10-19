@@ -174,7 +174,7 @@ def command(*args, cwd=ROOT, input=None):
 
 
 def commit():
-    return hex_value(command('git', 'rev-parse', 'HEAD').decode().strip(), 40)
+    return hex_value(command('git', 'rev-parse', 'HEAD', cwd=ROOT).decode().strip(), 40)
 
 
 def archive_name(tag, target):

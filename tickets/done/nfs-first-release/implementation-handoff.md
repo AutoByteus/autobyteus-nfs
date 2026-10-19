@@ -1,141 +1,168 @@
 # Implementation Handoff — nfs-first-release
 
-## Current result and authorities
+## Current result / identity
 
-**IR-007 — Local Fix implemented and locally checked; targeted source review.**
-Demonstrated local codesign lookup defect corrected. **Original DR011 hosted cause
-is not conclusively identified; real hosted signing/release remain unverified.**
+**IR-009 — Implementation Complete; Ready for independent Code Review.**
+The SR005 executor/payload recovery contract and draft-ID correction are implemented
+and locally checked. This is not hosted recovery or release acceptance; Delivery
+DR013 remains the latest actual publication outcome (Blocked).
 
 Task autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5.
 Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`,
-branch `codex/nfs-first-release`, target origin/main. Canonical ticket is
-`tickets/done/nfs-first-release`; archive is not TaskDone. Intake79e35392bfe4f795464fecd8c034670b622c1684;
-source **3f67e36193c246ca08b49cda818be5c0f94eba51**. Evidence/docs commit supplied in handoff.
+branch `codex/nfs-first-release`, target `origin/main`. Canonical ticket is
+`tickets/done/nfs-first-release` (T); its archived location does not mean TaskDone.
+Review input630cc997; production4c665e0eb23adf1f9bb45363a496b7786e76b138,
+final source/tests **22205cc84a29e6aa66ba5673b0a60c8db95ddc80**. The last commit adds
+only four publication controls; production is identical. Evidence/docs commit is
+supplied in the handoff message. No push or target finalization this round.
 
-- Approved R3/SR004, Ready SR004, ARCH-REV-002 remain controlling:
-  requirements-doc.md, approval-record-sr004.md, design-spec.md,
-  investigation-notes.md, solution-revision-record.md, design-review-report.md,
-  architecture-review-revision-record.md and postpublication-testing-plan.md.
-- Trigger: Delivery release-deployment-report.md / delivery-revision-record.md
-  **DR011**, evidence delivery-evidence/dr-011/failure-assessment.json and actual
-  signing receipts/logs. No separate finding ID; this is the existing packaging
-  Local Fix, not a requirements/design dispatch.
-- Prior IR006 / CRR009 sourcePass100 / CRR010 testPass / API005 prepublication95
-  retain exact-input scope. Current IR007 source/API review pending. Prior handoff
-  preserved in implementation-evidence/ir-007/prior-implementation-handoff-ir006.md.
-- **Large / High / Reviewed confirmed** (design classification): privileged
-  release signing lifecycle remains security-sensitive; bounded four-path delta
-  does not alter classification. Selected route: independent source review.
-  No new design impact, approval or field questionnaire; direct-route self-review N/A.
+## Upstream package / revision links
 
-## Diagnosis and correction
+- Requirements: T/requirements-doc.md; **R3/SR004 Approved**, approval-record-sr004.md.
+- Investigation and solution history: T/investigation-notes.md,
+  solution-revision-record.md, solution-design-handoff.md.
+- Design: T/design-spec.md **SR005 Ready**, D2–D5/DS5; independent
+  T/design-review-report.md **ARCH-REV-003 Pass**, architecture-review-revision-record.md.
+  ARCH003 supersedes the design document's earlier pending-review notation.
+- Trigger: Delivery DR013 in release-deployment-report.md / delivery-revision-record.md,
+  actual draft discovery failure; IR008 / evidence/IMP-08-02-design-impact.md.
+- Cycle **Rework**. T/implementation-revision-record.md appends IR009 after IR001–008.
+  Prior result IR008 Design Impact is resolved by SR005 authority, not silently bypassed.
+- Current IR009 source/API verdicts **N/A — pending**. Prior IR007/API006/CRR012 and
+  DR013 signing receipts retain their exact scopes; they do not accept SR005 code.
+- T/postpublication-testing-plan.md remains controlling: field/shared-filesystem/
+  physical/user testing Deferred, not publication or closure prerequisites.
 
-DR011 run39210821088/1 at finalized main72b8a4 failed both Macs with
-sign/exit1/cleanupcomplete/unclassified; no notary/payload/publication. Original
-raw codesign output was deliberately deleted. No claim that it was recovered,
-that a particular credential was invalid, or that a chain/ACL cause was observed.
+## Classification / scope / health
 
-Instead of another guess-only diagnostic increment, real local empty/synthetic
-keychain probes tested the concrete superrepo search-list lead. Create-keychain
-was observed NOT to add its exact path to the user list. With an imported newly
-generated synthetic identity and otherwise unchanged command, the A/B/A result:
-without membership → no identity found/exit1; prepend only owned keychain →
-sign0/strict verify0/runtime flag present; remove again → same failure1.
-Explicit security lookup saw the synthetic identity; its untrusted -v query did
-not claim valid Developer ID. The probe disabled timestamp solely to avoid Apple
-requests. It proves this local lookup defect, NOT hosted credential/chain/Intel
-or release success. Full method/limits: evidence/IMP-07-17-investigation.md and
-IMP-07-01/02/03 scripts/results. Exact original search lists restored; all own
-keys/P12s/keychains/binary copies removed; no real user credentials accessed.
+**Large / High / Reviewed confirmed**, matching design classification. Distinct
+source authorities, full validators, workflow admission and irreversible public
+state justify this classification despite unchanged NFS runtime. Selected route:
+**Code Review**, selected by fresh handoff rules (IMP-09-13). Direct-route self-review N/A;
+implementation self-checks below are not independent review. New design impact: None.
+Scope Guardrail retained: **NFS ONLY**, no app/superrepo/shared-skills/PM changes.
 
-`packaging/sign-macos.sh` now explicitly prepends only its new temporary keychain
-to the captured original list before identity validation/signing. Prior entries,
-order, whitespace and argument boundaries are preserved. Configuration failure
-preserves its exit and stops before signing; existing cleanup restores exactly
-before deleting owned keychain. No default-keychain/trust change, broad -A access,
-intermediate import, retry, unsigned fallback or credential replacement. Existing
-Developer ID/team, --timestamp, hardened runtime, strict verify and Accepted-only
-notary remain unchanged. The observed exact identity-prefixed no-identity literal
-now maps to fixed `identity-not-found`; private output, unknown/ambiguous handling,
-64KiB bound, original codesign exit, mode0600 and no-clobber receipt safety remain.
+Reviewed posture: Bug Fix with bounded identity-boundary refactor; root cause was
+published-only draft lookup plus conflated executor/product identity. **Refactor
+Needed Now**, implemented as SourceContext and recovery admission owners, not a
+new publication framework. Publication retains draft/effect sequencing. Its
+306-addition/135-deletion delta exceeded the220-line signal and was assessed;
+projection/admission were split as designed. All changed production files are
+below500 nonempty lines (publication388, candidate273, new context85/admission59).
+No further design escalation was established.
 
-The signing command double now models search-list state: real shell success
-requires owned membership, prior paths/order survive, and restoration is checked
-after normal/failing/signalled paths. Added configuration-failure and ordering
-controls; privacy/strict failure/notary/workflow tests retained. TESTING.md and
-packaging/RELEASE.md explain the correction and evidence limits.
+## Behavior implementation trace
 
-## Behavior / production path
+| Behavior / criteria | Actual production path | Outcome |
+| --- | --- | --- |
+| BEH001 / AC001,006 | candidate.py + SourceContext default current; source_hash unchanged | Fresh candidate remains strict; old candidate is rejected at new executor. |
+| BEH002 / AC002,006 | source_context.py → candidate/readiness/payload; recovery.py | Full original P hash/workflow/lock/evidence/engine/OCI/native checks; separate P→H→E ancestry, fixed full-tree scope, H/E hash equality and committed genuine-evidence references. Missing actual authorization refuses. |
+| BEH003 / AC003,004,006 | publication.context_for/retained/inspect_bound/prepare/publish; workflow recover | Current E executes every validator against Git-proven P data; exact successful original payload/native/signing job identity; no old code execution. Recover skips build/native/sign/payload/bind. |
+| BEH003 / AC004 | publication.discover/reconcile_release/upload/verify_assets | Bounded publisher-visible unique inventory + direct ID; known missing417014769 refuses. One confirmed POST only when authorized absent; selected-ID streaming uploads/readback, no clobber/retry/delete. |
+| BEH003 / AC004,006 | publication guard, promote, final correlation | E-main/tag-object/binding/selected-release rechecks before effects; ambiguous outcomes stop; completed-identical release is read-only; exact OCI and public bytes retained. |
+| BEH004/005 / AC005,008 | unchanged Go/config/installer/signer/engine | Runtime/schema/host/consent/storage safeguards unchanged; no live setup. |
+| BEH006 / AC007,008 | facade outputs, external receipt, RELEASE/packaging guide/TESTING | E/workflow/run/hash, P, H/auth ref and selected release ID are distinct; original public notes/provenance/assets are not rewritten. Deferred-field custody remains truthful. |
 
-| Basis | Path / preserved outcome |
-| --- | --- |
-| BEH001 / AC001 | Existing workflow candidate/native4 → exact source/engine/OCI. Signer hash changes; NEW applicable complete candidate required, no old fragment promotion. |
-| BEH002 / AC002 | Singular readiness/current-source equality unchanged; Delivery must accept genuine current records after affected API validation. |
-| BEH003 / AC003/004/006 | Workflow → signer → capture original list → owned-keychain configuration → selected identity/codesign → strict verify/Accepted → cleanup. Existing payload-before-public-effects order unchanged. |
-| BEH004 / AC005/007 | Installer integrity, manifest admission, exact version/deferral output unchanged. |
-| BEH005 / AC005/008 | Host source/state/permissions/consent/detach, Go runtime, engine and app boundaries untouched. No live NFS setup. |
-| BEH006 / AC007/008 | Testing/package guides truthful; signed release first, field/user Deferred and postpublication custody unchanged. |
+## Key ownership / transition checks
 
-Scope Guardrail respected. Existing narrow signing owner remains appropriate;
-no framework/refactor/design-health deviation. Source179 total lines, below500;
-source delta12 lines, below220. Touched-file/embedded imports inspected, no dead
-code or compatibility wrapper introduced. Shared shape remains the same receipt
-with one additional literal enum. Host persisted data/migration **Not Affected**;
-search list is transient and restored, not a new host schema. Frontend **N/A**.
+- `source_context.py` bounds regular Git entries/blobs/snapshot and removes owned
+  projection on exit. `recovery.py` owns fixed admission, never creates authority.
+  Existing candidate/readiness/payload verifiers receive one explicit context.
+- Published-only draft discovery and tag-addressed upload were replaced, not kept
+  as fallback. By-tag is only conflict/final published correlation. No global
+  ROOT/hash override, source exclusion, old executor or bypass flag introduced.
+- Dead touched imports removed/none remain; AST use audit plus caller inspection
+  passed. No unrelated dead-code follow-up found. Shared structures remain tight;
+  separate PublicationContext and SourceContext express distinct authorities.
+- Persisted transition: **Directly Usable — No Migration** for original bound
+  candidate/payload/tag/readiness; separate new Delivery authorization only.
+  Installed host data **Not Affected**. No transformation, re-sign, repack or rebind.
+- Source hash algorithm/SOURCES, original lock/releases, engine recipes/pins,
+  runtime/installer/signer and license/notices unchanged. Executor hash:
+  `e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21`.
+- No real `packaging/recovery` record exists yet. Test records are synthetic in
+  removed scratch. Evidence references require human review; parsing hashes does
+  not certify the truth of the referenced human judgement.
 
-## Checks Run
+## Checks Run (implementation scope, not API/E2E sign-off)
 
-Primary evidence is `evidence/IMP-07-*` below this ticket. Exact argv/exits/times
-for fixture checks are in IMP-07-results.json; native scripts contain exact argv.
-All checks are implementation-scoped, not API or release acceptance. Unchanged
-checks may carry downstream; no repeat solely for independence.
+All final checks used macOS26.5.2 arm64, Python3.9.6; independent local Git clones
+with private HOME/TMP/cache, no network, except the explicitly read-only retained
+input checks. Bash3.2.57, actionlint1.7.11. E below means T/evidence/.
+Exact harness commands and underlying argv are in each named script/result.
 
-| Check | Commit / environment | Exact command or step / exercised boundary | Result and look-for |
-| --- | --- | --- | --- |
-| IMP-07-01 | intake79e3539 / native macOS26.5.2 arm64 | `python3 tickets/done/nfs-first-release/evidence/IMP-07-01-keychain-probe.py`; empty owned keychain and missing-identity actual codesign | JSON: `createdKeychainInSearchList: false`, `identityPrefixedNoIdentityFound: true`; restore/delete0, exact list restored. |
-| IMP-07-02/03 | intake79e3539 / native arm64 | `python3 tickets/done/nfs-first-release/evidence/IMP-07-02-identity-probe.py` and `IMP-07-03-identity-probe.py`; synthetic import/partition/sign membership controls | JSON03 original1 → with-owned0/verify0/runtime true → removed-again1; `searchListExactlyRestored: true`, `ownedScratchRemoved: true`. NOT actual Developer ID/notary. |
-| IMP-07-04 | precommit HEAD79e3539, identical3f67e36 signer/tests / independent Darwin copy, Python3.9.6/Bash3.2/private HOME/TMP | `/usr/bin/python3 -m unittest scripts.tests.test_nfs_release_signing scripts.tests.test_nfs_release_workflow -v` | focused.log/result: `Ran 23 tests in 91.454s`, `OK`; footer clarifies precommit identity. |
-| IMP-07-05 | committed3f67e36 / same isolated environment | `/usr/bin/python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v`; all release packaging fixtures | python.log: `Ran 58 tests in 141.187s`, `OK (skipped=1)`;57 executed, expected standalone Go-child skip. |
-| IMP-07-06/07/08 | 3f67e36 / independent copy | `/bin/bash -n packaging/sign-macos.sh`; `/opt/homebrew/bin/shellcheck packaging/sign-macos.sh`; `/opt/homebrew/bin/actionlint .github/workflows/release-nfs.yml` | syntax/shellcheck/actionlint logs: `Observed exit: 0; expected exit: 0`. |
-| IMP-07-09/10/14 | 3f67e36, original79e3539 signer control / independent copy | `/usr/bin/python3 packaging/release.py --source-hash`; `/usr/bin/python3 -c 'import sys;sys.path.insert(0,"packaging/engine");import source;print(source.recipe_hash())'` | source-hash/recipe-hash/original-hash logs; exact identities below, recipe unchanged. |
-| IMP-07-11 | 3f67e36 / independent copy | `/usr/bin/python3 packaging/release.py --check-publish` without candidate | Expected exit1: `Identified candidate is required`. Not a real stale-candidate or publication execution. |
-| IMP-07-12 | 3f67e36 disposable mutants / independent copy | `SKIP_FOCUSED=1 python3 tickets/done/nfs-first-release/evidence/IMP-07-run-checks.py` from repository root; exact unittest selectors recorded | Four mutant logs each expected exit1: omit membership, replace original list, swallow configure failure, skip restore. Actual test assertions detect each. |
-| IMP-07-13 | original79e3539 signer + new tests / independent copy | Current `SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order` via same runner | Original-control.log expected failure at sign/exit1; original omission detected, not merely a source-text assertion. |
-| IMP-07-15/16 | 3f67e36 / independent copy | Runner final byte comparison and owned-copy removal | copy.json: `allCopiedInputsStillMatch: true`; cleanup.json: `absent: true`. Native cleanup separately in01–03. |
-| IMP-07-17/18/19/20 | intake79e3539 →3f67e36 / read-only source/evidence audit | Investigation, tool-version/manual capture; `python3 tickets/done/nfs-first-release/evidence/IMP-07-19-audit.py` | investigation.md separates facts/limits; audit.json records four paths/imports/size/history/main; metadata notes20 disclose label/input clarifications. |
+| Check | Command / steps | Commit tested | Exercises / criteria | Result / evidence / look for |
+| --- | --- | --- | --- | --- |
+| IMP-09-06 | `python3 T/evidence/IMP-09-06-run-checks.py`: `python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v` |4c665e0|All packaging/release/signing doubles, real C/P/H/E fixtures; BEH001–006|**Pass**,72 collected/71 executed/1 expected Go-child skip. E/IMP-09-06-python.log: `Ran 72 tests in 330.543s`, `OK (skipped=1)`.|
+| IMP-09-06,10 | Same harnesses: `actionlint .github/workflows/ci.yml .github/workflows/release-nfs.yml`; `/bin/bash -n scripts/public/nfs/install.sh packaging/sign-macos.sh`; `python3 packaging/release.py --source-hash`; `git diff --check <commit>^ <commit>` |4c665e0,22205cc|Workflow/shell/hash/whitespace; AC001–004|**Pass**,all exits0 in E/IMP-09-{06,10}-checks.json; hash e3e814… both. Separate full delta `git diff --check 630cc997 HEAD` also clean.|
+| IMP-09-10 | `python3 T/evidence/IMP-09-10-run-checks.py`: `python3 -m unittest discover -s scripts/tests -p test_nfs_release_publication.py -v` |22205cc|Affected publication suite after four added controls: tag conflicts, equal-size corrupt assets, failed promotion/retry, public-download integrity; AC004/006|**Pass**, E/IMP-09-10-python.log: `Ran 15 tests in 53.114s`, `OK`. Other suites carry from06: only this test file changed. No claim all76 were rerun together.|
+| IMP-09-05 | `python3 T/evidence/IMP-09-05-mutations.py` |4c665e0, unchanged production at22205cc|Remove admission/full-tree scope, substitute E for P, restore by-tag lookup, recreate known draft, omit main freshness; AC002–004/006|**Pass controls**,all6 detected with exit1; E/IMP-09-05-mutations.json + per-mutant logs. Six distinct controls; baseline tests green.|
+| IMP-09-07 | `PYTHONDONTWRITEBYTECODE=1 python3 T/evidence/IMP-09-07-retained-inputs.py` |4c665e0, same production at22205cc|Real retained candidate/payload; current full P validators; saved DR013 jobs/draft; AC002–004/006|**Pass**, E/IMP-09-07-retained-inputs.json: `retainedInputsUnchanged: true`, `snapshotCleanup: true`; exact original receipt3b0c…; `Reviewed recovery authorization required`. Saved endpoints are NOT fresh API proof.|
+| IMP-09-11 | `PYTHONDONTWRITEBYTECODE=1 python3 T/evidence/IMP-09-11-source-audit.py` |22205cc|Scope, imports, size, hash algorithm, originals and other-owner authority preservation|**Pass**, E/IMP-09-11-source-audit.json: empty unusedLocalImports, realRecoveryAuthorizationAbsent, priorIR001to008PrefixPreserved.|
 
-No unexpected failing product check. Intentional original/mutation failures are
-retained. No Go/Linux/four-target rebuild, real credentialed signing, Apple
-notarization, new hosted candidate, remote writes, public downloads or field/user
-campaign executed here. Prior exact-input results retain their limits. No engine
-bytes copied/rebuilt or changed; no fixture-generated readiness. Owned probe and
-fixture scratch cleaned; retained candidates, local diagnostic, other owners and
-ignored caches preserved. See notes20 for evidence metadata corrections.
+E/IMP-09-09-checks-and-limits.md provides short excerpts and precise limitations.
+Initial IMP-09-01 had2 errors in10 tests from an owned Mac `/var` alias in the new
+snapshot assertion; canonicalizing the owned snapshot root fixed it without
+weakening source symlink refusal. IMP-09-02 then54 focused tests passed. IMP-09-03
+was interrupted by the user; no final verdict, partial log retained and owned
+scratch removed after confirming no process. IMP-09-04 was earlier actual-byte
+proof atccf3d5b, superseded by07. These are disclosed attempts, not current Pass.
 
-## Identity, risks and next owner
+Not rerun: Go/race/native Linux/four-target builds, engine candidate, actual Mac
+signing/notary or field/user campaign, because their product inputs/bytes are
+unchanged by this executor repair. The Go-parent installer fixture was not run;
+its Python-child skip is explicit. No fresh hosted/API inspect-bound, real upload,
+OCI/public-download/install/signature campaign, actual recovery authorization or
+publication. Those belong to subsequent affected API/Delivery work.
+Frontend rendered-result check: **Not Applicable**, no rendered surface changed.
 
-New source hash **7cb7b6d25794cbacbcf0286d9d0760347d9f15999eb51e981765e4ba8ed37a1a**.
-Prior measured source `0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3`.
-Engine recipe **299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274** unchanged.
-Workflow, actual measured engine/OCI lock, genuine readiness, all Go inputs and
-prior finalized main72b8a4/f830/768 ancestors unchanged. API005 candidate at
-`/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate`, older API002/003/004
-and `/Users/normy/nfs-local-notary-xq_ym2f6` untouched. Existing readiness/candidate
-is not current for changed source and must not be relabelled.
+## Immutable state / limits / downstream work
 
-Fresh configured source review → applicable current API/new complete candidate
-→ Delivery-owned genuine readiness and actual BOTH-Mac signing/Accepted, retained
-payload/publication/public-download verification. Delivery controls necessary
-remote staging; implementation performed no push/main merge/dispatch. No claim
-that the exact original hosted output was identity-not-found. If the changed
-hosted path still fails, act on its actual controlled evidence rather than guessing
-credentials or weakening gates. All six secrets remain provisioned.
+Preserve P **238bdc183e8affac99ffdee9be9cb333b0eb126f**, tag object
+**f4a04fd0c80a6625708ba002b4cef5507a03f514**, draft **417014769**; payload job117940491787,
+artifact12169472209, run39215470944/1, wrapper b552faea…,
+publication.json **3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8**,
+expiry2027-01-17T07:21:36Z. Full identities are in07 and unchanged DR013 reports.
+Original P hash3e1af43a… remains separate from executor e3e814….
 
-DR011 and old DR005/009 failed history preserved; DR007 local DEVELOPMENT Accepted
-is not final-release proof. Field/user tests Deferred, not prerequisites;
-postpublication plan custody remains Delivery → terminal Solution Designer → PM.
-No release, TaskDone, user-verification or Terminal claim. No new approval loop,
-old filesystem/editor/VM/provider campaign or duplicate outcome dispatch.
+Actual BOTH-Mac DeveloperID/runtime/timestamp/strictverify/Accepted is **carried
+from DR013**, not newly executed here. Current full payload validation confirms
+both recorded Accepted receipt binary hashes against retained archives. ARM
+52450985-4e16-482e-b22a-d7b15b8791b7 and Intel563db88f-7ded-48ba-9d90-bcdbf8705961
+remain original submissions. Old failed signing histories remain failures.
 
-Fresh route: most-specific Large/High implementation-owned Local Fix →
-`/software_engineering_team/code_reviewer` only; evidence/IMP-07-21-routing.json.
+Retained paths `/Users/normy/nfs-first-final-dr013-gmvotux9/payload` and
+`/Users/normy/nfs-first-candidate-api006-a8aune30/candidate` are unchanged; all older
+candidates/local diagnostic preserved. Main238/72/f830/768 ancestors preserved.
+No remote freshness query this round; DR013 is the last actual observation.
+
+Next: independent source review of SR005's full affected identity/validation and
+ID-publication path, then affected API proof using current code, including actual
+read-only inspect-bound and proportional executor/admission checks. No repeat
+successful candidate/native/signing campaign solely for this bound repair.
+Delivery alone judges genuine evidence, adds stable authorization for reviewed H,
+fresh-integrates E with no executable drift, refreshes remote state and performs
+same-byte hosted recover/public OCI/download/install/signature verification.
+Expiry, hidden/missing known draft, conflict, changed main or inadequate evidence
+must block rather than alter immutable inputs. No tag/draft delete/move/manual
+upload, new payload/version or synthetic real authority.
+
+All owned check/mutant/interrupted scratch removed; no running owned monitor.
+Unowned caches and other-owner docs/history preserved. No source push, main merge,
+credentials/keychain/Apple/live-storage/PM actions, release, TaskDone or Terminal.
+Field/user plan custody remains Delivery → terminal Solution Designer → requesting
+PM after actual completion. No delegation or duplicate outcome dispatch.
+
+## Selected handoff
+
+Fresh most-specific completed implementation-owned Local Fix / Large-or-High rule
+selects only `/software_engineering_team/code_reviewer`; see
+`evidence/IMP-09-13-routing.json`. Current implementation and local validation are
+complete. No direct API, duplicate Designer/Delivery/PM dispatch or new approval.
+
+
+Raw-log whitespace exception: IMP-09-03-python.log:47 (interrupted unittest
+progress line) and IMP-09-05-recreate-known-draft.log:7 (raw unittest subtest
+progress line) retain their original trailing space. They are evidence, not
+source/style defects. Header-only silent-command logs explicitly annotate no
+output/exit0. All other staged source/docs/evidence whitespace is clean.

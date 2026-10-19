@@ -1,0 +1,65 @@
+Check: IMP-09-01
+Command: python3 -m unittest discover -s scripts/tests -p test_nfs_release_publication.py -v
+Commit: 630cc997eddbd936002d14123a3702973112fc38 plus developing IR009 working delta
+Environment: macOS arm64; Python3.9.6; 2026-10-19
+Not final-source proof. Initial publication run failed on scratch /var alias; focused run passed before final small follow-up edits.
+
+test_api_404_only_explicit_read_missing_is_absence (test_nfs_release_publication.PublicationTest) ... ok
+test_assets_use_id_list_state_and_content_never_embedded_array (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_create_response_and_ambiguous_effects_never_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... ok
+test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest) ... ERROR
+test_payload_jobs_duplicate_failure_wrong_attempt_and_signing (test_nfs_release_publication.PublicationTest) ... ok
+test_published_only_404_does_not_hide_draft (test_nfs_release_publication.PublicationTest) ... ok
+test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects (test_nfs_release_publication.PublicationTest) ... ok
+test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest) ... ERROR
+test_unique_paginated_inventory_known_missing_and_direct_correlation (test_nfs_release_publication.PublicationTest) ... ok
+
+======================================================================
+ERROR: test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_publication.py", line 206, in test_fresh_resume_completed_and_stage_drift
+    result=p.publish(self.f.p,self.f.c,self.f.binding)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/publication.py", line 366, in publish
+    with context_for(i.version(binding['version'])) as ctx, tempfile.TemporaryDirectory(prefix='nfs-retained-') as scratch:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/publication.py", line 85, in context_for
+    with frozen(executor, p) as source:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/source_context.py", line 104, in frozen
+    context.assert_files(entries)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/source_context.py", line 76, in assert_files
+    i.require(not any(p.is_symlink() for p in (path, *path.parents)), 'Linked source input refused')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/identity.py", line 27, in require
+    raise ValueError(message)
+ValueError: Linked source input refused
+
+======================================================================
+ERROR: test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/scripts/tests/test_nfs_release_publication.py", line 231, in test_resume_prepare_inspect_and_lost_payload
+    report=p.prepare(TAG,self.f.source,42,Path(self.temp.name)/'prepare')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/publication.py", line 153, in prepare
+    with context_for(tag) as ctx:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/publication.py", line 85, in context_for
+    with frozen(executor, p) as source:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 117, in __enter__
+    return next(self.gen)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/source_context.py", line 104, in frozen
+    context.assert_files(entries)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/source_context.py", line 76, in assert_files
+    i.require(not any(p.is_symlink() for p in (path, *path.parents)), 'Linked source input refused')
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release_support/identity.py", line 27, in require
+    raise ValueError(message)
+ValueError: Linked source input refused
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.002s
+
+FAILED (errors=2)

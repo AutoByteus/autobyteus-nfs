@@ -1,0 +1,17 @@
+{
+  "check": "IMP-08-03",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 tickets/done/nfs-first-release/evidence/IMP-08-03-audit.py",
+  "commit": "a7eb8a819c604358a5b01bd66b1fe1ffda313b19",
+  "environment": "Darwin arm64 read-only source audit",
+  "date": "2026-10-19",
+  "productionUnchanged": true,
+  "changedTrackedPaths": [
+    "tickets/done/nfs-first-release/implementation-handoff.md",
+    "tickets/done/nfs-first-release/implementation-revision-record.md"
+  ],
+  "priorHistoryPrefixPreserved": true,
+  "finalizedMainAncestor": true,
+  "unusedProbeImports": [],
+  "ownedScratchRemoved": true,
+  "remoteOrSigningActions": false
+}

@@ -1,0 +1,26 @@
+Check: IMP-09-10/python
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'discover', '-s', 'scripts/tests', '-p', 'test_nfs_release_publication.py', '-v']
+Commit: 22205cc84a29e6aa66ba5673b0a60c8db95ddc80
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:29:41.389558+00:00
+
+test_api_404_only_explicit_read_missing_is_absence (test_nfs_release_publication.PublicationTest) ... ok
+test_assets_use_id_list_state_and_content_never_embedded_array (test_nfs_release_publication.PublicationTest) ... ok
+test_draft_create_response_and_ambiguous_effects_never_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest) ... ok
+test_failed_promotion_preserves_draft_then_same_byte_retry (test_nfs_release_publication.PublicationTest) ... ok
+test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest) ... ok
+test_matching_size_corrupt_remote_asset_refuses_before_upload (test_nfs_release_publication.PublicationTest) ... ok
+test_payload_jobs_duplicate_failure_wrong_attempt_and_signing (test_nfs_release_publication.PublicationTest) ... ok
+test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects (test_nfs_release_publication.PublicationTest) ... ok
+test_public_download_checks_bytes_before_owned_home_version (test_nfs_release_publication.PublicationTest) ... ok
+test_published_only_404_does_not_hide_draft (test_nfs_release_publication.PublicationTest) ... ok
+test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects (test_nfs_release_publication.PublicationTest) ... ok
+test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest) ... ok
+test_tag_object_and_annotation_conflicts_refuse (test_nfs_release_publication.PublicationTest) ... ok
+test_unique_paginated_inventory_known_missing_and_direct_correlation (test_nfs_release_publication.PublicationTest) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 53.114s
+
+OK

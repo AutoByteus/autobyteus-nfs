@@ -1,0 +1,67 @@
+{
+  "check": "IMP-09-06",
+  "date": "2026-10-19T08:24:35.523598+00:00",
+  "commit": "4c665e0eb23adf1f9bb45363a496b7786e76b138",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "scratch": "/Users/normy/nfs-ir009-checks-9ytag59t",
+  "checks": [
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "IMP-09-06-python.log"
+    },
+    {
+      "command": [
+        "actionlint",
+        ".github/workflows/ci.yml",
+        ".github/workflows/release-nfs.yml"
+      ],
+      "exit": 0,
+      "log": "IMP-09-06-actionlint.log"
+    },
+    {
+      "command": [
+        "/bin/bash",
+        "-n",
+        "scripts/public/nfs/install.sh",
+        "packaging/sign-macos.sh"
+      ],
+      "exit": 0,
+      "log": "IMP-09-06-bash.log"
+    },
+    {
+      "command": [
+        "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "exit": 0,
+      "log": "IMP-09-06-source-hash.log"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "4c665e0eb23adf1f9bb45363a496b7786e76b138^",
+        "4c665e0eb23adf1f9bb45363a496b7786e76b138"
+      ],
+      "exit": 0,
+      "log": "IMP-09-06-whitespace.log"
+    }
+  ],
+  "cloneTrackedStatus": "",
+  "result": "pass",
+  "cleanup": "owned clone/home/tmp/cache removed"
+}

@@ -1,0 +1,71 @@
+{
+  "status": "authorized",
+  "owner": "delivery_engineer",
+  "at": "2026-10-19T09:04:07.963510+00:00",
+  "basis": {
+    "path": "tickets/done/nfs-first-release/approval-record-sr004.md",
+    "sha256": "4519f245d632b9d4fb74b59afb0774812b6f1c11a862ae4097a447ccb261ac9f",
+    "gitCommit": "b599e4761a947bfb1a477606db9ed4605b66bd1c"
+  },
+  "architecture": "SR005/ARCH003 current approved technical recovery",
+  "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "executorHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+  "scope": "Authorized same-byte recovery of already-bound normal v0.1.0 using current reviewed executor; no rebuild/re-sign/tagmove/clobber/new version or live storage",
+  "boundState": {
+    "at": "2026-10-19T09:04:07.587354+00:00",
+    "head": "adf1bac16c93cadd3b5163172701ebc49230da5f",
+    "H": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+    "P": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "tag": {
+      "object": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+      "binding": {
+        "envelope": {
+          "artifactId": 12169472209,
+          "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+          "expiresAt": "2027-01-17T07:21:36Z",
+          "runAttempt": 1,
+          "runId": 39215470944,
+          "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+        },
+        "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+        "repository": "AutoByteus/autobyteus-nfs",
+        "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+        "version": "v0.1.0"
+      }
+    },
+    "draftId": 417014769,
+    "draft": true,
+    "assetCount": 0,
+    "originalPayloadSha": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "originalSourceHash": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086",
+    "executorHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+    "candidateAndPayloadValidatedAgainstP": true,
+    "liveEnvelopesMatch": true,
+    "payloadAndNativeSigningJobsProven": true,
+    "admission": "not yet created; inspection only"
+  },
+  "evidenceJudgement": "AC001/002/003 and affected004/006 controls sufficient for current executor admission; actual public004/005/006/007/008 portions still mandatory",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "plan": {
+    "path": "tickets/done/nfs-first-release/postpublication-testing-plan.md",
+    "sha256": "5fe1450719ac8be11cc44d416e96d92ec013cdcf82006d1791a2119f978b3176",
+    "gitCommit": "b599e4761a947bfb1a477606db9ed4605b66bd1c"
+  },
+  "custody": "Delivery -> terminal Solution Designer -> requesting Project Task Manager after release completion",
+  "guide": {
+    "root": {
+      "path": "RELEASE.md",
+      "sha256": "e24bfa666a6a73f2b4b4c027973c28d57e46a994b335d71119dfba90b943a047",
+      "gitCommit": "ccf3d5b2a6603ab02d5bf6faa80856167af99140"
+    },
+    "packaging": {
+      "path": "packaging/RELEASE.md",
+      "sha256": "11f0208f450e3aba051ccdc6d3a39c8cccf9c4427982af5c64d9ea589ffad68e",
+      "gitCommit": "ccf3d5b2a6603ab02d5bf6faa80856167af99140"
+    }
+  },
+  "guideDeviation": "None"
+}

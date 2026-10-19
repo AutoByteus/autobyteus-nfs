@@ -1,0 +1,121 @@
+{
+  "review": "CRR-013",
+  "kind": "Read-only source/identity and own-artifact audit; not product execution",
+  "intake": "08dca3db37701b425219428de89f48caef81f96d",
+  "product": "22205cc84a29e6aa66ba5673b0a60c8db95ddc80",
+  "base": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "nonTicketCount": 130,
+  "productMismatches": [],
+  "changedNonTicketPaths": [
+    ".github/workflows/release-nfs.yml",
+    "RELEASE.md",
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/release.py",
+    "packaging/release_support/candidate.py",
+    "packaging/release_support/identity.py",
+    "packaging/release_support/payload.py",
+    "packaging/release_support/publication.py",
+    "packaging/release_support/readiness.py",
+    "packaging/release_support/recovery.py",
+    "packaging/release_support/source_context.py",
+    "scripts/tests/nfs_release_fixture.py",
+    "scripts/tests/test_nfs_packaging.py",
+    "scripts/tests/test_nfs_release_publication.py",
+    "scripts/tests/test_nfs_release_records.py",
+    "scripts/tests/test_nfs_release_recovery.py",
+    "scripts/tests/test_nfs_release_workflow.py",
+    "scripts/tests/test_nfs_source_identity.py"
+  ],
+  "sizes": [
+    {
+      "path": ".github/workflows/release-nfs.yml",
+      "before": 361,
+      "after": 362,
+      "additions": 12,
+      "deletions": 11
+    },
+    {
+      "path": "packaging/release.py",
+      "before": 127,
+      "after": 133,
+      "additions": 10,
+      "deletions": 4
+    },
+    {
+      "path": "packaging/release_support/candidate.py",
+      "before": 268,
+      "after": 273,
+      "additions": 20,
+      "deletions": 15
+    },
+    {
+      "path": "packaging/release_support/identity.py",
+      "before": 138,
+      "after": 138,
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "packaging/release_support/payload.py",
+      "before": 123,
+      "after": 125,
+      "additions": 12,
+      "deletions": 10
+    },
+    {
+      "path": "packaging/release_support/publication.py",
+      "before": 235,
+      "after": 388,
+      "additions": 306,
+      "deletions": 135
+    },
+    {
+      "path": "packaging/release_support/readiness.py",
+      "before": 68,
+      "after": 71,
+      "additions": 21,
+      "deletions": 18
+    },
+    {
+      "path": "packaging/release_support/recovery.py",
+      "before": 0,
+      "after": 59,
+      "additions": 64,
+      "deletions": 0
+    },
+    {
+      "path": "packaging/release_support/source_context.py",
+      "before": 0,
+      "after": 85,
+      "additions": 105,
+      "deletions": 0
+    }
+  ],
+  "priorHistoryBytes": 40189,
+  "priorHistorySHA256": "62a05cf4431f1f5df09da5f0e57c68ca68cfdc2cbd60c512709d7755fee24fbe",
+  "sourceProductTreeSHA256": "741ebe3c0da7ebe1fcc9d4b879f8d1c984304f2bdb290fc7f6d5a73b6eb93ab3",
+  "protectedAuthorities": {
+    "api-e2e-test-review-report.md": "0bd04bd756db96ae7e1652cc09b1e64861e1b1b7dd94c864317ffc0e00733f01",
+    "api-e2e-execution-coverage-report.md": "e6fc146f5692db9b8213793560eb428fc1ba09e15e64f44cfde1397d58ed74f2",
+    "implementation-handoff.md": "7506448cce4ca2476b1ca8b858579cfcef62c4190deba917fdaab487836d3348",
+    "implementation-revision-record.md": "23d6c9303d79d9d5121a972b372a8823aed8a6bd1ed87d094bb5a1d1368f4065",
+    "requirements-doc.md": "d6a35bfcc43de7393cf070a6aca5be64faef990764df94e53ca2aca6e1d1b016",
+    "design-spec.md": "252f693f2419277d7b121ac77b29edc955556dfe95d3de8bc7eab457785507ac",
+    "design-review-report.md": "9de5c16f663694f26ed2c64267fb4fc96f178f5fc88fd2a62f2b84f27cf2cd57",
+    "solution-revision-record.md": "2add43e492bb7ab91e2c09c55d03f0cb3a6d2635dd2df9c2ee054bc5d87511e2",
+    "architecture-review-revision-record.md": "7c3a6701b6f3db4abb72229f0090ae15292eaf2e1e97d3b697757df8d709425f",
+    "delivery-revision-record.md": "cc8e499312613d27f0ad61025f3f11c31a721107aae876677584db12d5fd5c60",
+    "release-deployment-report.md": "ff87cd00e0aa74efac26528589e7aa2b5d2e7ae23e85f03bd439a184770b119b",
+    "handoff-summary.md": "836bf368faa0865b6fd2dc2bdb67991912323fc47b6dade77d0248ad5c70ca6f"
+  },
+  "checksReused": [
+    "IMP-09-05",
+    "IMP-09-06",
+    "IMP-09-07",
+    "IMP-09-10",
+    "IMP-09-11"
+  ],
+  "productChecksExecutedByReviewer": [],
+  "limits": "No remote freshness, upload, signing, keychain, live storage, retained-payload writes or final release acceptance. Only reviewer artifacts authored. Initial before-size lookup printed expected missing-path diagnostics for two added files, handled as zero; no product failure."
+}

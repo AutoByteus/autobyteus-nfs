@@ -1,0 +1,23 @@
+{
+  "check": "IMP-09-12",
+  "step": "Read completed check receipts; verify exact owned scratch absence and final test-only delta; git diff --check 630cc997 HEAD plus working diff.",
+  "date": "2026-10-19T08:33:13.789782+00:00",
+  "commit": "22205cc84a29e6aa66ba5673b0a60c8db95ddc80",
+  "environment": "macOS-26.5.2-arm64-arm-64bit",
+  "result": "pass",
+  "testOnlyDeltaFromFullSuiteCommit": [
+    "scripts/tests/test_nfs_release_publication.py"
+  ],
+  "ownedScratchRemoved": [
+    "/Users/normy/nfs-ir009-checks-kb55eymi",
+    "/Users/normy/nfs-ir009-mutants-2wbif1uq",
+    "/Users/normy/nfs-ir009-checks-9ytag59t",
+    "/Users/normy/nfs-ir009-checks-n_acqisj"
+  ],
+  "retainedInputs": "candidate/payload unchanged by actual07 inventories; older candidates/private diagnostic untouched",
+  "processes": "All owned exec check sessions completed; interrupted03 had no process on continuation. No live monitor created.",
+  "remoteWrites": false,
+  "credentialsOrKeychainActions": false,
+  "realRecoveryAuthorizationCreated": false,
+  "limits": "No remote freshness, actual hosted recover, release or user verification. Existing ignored caches preserved."
+}

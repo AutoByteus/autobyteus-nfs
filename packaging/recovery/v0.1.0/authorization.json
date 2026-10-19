@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "kind": "same-payload-executor-repair",
+  "repository": "AutoByteus/autobyteus-nfs",
+  "version": "v0.1.0",
+  "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "tagObject": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+  "binding": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "payloadJobId": 117940491787,
+  "expectedReleaseId": 417014769,
+  "executor": {
+    "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+    "sourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21"
+  },
+  "evidence": {
+    "architectureReview": {
+      "path": "packaging/recovery/v0.1.0/architecture-review.json",
+      "sha256": "149740cc62b6340a1aa11443e6e2ca699e0fcb04cd514741dedfd708af77a8a8"
+    },
+    "sourceReview": {
+      "path": "packaging/recovery/v0.1.0/source-review.json",
+      "sha256": "ec9d10aae481154be5caff5747f27af3a57d104355abfa8a5b2cfcb7228b7b0b"
+    },
+    "validation": {
+      "path": "packaging/recovery/v0.1.0/validation.json",
+      "sha256": "646353c539700c6375f15850036c7619266097447898491b6345f0636e9cceb0"
+    },
+    "retainedSigning": {
+      "path": "packaging/recovery/v0.1.0/retained-signing.json",
+      "sha256": "09c23bf4be91d01e0af4fe64ad75b77c45eed57edb7b5abc79a84c8b67243a77"
+    },
+    "deliveryAuthorization": {
+      "path": "packaging/recovery/v0.1.0/delivery-authorization.json",
+      "sha256": "6a8b1720bce5fdaa999eb835ed73b75fbeeab71fd234453dbe6eb623833bbf4b"
+    }
+  }
+}

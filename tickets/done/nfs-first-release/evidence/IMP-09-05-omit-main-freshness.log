@@ -1,0 +1,20 @@
+Check: IMP-09-05/omit-main-freshness
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', '-m', 'unittest', 'test_nfs_release_publication.PublicationTest.test_fresh_resume_completed_and_stage_drift', '-v']
+Commit: 4c665e0eb23adf1f9bb45363a496b7786e76b138 plus isolated mutant publication.py
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:25:12.461509+00:00
+
+test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest) ... FAIL
+
+======================================================================
+FAIL: test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/nfs-ir009-mutants-2wbif1uq/source/scripts/tests/test_nfs_release_publication.py", line 241, in test_fresh_resume_completed_and_stage_drift
+    with self.assertRaises(ValueError):p.publish(self.f.p,self.f.c,self.f.binding)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 19.442s
+
+FAILED (failures=1)

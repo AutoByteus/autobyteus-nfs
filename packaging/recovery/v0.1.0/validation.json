@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "apiRevision": "API-REV-007",
+  "confidencePercent": 95,
+  "scope": "Affected executor checks only; actual publication still required",
+  "report": {
+    "path": "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md",
+    "sha256": "9636a2e0360ea06c006682d8f8995c1169d61ca9940d7bf245de89485675df08",
+    "gitCommit": "f8ea0cce8a9d04b171a365b6710251b5d5561e30"
+  },
+  "rawEvidence": [
+    {
+      "path": "tickets/done/nfs-first-release/evidence/IMP-09-06-python.log",
+      "sha256": "8fbc2bd20ac5fe263e7b05fec8b71e128ff4dced7052bdcf111080d002b7bbb5",
+      "gitCommit": "08dca3db37701b425219428de89f48caef81f96d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/IMP-09-10-python.log",
+      "sha256": "309f3ef59b3bd0b1ed4dbf0ba3fd935f88e14d11d81c120f7b7d01c1084a6ffc",
+      "gitCommit": "08dca3db37701b425219428de89f48caef81f96d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/IMP-09-05-mutations.json",
+      "sha256": "4abb498e03e6563a5d523910f24e72d978a04ac4e8ed76de32eb73f5a133dd2b",
+      "gitCommit": "08dca3db37701b425219428de89f48caef81f96d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R01-07-reuse.json",
+      "sha256": "e81e5276050e7843c891124433df9fe04ca2581149e58b71ff5c2549af236579",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R02-07-candidate-refusal.log",
+      "sha256": "9c201b5399ed57de639ff9ce45590adf51d63d5f3afd1b952d80d3a85ecdf017",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R04-07-inspection.json",
+      "sha256": "0b0473ab4966c6ddd4b24e5ccc545f0e365731699244402358513dff6caf677b",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R04-07-verified.json",
+      "sha256": "5f7721a4f9b14799f2cfa23e2640c9468189028c774d60dab42eac68bbcdafb6",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R05-07-carried-signatures.json",
+      "sha256": "43c5c523209bc9054c9cb66446dd30d4a833fda9aaae0b5937e48fc7151a993e",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R06-07-observations.json",
+      "sha256": "7b78c8d3fbdf4321c8dbc11812e1a4127addbb041e42e2375ec97efb9f66dd54",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R07-07-result.json",
+      "sha256": "1daea731213a3ad944393f195bff14ca3dc8c5d998473dab64f3c3d3e707e4c5",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R07-07-console.log",
+      "sha256": "5c776327acec11f8e763afcf54470de3ad2ff8bfab28d32f7fc1b2a2f92ec11b",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/R07-07-cleanup.json",
+      "sha256": "a4f49d1dd5758df539ed97733185e8d687664eb2379fc84dce3bc48eed2e6347",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    },
+    {
+      "path": "tickets/done/nfs-first-release/evidence/C01-07-cleanup.json",
+      "sha256": "2e2138c56bcd2242d148e70bb315369e4814ed279e8541003f48b05e237b1a7f",
+      "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+    }
+  ],
+  "counts": "Full72/71executed/1expected Go-child skip at4c665 + finalpublication15 at22205 overlap; not full76 rerun. Six mutants.",
+  "real": "GET-only current inspect/full P byte verification; original successful both-Mac signing carried by exact bytes; unique draft discovery",
+  "emulated": "R07 real code/byte streams, synthetic authority ONLY in removed clone; all writes/OCI/public download/install effects doubled; no actual release acceptance."
+}

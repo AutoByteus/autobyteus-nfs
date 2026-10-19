@@ -1,0 +1,7 @@
+Check: IMP-09-10/source-hash
+Command: ['/Applications/Xcode.app/Contents/Developer/usr/bin/python3', 'packaging/release.py', '--source-hash']
+Commit: 22205cc84a29e6aa66ba5673b0a60c8db95ddc80
+Environment: macOS-26.5.2-arm64-arm-64bit, Python 3.9.6
+Date: 2026-10-19T08:29:41.389558+00:00
+
+e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21

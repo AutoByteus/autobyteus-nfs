@@ -1,0 +1,19 @@
+{
+  "case": "C01",
+  "step": "Final own artifact/identity/ownership audit; no product rerun",
+  "date": "2026-10-19T08:52:55.937415+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "NFS ticket only/localMacarm64",
+  "sourceInputsUnchanged": 130,
+  "otherOwnerFilesPreserved": 67,
+  "historyPrefixPreserved": true,
+  "eightScopedCasesCompleted": true,
+  "evidenceFilesChecked": 27,
+  "jsonAndOrchestratorSyntaxValid": true,
+  "secretPatternHits": [],
+  "whitespaceExceptions": [],
+  "ownedResourcesAbsent": true,
+  "syntheticAuthorityNeverReal": true,
+  "realPublicationNotClaimed": true,
+  "pass": true
+}

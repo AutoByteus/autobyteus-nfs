@@ -1,0 +1,9 @@
+{
+  "case": "R04",
+  "date": "2026-10-19T08:45:11.688596+00:00",
+  "commit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "environment": "localAPFS owned0700",
+  "root": "/Users/normy/nfs-api007-inspect-m50i0aqe",
+  "directory": "/Users/normy/nfs-api007-inspect-m50i0aqe/inspection",
+  "cleanup": "Remove only this created root after R07/C01; prior retained resources untouched"
+}
