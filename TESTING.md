@@ -78,7 +78,11 @@ retry, conflicting assets/images, stage order and main drift. Signing fixtures
 execute the actual shell with fake commands/credentials, checking Accepted-only
 behavior and cleanup, not Apple acceptance. They inject stage failures and TERM,
 check sanitized stderr/failure receipts (including hostile private tool output),
-preserve exact command exit status and existing receipts, and check keychain-list
+preserve exact command exit status and existing receipts. Codesign failure fixtures
+also check literal diagnostic categories, unrecognized/oversized/non-UTF8 output,
+parser failure and successful-command precedence. These categories describe tool
+observations, not a proven root cause; all raw output stays in private transient
+scratch and is removed. Checks cover keychain-list
 capture/restore plus cleanup failure refusal. Workflow receipt glob checks exclude
 private files; only actual hosted execution proves artifact upload and real signing.
 Installer fixtures use actual tar/hash
