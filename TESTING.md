@@ -90,7 +90,7 @@ controlled native synthetic-identity reproduction; this is not real Developer ID
 or hosted signing proof. Workflow receipt glob checks exclude
 private files; only actual hosted execution proves artifact upload and real signing.
 Installer fixtures use actual tar/hash
-tools and an inert binary. Workflow truth tables cover candidate/fresh/resume modes
+tools and an inert binary. Workflow truth tables cover candidate/fresh/resume/recover modes
 and failed/cancelled/legitimate skipped ancestors; actionlint checks YAML separately.
 The workflow suite also executes the native metadata prefix with `/bin/bash`
 (including the Mac system Bash3.2) and inert release-command boundaries: exact
@@ -98,8 +98,9 @@ candidate/fresh argv, command failure, missing input and pipeline failure. This
 is shell invocation coverage, not native metadata/build or hosted-matrix proof.
 No fixture is a hosted run, public download or qualified physical platform.
 
-An independent source archive is sufficient for normal local checks; retain source
-identity/logs and tool versions. For release work, all four native hosted checks,
+An independent source archive is sufficient for normal runtime checks; release
+identity checks require an independent Git clone with the relevant commit ancestry.
+Retain source identity/logs and tool versions. For release work, all four native hosted checks,
 current complete engine/OCI candidate, actual release-control/source-review
 evidence, real notarization and public downloads remain API/Delivery gates.
 Shared-filesystem/physical and user tests are explicitly deferred until after the
@@ -128,3 +129,26 @@ fixtures rehash tampered notes/provenance to prove semantic deferral enforcement
 and engine-lock fixtures execute the actual reset operation. These are local
 release-boundary checks, not field testing. Readiness must use genuine current
 records at stable paths, prepared by Delivery after affected API validation.
+
+
+## Immutable-publication executor repairs
+
+Run all Python suites, actionlint and Bash checks for release-control repairs.
+Recovery fixtures create real separate C/P/H/E Git commits and synthetic artifacts
+inside owned scratch, then execute the complete current verifiers. They cover
+fixed repair scope, preserved original lock/evidence, H/E equality, admission and
+read-only inspection, bounded source projection, original payload/native/signing
+job proof and no-effect failures. Endpoint doubles model by-tag404 with publisher
+list/direct-ID draft visibility, unique paginated inventories, ID uploads, ambiguous
+POST outcomes, immutable drift and read-only completed reconciliation. They are
+not actual Actions, Apple, public upload or release proof. Synthetic recovery
+records must never be copied into packaging/recovery in the real repository.
+
+Use inspect-bound from the corrected reviewed checkout for actual retained-input
+verification before Delivery's genuine authorization exists. After admission,
+prepare/publish independently repeat validation and never trust the inspection
+report or downloaded preflight as authority. Exact old signed bytes and engine/OCI
+checks can carry for this executor-only repair; do not rerun native signing or
+build a new candidate solely to repair a bound publisher. New unbound product
+payloads still require current-source candidate/native evidence. Delivery owns
+actual hosted same-byte recovery and public download/install/signature receipts.

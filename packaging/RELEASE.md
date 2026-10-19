@@ -49,8 +49,9 @@ python3 packaging/release.py --operation verify-candidate --directory retained-c
 Use a current reviewed source checkout and `GH_TOKEN` with Actions read. These
 commands verify actual API run event/conclusion/source and immutable wrapper,
 then bounded member/engine/OCI/native contents. The output candidate reference is
-not release readiness. Missing/expired/changed data means a new candidate and affected
-release-boundary validation, never a silent rebuild or fabricated amd64 package.
+not release readiness. For an unbound version, missing/expired/changed data means a new
+candidate and affected validation. For an already bound version, lost/conflicting
+inputs block recovery; never rebuild or substitute bytes under the existing tag.
 
 ## 2. Current release readiness (API evidence, Delivery acceptance)
 
@@ -113,14 +114,16 @@ package/base/engine identities. Tests, generated release.json/embedded deb bytes
 readiness/evidence, caches and output are excluded. OCI identity is separately
 mandatory (no hash cycle). Readiness/docs/test-only commits can follow a
 candidate only with unchanged production hash/engine/OCI, ancestry and reviewed
-diff. Any production change invalidates affected evidence.
+diff. Any production change invalidates affected evidence for a new candidate/payload.
+A bound payload is instead verified against its immutable source, with separate
+current-executor admission as described below; it is never relabelled current.
 
 ## 3. Final payload and signing
 
 Dispatch `publish=true` only on reviewed **main**, with its exact SHA and current
 `candidate_run_id`. Preflight downloads that candidate and validates evidence
 before public effects. If an owned version tag exists, it resolves the original
-payload first; native rebuild/signing jobs are skipped on resume.
+payload first; native rebuild/signing jobs are skipped on resume and recover.
 
 On a fresh publication, all four native jobs use the same production source hash
 and exact engine bytes. Final release metadata and Mac signature change binary
@@ -182,16 +185,19 @@ notes and provenance cannot hide deferral on a same-byte retry.
 ## 4. Publication and same-payload recovery
 
 Only the publisher has contents/packages write. It re-verifies retained wrapper,
-current candidate/evidence/payload, observes remote conflicts and checks fresh main
-immediately before its first write. Repo-wide publication concurrency never cancels
+candidate/evidence/payload against their Git-proven source, observes remote conflicts
+and checks current executor main before the first and subsequent effects. Repo-wide publication concurrency never cancels
 another publish. Native/signing failures or unexpected skipped/cancelled ancestors
 cannot reach this job. Candidate jobs never rebuild on publication.
 
 1. Annotated version tag at exact main, with retained payload run/attempt/artifact
    ID/digest and publication receipt SHA in its annotation. No force/ref move.
-2. Exact draft release (`--verify-tag`, non-prerelease), bound notes/identity.
+2. Exact draft release (normal channel), bound notes/identity. Complete publisher-visible
+   inventory plus direct ID correlation selects it; by-tag404 does not mean no draft.
 3. Verify existing asset bytes, upload **only missing** assets, then re-download
-   the complete set. Unexpected or conflicting bytes refuse; no `--clobber`.
+   the complete set by the selected release ID. Unexpected, conflicting or unfinished
+   starter assets refuse; no clobber/delete/recreate. Uploads use only the validated
+   uploads.github.com repository/ID URL, never tag-based CLI discovery.
 4. Materialize the validated OCI archive into an owned layout (copy exact bytes,
    not tar ownership; no root chown). Promote it with
    `skopeo copy --all --preserve-digests oci:<owned-layout> docker://...`, no rebuild,
@@ -208,8 +214,9 @@ cannot reach this job. Candidate jobs never rebuild on publication.
 `nfs-publication-receipt` records progress even on a later failure; an attempted
 write may have completed. Remote state is authoritative, not that local log. Retry
 must use the annotation-bound original artifact/attempt and identical signed bytes.
-Retry with a **new manual dispatch** on the same exact main/version/candidate run,
-so preflight observes current remote state again; do not rerun only the failed
+Retry with a **new manual dispatch** on current reviewed main with the same
+version/original candidate run and valid executor admission, so preflight observes
+current remote state again; do not rerun only the failed
 publisher with stale job outputs. A failed overall run can have a successful retained-payload job; the resume reader
 checks that exact job. A tag-only interruption is recoverable. An expired artifact,
 ambiguous run, unrelated draft or changed asset/image is not automatically repairable.
@@ -224,5 +231,88 @@ Relevant primary contracts: [Actions artifacts](https://docs.github.com/en/rest/
 Actual hosted execution, package visibility, signing, supported-platform downloads
 remain release gates, not claims made by these docs. Field/user tests remain
 explicitly deferred with postpublication custody. Preserve historical Blocked/Fail
-results; changed production requires a new complete candidate, not relabeling an
-old run. Fixes discovered after publication use a new approved version.
+results. Changed production for a new unbound payload requires a new complete
+candidate, not relabeling an old run. Fixes to the product after publication use
+a new approved version. A bounded executor-only repair follows the distinct
+procedure below without changing the product.
+
+
+## 5. Corrected executor, immutable signed payload (SR005)
+
+A publication tool defect may leave an owned tag and draft after the signed
+payload succeeded. Distinguish **E**, the current executing main/dispatch, from
+**P**, the immutable source in that tag and publication.json, and **H**, the
+independently reviewed/tested executor code commit. For this v0.1.0 recovery P is
+238bdc183e8affac99ffdee9be9cb333b0eb126f; preserve tag object
+f4a04fd0c80a6625708ba002b4cef5507a03f514, draft417014769, run39215470944/1,
+payload job117940491787 and artifact12169472209. Delivery refreshes actual remote
+facts; these recorded identities do not themselves authorize an effect.
+
+All executing checkouts and imported verifiers are E. A bounded Git projection
+of P supplies source/workflow/lock/stable packaging/releases evidence as **data**,
+never code to execute. Full existing candidate/native/engine/OCI/readiness/payload
+validators use P, including C→P ancestry and both Accepted binary identities.
+The source-hash algorithm/input coverage is unchanged; E includes the repair.
+Standalone verify-candidate remains current-source strict and refuses an old
+candidate after a production change. No old-source build, re-sign or bypass flag
+is available. Snapshots are owned scratch and removed on exit.
+
+Before Delivery authorization, API can perform read-only verification from the
+reviewed corrected checkout with Actions/contents read access:
+
+```sh
+python3 packaging/release.py --operation inspect-bound --tag v0.1.0 \
+  --directory /new/owned/inspection-directory --output /owned/inspection-report.json
+```
+
+The actual tag selects P. The operation downloads original candidate/payload by
+exact envelope, checks the original successful payload job and four native jobs,
+including both signing steps, and verifies all bytes. It reports **executor
+publication admission not performed**, never permission or a public-release Pass.
+It cannot upload, create a tag/draft, promote an image, sign or change readiness.
+
+Only after source review and affected API evidence does Delivery write genuine
+`packaging/recovery/v0.1.0/authorization.json`. Exact fields: schema1,
+kind `same-payload-executor-repair`, repository, version, payloadSourceCommit,
+tagObject, unchanged binding, payloadJobId, expectedReleaseId, executor and evidence.
+`executor` is `{reviewedCommit:H,sourceHash:<ordinary hash at H>}`. `evidence` has
+exactly architectureReview/sourceReview/validation/retainedSigning/deliveryAuthorization,
+each `{path,sha256}` under that same stable recovery directory. H precedes this
+record; there is no self-hashing commit. Hashes establish integrity; specialist
+review and Delivery acceptance establish the truth of the referenced evidence.
+A null expectedReleaseId is only for evidence-established tag-only interruption;
+the known draft417014769 must have that positive ID and cannot be recreated if lost.
+
+Admission proves P→H→E ancestry, ordinary source_hash(H)==source_hash(E), dispatch
+E/workflow equality and fixed full-tree scope. P→H permits only the named release
+facade/workflow/context/admission/validator/publisher repairs, affected tests,
+guides and this ticket/recovery evidence. H→E permits no executable drift. Original
+release-lock and packaging/releases records, engine/signing/installer/runtime and
+other workflows may not change. Missing, malformed, unrelated, stale or tampered
+authority refuses; the record cannot provide its own expanded allowlist.
+
+Delivery integrates the valid record/evidence into current main E and uses a new
+manual publish=true dispatch with E and the original candidate run. `recover`
+requires P!=E and valid authority; `resume` requires P==E. Both skip engine/native/
+signing/payload/bind. Prepare remains read-only; draft inventory is explicitly
+non-authoritative until the write-token publisher. Publisher reconstructs P and
+repeats admission/envelope/job/byte validation: preflight files grant no permission.
+
+The publisher reads all bounded release pages (100/page, at most100pages), refuses
+ambiguity/repeated IDs and correlates the unique selected ID directly. A known
+ID missing/hidden/deleted is a blocker, not permission to create another draft.
+A fresh/tag-only create has one POST and explicit direct-ID/inventory confirmation;
+unknown outcomes stop for a new manual observation, never an automatic POST retry.
+Assets are listed by ID, uniquely named/identified and hash-checked; no truncated
+embedded array is authoritative. The executor main, original tag object/binding,
+and selected release body/ID/state are rechecked before uploads, OCI and publishing.
+The final published-by-tag result must correlate to that same ID. External drift
+stops with a truthful attempted-stage receipt, not rollback or multi-writer safety.
+
+The external publication receipt records E/hash/workflow/run/attempt, H/authority
+reference, P/tag/binding, selected release ID and stage/result. Original public
+notes/provenance/assets remain byte-identical and still name P as their source.
+Actual both-Mac DR013 signing/Accepted proof carries by exact bytes, not a new
+signing claim. Delivery owns genuine admission, hosted same-byte recovery and
+public OCI/download/install/signature verification. Field/user testing remains
+Deferred with the existing postpublication custody; no new host questionnaire.

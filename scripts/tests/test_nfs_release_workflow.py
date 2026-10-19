@@ -141,13 +141,17 @@ class ReleaseWorkflowGatesTest(unittest.TestCase):
             ['success','skipped','skipped','skipped','success','skipped','success','success'])))
         self.assertEqual(schedule(self.jobs,'resume'),dict(zip(ORDER,
             ['success','skipped','skipped','skipped','skipped','skipped','skipped','success'])))
+        self.assertEqual(schedule(self.jobs,'recover'),schedule(self.jobs,'resume'))
+        self.assertNotIn('needs.prepare.outputs.source', self.text)
+        self.assertIn('ref: ${{ needs.prepare.outputs.executor }}', self.text)
+        self.assertNotIn('ref: ${{ needs.prepare.outputs.payload_source }}', self.text)
         # Resume must not rebuild/re-sign; prepare resolves exact retained payload.
         self.assertIn('--operation prepare',self.text)
         self.assertIn('--operation bind',self.text)
         self.assertIn('--operation publish',self.text)
 
     def test_failure_cancellation_and_unexpected_skip_never_publish(self):
-        for mode in ('candidate','fresh','resume'):
+        for mode in ('candidate','fresh','resume','recover'):
             baseline=schedule(self.jobs,mode)
             terminal='candidate' if mode=='candidate' else 'publish'
             for name in ORDER:
@@ -160,7 +164,7 @@ class ReleaseWorkflowGatesTest(unittest.TestCase):
                 self.assertFalse(eligible(self.jobs,name,baseline,mode,cancelled=True))
 
     def test_legitimate_skips_do_not_accept_failures(self):
-        for mode in ('fresh','resume'):
+        for mode in ('fresh','resume','recover'):
             results=schedule(self.jobs,mode)
             for name in ('binaries','publish'):
                 for dep in self.jobs[name]['needs']:

@@ -1,4 +1,5 @@
 """Nonpublishing service-only refusal fixtures; no real install or mounts."""
+from dataclasses import replace
 import subprocess
 import json
 import sys
@@ -17,13 +18,13 @@ class NfsPackagingTest(unittest.TestCase):
 
     def test_missing_readiness_cannot_publish(self):
         sys.path.insert(0,str(ROOT/'packaging'))
-        from release_support import readiness
+        from release_support import readiness, source_context
         with tempfile.TemporaryDirectory() as scratch:
             root=Path(scratch);(root/'packaging').mkdir()
             lock=json.loads((ROOT/'packaging/release-lock.json').read_text())
             lock.update(engine=None,releaseReadiness=None)
             (root/'packaging/release-lock.json').write_text(json.dumps(lock))
-            with self.assertRaisesRegex(ValueError,'Current engine and structured release readiness'):readiness.load(root)
+            with self.assertRaisesRegex(ValueError,'Current engine and structured release readiness'):readiness.load(replace(source_context.current(), root=root))
 
     def test_removed_qualified_flag_is_not_an_alias(self):
         result=subprocess.run([sys.executable,str(ROOT/'packaging/release.py'),'--qualified','--tag','v0.1.0'],

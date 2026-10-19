@@ -5,6 +5,7 @@ import re
 import tarfile
 
 from . import candidate, identity as i, readiness
+from .source_context import current
 
 
 def binary_hash(archive):
@@ -71,14 +72,15 @@ def assemble(directory, candidate_dir, native_dir, source_commit, run_id, attemp
     return verify(directory, candidate_dir)
 
 
-def verify(directory, candidate_dir):
-    q = readiness.validate(candidate_dir)
-    c = candidate.verify(candidate_dir)
+def verify(directory, candidate_dir, context=None):
+    context = context or current()
+    q = readiness.validate(candidate_dir, context)
+    c = candidate.verify(candidate_dir, context)
     receipt = i.read_json(directory / 'publication.json')
     i.fields(receipt, 'schema repository workflow sourceCommit version runId runAttempt candidateRecordSha256 members')
     i.require(receipt['schema'] == 1 and receipt['repository'] == i.REPOSITORY and receipt['workflow'] == i.WORKFLOW,
               'Foreign publication payload')
-    i.require(receipt['sourceCommit'] == i.commit() and receipt['version'] == c['version'] and
+    i.require(receipt['sourceCommit'] == context.commit and receipt['version'] == c['version'] and
               receipt['candidateRecordSha256'] == q['candidate']['recordSha256'], 'Publication inputs differ')
     i.positive(receipt['runId'])
     i.positive(receipt['runAttempt'])
@@ -92,7 +94,7 @@ def verify(directory, candidate_dir):
               provenance['version'] == c['version'] and provenance['sourceCommit'] == receipt['sourceCommit'] and
               provenance['candidate'] == q['candidate'] and provenance['candidateCommit'] == c['sourceCommit'] and
               provenance['sourceHash'] == c['sourceHash'] and provenance['oci'] == c['oci'] and
-              provenance['releaseReadiness'] == i.read_json(i.ROOT / 'packaging/release-lock.json')['releaseReadiness'] and
+              provenance['releaseReadiness'] == i.read_json(context.root / 'packaging/release-lock.json')['releaseReadiness'] and
               provenance['fieldValidation'] == q['fieldValidation'],
               'Provenance differs')
     i.verify_inventory(assets, provenance['members'], ('release-provenance.json', 'SHA256SUMS-nfs'))
@@ -100,7 +102,7 @@ def verify(directory, candidate_dir):
                         for name, value in i.inventory(assets, ('SHA256SUMS-nfs',)).items())
     i.require((assets / 'SHA256SUMS-nfs').read_text() == checksums, 'Incomplete payload checksums')
     measured = candidate.engine(candidate_dir / 'engine')
-    metadata = candidate.runtime_metadata(c['version'], i.IMAGE + '@' + c['oci']['index'], measured, True)
+    metadata = candidate.runtime_metadata(c['version'], i.IMAGE + '@' + c['oci']['index'], measured, True, context)
     i.require(i.read_json(assets / 'autobyteus-nfs-manifest.json') == metadata and
               i.read_json(assets / 'autobyteus-nfs-engine-manifest.json') == measured, 'Final manifests differ')
     i.require(set(provenance['signing']) == {'darwin-amd64', 'darwin-arm64'}, 'Missing Mac signing proofs')
@@ -118,15 +120,15 @@ def verify(directory, candidate_dir):
                   'Engine notices differ')
     i.require(set(provenance['members']) == expected_names, 'Incomplete release payload')
     for name in ('LICENSE', 'THIRD_PARTY_NOTICES'):
-        i.require((assets / name).read_bytes() == (i.ROOT / name).read_bytes(), 'Release license/notices differ')
-    i.require((assets / 'release-notes.md').read_text() == readiness.release_notes(q),
+        i.require((assets / name).read_bytes() == (context.root / name).read_bytes(), 'Release license/notices differ')
+    i.require((assets / 'release-notes.md').read_text() == readiness.release_notes(q, context),
               'Unreviewed release notes')
     i.require((assets / 'autobyteus-nfs-install.sh').read_text() ==
-              (i.ROOT / 'scripts/public/nfs/install.sh').read_text().replace('__RELEASE_TAG__', c['version']),
+              (context.root / 'scripts/public/nfs/install.sh').read_text().replace('__RELEASE_TAG__', c['version']),
               'Versioned installer differs')
     for target in i.TARGETS:
         archive = assets / i.archive_name(c['version'], target)
-        candidate.native_archive(archive, metadata)
+        candidate.native_archive(archive, metadata, context)
         if target.startswith('darwin'):
             signing_proof(provenance['signing'][target], archive)
     return receipt

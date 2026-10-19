@@ -1,35 +1,38 @@
 """Validate release-first distribution readiness, never fabricate evidence or field tests."""
 from . import candidate
 from . import identity as i
+from .source_context import current
 
 DISCLOSURE = ('Field validation: shared-filesystem/physical and user testing is deferred. '
               'Distribution and signature checks are not field qualification. '
               'Postpublication testing and any fixes will be tracked separately; fixes use a new release.')
 
 
-def evidence(reference, root=None):
-    root = root or i.ROOT
+def evidence(reference, context=None):
+    context = context or current()
+    root = context.root
     i.fields(reference, 'path sha256')
     relative = i.safe_name(reference['path'])
-    i.require(relative.parts[:2] != ('tickets', 'in-progress'), 'Release evidence must survive ticket archival')
+    i.require(relative.parts[:2] == ('packaging', 'releases'), 'Release evidence must use stable release paths')
     path = i.local_file(root, reference['path'], 64 * 1024**2)
     i.require(i.sha(path) == i.hex_value(reference['sha256']), 'Evidence missing/changed')
     return path
 
 
-def load(root=None):
-    root = root or i.ROOT
+def load(context=None):
+    context = context or current()
+    root = context.root
     lock = i.read_json(root / 'packaging/release-lock.json')
     i.fields(lock, 'ubuntuBaseImage ubuntuPackages engine releaseReadiness note')
     i.require(lock['releaseReadiness'] is not None and lock['engine'] is not None,
               'Current engine and structured release readiness required')
-    return lock, i.read_json(evidence(lock['releaseReadiness'], root))
+    return lock, i.read_json(evidence(lock['releaseReadiness'], context))
 
 
-def validate(directory, root=None):
-    root = root or i.ROOT
-    lock, record = load(root)
-    c = candidate.verify(directory)
+def validate(directory, context=None):
+    context = context or current()
+    lock, record = load(context)
+    c = candidate.verify(directory, context)
     i.fields(record, 'schema kind version targets candidate sourceHash engineManifestSha256 oci '
                      'authorization checks fieldValidation postpublicationPlan review releaseNotes')
     i.require(type(record['schema']) is int and record['schema'] == 1 and record['kind'] == 'release-first',
@@ -55,23 +58,23 @@ def validate(directory, root=None):
     i.require(authorization['kind'] == 'publish-before-field-testing' and
               authorization['requirementsRevision'] == 'R3/SR004' and authorization['version'] == c['version'],
               'Release-first authorization differs')
-    evidence(authorization['evidence'], root)
+    evidence(authorization['evidence'], context)
     checks = i.fields(record['checks'], 'native releaseControls')
     for check in checks.values():
         i.fields(check, 'status evidence')
         i.require(check['status'] == 'passed', 'Required prepublication check did not pass')
-        evidence(check['evidence'], root)
+        evidence(check['evidence'], context)
     i.require(record['fieldValidation'] == i.DEFERRED_FIELD_VALIDATION, 'Field validation must be explicitly deferred')
-    evidence(record['postpublicationPlan'], root)
+    evidence(record['postpublicationPlan'], context)
     review = i.fields(record['review'], 'candidateCommit sourceHash evidence')
     i.require(review['candidateCommit'] == c['sourceCommit'] and review['sourceHash'] == c['sourceHash'],
               'Candidate-to-final source review differs')
-    evidence(review['evidence'], root)
-    evidence(record['releaseNotes'], root)
-    i.command('git', 'merge-base', '--is-ancestor', c['sourceCommit'], 'HEAD', cwd=root)
+    evidence(review['evidence'], context)
+    evidence(record['releaseNotes'], context)
+    context.ancestor(c['sourceCommit'])
     return record
 
 
-def release_notes(record):
+def release_notes(record, context=None):
     """Preserve reviewed prose and append the mandatory, deterministic disclosure."""
-    return evidence(record['releaseNotes']).read_text() + '\n\n' + DISCLOSURE + '\n'
+    return evidence(record['releaseNotes'], context).read_text() + '\n\n' + DISCLOSURE + '\n'

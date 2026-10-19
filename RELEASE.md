@@ -40,7 +40,7 @@ keeps the release open. Do not silently drop a target or weaken a gate.
 ## Partial effects and cleanup
 
 Publication is non-atomic. Preserve tag/draft/image/assets and failed-run evidence.
-Retry resolves the annotation-bound original payload before building/signing;
+Retry resolves the annotation-bound original payload and skips building/signing;
 never clobber an asset, move/delete a published tag, rebuild a bound engine or
 re-sign under an existing payload identity. Missing/expired/conflicting inputs
 block automatic recovery; a different output needs a newly authorized version.
@@ -52,3 +52,12 @@ rollback of a publication. Clean only this task's ephemeral resources/credential
 retain artifacts through readiness and recovery. Return actual URL/version,
 source/tag/run/attempt/artifact/image identities, supported targets and exact
 commands, or the precise unfinished stage and preserved partial effects.
+
+
+For a reviewed publication-tool repair, executor E/main may differ from immutable
+payload source P only through the separate SR005 recovery authorization described
+in packaging/RELEASE.md. P and all original readiness/payload bytes remain frozen;
+Delivery adds genuine evidence for reviewed H and final executor E. Read-only
+inspect-bound can validate the retained bytes before that admission exists, but
+grants no publication authority. Never rebuild/re-sign or move an existing tag to
+make the source comparison pass. Known draft417014769 is ID-bound, not replaceable.

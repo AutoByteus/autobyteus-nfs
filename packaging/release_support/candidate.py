@@ -11,6 +11,7 @@ import tarfile
 import zipfile
 
 from . import identity as i
+from .source_context import current
 
 sys.path.insert(0, str(i.ROOT / 'packaging/engine'))
 from manifest import validate as validate_engine, verify_files
@@ -115,18 +116,20 @@ def materialize_oci(archive_path, destination):
     return identity
 
 
-def runtime_metadata(tag, image, measured, release=False):
+def runtime_metadata(tag, image, measured, release=False, context=None):
+    context = context or current()
     i.version(tag)
     i.image_reference(image)
     if release:
         i.require(image.startswith(i.IMAGE + '@sha256:'), 'Canonical engine image required for publication')
-    lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
-    return {'schema': 2, 'fieldValidation': dict(i.DEFERRED_FIELD_VALIDATION), 'version': tag, 'sourceHash': i.source_hash(measured),
+    lock = i.read_json(context.root / 'packaging/release-lock.json')
+    return {'schema': 2, 'fieldValidation': dict(i.DEFERRED_FIELD_VALIDATION), 'version': tag, 'sourceHash': context.source_hash(measured),
             'ubuntuPackages': lock['ubuntuPackages'], 'engineImage': image,
             'releaseTargets': list(i.TARGETS) if release else [], 'engine': measured}
 
 
-def native_archive(path, expected):
+def native_archive(path, expected, context=None):
+    context = context or current()
     i.regular(path, 104 * 1024**2)
     with tarfile.open(path, 'r:gz') as archive:
         members = archive.getmembers()
@@ -137,9 +140,9 @@ def native_archive(path, expected):
             i.require(member.isreg() and 0 < member.size <= limit, 'Unsafe/oversized native member')
         metadata = i.decode(archive.extractfile('release.json').read())
         i.require(metadata == expected, 'Native metadata differs from release inputs')
-        i.require(archive.extractfile('LICENSE').read() == (i.ROOT / 'LICENSE').read_bytes(), 'License differs')
+        i.require(archive.extractfile('LICENSE').read() == (context.root / 'LICENSE').read_bytes(), 'License differs')
         notices = archive.extractfile('THIRD_PARTY_NOTICES').read()
-        i.require(notices.startswith((i.ROOT / 'THIRD_PARTY_NOTICES').read_bytes()), 'Notices missing')
+        i.require(notices.startswith((context.root / 'THIRD_PARTY_NOTICES').read_bytes()), 'Notices missing')
 
 
 def assemble(directory, tag, source_commit, workflow_commit, run_id, attempt):
@@ -159,7 +162,8 @@ def assemble(directory, tag, source_commit, workflow_commit, run_id, attempt):
     return verify(directory)
 
 
-def verify(directory):
+def verify(directory, context=None):
+    context = context or current()
     record = i.read_json(directory / 'candidate.json')
     i.fields(record, 'schema repository workflow runId runAttempt sourceCommit workflowCommit version sourceHash engineManifestSha256 oci buildInputs members')
     i.require(record['schema'] == 1 and record['repository'] == i.REPOSITORY and record['workflow'] == i.WORKFLOW,
@@ -169,11 +173,11 @@ def verify(directory):
     for key in ('sourceCommit', 'workflowCommit'):
         i.hex_value(record[key], 40)
     i.version(record['version'])
-    workflow_bytes = i.command('git', 'show', record['workflowCommit'] + ':' + i.WORKFLOW)
-    i.require(workflow_bytes == (i.ROOT / i.WORKFLOW).read_bytes(), 'Executed workflow differs from hashed source')
+    workflow_bytes = context.blob(record['workflowCommit'], i.WORKFLOW)
+    i.require(workflow_bytes == (context.root / i.WORKFLOW).read_bytes(), 'Executed workflow differs from hashed source')
     i.verify_inventory(directory, record['members'], ('candidate.json',))
     measured = engine(directory / 'engine')
-    lock = i.read_json(i.ROOT / 'packaging/release-lock.json')
+    lock = i.read_json(context.root / 'packaging/release-lock.json')
     i.require(measured['source']['buildBase'] == lock['ubuntuBaseImage'], 'Engine base differs from release lock')
     expected_names = {'engine/engine-manifest.json', 'engine.oci.tar'}
     expected_names.update('native/' + i.archive_name(record['version'], target) for target in i.TARGETS)
@@ -183,14 +187,15 @@ def verify(directory):
         expected_names.update({'engine/' + arch + '/COPYRIGHT', 'engine/' + arch + '/SHA256SUMS'})
     i.require(set(record['members']) == expected_names, 'Candidate contains unexpected/missing files')
     i.require(i.sha(directory / 'engine/engine-manifest.json') == record['engineManifestSha256'] and
-              i.source_hash(measured) == record['sourceHash'], 'Candidate source/engine differs')
+              context.source_hash(measured) == record['sourceHash'], 'Candidate source/engine differs')
     i.require(record['buildInputs'] == {'go': i.GO_VERSION, 'ubuntuBaseImage': measured['source']['buildBase']},
               'Build inputs differ')
     image = oci(directory / 'engine.oci.tar')
     i.require(record['oci'] == image, 'Candidate OCI identity differs')
-    expected = runtime_metadata(record['version'], i.IMAGE + '@' + image['index'], measured)
+    context.ancestor(record['sourceCommit'])
+    expected = runtime_metadata(record['version'], i.IMAGE + '@' + image['index'], measured, context=context)
     for target in i.TARGETS:
-        native_archive(directory / 'native' / i.archive_name(record['version'], target), expected)
+        native_archive(directory / 'native' / i.archive_name(record['version'], target), expected, context)
     return record
 
 
@@ -290,12 +295,12 @@ def extract_wrapper(wrapper, destination):
                 shutil.copyfileobj(source, output)
 
 
-def fetch(record, destination):
+def fetch(record, destination, context=None):
     """Readiness supplies a content hash AND external envelope; both must match."""
     i.fields(record, 'recordSha256 envelope')
     download(record['envelope'], CANDIDATE, destination)
     i.require(i.sha(destination / 'candidate.json') == record['recordSha256'], 'Release candidate record differs')
-    candidate = verify(destination)
+    candidate = verify(destination, context)
     e = record['envelope']
     i.require((candidate['runId'], candidate['runAttempt'], candidate['workflowCommit']) ==
               (e['runId'], e['runAttempt'], e['workflowCommit']), 'Candidate content/attempt differs')
