@@ -151,12 +151,19 @@ The parser reads at most64KiB plus one overflow byte of private transient output
 only exact known messages tied to the requested binary/identity are recognized.
 Unknown/ambiguous output is `unclassified`, oversized output `output-too-large`,
 and unavailable/undecodable output `unavailable`; other stages are `not-collected`.
-Known categories are chain-build-warning, internal-component,
+Known categories are chain-build-warning, identity-not-found, internal-component,
 interaction-not-allowed, authentication-failed, keychain-item-not-found,
 certificate-expired, certificate-revoked and timestamp-unavailable. None alone
 proves a credential, chain or ACL cause. Parsing cannot replace codesign's original
-nonzero exit, and successful codesign output does not create a failure. This does
-not change signing/keychain/trust settings or create a retry/fallback. Private
+nonzero exit, and successful codesign output does not create a failure.
+
+The signing boundary explicitly prepends its temporary keychain to the saved
+user search list before identity lookup/signing; all prior entries and ordering
+are retained, and cleanup restores the exact saved list before deleting the owned
+keychain. A configure failure refuses before signing. This corrects locally
+reproduced identity lookup failure despite an explicit `--keychain`; it does not
+prove an earlier hosted failure's cause or real Developer ID success. No trust
+setting, broad `-A` access, timestamp requirement or retry/fallback changes. Private
 capture is mode0600 inside the existing owned scratch, never an artifact, removed
 on cleanup with all other private inputs. Failed signing never reaches
 archive publication. No secret log/base64 upload,

@@ -74,6 +74,14 @@ sign_and_notarize() {
   stage=partition-key
   security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$keychain_password" "$keychain"
   unset keychain_password
+  # Explicit --keychain alone is not sufficient for codesign lookup. Add only
+  # this owned keychain, preserving prior entries/order; cleanup restores exactly.
+  stage=configure-search-list
+  python3 - "$scratch/search.json" "$keychain" <<'PYLIST'
+import json, os, sys
+prior = json.load(open(sys.argv[1]))
+os.execvp('security', ['security', 'list-keychains', '-d', 'user', '-s', sys.argv[2], *prior])
+PYLIST
   stage=find-identity
   security find-identity -v -p codesigning "$keychain" > "$scratch/identities.txt"
   stage=validate-identity-available
@@ -109,6 +117,8 @@ try:
             'The timestamp service is not available.': 'timestamp-unavailable',
         }
         matches = {value for error, value in errors.items() if sys.argv[2]+': '+error in lines}
+        if os.environ['IDENTITY']+': no identity found' in lines:
+            matches.add('identity-not-found')
         if any(warning+'"'+name+'"' in lines for name in (os.environ['IDENTITY'], '(null)')):
             result = 'chain-build-warning'
         else:
@@ -120,7 +130,7 @@ PYDIAG
     ) || diagnostic=unavailable
     # Only literal vocabulary can reach public stderr/JSON, even on parser failure.
     case "$diagnostic" in
-      chain-build-warning|internal-component|interaction-not-allowed|authentication-failed|keychain-item-not-found|certificate-expired|certificate-revoked|timestamp-unavailable|unclassified|output-too-large|unavailable) ;;
+      chain-build-warning|identity-not-found|internal-component|interaction-not-allowed|authentication-failed|keychain-item-not-found|certificate-expired|certificate-revoked|timestamp-unavailable|unclassified|output-too-large|unavailable) ;;
       *) diagnostic=unavailable ;;
     esac
     exit "$sign_exit"

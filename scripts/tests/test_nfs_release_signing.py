@@ -9,11 +9,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 FAKE = r'''#!/usr/bin/env python3
-import json,os,signal,stat,sys
+import json,os,shlex,signal,stat,sys
 from pathlib import Path
 name=Path(sys.argv[0]).name;args=sys.argv[1:]
 operation=name+':'+args[0]
-if operation=='security:list-keychains' and '-s' in args:operation+=':restore'
+prior=json.loads(os.environ['ORIGINAL_SEARCH'])
+state=Path(os.environ['SEARCH_STATE'])
+if operation=='security:list-keychains' and '-s' in args:
+ selected=args[args.index('-s')+1:]
+ operation+=':restore' if selected==prior else ':configure'
+ if operation.endswith(':configure'):
+  assert selected[1:]==prior, 'prior keychains/order must survive configuration'
+  assert Path(selected[0]).is_file() and selected[0].startswith(os.environ['RUNNER_TEMP']+'/')
 with open(os.environ['CALLS'],'a') as f:f.write(operation+'\n')
 if operation=='codesign:--force' and os.environ.get('SIGN_OUTPUT'):
  # Verify private capture on the changed path. No real keychain or Apple process.
@@ -27,10 +34,16 @@ if operation in os.environ.get('FAIL','').split(','):
   print('PRIVATE-COMMAND-OUTPUT fake-export-password ZmFrZSBwMTI= fake-app-password fake-keychain-password',file=stream)
  sys.exit(5)
 if name=='security':
- if args[0]=='list-keychains' and '-s' not in args:print('"/owned/original.keychain-db"')
+ if args[0]=='list-keychains':
+  if '-s' in args:state.write_text(json.dumps(selected))
+  else:print(' '.join(shlex.quote(p) for p in json.loads(state.read_text())))
  if args[0]=='create-keychain':Path(args[-1]).touch()
  if args[0]=='delete-keychain':Path(args[-1]).unlink()
  if args[0]=='find-identity' and not os.environ.get('NO_IDENTITY'):print('1) ABC "'+os.environ['IDENTITY']+'"')
+if operation=='codesign:--force':
+ # Reproduce the real empty/new-keychain lookup contract, not a text-only check.
+ assert args[args.index('--keychain')+1] in json.loads(state.read_text()), 'owned keychain absent from search list'
+ assert '--timestamp' in args and args[args.index('--options')+1]=='runtime'
 if name=='codesign' and args[0]=='-d':
  print('TeamIdentifier='+os.environ['APPLE_TEAM_ID'],file=sys.stderr)
  print('Authority='+os.environ['IDENTITY'],file=sys.stderr)
@@ -61,6 +74,8 @@ class SigningTest(unittest.TestCase):
                 wrapper.chmod(0o755)
             binary = root/'binary'; binary.write_bytes(b'fake unsigned CLI')
             calls = root/'calls'; receipt = root/'receipt.json'
+            original_search = ['/owned/original.keychain-db', "/owned/a space and 'quote;$.keychain-db"]
+            search_state = root/'search-state.json'; search_state.write_text(json.dumps(original_search))
             failure = root/'receipt-failure.json'
             if existing_failure:failure.write_text('owned prior receipt')
             env = os.environ | {'PATH':str(bin_dir)+':'+os.environ['PATH'],
@@ -68,6 +83,7 @@ class SigningTest(unittest.TestCase):
                 'PASSWORD':'fake-export-password', 'IDENTITY':'Developer ID Application: Fixture (ABCDEFG123)',
                 'APPLE_TEAM_ID':'ABCDEFG123', 'APPLE_ID':'fixture@example.invalid',
                 'APPLE_APP_SPECIFIC_PASSWORD':'fake-app-password', 'CALLS':str(calls),
+                'ORIGINAL_SEARCH':json.dumps(original_search), 'SEARCH_STATE':str(search_state),
                 'FAIL':'', 'NOTARY':'Accepted', 'NOTARY_EXIT':'0', 'SIGNAL_AT':'',
                 'NO_IDENTITY':'', 'NO_RUNTIME':'', 'BAD_NOTARY_JSON':'',
                 'SIGN_OUTPUT':'', 'SIGN_REPEAT':'1', 'INVALID_SIGN_BYTES':''} | changes
@@ -76,6 +92,8 @@ class SigningTest(unittest.TestCase):
                                     capture_output=True, timeout=30)
             self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
             self.assertEqual(list(scratch.iterdir()), [], 'signing scratch/keychain leaked')
+            if cleanup == 'complete':
+                self.assertEqual(json.loads(search_state.read_text()), original_search, 'prior search list changed')
             self.assertEqual(receipt.exists(), not stage or notary_receipt)
             self.assertEqual(failure.exists(), stage is not None, result.stdout+result.stderr)
             if stage and diagnostic:
@@ -112,6 +130,17 @@ class SigningTest(unittest.TestCase):
     def test_accepted_and_sanitized_receipt(self):
         self.run_case()
 
+    def test_temporary_keychain_preserves_existing_search_entries_and_order(self):
+        trace = self.run_case()
+        self.assertLess(trace.index('security:list-keychains:configure'), trace.index('security:find-identity'))
+        self.assertLess(trace.index('security:list-keychains:configure'), trace.index('codesign:--force'))
+        self.assertGreater(trace.index('security:list-keychains:restore'), trace.index('codesign:--force'))
+
+    def test_search_list_configuration_failure_stops_before_signing(self):
+        trace = self.run_case('configure-search-list', 5, FAIL='security:list-keychains:configure')
+        self.assertNotIn('codesign:--force', trace)
+        self.assertNotIn('security:find-identity', trace)
+
     def test_import_failure_receipt_and_secret_safety(self):
         self.run_case('import-certificate', 5, FAIL='security:import')
 
@@ -127,6 +156,8 @@ class SigningTest(unittest.TestCase):
 
     def test_codesign_diagnostics_are_allowlisted_not_private_output(self):
         cases = {
+            '{identity}: no identity found': 'identity-not-found',
+            'prefix {identity}: no identity found suffix': 'unclassified',
             '{binary}: errSecInternalComponent': 'internal-component',
             '{binary}: User interaction is not allowed.': 'interaction-not-allowed',
             '{binary}: The user name or passphrase you entered is not correct.': 'authentication-failed',
