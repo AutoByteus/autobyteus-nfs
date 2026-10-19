@@ -267,6 +267,67 @@ class PublicationTest(unittest.TestCase):
             self.assertEqual(p.payload_jobs(self.f.binding,1000),1000)
             with self.assertRaisesRegex(ValueError,'ID differs'):p.payload_jobs(self.f.binding,99)
 
+    def test_tag_object_and_annotation_conflicts_refuse(self):
+        r=self.remote
+        with patch.object(p,'api',side_effect=r.api):
+            self.assertEqual(p.tag_identity(TAG),r.tag)
+        original=r.api(f'repos/{i.REPOSITORY}/git/tags/'+r.tag['object'])
+        for changed in (original|{'sha':'0'*40},original|{'tag':'v0.2.0'},
+                        original|{'object':{'type':'commit','sha':'0'*40}},
+                        original|{'message':'foreign annotation'},
+                        original|{'object':{'type':'tree','sha':self.f.source}}):
+            def api(url,**kwargs):return changed if '/git/tags/' in url else r.api(url,**kwargs)
+            with patch.object(p,'api',side_effect=api),self.assertRaises(ValueError):p.tag_identity(TAG)
+        with patch.object(p,'api',return_value={'object':{'type':'commit','sha':self.f.source}}),self.assertRaisesRegex(ValueError,'annotated'):
+            p.tag_identity(TAG)
+
+    def test_matching_size_corrupt_remote_asset_refuses_before_upload(self):
+        name=next(iter(i.inventory(self.f.p/'assets')))
+        data=(self.f.p/'assets'/name).read_bytes()
+        assets=[{'id':1,'name':name,'state':'uploaded','size':len(data)}]
+        def download(args,**kwargs):kwargs['stdout'].write(bytes([data[0]^1])+data[1:])
+        with patch.object(p,'api',return_value=assets),patch.object(subprocess,'run',side_effect=download),patch.object(p,'upload') as upload:
+            with self.assertRaisesRegex(ValueError,'bytes conflict'):
+                p.verify_assets(self.remote.releases[0],self.f.p,True,Mock())
+        upload.assert_not_called()
+
+    def test_failed_promotion_preserves_draft_then_same_byte_retry(self):
+        r=Remote(self.f,tagged=False);journal=Path(self.temp.name)/'promotion.json'
+        before=i.inventory(self.f.p)
+        with ExitStack() as stack:
+            r.install(stack)
+            stack.enter_context(patch.object(p,'promote',side_effect=ValueError('package private')))
+            with self.assertRaisesRegex(ValueError,'private'):p.publish(self.f.p,self.f.c,self.f.binding,journal)
+        self.assertEqual(r.tag['binding'],self.f.binding);self.assertTrue(r.releases[0]['draft'])
+        self.assertFalse(any(method=='PATCH' for _,method,_ in r.calls))
+        self.assertIn('image-promotion',i.read_json(journal)['stages'][-1])
+        self.assertEqual({x['name'] for x in r.assets.values()},set(i.inventory(self.f.p/'assets')))
+        r.calls=[]
+        with ExitStack() as stack:
+            r.install(stack);result=p.publish(self.f.p,self.f.c,self.f.binding,journal)
+        self.assertEqual(result['result'],'published');self.assertEqual(i.inventory(self.f.p),before)
+        self.assertFalse(any(method=='POST' for _,method,_ in r.calls))
+        self.assertEqual(sum(method=='PATCH' for _,method,_ in r.calls),1)
+
+    def test_public_download_checks_bytes_before_owned_home_version(self):
+        calls=[]
+        def curl(*args):
+            calls.append(args);destination=Path(args[-1])
+            shutil.copyfile(self.f.p/'assets'/destination.name,destination)
+        def install(args,**kwargs):
+            self.assertEqual(args[0],'/bin/bash');self.assertEqual(args[-1],'version')
+            self.assertTrue(Path(kwargs['env']['HOME']).is_dir())
+            self.assertEqual(kwargs['timeout'],600)
+            return Mock(stdout=TAG+'\n')
+        with patch.object(i,'command',side_effect=curl),patch.object(subprocess,'run',side_effect=install) as installer:
+            p.public_downloads(self.f.p,TAG)
+        installer.assert_called_once();self.assertEqual(len(calls),len(i.inventory(self.f.p/'assets')))
+        for args in calls:self.assertIn('--max-filesize',args);self.assertIn('--proto',args)
+        def corrupt(*args):curl(*args);Path(args[-1]).write_bytes(b'corrupt')
+        with patch.object(i,'command',side_effect=corrupt),patch.object(subprocess,'run') as installer,self.assertRaisesRegex(ValueError,'Public download differs'):
+            p.public_downloads(self.f.p,TAG)
+        installer.assert_not_called()
+
     def test_exact_oci_copy_and_anonymous_all_children(self):
         version={'name':self.f.image['index'],'id':90};calls=[]
         def command(*args,**kwargs):
@@ -280,6 +341,9 @@ class PublicationTest(unittest.TestCase):
         self.assertIn('--src-authfile',calls[1]);self.assertEqual(result['anonymousPlatforms'],['linux-amd64','linux-arm64'])
         with patch.object(p,'package_version',return_value={'name':'sha256:'+'0'*64}),patch.object(i,'command') as commands,self.assertRaisesRegex(ValueError,'conflict'):
             p.promote(self.f.c,TAG,True,sc.current(),Mock())
+        commands.assert_not_called()
+        with patch.object(p,'package_version',return_value=None),patch.object(i,'command') as commands,self.assertRaisesRegex(ValueError,'lacks image'):
+            p.promote(self.f.c,TAG,False,sc.current(),Mock())
         commands.assert_not_called()
 
 if __name__=='__main__':unittest.main()
