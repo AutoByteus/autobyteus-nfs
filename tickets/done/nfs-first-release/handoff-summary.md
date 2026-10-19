@@ -1,5 +1,37 @@
 # Handoff Summary — nfs-first-release
 
+## Active DR-011 — API005 evidence accepted; current signed execution pending
+
+**Not Delivery Completed.** DR010 is the latest completed staging prerequisite; DR009 actual codesign failure remains unresolved. Large/High/Reviewed; R3/SR004 Approved/Ready/ARCH002; IR006/CRR009 sourcePass100 diagnostic scope, CRR010 successful-test Pass, API005 prepublicationPass95. This round accepts current evidence, not a cause-specific signing fix.
+
+Initial fresh origin/mainf830c50bf1238270343afce151dd05b65b10237a already ancestor of intakec8084c94278eab9f0babb025dfd36529ff0dfbe3; all127 non-ticket inputs match2c12ec61f6339d0d264280b7117787ec821425af. No base integration delta or base-only rerun. Followed AC Proof→Cases→raw logs/IMP Checks Run: ten current hosted log hashes and literal native/Python summaries, reused56collected55executed1skip/21overlap/four detected mutants/expected original-control failure, actual stale-source and wrong-wrapper refusals, downloaded version/refusal/noHOMEwrites/cleanup. Current candidate/envelope/engine/wholeOCI independently reverified. See delivery-evidence/dr-011/verification.json and linked logs.
+
+NEW candidate39208967217/1/artifact12166434040 at1c00b7afd6327fb4ba69dbc176c69d698a309fee governs readiness. Retain `/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate`. SourceHash0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3; engineManifestbcb213bbb72e1698622afce9d7e6cc456dbe06268798b9336085227b5967bcc3; OCIsha256:dc8fe178c5e2f2efb33cafc164a4aefe5afa097a488e94f6998ce6d6a5cb796e. Measured two buildInventory hashes changed; recipe/source/package pins unchanged, no reproducibility claim or old dd6cde/readiness promotion.
+
+Genuine stable native/control/review/readiness JSON and exact measured engine lock now updated; check-publish and measured source hash pass. Authorization/approved postpublication plan/public notes unchanged. Independent actual-readiness data validation passed56collected/55executed/1expected Go-childskip, exit0; scratch removed. This is not real Apple validation. No runtime/signer/test/workflow/guide/credential changes by Delivery. Docs already say actual signing/publication pending; no broader documentation or support claim needed.
+
+Next owning gates: independent readiness-data result; fresh-main source finalization without replay/reset of completedf830/768 ancestors; actual authorized normalv0.1.0 with current candidate, bothMac DeveloperID/Accepted, retained final payload before effects, immutable wholeOCI/assets/public download/install/notice/version/signature verification and cleanup/custody. Existing six secrets provisioned; no speculative reprovision/keychain change. Current diagnostics classify observations, not causes; real signed workflow must supply current observation or success. DR005/DR009 failed history and DR007 development-only Accepted remain separate.
+
+Own DR010 records will be committed with these current records after verification; other owners' artifacts preserved. Field/filesystem/physical/user tests remain Deferred, not publication/closure gates. No questionnaire/approval loop or duplicate task. Plan custody Delivery→terminalSD→requestingPM after actual release. Active worktree/candidates/local diagnostic retained for recovery; archive is not Terminal.
+
+---
+
+## DR-010 — exact IR006/CRR009 source available for API005
+
+Execution prerequisite **Completed**; full Delivery **Blocked / not yet eligible**. This is API005 source-availability coordination, not an API Pass/full delivery result or resolution of DR009. Large/High/Reviewed, R3/SR004 Approved/Ready, ARCH002; current IR006/CRR009 sourcePass100 is **diagnostics only**. Real hosted codesign cause/failure remains unresolved; no claim that source review or local Apple acceptance fixed it.
+
+Fresh fetched origin/main `f830c50bf1238270343afce151dd05b65b10237a` already ancestor of requested `1c00b7afd6327fb4ba69dbc176c69d698a309fee`. No integration delta/checkpoint/source edit or additional executable rerun needed for ref staging. All127 product inputs in requested commit, current local checkout and IR006 `2c12ec61f6339d0d264280b7117787ec821425af` match. Local HEAD is `6bc8979a7bb5e821a32c879446155bbc76755288`, containing only one further reviewer handoff-receipt file; it was preserved, not reset. **Remote staged exactly the requested1c00b7a, not newer local HEAD.**
+
+Fast-forwarded ONLY origin/codex/nfs-first-release frome8012cc to `1c00b7afd6327fb4ba69dbc176c69d698a309fee`. Fresh remote refs and GitHub source/workflow bytes verified; workflow388178899 active, blob `dc9acc3b3390806b80db759fc38038c5b675bae8`, SHA256 `f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35` (16820bytes). Source/workflow dispatch SHA both1c00b7a. API owns NEW build-only dispatch: ref `codex/nfs-first-release`, `release_tag=v0.1.0`, `source_sha=1c00b7afd6327fb4ba69dbc176c69d698a309fee`, `publish=false`.
+
+Mainf830 and tag inventory unchanged; no main replay/merge/push, candidate dispatch, signing/notary, readiness change, credential access, publication/deployment/TaskDone/Terminal. Root RELEASE source-availability exception followed; root guide revision3d2710b30ec1a8106faeb2f7c4f2e70183a25cd3 and packaging guide revision2c12ec61f6339d0d264280b7117787ec821425af, no deviation. CRR009 validates bounded fixed-category diagnostics, not a cause-specific signing repair. Old API004/readiness cannot prove changed product; current engine/source identity comes from the new actual candidate, not a guessed old hash.
+
+Three API plan/report/progress files plus C01-05 ownership baseline preserved byte-for-byte at staging verification and left unstaged. Own four docs/dr010 evidence remain uncommitted; local HEAD unchanged. Prior DR001–009 prefix/evidence and release notes preserved. No runtime resources created, no cleanup needed for staging; active worktree/candidates/local diagnostic intentionally retained. Field/filesystem/physical/user tests Deferred, not publication prerequisites; no questionnaire or new approval loop. Existing plan custody Delivery→terminalSD→requestingPM remains after successful release. Return this prerequisite receipt only to requesting API under fresh no-match rules, not a duplicate fix/review/Designer dispatch.
+
+Authoritative receipt: `delivery-evidence/dr-010/staged-source-receipt.json`; raw operations `commands.json`; exact remote bytes `verified-remote-workflow.yml`. No long-lived docs/notes impact for ref availability; current signing/privacy guide already matches IR006. DR009 full failure result below remains historical and unresolved, not replaced by a release-success claim.
+
+---
+
 ## DR-009 — Blocked: both hosted Mac signing commands failed
 
 **Source finalization Completed; official signed v0.1.0 publication Blocked — Local Fix. Not Delivery Completed, TaskDone or Terminal.** Task nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Large / High / Reviewed; R3/SR004 Approved/Ready, ARCH002, CRR007 sourcePass100, CRR008 testPass and API004 prepublicationPass95 remain distinct authorities.

@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-19T06:32:59.885729+00:00",
+  "head": "c8084c94278eab9f0babb025dfd36529ff0dfbe3",
+  "freshBase": "f830c50bf1238270343afce151dd05b65b10237a",
+  "baseAlreadyAncestor": true,
+  "noInitialSourceDelta": true,
+  "ownExistingFiles": {
+    "tickets/done/nfs-first-release/handoff-summary.md": "ec7333f0da76086c74dc6c9343ba9ec999010ac87a5cd9a8696f23596ba8b68c",
+    "tickets/done/nfs-first-release/docs-sync-report.md": "d1f08343e67dcc046b1aed44217e92287d28da3dc047b7e082a54411dd4ef524",
+    "tickets/done/nfs-first-release/release-deployment-report.md": "520a08a90ea8a5d8f76adea4f3ff0bf09e738229f9fc5c4c04f1fe95ba420295",
+    "tickets/done/nfs-first-release/delivery-revision-record.md": "b22082463d877bb25fa69209cc1c2a1388340fcc430043ad0ebdbf3d136b346c",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/commands.json": "2fb040750eef3a194628b62776628e501183cf4342ee74231ff59441d4b6481f",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/staged-source-receipt.json": "3040154a34e9e9e5e66df34f66e963b44b0ddb44121a9d5c37c57aa09621e4a7",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/verified-remote-workflow.yml": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/final-checks.json": "b9aaa6bad269e4b348f5d666d6741e05b6a6af84f10b747a10c0255767f7fee9",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/routing.json": "eab721aa51e03673220eff112478db8e1485c1a091f74b41b87b75384a636286"
+  },
+  "priorDeliveryRecordBytes": 32969,
+  "initialStatus": " M tickets/done/nfs-first-release/delivery-revision-record.md\n M tickets/done/nfs-first-release/docs-sync-report.md\n M tickets/done/nfs-first-release/handoff-summary.md\n M tickets/done/nfs-first-release/release-deployment-report.md\n?? tickets/done/nfs-first-release/delivery-evidence/dr-010/\n"
+}

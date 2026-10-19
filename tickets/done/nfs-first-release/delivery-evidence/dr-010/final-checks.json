@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-19T06:15:56.765256+00:00",
+  "headUnchanged": "6bc8979a7bb5e821a32c879446155bbc76755288",
+  "indexEmpty": true,
+  "apiHashesStillEqual": true,
+  "priorRevisionPrefixUnchanged": true,
+  "releaseNotesUnchanged": true,
+  "ownModifiedDocs": [
+    "handoff-summary.md",
+    "release-deployment-report.md",
+    "delivery-revision-record.md",
+    "docs-sync-report.md"
+  ],
+  "newOwnedEvidenceOnlyPrefix": "tickets/done/nfs-first-release/delivery-evidence/dr-010",
+  "status": " M tickets/done/nfs-first-release/api-e2e-coverage-investigation.md\n M tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md\n M tickets/done/nfs-first-release/api-e2e-test-progress.md\n M tickets/done/nfs-first-release/delivery-revision-record.md\n M tickets/done/nfs-first-release/docs-sync-report.md\n M tickets/done/nfs-first-release/handoff-summary.md\n M tickets/done/nfs-first-release/release-deployment-report.md\n?? tickets/done/nfs-first-release/delivery-evidence/dr-010/\n?? tickets/done/nfs-first-release/evidence/C01-05-ownership.json\n?? tickets/done/nfs-first-release/evidence/R01-05-reuse.json\n?? tickets/done/nfs-first-release/evidence/R01-05-reuse.py\n?? tickets/done/nfs-first-release/evidence/R02-05-stale-candidate.log\n?? tickets/done/nfs-first-release/evidence/R02-05-stale-result.json\n?? tickets/done/nfs-first-release/evidence/R03-05-hosted.py\n?? tickets/done/nfs-first-release/evidence/R04-05-candidate.py\n",
+  "noProductionOrOtherRepoEdit": true
+}

@@ -1,0 +1,777 @@
+{
+  "at": "2026-10-19T06:15:26.240119+00:00",
+  "deliveryRevision": "DR-010",
+  "result": "Source-availability prerequisite Completed; full Delivery Blocked/not yet eligible",
+  "request": "API005 after IR006/CRR009 diagnostics-only source Pass100; not an API Pass/full Delivery handoff",
+  "reviewedDispatchCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "productCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "localHeadPreserved": "6bc8979a7bb5e821a32c879446155bbc76755288",
+  "localHeadOnlyAdditionalPath": [
+    "tickets/done/nfs-first-release/code-review-evidence/crr-009/handoff-receipt.json"
+  ],
+  "productInputCount": 127,
+  "allProductInputsEqualReviewedSource": true,
+  "productInventory": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "modeTypeOid": "100644 blob 29d05bd3fe257a2db352892d7e584cddbff9dd8d",
+      "sha256": "5565f88320a9f83693519817ef038539e7955b2c4ef480890a1b40c38ff45712"
+    },
+    {
+      "path": ".github/workflows/release-nfs.yml",
+      "modeTypeOid": "100644 blob dc9acc3b3390806b80db759fc38038c5b675bae8",
+      "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35"
+    },
+    {
+      "path": ".gitignore",
+      "modeTypeOid": "100644 blob f73501d258775425175eaf269b5e7f505f3e9999",
+      "sha256": "0aed65279441e8e16fb06a8d3330cd1b43899d7565801c8d8551bcf1c41a2828"
+    },
+    {
+      "path": "AGENTS.md",
+      "modeTypeOid": "100644 blob 2170bc949f407f331fe5d734295d05059606c872",
+      "sha256": "599bda60f3251611e4733658cc48b606106238e0977785bc52eab878798c2b17"
+    },
+    {
+      "path": "CLA.md",
+      "modeTypeOid": "100644 blob 1fc901be366f4b80093d1011af306d490ed2b1e5",
+      "sha256": "439f73144d7348ab13c53de17bb9afff0ea0839c4caa7cb4379bdf1b9d585240"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "modeTypeOid": "100644 blob a7c0f709bbbf8a10c4135fc855842d713cb30ff6",
+      "sha256": "e08b61ce6cbde1b92911d0a5d993292afc0e55bd2f4c069a93b3df029d114122"
+    },
+    {
+      "path": "DESIGN.md",
+      "modeTypeOid": "100644 blob 66f97263fb4aecf54b845a0dee59b0cd508edd1c",
+      "sha256": "4a0740e3ba8474607681e5d04433e039c1d47f6c229dc6ff913677acdb0b64e7"
+    },
+    {
+      "path": "EXTRACTION.md",
+      "modeTypeOid": "100644 blob 6163c3f4ba38fc0592798a1dd8ee47786b474499",
+      "sha256": "3eff1c9d4b670c61e9c8747ee2d94e51df7210251cbe6e018a436f0d1c322c3f"
+    },
+    {
+      "path": "LICENSE",
+      "modeTypeOid": "100644 blob be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "LICENSING.md",
+      "modeTypeOid": "100644 blob 4bed1914579a7e906a0f9e6dc37a5892dfe17ec1",
+      "sha256": "f658b7ba84d05478a5a356ac17b174d2eec78e6a6b672cba20854bbf145ac78e"
+    },
+    {
+      "path": "NOTICE",
+      "modeTypeOid": "100644 blob 770819a6dd01854e5df743176a1e68a8990fdc8c",
+      "sha256": "67eec521b5fdf580caf6d9d69f634133735948d7b6ee4d0418350001ebfadbd8"
+    },
+    {
+      "path": "README.md",
+      "modeTypeOid": "100644 blob 101d7ef10aacb29be3e59be71213aa5ac49dae25",
+      "sha256": "7acc5a7641836e469d4a0e8d5513d1fa81820fbe56b01465a29fb18623308bb6"
+    },
+    {
+      "path": "RELEASE.md",
+      "modeTypeOid": "100644 blob 4210ce51d2c5e9f97d44a2c9b8db494438d61fba",
+      "sha256": "008c70046e48aa84423cd00647984f8ca482755d07c306e88ada5b99cf083640"
+    },
+    {
+      "path": "TESTING.md",
+      "modeTypeOid": "100644 blob c36b6e89069fd851f7fbf5ca964be9ae59fe5ff3",
+      "sha256": "00ffc8e2675c3b385f7df561f79c8b4f526e4be92e7a0cf0568522026257800a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES",
+      "modeTypeOid": "100644 blob fe8727a57b00ab88fc9f2fb9e7be27927a701a58",
+      "sha256": "06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+    },
+    {
+      "path": "cmd/autobyteus-nfs/main.go",
+      "modeTypeOid": "100644 blob bc82e72a6d6f9506b2e80a40fc9899981f9db517",
+      "sha256": "251c7a78d81a5eb090ba8e89f58ded1dcddfa632842385d9228aaaa83480371d"
+    },
+    {
+      "path": "cmd/autobyteus-nfs/release.json",
+      "modeTypeOid": "100644 blob f3874a1b2ef977c9179dfb04ad163551d3fa44c2",
+      "sha256": "a4e8b4131220574b18576213c955fe3c7ff6409c50a6eefb50dc5ef114286839"
+    },
+    {
+      "path": "docs/filesystem-usage.md",
+      "modeTypeOid": "100644 blob cc9203ca251ef8ad6956065854cc85cdabbaa7a0",
+      "sha256": "d61ae3e8290527732925f06bb1115780325ef396569f04bfff9f45d752ccd423"
+    },
+    {
+      "path": "go.mod",
+      "modeTypeOid": "100644 blob 2eab96b7a3d1a145a522d65b8415b9e4c22f2208",
+      "sha256": "dc85f8e1879188655cf94c8d9f11b3490037e19a4a17fe2e7a56798f4b04b593"
+    },
+    {
+      "path": "internal/backend/apple.go",
+      "modeTypeOid": "100644 blob faba3cb4124c2e4943bc7cf6a9d8e7399e88be57",
+      "sha256": "6207246227696e561b4f1230d18fac6bf6c372249dde40aa709d808b5590cc9e"
+    },
+    {
+      "path": "internal/backend/apple_apply.go",
+      "modeTypeOid": "100644 blob 21ec9be6bd3ceec607eb522a63af759f757c64bb",
+      "sha256": "ef9aa9fc698fbc8ce0e116c593fdf991f442c512a4a54053fe85fc04063b9b64"
+    },
+    {
+      "path": "internal/backend/apple_startup.go",
+      "modeTypeOid": "100644 blob 4e8a2e848e071d0d7f749d5371c15aaeb152d60a",
+      "sha256": "c8f7f13082b8422d390277830f6442407dae337d80de6c8d165e8f55e7fa5945"
+    },
+    {
+      "path": "internal/backend/apple_startup_test.go",
+      "modeTypeOid": "100644 blob 361b27580f0e35177bbcb4d6f78187ff54982107",
+      "sha256": "d4005397139099380cb2406794759d8e919426cb12afb234ff577fe9838f9f1c"
+    },
+    {
+      "path": "internal/backend/backend_test.go",
+      "modeTypeOid": "100644 blob 22c46fa582539664a1c6d07df6c1c70f9ab47581",
+      "sha256": "2b2cd85b5fcc8f4639d5eca248b7e36c6cb7e6be04d28579a4b0aa6c69b2d321"
+    },
+    {
+      "path": "internal/backend/cleanup_test.go",
+      "modeTypeOid": "100644 blob f6ece79c654eeecc3fbfb1167e76c00121af8fe5",
+      "sha256": "f1350c02ca025edfa121dbf5d3f97eabf377174d921bdcad9bb252ccc7ba84e8"
+    },
+    {
+      "path": "internal/backend/engine-assets/README",
+      "modeTypeOid": "100644 blob 11a56e7d40a11ced8cad10b39f9ce3600341e811",
+      "sha256": "22de479510e8bdfed493ba622260c786584314823ff7e533de4dabb9cbb682b1"
+    },
+    {
+      "path": "internal/backend/engine_assets_linux.go",
+      "modeTypeOid": "100644 blob 1029ffdd8d3fd2419f623fb1c8e2e074270c1d58",
+      "sha256": "7392503e324b7d8194b58a17b8122ae5c881c704d859325f931f4c97e13b299c"
+    },
+    {
+      "path": "internal/backend/engine_assets_other.go",
+      "modeTypeOid": "100644 blob 39e6f1901844e89a768c31da729befc4989c342b",
+      "sha256": "b607970ec898ddd32ac0c08ec6b481e5084450f6d84ff05eb92a6e202dd3a579"
+    },
+    {
+      "path": "internal/backend/engine_bundle.go",
+      "modeTypeOid": "100644 blob 9e92afcdfca1acc188f126667985059ba744a8c5",
+      "sha256": "eb47b20109a121e879f4d5f6e4d43217d153e93db9cc7be541f18c585f9daab6"
+    },
+    {
+      "path": "internal/backend/engine_bundle_test.go",
+      "modeTypeOid": "100644 blob 31aa909668fd355d9b6d541712964f415d1412c8",
+      "sha256": "4088a640852e8dd68a5fa4bcc70ebb21c9dcbb3e51575e291afbc9c92c8662d0"
+    },
+    {
+      "path": "internal/backend/engine_staging.go",
+      "modeTypeOid": "100644 blob b1a13990ed663ce8613e9fba21f0c39839026702",
+      "sha256": "3b85a2e8d683e303ffaec8bd6e6460d57308365eb87cc54206098e45cc19edb2"
+    },
+    {
+      "path": "internal/backend/ganesha.go",
+      "modeTypeOid": "100644 blob ee71ae755686433067344b37c569020d3880ec58",
+      "sha256": "fd515d515e5ae3e2fa103f12c5c4983ad8a8c48b37586bafb85d1cb4ad9a7c88"
+    },
+    {
+      "path": "internal/backend/ganesha_native.go",
+      "modeTypeOid": "100644 blob 96882c275da9828f01ab52a8450647e4880418df",
+      "sha256": "306ffd44a6038399d0e6178014234d92403ef78b3b03c9682fd0420c8ee18cdc"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages.go",
+      "modeTypeOid": "100644 blob 4083061c49adf7400b931337a7f34b4d414d6ad8",
+      "sha256": "061699e59f2152df7f9e875f18f76d02b584be66af3de44857457fa85fba13e1"
+    },
+    {
+      "path": "internal/backend/ubuntu_packages_test.go",
+      "modeTypeOid": "100644 blob c89255929de480b5195b7949a70b3a8434b4c190",
+      "sha256": "c5c02b98dbc729028acd54dd058d25d4a18b4e03dfcf76481a754d32645cf368"
+    },
+    {
+      "path": "internal/cli/cli_test.go",
+      "modeTypeOid": "100644 blob 0c1f9d13b00d8f20aa2a07b99e448bece94fb134",
+      "sha256": "2bf605bd6d83caa6b65abcc92101c7835adbf19b32d7e9b6b4ec318757643df8"
+    },
+    {
+      "path": "internal/cli/engine_release_test.go",
+      "modeTypeOid": "100644 blob 900ba89fbe49d3fa027b44bb3319a4df3c9a23a4",
+      "sha256": "d84ece2b89f042b79611979dce709d762d1378cb5fa2e1baf4df9c30aa4eeae7"
+    },
+    {
+      "path": "internal/cli/inputs.go",
+      "modeTypeOid": "100644 blob d66bb895e1dccb4b9b1c83506c4099752ffdd7cb",
+      "sha256": "350c2e9b24882f852182097266ebb8c6ac03bcf3efe49e528f1fe2ac89cbf4ff"
+    },
+    {
+      "path": "internal/cli/install.go",
+      "modeTypeOid": "100644 blob 9afcfe6c2098f928fcc391163912be4f283bce70",
+      "sha256": "7f7cae4d304223491afaf589c3235e5b5c7d64e9d1eca2ce4590c55cc652633b"
+    },
+    {
+      "path": "internal/cli/install_state_test.go",
+      "modeTypeOid": "100644 blob 33dc95b226f7da29be7b57f25f88119eb3c08258",
+      "sha256": "0d4183462e150ab72d9b143dbe60a5c6e377e5b1f82c8f47e256537707da203a"
+    },
+    {
+      "path": "internal/cli/interactive-setup.go",
+      "modeTypeOid": "100644 blob 15efb8155ea1271dedd7e09ef4b1027dbc108343",
+      "sha256": "c5e80baf32d99db6cde3689028815319204359036b85abfd9541e9d0a94004eb"
+    },
+    {
+      "path": "internal/cli/release_admission_test.go",
+      "modeTypeOid": "100644 blob f37b0ce9f45ad95e969fb73359e56141aef47398",
+      "sha256": "7d0be158c571a8282757f022510795ca8df870b5fb125417f62f32eaa9a9ed61"
+    },
+    {
+      "path": "internal/cli/run.go",
+      "modeTypeOid": "100644 blob 5f902ed96eccbea7c3e5463a60b295ffcd9fda28",
+      "sha256": "6cfee560080d3d44ea6d94f5ee27c6b005a2b1e785656b33b97f5618715c8ae5"
+    },
+    {
+      "path": "internal/cli/terminal.go",
+      "modeTypeOid": "100644 blob 9c07c930b226c4b854176aa0c77baf3fc6b588df",
+      "sha256": "a506deed4b7a4d8b511fddbd4bbf32e3b5d75036b6662ece8e078264e241c713"
+    },
+    {
+      "path": "internal/cli/verify-release.go",
+      "modeTypeOid": "100644 blob c11d0e8c6aa3527b1c379f08869bc450fdb8177c",
+      "sha256": "509a8d0823b501b469ead6538d9878bb2b5c741917fa131444f340a9877a6789"
+    },
+    {
+      "path": "internal/config/config_test.go",
+      "modeTypeOid": "100644 blob 43f724fcd0f114c0307da22860dfd6ae8c380130",
+      "sha256": "7c5d9e4abec45eeb3e9a9f03835415d974a543a6d494afacff347e02ad9cf240"
+    },
+    {
+      "path": "internal/config/connection.go",
+      "modeTypeOid": "100644 blob c38145956ff6bb72c9c8a72045d76e849d8579bf",
+      "sha256": "8e07298d2144f55a0feedb5f7151156a332e338dedef91759366ec5324686a97"
+    },
+    {
+      "path": "internal/config/installation_state.go",
+      "modeTypeOid": "100644 blob 841ef09d1774cd4a7cf7b2a8cb8853482541ec80",
+      "sha256": "05e3e6b4f6db99b4439302b008da1cee65e42d5e7020d70588d7c5b7b7d0f9d7"
+    },
+    {
+      "path": "internal/config/installation_state_test.go",
+      "modeTypeOid": "100644 blob 7b53dd5621ff8d4fdf2b4a546f5778fa26b306fd",
+      "sha256": "7ba4c1c505921a5d188d837a1221a47f674fb69ac4acb097c65cb4d6f1f7eeed"
+    },
+    {
+      "path": "internal/config/source-marker.go",
+      "modeTypeOid": "100644 blob 063390876eaa12b4be77b971113a46325c7c04f0",
+      "sha256": "1ca541549adb980079a6624f2eb80675a4f9cb574fe1c367c9f6bfbecce1a071"
+    },
+    {
+      "path": "internal/config/source_identity.go",
+      "modeTypeOid": "100644 blob f39037a3e30733ef9785579763267613d021e155",
+      "sha256": "2a6e07d551db6a821c639d365acf462652b72c7acfbc7b6c4e4de9425e07d619"
+    },
+    {
+      "path": "internal/config/source_identity_test.go",
+      "modeTypeOid": "100644 blob 3910695d06b120a2a0f90d04e9953f1308b09f6d",
+      "sha256": "804fdf3e0ad6838f5e5af12cd7c6664d5fb3a7579d7817a85aa3322d3d97496c"
+    },
+    {
+      "path": "internal/config/state.go",
+      "modeTypeOid": "100644 blob 254cacb743b9c611dc48139d1dfd2c8f8784c9d4",
+      "sha256": "9e99fecc6826b83ff839a2d88a9cb9600a383de415428e020d717dcd3c038581"
+    },
+    {
+      "path": "internal/config/store.go",
+      "modeTypeOid": "100644 blob 98a6fec1785bfe33f9ec9bdb68eeebb48c4f04fd",
+      "sha256": "7962a19ab2966e2e6036893d6548cc2d504eceb01ed7542b1c8af7916e7d3141"
+    },
+    {
+      "path": "internal/docker/client.go",
+      "modeTypeOid": "100644 blob f20790630acfbafeafe4f6ff0b92f6c6d27f9d01",
+      "sha256": "dc2099bec074e31f922fe3d7d367294a62535ce89d407aff25604702314439ac"
+    },
+    {
+      "path": "internal/docker/docker_test.go",
+      "modeTypeOid": "100644 blob 1311324616708d75899c26e65ee13da831ab8086",
+      "sha256": "3213729cf6179d22c84de145aed2f6761f0bdd061eaba8bb675f4fe7c771dd17"
+    },
+    {
+      "path": "internal/docker/engine.go",
+      "modeTypeOid": "100644 blob 727e8bf67cd3a1a919cbb9fe65e638cdb945ba1b",
+      "sha256": "bdf49026fa73c1f2cb94b028333a7d1be3895ff49f6973349f44d724f9a56ac3"
+    },
+    {
+      "path": "internal/docker/snapshot.go",
+      "modeTypeOid": "100644 blob 750e12ba90b912fb182e0ae0851e39e175323610",
+      "sha256": "d926a8d76831f48487f26704049e58df4d66bc43c0e34e3cfbe645803e5256b9"
+    },
+    {
+      "path": "internal/platform/commands.go",
+      "modeTypeOid": "100644 blob ee48e4a8c584878ae0cc432f998ae32511c2de8a",
+      "sha256": "19d6b5b27a71b80dfc4fe831242e844f69ca3c0c753c626a8ae10912d2613f18"
+    },
+    {
+      "path": "internal/platform/directory_modes_test.go",
+      "modeTypeOid": "100644 blob da9d482d11f302f1a381f5660995ce9595cbcae7",
+      "sha256": "ed24cc6189cd24cd3f34108fe5188350e6c5a34ebd098a2a321c3360a18c7335"
+    },
+    {
+      "path": "internal/platform/filesystem_darwin.go",
+      "modeTypeOid": "100644 blob 1fec872c7c68207b99d894ffc2a884d39749c340",
+      "sha256": "897e96eff6a583b5a622bba52bbc09b285fc092eddf3acc6c18309dfb6a5bf44"
+    },
+    {
+      "path": "internal/platform/filesystem_linux.go",
+      "modeTypeOid": "100644 blob c04bc0bec6777b87e97f7716a96753bb96b21b97",
+      "sha256": "10d3db6a6515bd317d6581fa7c56a92305ae7edbf861bd2e4dbeff5719c6162a"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_amd64.go",
+      "modeTypeOid": "100644 blob 70bdb85865a703770c531a2cfa6ae6642e9416e5",
+      "sha256": "5a4fdfd4d9c2acb1c4d2ccf71c9e2ea7d88b771ef66528be34610a82415ef8b4"
+    },
+    {
+      "path": "internal/platform/handle_syscalls_linux_arm64.go",
+      "modeTypeOid": "100644 blob 47ce8148858407fb35c35d990335c4b95c1b0b1a",
+      "sha256": "b5824f4049b80a37b8ae654e02f52bfa4f95c0339e23854eb42a28d02c61a56e"
+    },
+    {
+      "path": "internal/platform/handles_darwin.go",
+      "modeTypeOid": "100644 blob 4c528e2ca83776ecba0161d842c19bf3d67823a4",
+      "sha256": "7d15ccbf3b8d2d79607f2578e91697ee25e14e84465e65675449e73f9e20b3b4"
+    },
+    {
+      "path": "internal/platform/handles_linux.go",
+      "modeTypeOid": "100644 blob da7a872b1bdb64b1a651407f3b622ed36f357c0d",
+      "sha256": "1c041901d3ab4f22db06c41371aa5cd8a447573bdf1591bcc871198569846127"
+    },
+    {
+      "path": "internal/platform/jobs.go",
+      "modeTypeOid": "100644 blob c463b65979ac09b8a1fd94bbd0d30e28588645c9",
+      "sha256": "6c3ec40886761d83d5dbf4357a1e85d207998988c2b66dd66b0985ceea1fcd58"
+    },
+    {
+      "path": "internal/platform/lock.go",
+      "modeTypeOid": "100644 blob f15a190857c7c0dcedb0ea79464ef01484087891",
+      "sha256": "c2639b9461b3bc6dba19ae05f2e1c019000852b345aaee5e8d8cf75976063cf5"
+    },
+    {
+      "path": "internal/platform/mount-observation.go",
+      "modeTypeOid": "100644 blob 28330d3d8974eb603aa4f3185c3df20b49d7f477",
+      "sha256": "95ea1dcfa1098c7422fd6d2c6ab876a66cb201810c6ce92d3564c83d9e881842"
+    },
+    {
+      "path": "internal/platform/mounts.go",
+      "modeTypeOid": "100644 blob fa125d2a7f1bea13dd48d44c4033eaf045ebee8a",
+      "sha256": "bfc9f52d51a028ddaa010cdf49dec2574c7790c95d30adaa61233370960cc5cf"
+    },
+    {
+      "path": "internal/platform/platform_test.go",
+      "modeTypeOid": "100644 blob 221cbd47040dd9f2b2e3ec7b1edf69ebdf94f253",
+      "sha256": "79912797799568b0c4c5ec991e0a41142185aded198688192c23bc6670ee2b1a"
+    },
+    {
+      "path": "internal/platform/source.go",
+      "modeTypeOid": "100644 blob b537374b471cbbd3acd90d4fc46a1ac39148feaf",
+      "sha256": "83cad9f862241b81263f98a95b59ee2519bd01d5f467771ed7639572a5228571"
+    },
+    {
+      "path": "internal/platform/source_darwin.go",
+      "modeTypeOid": "100644 blob c5b3357d1385cc576befd5721a600539a6b4b20f",
+      "sha256": "2ab1e02607dcd7820a921b594ccf195e47af2cb59599c0533848b999fd1daa21"
+    },
+    {
+      "path": "internal/platform/source_darwin_test.go",
+      "modeTypeOid": "100644 blob 5cf491eb3ab4be2c8a61089cab76fd0f2e4a7cf2",
+      "sha256": "a1ce3a855b2cef934f7224cd24622b1c39ea01cb67d72a955e0cf0a39478fcf2"
+    },
+    {
+      "path": "internal/platform/source_linux.go",
+      "modeTypeOid": "100644 blob 77bda4f8e3766064ed9d6a6ab3225b3d4bf48e48",
+      "sha256": "cff1b09a9856e8fb20f1c4e1f8d3634dedab22c93acb1b9f06bce1a2ad305cf1"
+    },
+    {
+      "path": "internal/platform/source_linux_test.go",
+      "modeTypeOid": "100644 blob be68eb9dd0317e6182bc8ca43eae785c4ebf82a0",
+      "sha256": "be0b0c2f27b83c42c490bfa79ad846b6fc74674dc766f85c73df39a12a2868ee"
+    },
+    {
+      "path": "internal/platform/volume_identity.go",
+      "modeTypeOid": "100644 blob 04397928a1bcd487ff487e20584baf61fbe5d66d",
+      "sha256": "f96da913562c1e8160df1dc9c873127d7500ebde9660118a4d40e7ab0edc30d0"
+    },
+    {
+      "path": "internal/platform/volume_identity_test.go",
+      "modeTypeOid": "100644 blob 131f927056d1d2f534b0e6e241879f4e2fa4759a",
+      "sha256": "00ac149bd6ed9194e9b128b186bae39ec36494257d30f032b0f0c822e05f1eed"
+    },
+    {
+      "path": "internal/platform/volume_plist.go",
+      "modeTypeOid": "100644 blob bae19994688830120935f5d5b4d3d5829c5d3a7f",
+      "sha256": "b955c7d3477ddb405b799fd125b02bbc4963740884c15b7b7736ca4e332b8415"
+    },
+    {
+      "path": "internal/service/probe.go",
+      "modeTypeOid": "100644 blob 40439cc280874a2eef3c0daecba59c1adc20d19f",
+      "sha256": "a23d8d5dd158df79c279950ffb028943aa9f68c2bb52fadfd63296d271c322ed"
+    },
+    {
+      "path": "internal/service/probe_test.go",
+      "modeTypeOid": "100644 blob bf2c80b8110c24e3f72d25c6f7fa8a65027e529f",
+      "sha256": "e1abd32c0ec2448215faf5df3f4b2511e69df73e000457f61f9d2478979fdb45"
+    },
+    {
+      "path": "internal/service/supervisor.go",
+      "modeTypeOid": "100644 blob b2b609874667cd9a8f9fd3c9a0006a7ffd826dd2",
+      "sha256": "3bda88c20c6b8deb5431441266c78fca55360a80c2a2d6dd1d22743a54959740"
+    },
+    {
+      "path": "internal/setup/apply.go",
+      "modeTypeOid": "100644 blob ab2e3253c7f80226328e87609ff712264479e6ae",
+      "sha256": "590aed9bb769bbfcb99b502bb24d651bbb71a20478eeec818e056ab8e68ed8ca"
+    },
+    {
+      "path": "internal/setup/hosted_config_test.go",
+      "modeTypeOid": "100644 blob 2c5a8ef99ebcc333747ca16f52a02e60d2aed482",
+      "sha256": "4ffb18953b5c13127a42b76be156e0f56e9ec46ec4dca68cfdc8bf29ff01675e"
+    },
+    {
+      "path": "internal/setup/lifecycle.go",
+      "modeTypeOid": "100644 blob 92ff2562ff2a2ab6b6d204b875ba3eb9a660de7b",
+      "sha256": "f6f78cf51a97afa7637e3f355b1c27333f6074d1e25e29f477ca219637f3a6c4"
+    },
+    {
+      "path": "internal/setup/pending.go",
+      "modeTypeOid": "100644 blob f7fa06d2fc4d40269670716246ebd2721919a497",
+      "sha256": "88f308f6917bd460966de29e8ef4af512b944bde9df6886173d7c425e6630a81"
+    },
+    {
+      "path": "internal/setup/plan.go",
+      "modeTypeOid": "100644 blob 88da93925ac9cb8ca9f81f746c44c94042c409d7",
+      "sha256": "3c4578398bb709de3a044e3fe0765579c0f8b95299cef32765000afa16d4530c"
+    },
+    {
+      "path": "internal/setup/service.go",
+      "modeTypeOid": "100644 blob c43056e0a6009539a37559d6fdf4c91d4c63df24",
+      "sha256": "95115f25ccb6f53b788c657ee017533dc03143c7f57c32f2168e3a51dd694db7"
+    },
+    {
+      "path": "internal/setup/setup_test.go",
+      "modeTypeOid": "100644 blob ae3e1aab48802c3a2b6b89160fef760623309e57",
+      "sha256": "fb636317a4d6a4a5fdb5fbbd126cc98e9819fb130bae86d43c84f06dbe5b8dff"
+    },
+    {
+      "path": "internal/setup/source_binding_darwin_test.go",
+      "modeTypeOid": "100644 blob bde22b193bd615560ff23f390c4f4ae5ce672012",
+      "sha256": "6d66a61c6b071555e3388f50cf05a1e70348d61398dd44412d223fef0757201f"
+    },
+    {
+      "path": "internal/setup/standalone_state_test.go",
+      "modeTypeOid": "100644 blob b782d289c37cc259869ce99874a860a6f2199423",
+      "sha256": "5115562ef6c4ceb53ac6f5350bd9e79ca5176596ab6cbe34a549303e3bb5c108"
+    },
+    {
+      "path": "internal/setup/status.go",
+      "modeTypeOid": "100644 blob 5576aa7bd783488fcebc3b5c6607b64f89f6aa87",
+      "sha256": "a7e4c8db574f8a8520f9b180e4260d57da925bfbca461d7c9b1933827f855af4"
+    },
+    {
+      "path": "packaging/Dockerfile",
+      "modeTypeOid": "100644 blob 13dff91f957edf164213dd5852cae9652d86852c",
+      "sha256": "95afe7e183297dcf5f6b8fb0ab8c1c4bc439eb066ac44d7ec7ae33123a29a31d"
+    },
+    {
+      "path": "packaging/RELEASE.md",
+      "modeTypeOid": "100644 blob 5bba5d80cc21e449cfb01c96d1d505ddcaa32a61",
+      "sha256": "b89e91a1dab6550eabe7cbc0e9362968466aa9364b7c98b7abedd90f5d334da9"
+    },
+    {
+      "path": "packaging/engine/README.md",
+      "modeTypeOid": "100644 blob 0f86543f02e9e84d28d285c82e0b549043d46186",
+      "sha256": "7384b528ce8f604bc71ba258750955e7155ec83f1a5401d02a64c076de5b770b"
+    },
+    {
+      "path": "packaging/engine/build.py",
+      "modeTypeOid": "100644 blob 7b413a62db571c810daeab7bdaaffedc7470481d",
+      "sha256": "0607317c2a073df57247b570d5237afa2a3693c158c40ca6c31c3066b61aaa24"
+    },
+    {
+      "path": "packaging/engine/get-dir-delegation.patch",
+      "modeTypeOid": "100644 blob 6ba3fb48224a5ec23ef90fe43b9338eea77c1a3d",
+      "sha256": "ba682b5c64e7f800c927f4c90b2a7bfb4b8d2a323ddc48c3d591db3d75799031"
+    },
+    {
+      "path": "packaging/engine/manifest.py",
+      "modeTypeOid": "100644 blob abac0426be623a382eff2fbd3f5e4c5c9c49a976",
+      "sha256": "8085a0f27388ea993f166c20b1f028e501dbb824cc5782d9750d9c06a3342604"
+    },
+    {
+      "path": "packaging/engine/source-lock.json",
+      "modeTypeOid": "100644 blob cc6df918d00b47b29eed2ce0b240ecd6a07d6528",
+      "sha256": "a341f9bf0bb419608ee9d3144419c6326135c5531f524206fc0ca8fe7dff4713"
+    },
+    {
+      "path": "packaging/engine/source.py",
+      "modeTypeOid": "100644 blob 84253cdaed82d3eded9f3e0871e4ddfd1818af28",
+      "sha256": "ccaf799cda46e35e0b6858ff979e20ed0932db520400c987e18adf06c80dc5c7"
+    },
+    {
+      "path": "packaging/release-lock.json",
+      "modeTypeOid": "100644 blob 105aa65bf25567f32eccfcd8524ec73cfc16b6af",
+      "sha256": "8072aa19330be47f41fffb6cb4499768a115c9aebc7741ac72430692a8f48c9d"
+    },
+    {
+      "path": "packaging/release.py",
+      "modeTypeOid": "100644 blob b10f71e9093cbc480397be147d605b9f1130c9da",
+      "sha256": "d8c1c8f2881fb9696fe3e61da0866588e9a260b28ba55e2a9e89f9d60a815d4c"
+    },
+    {
+      "path": "packaging/release_support/__init__.py",
+      "modeTypeOid": "100644 blob 388725a13da9423a80eb838e8621c58cf7f7028d",
+      "sha256": "2f403dfa7cc5df2a322546ae7be964355a80ffe02f01a0e267e3b63aebc54c75"
+    },
+    {
+      "path": "packaging/release_support/candidate.py",
+      "modeTypeOid": "100644 blob 65ccfd21a81692239ef0ac8eca485e3b5e37d080",
+      "sha256": "8eb5fb9b51943131f3fc8e2f24f064aae53dc771c7719b4e9c504757ca7b1e7b"
+    },
+    {
+      "path": "packaging/release_support/identity.py",
+      "modeTypeOid": "100644 blob 0bfce727e3dd7d934e2e58b12813060aac7e10ef",
+      "sha256": "76eeae4f79deb713c5859322d7d9d710e436e0fb76264b325edcee612fc6b7bc"
+    },
+    {
+      "path": "packaging/release_support/payload.py",
+      "modeTypeOid": "100644 blob 287c237cc93e93ddb8dced0cb79766f0aaf3241b",
+      "sha256": "50034a2c0056e65bd9218e6ecae7ae9cf59c9b11dea2f5e1639635251e79402b"
+    },
+    {
+      "path": "packaging/release_support/publication.py",
+      "modeTypeOid": "100644 blob a7ff3cf56bfb1d5fa1903dc68d6270b62bc2b0c6",
+      "sha256": "c1cec70267822ea1f29bba552f29823716e15081dd746908e5ca9e206afb7f4a"
+    },
+    {
+      "path": "packaging/release_support/readiness.py",
+      "modeTypeOid": "100644 blob 99d3d711b32e62808c5eb9f11ff08052906cb303",
+      "sha256": "9b39a60ee0c37c88f14cdf56ddf260003785eb3f6a9447a4e9dccf3a2af076cd"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/authorization.json",
+      "modeTypeOid": "100644 blob 92b36c4c72a6b04de8ef17367089b1213b2615c5",
+      "sha256": "e73109efc0be653a56b4b4b3c4b48aeafba990bfef48272a24692a6ce93db870"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/native-checks.json",
+      "modeTypeOid": "100644 blob 5912b32ba181f9b910fe910b5477a9eb0a7ddf69",
+      "sha256": "291824313b9800e5f714967c9901ed52cb525393dc07eb1b85e220f87b14adb6"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/postpublication-testing-plan.md",
+      "modeTypeOid": "100644 blob 214da0a7cda85c19f9028c645d4af41739364c29",
+      "sha256": "5fe1450719ac8be11cc44d416e96d92ec013cdcf82006d1791a2119f978b3176"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/readiness.json",
+      "modeTypeOid": "100644 blob cfedffdeea4fe14a460181d109e782ef8cbc7ad9",
+      "sha256": "751ea6831bdf2da3bed555eb57469d2f67003a34e804a760562ad6615c4d3fdc"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/release-controls.json",
+      "modeTypeOid": "100644 blob bd2553dfae7118dbdbc41c11405c747b95bfcd0b",
+      "sha256": "4ff8d9f6d23df6fbd1dd16e0022098f66e53bccc021dd37634295bf8caed9bae"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/release-notes.md",
+      "modeTypeOid": "100644 blob 067e1d616e995d8ac5afd39e05780c9d11595b0b",
+      "sha256": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e"
+    },
+    {
+      "path": "packaging/releases/v0.1.0/source-review.json",
+      "modeTypeOid": "100644 blob b9fd7e29199155b2231916765e2ffb5a62d14d8b",
+      "sha256": "c4a2710db83de4d0a41c0b1ff7ef9a18681e642f3c8af215b1f714c3a19d682d"
+    },
+    {
+      "path": "packaging/sign-macos.sh",
+      "modeTypeOid": "100755 blob a1c34a67019a613c3a4d2a1cda3e17e6652c7a42",
+      "sha256": "a87b6e5356b5fbf2ea3f9bd89cb2c58dc5d693f255e768348d720f770dcd2fcc"
+    },
+    {
+      "path": "scripts/public/nfs/install.sh",
+      "modeTypeOid": "100755 blob ab774a5fe556f185bedf51204ae9ed1f9141d66c",
+      "sha256": "b23d4e29757541712a823adb1fdddeb5f24ee877eb4b77df481da86b99bb1a0e"
+    },
+    {
+      "path": "scripts/tests/nfs_release_fixture.py",
+      "modeTypeOid": "100644 blob d9636727dc35d31afcf66934b03ff705eb594bc3",
+      "sha256": "ccb0761033c367d11675cc097ac447e6e52be801361469c990d248685d2fddb6"
+    },
+    {
+      "path": "scripts/tests/test_nfs_engine_packaging.py",
+      "modeTypeOid": "100644 blob 43d625ec7ddc799f594e4ebd5caac236dd87ed32",
+      "sha256": "f67b409bf887c38122592e2f82666304f8bea2e03ab9e2ab95dbd66bfd0fbc93"
+    },
+    {
+      "path": "scripts/tests/test_nfs_installer_fixture.py",
+      "modeTypeOid": "100644 blob 13f66360b1d223162f1404798e08ca9fb7aee310",
+      "sha256": "a0809467d8065439ec4147e7fd83b155488a1407021da5357197330b256d30c9"
+    },
+    {
+      "path": "scripts/tests/test_nfs_packaging.py",
+      "modeTypeOid": "100644 blob dc27dcfeb52712d45343bea916b6050a474948a9",
+      "sha256": "3bb2e7f3c5bf9cb6740004ec9f71e57196dc318342e0e48b2f8d4fa529873cef"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_publication.py",
+      "modeTypeOid": "100644 blob d87c64cd45c19a23ccaeb51b02f3ca8a177b3d6b",
+      "sha256": "8d74837a19fc9a9d3ecedfc08b2481329adfab9a98795bf8ef8d51b42851e334"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_records.py",
+      "modeTypeOid": "100644 blob 6ee624f58f15ec7b25624a4e43f62645f02908a2",
+      "sha256": "22ac604c95bd79513a8394d6b34aa1de9c14826cffbde8333dc8b2bcc740f47c"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_signing.py",
+      "modeTypeOid": "100644 blob 9dd5aa68a7595dcf2c2f1108f0906d732356b824",
+      "sha256": "dc8dfdf22238ffea3a50ca01bc8837862c4a5e088cb3b8b3f9cb5ace532cd033"
+    },
+    {
+      "path": "scripts/tests/test_nfs_release_workflow.py",
+      "modeTypeOid": "100644 blob 0f822c7976bd7a539364cdfd65a38f33928bcf3e",
+      "sha256": "296e08e05fd2733536f16902e25d0bf425d9a3ffc287dfa3d534c1b31f8695b0"
+    },
+    {
+      "path": "scripts/tests/test_nfs_source_identity.py",
+      "modeTypeOid": "100644 blob 19a8ce33a9649264d43daf19fc8e6a9f7a8f88b6",
+      "sha256": "010418057885241b82429345bc209d31732658dfa7e4642a26042e2c0f4b3458"
+    },
+    {
+      "path": "testdata/connection.json",
+      "modeTypeOid": "100644 blob 81aa1650707ee4faa600b0958fac470c918a640d",
+      "sha256": "be6e16edb94d0a2aa4bc1030cf02f3e289c55bdb0681d26cb33b397740ad2d74"
+    }
+  ],
+  "freshTrackedBase": "f830c50bf1238270343afce151dd05b65b10237a",
+  "baseAlreadyAncestor": true,
+  "integration": "Already current; no merge/checkpoint/source edit/rerun needed",
+  "remoteBefore": {
+    "refs/heads/codex/nfs-first-release": "e8012cc9876e3d5a4e5f5960809079ece8cf449b",
+    "refs/heads/main": "f830c50bf1238270343afce151dd05b65b10237a"
+  },
+  "remoteAfter": {
+    "refs/heads/codex/nfs-first-release": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "refs/heads/main": "f830c50bf1238270343afce151dd05b65b10237a"
+  },
+  "pushMode": "Exact requested SHA to ticket ref only; fast-forward, no force, no follow-tags",
+  "workflow": {
+    "path": ".github/workflows/release-nfs.yml",
+    "commit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "blob": "dc9acc3b3390806b80db759fc38038c5b675bae8",
+    "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "bytes": 16820,
+    "remoteBytesEqual": true,
+    "id": 388178899,
+    "state": "active"
+  },
+  "dispatchInputs": {
+    "ref": "codex/nfs-first-release",
+    "source_sha": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "release_tag": "v0.1.0",
+    "publish": "false"
+  },
+  "dispatchOwner": "api_e2e_engineer; Delivery dispatched nothing",
+  "protectedApiBefore": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "96f90b6926911a6165b40b1666a46a15b269784d79f10f9b917960ed96c2d2b9",
+      "bytes": 7626
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "880e5277fbab4e10c53bee00df4427dd2cfa417af4bc2f59f04be42dc41610cc",
+      "bytes": 2805
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "7cbbd833670d70bac84042a5a2c6c13a9360cb875d3c5124726c8811136c8968",
+      "bytes": 8320
+    },
+    "tickets/done/nfs-first-release/evidence/C01-05-ownership.json": {
+      "sha256": "dced9813790c1f9096612757046e1be5b3a44441701f18cd5129dd70327e853a",
+      "bytes": 1131
+    },
+    "tickets/done/nfs-first-release/evidence/R01-05-reuse.json": {
+      "sha256": "4e6cb59004a9bd607e093bdf7326e03ec92e74a040a04889065917041810a1e9",
+      "bytes": 1226
+    },
+    "tickets/done/nfs-first-release/evidence/R01-05-reuse.py": {
+      "sha256": "899548e2ff7072b8b4a6439a8f870696af8aef1ec51975ef3a1956f80f62699f",
+      "bytes": 3606
+    },
+    "tickets/done/nfs-first-release/evidence/R02-05-stale-candidate.log": {
+      "sha256": "7bd7a6eb4cf94ef5f43fede82426cdc5e94a782f09726f44d68f7e8f877a7293",
+      "bytes": 405
+    },
+    "tickets/done/nfs-first-release/evidence/R02-05-stale-result.json": {
+      "sha256": "a58280dcc2ac9d2b7e27de6d465fceedda5e3481ef6ada547170b8b99a7a6f7d",
+      "bytes": 544
+    },
+    "tickets/done/nfs-first-release/evidence/R03-05-hosted.py": {
+      "sha256": "b80afe9e4d00cbce7867a10ba8e3e25f6275848b3f0b3ae679828e283df1b61f",
+      "bytes": 6407
+    },
+    "tickets/done/nfs-first-release/evidence/R04-05-candidate.py": {
+      "sha256": "498d2232c825dedaa01a4d486d68ebd4ee24ea7522f361472bbbca82697d4509",
+      "bytes": 6322
+    }
+  },
+  "protectedApiAfter": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "96f90b6926911a6165b40b1666a46a15b269784d79f10f9b917960ed96c2d2b9",
+      "bytes": 7626
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "880e5277fbab4e10c53bee00df4427dd2cfa417af4bc2f59f04be42dc41610cc",
+      "bytes": 2805
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "7cbbd833670d70bac84042a5a2c6c13a9360cb875d3c5124726c8811136c8968",
+      "bytes": 8320
+    },
+    "tickets/done/nfs-first-release/evidence/C01-05-ownership.json": {
+      "sha256": "dced9813790c1f9096612757046e1be5b3a44441701f18cd5129dd70327e853a",
+      "bytes": 1131
+    },
+    "tickets/done/nfs-first-release/evidence/R01-05-reuse.json": {
+      "sha256": "4e6cb59004a9bd607e093bdf7326e03ec92e74a040a04889065917041810a1e9",
+      "bytes": 1226
+    },
+    "tickets/done/nfs-first-release/evidence/R01-05-reuse.py": {
+      "sha256": "899548e2ff7072b8b4a6439a8f870696af8aef1ec51975ef3a1956f80f62699f",
+      "bytes": 3606
+    },
+    "tickets/done/nfs-first-release/evidence/R02-05-stale-candidate.log": {
+      "sha256": "7bd7a6eb4cf94ef5f43fede82426cdc5e94a782f09726f44d68f7e8f877a7293",
+      "bytes": 405
+    },
+    "tickets/done/nfs-first-release/evidence/R02-05-stale-result.json": {
+      "sha256": "a58280dcc2ac9d2b7e27de6d465fceedda5e3481ef6ada547170b8b99a7a6f7d",
+      "bytes": 544
+    },
+    "tickets/done/nfs-first-release/evidence/R03-05-hosted.py": {
+      "sha256": "b80afe9e4d00cbce7867a10ba8e3e25f6275848b3f0b3ae679828e283df1b61f",
+      "bytes": 6407
+    },
+    "tickets/done/nfs-first-release/evidence/R04-05-candidate.py": {
+      "sha256": "498d2232c825dedaa01a4d486d68ebd4ee24ea7522f361472bbbca82697d4509",
+      "bytes": 6322
+    }
+  },
+  "apiFilesUnchangedAtVerification": true,
+  "indexEmpty": true,
+  "portableReviewedPathsChecked": 1721,
+  "currentMainReplayed": false,
+  "scopeLimits": [
+    "IR006 diagnoses codesign only; actual cause/failure unresolved",
+    "No main merge/push/signing/notary/readiness/secret/tag/release/registry/deployment or TaskDone",
+    "API004 candidate/readiness historical for changed product",
+    "DR009 failure and DR007 local Accepted remain distinct",
+    "Field/user tests Deferred; no questionnaire or approval loop"
+  ],
+  "cleanup": "No runtime scratch/processes created; active worktree/candidates preserved",
+  "ownRecords": "DR010 docs/evidence remain uncommitted to preserve requested remote dispatch SHA and concurrent API ownership"
+}

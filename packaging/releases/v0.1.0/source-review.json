@@ -1,20 +1,20 @@
 {
-  "candidateCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
-  "deliveryIntake": "5eba0339b0f8fa23feb42f653475eff979623b2f",
-  "interveningChangeReview": "127 product inputs equal IR005; updates only genuine readiness evidence and exact measured engine lock. Engine delta only both buildInventory SHA fields; recipe/source/packages unchanged, not reproducible-build equality. Current source hash rechecked after relock.",
-  "productCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "candidateCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "deliveryIntake": "c8084c94278eab9f0babb025dfd36529ff0dfbe3",
+  "interveningChangeReview": "127 product inputs equal IR006; updates only genuine readiness evidence and exact measured engine lock. Engine delta only both buildInventory SHA fields; recipe/source/packages unchanged, not reproducible-build equality. Current source hash rechecked after relock.",
+  "productCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
   "result": "passed",
-  "sourceHash": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd",
+  "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3",
   "sourceReview": {
-    "commit": "4ed7319a75b6de680c069cee845c2f28c693de5e",
-    "reportSha256": "454d449c1352b98828e067787a4da02fad060806379b2d5d1e119735dfbecee8",
-    "revision": "CRR007",
+    "commit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "reportSha256": "ebd37eeb0ccea688dbe101c5b4b22fec75075199772861bacf2b08cc546110f2",
+    "revision": "CRR009",
     "score": 100
   },
   "testReview": {
-    "commit": "0e7c887582734463a4ec8e3314576309d9a26b2a",
-    "reportSha256": "88c87ca1f43a4bf77705b7406666cdfbcbb6011cc430df9f7e3f2b2be2c0680e",
+    "commit": "53cd0452e083c28b05b7949be833974b3d14ca08",
+    "reportSha256": "1958e09e635c0c121d1a3bcda7564a1e3351e18a84b9d66c92202a9be9a90abd",
     "result": "Pass",
-    "revision": "CRR008"
+    "revision": "CRR010"
   }
 }
