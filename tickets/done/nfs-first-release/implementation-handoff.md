@@ -1,234 +1,148 @@
 # Implementation Handoff — nfs-first-release
 
-## Upstream Artifact Package
+## Current Round / Result
 
-Task **autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5**.
+**IR-006 — Local Fix: diagnostic portion complete / ready for targeted source review.**
+**Actual hosted codesign cause and release remain unresolved; DR009 is not fixed.**
+Task autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5.
 Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`,
-branch `codex/nfs-first-release`, target `origin/main`. Canonical authority is now
-**tickets/done/nfs-first-release/**. Archive location is NOT TaskDone/Terminal.
-Personal execution only, no delegation.
+branch codex/nfs-first-release. Canonical ticket `tickets/done/nfs-first-release`:
+archive does not imply TaskDone. Intake b279d556e2c0f5e90ca24b61c7e67bc809644947;
+current source **2c12ec61f6339d0d264280b7117787ec821425af**. Evidence/doc commit supplied with handoff.
 
-- Requirements **R3/SR004 Approved**, requirements-doc.md / approval-record-sr004.md:
-  official signed normal v0.1.0 first; field/user testing then fix-forward.
-- Design **SR004 Ready**, design-spec.md / solution-design-handoff.md;
-  investigation-notes.md and solution-revision-record.md. **ARCH-REV-002 Pass**,
-  design-review-report.md / architecture-review-revision-record.md unchanged.
-- Trigger **DR-005 Blocked / implementation-owned Local Fix**, delivery-revision-record.md,
-  release-deployment-report.md and delivery-evidence/dr-005/failure-assessment.json.
-  Actual run39121007787/1 failed both Mac signing jobs117656510844/117656510925;
-  all4 native race/vet/Python/build/version passed. No retained stage/cause or notary
-  receipt. Payload/publish skipped, no public effects at Delivery's observation.
-- Intake b2c6fdf79e8dc5df845700d2dc27176770404a47. Delivery ALREADY finalized/pushed
-  ticketb599e476 and main7683494050b85a298ed08a55592e70f86a010a7a; local ticket
-  integrates that main. This round does not replay/undo/fetch/push finalization.
-- Prior **CRR005 sourcePass100 / CRR006 successful-testPass / API003 prepublication95**
-  retain their exact-input scope, not real signing proof or current changed-source
-  acceptance. Postpublication plan custody remains Delivery→terminalSD→requestingPM.
+R3/SR004 Approved/Ready, ARCH-REV-002; **Large/High/Reviewed confirmed**. No new
+requirement/design decision. Existing requirements-doc.md, design-spec.md,
+approval-record-sr004.md, design-review-report.md and postpublication-testing-plan.md
+remain authorities. CRR007 sourcePass100 / CRR008 testPass / API004 prepublication95
+remain exact-input history, not acceptance of IR006. Current-delta CRR/API: pending.
+Prior implementation handoff is preserved at implementation-evidence/ir-006/
+prior-implementation-handoff-ir005.md; implementation-revision-record.md is cumulative.
 
-## Current Implementation Summary
+## Trigger / Diagnosis / Scope
 
-**IR-005 Local Fix complete for signing diagnostics / ready for targeted source
-review. Actual hosted signing failure remains unlocalized and release incomplete.**
-Source **75f4dbe5527a7159f536bafcf9448bc2d6a01604**. Related SR004/ARCH002/DR005;
-current-delta CRR/API **N/A — not executed**. No new finding ID assigned by Delivery;
-trigger is its named packaging signing diagnostic boundary. Cumulative IR001–004
-byte prefix preserved; prior handoff snapshot is in ir-005.
+Delivery DR009 actual publish=true run39204643596/1 at finalized mainf830c50 failed
+both Mac jobs117904866164/117904866080: sanitized receipt **sign / exit1 / cleanup
+complete**. Native4 checks passed, Linux packaged; notary/payload/publish not reached.
+The successful import/partition/selected-identity stages do not prove codesign's
+internal cause. Original raw codesign output was suppressed, so no defensible
+credential/chain/ACL fix can yet be chosen. DR007 local arm64 development notary
+Accepted is separate, not hosted P12/keychain/Intel/final-publication evidence.
+See Delivery's failure-assessment.json and signing-artifact-receipts.json under
+delivery-evidence/dr-009/ and investigation evidence IMP-06-14/15.
 
-The existing sign-macos.sh now keeps fixed stage/exit/cleanup information on safe
-stderr plus an exclusive `*-notary-failure.json` sidecar, written after cleanup.
-Private tool output never reaches logs/receipt/upload. This fixes the known loss
-of diagnostic information without guessing whether certificates/passwords/Apple
-are responsible. Six secrets are provisioned; no real credential access or request.
+Only the requested bounded diagnostics correction is made: four paths, no new
+framework. Actual codesign command/arguments, keychain setup/search-list/trust,
+strict verification, Accepted-only notary, cleanup and publication gates remain.
+No speculative intermediate import, trust override, credential reprovision,
+unsigned fallback, target omission, retry, runtime/host/app change or delegation.
+Previously pushed mainf830c50 (and7683494) remains ancestor; no replay/undo/push.
 
-A related cleanup error path is corrected: read the keychain search list to a
-pending file and promote only after pipeline success, never restore a failed partial
-capture. Cleanup failure refuses the job and preserves an earlier failure code/stage.
-Notary command failure preserves its numeric exit; known rejected/pending receipts
-remain sanitized, while only Accepted+exit0+successful cleanup can succeed.
+## Implemented Delta
 
-Workflow always-upload now includes only sanitized notary/failure JSON globs.
-Signing arguments, both Mac targets, manual default, permission/cancellation gates,
-retained payload before writes and immutable same-byte recovery remain unchanged.
-No Go/host/runtime/config/installer/engine behavior, app or field-test scope change.
+- `packaging/sign-macos.sh`: codesign output privately captured in existing owned
+  scratch, mode0600; on nonzero exit a bounded64KiB+1 parser emits only fixed
+  observation categories. Exact binary/identity-related lines are recognized;
+  unknown/ambiguous, oversized and unavailable/undecodable outputs stay explicit.
+  A shell allowlist also rejects unexpected parser stdout. No private excerpt,
+  account, identity, argument or tool log is printed/uploaded. Capture is deleted
+  by existing cleanup. Original codesign exit survives parser failure. Command
+  success is not reclassified by text; later strict signature/notary checks remain.
+- Same exclusive failure receipt/stderr now includes `diagnostic`; other stages
+  say not-collected. A category is an observation, not a root-cause verdict.
+- Existing signing suite adds allowlist/privacy, output bounds/decoding, parser
+  failure and success-precedence checks with command doubles. Prior stage/TERM,
+  no-clobber/cleanup, six-input, Accepted-only and workflow-upload controls retained.
+- `TESTING.md`, `packaging/RELEASE.md`: document the above distinction and limits.
+  Workflow unchanged; existing exact receipt-only globs cannot retain private text.
 
-## Classification / Design Health / Transition
-
-**Large / High / Reviewed — confirmed**, no downgrade. This is a Local Fix within
-BEH003/AC003/AC004/AC006/AC008 diagnostic and cleanup obligations, not a new behavior
-policy, architecture or approval decision. Existing signing owner extended; one
-small shell function retains strict errexit (not invoked as a conditional). No
-framework, dual path, fallback, unsigned pass, omitted target or secret dump.
-Selected next route is targeted **Code Review**, fresh rule in ir-005/routing.json.
-
-Scope Guardrail respected. Source sign script is126 lines, below500 effective
-nonempty lines; source diff125 lines below220. Tests are outside source size limit.
-Touched test imports audited, no unused local bindings. No frontend/rendered result:
-**Not Applicable**, no UI changed. No source-state migration. Existing readiness
-and measured-engine data remain preserved; they must be reaccepted for new source,
-not automatically rewritten from fixtures. No unresolved design gap demonstrated.
+Source size169 total lines (audit reports nonempty count), changed source delta51,
+below500/220 guardrails. Touched Python and embedded imports checked; no unused
+bindings. Frontend loop **Not Applicable**: no rendered surface. Host/persisted
+state unaffected; diagnostic receipts are operational evidence, not release or
+host schema migration. No design/health deviation demonstrated.
 
 ## Behavior / Production-Path Trace
 
-| Behavior | Current path/outcome |
+| Behavior / criteria | Actual path and outcome |
 | --- | --- |
-| BEH001 / AC001 | Candidate generation/whole engine+OCI/native4 pipeline unchanged; signing/workflow production hash changed, requiring a NEW complete current-source candidate. |
-| BEH002 / AC002 | Singular readiness.py, strict current-source/engine/OCI/refs and schema2 remain unchanged. Old stable readiness now stale; no fabricated updated acceptance. |
-| BEH003 / AC003/004/006 | Fresh metadata → sign-macos.sh stage/strict commands → cleanup → sanitized receipt → workflow receipt-only artifact. Only Accepted/exit0/cleanup success → Mac archive; final payload/publication gates and same-byte resume unchanged. |
-| BEH004 / AC005/007 | Installer pre-write integrity, strict runtime admission, stderr deferral and exact version stdout unchanged. No new host command or smoke invocation. |
-| BEH005 / AC005/008 | All Go host source/state/pending/consent/busy-detach/privacy/permission owners unchanged; no live state, keychain, mount or data action. |
-| BEH006 / AC007/008 | TESTING and packaging/RELEASE describe bounded diagnostic receipts and their limits. Approved field/user deferral, genuine release gates and plan custody retained. |
+| BEH001 / AC001 | Candidate engine/OCI/native4 pipeline unchanged; signing production hash changes, requiring NEW complete current-source candidate. |
+| BEH002 / AC002 | Singular readiness/current-source admission unchanged. Existing readiness/candidate now stale for IR006; never relabelled. |
+| BEH003 / AC003/004/006 | Workflow → existing signer → private codesign capture → fixed diagnostic on failure → cleanup → existing receipt-only upload. Nonzero still prevents notary/package; success still needs strict verify and Accepted. |
+| BEH004 / AC005/007 | Installer integrity, manifest admission and exact version/deferral output unchanged. |
+| BEH005 / AC005/008 | Go host source/state/permissions/consent/busy-detach/engine/app boundaries untouched; no live setup. |
+| BEH006 / AC007/008 | Current testing/package guides state diagnosis limits; signed-release-first and deferred field/user plan retained. |
 
-## Key Changes / Source Identity
+## Source / Retained Data
 
-- packaging/sign-macos.sh: fixed labels, saved diagnostic stderr, exclusive failure
-  sidecar, strict private command execution, pending search-list capture and cleanup.
-- .github/workflows/release-nfs.yml: exact second sanitized receipt glob only.
-- scripts/tests/test_nfs_release_signing.py: accepted control, injected command/
-  validation/notary/signal/cleanup failures, no-clobber and secret-output controls.
-- scripts/tests/test_nfs_release_workflow.py: receipt allowlist fixture; existing
-  native-prefix/Bash3.2/permission/cancellation/four-target controls retained.
-- TESTING.md and packaging/RELEASE.md: these diagnostics/limits; no authorization change.
-
-Actual current source hash with preserved measured engine:
-`bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62`; prior main hash
-`a425e3f887f3156d920d022801df9069ba5bc2d49bdb0e4dd8097ee76a01fe9e`. Engine recipe remains
-`299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274`; no recipe/pin/package/engine rebuild.
-Readiness reference still names the prior source. It is preserved history, not
-current proof. API003 candidate at `/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate`
-and historical API002 candidate remain untouched, not edited/relabelled.
-
-## Local Checks / Limits
-
-Detailed commands/results in implementation-evidence/ir-005/checks-and-limits.md,
-checks-result.json, diagnosis.md and attempts.md.
-
-- Corrected baseline import-failure control detects missing diagnostic receipt on
-  original code. Current focused17 tests pass. Independent127-file copy/private
-  HOME/TMP full52 Python tests: **51 executed,1 expected Go-child skip**.
-- Local Darwin arm64, Python3.9.6, Bash3.2.57. Bash syntax/ShellCheck0.11.0/
-  actionlint1.7.11 pass. Four mutations detected (hidden stderr, conditional-errexit
-  loss, bad search-list restore, invalid notary acceptance). No weakened controls.
-- Actual source/recipe hashes recomputed. --check-publish without candidate refuses
-  "Identified candidate is required"; not claimed as an actual stale-candidate run.
-  Staleness is established separately by recorded/current source hash inequality.
-- Failed harness/first implementation attempts retained and explained, including
-  initial hidden safe stderr and ShellCheck label warning. Raw failed-diagnostic
-  whitespace exceptions (15 locations across7 raw/headered logs) are enumerated in
-  final-checks.json; no source/docs whitespace waiver.
-- No new Go/Linux/four-native/native Apple/publication campaign. Their earlier results
-  carry only as exact-input scope. Signing doubles are not certificate import,
-  password validation, Apple acceptance, hosted artifact upload or public signatures.
-- Own scratch removed; no live resources retained. No binary/generated metadata or
-  credentials committed; all earlier ticket/Delivery/readiness artifacts preserved.
+Current source hash **dd6cde88374cce42ec8b44c24e41abff3af6f01803890824dd783848e0d101a5**; previous measured source
+`d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd`. Engine recipe
+`299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274` unchanged. Measured engine lock,
+readiness records, complete OCI, workflow and all Go inputs unchanged. Current
+API004 candidate `/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate` remains
+untouched; older API002/003 and `/Users/normy/nfs-local-notary-xq_ym2f6` also retained.
+Delivery owns genuine new readiness acceptance after applicable current evidence.
+No fixture writes or fabricated receipts entered the stable lock.
 
 ## Checks Run
 
-Current checks were run on the exact source tree subsequently committed as
-`75f4dbe5527a7159f536bafcf9448bc2d6a01604`; Git HEAD during execution was b2c6fdf.
-The source copy matched all127 non-ticket tracked files. Source was not changed
-after these checks. The two unused imports removed afterward were in the evidence
-runner only, not tested product/tests/commands (attempts.md). These local results
-can be reused by later roles while the exercised inputs remain unchanged; do not
-repeat them merely to claim independent execution. NEW hosted candidate and real
-Apple execution cannot be substituted by these fixtures.
+All local checks: Darwin arm64/Python3.9.6/Bash3.2, independent source copy/private
+HOME/TMP. **Command doubles only, no real keychain/Apple operation.** Full final
+execution uses committed2c12ec61f6339d0d264280b7117787ec821425af; IMP-06-01 preliminary copy
+used its identical product/test bytes before the commit (base HEADb279d55).
+Primary files are in `evidence/`; exact argv/exits/times in IMP-06-results.json.
+Unchanged downstream roles can reuse these outcomes rather than repeat them for
+independence; actual hosted signing is not substitutable by fixtures.
 
-| Check ID | Command Or Steps | Commit Tested | Environment | Code It Exercises | Behavior / Criteria IDs | Result | Evidence Files | Look For |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| IMP-05-01 | `/usr/bin/python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | release scripts/fixtures; independent127-file copy | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-01-python-full.log | `Ran 52 tests in 106.834s`; `OK (skipped=1)` |
-| IMP-05-02 | `python3 -m unittest scripts.tests.test_nfs_release_signing scripts.tests.test_nfs_release_workflow -v` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | actual signing shell and workflow with command doubles | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-02-signing-workflow.log | `Ran 17 tests in 69.569s`; `OK` |
-| IMP-05-03 | `/bin/bash -n packaging/sign-macos.sh` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | signing shell grammar | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-03-bash-syntax.log | Empty output; exit0 in checks-result.json |
-| IMP-05-04 | `/opt/homebrew/bin/shellcheck packaging/sign-macos.sh` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | signing shell lint | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-04-shellcheck.log | `version: 0.11.0`; check exit0 |
-| IMP-05-05 | `/opt/homebrew/bin/actionlint .github/workflows/release-nfs.yml` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | workflow syntax/integration | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-05-actionlint.log | `1.7.11`; check exit0 |
-| IMP-05-06 | `python3 packaging/release.py --source-hash (current and original two production files); source.recipe_hash()` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | production/workflow inputs and measured-engine identity | BEH001/002 / AC001/002/006 | Pass | evidence/IMP-05-06-identity.log | before a425e3…; after bf6b17…; recipe299db7… unchanged |
-| IMP-05-07 | `python3 packaging/release.py --check-publish (no candidate)` | 75f4dbe identical tree | Darwin arm64 / Python3.9.6 / Bash3.2 | release facade required-input admission | BEH002 / AC002 | Pass | evidence/IMP-05-07-missing-input-refusal.log | `Release refused: Identified candidate is required`; expected exit1 |
-| IMP-05-08 | `Owned-copy unittest SigningTest.test_import_failure_receipt_and_secret_safety (2 variants), test_command_failures_report_exact_stage_and_exit, test_rejected_or_pending_notary_retains_known_receipt_but_fails; each with -v` | 75f4dbe disposable mutated copies only | Darwin arm64 / Python3.9.6 / Bash3.2 | signing/workflow | BEH003 / AC003/004/006/008 | Pass | evidence/IMP-05-08-mutations.log | 4 intentionally failing mutants detected, expected exit1 each |
-| IMP-05-09 | `python3 -m unittest scripts.tests.test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety -v` | b2c6fdf production + new corrected regression fixture | Darwin arm64 / Python3.9.6 / Bash3.2 | signing/workflow | BEH003 / AC003/004/006/008 | Fail (expected regression control) | evidence/IMP-05-09-baseline-control.log | `FAILED (failures=1)`; missing diagnostic receipt on original script |
-| IMP-05-10 | `Read retained local iteration outcomes and corrections` | b2c6fdf + initial uncommitted/mixed edits, not current proof | Darwin arm64 / Python3.9.6 / Bash3.2 | signing/workflow | BEH003 / AC003/004/006/008 | Fail (resolved iterations) | evidence/IMP-05-10-attempts.md | Initial fake unset input; hidden trap stderr fixed; final current checks separate |
-| IMP-05-11 | git diff/source identity/history/check outcomes/cleanup audit | 75f4dbe | Darwin arm64 worktree | six-path delta, preserved prior records and stale readiness | AC006/008 | Pass | evidence/IMP-05-11-final-audit.log | `priorHistoryPrefixPreserved: true`, new vs prior source hashes, own scratch absent |
+| Check ID | Commit / Environment | Command / exercised code | Result and evidence / look for |
+| --- | --- | --- | --- |
+| IMP-06-01 | identical2c12ec6 tree before commit, HEADb279 / independent Darwin arm64 | `python3 -m unittest scripts.tests.test_nfs_release_signing scripts.tests.test_nfs_release_workflow -v`; signer and workflow doubles, identical precommit tree | Pass21; IMP-06-01-focused.log: `Ran 21 tests in 85.765s`, `OK`. |
+| IMP-06-02 | 2c12ec6 / local Darwin arm64 | `python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v`; all packaging/release fixtures, current commit | Pass56 collected/55 executed/1 expected Go-child skip; IMP-06-02-python.log: `OK (skipped=1)`. |
+| IMP-06-03/04/05 | 2c12ec6 / local Darwin arm64 | `/bin/bash -n packaging/sign-macos.sh`; `/opt/homebrew/bin/shellcheck packaging/sign-macos.sh`; `/opt/homebrew/bin/actionlint .github/workflows/release-nfs.yml`; grammar/lint/workflow integration | Pass; corresponding syntax/shellcheck/actionlint logs: `Observed exit: 0; expected exit: 0`. |
+| IMP-06-06/07/11 | 2c12ec6; original signerb279 for11 / independent Darwin arm64 | `python3 packaging/release.py --source-hash` current and original signer; `source.recipe_hash()` with packaging/engine import; source/engine identity | Pass; source-hash/recipe-hash/original-hash logs show identities above. |
+| IMP-06-08 | 2c12ec6 / local Darwin arm64 | `python3 packaging/release.py --check-publish` without candidate; facade required-input guard | Expected refusal exit1; no-candidate-refusal.log: `Identified candidate is required`. Not claimed as a stale-candidate execution. |
+| IMP-06-09 | 2c12ec6 disposable mutants / independent Darwin arm64 | Four owned-copy mutations: force unknown category, raw parser stdout, hide command exit, ignore bound; targeted actual SigningTest methods/argv in results | All detected, expected exit1; mutant logs. Tests verify safety and diagnostic behavior, not Apple cause. |
+| IMP-06-10 | b279 signer + new tests / independent Darwin arm64 | Current stage-failure test against original b279 signer in owned copy | Expected failure; original-control.log: absent diagnostic field. Original command exit remains5, no intentional original-code weakening. |
+| IMP-06-12/13 | 2c12ec6 / local Darwin arm64 | Byte comparison of independent copy and worktree; remove owned source/HOME/TMP | Pass; copy.json `allCopiedInputsStillMatch: true`; cleanup.json `absent: true`. |
+| IMP-06-14/15 | b279/DR009 intake / local read-only | Read DR009 evidence, primary Apple/GitHub guidance and installed man/security error descriptions; no keychain access | Investigation .md and installed-contracts.log separate supported observations from unknown hosted cause. |
+| IMP-06-16 | b279+initial edits then2c12ec6 tree / local attempts | Read retained failed/corrected local attempts, not a current product check | attempts.md: initial fixture variable shadowing caused46 assertion failures; corrected21 pass. Raw failures preserved. |
+| IMP-06-17 | 2c12ec6 / local Darwin arm64 | `python3 evidence/IMP-06-17-audit.py`; changed paths/imports/size/history/main | Pass; audit.json: only4 paths, no unused imports, prior history prefix/main ancestor preserved. |
+| IMP-06-18 | NFS2c12ec6; superrepo5096011; Apple-Actions63fff01 / read-only source | `git show` historical desktop workflow/adapter; exact upstream action inspection | superrepo-comparison.md: explicit list membership is a lead; no proof of actual DR009 cause or copied weakening. |
 
-Not run: Go/race/vet/Linux/four-target compilation (unchanged runtime; existing
-exact-input evidence retained); real signing/notary, hosted artifact upload/new
-candidate/publication (API/Delivery continuation); field/user testing (approved
-Deferred, not a closure gate); frontend preview (no rendered surface). No current
-API/E2E result is inferred. IMP-05-10 is only iteration context; IMP-05-01 through
-08 are the final current scoped local results. Primary evidence headers/Check IDs
-were added in evidence/ after the skill update; original raw evidence in ir-005 is
-preserved. No cumulative upstream artifact index was created. Evidence and this handoff are
-committed on the ticket branch; the handoff message supplies the durable artifact commit.
+No Go/Linux/four-target/native Apple/hosted/new candidate/release rerun in this
+implementation round. Those earlier results carry only their exact unchanged
+scope. No field/user campaign (approved Deferred) or frontend checks (N/A).
+Attempt1 was a fixture expected-record variable-shadowing bug; corrected without
+product edits. Source tests never access real credentials; all own scratch removed.
+Four raw unittest diagnostic lines retain trailing whitespace: line7 of each
+classify-all-unknown/leak-private-output/hide-signing-exit mutant log and the original
+control log. Explicit exceptions are listed in IMP-06-17-audit.json; all other
+source/docs/evidence pass hygiene. No cumulative upstream hash index added.
 
-## Supplemental Delivery Evidence — DR-006 (no new implementation round)
+## Existing-Project Reference Supplement
 
-Received Delivery commit8f055495a33068fd967254a6fbbe2da3513972b1. Its independent
-snapshot9fa4e69 has identical non-ticket inputs to source75f4dbe. **Delivery**, not
-implementation, ran the user-requested local macOS26.5.2 arm64/Go1.27.2 development
-build, existing-login-keychain Developer ID signing, strict signature verification
-and signed version. Sign/verify/version passed; public details show expected team,
-hardened runtime and secure timestamp. Keychain search list unchanged; owned
-source/toolchain/binary/cache/HOME/TMP removed. See delivery-evidence/dr-006/
-summary.md, local-result.json, checks.json, details.log, verify.log and cleanup.json.
+User-requested superrepo comparison was personally read-only checked at5096011,
+with exact Apple-Actions source63fff01. See IMP-06-18-superrepo-comparison.md.
+Explicit temporary-keychain search-list membership is a concrete difference to
+investigate if the real diagnostic warrants it, not established DR009 cause.
+No broad -A, search-list replacement, disabled timestamp, raw stderr/argv or
+Electron-specific behavior was copied. Existing IR006 scope/source remains2c12ec6;
+this supplement does not restart review or create another round.
 
-This establishes only the local existing-identity path. It does NOT exercise
-GitHub's exported P12/password, temporary import/keychain path, Intel signing,
-notarization or final release payload/download. Original hosted stage/cause remains
-unknown and DR005 remains Blocked. No secret reprovisioning inference or current
-candidate/readiness/API acceptance follows. IR005 source review is already in
-progress: this supplements it without restarting review, tests or dispatch. No new
-implementation checks/source changes were made on receipt; earlier Checks Run rows
-remain unchanged and reusable for their exact scope.
+## Next / Classification
 
-## Supplemental Delivery Evidence — DR-007 (existing review continuation)
+1. Targeted source review of IR006 privacy, original failure semantics, parser bounds,
+   meaningful controls and unchanged signing gates. **Not a claimed DR009 root fix.**
+2. Affected API continuation and NEW complete real current-source candidate/evidence.
+   API004/old readiness cannot be promoted for these signing-script bytes.
+3. Delivery owns staging, current-main/new readiness and authorized hosted signing.
+   Use its next exact diagnostic/category to identify and minimally repair the
+   actual boundary if still failing. No secret reprovision or keychain/trust change
+   based solely on a category; no raw private stderr or xtrace.
+4. Both Mac actual Developer ID and Accepted notary, retained final payload before
+   public effects, immutable non-clobber retry/public OCI/download/signature/install
+   checks remain mandatory. Source finalizations already completed remain preserved.
+5. Field/shared-filesystem/physical/user tests remain Deferred, not a publication
+   hold; plan custody after actual release remains Delivery→terminalSD→requestingPM.
 
-Received Delivery commit14a5661c2e7bc87f5e06abef3aa2f255c86e81f7 on2026-10-19.
-The user requests continuation of the official signed release after updating the
-GitHub app-specific-password secret. No new implementation round or approval is
-needed. Non-ticket inputs at this receipt remain identical to source75f4dbe;
-IR005 local checks and the existing targeted source review retain their scope.
-
-Delivery/user evidence establishes actual Apple **Accepted**, exit0, for the local
-arm64 **development diagnostic**, submission16cd8853-b4f7-41a3-b676-e99029765633
-at2026-10-19T04:57:21Z. Delivery verified binary/ZIP hashes and9 preparation-log
-hashes; implementation read the saved receipts, not credentials or the local
-keychain. See delivery-evidence/dr-007/summary.md, verification.json and
-apple-accepted-response.json. This adds local notarization evidence to DR006;
-it is not an implementation-run test or a final v0.1.0 artifact. Failed attempt1
-HTTP401 remains historical. Retained diagnostic directory
-`/Users/normy/nfs-local-notary-xq_ym2f6` is untouched.
-
-User-reported GitHub password replacement is supported only by secret metadata
-updated2026-10-19T04:58:54Z in
-delivery-evidence/dr-007/github-secret-update-metadata.json. No secret value was
-read; timestamp does not establish equality with the locally accepted password or
-hosted authentication. The other five secret timestamps are unchanged. No P12 or
-other credential reprovisioning is inferred or requested.
-
-Original DR005 hosted failure remains unexplained and failed. Local acceptance
-does not prove hosted P12/password import, ephemeral keychain, Intel signing,
-final metadata, final payload, public downloads or OCI. Full Delivery remains
-Blocked pending the **existing IR005 targeted review → affected API/new complete
-current-source candidate → Delivery readiness/current-main/actual both-Mac signed
-and Accepted publication** sequence. CRR005/API003 remain prior-source results;
-no stale candidate/readiness promotion. Field/user tests stay Deferred, not a new
-release prerequisite. No new source edits, test execution, remote effects or
-TaskDone/Terminal claim on this receipt.
-
-## Downstream Work / Remaining Blocker
-
-1. Targeted source review of IR005 against retained R3/ARCH002 signing and confidentiality
-   invariants; current code/handoff authoritative. No new approval/questionnaire.
-2. Normal affected API continuation and **NEW complete real current-source candidate**
-   plus current evidence. API003 is not relabelled as acceptance for these new bytes.
-3. Delivery owns remote staging/current-main integration, genuine new readiness and
-   actual authorized fresh publication/signing continuation. Use new stage/exit
-   receipts to identify the actual failing boundary. If it is a code defect, return
-   that concrete evidence; if an external credential/service failure, establish it
-   before requesting changes. No guess at six provisioned credentials.
-4. Both Mac DeveloperID/Acceptednotary, final complete immutable payload, actual
-   normalv0.1.0/public bytes+OCI/signatures/install/version receipts remain mandatory.
-   DR005 is still Blocked, no product release proof supplied by these local checks.
-5. Field/physical/shared-filesystem/user tests stay **Deferred**, not publication/
-   closure prerequisites. After successful release, approved plan custody remains
-   Delivery→terminalSD→requestingPM; no new Task/duplicate dispatch here.
-
-No remote writes, target merge/push, secret changes, live storage, release/tag/deploy,
-TaskDone/user verification or Terminal claimed. Previously completed source
-finalization is preserved; actual signed public release is still required.
+No remote write/dispatch, target merge/push, secret changes, live storage, release,
+tag, deployment, TaskDone, user verification or Terminal claimed by implementation.

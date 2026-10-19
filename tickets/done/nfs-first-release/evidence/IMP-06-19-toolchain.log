@@ -1,0 +1,13 @@
+Check: IMP-06-19
+Command: python3 --version; bash --version; shellcheck --version; actionlint -version
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64 local tools
+Date: 2026-10-19
+
+Python 3.9.6
+GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)
+ShellCheck - shell script analysis tool
+version: 0.11.0
+license: GNU General Public License, version 3
+website: https://www.shellcheck.net
+1.7.11

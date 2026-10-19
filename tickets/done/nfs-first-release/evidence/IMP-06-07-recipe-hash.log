@@ -1,0 +1,9 @@
+Check: IMP-06-07-recipe-hash
+Command: ['/usr/bin/python3', '-c', 'import sys;sys.path.insert(0,"packaging/engine");import source;print(source.recipe_hash())']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274
+
+Observed exit: 0; expected exit: 0

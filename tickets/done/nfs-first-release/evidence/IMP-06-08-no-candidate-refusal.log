@@ -1,0 +1,9 @@
+Check: IMP-06-08-no-candidate-refusal
+Command: ['/usr/bin/python3', 'packaging/release.py', '--check-publish']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+Release refused: Identified candidate is required
+
+Observed exit: 1; expected exit: 1

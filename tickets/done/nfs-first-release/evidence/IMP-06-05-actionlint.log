@@ -1,0 +1,8 @@
+Check: IMP-06-05-actionlint
+Command: ['/opt/homebrew/bin/actionlint', '.github/workflows/release-nfs.yml']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+
+Observed exit: 0; expected exit: 0

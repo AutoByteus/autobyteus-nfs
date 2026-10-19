@@ -1,0 +1,41 @@
+{
+  "check": "IMP-06-17",
+  "command": "python3 evidence/IMP-06-17-audit.py",
+  "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "environment": "Darwin arm64 worktree, source-only inspection",
+  "date": "2026-10-19",
+  "changedPaths": [
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "signNonemptyLines": 169,
+  "unusedTouchedTestImports": [],
+  "priorHistoryPrefixPreserved": true,
+  "finalizedMainAncestor": true,
+  "workflowEngineRuntimeLockReadinessUnchanged": true,
+  "noCredentialOrRemoteAction": true,
+  "rawDiagnosticWhitespaceExceptions": [
+    {
+      "file": "IMP-06-09-mutant-classify-all-unknown.log",
+      "line": 7,
+      "reason": "preserve raw unittest diagnostic"
+    },
+    {
+      "file": "IMP-06-09-mutant-leak-private-output.log",
+      "line": 7,
+      "reason": "preserve raw unittest diagnostic"
+    },
+    {
+      "file": "IMP-06-09-mutant-hide-signing-exit.log",
+      "line": 7,
+      "reason": "preserve raw unittest diagnostic"
+    },
+    {
+      "file": "IMP-06-10-original-control.log",
+      "line": 7,
+      "reason": "preserve raw unittest diagnostic"
+    }
+  ]
+}

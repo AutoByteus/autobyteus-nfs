@@ -1,0 +1,9 @@
+Check: IMP-06-06-source-hash
+Command: ['/usr/bin/python3', 'packaging/release.py', '--source-hash']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+dd6cde88374cce42ec8b44c24e41abff3af6f01803890824dd783848e0d101a5
+
+Observed exit: 0; expected exit: 0

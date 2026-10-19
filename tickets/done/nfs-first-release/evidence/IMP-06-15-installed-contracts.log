@@ -1,0 +1,26 @@
+Check: IMP-06-15
+Command: security error -2070 -25308 -25293 -25300 -67818 -67820 (then -67885); man codesign (--keychain excerpt)
+Commit: b279d556e2c0f5e90ca24b61c7e67bc809644947
+Environment: Darwin arm64; read-only installed help/errors, no keychain access
+Date: 2026-10-19
+
+Error: 0xFFFFF7EA -2070 errSecInternalComponent
+Error: 0xFFFF9D24 -25308 User interaction is not allowed.
+Error: 0xFFFF9D33 -25293 The user name or passphrase you entered is not correct.
+Error: 0xFFFF9D2C -25300 The specified item could not be found in the keychain.
+Error: 0xFFFEF716 -67818 An expired certificate was detected.
+Error: 0xFFFEF714 -67820 The certificate was revoked.
+     --keychain filename
+	     During signing, only search for the signing identity in the
+	     keychain file specified. This can be used to break any matching
+	     ties if you have multiple similarly-named identities in several
+	     keychains on the user's search list.  Note that the standard
+	     keychain search path is still consulted while constructing the
+	     certificate chain being embedded in the signature.
+	     Note that filename will not be searched to resolve the signing
+	     identity's certificate chain unless it is also on the user's
+	     keychain search list.
+
+     --prefix string
+Error: 0xFFFEF6D3 -67885 The timestamp service is not available.
+Error: 0xFFFEF6D3 -67885 The timestamp service is not available.

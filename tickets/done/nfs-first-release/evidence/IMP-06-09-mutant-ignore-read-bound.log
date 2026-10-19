@@ -1,0 +1,24 @@
+Check: IMP-06-09-mutant-ignore-read-bound
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit', '-v']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_codesign_capture_bound_and_decode_failure_preserve_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+
+======================================================================
+FAIL: test_codesign_capture_bound_and_decode_failure_preserve_exit (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 148, in test_codesign_capture_bound_and_decode_failure_preserve_exit
+    self.run_case('sign', 5, diagnostic='output-too-large', FAIL='codesign:--force',
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 82, in run_case
+    self.assertIn('diagnostic='+diagnostic, result.stderr)
+AssertionError: 'diagnostic=output-too-large' not found in 'Signing failed: stage=sign exit=5 cleanup=complete diagnostic=unclassified\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.748s
+
+FAILED (failures=1)
+
+Observed exit: 1; expected exit: 1
