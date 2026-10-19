@@ -1,0 +1,4 @@
+# Case R02; command ['/usr/bin/python3', 'packaging/release.py', '--check-publish', '--candidate', '/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate']; cwd /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release; commit6bc8979a7bb5e821a32c879446155bbc76755288; local Macarm64/Python3.9.6; 2026-10-19T06:14:57.467476+00:00
+Release refused: Candidate source/engine differs
+
+Exit: 1

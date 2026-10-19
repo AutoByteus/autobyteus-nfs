@@ -1,0 +1,16 @@
+{
+  "case": "R05",
+  "step": "version",
+  "utc": "2026-10-19T06:27:23.678121+00:00",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "environment": "local Macarm64/Actions API where invoked",
+  "command": [
+    "/Users/normy/nfs-first-api005-smoke-moieh6yt/autobyteus-nfs",
+    "version"
+  ],
+  "exit": 0,
+  "expected": 0,
+  "stdout": "v0.1.0\n",
+  "stderr": "",
+  "pass": true
+}

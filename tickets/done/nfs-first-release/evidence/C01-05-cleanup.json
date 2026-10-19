@@ -1,0 +1,49 @@
+{
+  "case": "C01",
+  "step": "Final candidate/ownership/cleanup audit, not product suite repeat",
+  "date": "2026-10-19T06:27:24.603219+00:00",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "productCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "environment": "N worktree and completed hosted receipts",
+  "sourceCount": 127,
+  "nonTicketDelta": [],
+  "DeliveryProtectedFiles": 10,
+  "DeliveryUnchanged": true,
+  "priorAPIHistoryPrefixPreserved": true,
+  "oldCandidates": [
+    {
+      "revision": "002",
+      "candidate": "/Users/normy/nfs-first-candidate-api002-n940gd8s/candidate",
+      "recordAndMembersPreserved": true
+    },
+    {
+      "revision": "003",
+      "candidate": "/Users/normy/nfs-first-candidate-api003-p_t67xqw/candidate",
+      "recordAndMembersPreserved": true
+    },
+    {
+      "revision": "004",
+      "candidate": "/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate",
+      "recordAndMembersPreserved": true
+    }
+  ],
+  "localNotaryDiagnostic": "Untouched, not accessed as current candidate or credential source",
+  "ownedRetainedCandidate": {
+    "case": "R04",
+    "step": "Owned candidate retained for Delivery",
+    "utc": "2026-10-19T06:26:29.562414+00:00",
+    "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "root": "/Users/normy/nfs-first-candidate-api005-61mqnd8a",
+    "candidate": "/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate",
+    "run": 39208967217,
+    "attempt": 1,
+    "artifact": 12166434040,
+    "environment": "private local APFS parent0700",
+    "owner": "API005; preserve through release"
+  },
+  "candidateReverified": true,
+  "ownedNativeScratchAbsent": true,
+  "ownedPersistentRuntimeResources": [],
+  "hosted": "All jobs completed; provider post-job logs retained, provider disposal not independently audited",
+  "pass": true
+}

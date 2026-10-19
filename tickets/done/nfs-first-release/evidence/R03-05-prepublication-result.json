@@ -1,0 +1,76 @@
+{
+  "case": "R03/R01/R02/R04/R05/C01",
+  "step": "Summarize personally completed current prepublication cases plus attributed reused controls; NOT release readiness",
+  "date": "2026-10-19T06:28:00.234466+00:00",
+  "environment": "actual hosted native4/engine2/OCI; local Actions facade/native smoke; reused IMP external command doubles",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "workflowCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "productCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "runId": 39208967217,
+  "runAttempt": 1,
+  "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3",
+  "engineManifestSha256": "bcb213bbb72e1698622afce9d7e6cc456dbe06268798b9336085227b5967bcc3",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:a264f1816a3ce17a51df74a01b367ae8fbd3d3584c270f191911e22f59012d57",
+      "linux-arm64": "sha256:5ee77c0437dc763fc69f7f45953c94a9c81a65dc4cf927c347a1ac7d83aa3d46"
+    },
+    "index": "sha256:dc8fe178c5e2f2efb33cafc164a4aefe5afa097a488e94f6998ce6d6a5cb796e"
+  },
+  "candidate": {
+    "envelope": {
+      "artifactId": 12166434040,
+      "digest": "sha256:212bf6bf33719abd0ba6f69f138f69f11f7a6a3b1aa49097a5e8d32ec8bc2e01",
+      "expiresAt": "2027-01-17T06:16:31Z",
+      "runAttempt": 1,
+      "runId": 39208967217,
+      "workflowCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee"
+    },
+    "recordSha256": "59bab38d340db74491fb080f5b203efe6dc18f3674aee1ffd79de99133989f76"
+  },
+  "candidateDirectory": "/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate",
+  "native": {
+    "status": "passed",
+    "targets": [
+      "binaries (ubuntu-24.04, linux, amd64)",
+      "binaries (macos-15-intel, darwin, amd64)",
+      "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "binaries (macos-15, darwin, arm64)"
+    ],
+    "evidence": "R03-05-summary.json and original R03-05-job-*.log with excerpts",
+    "scope": "race7packages/vet/Python56(55executed1expectedGochildskip)/build/version/archive on each; not physical/signing"
+  },
+  "releaseControls": {
+    "status": "passed",
+    "reused": [
+      "IMP-06-01",
+      "IMP-06-02",
+      "IMP-06-09",
+      "IMP-06-10",
+      "IMP-06-03",
+      "IMP-06-04",
+      "IMP-06-05",
+      "IMP-06-06",
+      "IMP-06-07",
+      "IMP-06-08",
+      "IMP-06-11"
+    ],
+    "ownCases": [
+      "R02 actual stale candidate refusal",
+      "R04 actual envelope/fetch/verify and mismatched-wrapper refusal",
+      "R05 actual downloaded version/candidate admission refusal",
+      "C01 owned cleanup and preservation"
+    ],
+    "limits": "Mocked Apple/publication controls are not a real codesign fix or Accepted result"
+  },
+  "result": "Pass",
+  "confidencePercent": 95.0,
+  "scope": "Affected prepublication validation only",
+  "notReadinessOrReleaseAuthorization": true,
+  "signingFailure": "DR00939204643596/1 remains failure/root cause UNKNOWN; IR006 diagnostics only",
+  "downstream": "Delivery new genuine readiness/freshmain/actual bothMac signing+Accepted/finalpayload/immutablepublication/public bytes+OCI/signatures/install/custody",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  }
+}

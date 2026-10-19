@@ -1,0 +1,5 @@
+# Case R03; command ['gh', 'api', 'repos/AutoByteus/autobyteus-nfs/actions/jobs/117917872839/logs']; source1c00b7afd6327fb4ba69dbc176c69d698a309fee; environment prepare; 2026-10-19T06:26:15.648341+00:00
+# Original captured bytes follow unchanged.
+2026-10-19T06:16:38.0568126Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+2026-10-19T06:17:01.5877292Z Ran 56 tests in 24.187s
+2026-10-19T06:17:01.5877768Z OK (skipped=1)

@@ -51,3 +51,30 @@ Introduced during API003 after the skill update. Earlier starts/events remain in
 | 2026-10-19T05:19:30.311820+00:00 | R05 | Completed | Pass | Exact v0.1.0 stdout; candidate admission refused, no HOME writes; scratch removed. R05-04-smoke.json. |
 | 2026-10-19T05:19:39.410383+00:00 | C01 | Started | Not Tested | Reverify new retained candidate, preserve old candidate members and Delivery-owned files; no local-notary diagnostic access. |
 | 2026-10-19T05:19:40.610153+00:00 | C01 | Completed | Pass | Current candidate reverified;127 source unchanged, Delivery10 files excluded, old candidates preserved, native scratch removed; C01-04-cleanup.json. |
+
+## API-REV-005 — IR006/CRR009 diagnostic source continuation
+
+| Time | Case | Event | Result | Note |
+|---|---|---|---|---|
+| 2026-10-19T06:14:21.984099+00:00 | R01 | Started | Not Tested | Read IMP Checks Run and DR009 failed receipts first; compare exact current product before reuse. |
+| 2026-10-19T06:14:57.206451+00:00 | R01 | Completed | Pass | IMP06 exact127input applicability confirmed; R01-05-reuse.json. Reused, not rerun. |
+| 2026-10-19T06:14:57.206650+00:00 | R02 | Started | Not Tested | Reused03–08/11; actual old API004 candidate admission additionally exercised. |
+| 2026-10-19T06:15:10.642226+00:00 | R02 | Completed | Pass | Actual old API004 refused Candidate source/engine differs; reused static/current controls. |
+| 2026-10-19T06:16:25.663122+00:00 | R03 | Started | Not Tested | DR010 staged exact1c00; new publish=false candidate, not signing/root-fix proof. |
+| 2026-10-19T06:16:34.962770+00:00 | R03 | Checkpoint | Not Tested | Dispatched exact source1c00b7afd6327fb4ba69dbc176c69d698a309fee, run39208967217/attempt1; acceptance is not Pass. |
+| 2026-10-19T06:17:43.761273+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:19:17.828907+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:19:49.079457+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:21:55.081558+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 queued/None; R03-05-observations.jsonl |
+| 2026-10-19T06:22:26.541794+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:23:30.312041+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:24:02.835247+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:25:37.373144+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 in_progress/None; R03-05-observations.jsonl |
+| 2026-10-19T06:26:08.831197+00:00 | R03 | Checkpoint | Not Tested | Run39208967217/1 completed/success; R03-05-observations.jsonl |
+| 2026-10-19T06:26:26.241545+00:00 | R03 | Completed | Pass | Run39208967217/attempt1 all4native/engine2/fullOCI/aggregation success; R03-05-summary.json. Signing not entered. |
+| 2026-10-19T06:26:29.145595+00:00 | R04 | Started | Not Tested | Fetch and verify unique actual current candidate via existing facade, not old-source metadata. |
+| 2026-10-19T06:27:18.670906+00:00 | R04 | Completed | Pass | Actual complete candidate/reference verified; corrupt copied envelope refused before destination; retained for Delivery; R04-05-verification.json. |
+| 2026-10-19T06:27:23.091108+00:00 | R05 | Started | Not Tested | New downloaded native Darwinarm64 version/candidate admission; owned HOME, no setup. |
+| 2026-10-19T06:27:23.714102+00:00 | R05 | Completed | Pass | Exact v0.1.0 stdout; candidate admission refused, no HOME writes; scratch removed. R05-05-smoke.json. |
+| 2026-10-19T06:27:23.758606+00:00 | C01 | Started | Not Tested | Final candidate verification/owned cleanup/source and Delivery preservation, no product suite repeat. |
+| 2026-10-19T06:27:24.603467+00:00 | C01 | Completed | Pass | Candidate reverified;127 source inputs and Delivery10 files preserved; oldAPI002/003/004 untouched; owned native scratch absent. |
