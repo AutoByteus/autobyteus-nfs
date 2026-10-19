@@ -145,7 +145,20 @@ receipts. Existing receipts are never overwritten. A failed keychain-list captur
 is not used to restore the search list; cleanup failures cannot turn success into
 a passing signing job or hide the primary failure. A failure stage localizes the
 boundary, not its cause: credential validity or Apple rejection requires actual
-specific evidence, not speculation/re-provisioning. Failed signing never reaches
+specific evidence, not speculation/re-provisioning. For codesign failures only,
+`diagnostic` adds a fixed observation category to the same failure receipt/stderr.
+The parser reads at most64KiB plus one overflow byte of private transient output;
+only exact known messages tied to the requested binary/identity are recognized.
+Unknown/ambiguous output is `unclassified`, oversized output `output-too-large`,
+and unavailable/undecodable output `unavailable`; other stages are `not-collected`.
+Known categories are chain-build-warning, internal-component,
+interaction-not-allowed, authentication-failed, keychain-item-not-found,
+certificate-expired, certificate-revoked and timestamp-unavailable. None alone
+proves a credential, chain or ACL cause. Parsing cannot replace codesign's original
+nonzero exit, and successful codesign output does not create a failure. This does
+not change signing/keychain/trust settings or create a retry/fallback. Private
+capture is mode0600 inside the existing owned scratch, never an artifact, removed
+on cleanup with all other private inputs. Failed signing never reaches
 archive publication. No secret log/base64 upload,
 unsigned fallback, or fictitious stapling: standalone CLI tickets cannot be stapled.
 Downloaded signature/online Gatekeeper behavior still needs supported Mac evidence.

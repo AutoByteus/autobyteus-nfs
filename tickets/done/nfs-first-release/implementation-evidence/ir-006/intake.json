@@ -1,0 +1,7 @@
+{
+  "head": "b279d556e2c0f5e90ca24b61c7e67bc809644947",
+  "source": "f830c50bf1238270343afce151dd05b65b10237a",
+  "request": "DR009 sign-stage failure; cause unknown. No keychain/signing semantics change justified without hosted tool observation. Diagnostic correction only; actual root-cause resolution pending authorized continuation.",
+  "mainFinalizationPreserved": true,
+  "branch": "codex/nfs-first-release"
+}

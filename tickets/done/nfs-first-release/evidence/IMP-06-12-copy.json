@@ -1,0 +1,10 @@
+{
+  "check": "IMP-06-12",
+  "command": "compare independent copy bytes to worktree; SHA256 ordered path/NUL/bytes",
+  "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "environment": "Darwin arm64",
+  "date": "2026-10-19",
+  "fileCount": 127,
+  "allCopiedInputsStillMatch": true,
+  "aggregateSha256": "3127b6bdc5006d37dff6b7c7c4d59cfb5110aa18fe9272419662f1386f62f5b0"
+}

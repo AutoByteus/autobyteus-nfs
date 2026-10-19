@@ -1,0 +1,26 @@
+{
+  "check": "IMP-06",
+  "command": "IMP-06-run-checks.py",
+  "commit": "b279d556e2c0f5e90ca24b61c7e67bc809644947",
+  "environment": "Darwin arm64 independent copy, private HOME/TMP",
+  "date": "2026-10-19",
+  "checks": [
+    {
+      "check": "IMP-06-01-focused",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing",
+        "scripts.tests.test_nfs_release_workflow",
+        "-v"
+      ],
+      "commit": "b279d556e2c0f5e90ca24b61c7e67bc809644947",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 86.28,
+      "log": "IMP-06-01-focused.log"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "checkId": "CR-09-01",
+  "atUTC": "2026-10-19T06:11:18.025743+00:00",
+  "steps": "Read-only git/current-byte comparison of127 non-ticket paths; exact four-path delta; source size; prior source/test/API/history identity",
+  "intake": "fdcc416d3057bee172d00a76d4ac65ffc2b50bf4",
+  "source": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "base": "b279d556e2c0f5e90ca24b61c7e67bc809644947",
+  "currentNonTicketInputsMatch": 127,
+  "changedPaths": [
+    "TESTING.md",
+    "packaging/RELEASE.md",
+    "packaging/sign-macos.sh",
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "signerNonemptyBefore": 126,
+  "signerNonemptyAfter": 169,
+  "signerNumstat": "47\t4\tpackaging/sign-macos.sh",
+  "priorHistoryBytes": 26890,
+  "priorHistorySHA256": "d260b35f2c90b8b42f5aab00c3071f0d6780d733a56d2db3dd82d6c2fff4349d",
+  "priorSourceReportSHA256": "454d449c1352b98828e067787a4da02fad060806379b2d5d1e119735dfbecee8",
+  "testReportSHA256": "88c87ca1f43a4bf77705b7406666cdfbcbb6011cc430df9f7e3f2b2be2c0680e",
+  "apiReportSHA256": "01402de5fc7c5d5f13e7f80c6ba9aa9914152071b2654f97ea8856f042fbcf30",
+  "deliveryHistorySHA256": "3ac114fbce621cc7cc2ca6f1ef375d61be35b5ac9c2d65712d734c7ffc3f9a09",
+  "checksReused": "IMP-06-01 through13/17, unchanged exact tested inputs and readable results;14\u201316/18 investigation/attempt context",
+  "reviewerProductExecutions": 0,
+  "runtimeResourcesCreated": 0,
+  "signingCause": "Unknown; category mechanism source review only"
+}

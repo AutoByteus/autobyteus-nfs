@@ -1,0 +1,66 @@
+{
+  "case": "C01",
+  "step": "Final own-evidence/ownership audit",
+  "date": "2026-10-19T06:28:55.481367+00:00",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "environment": "NFS ticket only; no product suite repeat",
+  "sourceInputsUnchanged": 127,
+  "DeliveryProtected": 10,
+  "priorHistoryPrefixPreserved": true,
+  "sixCasesCompleted": true,
+  "jsonAndOrchestratorSyntaxValid": true,
+  "secretPatternHits": [],
+  "rawLogWhitespaceExceptions": [
+    {
+      "file": "R03-05-job-117917872839.log",
+      "trailingWhitespaceLines": 10,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117918034054.log",
+      "trailingWhitespaceLines": 80,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117918034151.log",
+      "trailingWhitespaceLines": 78,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117918669360.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117918713220.log",
+      "trailingWhitespaceLines": 61,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117919434210.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117919434251.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117919434290.log",
+      "trailingWhitespaceLines": 11,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117919434389.log",
+      "trailingWhitespaceLines": 4,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    },
+    {
+      "file": "R03-05-job-117920467605.log",
+      "trailingWhitespaceLines": 7,
+      "reason": "Original raw captured log preserved, not authored-source waiver"
+    }
+  ],
+  "pass": true
+}

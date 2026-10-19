@@ -1,0 +1,3 @@
+# Case R04; command ['/usr/bin/python3', '/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/packaging/release.py', '--operation', 'verify-candidate', '--directory', '/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate', '--output', '/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/evidence/R04-05-candidate.json']; cwd /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release; source1c00b7afd6327fb4ba69dbc176c69d698a309fee; local macOS26.5.2 arm64/Python3.9.6; 2026-10-19T06:27:17.740444+00:00
+
+Exit: 0

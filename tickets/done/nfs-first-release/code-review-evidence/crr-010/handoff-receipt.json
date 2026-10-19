@@ -1,0 +1,13 @@
+{
+  "review": "CRR-010",
+  "reviewCommit": "53cd0452e083c28b05b7949be833974b3d14ca08",
+  "recipient": "/software_engineering_team/delivery_engineer",
+  "result": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/delivery_engineer.",
+    "target_agent_run_id": "delivery_engineer_97aea298f55141d4be9a3662f140848f"
+  },
+  "scope": "Successful signing-test gate only; actual hosted signing cause and release unresolved.",
+  "duplicateDispatch": false
+}

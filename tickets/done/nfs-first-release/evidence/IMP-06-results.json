@@ -1,0 +1,205 @@
+{
+  "check": "IMP-06",
+  "command": "IMP-06-run-checks.py",
+  "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "environment": "Darwin arm64 independent copy, private HOME/TMP",
+  "date": "2026-10-19",
+  "checks": [
+    {
+      "check": "IMP-06-02-python",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 104.97,
+      "log": "IMP-06-02-python.log"
+    },
+    {
+      "check": "IMP-06-03-syntax",
+      "command": [
+        "/bin/bash",
+        "-n",
+        "packaging/sign-macos.sh"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.01,
+      "log": "IMP-06-03-syntax.log"
+    },
+    {
+      "check": "IMP-06-04-shellcheck",
+      "command": [
+        "/opt/homebrew/bin/shellcheck",
+        "packaging/sign-macos.sh"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.19,
+      "log": "IMP-06-04-shellcheck.log"
+    },
+    {
+      "check": "IMP-06-05-actionlint",
+      "command": [
+        "/opt/homebrew/bin/actionlint",
+        ".github/workflows/release-nfs.yml"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.05,
+      "log": "IMP-06-05-actionlint.log"
+    },
+    {
+      "check": "IMP-06-06-source-hash",
+      "command": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.24,
+      "log": "IMP-06-06-source-hash.log"
+    },
+    {
+      "check": "IMP-06-07-recipe-hash",
+      "command": [
+        "/usr/bin/python3",
+        "-c",
+        "import sys;sys.path.insert(0,\"packaging/engine\");import source;print(source.recipe_hash())"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.18,
+      "log": "IMP-06-07-recipe-hash.log"
+    },
+    {
+      "check": "IMP-06-08-no-candidate-refusal",
+      "command": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--check-publish"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 0.24,
+      "log": "IMP-06-08-no-candidate-refusal.log"
+    },
+    {
+      "check": "IMP-06-09-mutant-classify-all-unknown",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 29.68,
+      "log": "IMP-06-09-mutant-classify-all-unknown.log"
+    },
+    {
+      "check": "IMP-06-09-mutant-leak-private-output",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 25.23,
+      "log": "IMP-06-09-mutant-leak-private-output.log"
+    },
+    {
+      "check": "IMP-06-09-mutant-hide-signing-exit",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 20.57,
+      "log": "IMP-06-09-mutant-hide-signing-exit.log"
+    },
+    {
+      "check": "IMP-06-09-mutant-ignore-read-bound",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 1.98,
+      "log": "IMP-06-09-mutant-ignore-read-bound.log"
+    },
+    {
+      "check": "IMP-06-10-original-control",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "scripts.tests.test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit",
+        "-v"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 1,
+      "expected": 1,
+      "passed": true,
+      "seconds": 15.99,
+      "log": "IMP-06-10-original-control.log"
+    },
+    {
+      "check": "IMP-06-11-original-hash",
+      "command": [
+        "/usr/bin/python3",
+        "packaging/release.py",
+        "--source-hash"
+      ],
+      "commit": "2c12ec61f6339d0d264280b7117787ec821425af",
+      "exit": 0,
+      "expected": 0,
+      "passed": true,
+      "seconds": 0.28,
+      "log": "IMP-06-11-original-hash.log"
+    }
+  ]
+}

@@ -9,12 +9,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 FAKE = r'''#!/usr/bin/env python3
-import json,os,signal,sys
+import json,os,signal,stat,sys
 from pathlib import Path
 name=Path(sys.argv[0]).name;args=sys.argv[1:]
 operation=name+':'+args[0]
 if operation=='security:list-keychains' and '-s' in args:operation+=':restore'
 with open(os.environ['CALLS'],'a') as f:f.write(operation+'\n')
+if operation=='codesign:--force' and os.environ.get('SIGN_OUTPUT'):
+ # Verify private capture on the changed path. No real keychain or Apple process.
+ assert stat.S_IMODE(os.fstat(2).st_mode)==0o600
+ output=os.environ['SIGN_OUTPUT'].replace('{binary}',args[-1]).replace('{identity}',os.environ['IDENTITY'])
+ if os.environ.get('INVALID_SIGN_BYTES'):sys.stderr.buffer.write(b'\xff')
+ print(output*int(os.environ.get('SIGN_REPEAT','1')),file=sys.stderr)
 if operation==os.environ.get('SIGNAL_AT'):os.kill(os.getppid(),signal.SIGTERM)
 if operation in os.environ.get('FAIL','').split(','):
  for stream in (sys.stdout,sys.stderr):
@@ -40,12 +46,19 @@ if name=='openssl':print('fake-keychain-password')
 
 
 class SigningTest(unittest.TestCase):
-    def run_case(self, stage=None, code=1, cleanup='complete', notary_receipt=False, existing_failure=False, **changes):
+    def run_case(self, stage=None, code=1, cleanup='complete', notary_receipt=False, existing_failure=False, diagnostic=None, **changes):
         with tempfile.TemporaryDirectory(prefix='nfs-sign-fixture-') as temp:
             root = Path(temp); bin_dir = root/'bin'; bin_dir.mkdir()
             scratch = root/'scratch'; scratch.mkdir()
             for name in ('security', 'codesign', 'xcrun', 'ditto', 'openssl'):
                 path = bin_dir/name; path.write_text(FAKE); path.chmod(0o755)
+            if changes.get('PARSER_FAILURE'):
+                # Only the diagnostics parser fails, not signing or earlier Python checks.
+                wrapper = bin_dir/'python3'
+                wrapper.write_text('#!/bin/bash\nif [[ "${2:-}" == */sign.txt ]]; then\n'
+                                   ' echo PRIVATE-COMMAND-OUTPUT >&2; exit 42\nfi\n'
+                                   'exec /usr/bin/python3 "$@"\n')
+                wrapper.chmod(0o755)
             binary = root/'binary'; binary.write_bytes(b'fake unsigned CLI')
             calls = root/'calls'; receipt = root/'receipt.json'
             failure = root/'receipt-failure.json'
@@ -56,7 +69,8 @@ class SigningTest(unittest.TestCase):
                 'APPLE_TEAM_ID':'ABCDEFG123', 'APPLE_ID':'fixture@example.invalid',
                 'APPLE_APP_SPECIFIC_PASSWORD':'fake-app-password', 'CALLS':str(calls),
                 'FAIL':'', 'NOTARY':'Accepted', 'NOTARY_EXIT':'0', 'SIGNAL_AT':'',
-                'NO_IDENTITY':'', 'NO_RUNTIME':'', 'BAD_NOTARY_JSON':''} | changes
+                'NO_IDENTITY':'', 'NO_RUNTIME':'', 'BAD_NOTARY_JSON':'',
+                'SIGN_OUTPUT':'', 'SIGN_REPEAT':'1', 'INVALID_SIGN_BYTES':''} | changes
             result = subprocess.run(['/bin/bash', str(ROOT/'packaging/sign-macos.sh'),
                                      str(binary), str(receipt)], env=env, text=True,
                                     capture_output=True, timeout=30)
@@ -64,13 +78,16 @@ class SigningTest(unittest.TestCase):
             self.assertEqual(list(scratch.iterdir()), [], 'signing scratch/keychain leaked')
             self.assertEqual(receipt.exists(), not stage or notary_receipt)
             self.assertEqual(failure.exists(), stage is not None, result.stdout+result.stderr)
+            if stage and diagnostic:
+                self.assertIn('diagnostic='+diagnostic, result.stderr)
             if existing_failure:
                 self.assertEqual(failure.read_text(), 'owned prior receipt')
                 self.assertIn('Signing failure receipt unavailable (not overwritten)', result.stderr)
             elif stage:
-                diagnostic = json.loads(failure.read_text())
-                self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
-                                             'exitCode':code, 'cleanup':cleanup})
+                record = json.loads(failure.read_text())
+                self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+                                             'exitCode':code, 'cleanup':cleanup,
+                                             'diagnostic':diagnostic or ('unclassified' if stage == 'sign' and code != 143 else 'not-collected')})
                 self.assertIn('Signing failed: stage='+stage+' exit='+str(code)+' cleanup='+cleanup,
                               result.stderr)
             else:
@@ -107,6 +124,37 @@ class SigningTest(unittest.TestCase):
                   'xcrun:notarytool':'notary-submit'}
         for command, stage in stages.items():
             with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+
+    def test_codesign_diagnostics_are_allowlisted_not_private_output(self):
+        cases = {
+            '{binary}: errSecInternalComponent': 'internal-component',
+            '{binary}: User interaction is not allowed.': 'interaction-not-allowed',
+            '{binary}: The user name or passphrase you entered is not correct.': 'authentication-failed',
+            '{binary}: The specified item could not be found in the keychain.': 'keychain-item-not-found',
+            '{binary}: An expired certificate was detected.': 'certificate-expired',
+            '{binary}: The certificate was revoked.': 'certificate-revoked',
+            '{binary}: The timestamp service is not available.': 'timestamp-unavailable',
+            'Warning: unable to build chain to self-signed root for signer "{identity}"\n{binary}: errSecInternalComponent': 'chain-build-warning',
+            'Warning: unable to build chain to self-signed root for signer "(null)"': 'chain-build-warning',
+            'PRIVATE-COMMAND-OUTPUT fake-app-password': 'unclassified',
+            'prefix {binary}: errSecInternalComponent suffix': 'unclassified',
+            '{binary}: errSecInternalComponent\n{binary}: User interaction is not allowed.': 'unclassified',
+        }
+        for output, expected in cases.items():
+            with self.subTest(diagnostic=expected, output=output):
+                self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+
+    def test_codesign_capture_bound_and_decode_failure_preserve_exit(self):
+        self.run_case('sign', 5, diagnostic='output-too-large', FAIL='codesign:--force',
+                      SIGN_OUTPUT='x'*1024, SIGN_REPEAT='65')
+        self.run_case('sign', 5, diagnostic='unavailable', FAIL='codesign:--force',
+                      SIGN_OUTPUT='PRIVATE-COMMAND-OUTPUT', INVALID_SIGN_BYTES='1')
+
+    def test_codesign_parser_failure_does_not_hide_signing_exit(self):
+        self.run_case('sign', 5, diagnostic='unavailable', FAIL='codesign:--force', PARSER_FAILURE='1')
+
+    def test_codesign_success_does_not_turn_warning_into_failure(self):
+        self.run_case(SIGN_OUTPUT='{binary}: errSecInternalComponent')
 
     def test_validation_failures_are_not_credential_dumps(self):
         self.run_case('decode-certificate', CERTIFICATE='not base64!')

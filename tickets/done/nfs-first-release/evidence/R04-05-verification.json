@@ -1,0 +1,20 @@
+{
+  "case": "R04",
+  "step": "Actual complete artifact and wrapper-refusal assertions",
+  "utc": "2026-10-19T06:27:18.669512+00:00",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3",
+  "engineManifestSha256": "bcb213bbb72e1698622afce9d7e6cc456dbe06268798b9336085227b5967bcc3",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:a264f1816a3ce17a51df74a01b367ae8fbd3d3584c270f191911e22f59012d57",
+      "linux-arm64": "sha256:5ee77c0437dc763fc69f7f45953c94a9c81a65dc4cf927c347a1ac7d83aa3d46"
+    },
+    "index": "sha256:dc8fe178c5e2f2efb33cafc164a4aefe5afa097a488e94f6998ce6d6a5cb796e"
+  },
+  "files": 19,
+  "bytes": 128137599,
+  "corruptWrapperDestinationAbsent": true,
+  "zipAbsent": true,
+  "pass": true
+}

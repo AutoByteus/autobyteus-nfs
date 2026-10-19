@@ -1,0 +1,1134 @@
+Check: IMP-06-01-focused
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing', 'scripts.tests.test_nfs_release_workflow', '-v']
+Commit: b279d556e2c0f5e90ca24b61c7e67bc809644947
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_accepted_and_sanitized_receipt (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) ... test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) ... test_codesign_capture_bound_and_decode_failure_preserve_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) ... test_codesign_parser_failure_does_not_hide_signing_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_codesign_success_does_not_turn_warning_into_failure (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... test_failure_receipt_never_clobbers_existing_evidence (scripts.tests.test_nfs_release_signing.SigningTest) ... ok
+test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_signal_reports_current_stage_and_cleans_up (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_validation_failures_are_not_credential_dumps (scripts.tests.test_nfs_release_signing.SigningTest) ... FAIL
+test_candidate_and_fresh_metadata_argv (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_metadata_failure_stops_step (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_nounset_and_oci_pipefail_stop_before_metadata (scripts.tests.test_nfs_release_workflow.NativeMetadataShellTest) ... ok
+test_all_modes (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_failure_cancellation_and_unexpected_skip_never_publish (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_legitimate_skips_do_not_accept_failures (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_manual_only_and_permissions (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+test_signing_upload_retains_only_sanitized_receipts_on_failure (scripts.tests.test_nfs_release_workflow.ReleaseWorkflowGatesTest) ... ok
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='CERTIFICATE', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='CERTIFICATE', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='PASSWORD', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='PASSWORD', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='IDENTITY', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='IDENTITY', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_ID', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_ID', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_APP_SPECIFIC_PASSWORD', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_APP_SPECIFIC_PASSWORD', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_TEAM_ID', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_all_six_missing_placeholder_values_fail_before_keychain (scripts.tests.test_nfs_release_signing.SigningTest) (name='APPLE_TEAM_ID', value='REPLACE_ME_BEFORE_RELEASE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 179, in test_all_six_missing_placeholder_values_fail_before_keychain
+    self.assertEqual(self.run_case('validate-inputs', **{name:value}), [])
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'validate-inputs',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'validate-inputs',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains:restore')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 190, in test_cleanup_failure_cannot_succeed_or_hide_primary_failure
+    self.run_case('cleanup', cleanup='failed', notary_receipt=True, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[94 chars]ic': 'not-collected'} != {'sch[94 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[75 chars]ed'}}
+  {'cleanup': 'failed',
++  'diagnostic': {'cleanup': 'failed',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'cleanup',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'cleanup',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_cleanup_failure_cannot_succeed_or_hide_primary_failure (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:delete-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 190, in test_cleanup_failure_cannot_succeed_or_hide_primary_failure
+    self.run_case('cleanup', cleanup='failed', notary_receipt=True, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[94 chars]ic': 'not-collected'} != {'sch[94 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[75 chars]ed'}}
+  {'cleanup': 'failed',
++  'diagnostic': {'cleanup': 'failed',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'cleanup',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'cleanup',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_capture_bound_and_decode_failure_preserve_exit (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 148, in test_codesign_capture_bound_and_decode_failure_preserve_exit
+    self.run_case('sign', 5, diagnostic='output-too-large', FAIL='codesign:--force',
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'output-too-large'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[77 chars]ge'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'output-too-large',
++                 'diagnostic': 'output-too-large',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='internal-component', output='{binary}: errSecInternalComponent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'internal-component'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[79 chars]nt'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'internal-component',
++                 'diagnostic': 'internal-component',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='interaction-not-allowed', output='{binary}: User interaction is not allowed.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'interaction-not-allowed'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[84 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'interaction-not-allowed',
++                 'diagnostic': 'interaction-not-allowed',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='authentication-failed', output='{binary}: The user name or passphrase you entered is not correct.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'authentication-failed'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[82 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'authentication-failed',
++                 'diagnostic': 'authentication-failed',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='keychain-item-not-found', output='{binary}: The specified item could not be found in the keychain.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'keychain-item-not-found'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[84 chars]nd'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'keychain-item-not-found',
++                 'diagnostic': 'keychain-item-not-found',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='certificate-expired', output='{binary}: An expired certificate was detected.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'certificate-expired'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[80 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'certificate-expired',
++                 'diagnostic': 'certificate-expired',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='certificate-revoked', output='{binary}: The certificate was revoked.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'certificate-revoked'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[80 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'certificate-revoked',
++                 'diagnostic': 'certificate-revoked',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='timestamp-unavailable', output='{binary}: The timestamp service is not available.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'timestamp-unavailable'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[82 chars]le'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'timestamp-unavailable',
++                 'diagnostic': 'timestamp-unavailable',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='chain-build-warning', output='Warning: unable to build chain to self-signed root for signer "{identity}"\n{binary}: errSecInternalComponent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'chain-build-warning'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[80 chars]ng'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'chain-build-warning',
++                 'diagnostic': 'chain-build-warning',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='chain-build-warning', output='Warning: unable to build chain to self-signed root for signer "(null)"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'chain-build-warning'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[80 chars]ng'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'chain-build-warning',
++                 'diagnostic': 'chain-build-warning',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='PRIVATE-COMMAND-OUTPUT fake-app-password')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'unclassified'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[73 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'unclassified',
++                 'diagnostic': 'unclassified',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='prefix {binary}: errSecInternalComponent suffix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'unclassified'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[73 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'unclassified',
++                 'diagnostic': 'unclassified',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='{binary}: errSecInternalComponent\n{binary}: User interaction is not allowed.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'unclassified'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[73 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'unclassified',
++                 'diagnostic': 'unclassified',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_codesign_parser_failure_does_not_hide_signing_exit (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 154, in test_codesign_parser_failure_does_not_hide_signing_exit
+    self.run_case('sign', 5, diagnostic='unavailable', FAIL='codesign:--force', PARSER_FAILURE='1')
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'unavailable'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[72 chars]le'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'unavailable',
++                 'diagnostic': 'unavailable',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[105 chars]ic': 'not-collected'} != {'sch[105 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[86 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'read-search-list',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'read-search-list',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='openssl:rand')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[106 chars]ic': 'not-collected'} != {'sch[106 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[87 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'keychain-password',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'keychain-password',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:create-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'create-keychain',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'create-keychain',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:unlock-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'unlock-keychain',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'unlock-keychain',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:set-key-partition-list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[102 chars]ic': 'not-collected'} != {'sch[102 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[83 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'partition-key',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'partition-key',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:find-identity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[102 chars]ic': 'not-collected'} != {'sch[102 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[83 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'find-identity',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'find-identity',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--force')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[93 chars]ic': 'unclassified'} != {'sch[93 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[73 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'unclassified',
++                 'diagnostic': 'unclassified',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--verify')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[105 chars]ic': 'not-collected'} != {'sch[105 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[86 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'verify-signature',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'verify-signature',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:-d')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[106 chars]ic': 'not-collected'} != {'sch[106 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[87 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'inspect-signature',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'inspect-signature',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='ditto:-c')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[103 chars]ic': 'not-collected'} != {'sch[103 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[84 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'notary-archive',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'notary-archive',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='xcrun:notarytool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[102 chars]ic': 'not-collected'} != {'sch[102 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[83 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'notary-submit',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'notary-submit',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_import_failure_receipt_and_secret_safety (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 116, in test_import_failure_receipt_and_secret_safety
+    self.run_case('import-certificate', 5, FAIL='security:import')
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[107 chars]ic': 'not-collected'} != {'sch[107 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[88 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 5,
++                 'schema': 1,
++                 'stage': 'import-certificate',
++                 'status': 'Failed'},
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'import-certificate',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 171, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'notary-accepted',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'notary-accepted',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='Rejected')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 171, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'notary-accepted',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'notary-accepted',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest) (status='In Progress')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 171, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-accepted', notary_receipt=True, NOTARY=status)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[104 chars]ic': 'not-collected'} != {'sch[104 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[85 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'notary-accepted',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'notary-accepted',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_rejected_or_pending_notary_retains_known_receipt_but_fails (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 172, in test_rejected_or_pending_notary_retains_known_receipt_but_fails
+    self.run_case('notary-submit', 7, notary_receipt=True, NOTARY_EXIT='7')
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[102 chars]ic': 'not-collected'} != {'sch[102 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[83 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 7,
++                 'schema': 1,
++                 'stage': 'notary-submit',
++                 'status': 'Failed'},
+   'exitCode': 7,
+   'schema': 1,
+   'stage': 'notary-submit',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_signal_reports_current_stage_and_cleans_up (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 185, in test_signal_reports_current_stage_and_cleans_up
+    self.run_case('sign', 143, SIGNAL_AT='codesign:--force')
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[95 chars]ic': 'not-collected'} != {'sch[95 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[76 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 143,
++                 'schema': 1,
++                 'stage': 'sign',
++                 'status': 'Failed'},
+   'exitCode': 143,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_validation_failures_are_not_credential_dumps (scripts.tests.test_nfs_release_signing.SigningTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 160, in test_validation_failures_are_not_credential_dumps
+    self.run_case('decode-certificate', CERTIFICATE='not base64!')
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-35tqvpqh/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(diagnostic, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[107 chars]ic': 'not-collected'} != {'sch[107 chars]ic': {'schema': 1, 'status': 'Failed', 'stage'[88 chars]ed'}}
+  {'cleanup': 'complete',
++  'diagnostic': {'cleanup': 'complete',
+-  'diagnostic': 'not-collected',
++                 'diagnostic': 'not-collected',
+? +++++++++++++++
+
++                 'exitCode': 1,
++                 'schema': 1,
++                 'stage': 'decode-certificate',
++                 'status': 'Failed'},
+   'exitCode': 1,
+   'schema': 1,
+   'stage': 'decode-certificate',
+   'status': 'Failed'}
+
+----------------------------------------------------------------------
+Ran 21 tests in 82.088s
+
+FAILED (failures=46)
+
+Observed exit: 1; expected exit: 0

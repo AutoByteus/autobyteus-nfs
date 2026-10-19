@@ -1,0 +1,6 @@
+# Case C01; command /usr/bin/python3 evidence/C01-05-audit.py; source1c00b7a/product2c12ec6; local Macarm64; 2026-10-19UTC.
+Attempt1 own artifact audit (NOT product execution): failed because glob *-05-* incorrectly included earlier IMP-05 evidence. Captured assertion:
+AssertionError: ('IMP-05-08-mutations.log', [36, 44, 61, 70, 80, 90])
+The earlier original mutant log was not edited. Initial audit source retained at C01-05-audit-initial.py. Corrected inventory to only ^(?:R0[1-5]|C01)-05- (API005-owned files). This corrects audit scope; no source/test change or weakened raw-log hygiene. Attempt2 receipt is C01-05-artifact-checks.json. Initial shell continued to its later size command, so outer shell exit0 was NOT an audit Pass. Old aggregate74files/2344059bytes included IMP05 and is not the API005 file count.
+
+Staging whitespace check attempt1 later exited2 before commit: five generated non-native excerpts had only headers plus an empty line at EOF. Paths: R03-05-excerpt-117918034151.log, R03-05-excerpt-117920467605.log, R03-05-excerpt-117918034054.log, R03-05-excerpt-117918669360.log, R03-05-excerpt-117918713220.log. Rebuilt those excerpts from existing full raw artifact/digest/manifest lines; no rerun and no full raw-log edit. Fresh routing lookup before the failed commit was unused; re-fetch after successful commit.

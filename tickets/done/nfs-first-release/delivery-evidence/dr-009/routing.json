@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-19T05:58:31.852664+00:00",
+  "result": "Blocked",
+  "classification": "Local Fix",
+  "selectedWhen": "When delivery discovers a code or packaging Local Fix that must be corrected by implementation before finalization can continue.",
+  "recipient_address": "/software_engineering_team/implementation_engineer",
+  "basis": "Fresh get_handoff_rules; most-specific packaging Local Fix; only one outcome recipient; no delegation",
+  "terminalEligible": false
+}

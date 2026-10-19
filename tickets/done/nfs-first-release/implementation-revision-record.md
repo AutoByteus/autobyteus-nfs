@@ -245,3 +245,44 @@ Mac final signing/Accepted/publication remain unresolved; full Delivery Blocked.
 Retained local diagnostic/candidates, Delivery evidence and pushed main preserved;
 no credential read/change, remote action or field questionnaire. Only own handoff
 and revision record updated; supplemental receipt goes to the existing reviewer.
+
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-006 | Delivery / release-deployment-report.md / DR009 | N/A — actual codesign stage failure | Local Fix | R3/SR004, ARCH002; IR005/CRR007/008/API004 scoped prior results | Diagnostic portion complete; source review required; actual hosted cause/release unresolved |
+
+### IR-006 — Allowlisted codesign failure observations
+
+- Trigger DR009: run39204643596/1 at finalized mainf830c50, both Mac sign/exit1/
+  cleanup complete; notary not reached. Intakeb279d55, source2c12ec61f6339d0d264280b7117787ec821425af.
+- Prior IR005 diagnostics complete, CRR007 sourcePass100 / CRR008 testPass /
+  API004 prepublication95 retained. Current result diagnostic Local Fix portion
+  complete, ready for targeted review; **DR009 actual root cause not resolved**.
+  R3/SR004/ARCH002 and Large/High unchanged; no design/approval or field-test loop.
+- BEH003/AC003/004/006/008: existing signer captures codesign output privately,
+  classifies bounded exact messages to fixed observations, preserves original exit
+  across parsing failure, and deletes capture with existing cleanup. Other stages
+  report not-collected. Command/keychain/trust/notary/publication semantics unchanged.
+- Four paths only: sign-macos.sh, signing tests, TESTING.md, packaging/RELEASE.md.
+  No Go/app/host/engine/workflow/lock/readiness change. No speculative credential
+  replacement, chain import, unlock/search-list tweak, fallback or new framework.
+- Current local21 focused and56 full tests (55 executed/1 expected Go-child skip),
+  Bash syntax/ShellCheck/actionlint pass;4 mutations and original-code control
+  detected; source/recipe/preservation checks pass. Attempt1 fixture shadowing46
+  failures preserved; corrected without product change. No actual Apple/hosted run.
+- Current source hashdd6cde88374cce42ec8b44c24e41abff3af6f01803890824dd783848e0d101a5; priord5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd; recipe299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274 unchanged.
+  Existing actual candidate/readiness now stale, preserved rather than relabelled.
+- Own source/HOME/TMP scratch removed, no live keychain/credentials/remote action.
+  Prior history byte prefix and mainf830 ancestry preserved; other owners untouched.
+- Next configured targeted source review → affected API/new complete current-source
+  candidate → Delivery-owned readiness/hosted diagnostics and actual signed release.
+  Current-delta CRR/API pending; no DR009 resolution/TaskDone/Terminal claim.
+  Evidence: evidence/IMP-06-*; former handoff and failed-attempt raw evidence in
+  implementation-evidence/ir-006/. No new cumulative upstream inventory.
+
+- Supplemental user-requested reference: read-only superrepo5096011 and exact
+  Apple-Actions63fff01 comparison recorded in IMP-06-18. Search-list difference
+  remains a lead, not actual root proof; no -A/timestamp weakening/raw-output or
+  Electron behavior copied. Same IR006/source, no new dispatch or approval.

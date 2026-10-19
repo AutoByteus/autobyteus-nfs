@@ -1,0 +1,36 @@
+{
+  "case": "R01",
+  "step": "Read prior DR009 actual failure and reuse exact current implementation checks; no local product rerun",
+  "date": "2026-10-19T06:14:57.188090+00:00",
+  "commit": "6bc8979a7bb5e821a32c879446155bbc76755288",
+  "testedCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "environment": "local read-only source/evidence audit",
+  "command": "git diff --name-only 2c12ec61f6339d0d264280b7117787ec821425af 6bc8979a7bb5e821a32c879446155bbc76755288 -- ':!tickets'",
+  "nonTicketDelta": [],
+  "nonTicketCount": 127,
+  "reused": [
+    "IMP-06-01",
+    "IMP-06-02",
+    "IMP-06-09",
+    "IMP-06-10"
+  ],
+  "R02Reused": [
+    "IMP-06-03",
+    "IMP-06-04",
+    "IMP-06-05",
+    "IMP-06-06",
+    "IMP-06-07",
+    "IMP-06-08",
+    "IMP-06-11"
+  ],
+  "counts": {
+    "fullCollected": 56,
+    "fullExecuted": 55,
+    "fullStandaloneSkip": 1,
+    "focusedOverlap": 21,
+    "detectedMutants": 4
+  },
+  "priorFailure": "DR00939204643596/1 bothMac sign/exit1/cleanupcomplete unresolved; cause UNKNOWN; diagnostic source only",
+  "limits": "External commands doubled; initial fixture-shadowing46 failures preserved/corrected by Implementation, not current product failure. No Apple/release proof.",
+  "pass": true
+}

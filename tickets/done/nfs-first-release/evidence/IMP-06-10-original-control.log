@@ -1,0 +1,189 @@
+Check: IMP-06-10-original-control
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit', '-v']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:list-keychains')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[63 chars]Code': 5, 'cleanup': 'complete'} != {'sch[63 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'read-search-list',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='openssl:rand')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[64 chars]Code': 5, 'cleanup': 'complete'} != {'sch[64 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'keychain-password',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:create-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[62 chars]Code': 5, 'cleanup': 'complete'} != {'sch[62 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'create-keychain',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:unlock-keychain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[62 chars]Code': 5, 'cleanup': 'complete'} != {'sch[62 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'unlock-keychain',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:set-key-partition-list')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[60 chars]Code': 5, 'cleanup': 'complete'} != {'sch[60 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'partition-key',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='security:find-identity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[60 chars]Code': 5, 'cleanup': 'complete'} != {'sch[60 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'find-identity',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--force')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[50 chars]tCode': 5, 'cleanup': 'complete'} != {'sch[50 chars]tCode': 5, 'cleanup': 'complete', 'diagnostic': 'unclassified'}
+  {'cleanup': 'complete',
++  'diagnostic': 'unclassified',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'sign',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:--verify')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[63 chars]Code': 5, 'cleanup': 'complete'} != {'sch[63 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'verify-signature',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='codesign:-d')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[64 chars]Code': 5, 'cleanup': 'complete'} != {'sch[64 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'inspect-signature',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='ditto:-c')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[61 chars]Code': 5, 'cleanup': 'complete'} != {'sch[61 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'notary-archive',
+   'status': 'Failed'}
+
+======================================================================
+FAIL: test_command_failures_report_exact_stage_and_exit (scripts.tests.test_nfs_release_signing.SigningTest) (command='xcrun:notarytool')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 126, in test_command_failures_report_exact_stage_and_exit
+    with self.subTest(command=command):self.run_case(stage, 5, FAIL=command)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 88, in run_case
+    self.assertEqual(record, {'schema':1, 'status':'Failed', 'stage':stage,
+AssertionError: {'sch[60 chars]Code': 5, 'cleanup': 'complete'} != {'sch[60 chars]Code': 5, 'cleanup': 'complete', 'diagnostic': 'not-collected'}
+  {'cleanup': 'complete',
++  'diagnostic': 'not-collected',
+   'exitCode': 5,
+   'schema': 1,
+   'stage': 'notary-submit',
+   'status': 'Failed'}
+
+----------------------------------------------------------------------
+Ran 1 test in 15.759s
+
+FAILED (failures=11)
+
+Observed exit: 1; expected exit: 1

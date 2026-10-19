@@ -1,0 +1,145 @@
+Check: IMP-06-09-mutant-hide-signing-exit
+Command: ['/usr/bin/python3', '-m', 'unittest', 'scripts.tests.test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output', '-v']
+Commit: 2c12ec61f6339d0d264280b7117787ec821425af
+Environment: Darwin arm64, private HOME/TMP, Python3.9.6/Bash3.2; command doubles only
+Date: 2026-10-19
+
+test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) ... 
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='internal-component', output='{binary}: errSecInternalComponent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=internal-component
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='interaction-not-allowed', output='{binary}: User interaction is not allowed.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=interaction-not-allowed
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='authentication-failed', output='{binary}: The user name or passphrase you entered is not correct.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=authentication-failed
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='keychain-item-not-found', output='{binary}: The specified item could not be found in the keychain.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=keychain-item-not-found
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='certificate-expired', output='{binary}: An expired certificate was detected.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=certificate-expired
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='certificate-revoked', output='{binary}: The certificate was revoked.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=certificate-revoked
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='timestamp-unavailable', output='{binary}: The timestamp service is not available.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=timestamp-unavailable
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='chain-build-warning', output='Warning: unable to build chain to self-signed root for signer "{identity}"\n{binary}: errSecInternalComponent')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=chain-build-warning
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='chain-build-warning', output='Warning: unable to build chain to self-signed root for signer "(null)"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=chain-build-warning
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='PRIVATE-COMMAND-OUTPUT fake-app-password')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=unclassified
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='prefix {binary}: errSecInternalComponent suffix')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=unclassified
+
+
+======================================================================
+FAIL: test_codesign_diagnostics_are_allowlisted_not_private_output (scripts.tests.test_nfs_release_signing.SigningTest) (diagnostic='unclassified', output='{binary}: errSecInternalComponent\n{binary}: User interaction is not allowed.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 145, in test_codesign_diagnostics_are_allowlisted_not_private_output
+    self.run_case('sign', 5, diagnostic=expected, FAIL='codesign:--force', SIGN_OUTPUT=output)
+  File "/Users/normy/autobyteus_org/nfs-release-ir006-mauc_9hy/source/scripts/tests/test_nfs_release_signing.py", line 77, in run_case
+    self.assertEqual(result.returncode, code if stage else 0, result.stdout+result.stderr)
+AssertionError: 42 != 5 : Signing failed: stage=sign exit=42 cleanup=complete diagnostic=unclassified
+
+
+----------------------------------------------------------------------
+Ran 1 test in 20.362s
+
+FAILED (failures=12)
+
+Observed exit: 1; expected exit: 1

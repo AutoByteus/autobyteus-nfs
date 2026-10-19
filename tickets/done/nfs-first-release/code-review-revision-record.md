@@ -192,3 +192,45 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-008 | api-e2e-test-review-report.md | API004 prepublication Pass95 / IR005 two suites | CRR006 Pass | Pass — test-code gate only | None |
+
+
+### CRR-009 — IR006 bounded codesign diagnostic source review
+
+- Date2026-10-19; **Implementation Review / round9 / Full Re-Audit of affected signing boundary**. Existing targeted IR006 request; new diagnostic shape/parser layered on IR005 requires all24 structural checks/full10-category scorecard, not a broader runtime/architecture/field campaign.
+- **Pass100.00 — diagnostic source scope only**. R3/SR004 Approved/Ready/ARCH002, Large/High unchanged. Intakefdcc416d3057bee172d00a76d4ac65ffc2b50bf4; source2c12ec61f6339d0d264280b7117787ec821425af versusb279d556. Trigger DR009 actual39204643596/1 both Mac sign/exit1/cleanup complete; notary never reached, actual cause remains unknown.
+- Four NFS-only paths: signer, existing signing tests, TESTING/package release docs. Private mode0600 capture; bounded65537-byte read; exact literal observations; shell output allowlist; original codesign exit; unchanged strict verify/Accepted/cleanup/workflow/payload gates. CG016/017 justify observation, not keychain/certificate/credential repair. No new findings/follow-ups.
+
+#### Prior Finding Resolution
+
+| Reference | Prior | Current | Evidence |
+| --- | --- | --- | --- |
+| CR-001/CR-002 | Resolved | Still resolved | Native argv/import owners unchanged; touched bindings used. |
+| DR005 diagnostic boundary | IR005 source accepted | Actual DR009 stage receipts prove bounded localization works; old cause not inferred | Both failure artifacts, no private output. |
+| DR009 diagnostic portion | Local Fix requested | Source accepted only; actual codesign failure/release unresolved | Current script, IMP06 controls, no signing-setting/gate change. |
+
+- Read Checks Run first; reused exact committed-source56collected55executed1expectedskip,21overlap focused, static/hash/refusal/fourmutants/baseline controls. No reviewer product check rerun. First46 fixture-shadowing failures retained/corrected without product changes. Only source/own-artifact audits executed; all127 current source inputs match. Signer126→169 nonempty, delta51; tests exempt.
+- Implementation's historical superrepo/Apple-Actions comparison is a lead only; reviewer made no other-repo write or diagnosis from it. Current sourcehashdd6cde88374cce42ec8b44c24e41abff3af6f01803890824dd783848e0d101a5 uses preserved engine; recipe299db701… unchanged. NEW current candidate/affected API required; actual future measured identity must govern readiness, not old API004/lock.
+- Prior CRR007 sourcePass100/CRR008 testPass/API00495 retain exact input; no new API/actual signing claim. Existing mainf830c50/7683494 preserved, no replay/reset. Both-Mac Accepted/final payload/publication/download/OCI remain Delivery gates. Field/user tests Deferred, no questionnaire or speculative secret reprovision.
+- Prior CRR001–008 entire26890-byte prefix retained; canonical test/API/Delivery authorities unchanged. No source/test edits, runtime scratch/resources/credentials/retained-candidate/remote action. NFS review artifacts only; no release/TaskDone/Terminal.
+- Fresh most-specific source-Pass rule selects API only; routing/receipt in code-review-evidence/crr-009. No duplicate Implementation/Designer/Delivery/PM dispatch or delegation.
+
+| Revision | Canonical report | Trigger | Prior source result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-009 | code-review-report.md | IR006 / DR009 diagnostic portion | CRR007 Pass100 | Pass100 — source scope | None new; real signing failure unresolved |
+
+
+### CRR-010 — IR006 successful signing-test review
+
+- Date2026-10-19; **Successful API/E2E Test-Code Review**, third test gate/overall round10; scope **N/A — proportional test review**, not implementation re-audit. Canonical api-e2e-test-review-report.md updated; code-review-report.md CRR009 unchanged.
+- Trigger API-REV-005 affected prepublication **Pass95.00%**. R3/SR004 Approved/Ready, ARCH002, IR006, CRR009; DR009 unresolved signing/DR010 staging. Large/High/Reviewed unchanged. Intake6334b9f670f6e1ac32f8b20c491698b81a9d4526; API tested/dispatched1c00b7afd6327fb4ba69dbc176c69d698a309fee equals product2c12ec61f6339d0d264280b7117787ec821425af across127 current inputs.
+- **Pass**, prior applicable test result CRR008 Pass. One changed durable path scripts/tests/test_nfs_release_signing.py sinceb279d556..2c12ec61; API authored no durable/production edits. Nine proportional checks Pass; no full source scorecard or source-size thresholds.
+- Reviewed actual-shell diagnostic category/privacy/capture-mode/bound/decoding/parser-failure/exit preservation and success-precedence assertions; existing stage/Accepted/signal/cleanup/no-clobber controls retained. Actual DR009 failure and approved confidentiality/fail-closed contracts establish scenario basis; no new premise/approval.
+- Prior test findings: **None**. New/remaining test findings/follow-ups: **None**. Source CR-001/002 remain resolved, not reopened. No score/classification change; actual codesign cause/release still unresolved.
+- Checks Run read first; no product check rerun. Reused exact IMP56collected55executed1expectedskip,21overlap focused,fourmutants/baseline. Actual API005 hosted39208967217/1:10success/0fail/cancel/2intendedskips, native4+engine2/fullOCI/aggregation. Signing/receipt uploads skipped; this is not Apple or root-fix proof.
+- Artifact12166434040 retained at /Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate. New measured sourceHash0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3 governs genuine new readiness; preserved-engine dd6cde/old candidates not relabelled. Two buildInventory differences documented, no reproducibility claim.
+- Prior CRR001–009 entire30385-byte prefix preserved; source/API authorities and nine currently uncommitted Delivery files protected. No product/test write, retained-candidate access, runtime resources, remote push/dispatch/signing/publication or TaskDone/Terminal.
+- Recommended/fresh most-specific recipient: Delivery only. Actual next signed run, both-Mac Accepted/finalpayload/publicbytes/OCI/install/signature/finalization/custody remain mandatory; no main replay, secret guessing or restored field/user gate. Route/receipt in code-review-evidence/crr-010.
+
+| Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-010 | api-e2e-test-review-report.md | API005 prepublication Pass95 / IR006 signing suite | CRR008 Pass | Pass — test-code gate only | None; actual signing unresolved |

@@ -1,0 +1,13 @@
+# Case R03; command ['gh', 'api', 'repos/AutoByteus/autobyteus-nfs/actions/jobs/117919434251/logs']; source1c00b7afd6327fb4ba69dbc176c69d698a309fee; environment binaries (macos-15-intel, darwin, amd64); 2026-10-19T06:26:23.092117+00:00
+# Original captured bytes follow unchanged.
+2026-10-19T06:22:52.3917580Z [36;1mtest "$(out/autobyteus-nfs version)" = "$TAG"[0m
+2026-10-19T06:23:28.4087720Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.693s
+2026-10-19T06:23:29.1762160Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.203s
+2026-10-19T06:23:29.1891640Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.198s
+2026-10-19T06:23:29.1906800Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.176s
+2026-10-19T06:23:32.6207240Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	4.189s
+2026-10-19T06:23:32.6218770Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.201s
+2026-10-19T06:23:32.6222610Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.962s
+2026-10-19T06:23:58.9924180Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+2026-10-19T06:24:56.1786970Z Ran 56 tests in 59.054s
+2026-10-19T06:24:56.1788550Z OK (skipped=1)

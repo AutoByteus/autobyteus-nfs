@@ -1,0 +1,28 @@
+{
+  "case": "R03",
+  "step": "Exact remote workflow and inventory before dispatch",
+  "utc": "2026-10-19T06:16:27.414580+00:00",
+  "sourceCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "workflowBlob": "dc9acc3b3390806b80db759fc38038c5b675bae8",
+  "workflowSha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+  "tags": [],
+  "releases": [],
+  "main": {
+    "ref": "refs/heads/main",
+    "node_id": "REF_kwDOVK4ms69yZWZzL2hlYWRzL21haW4",
+    "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/refs/heads/main",
+    "object": {
+      "sha": "f830c50bf1238270343afce151dd05b65b10237a",
+      "type": "commit",
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/commits/f830c50bf1238270343afce151dd05b65b10237a"
+    }
+  },
+  "priorRunIds": [
+    39111348848,
+    39113335636,
+    39118784695,
+    39121007787,
+    39202907777,
+    39204643596
+  ]
+}

@@ -10,6 +10,7 @@ binary=$1
 receipt=$2
 failure_receipt="${receipt%.json}-failure.json"
 stage=validate-inputs
+diagnostic=not-collected
 scratch=
 keychain=
 cleanup() {
@@ -32,9 +33,9 @@ PY
   if [[ "$code" != 0 ]]; then
     # Values are fixed internal stage labels, numeric exit status and a fixed enum.
     # Never include command text/arguments, raw tool output or credential values.
-    printf 'Signing failed: stage=%s exit=%s cleanup=%s\n' "$stage" "$code" "$cleanup_status" >&3
-    if ! (set -o noclobber; printf '{"schema":1,"status":"Failed","stage":"%s","exitCode":%s,"cleanup":"%s"}\n' \
-        "$stage" "$code" "$cleanup_status" > "$failure_receipt") 2>/dev/null; then
+    printf 'Signing failed: stage=%s exit=%s cleanup=%s diagnostic=%s\n' "$stage" "$code" "$cleanup_status" "$diagnostic" >&3
+    if ! (set -o noclobber; printf '{"schema":1,"status":"Failed","stage":"%s","exitCode":%s,"cleanup":"%s","diagnostic":"%s"}\n' \
+        "$stage" "$code" "$cleanup_status" "$diagnostic" > "$failure_receipt") 2>/dev/null; then
       echo 'Signing failure receipt unavailable (not overwritten)' >&3
     fi
   fi
@@ -81,7 +82,49 @@ import os, sys
 assert '"'+os.environ['IDENTITY']+'"' in open(sys.argv[1]).read(), 'Selected signing identity unavailable'
 PY
   stage=sign
-  codesign --force --timestamp --options runtime --keychain "$keychain" --sign "$IDENTITY" "$binary"
+  # Capture only this failing boundary in private scratch, never in an artifact.
+  # An if around one external command preserves its status; do not wrap the function.
+  if codesign --force --timestamp --options runtime --keychain "$keychain" --sign "$IDENTITY" "$binary" > "$scratch/sign.txt" 2>&1; then
+    :
+  else
+    sign_exit=$?
+    diagnostic=$(python3 - "$scratch/sign.txt" "$binary" <<'PYDIAG'
+import os, sys
+# Fixed observations, not root-cause conclusions. Never emit input or exceptions.
+try:
+    with open(sys.argv[1], 'rb') as f:
+        data = f.read(65537)
+    if len(data) > 65536:
+        result = 'output-too-large'
+    else:
+        lines = data.decode('utf-8').splitlines()
+        warning = 'Warning: unable to build chain to self-signed root for signer '
+        errors = {
+            'errSecInternalComponent': 'internal-component',
+            'User interaction is not allowed.': 'interaction-not-allowed',
+            'The user name or passphrase you entered is not correct.': 'authentication-failed',
+            'The specified item could not be found in the keychain.': 'keychain-item-not-found',
+            'An expired certificate was detected.': 'certificate-expired',
+            'The certificate was revoked.': 'certificate-revoked',
+            'The timestamp service is not available.': 'timestamp-unavailable',
+        }
+        matches = {value for error, value in errors.items() if sys.argv[2]+': '+error in lines}
+        if any(warning+'"'+name+'"' in lines for name in (os.environ['IDENTITY'], '(null)')):
+            result = 'chain-build-warning'
+        else:
+            result = next(iter(matches)) if len(matches) == 1 else 'unclassified'
+    print(result)
+except (OSError, UnicodeError, KeyError):
+    print('unavailable')
+PYDIAG
+    ) || diagnostic=unavailable
+    # Only literal vocabulary can reach public stderr/JSON, even on parser failure.
+    case "$diagnostic" in
+      chain-build-warning|internal-component|interaction-not-allowed|authentication-failed|keychain-item-not-found|certificate-expired|certificate-revoked|timestamp-unavailable|unclassified|output-too-large|unavailable) ;;
+      *) diagnostic=unavailable ;;
+    esac
+    exit "$sign_exit"
+  fi
   stage=verify-signature
   codesign --verify --strict --verbose=2 "$binary"
   stage=inspect-signature

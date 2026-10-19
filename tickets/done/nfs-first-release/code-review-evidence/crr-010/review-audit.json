@@ -1,0 +1,75 @@
+{
+  "review": "CRR-010",
+  "intake": "6334b9f670f6e1ac32f8b20c491698b81a9d4526",
+  "productCommit": "2c12ec61f6339d0d264280b7117787ec821425af",
+  "apiTestedCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+  "productFilesCompared": 127,
+  "currentProductMismatches": [],
+  "apiTestedProductDelta": [],
+  "durableDelta": [
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "testSha256": "dc8dfdf22238ffea3a50ca01bc8837862c4a5e088cb3b8b3f9cb5ace532cd033",
+  "reviewerProductChecksExecuted": 0,
+  "reviewerRuntimeResourcesCreated": 0,
+  "method": "Read-only git blob/current byte comparison; no product imports or test execution.",
+  "priorHistory": {
+    "sha256": "c8c5aae19c595f0ec47b2a1c71b62b52dcf6c1e14ef309ca66a002b385dc44c9",
+    "bytes": 30385
+  },
+  "scope": "Proportional successful-test review only",
+  "protectedBaseline": {
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/commands.json": {
+      "sha256": "2fb040750eef3a194628b62776628e501183cf4342ee74231ff59441d4b6481f",
+      "bytes": 874285
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/staged-source-receipt.json": {
+      "sha256": "3040154a34e9e9e5e66df34f66e963b44b0ddb44121a9d5c37c57aa09621e4a7",
+      "bytes": 34520
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/verified-remote-workflow.yml": {
+      "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+      "bytes": 16820
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/final-checks.json": {
+      "sha256": "b9aaa6bad269e4b348f5d666d6741e05b6a6af84f10b747a10c0255767f7fee9",
+      "bytes": 1484
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-010/routing.json": {
+      "sha256": "eab721aa51e03673220eff112478db8e1485c1a091f74b41b87b75384a636286",
+      "bytes": 2697
+    },
+    "tickets/done/nfs-first-release/delivery-revision-record.md": {
+      "sha256": "b22082463d877bb25fa69209cc1c2a1388340fcc430043ad0ebdbf3d136b346c",
+      "bytes": 32969
+    },
+    "tickets/done/nfs-first-release/docs-sync-report.md": {
+      "sha256": "d1f08343e67dcc046b1aed44217e92287d28da3dc047b7e082a54411dd4ef524",
+      "bytes": 7135
+    },
+    "tickets/done/nfs-first-release/handoff-summary.md": {
+      "sha256": "ec7333f0da76086c74dc6c9343ba9ec999010ac87a5cd9a8696f23596ba8b68c",
+      "bytes": 20634
+    },
+    "tickets/done/nfs-first-release/release-deployment-report.md": {
+      "sha256": "520a08a90ea8a5d8f76adea4f3ff0bf09e738229f9fc5c4c04f1fe95ba420295",
+      "bytes": 25210
+    },
+    "tickets/done/nfs-first-release/code-review-report.md": {
+      "sha256": "ebd37eeb0ccea688dbe101c5b4b22fec75075199772861bacf2b08cc546110f2",
+      "bytes": 22575
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "4d979826c656dc909f4d011d2e6809635250041081b859d5bf3e2f90f3dfae08",
+      "bytes": 14419
+    },
+    "tickets/done/nfs-first-release/api-e2e-revision-record.md": {
+      "sha256": "d0d513d9616a0f8d379bf7f3770cdf584c6ab61caaeb53bb0ecdf3aa12d2c93a",
+      "bytes": 15757
+    },
+    "tickets/done/nfs-first-release/code-review-revision-record.md": {
+      "sha256": "c8c5aae19c595f0ec47b2a1c71b62b52dcf6c1e14ef309ca66a002b385dc44c9",
+      "bytes": 30385
+    }
+  }
+}

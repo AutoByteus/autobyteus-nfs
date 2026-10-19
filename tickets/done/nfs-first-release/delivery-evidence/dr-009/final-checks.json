@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-19T05:58:31.852664+00:00",
+  "inputHead": "f830c50bf1238270343afce151dd05b65b10237a",
+  "sourceAndOtherProtectedTrackedFilesEqualHead": true,
+  "protectedTrackedCount": 1655,
+  "changedTrackedPaths": [
+    "tickets/done/nfs-first-release/delivery-revision-record.md",
+    "tickets/done/nfs-first-release/docs-sync-report.md",
+    "tickets/done/nfs-first-release/handoff-summary.md",
+    "tickets/done/nfs-first-release/release-deployment-report.md"
+  ],
+  "newPathsOnlyOwnedEvidence": true,
+  "priorRevisionRecordPrefixUnchanged": true,
+  "releaseNotesUnchangedSha256": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e",
+  "rawLogsChecked": [
+    {
+      "path": "publication-job-117904866080.log",
+      "sha256": "f1e8ba71e85175e979b985fc6b7b5bd5a1a1f531f6e59bedb578cabfd6d4d756",
+      "credentialEnvironmentLinesAllMasked": true,
+      "maskedFields": [
+        "CERTIFICATE",
+        "PASSWORD",
+        "IDENTITY",
+        "APPLE_ID",
+        "APPLE_APP_SPECIFIC_PASSWORD",
+        "APPLE_TEAM_ID"
+      ]
+    },
+    {
+      "path": "publication-job-117904866208.log",
+      "sha256": "b73d47dd419db2495a9b0ce02c10a27a8577048a89e2ee1cc0d75aaad48ea8fd",
+      "credentialEnvironmentLinesAllMasked": true,
+      "maskedFields": []
+    },
+    {
+      "path": "publication-job-117904866164.log",
+      "sha256": "dad9ad06d8b78f589b0398909deacc817824ef1cf37f6b3364fc93ae08a8ec8f",
+      "credentialEnvironmentLinesAllMasked": true,
+      "maskedFields": [
+        "CERTIFICATE",
+        "PASSWORD",
+        "IDENTITY",
+        "APPLE_ID",
+        "APPLE_APP_SPECIFIC_PASSWORD",
+        "APPLE_TEAM_ID"
+      ]
+    },
+    {
+      "path": "publication-job-117904866099.log",
+      "sha256": "f895b6cd55d90fb1e54c476f1bee114c1493e204e1aa72cc60e734d8bd6d0d0d",
+      "credentialEnvironmentLinesAllMasked": true,
+      "maskedFields": []
+    },
+    {
+      "path": "publication-job-117904722372.log",
+      "sha256": "0dc7448d691119886a0afb660af20d281b9843bab56ccc100fd05c3966b69420",
+      "credentialEnvironmentLinesAllMasked": true,
+      "maskedFields": []
+    }
+  ],
+  "portablePathsChecked": 1684,
+  "portablePathErrors": [],
+  "readinessScratchAbsent": true,
+  "boundedProcessQueryNoMatches": true,
+  "sourceFinalizationPreserved": true,
+  "canonicalCheckoutAndPMAction": "None by Delivery; no restoration or staging",
+  "retainedResources": "Active ticket/finalize branches, current/prior candidates and user-requested local diagnostic intentionally retained for recovery",
+  "commitPlan": "Explicit own docs/new dr009 evidence only; local checkpoint, no new remote main/push/dispatch",
+  "statusBeforeCheckpoint": " M tickets/done/nfs-first-release/delivery-revision-record.md\n M tickets/done/nfs-first-release/docs-sync-report.md\n M tickets/done/nfs-first-release/handoff-summary.md\n M tickets/done/nfs-first-release/release-deployment-report.md\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/darwin-amd64-notary-failure.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/darwin-arm64-notary-failure.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/dispatch.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/failure-assessment.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/finalization-commands.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-artifacts-final.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-artifacts.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-execution-summary.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-job-117904722372.log\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-job-117904866080.log\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-job-117904866099.log\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-job-117904866164.log\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-job-117904866208.log\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-jobs-final.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-jobs.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-log-index.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-run-final.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/publication-run.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/remote-after-failure.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/routing.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/runs-before-dispatch.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/signing-arm64-artifact-receipt.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/signing-artifact-receipts.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/source-finalization.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/triggered-runs-final.json\n?? tickets/done/nfs-first-release/delivery-evidence/dr-009/triggered-runs.json\n"
+}
