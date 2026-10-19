@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-19T07:01:19.076235+00:00",
+  "deliveryRevision": "DR-012",
+  "result": "Source-availability prerequisite Completed; full Delivery Blocked/not yet eligible",
+  "request": "API006 after IR007/CRR011 bounded lookup-repair source Pass100; not an API result/full delivery handoff",
+  "reviewedDispatchCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "productCommit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "localHeadPreserved": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "productInputCount": 127,
+  "allProductInputsEqualReviewedSource": true,
+  "productTreeInventorySha256": "bd069aa2ca792278a0f950db84a0e4f23b1f60bcd919aa429a7f79e6390381b8",
+  "freshTrackedBase": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "baseAlreadyAncestor": true,
+  "integration": "Already current; no merge/checkpoint/source edit/rerun needed",
+  "remoteBefore": {
+    "refs/heads/codex/nfs-first-release": "a55d753683d1e62982187fcab9c36c225a7ccd51",
+    "refs/heads/main": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2"
+  },
+  "remoteAfter": {
+    "refs/heads/codex/nfs-first-release": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+    "refs/heads/main": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2"
+  },
+  "pushMode": "Exact requested SHA to ticket ref only; fast-forward, no force/no follow-tags",
+  "workflow": {
+    "path": ".github/workflows/release-nfs.yml",
+    "commit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+    "blob": "dc9acc3b3390806b80db759fc38038c5b675bae8",
+    "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "bytes": 16820,
+    "remoteBytesEqual": true,
+    "id": 388178899,
+    "state": "active"
+  },
+  "dispatchInputs": {
+    "ref": "codex/nfs-first-release",
+    "source_sha": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+    "release_tag": "v0.1.0",
+    "publish": "false"
+  },
+  "dispatchOwner": "api_e2e_engineer; no manual dispatch by Delivery",
+  "protectedApiBefore": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "74ec635f43664af986f4d50fae8005968f7401b85386a94e025c5fd3473b9ee2",
+      "bytes": 5728
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "57d788f8fca0eaf9d4293c86a8c98768c4bf1bb32532502913959292647fd6d7",
+      "bytes": 2022
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "ce289ca587b886da33e88b2b28b5566c36f19527139e6b88419bc87b834f3beb",
+      "bytes": 11354
+    },
+    "tickets/done/nfs-first-release/evidence/C01-06-ownership.json": {
+      "sha256": "700a2e581446d4f5bbc12bb5ce3983aa8046210499853b196ef2a4c1a6f13ba4",
+      "bytes": 1093
+    }
+  },
+  "protectedApiAfter": {
+    "tickets/done/nfs-first-release/api-e2e-coverage-investigation.md": {
+      "sha256": "74ec635f43664af986f4d50fae8005968f7401b85386a94e025c5fd3473b9ee2",
+      "bytes": 5728
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "57d788f8fca0eaf9d4293c86a8c98768c4bf1bb32532502913959292647fd6d7",
+      "bytes": 2022
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-progress.md": {
+      "sha256": "ce289ca587b886da33e88b2b28b5566c36f19527139e6b88419bc87b834f3beb",
+      "bytes": 11354
+    },
+    "tickets/done/nfs-first-release/evidence/C01-06-ownership.json": {
+      "sha256": "700a2e581446d4f5bbc12bb5ce3983aa8046210499853b196ef2a4c1a6f13ba4",
+      "bytes": 1093
+    }
+  },
+  "apiFilesUnchangedAtVerification": true,
+  "observedConcurrentChanges": [],
+  "indexEmpty": true,
+  "portableReviewedPathsChecked": 1877,
+  "currentMainReplayed": false,
+  "scopeLimits": [
+    "IR007 bounded source lookup repair accepted, native synthetic A/B/A not actual hosted cause proof",
+    "DR011 hosted cause/signing/release unresolved until actual current validation",
+    "No main merge/push/readiness/signing/notary/secret/tag/release/registry/deployment/TaskDone/Terminal",
+    "Prior API005 candidate/readiness historical for changed product",
+    "Field/user tests Deferred; no questionnaire or approval loop"
+  ],
+  "cleanup": "No runtime scratch/process/keychain created; active worktree/candidates/local diagnostic preserved",
+  "ownRecords": "DR012 own docs/evidence uncommitted, concurrent API work unstaged"
+}

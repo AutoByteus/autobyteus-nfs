@@ -10,32 +10,32 @@
   },
   "candidate": {
     "envelope": {
-      "artifactId": 12166434040,
-      "digest": "sha256:212bf6bf33719abd0ba6f69f138f69f11f7a6a3b1aa49097a5e8d32ec8bc2e01",
-      "expiresAt": "2027-01-17T06:16:31Z",
+      "artifactId": 12168544425,
+      "digest": "sha256:f6294686e10c8c4c3dac98122dd2adbccfab1d78f1846dd56473f8ec68705ef8",
+      "expiresAt": "2027-01-17T07:02:55Z",
       "runAttempt": 1,
-      "runId": 39208967217,
-      "workflowCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee"
+      "runId": 39213489075,
+      "workflowCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493"
     },
-    "recordSha256": "59bab38d340db74491fb080f5b203efe6dc18f3674aee1ffd79de99133989f76"
+    "recordSha256": "67eb4dd2f120a0d33a3d99eeac3cb055162ad7d3a9a3d66821e8f7686afff58b"
   },
   "checks": {
     "native": {
       "evidence": {
         "path": "packaging/releases/v0.1.0/native-checks.json",
-        "sha256": "6e0ea46a8d7747d4960f5b9bcea4b7c029d64a94c15d13cade216661545dd682"
+        "sha256": "6038e7dac7aa98655bd9ecda06d58d5c746a59629c5ea4ead9434c5ceb69d9d6"
       },
       "status": "passed"
     },
     "releaseControls": {
       "evidence": {
         "path": "packaging/releases/v0.1.0/release-controls.json",
-        "sha256": "949a97f91ad0af4e9bc47ccfe4d54b9f8cf7e2907231961e8d7be6ba0f629b05"
+        "sha256": "8d1db28891c2dfff72f749a85d4df794655527a8921d9b3fbf2dd4223441bc63"
       },
       "status": "passed"
     }
   },
-  "engineManifestSha256": "bcb213bbb72e1698622afce9d7e6cc456dbe06268798b9336085227b5967bcc3",
+  "engineManifestSha256": "95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970",
   "fieldValidation": {
     "filesystem": "deferred",
     "user": "deferred"
@@ -43,10 +43,10 @@
   "kind": "release-first",
   "oci": {
     "children": {
-      "linux-amd64": "sha256:a264f1816a3ce17a51df74a01b367ae8fbd3d3584c270f191911e22f59012d57",
-      "linux-arm64": "sha256:5ee77c0437dc763fc69f7f45953c94a9c81a65dc4cf927c347a1ac7d83aa3d46"
+      "linux-amd64": "sha256:17315b54c7276efafc893e75021549e1c2675d50d32d4ba9b0763788ab07b557",
+      "linux-arm64": "sha256:93bb50f867a255a3b01652602ee95191263c9195ad32fd474dadbf738ddea42f"
     },
-    "index": "sha256:dc8fe178c5e2f2efb33cafc164a4aefe5afa097a488e94f6998ce6d6a5cb796e"
+    "index": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec"
   },
   "postpublicationPlan": {
     "path": "packaging/releases/v0.1.0/postpublication-testing-plan.md",
@@ -57,15 +57,15 @@
     "sha256": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e"
   },
   "review": {
-    "candidateCommit": "1c00b7afd6327fb4ba69dbc176c69d698a309fee",
+    "candidateCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
     "evidence": {
       "path": "packaging/releases/v0.1.0/source-review.json",
-      "sha256": "39d6bb1b31fd826c118a6200e3290f52157970927b8923143f229e5791ace6bb"
+      "sha256": "fe6f8faefc373fee7b316c2e747317ad716eaf2f965d2cc41f2d673e2c382e37"
     },
-    "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3"
+    "sourceHash": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086"
   },
   "schema": 1,
-  "sourceHash": "0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3",
+  "sourceHash": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086",
   "targets": [
     "darwin-amd64",
     "darwin-arm64",

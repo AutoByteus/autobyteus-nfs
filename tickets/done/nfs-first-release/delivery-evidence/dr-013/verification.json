@@ -1,0 +1,120 @@
+{
+  "127ProductInputsEqualIR007": true,
+  "acJudgements": {
+    "AC001": "Proven R02/R03/R04: new complete exact candidate/run/native4/engine2/fullOCI",
+    "AC002": "R01/R02/R04 proven; current stable readiness prepared after raw proof review",
+    "AC003": "Current lookup/list/order/configuration/privacy/cleanup/Accepted-only fixtures proven; actual both-Mac hosted/signature NotProven",
+    "AC004": "Recovery/control fixtures proven; immutable public release NotProven",
+    "AC005": "Current native/admission/version controls proven; final public install/signature/notice NotProven",
+    "AC006": "Actual candidate integrity/stale/wrapper refusal proven; whole public OCI/final bytes NotProven",
+    "AC007": "Honest deferral/current prepublication/history proven; release completion/custody NotProven",
+    "AC008": "API cleanup/source preservation proven; final docs/current main/public receipts pending"
+  },
+  "actualCandidateReverified": true,
+  "apiConfidence": 95,
+  "at": "2026-10-19T07:17:43.337014+00:00",
+  "baseAlreadyAncestor": true,
+  "freshBase": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "head": "49c92d60fb46b4166194c9378f7c4fc44be2e0f7",
+  "limits": [
+    "58 collected57executed1 expected child skip; focused23 overlaps",
+    "7Go packages per native target, no individual count inferred",
+    "IMP Apple/GitHub effects are doubles; DR007 local developer diagnostic not hosted P12 proof",
+    "field/user tests deferred by R3, not release gates",
+    "IR007 bounded lookup repair; DR011 original hosted cause/signing unverified",
+    "engine buildInventory changes measured; no old-candidate identity reuse"
+  ],
+  "liveEnvelopeMatched": true,
+  "rawHostedLogs": [
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117931920025,
+      "name": "prepare",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117931920025.log",
+      "rawBodySha256": "fa0c7d0d8d54818fb87b22bfcd159f218f98922747686e92ca222a98894a5395",
+      "sha256": "b6899b91b3bcb9897c700ffa6e06619d2bc9255b852d0b3bc5b9d687656e0e26"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117932104723,
+      "name": "engine-packages (ubuntu-24.04, amd64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117932104723.log",
+      "rawBodySha256": "13de12440f9fbd6fe985a331a86794191963f404097959e821ade2498014017e",
+      "sha256": "42e797cbeee73ea8aea35ef42c0579fa36649cf106336e83adc16eaaf160e4b1"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117932104808,
+      "name": "engine-packages (ubuntu-24.04-arm, arm64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117932104808.log",
+      "rawBodySha256": "85381b7717b3ce1b715bfcd46a28835e7c6c3bdb46a52fa5b09e7fc40f072339",
+      "sha256": "a515c8016c2d78211e29b0f524020301bdd4b5adb329e0287359f68ece460488"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117932813638,
+      "name": "engine-inputs",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117932813638.log",
+      "rawBodySha256": "a45c477f54478b2a95545ff7f04840451b9313bf5940db9c9ccf43b9771c1039",
+      "sha256": "dd1fa74279ddd9f32ca4dd2bb4d980f39cba119a7aa828eeadbceb573d020b59"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117932880751,
+      "name": "engine",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117932880751.log",
+      "rawBodySha256": "a4ead055bbce3c49c87a9bc92e66e8b7db3a381f824b3833b21fedad2c917559",
+      "sha256": "59060029e6beebeaad1e392cfef7fd45bb73c4fb05cfa0e985208c2d0c1c25dd"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117933649842,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117933649842.log",
+      "rawBodySha256": "9defe2ad2af3782fb74a0b8d247cb6dd88a0168ee372d110e22b6bd7b6db95ac",
+      "sha256": "8656f9fee48ff2527d17e2637c9372d4b183aeddcf16cb168dfd91148033c6a3"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117933649851,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117933649851.log",
+      "rawBodySha256": "9bc5eb6e9e8ddf6962631c46a66a64dfdac24191c711469deb334e1f6828d7a3",
+      "sha256": "9df2064588344579a3155e1c63b3e9045a87c11080c9429d16dc624c79f3ecde"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117933649910,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117933649910.log",
+      "rawBodySha256": "b9c3798cbbccd68a1d72a7e646b629fcd8d4b5fbade8cebae82b2a3939316609",
+      "sha256": "476a84f7ed46737b35d3219d6640befcc4e3cbde09d1d37ed8f139da3c72fdf2"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117933649996,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117933649996.log",
+      "rawBodySha256": "bd290f22c4ff2c6f0f06501782bbcf8aa2a61f56b3c89e5ca66e1d3d6f2477d5",
+      "sha256": "64d7a85f5d62b8a448418cd31b7f8af70402a12f72b30fd235487052b46fdbc4"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117935066273,
+      "name": "candidate",
+      "path": "tickets/done/nfs-first-release/evidence/R03-06-job-117935066273.log",
+      "rawBodySha256": "9dd120f18c5c62f0eead7a9301c56bd1488083bcf1deea9277a082eebfc308c7",
+      "sha256": "b1b0761133214613fd8dfbbdeba96439393d249c3cc662550a2818b8b8381197"
+    }
+  ],
+  "reusedIMPChecksInspected": [
+    "IMP-07-03",
+    "IMP-07-04",
+    "IMP-07-05",
+    "IMP-07-12",
+    "IMP-07-13"
+  ],
+  "scope": "Prepublication and genuine readiness acceptance only",
+  "sourceReview": "CRR011 Pass100",
+  "testReview": "CRR012 Pass"
+}
