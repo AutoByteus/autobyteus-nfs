@@ -1,0 +1,33 @@
+{
+  "checkId": "CR-08-01",
+  "atUTC": "2026-10-19T05:22:18.481668+00:00",
+  "steps": "Read-only git delta/current-byte comparisons; preserve source report, API authority, history prefix and10 Delivery-owned files; no product check rerun",
+  "intake": "81c5cce1c8dcad32dbacf2911508170f85fcec94",
+  "testedDispatch": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "source": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "currentNonTicketInputsMatch": 127,
+  "durablePaths": [
+    "scripts/tests/test_nfs_release_signing.py",
+    "scripts/tests/test_nfs_release_workflow.py"
+  ],
+  "APIAuthoredTestDelta": false,
+  "priorRecordBytes": 23643,
+  "priorRecordSHA256": "4aad53962e3beb344fd4ad65203bf76419ed975c7c2c48a3dc72a9b7cb99add8",
+  "sourceReportSHA256": "454d449c1352b98828e067787a4da02fad060806379b2d5d1e119735dfbecee8",
+  "apiReportSHA256": "01402de5fc7c5d5f13e7f80c6ba9aa9914152071b2654f97ea8856f042fbcf30",
+  "protectedDelivery": {
+    "tickets/done/nfs-first-release/delivery-revision-record.md": "6ff50ad6a5a5cad248b791892a3b50e313167dc5825b756967868ec1e6719926",
+    "tickets/done/nfs-first-release/docs-sync-report.md": "924e733d62c3b16eed14428d4e4878ebaa6bca032e9b6d42a761533283aa8aea",
+    "tickets/done/nfs-first-release/handoff-summary.md": "8da21ddf53e25b1e9dfab38a5e7f16ac7efdca59b2ca4bbee0b684ed2ab252da",
+    "tickets/done/nfs-first-release/release-deployment-report.md": "a5c65c1eed2773bb3bdddb5f810696202e5612c76235251e9c933a5333e0b8ef",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/commands.json": "8c0e9b2011aeb73177e28dc83eb85b1a8cf5540f0b1226c76275737d8c6a0016",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/final-checks.json": "210779cbc0f52255caebefc67750b99301844321975f7e32eac8378dff9f8be0",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/routing.json": "1897b7cdfb5e19821d8c6e58ed79e6874d96707364944e29cddaf48d45331d6b",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/staged-source-receipt.json": "73888c2d196ed5bd9234beb4c638b72960bc4e5355219982662c83b9c7a9c0b1",
+    "tickets/done/nfs-first-release/delivery-evidence/dr-008/verified-remote-workflow.yml": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+    "tickets/done/nfs-first-release/release-notes.md": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e"
+  },
+  "productExecutionsByReviewer": 0,
+  "resourcesCreatedByReviewer": 0,
+  "auditAttempt": "Initial preservation count expected10 in git status, found9; corrected by including unchanged release-notes.md (the tenth protected file). Before product/artifact writes; no source/test/assertion weakening."
+}
