@@ -1,0 +1,42 @@
+{
+  "case": "R01",
+  "step": "Read Checks Run, validate exact input applicability, preserve original failure; no local product or keychain repeat",
+  "date": "2026-10-19T07:02:31.398372+00:00",
+  "commit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "testedCommit": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "environment": "local read-only source/evidence audit",
+  "command": "git diff --name-only 3f67e36193c246ca08b49cda818be5c0f94eba51 7bd486e2e27743441a870f7cd8db1f6c4ee0b493 -- ':!tickets'",
+  "nonTicketDelta": [],
+  "nonTicketCount": 127,
+  "reused": [
+    "IMP-07-04",
+    "IMP-07-05",
+    "IMP-07-12",
+    "IMP-07-13"
+  ],
+  "R02Reused": [
+    "IMP-07-06",
+    "IMP-07-07",
+    "IMP-07-08",
+    "IMP-07-09",
+    "IMP-07-10",
+    "IMP-07-11",
+    "IMP-07-14"
+  ],
+  "supportingNative": [
+    "IMP-07-01",
+    "IMP-07-02",
+    "IMP-07-03"
+  ],
+  "counts": {
+    "fullCollected": 58,
+    "fullExecuted": 57,
+    "fullStandaloneSkip": 1,
+    "focusedOverlap": 23,
+    "detectedMutants": 4
+  },
+  "nativeMechanism": "Actual synthetic identity absent\u2192sign1; owned+original\u2192sign0/verify0/runtime; removed\u2192sign1, original list restored; timestamp=none nonrelease probe only",
+  "priorFailure": "DR01139210821088/1 bothMac sign/exit1/cleanupcomplete/unclassified; hosted original cause UNKNOWN",
+  "limits": "Full suite doubles external signing commands. Synthetic native mechanism does not prove real DeveloperID/P12/password/Intel/timestamp/notary or earlier hosted root cause. Native probe attributed Implementation, not rerun.",
+  "pass": true
+}

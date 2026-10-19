@@ -1,0 +1,13 @@
+{
+  "case": "R04",
+  "step": "Owned candidate retained for Delivery",
+  "utc": "2026-10-19T07:13:26.229480+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "root": "/Users/normy/nfs-first-candidate-api006-a8aune30",
+  "candidate": "/Users/normy/nfs-first-candidate-api006-a8aune30/candidate",
+  "run": 39213489075,
+  "attempt": 1,
+  "artifact": 12168544425,
+  "environment": "private local APFS parent0700",
+  "owner": "API006; preserve through release"
+}

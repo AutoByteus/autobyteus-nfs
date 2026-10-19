@@ -1,0 +1,17 @@
+{
+  "case": "R05",
+  "step": "candidate-refusal",
+  "utc": "2026-10-19T07:14:16.468465+00:00",
+  "sourceCommit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "environment": "local Macarm64/Actions API where invoked",
+  "command": [
+    "/Users/normy/nfs-first-api006-smoke-l0gwnokf/autobyteus-nfs",
+    "verify-release",
+    "/Users/normy/nfs-first-api006-smoke-l0gwnokf/release.json"
+  ],
+  "exit": 1,
+  "expected": 1,
+  "stdout": "",
+  "stderr": "AutoByteus NFS incomplete: this release does not admit the current computer/CPU; no installation performed\n",
+  "pass": true
+}

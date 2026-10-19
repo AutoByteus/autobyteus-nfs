@@ -1,0 +1,17 @@
+{
+  "case": "R02",
+  "step": "Actual old retained candidate/current facade admission",
+  "date": "2026-10-19T07:02:31.689078+00:00",
+  "commit": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "environment": "local read-only facade; API005 retained candidate unchanged",
+  "command": [
+    "/usr/bin/python3",
+    "packaging/release.py",
+    "--check-publish",
+    "--candidate",
+    "/Users/normy/nfs-first-candidate-api005-61mqnd8a/candidate"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "Release refused: Candidate source/engine differs\n"
+}
