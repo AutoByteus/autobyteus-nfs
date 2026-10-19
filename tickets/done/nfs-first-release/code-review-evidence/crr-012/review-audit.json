@@ -1,0 +1,73 @@
+{
+  "review": "CRR-012",
+  "intake": "08594fd388d3babdd4b4e83ef94b9f3e800c6a78",
+  "product": "3f67e36193c246ca08b49cda818be5c0f94eba51",
+  "tested": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+  "productCount": 127,
+  "productMismatches": [],
+  "testedProductDelta": [],
+  "durableDelta": [
+    "scripts/tests/test_nfs_release_signing.py"
+  ],
+  "testSha256": "9288b64dc076ddf7dd14c8f3877ff65070c9c105e835fa572d2eb173615485a2",
+  "protectedBaseline": {
+    "tickets/done/nfs-first-release/delivery-evidence/dr-012/commands.json": {
+      "sha256": "6e8b44ad9c71a5e6a83ba77b66aac7f900556c981f03d6d84a04eb9618db03da",
+      "bytes": 693217
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-012/staged-source-receipt.json": {
+      "sha256": "f4004de0966b33190f56e26dbcde3db32d602365d00426e360b2db711e794d51",
+      "bytes": 4266
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-012/verified-remote-workflow.yml": {
+      "sha256": "f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35",
+      "bytes": 16820
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-012/final-checks.json": {
+      "sha256": "a0ca015ba87e1fe7453ede5c18200d58fed4293f91edfc3504dc53304a5dd5d5",
+      "bytes": 1131
+    },
+    "tickets/done/nfs-first-release/delivery-evidence/dr-012/routing.json": {
+      "sha256": "349d54f6d12e7f831155994f9fc7e1e4b239b88ab560c5997b4c3b74e60edf13",
+      "bytes": 1782
+    },
+    "tickets/done/nfs-first-release/delivery-revision-record.md": {
+      "sha256": "5c4e1d8ac61d7160cd4e90d1cf81a357359fa608d47e834b99f9b66aed08ad55",
+      "bytes": 40410
+    },
+    "tickets/done/nfs-first-release/docs-sync-report.md": {
+      "sha256": "a0bfa34b7b4c5d5b46a5695023364c9028391cf8e6bdebf8c68d4e1b1fcb610c",
+      "bytes": 8977
+    },
+    "tickets/done/nfs-first-release/handoff-summary.md": {
+      "sha256": "c785b3d42c14d93d52a8e206c0110fe7d35fb07b2068ac79c0954b9ca77f0385",
+      "bytes": 29986
+    },
+    "tickets/done/nfs-first-release/release-deployment-report.md": {
+      "sha256": "a9cbbd3b33640ed4ab92c2bc8f5d04bf388b53f567c2883b952a90329c739eb7",
+      "bytes": 36501
+    },
+    "tickets/done/nfs-first-release/code-review-report.md": {
+      "sha256": "d5e7dac9dc355c8851c8cac20251fd5fd30aa5f2addecd54dc99a7402f46f329",
+      "bytes": 24700
+    },
+    "tickets/done/nfs-first-release/code-review-revision-record.md": {
+      "sha256": "ec62f2c5b7f986f952a823e6e225301d1e7ec5100bcbcef94b2399d997810477",
+      "bytes": 37230
+    },
+    "tickets/done/nfs-first-release/api-e2e-execution-coverage-report.md": {
+      "sha256": "e6fc146f5692db9b8213793560eb428fc1ba09e15e64f44cfde1397d58ed74f2",
+      "bytes": 13200
+    },
+    "tickets/done/nfs-first-release/api-e2e-revision-record.md": {
+      "sha256": "e435d3fbf6408662a6a1d64fbffdca000791e106f7e18dbfb510fa20d9b5570c",
+      "bytes": 17813
+    },
+    "tickets/done/nfs-first-release/api-e2e-test-review-report.md": {
+      "sha256": "1958e09e635c0c121d1a3bcda7564a1e3351e18a84b9d66c92202a9be9a90abd",
+      "bytes": 11545
+    }
+  },
+  "reviewerProductRuns": 0,
+  "reviewerRuntimeResources": []
+}

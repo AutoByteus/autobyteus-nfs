@@ -1,0 +1,14 @@
+{
+  "review": "CRR-012",
+  "result": "Pass",
+  "proportionalChecks": 9,
+  "sourceApiDeliveryAuthoritiesUnchanged": true,
+  "deliveryUncommittedFilesPreserved": 9,
+  "priorHistoryPrefixBytes": 37230,
+  "priorHistoryPrefixSha256": "ec62f2c5b7f986f952a823e6e225301d1e7ec5100bcbcef94b2399d997810477",
+  "all127ProductInputsMatch": true,
+  "reviewerProductRuns": 0,
+  "reviewerRuntimeResources": [],
+  "ownWhitespace": "Pass",
+  "scope": "NFS-only reviewer artifacts; actual signing/release unverified"
+}
