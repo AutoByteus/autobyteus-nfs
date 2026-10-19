@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "source": "DR013 actual hosted both-Mac signing/Accepted, carried by exact current byte equality",
+  "proof": {
+    "path": "tickets/done/nfs-first-release/delivery-evidence/dr-013/retained-payload-verification.json",
+    "sha256": "906bd29665951d3c63e63368fea8fe5fa49eec27ed4856acd155a42a91a8b3f0",
+    "gitCommit": "a7eb8a819c604358a5b01bd66b1fe1ffda313b19"
+  },
+  "apiCarry": {
+    "path": "tickets/done/nfs-first-release/evidence/R05-07-carried-signatures.json",
+    "sha256": "43c5c523209bc9054c9cb66446dd30d4a833fda9aaae0b5937e48fc7151a993e",
+    "gitCommit": "66ba73a38321656b223b34fd51d2248d5f47cb5d"
+  },
+  "signatures": {
+    "darwin-arm64": {
+      "archiveSha256": "cb320f7b0ef66814ef17dc476582bb220738e1faf20d99600bb18056e7d5468d",
+      "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408",
+      "codesignStrictExit": 0,
+      "DeveloperIdTeamTimestampRuntimeVerified": true,
+      "notary": {
+        "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408",
+        "status": "Accepted",
+        "submissionId": "52450985-4e16-482e-b22a-d7b15b8791b7",
+        "teamId": "7Y86YBQ7B4"
+      }
+    },
+    "darwin-amd64": {
+      "archiveSha256": "785fe38550e253194b4d08fb75e8f89f740d1c504bd931989c36e47348a1c71b",
+      "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e",
+      "codesignStrictExit": 0,
+      "DeveloperIdTeamTimestampRuntimeVerified": true,
+      "notary": {
+        "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e",
+        "status": "Accepted",
+        "submissionId": "563db88f-7ded-48ba-9d90-bcdbf8705961",
+        "teamId": "7Y86YBQ7B4"
+      }
+    }
+  },
+  "binding": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "limits": "Not fresh signing or public distribution verification; exact original final binaries remain unchanged."
+}

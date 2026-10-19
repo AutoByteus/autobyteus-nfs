@@ -61,3 +61,7 @@ Own reports/revision and dr012 evidence now record exact reviewed/current7bd486e
 ## DR-013 — actual signing success; public release remains partial
 
 Updated genuine stable native/control/source-review/readiness and measured engine lock for API006/CRR011/CRR012, retaining authorization/plan/notes and recipe/source/package pins. Independent actual-readiness check58/57executed/1skip passed. Current source finalization238 completed; actual BOTH-Mac hosted DeveloperID/Accepted and downloaded retained signed-payload signatures now proven. Own handoff/release/revision and dr013 evidence record publisher draft-lookup failure and exact immutable partial effects, not a signed-release completion. README/guide no-public-release wording stays accurate; no new prose promotion or source/guide changes. Notes were used in empty draft417014769. Same-payload recovery must preserve existing tag/assets identity; implementation owns the demonstrated lookup defect. Public install/OCI/signature/download/custody remain pending; field/user remainDeferred. No app/runtime/PM/Guide edits or duplicate Task.
+
+## DR-014 — genuine separate recovery authority
+
+Stable packaging/recovery/v0.1.0 records describe reviewed H/current executor separately from frozen original P/readiness/assets/signatures. Original release-lock/releases/notes unchanged. Current guides already correct; no additional source/prose change before actual outcome. Own handoff/release/revision current; public receipt/README promotion pending real recovery. No other-repo/PM/Guide/runtime edits.

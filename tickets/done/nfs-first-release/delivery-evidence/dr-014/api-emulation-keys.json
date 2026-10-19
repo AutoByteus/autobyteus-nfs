@@ -1,0 +1,28 @@
+{
+  "keys": [
+    "binding",
+    "case",
+    "command",
+    "completedRetryNoWrites",
+    "date",
+    "endpointCalls",
+    "environment",
+    "excludedDriftRefusal",
+    "executorHash",
+    "firstEffects",
+    "limits",
+    "missingKnownRefusal",
+    "pass",
+    "preflight",
+    "publicAssetCount",
+    "realAuthorizationCreated",
+    "realPayloadSource",
+    "result",
+    "retainedInputsUnchanged",
+    "reviewedH",
+    "syntheticAuthorityOnly",
+    "syntheticDriftCommit",
+    "syntheticE"
+  ],
+  "explicitLimit": "Synthetic authorization and all external effects emulated; never used as genuine authority"
+}

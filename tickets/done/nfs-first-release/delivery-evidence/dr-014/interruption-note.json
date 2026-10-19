@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-19T09:03:58.251772+00:00",
+  "status": "User interrupted read-only preparation; old process absent, no recovery authority yet, no owned source-projection scratch remains",
+  "externalEffects": "None; not dispatched",
+  "resume": "Repeat only incomplete read-only verification and genuine record preparation"
+}
