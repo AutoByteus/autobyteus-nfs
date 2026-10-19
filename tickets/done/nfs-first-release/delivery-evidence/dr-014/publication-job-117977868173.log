@@ -1,0 +1,269 @@
+﻿2026-10-19T09:07:28.1624092Z Current runner version: '2.337.0'
+2026-10-19T09:07:28.1650218Z ##[group]Runner Image Provisioner
+2026-10-19T09:07:28.1651082Z Hosted Compute Agent
+2026-10-19T09:07:28.1651779Z Version: 20261012.601
+2026-10-19T09:07:28.1652442Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-19T09:07:28.1653204Z Build Date: 2026-10-12T17:48:21Z
+2026-10-19T09:07:28.1653898Z Worker ID: {b64f47f5-2a0a-40c6-b4f6-037b57e4e41e}
+2026-10-19T09:07:28.1654600Z Region: westus2
+2026-10-19T09:07:28.1655200Z Cloud: Azure
+2026-10-19T09:07:28.1655813Z ##[endgroup]
+2026-10-19T09:07:28.1657790Z ##[group]Operating System
+2026-10-19T09:07:28.1658461Z Ubuntu
+2026-10-19T09:07:28.1658979Z 24.04.5
+2026-10-19T09:07:28.1659548Z LTS
+2026-10-19T09:07:28.1660111Z ##[endgroup]
+2026-10-19T09:07:28.1660652Z ##[group]Runner Image
+2026-10-19T09:07:28.1661312Z Image: ubuntu-24.04
+2026-10-19T09:07:28.1661880Z Version: 20261012.334.1
+2026-10-19T09:07:28.1663549Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T09:07:28.1665127Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-19T09:07:28.1666436Z ##[endgroup]
+2026-10-19T09:07:28.1667722Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T09:07:28.1670042Z Actions: read
+2026-10-19T09:07:28.1670695Z Contents: write
+2026-10-19T09:07:28.1671337Z Metadata: read
+2026-10-19T09:07:28.1671922Z Packages: write
+2026-10-19T09:07:28.1672464Z ##[endgroup]
+2026-10-19T09:07:28.1674614Z Secret source: Actions
+2026-10-19T09:07:28.1675563Z Cache mode: write
+2026-10-19T09:07:28.1676659Z Prepare workflow directory
+2026-10-19T09:07:28.2011524Z Prepare all required actions
+2026-10-19T09:07:28.2061507Z Getting action download info
+2026-10-19T09:07:28.5557967Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-19T09:07:28.6670865Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-19T09:07:28.9165080Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T09:07:29.1348467Z Complete job name: publish
+2026-10-19T09:07:29.2227808Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-19T09:07:29.2229437Z with:
+2026-10-19T09:07:29.2230205Z   ref: 3424f8dddef795d4a42e83ed8746268a4aab4d7d
+2026-10-19T09:07:29.2231207Z   fetch-depth: 0
+2026-10-19T09:07:29.2231971Z   persist-credentials: false
+2026-10-19T09:07:29.2232860Z   repository: AutoByteus/autobyteus-nfs
+2026-10-19T09:07:29.2239426Z   token: ***
+2026-10-19T09:07:29.2239900Z   ssh-strict: true
+2026-10-19T09:07:29.2240340Z   ssh-user: git
+2026-10-19T09:07:29.2240768Z   clean: true
+2026-10-19T09:07:29.2241236Z   sparse-checkout-cone-mode: true
+2026-10-19T09:07:29.2241860Z   fetch-tags: false
+2026-10-19T09:07:29.2242356Z   show-progress: true
+2026-10-19T09:07:29.2242813Z   lfs: false
+2026-10-19T09:07:29.2243222Z   submodules: false
+2026-10-19T09:07:29.2243730Z   set-safe-directory: true
+2026-10-19T09:07:29.2244262Z   allow-unsafe-pr-checkout: false
+2026-10-19T09:07:29.2245178Z ##[endgroup]
+2026-10-19T09:07:29.3249674Z Syncing repository: AutoByteus/autobyteus-nfs
+2026-10-19T09:07:29.3252308Z ##[group]Getting Git version info
+2026-10-19T09:07:29.3253700Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-19T09:07:29.3255820Z [command]/usr/bin/git version
+2026-10-19T09:07:29.3362366Z git version 2.55.0
+2026-10-19T09:07:29.3387199Z ##[endgroup]
+2026-10-19T09:07:29.3403561Z Temporarily overriding HOME='/home/runner/work/_temp/862b89d8-5595-4ee9-a7ee-f9d1cc67dbfb' before making global git config changes
+2026-10-19T09:07:29.3405863Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T09:07:29.3408509Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T09:07:29.3466569Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+2026-10-19T09:07:29.3472245Z ##[group]Initializing the repository
+2026-10-19T09:07:29.3475704Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T09:07:29.3609612Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T09:07:29.3611388Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T09:07:29.3612350Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T09:07:29.3613077Z hint: call:
+2026-10-19T09:07:29.3613489Z hint:
+2026-10-19T09:07:29.3614020Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T09:07:29.3614649Z hint:
+2026-10-19T09:07:29.3615229Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T09:07:29.3616616Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T09:07:29.3618011Z hint:
+2026-10-19T09:07:29.3618743Z hint: 	git branch -m <name>
+2026-10-19T09:07:29.3619537Z hint:
+2026-10-19T09:07:29.3620664Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T09:07:29.3622359Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+2026-10-19T09:07:29.3633963Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+2026-10-19T09:07:29.3687642Z ##[endgroup]
+2026-10-19T09:07:29.3689485Z ##[group]Disabling automatic garbage collection
+2026-10-19T09:07:29.3694390Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T09:07:29.3727537Z ##[endgroup]
+2026-10-19T09:07:29.3728777Z ##[group]Setting up auth
+2026-10-19T09:07:29.3734302Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T09:07:29.3767041Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T09:07:29.4208046Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T09:07:29.4247802Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T09:07:29.4466958Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T09:07:29.4501874Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T09:07:29.4725343Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T09:07:29.4766218Z ##[endgroup]
+2026-10-19T09:07:29.4767194Z ##[group]Fetching the repository
+2026-10-19T09:07:29.4776342Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-19T09:07:30.5330337Z From https://github.com/AutoByteus/autobyteus-nfs
+2026-10-19T09:07:30.5333135Z  * [new branch]      codex/extract-autobyteus-nfs -> origin/codex/extract-autobyteus-nfs
+2026-10-19T09:07:30.5336189Z  * [new branch]      codex/nfs-first-release -> origin/codex/nfs-first-release
+2026-10-19T09:07:30.5338672Z  * [new branch]      main                    -> origin/main
+2026-10-19T09:07:30.5340629Z  * [new tag]         v0.1.0                  -> v0.1.0
+2026-10-19T09:07:30.5345800Z [command]/usr/bin/git rev-parse --verify --quiet 3424f8dddef795d4a42e83ed8746268a4aab4d7d^{object}
+2026-10-19T09:07:30.5375421Z 3424f8dddef795d4a42e83ed8746268a4aab4d7d
+2026-10-19T09:07:30.5391104Z ##[endgroup]
+2026-10-19T09:07:30.5404768Z ##[group]Determining the checkout info
+2026-10-19T09:07:30.5407913Z ##[endgroup]
+2026-10-19T09:07:30.5409931Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T09:07:30.5455330Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T09:07:30.5501149Z ##[group]Checking out the ref
+2026-10-19T09:07:30.5505019Z [command]/usr/bin/git checkout --progress --force 3424f8dddef795d4a42e83ed8746268a4aab4d7d
+2026-10-19T09:07:30.7469756Z Note: switching to '3424f8dddef795d4a42e83ed8746268a4aab4d7d'.
+2026-10-19T09:07:30.7471182Z 
+2026-10-19T09:07:30.7472047Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-19T09:07:30.7474137Z changes and commit them, and you can discard any commits you make in this
+2026-10-19T09:07:30.7476778Z state without impacting any branches by switching back to a branch.
+2026-10-19T09:07:30.7478156Z 
+2026-10-19T09:07:30.7479024Z If you want to create a new branch to retain commits you create, you may
+2026-10-19T09:07:30.7481143Z do so (now or later) by using -c with the switch command. Example:
+2026-10-19T09:07:30.7482359Z 
+2026-10-19T09:07:30.7482857Z   git switch -c <new-branch-name>
+2026-10-19T09:07:30.7483667Z 
+2026-10-19T09:07:30.7484161Z Or undo this operation with:
+2026-10-19T09:07:30.7484939Z 
+2026-10-19T09:07:30.7485378Z   git switch -
+2026-10-19T09:07:30.7486233Z 
+2026-10-19T09:07:30.7487696Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-19T09:07:30.7489884Z 
+2026-10-19T09:07:30.7491294Z HEAD is now at 3424f8d Merge reviewed same-payload publication executor recovery
+2026-10-19T09:07:30.7497698Z ##[endgroup]
+2026-10-19T09:07:30.7540540Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T09:07:30.7571645Z 3424f8dddef795d4a42e83ed8746268a4aab4d7d
+2026-10-19T09:07:30.7581415Z ##[group]Removing auth
+2026-10-19T09:07:30.7586202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T09:07:30.7623631Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T09:07:30.7848710Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T09:07:30.7877958Z http.https://github.com/.extraheader
+2026-10-19T09:07:30.7886262Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T09:07:30.7923779Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T09:07:30.8142119Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T09:07:30.8175400Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T09:07:30.8398605Z ##[endgroup]
+2026-10-19T09:07:30.8786646Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-10-19T09:07:30.8788477Z with:
+2026-10-19T09:07:30.8789320Z   name: nfs-preflight
+2026-10-19T09:07:30.8790303Z   path: work
+2026-10-19T09:07:30.8791193Z   merge-multiple: false
+2026-10-19T09:07:30.8792272Z   repository: AutoByteus/autobyteus-nfs
+2026-10-19T09:07:30.8793465Z   run-id: 39227507554
+2026-10-19T09:07:30.8794395Z ##[endgroup]
+2026-10-19T09:07:31.0278866Z Downloading single artifact
+2026-10-19T09:07:31.0458804Z (node:2395) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T09:07:31.0464041Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T09:07:31.3016249Z Preparing to download the following artifacts:
+2026-10-19T09:07:31.3018745Z - nfs-preflight (ID: 12175520776, Size: 156764785, Expected Digest: sha256:26babc5163054ccb47a109e3c8edaa8d3d469b7b95f31146666f530d87d2c188)
+2026-10-19T09:07:31.5572365Z Redirecting to blob download url: https://productionresultssa12.blob.core.windows.net/actions-results/8cee4daa-ca91-4e13-a92b-8a234ed0a86a/workflow-job-run-0ad96c9a-80ad-5ba3-918a-82e363497149/artifacts/1356632f2bda9b3b2acf159f4f7d4c37f28eccc621e9795cdc63c3e7a42a4d4b.zip
+2026-10-19T09:07:31.5575439Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/work
+2026-10-19T09:07:31.8539157Z (node:2395) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-19T09:07:42.1087457Z SHA256 digest of downloaded artifact is 26babc5163054ccb47a109e3c8edaa8d3d469b7b95f31146666f530d87d2c188
+2026-10-19T09:07:42.1088745Z Artifact download completed successfully.
+2026-10-19T09:07:42.1089406Z Total of 1 artifact(s) downloaded
+2026-10-19T09:07:42.1095623Z Download artifact has finished successfully
+2026-10-19T09:07:42.1300068Z ##[group]Run sudo apt-get update
+2026-10-19T09:07:42.1300437Z [36;1msudo apt-get update[0m
+2026-10-19T09:07:42.1300814Z [36;1msudo apt-get install -y --no-install-recommends skopeo[0m
+2026-10-19T09:07:42.1301186Z [36;1mskopeo --version[0m
+2026-10-19T09:07:42.1601938Z shell: /usr/bin/bash -e {0}
+2026-10-19T09:07:42.1602232Z ##[endgroup]
+2026-10-19T09:07:42.2431054Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-19T09:07:42.2715130Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-19T09:07:42.2717047Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-19T09:07:42.2734541Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-19T09:07:42.2796949Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-19T09:07:42.2798454Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-19T09:07:42.3971316Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [557 kB]
+2026-10-19T09:07:42.4091437Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-19T09:07:42.4137215Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [618 kB]
+2026-10-19T09:07:42.4462688Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+2026-10-19T09:07:42.4550491Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+2026-10-19T09:07:42.4578050Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+2026-10-19T09:07:42.4660440Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+2026-10-19T09:07:42.4688978Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+2026-10-19T09:07:42.4795019Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-19T09:07:42.5908582Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1144 kB]
+2026-10-19T09:07:42.5976268Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-19T09:07:42.5980051Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+2026-10-19T09:07:42.6043097Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-19T09:07:42.6483735Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+2026-10-19T09:07:42.6564780Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+2026-10-19T09:07:45.5167789Z Fetched 12.5 MB in 1s (9810 kB/s)
+2026-10-19T09:07:46.4048938Z Reading package lists...
+2026-10-19T09:07:46.4352770Z Reading package lists...
+2026-10-19T09:07:46.6171159Z Building dependency tree...
+2026-10-19T09:07:46.6178781Z Reading state information...
+2026-10-19T09:07:46.7676319Z skopeo is already the newest version (1.13.3+ds1-2ubuntu0.24.04.3).
+2026-10-19T09:07:46.7677294Z 0 upgraded, 0 newly installed, 0 to remove and 44 not upgraded.
+2026-10-19T09:07:47.5057610Z skopeo version 1.13.3
+2026-10-19T09:07:47.5135565Z ##[group]Run set -euo pipefail
+2026-10-19T09:07:47.5136226Z [36;1mset -euo pipefail[0m
+2026-10-19T09:07:47.5136481Z [36;1mumask 077[0m
+2026-10-19T09:07:47.5136732Z [36;1mtrap 'rm -f "$REGISTRY_AUTH_FILE"' EXIT[0m
+2026-10-19T09:07:47.5137349Z [36;1mprintf '%s' "$GH_TOKEN" | skopeo login --authfile "$REGISTRY_AUTH_FILE" --username "$GITHUB_ACTOR" --password-stdin ghcr.io[0m
+2026-10-19T09:07:47.5137953Z [36;1mif [[ "$MODE" == fresh ]]; then[0m
+2026-10-19T09:07:47.5138835Z [36;1m  python3 packaging/release.py --operation bind --directory work/payload --candidate work/candidate --artifact-id "$ARTIFACT" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" --output work/binding.json[0m
+2026-10-19T09:07:47.5139686Z [36;1mfi[0m
+2026-10-19T09:07:47.5140357Z [36;1mpython3 packaging/release.py --operation publish --directory work/payload --candidate work/candidate --binding work/binding.json --output publication-receipt.json[0m
+2026-10-19T09:07:47.5206577Z shell: /usr/bin/bash -e {0}
+2026-10-19T09:07:47.5206838Z env:
+2026-10-19T09:07:47.5209332Z   GH_TOKEN: ***
+2026-10-19T09:07:47.5209559Z   MODE: recover
+2026-10-19T09:07:47.5209757Z   ARTIFACT: 
+2026-10-19T09:07:47.5210065Z   REGISTRY_AUTH_FILE: /home/runner/work/_temp/nfs-registry-auth.json
+2026-10-19T09:07:47.5210432Z ##[endgroup]
+2026-10-19T09:07:47.9187881Z Login Succeeded!
+2026-10-19T09:09:41.4963616Z Traceback (most recent call last):
+2026-10-19T09:09:41.4964757Z   File "/home/runner/work/autobyteus-nfs/autobyteus-nfs/packaging/release.py", line 138, in <module>
+2026-10-19T09:09:41.4965801Z     main()
+2026-10-19T09:09:41.4966890Z   File "/home/runner/work/autobyteus-nfs/autobyteus-nfs/packaging/release.py", line 126, in main
+2026-10-19T09:09:41.4968403Z     result = publication.publish(args.directory, args.candidate, i.read_json(args.binding), args.output)
+2026-10-19T09:09:41.4969637Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-19T09:09:41.4971037Z   File "/home/runner/work/autobyteus-nfs/autobyteus-nfs/packaging/release_support/publication.py", line 414, in publish
+2026-10-19T09:09:41.4972692Z     image_receipt = promote(candidate_dir, binding['version'], existing['draft'], ctx.source, guard)
+2026-10-19T09:09:41.4973828Z                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-19T09:09:41.4975165Z   File "/home/runner/work/autobyteus-nfs/autobyteus-nfs/packaging/release_support/publication.py", line 343, in promote
+2026-10-19T09:09:41.4976360Z     i.command('skopeo', 'copy', '--all', '--preserve-digests', '--src-authfile', auth,
+2026-10-19T09:09:41.4977057Z   File "/home/runner/work/autobyteus-nfs/autobyteus-nfs/packaging/release_support/identity.py", line 172, in command
+2026-10-19T09:09:41.4978150Z     return subprocess.run([str(x) for x in args], cwd=cwd, input=input, check=True,
+2026-10-19T09:09:41.4978888Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-19T09:09:41.4979285Z   File "/usr/lib/python3.12/subprocess.py", line 571, in run
+2026-10-19T09:09:41.4979669Z     raise CalledProcessError(retcode, process.args,
+2026-10-19T09:09:41.4981200Z subprocess.CalledProcessError: Command '['skopeo', 'copy', '--all', '--preserve-digests', '--src-authfile', '/tmp/nfs-public-oci-wz9ph1mw/empty-auth.json', 'docker://ghcr.io/autobyteus/autobyteus-nfs@sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec', 'oci-archive:/tmp/nfs-public-oci-wz9ph1mw/anonymous.oci.tar']' returned non-zero exit status 1.
+2026-10-19T09:09:41.5144636Z ##[error]Process completed with exit code 1.
+2026-10-19T09:09:41.5223606Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T09:09:41.5224030Z with:
+2026-10-19T09:09:41.5224243Z   name: nfs-publication-receipt
+2026-10-19T09:09:41.5224522Z   path: publication-receipt.json
+2026-10-19T09:09:41.5224777Z   retention-days: 90
+2026-10-19T09:09:41.5224997Z   if-no-files-found: warn
+2026-10-19T09:09:41.5225415Z   compression-level: 6
+2026-10-19T09:09:41.5225627Z   overwrite: false
+2026-10-19T09:09:41.5226093Z   include-hidden-files: false
+2026-10-19T09:09:41.5226402Z ##[endgroup]
+2026-10-19T09:09:41.6816699Z (node:4158) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T09:09:41.6817718Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T09:09:41.6886757Z With the provided path, there will be 1 file uploaded
+2026-10-19T09:09:41.6897058Z Artifact name is valid!
+2026-10-19T09:09:41.6897712Z Root directory input is valid!
+2026-10-19T09:09:42.0909960Z Beginning upload of artifact content to blob storage
+2026-10-19T09:09:42.1090986Z (node:4158) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T09:09:42.3673050Z Uploaded bytes 977
+2026-10-19T09:09:42.4437994Z Finished uploading artifact content to blob storage!
+2026-10-19T09:09:42.4439112Z SHA256 digest of uploaded artifact zip is 9ded7ff6bd7f69123adca045ae95ef7403448ff4f2edc86526ded78a131a6077
+2026-10-19T09:09:42.4440970Z Finalizing artifact upload
+2026-10-19T09:09:42.7293101Z Artifact nfs-publication-receipt.zip successfully finalized. Artifact ID 12174004505
+2026-10-19T09:09:42.7294680Z Artifact nfs-publication-receipt has been successfully uploaded! Final size is 977 bytes. Artifact ID is 12174004505
+2026-10-19T09:09:42.7298801Z Artifact download URL: https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39227507554/artifacts/12174004505
+2026-10-19T09:09:42.7498121Z Post job cleanup.
+2026-10-19T09:09:42.8331422Z [command]/usr/bin/git version
+2026-10-19T09:09:42.8373315Z git version 2.55.0
+2026-10-19T09:09:42.8411613Z Temporarily overriding HOME='/home/runner/work/_temp/9328fee6-6367-4681-b79c-254c945167c7' before making global git config changes
+2026-10-19T09:09:42.8412979Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T09:09:42.8417058Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+2026-10-19T09:09:42.8457014Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T09:09:42.8493066Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T09:09:42.8744514Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T09:09:42.8799251Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T09:09:42.9073994Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-19T09:09:42.9111305Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-19T09:09:42.9539798Z Cleaning up orphan processes
+2026-10-19T09:09:42.9864477Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

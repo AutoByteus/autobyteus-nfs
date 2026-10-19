@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-19T09:05:38.760933+00:00",
+  "ticketCommit": "c42176afc6603a77c7e3d0e183015ebee407f043",
+  "freshTargetBefore": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "executorCommit": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "payloadSource": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "policy": "fresh finalize --no-ff, exact tree equality and actual committed admission check",
+  "remoteHeads": {
+    "refs/heads/codex/nfs-first-release": "c42176afc6603a77c7e3d0e183015ebee407f043",
+    "refs/heads/main": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+    "refs/tags/v0.1.0": "f4a04fd0c80a6625708ba002b4cef5507a03f514"
+  },
+  "workflowSha256": "c86062e3c07e931b4df290b5bb1372efbe2f95ae204190964bf171f5249695f9",
+  "remoteWorkflowBytesEqual": true,
+  "sourceFinalization": "Completed",
+  "release": "Not yet dispatched",
+  "canonicalCheckoutUntouched": true
+}

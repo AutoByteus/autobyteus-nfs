@@ -7,7 +7,8 @@ between trusted computers. It does not sync, copy or back up projects.
 no successful public release is claimed yet. Current native/build, release-control,
 source-review and release-first authorization evidence has been accepted in
 [the stable v0.1.0 readiness record](packaging/releases/v0.1.0/readiness.json).
-Actual signing/notarization and public download receipts remain pending. Shared-filesystem/physical and user testing
+Both Mac payloads have passed Developer ID signing and Apple notarization.
+Public distribution/download verification remains pending; the release is still a draft. Shared-filesystem/physical and user testing
 is **deferred until after publication**, not passed or a release prerequisite.
 Distribution/signature checks are not field qualification.
 The application Guide stays disabled; internal CI candidates are not public
