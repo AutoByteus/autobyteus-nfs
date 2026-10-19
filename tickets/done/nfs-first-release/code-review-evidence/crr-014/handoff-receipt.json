@@ -1,0 +1,14 @@
+{
+  "revision": "CRR-014",
+  "result": "Pass",
+  "reviewCommit": "09de17ba419f4cdf10d15eccbd375774b451aa6c",
+  "recipient": "/software_engineering_team/delivery_engineer",
+  "receipt": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/delivery_engineer.",
+    "target_agent_run_id": "delivery_engineer_97aea298f55141d4be9a3662f140848f"
+  },
+  "onlyOutcomeDispatch": true,
+  "actualPublicationClaimed": false
+}
