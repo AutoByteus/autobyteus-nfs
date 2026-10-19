@@ -329,3 +329,44 @@ and revision record updated; supplemental receipt goes to the existing reviewer.
   reset/replay/target merge, release, PM mutation, TaskDone or Terminal. Retained
   candidates/local diagnostic and other owners untouched; all owned scratch gone.
   Evidence IMP-07-*; previous handoff retained under implementation-evidence/ir-007/.
+
+
+## Revision Index Addition
+
+| Revision ID | Triggering Role / Report / Round | Finding IDs | Classification | Related Revision IDs | Result |
+| --- | --- | --- | --- | --- | --- |
+| IR-008 | Delivery / release-deployment-report.md / DR013 | N/A — actual draft-discovery publisher failure | Design Impact | R3/SR004, ARCH002; IR007/API006/CRR012 exact-input success | Dependent implementation held; corrected executor vs immutable payload contract required |
+
+### IR-008 — Immutable recovery executor authority gap
+
+- Intake a7eb8a819c604358a5b01bd66b1fe1ffda313b19; production unchanged. Prior IR007
+  local correction now has actual BOTH-Mac DeveloperID/Accepted success through
+  DR013 run39215470944/1 at finalized main238. No new credential/signing repair.
+  API006/CRR012 scopes carry; original DR005/009/011 failures not rewritten.
+- New actual publisher defect: by-tag404 despite exact owned draft417014769;
+  release()/reconcile_release() dereferences None. Offline replay of the saved
+  draft/body plus list/direct-ID availability reproduces exact TypeError and
+  confirms current code never asks those endpoints. No real API/create action.
+- BEH001/002/003 and DS5: publisher bytes are production-hashed; prepare binds
+  executing dispatch/current main, candidate.verify current source hash,
+  tag_binding payload source, payload.verify HEAD, and fresh_main bound source.
+  Disposable hash-marker and new-executor controls prove changed code refuses
+  original candidate/tag/payload/main under the present contract. These guards
+  were NOT weakened, and a new signed payload cannot replace the immutable one.
+- Current result **Design Impact**, not completed Local Fix. Need a narrow reviewed
+  executor-vs-bound-payload recovery contract plus bounded draft discovery before
+  dependent implementation. No changed user intent/new version/field approval
+  proposed. R3/SR004/ARCH002 and Large/High retained; updated technical design
+  required through normal route. Current IR008 CRR/API N/A (investigation only).
+- No production/durable-test edits, framework, compatibility path, source hash
+  exemption or manual publication. IMP-08-01/02/03 record evidence/limits/audit;
+  prior handoff under implementation-evidence/ir-008/. Probe executed with offline
+  doubles/owned synthetic payload and cleaned scratch; unused probe imports/dead
+  assignment removed and same-semantic probe rerun. No unexpected test failure.
+- Preserve tagf4a04fd0→238, draft417014769, payload12169472209/run39215470944/1,
+  original receipt/bytes and candidateAPI006, all main238/72/f830/768 ancestors.
+  Source hash3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086 unchanged.
+  No push, dispatch, tag/draft/delete/reset/upload, re-sign/rebuild or live host/PM
+  changes. Delivery owns remaining actual publication checks; field/user Deferred.
+- Route only Solution Designer for this demonstrated technical gap. No duplicate
+  source/API/Delivery dispatch, no delegation, TaskDone or Terminal claim.

@@ -1,0 +1,10 @@
+{
+  "check": "IMP-08-04",
+  "command": "get_handoff_rules; single most-specific Design Impact selection",
+  "commit": "a7eb8a819c604358a5b01bd66b1fe1ffda313b19",
+  "date": "2026-10-19",
+  "environment": "team routing",
+  "selectedWhen": "When implementation identifies a Design Impact, Requirement Gap, or Unclear issue that must be resolved in the requirements or design before implementation continues.",
+  "recipient_address": "/software_engineering_team/solution_designer",
+  "duplicateDispatch": false
+}

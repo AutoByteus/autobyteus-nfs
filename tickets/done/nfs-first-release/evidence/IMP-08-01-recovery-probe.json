@@ -1,0 +1,27 @@
+{
+  "check": "IMP-08-01",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 tickets/done/nfs-first-release/evidence/IMP-08-01-recovery-probe.py",
+  "commit": "a7eb8a819c604358a5b01bd66b1fe1ffda313b19",
+  "environment": "Darwin arm64/Python3.9.6, offline command doubles and own fixture copy",
+  "date": "2026-10-19",
+  "remoteCalls": false,
+  "productionModified": false,
+  "retainedInputsModified": false,
+  "draftLookup": {
+    "releaseReturnedNone": true,
+    "exception": "'NoneType' object is not subscriptable",
+    "listOrIdRequested": false,
+    "mockCreateAttempts": 1,
+    "realEffects": false
+  },
+  "publisherHash": {
+    "before": "3e1af43a4191c17ddf8a5d6043a1e374c5cd0101f2ac18dd6ee9fee79c131086",
+    "afterDisposableMarker": "0eda1760c97aefe14ff9af0ec3b8e2fc143cd31bd30ef7b213baaadd5ef21b1a",
+    "changed": true
+  },
+  "newExecutorTagRefusal": "Published tag points to different source",
+  "newExecutorPayloadRefusal": "Publication inputs differ",
+  "advancedMainRefusal": "Remote main advanced; reintegrate before publication",
+  "allExpectedObservationsConfirmed": true,
+  "ownedScratchRemoved": true
+}
