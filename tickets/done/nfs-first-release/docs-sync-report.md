@@ -48,6 +48,8 @@ DR009 final outcome: source/main finalizedf830 after e801 readiness/docs commit;
 
 Own handoff/release/revision records and staging evidence now distinguish exact remote1c00b7a from local docs-only6bc8979; all127 product inputs equal reviewedIR006. Source availability only: no runtime, guide, readiness, public notes or release-behavior change. Current guide already accurately describes fixed observation categories and unresolved actual cause; no extra long-lived prose needed. Mainf830 untouched, API-owned files unstaged/preserved, own records uncommitted. DR009 actual hosted failure remains unresolved.
 
-## Active DR-011 — actual API005 readiness preparation
+## DR-011 — current readiness accepted; actual signing remains blocked
 
 Updated stable native/control/source-review/readiness and engine lock to actual API005/CRR009/CRR010 evidence. Only the two measured engine buildInventory hashes changed versus prior lock; recipe/source/package pins and approved authorization/plan/notes unchanged. Own active handoff/release report separates prepublication acceptance from unresolved real codesign failure. Current long-lived README/packaging guide correctly remain preparatory; no additional runtime/workflow/test/guide edit. Actual source finalization, hosted signing/public effects and final outcome still pending.
+
+DR011 final outcome: ticket a55/source main72b8a4 finalized; actual signed run39210821088 failed both Macs at sign/exit1/cleanupcomplete/**unclassified**. Own reports/history now record actual category limits, failed public gates, final remote404 and safe recovery retention. README/package guide remain accurately preparatory; no extra source/test/workflow/license/pin/guide edits. Current diagnostic source did not fix or identify the root cause. Release notes unchanged/unpublished. Existing DR005/009 and localDR007 histories preserved; no false chain/credential attribution or field qualification.

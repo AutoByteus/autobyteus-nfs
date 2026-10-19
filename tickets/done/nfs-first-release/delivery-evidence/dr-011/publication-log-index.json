@@ -1,0 +1,89 @@
+[
+  {
+    "id": 117923567143,
+    "name": "prepare",
+    "conclusion": "success",
+    "path": "publication-job-117923567143.log",
+    "sha256": "c7cb00bd9be48fdf5efb1719ce494c601f52b884c57ad082cf8575220eafdd21",
+    "observedLines": [
+      "2026-10-19T06:36:14.6512573Z Ran 56 tests in 24.906s",
+      "2026-10-19T06:36:14.6512934Z OK (skipped=1)"
+    ]
+  },
+  {
+    "id": 117923767921,
+    "name": "binaries (ubuntu-24.04, linux, amd64)",
+    "conclusion": "success",
+    "path": "publication-job-117923767921.log",
+    "sha256": "4fe97594858217b727102eaae824ce4d8dc6a7f7922c5a3d71dbe93b73350323",
+    "observedLines": [
+      "2026-10-19T06:37:13.6368732Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.104s",
+      "2026-10-19T06:37:14.4033136Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.191s",
+      "2026-10-19T06:37:14.4033782Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.049s",
+      "2026-10-19T06:37:14.4034323Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.025s",
+      "2026-10-19T06:37:16.8711316Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.231s",
+      "2026-10-19T06:37:16.8712428Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.013s",
+      "2026-10-19T06:37:16.8713211Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.130s",
+      "2026-10-19T06:37:56.4770208Z Ran 56 tests in 24.339s",
+      "2026-10-19T06:37:56.4770758Z OK (skipped=1)"
+    ]
+  },
+  {
+    "id": 117923767924,
+    "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+    "conclusion": "success",
+    "path": "publication-job-117923767924.log",
+    "sha256": "1a06a9ed8b0c8b20f14381a16b8762f53c2a731dc44d029375468d7e8bccbcc9",
+    "observedLines": [
+      "2026-10-19T06:37:00.0954765Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t2.069s",
+      "2026-10-19T06:37:00.0955506Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.595s",
+      "2026-10-19T06:37:00.0956556Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.544s",
+      "2026-10-19T06:37:00.0957055Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+      "2026-10-19T06:37:02.7174099Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.198s",
+      "2026-10-19T06:37:02.7174618Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+      "2026-10-19T06:37:02.7175066Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.112s",
+      "2026-10-19T06:37:32.4382362Z Ran 56 tests in 20.093s",
+      "2026-10-19T06:37:32.4382594Z OK (skipped=1)"
+    ]
+  },
+  {
+    "id": 117923767945,
+    "name": "binaries (macos-15, darwin, arm64)",
+    "conclusion": "failure",
+    "path": "publication-job-117923767945.log",
+    "sha256": "04f98110a2d6abada2571811e9497ebf90c925806e91f6f216fd6833f0ccd6cc",
+    "observedLines": [
+      "2026-10-19T06:37:26.6253420Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.149s",
+      "2026-10-19T06:37:27.1970410Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.166s",
+      "2026-10-19T06:37:27.3340180Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.069s",
+      "2026-10-19T06:37:27.7855090Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.153s",
+      "2026-10-19T06:37:31.0390380Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.833s",
+      "2026-10-19T06:37:31.0442570Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.133s",
+      "2026-10-19T06:37:31.0447200Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.456s",
+      "2026-10-19T06:38:11.2311220Z Ran 56 tests in 27.111s",
+      "2026-10-19T06:38:11.2311530Z OK (skipped=1)",
+      "2026-10-19T06:38:21.0322400Z Signing failed: stage=sign exit=1 cleanup=complete diagnostic=unclassified",
+      "2026-10-19T06:38:21.0337950Z ##[error]Process completed with exit code 1."
+    ]
+  },
+  {
+    "id": 117923767978,
+    "name": "binaries (macos-15-intel, darwin, amd64)",
+    "conclusion": "failure",
+    "path": "publication-job-117923767978.log",
+    "sha256": "d2981db9afbc8dce598d6e737d60c3c5fa6aaaf05c0de1b0d08cfc7f2f7ecff4",
+    "observedLines": [
+      "2026-10-19T06:38:04.9212330Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.620s",
+      "2026-10-19T06:38:05.5265980Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.191s",
+      "2026-10-19T06:38:05.5288010Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.191s",
+      "2026-10-19T06:38:05.5289830Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.051s",
+      "2026-10-19T06:38:08.9965210Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.051s",
+      "2026-10-19T06:38:08.9972390Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.078s",
+      "2026-10-19T06:38:08.9976110Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.947s",
+      "2026-10-19T06:39:41.1962170Z Ran 56 tests in 65.995s",
+      "2026-10-19T06:39:41.1962690Z OK (skipped=1)",
+      "2026-10-19T06:40:11.4344380Z Signing failed: stage=sign exit=1 cleanup=complete diagnostic=unclassified",
+      "2026-10-19T06:40:11.4382320Z ##[error]Process completed with exit code 1."
+    ]
+  }
+]

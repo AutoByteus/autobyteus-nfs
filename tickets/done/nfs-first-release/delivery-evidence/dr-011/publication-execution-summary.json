@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-19T06:42:57.412200+00:00",
+  "deliveryRevision": "DR-011",
+  "result": "Blocked",
+  "classification": "Local Fix",
+  "sourceFinalization": "Completed",
+  "run": 39210821088,
+  "attempt": 1,
+  "sourceWorkflowCommit": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "candidateRun": 39208967217,
+  "runConclusion": "failure",
+  "jobCounts": {
+    "success": 3,
+    "failure": 2,
+    "skipped": 6
+  },
+  "allTriggeredPipelinesCompleted": true,
+  "nativeChecks": "Four native race7packages/vet/Python56collected55executed1expectedskip/build/version passed; two Linux archives retained; Mac archive steps skipped after signing failed",
+  "signingReceipts": [
+    {
+      "artifactId": 12168125405,
+      "artifactName": "nfs-signing-darwin-amd64",
+      "wrapperSha256": "24f8bebfb8bd05f74a2e9874d85d496f93999153858eeaffc90f1bab582274ec",
+      "member": "darwin-amd64-notary-failure.json",
+      "memberSha256": "b96f5ba5420f4ca7434a9256707920f7396719dd49f207685840520e9a1c63fe",
+      "receipt": {
+        "schema": 1,
+        "status": "Failed",
+        "stage": "sign",
+        "exitCode": 1,
+        "cleanup": "complete",
+        "diagnostic": "unclassified"
+      }
+    },
+    {
+      "artifactId": 12167413587,
+      "artifactName": "nfs-signing-darwin-arm64",
+      "wrapperSha256": "1393349e5847f5a929281c384a6ec4f03fc8ba7bf42a631291a3f4d2710a8487",
+      "member": "darwin-arm64-notary-failure.json",
+      "memberSha256": "b96f5ba5420f4ca7434a9256707920f7396719dd49f207685840520e9a1c63fe",
+      "receipt": {
+        "schema": 1,
+        "status": "Failed",
+        "stage": "sign",
+        "exitCode": 1,
+        "cleanup": "complete",
+        "diagnostic": "unclassified"
+      }
+    }
+  ],
+  "finalPayload": "Not produced; payload skipped",
+  "publication": "Publisher skipped; tag/release/exact package404 at fresh inventory",
+  "publicChecks": "Not reached",
+  "fieldUserTesting": "Deferred by R3, not a gate",
+  "evidence": [
+    "publication-jobs-final.json",
+    "publication-log-index.json",
+    "signing-artifact-receipts.json",
+    "remote-after-failure.json",
+    "triggered-runs-final.json"
+  ]
+}

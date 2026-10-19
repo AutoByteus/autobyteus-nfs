@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-19T06:43:23.545124+00:00",
+  "inputHead": "72b8a4aeb3a92a03526d3538e8cbcba30e4d7aa2",
+  "protectedTrackedInputsEqualFinalizedHead": 1810,
+  "ownChangedDocs": [
+    "tickets/done/nfs-first-release/handoff-summary.md",
+    "tickets/done/nfs-first-release/docs-sync-report.md",
+    "tickets/done/nfs-first-release/release-deployment-report.md",
+    "tickets/done/nfs-first-release/delivery-revision-record.md"
+  ],
+  "priorRevisionRecordPrefixUnchanged": true,
+  "newFilesOnlyOwnDR011": true,
+  "rawLogsChecked": [
+    {
+      "path": "publication-job-117923767921.log",
+      "sha256": "4fe97594858217b727102eaae824ce4d8dc6a7f7922c5a3d71dbe93b73350323",
+      "credentialEnvironmentLinesMasked": []
+    },
+    {
+      "path": "publication-job-117923567143.log",
+      "sha256": "c7cb00bd9be48fdf5efb1719ce494c601f52b884c57ad082cf8575220eafdd21",
+      "credentialEnvironmentLinesMasked": []
+    },
+    {
+      "path": "publication-job-117923767924.log",
+      "sha256": "1a06a9ed8b0c8b20f14381a16b8762f53c2a731dc44d029375468d7e8bccbcc9",
+      "credentialEnvironmentLinesMasked": []
+    },
+    {
+      "path": "publication-job-117923767945.log",
+      "sha256": "04f98110a2d6abada2571811e9497ebf90c925806e91f6f216fd6833f0ccd6cc",
+      "credentialEnvironmentLinesMasked": [
+        "CERTIFICATE",
+        "PASSWORD",
+        "IDENTITY",
+        "APPLE_ID",
+        "APPLE_APP_SPECIFIC_PASSWORD",
+        "APPLE_TEAM_ID"
+      ]
+    },
+    {
+      "path": "publication-job-117923767978.log",
+      "sha256": "d2981db9afbc8dce598d6e737d60c3c5fa6aaaf05c0de1b0d08cfc7f2f7ecff4",
+      "credentialEnvironmentLinesMasked": [
+        "CERTIFICATE",
+        "PASSWORD",
+        "IDENTITY",
+        "APPLE_ID",
+        "APPLE_APP_SPECIFIC_PASSWORD",
+        "APPLE_TEAM_ID"
+      ]
+    }
+  ],
+  "portablePathsChecked": 1837,
+  "portablePathErrors": [],
+  "readinessScratchAbsent": true,
+  "boundedMonitorProcessQueryNoMatches": true,
+  "releaseNotesUnchangedSha256": "c777659d84198f3bd79531ef89cf8be22af392e9a68057ae509a3e885860c61e",
+  "currentCandidate": "Retained unchanged; all verification read-only",
+  "canonicalCheckoutPMOtherProjectsAction": "None by Delivery; no restoration or staging",
+  "retainedResources": "Active worktree/branches/current and historical candidates/private local diagnostic for required recovery",
+  "commitPlan": "Local explicit own-doc/evidence checkpoint, no main push or new run"
+}
