@@ -73,3 +73,5 @@ Retain **/Users/normy/nfs-first-candidate-api006-a8aune30/candidate** under pare
 
 ## Next / result authority
 **API006 scoped prepublication Pass95.00%; original hosted cause and actual signed release still UNVERIFIED.** CRR011 source repair accepted; this build-only success does not execute signer or prove DR011 root cause resolved. DR005/009/011 remain failed history. Fresh most-specific successful-test route after committed evidence, then normal Delivery current readiness/fresh-main/signing+Accepted/finalpayload/immutable public bytes/signature/install/plan-custody gates. Preserve main72b8a4/f830/768 ancestry; no replay/reset. API made no push/real signing/publication/TaskDone/user-verification/Terminal claim.
+
+Evidence commit `a3c8a1acb5eb3ede619b10e3279e86625ef85d7a`. Fresh rule selects **/software_engineering_team/code_reviewer** for proportional successful-test review of IR007 signing coverage; C01-06-routing.json. No duplicate Delivery/Designer/Implementation dispatch.
