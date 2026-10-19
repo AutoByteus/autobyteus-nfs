@@ -1,0 +1,17 @@
+{
+  "revision": "CRR-014",
+  "pass": true,
+  "checks": [
+    "130 current non-ticket files equal final source/tests22205cc and actual API-tested6cb497f",
+    "Nine proportional checks Pass; no new findings",
+    "Ten selected authoritative documents hash-unchanged",
+    "CRR001\u2013013 entire43621-byte prefix preserved",
+    "Only own report/history/evidence changed",
+    "No product checks rerun or source/tests edited",
+    "No real recovery authorization created; no remote/runtime resource activity"
+  ],
+  "cleanup": "No runtime resources or scratch created by reviewer",
+  "sourceReportUnchanged": true,
+  "apiDeliveryVerdictsUnchanged": true,
+  "actualPublicationClaimed": false
+}

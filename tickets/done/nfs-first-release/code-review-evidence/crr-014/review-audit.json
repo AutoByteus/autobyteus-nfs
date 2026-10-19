@@ -1,0 +1,29 @@
+{
+  "head": "f8ea0cce8a9d04b171a365b6710251b5d5561e30",
+  "productInputCount": 130,
+  "allEqualSourceAndTested": true,
+  "historyPrefixBytes": 43621,
+  "historyPrefixSHA256": "2e9279e045ed5db3ee16e14253b42ebc3e53af4ac2bec69e208ca8a94b137970",
+  "protected": {
+    "code-review-report.md": "e5493f85fe0b745c43cfbdcbb9d34dde468fd81f0aefeff9c588d0b0279d087e",
+    "requirements-doc.md": "d6a35bfcc43de7393cf070a6aca5be64faef990764df94e53ca2aca6e1d1b016",
+    "design-spec.md": "252f693f2419277d7b121ac77b29edc955556dfe95d3de8bc7eab457785507ac",
+    "design-review-report.md": "9de5c16f663694f26ed2c64267fb4fc96f178f5fc88fd2a62f2b84f27cf2cd57",
+    "api-e2e-execution-coverage-report.md": "9636a2e0360ea06c006682d8f8995c1169d61ca9940d7bf245de89485675df08",
+    "api-e2e-coverage-investigation.md": "adbf6be7fe2bfa1670cbdb9555a209ca9e7e70aaa57101659e2db542a753cee5",
+    "api-e2e-revision-record.md": "cac21e085ddc195e7561778d5667fb0b9a005ac34674c7cc29e0187d9a8e78c3",
+    "implementation-handoff.md": "7506448cce4ca2476b1ca8b858579cfcef62c4190deba917fdaab487836d3348",
+    "delivery-revision-record.md": "cc8e499312613d27f0ad61025f3f11c31a721107aae876677584db12d5fd5c60",
+    "handoff-summary.md": "836bf368faa0865b6fd2dc2bdb67991912323fc47b6dade77d0248ad5c70ca6f"
+  },
+  "realAuthorizationAbsent": true,
+  "noReviewerProductChecksExecuted": true,
+  "revision": "CRR-014",
+  "result": "Pass",
+  "entrypoint": "Successful API/E2E Test-Code Review",
+  "scope": "Seven cumulative IR009 durable test paths; API007 no durable delta",
+  "productReruns": 0,
+  "newFindings": [],
+  "newFollowups": [],
+  "realPublicationClaimed": false
+}

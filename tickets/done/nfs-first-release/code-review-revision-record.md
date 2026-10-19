@@ -304,3 +304,21 @@ None — CRR001 had no findings. Its historical report remains in Git at c1f1330
 | Revision | Canonical report | Trigger | Prior source result | Current result | Findings |
 | --- | --- | --- | --- | --- | --- |
 | CRR-013 | code-review-report.md | IR009/SR005 ARCH003/DR013 | CRR011Pass100 | Pass100 — source scope | None; publication incomplete |
+
+
+### CRR-014 — SR005 successful recovery-test/evidence review
+
+- Date2026-10-19; **Successful API/E2E Test-Code Review / round14**, proportional seven-path cumulative IR009 scope, no source scorecard or full-source re-audit. Canonical api-e2e-test-review-report.md updated; source report CRR013 unchanged.
+- **Pass**. Trigger API007 affected executorPass95; R3/SR004 Approved, SR005 Ready/ARCH003, IR009, DR013. Large/High unchanged. Intakef8ea0cce8a9d04b171a365b6710251b5d5561e30; tested6cb497f4a0bb83d52ddfc41b5aaad95a8e482440; source/tests22205cc84a29e6aa66ba5673b0a60c8db95ddc80, production4c665e0. All130 current non-ticket inputs equal both final source/tests and tested executor.
+- Prior applicable test result CRR012 Pass; prior unresolved test findings **None**. New findings/follow-ups **None**, no failure classification/deduction. Source CR-001/002 remain resolved, CRR013Pass100 remains separate authority.
+- Reviewed fixture, packaging, publication, records, recovery, workflow and source-identity tests. Actual DR013 interruption/SCN006 and identity/immutability contracts establish the scenario; nine proportional checks pass. API authored no durable/source delta. R07 temporary probe reviewed as evidence only.
+- Checks Run read first; reused full72collected71executed1expectedGo-childskip at4c665 plus finalpublication15 at22205cc (overlap, not full76), sixmutants/static controls. No reviewer product rerun, retained-asset access or remote execution.
+- Fresh API inspect-bound/GET proof verifies original P payload/envelope/job and exact draft417014769/0assets; missing authority/default candidate refuse. DR013 actual both-Mac Accepted/signatures carry through fresh exact archive/binary equality, not a new Apple or public download run.
+- R07 traverses actual current full admission/prepare/publish on actual retained bytes with synthetic authority only in removed clone.18 actual-byte streams reach fake HTTPS; all external mutations/OCI/public-download/install effects emulated. Synthetic published result is NOT real release evidence. Known-missing/no-recreate, completed retry no writes and hash-excluded drift controls pass.
+- API0078 scoped casesPass/43Deferred/2Downstream; actual DR013 publication remains Blocked. Delivery still owns genuine reviewed-H authority/fresh E integration/authorized same-byte hosted recovery/wholeOCI/public bytes/downloads/install/signatures/finalization/custody. Preserve P/tag/draft/artifact12169472209 and retained original bytes; no new candidate/build/sign solely for executor repair.
+- CRR001–013 entire43621-byte prefix preserved, SHA2e9279e045ed5db3ee16e14253b42ebc3e53af4ac2bec69e208ca8a94b137970. NFS reviewer artifacts only; source/API/Delivery authorities preserved. No live resources, external writes, credential/field/app campaign, actual publication or TaskDone/Terminal.
+- Recommended fresh successful-test route: Delivery only; audit/routing/receipt in code-review-evidence/crr-014. No duplicate API/implementation/Designer/PM outcome dispatch.
+
+| Revision | Canonical report | Trigger | Prior applicable test result | Current result | Findings |
+| --- | --- | --- | --- | --- | --- |
+| CRR-014 | api-e2e-test-review-report.md | API007 affected executor Pass95 / IR009 | CRR012 Pass | Pass — proportional test/evidence gate | None; actual publication incomplete |
