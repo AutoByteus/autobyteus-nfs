@@ -98,7 +98,8 @@ def main():
                 output.write(name + '=' + value + '\n')
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
             summary.write(f'## NFS release inputs\n\nVersion: `{tag}`\n\n'
-                          f'Source: `{source}`\n\nWorkflow: `{workflow_commit}`\n\nMode: `{mode}`\n')
+                          f'Executor: `{source}`\n\nPayload source: `{payload_source}`\n\n'
+                          f'Workflow: `{workflow_commit}`\n\nMode: `{mode}`\n')
     elif args.operation == 'inspect-bound':
         result = publication.inspect_bound(i.version(args.tag), args.directory)
     elif args.operation == 'candidate':
