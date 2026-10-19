@@ -1,0 +1,207 @@
+[
+  {
+    "at": "2026-10-19T05:26:57.960877+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "e8012cc9876e3d5a4e5f5960809079ece8cf449b\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:26:59.937910+00:00",
+    "argv": [
+      "git",
+      "push",
+      "origin",
+      "e8012cc9876e3d5a4e5f5960809079ece8cf449b:refs/heads/codex/nfs-first-release"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   44e2487..e8012cc  e8012cc9876e3d5a4e5f5960809079ece8cf449b -> codex/nfs-first-release\n"
+  },
+  {
+    "at": "2026-10-19T05:27:00.459766+00:00",
+    "argv": [
+      "git",
+      "fetch",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-19T05:27:00.477285+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "7683494050b85a298ed08a55592e70f86a010a7a\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:00.496669+00:00",
+    "argv": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "7683494050b85a298ed08a55592e70f86a010a7a",
+      "e8012cc9876e3d5a4e5f5960809079ece8cf449b"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:00.576338+00:00",
+    "argv": [
+      "git",
+      "switch",
+      "-c",
+      "codex/nfs-first-release-finalize-dr009",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "branch 'codex/nfs-first-release-finalize-dr009' set up to track 'origin/main'.\n",
+    "stderr": "Switched to a new branch 'codex/nfs-first-release-finalize-dr009'\n"
+  },
+  {
+    "at": "2026-10-19T05:27:00.714891+00:00",
+    "argv": [
+      "git",
+      "merge",
+      "--no-ff",
+      "codex/nfs-first-release",
+      "-m",
+      "Merge reviewed NFS v0.1.0 signing recovery and current readiness"
+    ],
+    "exit": 0,
+    "stdout": "Merge made by the 'ort' strategy.\n .github/workflows/release-nfs.yml                  |    4 +-\n TESTING.md                                         |    7 +-\n packaging/RELEASE.md                               |   13 +-\n packaging/release-lock.json                        |    8 +-\n packaging/releases/v0.1.0/native-checks.json       |  164 +-\n packaging/releases/v0.1.0/readiness.json           |   32 +-\n packaging/releases/v0.1.0/release-controls.json    |   52 +-\n packaging/releases/v0.1.0/source-review.json       |   22 +-\n packaging/sign-macos.sh                            |  125 +-\n scripts/tests/test_nfs_release_signing.py          |  161 +-\n scripts/tests/test_nfs_release_workflow.py         |   13 +\n .../api-e2e-coverage-investigation.md              |   93 +-\n .../api-e2e-execution-coverage-report.md           |  187 +-\n .../nfs-first-release/api-e2e-revision-record.md   |   13 +\n .../nfs-first-release/api-e2e-test-progress.md     |   28 +\n .../api-e2e-test-review-report.md                  |   89 +-\n .../code-review-evidence/crr-007/final-checks.json |   13 +\n .../crr-007/handoff-receipt.json                   |   13 +\n .../code-review-evidence/crr-007/routing.json      |   46 +\n .../code-review-evidence/crr-007/source-audit.json |   49 +\n .../code-review-evidence/crr-008/final-checks.json |   13 +\n .../crr-008/handoff-receipt.json                   |   13 +\n .../code-review-evidence/crr-008/review-audit.json |   33 +\n .../code-review-evidence/crr-008/routing.json      |   46 +\n .../done/nfs-first-release/code-review-report.md   |  245 +-\n .../code-review-revision-record.md                 |   43 +\n .../delivery-evidence/dr-005/cleanup.json          |   17 +\n .../delivery-evidence/dr-005/dispatch.json         |   24 +\n .../dr-005/failure-assessment.json                 |   46 +\n .../delivery-evidence/dr-005/jobs-39120986961.json |  173 +\n .../delivery-evidence/dr-005/jobs-39120991701.json |  173 +\n .../delivery-evidence/dr-005/jobs-39121007787.json |  809 ++++\n .../dr-005/publication-artifacts.json              |   65 +\n .../dr-005/publication-execution-summary.json      |   92 +\n .../dr-005/publication-job-117656435832.log        |  272 ++\n .../dr-005/publication-job-117656510839.log        |  363 ++\n .../dr-005/publication-job-117656510844.log        |  339 ++\n .../dr-005/publication-job-117656510854.log        |  363 ++\n .../dr-005/publication-job-117656510925.log        |  339 ++\n .../dr-005/publication-log-index.json              |   37 +\n .../delivery-evidence/dr-005/publication-run.json  |  224 +\n .../dr-005/remote-after-failure.json               |   49 +\n .../delivery-evidence/dr-005/run-39120986961.json  |  224 +\n .../delivery-evidence/dr-005/run-39120991701.json  |  224 +\n .../delivery-evidence/dr-005/run-39121007787.json  |  224 +\n .../dr-005/runs-before-dispatch.json               | 2917 ++++++++++++\n .../dr-005/source-finalization.json                |   19 +\n .../delivery-evidence/dr-005/triggered-runs.json   |  226 +\n .../delivery-evidence/dr-006/build.log             |    0\n .../delivery-evidence/dr-006/checks.json           |  113 +\n .../delivery-evidence/dr-006/cleanup.json          |   14 +\n .../delivery-evidence/dr-006/codesign.log          |    1 +\n .../delivery-evidence/dr-006/details.log           |   28 +\n .../delivery-evidence/dr-006/go-version.log        |    1 +\n .../delivery-evidence/dr-006/input.json            |   11 +\n .../dr-006/keychain-list-after.log                 |    1 +\n .../dr-006/keychain-list-before.log                |    1 +\n .../delivery-evidence/dr-006/local-result.json     |   10 +\n .../dr-006/local-signing-diagnostic.py             |   46 +\n .../delivery-evidence/dr-006/scratch-path.txt      |    1 +\n .../delivery-evidence/dr-006/signed-version.log    |    1 +\n .../delivery-evidence/dr-006/summary.md            |    9 +\n .../delivery-evidence/dr-006/toolchain.json        |    9 +\n .../delivery-evidence/dr-006/unsigned-version.log  |    1 +\n .../delivery-evidence/dr-006/verify.log            |    2 +\n .../delivery-evidence/dr-007/active-attempt.md     |   15 +\n .../dr-007/apple-accepted-response.json            |    5 +\n .../dr-007/attempt-001-authentication-error.json   |    9 +\n .../dr-007/attempt-002-preparation.json            |   12 +\n .../delivery-evidence/dr-007/build.log             |    0\n .../delivery-evidence/dr-007/checks.json           |  113 +\n .../delivery-evidence/dr-007/codesign.log          |    1 +\n .../delivery-evidence/dr-007/details.log           |   28 +\n .../delivery-evidence/dr-007/final-checks.json     |    9 +\n .../dr-007/github-secret-update-metadata.json      |   33 +\n .../delivery-evidence/dr-007/go-version.log        |    1 +\n .../delivery-evidence/dr-007/input.json            |   11 +\n .../dr-007/keychain-list-after.log                 |    1 +\n .../dr-007/keychain-list-before.log                |    1 +\n .../delivery-evidence/dr-007/local-result.json     |   10 +\n .../dr-007/notarization-result-attempt-002.json    |   10 +\n .../dr-007/notarization-result.json                |    9 +\n .../dr-007/prepare-local-notary.py                 |   46 +\n .../delivery-evidence/dr-007/scratch-path.txt      |    1 +\n .../delivery-evidence/dr-007/signed-version.log    |    1 +\n .../dr-007/submission-preparation.json             |   19 +\n .../delivery-evidence/dr-007/summary.md            |   13 +\n .../delivery-evidence/dr-007/toolchain.json        |    9 +\n .../delivery-evidence/dr-007/unsigned-version.log  |    1 +\n .../delivery-evidence/dr-007/verification.json     |   31 +\n .../delivery-evidence/dr-007/verify.log            |    2 +\n .../delivery-evidence/dr-008/commands.json         |  272 ++\n .../delivery-evidence/dr-008/final-checks.json     |   16 +\n .../delivery-evidence/dr-008/routing.json          |    8 +\n .../dr-008/staged-source-receipt.json              |  116 +\n .../dr-008/verified-remote-workflow.yml            |  361 ++\n .../dr-009/candidate-reverify.log                  |   97 +\n .../delivery-evidence/dr-009/checks.json           |   74 +\n .../dr-009/engine-identity-delta.json              |   17 +\n .../delivery-evidence/dr-009/live-envelope.log     |    8 +\n .../delivery-evidence/dr-009/live-jobs.log         |    1 +\n .../delivery-evidence/dr-009/lock-exact-engine.log |    0\n .../dr-009/measured-source-hash.log                |    1 +\n .../delivery-evidence/dr-009/portable-paths.json   |    6 +\n .../dr-009/preparation-attempts.json               |   10 +\n .../delivery-evidence/dr-009/prepare-readiness.py  |   49 +\n .../delivery-evidence/dr-009/readiness-check.log   |    0\n .../dr-009/readiness-data-python.log               |   59 +\n .../dr-009/readiness-data-tests.json               |   11 +\n .../dr-009/readiness-prepared.json                 |   13 +\n .../dr-009/readiness-test-start.json               |   18 +\n .../delivery-evidence/dr-009/verification.json     |  118 +\n .../nfs-first-release/delivery-revision-record.md  |   55 +\n tickets/done/nfs-first-release/docs-sync-report.md |   24 +-\n .../evidence/C01-04-artifact-checks.json           |   66 +\n .../C01-04-candidate-final-verify-result.json      |   20 +\n .../evidence/C01-04-candidate-final-verify.log     |  100 +\n .../nfs-first-release/evidence/C01-04-cleanup.json |   44 +\n .../evidence/C01-04-evidence-guide.md              |   11 +\n .../nfs-first-release/evidence/C01-04-finish.py    |  117 +\n .../evidence/C01-04-ownership.json                 |   26 +\n .../nfs-first-release/evidence/C01-04-routing.json |   21 +\n .../evidence/IMP-05-01-python-full.log             |   66 +\n .../evidence/IMP-05-02-signing-workflow.log        |   29 +\n .../evidence/IMP-05-03-bash-syntax.log             |    7 +\n .../evidence/IMP-05-04-shellcheck.log              |   13 +\n .../evidence/IMP-05-05-actionlint.log              |   12 +\n .../evidence/IMP-05-06-identity.log                |   24 +\n .../evidence/IMP-05-07-missing-input-refusal.log   |    8 +\n .../evidence/IMP-05-08-mutations.log               |   95 +\n .../evidence/IMP-05-08-summary.md                  |   12 +\n .../evidence/IMP-05-09-baseline-control.log        |   23 +\n .../evidence/IMP-05-10-attempts.md                 |   41 +\n .../evidence/IMP-05-11-final-audit.log             |   57 +\n .../nfs-first-release/evidence/R01-04-reuse.json   |   33 +\n .../nfs-first-release/evidence/R01-04-reuse.py     |   22 +\n .../evidence/R02-04-stale-candidate.log            |    4 +\n .../evidence/R02-04-stale-result.json              |   19 +\n .../evidence/R03-04-dispatch.json                  |  246 +\n .../nfs-first-release/evidence/R03-04-dispatch.log |    4 +\n .../evidence/R03-04-excerpt-117899501022.log       |    5 +\n .../evidence/R03-04-excerpt-117899588807.log       |    3 +\n .../evidence/R03-04-excerpt-117899588897.log       |    3 +\n .../evidence/R03-04-excerpt-117900186242.log       |    3 +\n .../evidence/R03-04-excerpt-117900235988.log       |    3 +\n .../evidence/R03-04-excerpt-117900833165.log       |   13 +\n .../evidence/R03-04-excerpt-117900833244.log       |   13 +\n .../evidence/R03-04-excerpt-117900833252.log       |   13 +\n .../evidence/R03-04-excerpt-117900833294.log       |   13 +\n .../evidence/R03-04-excerpt-117901771324.log       |    3 +\n .../nfs-first-release/evidence/R03-04-final.json   | 1605 +++++++\n .../nfs-first-release/evidence/R03-04-hosted.py    |   55 +\n .../evidence/R03-04-job-117899501022.log           |  242 +\n .../evidence/R03-04-job-117899588807.log           | 4718 ++++++++++++++++++++\n .../evidence/R03-04-job-117899588897.log           | 4718 ++++++++++++++++++++\n .../evidence/R03-04-job-117900186242.log           |  205 +\n .../evidence/R03-04-job-117900235988.log           | 2390 ++++++++++\n .../evidence/R03-04-job-117900833165.log           |  376 ++\n .../evidence/R03-04-job-117900833244.log           |  392 ++\n .../evidence/R03-04-job-117900833252.log           |  376 ++\n .../evidence/R03-04-job-117900833294.log           |  392 ++\n .../evidence/R03-04-job-117901771324.log           |  374 ++\n .../evidence/R03-04-observations.jsonl             |   10 +\n .../evidence/R03-04-prepublication-result.json     |   67 +\n .../evidence/R03-04-remote-after.json              |  245 +\n .../evidence/R03-04-remote-before.json             |   26 +\n .../nfs-first-release/evidence/R03-04-summary.json |  168 +\n .../evidence/R04-04-candidate.json                 |   97 +\n .../nfs-first-release/evidence/R04-04-candidate.py |   48 +\n .../evidence/R04-04-envelope-result.json           |   28 +\n .../evidence/R04-04-envelope.json                  |    8 +\n .../nfs-first-release/evidence/R04-04-envelope.log |    3 +\n .../evidence/R04-04-fetch-result.json              |   24 +\n .../nfs-first-release/evidence/R04-04-fetch.log    |    3 +\n .../evidence/R04-04-measured-identity.json         |   23 +\n .../evidence/R04-04-reference.json                 |   11 +\n .../evidence/R04-04-retention.json                 |   13 +\n .../evidence/R04-04-verification.json              |   20 +\n .../evidence/R04-04-verify-result.json             |   22 +\n .../nfs-first-release/evidence/R04-04-verify.log   |    3 +\n .../evidence/R04-04-wrapper-refusal-result.json    |   22 +\n .../evidence/R04-04-wrapper-refusal.log            |    4 +\n .../evidence/R04-04-wrong-envelope.json            |    8 +\n .../evidence/R05-04-candidate-refusal-result.json  |   17 +\n .../evidence/R05-04-candidate-refusal.log          |    4 +\n .../nfs-first-release/evidence/R05-04-smoke.json   |   15 +\n .../evidence/R05-04-version-result.json            |   16 +\n .../nfs-first-release/evidence/R05-04-version.log  |    4 +\n tickets/done/nfs-first-release/handoff-summary.md  |   80 +-\n .../ir-005/actionlint-version.log                  |    3 +\n .../implementation-evidence/ir-005/actionlint.log  |    0\n .../implementation-evidence/ir-005/attempts.md     |   34 +\n .../ir-005/baseline-diagnostic-control.log         |   16 +\n .../ir-005/baseline-harness-attempt1.log           |   16 +\n .../implementation-evidence/ir-005/bash-syntax.log |    0\n .../ir-005/bash-version.log                        |    2 +\n .../ir-005/checks-and-limits.md                    |   61 +\n .../ir-005/checks-console.log                      |   14 +\n .../ir-005/checks-result.json                      |  180 +\n .../implementation-evidence/ir-005/cleanup.json    |    7 +\n .../implementation-evidence/ir-005/diagnosis.md    |   42 +\n .../ir-005/final-checks.json                       |   51 +\n .../ir-005/focused-final.log                       |   22 +\n .../implementation-evidence/ir-005/intake.json     |    9 +\n .../ir-005/mutation-accept-invalid-notary.log      |   35 +\n .../ir-005/mutation-hidden-diagnostic.log          |   16 +\n .../ir-005/mutation-ignore-errexit.log             |   16 +\n .../ir-005/mutation-restore-failed-capture.log     |   15 +\n .../implementation-evidence/ir-005/platform.log    |    1 +\n .../ir-005/prior-implementation-handoff-ir004.md   |  166 +\n .../implementation-evidence/ir-005/python-all.log  |   59 +\n .../ir-005/python-version.log                      |    1 +\n .../implementation-evidence/ir-005/recipe-hash.log |    1 +\n .../implementation-evidence/ir-005/routing.json    |   10 +\n .../ir-005/run-local-checks.py                     |   74 +\n .../ir-005/scratch-path.txt                        |    1 +\n .../ir-005/shellcheck-version.log                  |    4 +\n .../implementation-evidence/ir-005/shellcheck.log  |    0\n .../ir-005/signing-focused-attempt1.log            |  327 ++\n .../ir-005/source-check.json                       |    8 +\n .../ir-005/source-commit.txt                       |    1 +\n .../ir-005/source-hash-before.log                  |    1 +\n .../implementation-evidence/ir-005/source-hash.log |    1 +\n .../ir-005/stale-readiness-refusal.log             |    1 +\n .../nfs-first-release/implementation-handoff.md    |  384 +-\n .../implementation-revision-record.md              |   71 +\n .../nfs-first-release/release-deployment-report.md |   62 +-\n 227 files changed, 29704 insertions(+), 750 deletions(-)\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-007/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-007/handoff-receipt.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-007/routing.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-007/source-audit.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-008/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-008/handoff-receipt.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-008/review-audit.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-008/routing.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/cleanup.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/dispatch.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/failure-assessment.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/jobs-39120986961.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/jobs-39120991701.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/jobs-39121007787.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-artifacts.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-execution-summary.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-job-117656435832.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-job-117656510839.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-job-117656510844.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-job-117656510854.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-job-117656510925.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-log-index.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/publication-run.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/remote-after-failure.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/run-39120986961.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/run-39120991701.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/run-39121007787.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/runs-before-dispatch.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/source-finalization.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-005/triggered-runs.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/build.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/cleanup.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/codesign.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/details.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/go-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/input.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/keychain-list-after.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/keychain-list-before.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/local-result.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/local-signing-diagnostic.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/scratch-path.txt\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/signed-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/summary.md\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/toolchain.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/unsigned-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-006/verify.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/active-attempt.md\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/apple-accepted-response.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/attempt-001-authentication-error.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/attempt-002-preparation.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/build.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/codesign.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/details.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/github-secret-update-metadata.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/go-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/input.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/keychain-list-after.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/keychain-list-before.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/local-result.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/notarization-result-attempt-002.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/notarization-result.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/prepare-local-notary.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/scratch-path.txt\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/signed-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/submission-preparation.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/summary.md\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/toolchain.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/unsigned-version.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/verification.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-007/verify.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-008/commands.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-008/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-008/routing.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-008/staged-source-receipt.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-008/verified-remote-workflow.yml\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/candidate-reverify.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/engine-identity-delta.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/live-envelope.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/live-jobs.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/lock-exact-engine.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/measured-source-hash.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/portable-paths.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/preparation-attempts.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/prepare-readiness.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/readiness-check.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/readiness-data-python.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/readiness-data-tests.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/readiness-prepared.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/readiness-test-start.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-009/verification.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-artifact-checks.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-candidate-final-verify-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-candidate-final-verify.log\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-cleanup.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-evidence-guide.md\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-finish.py\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-ownership.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-04-routing.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-01-python-full.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-02-signing-workflow.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-03-bash-syntax.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-04-shellcheck.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-05-actionlint.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-06-identity.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-07-missing-input-refusal.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-08-mutations.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-08-summary.md\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-09-baseline-control.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-10-attempts.md\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-05-11-final-audit.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R01-04-reuse.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R01-04-reuse.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-04-stale-candidate.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-04-stale-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-dispatch.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-dispatch.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117899501022.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117899588807.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117899588897.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900186242.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900235988.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900833165.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900833244.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900833252.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117900833294.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-excerpt-117901771324.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-final.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-hosted.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117899501022.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117899588807.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117899588897.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900186242.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900235988.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900833165.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900833244.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900833252.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117900833294.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-job-117901771324.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-observations.jsonl\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-prepublication-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-remote-after.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-remote-before.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-04-summary.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-candidate.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-candidate.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-envelope-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-envelope.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-envelope.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-fetch-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-fetch.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-measured-identity.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-reference.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-retention.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-verification.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-verify-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-verify.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-wrapper-refusal-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-wrapper-refusal.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-04-wrong-envelope.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-04-candidate-refusal-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-04-candidate-refusal.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-04-smoke.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-04-version-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-04-version.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/actionlint-version.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/actionlint.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/attempts.md\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/baseline-diagnostic-control.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/baseline-harness-attempt1.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/bash-syntax.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/bash-version.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/checks-and-limits.md\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/checks-console.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/checks-result.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/cleanup.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/diagnosis.md\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/focused-final.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/intake.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-accept-invalid-notary.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-hidden-diagnostic.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-ignore-errexit.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/mutation-restore-failed-capture.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/platform.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/prior-implementation-handoff-ir004.md\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/python-all.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/python-version.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/recipe-hash.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/routing.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/run-local-checks.py\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/scratch-path.txt\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/shellcheck-version.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/shellcheck.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/signing-focused-attempt1.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/source-check.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/source-commit.txt\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/source-hash-before.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/source-hash.log\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-005/stale-readiness-refusal.log\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:00.729290+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "f830c50bf1238270343afce151dd05b65b10237a\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:00.744409+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "f830c50bf1238270343afce151dd05b65b10237a^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "348f7785e745c60db73a4c7a7bde7bbd7f354fca\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:00.760466+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "e8012cc9876e3d5a4e5f5960809079ece8cf449b^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "348f7785e745c60db73a4c7a7bde7bbd7f354fca\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:01.160794+00:00",
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:01.240703+00:00",
+    "argv": [
+      "python3",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "stdout": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:01.671960+00:00",
+    "argv": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "7683494050b85a298ed08a55592e70f86a010a7a\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:03.227547+00:00",
+    "argv": [
+      "git",
+      "push",
+      "origin",
+      "f830c50bf1238270343afce151dd05b65b10237a:refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   7683494..f830c50  f830c50bf1238270343afce151dd05b65b10237a -> main\n"
+  },
+  {
+    "at": "2026-10-19T05:27:03.633738+00:00",
+    "argv": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/main",
+      "refs/heads/codex/nfs-first-release"
+    ],
+    "exit": 0,
+    "stdout": "e8012cc9876e3d5a4e5f5960809079ece8cf449b\trefs/heads/codex/nfs-first-release\nf830c50bf1238270343afce151dd05b65b10237a\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T05:27:04.157622+00:00",
+    "argv": [
+      "git",
+      "switch",
+      "codex/nfs-first-release"
+    ],
+    "exit": 0,
+    "stdout": "Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.\n  (use \"git pull\" to update your local branch)\n",
+    "stderr": "Switched to branch 'codex/nfs-first-release'\n"
+  },
+  {
+    "at": "2026-10-19T05:27:04.196336+00:00",
+    "argv": [
+      "git",
+      "merge",
+      "--ff-only",
+      "f830c50bf1238270343afce151dd05b65b10237a"
+    ],
+    "exit": 0,
+    "stdout": "Updating e8012cc..f830c50\nFast-forward\n",
+    "stderr": ""
+  }
+]

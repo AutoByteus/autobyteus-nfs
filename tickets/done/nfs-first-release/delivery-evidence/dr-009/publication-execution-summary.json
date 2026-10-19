@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-19T05:57:40.663619+00:00",
+  "deliveryRevision": "DR-009",
+  "result": "Blocked",
+  "classification": "Local Fix",
+  "sourceFinalization": "Completed",
+  "run": 39204643596,
+  "attempt": 1,
+  "sourceWorkflowCommit": "f830c50bf1238270343afce151dd05b65b10237a",
+  "candidateRun": 39202907777,
+  "runConclusion": "failure",
+  "jobCounts": {
+    "success": 3,
+    "failure": 2,
+    "skipped": 6
+  },
+  "allTriggeredPipelinesCompleted": true,
+  "nativeChecks": "Four native Go race7packages/vet/Python52collected51executed1expectedskip/build/version passed; two Linux archives retained; Mac packaging skipped after signing failed",
+  "signingReceipts": [
+    {
+      "artifactId": 12165705122,
+      "artifactName": "nfs-signing-darwin-arm64",
+      "wrapperSha256": "c57a6a3ef8751ca7ef63dea8ae4a419941cb002ec6a7492ffa1c698967bb4579",
+      "member": "darwin-arm64-notary-failure.json",
+      "memberSha256": "7e7459d8251b72e51e9ead1673e6d1534fbda0a112f9318a955edea6e5a30f0a",
+      "receipt": {
+        "schema": 1,
+        "status": "Failed",
+        "stage": "sign",
+        "exitCode": 1,
+        "cleanup": "complete"
+      }
+    },
+    {
+      "artifactId": 12165337638,
+      "artifactName": "nfs-signing-darwin-amd64",
+      "wrapperSha256": "64143378eab502be1d306696836b1886178e617d2154da989cda508f3937a95f",
+      "member": "darwin-amd64-notary-failure.json",
+      "memberSha256": "7e7459d8251b72e51e9ead1673e6d1534fbda0a112f9318a955edea6e5a30f0a",
+      "receipt": {
+        "schema": 1,
+        "status": "Failed",
+        "stage": "sign",
+        "exitCode": 1,
+        "cleanup": "complete"
+      }
+    }
+  ],
+  "finalPayload": "Not produced; payload job skipped",
+  "publication": "Not executed; publisher skipped; fresh tag/release/package404",
+  "publicChecks": "Not reached",
+  "fieldUserTesting": "Deferred by R3; not a gate",
+  "evidence": [
+    "publication-jobs-final.json",
+    "publication-log-index.json",
+    "signing-artifact-receipts.json",
+    "remote-after-failure.json",
+    "triggered-runs-final.json"
+  ]
+}

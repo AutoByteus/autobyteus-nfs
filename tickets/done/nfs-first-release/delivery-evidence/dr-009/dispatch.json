@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-19T05:27:18.558118+00:00",
+  "argv": [
+    "gh",
+    "workflow",
+    "run",
+    "release-nfs.yml",
+    "--repo",
+    "AutoByteus/autobyteus-nfs",
+    "--ref",
+    "main",
+    "-f",
+    "release_tag=v0.1.0",
+    "-f",
+    "source_sha=f830c50bf1238270343afce151dd05b65b10237a",
+    "-f",
+    "candidate_run_id=39202907777",
+    "-f",
+    "publish=true"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "source": "f830c50bf1238270343afce151dd05b65b10237a",
+  "candidateRun": 39202907777,
+  "requestedMode": "normal v0.1.0 publish=true",
+  "runId": 39204643596,
+  "runAttempt": 1,
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39204643596"
+}

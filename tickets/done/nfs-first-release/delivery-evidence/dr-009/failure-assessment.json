@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-19T05:57:40.663619+00:00",
+  "classification": "Local Fix",
+  "owner": "implementation_engineer",
+  "boundary": "packaging/sign-macos.sh stage=sign",
+  "observed": "Both actual hosted macOS15 arm64 and macOS15-intel amd64 receipts: stage=sign exitCode=1 cleanup=complete",
+  "inference": "Under the ordinary simple-command set -e path at exact f830c50, validation/P12 decode/keychain creation/unlock/import/partition/find-identity/selected-identity checks returned successfully before codesign failed. No notary submission was reached. This localizes the command but does not establish its internal cause.",
+  "actualFailingCommand": "codesign --force --timestamp --options runtime --keychain \"$keychain\" --sign \"$IDENTITY\" \"$binary\"",
+  "rootCause": "Unknown: raw codesign output is intentionally redirected away; safe stage receipt alone does not expose cause.",
+  "notEstablished": [
+    "A bad app-specific password",
+    "An Apple notary rejection",
+    "Bad P12/password import",
+    "Specific certificate-chain/keychain/ACL issue",
+    "DR005 old failure had same cause"
+  ],
+  "request": "Investigate this exact codesign boundary and minimally repair it. Preserve safe private diagnostics with fixed/allowlisted cause categories and bounded cleanup if needed; do not expose credentials, account/identity text, keychain/P12 material, raw private stderr or xtrace. Add focused regression checks for the evidenced repair, then normal proportional review/affected API. No speculative credential reprovision or unsigned fallback.",
+  "scope": "NFS-only packaging local fix; retain R3/normalv0.1.0/four native targets/deferred field-user tests/immutable payload gates; no architecture or approval loop.",
+  "preserve": "Completed main f830c50 and source/readiness receipts; old failed DR00539121007787 and current DR00939204643596; retained candidates and DR007 local Accepted diagnostic. Production-hashed change requires new applicable candidate/readiness; do not relabel API004.",
+  "nextAuthority": "Fresh most-specific local-fix routing rule; no parallel outcome dispatch"
+}
