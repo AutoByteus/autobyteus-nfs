@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-19T04:56:26.118498+00:00",
+  "attempt": 2,
+  "status": "Prepared; not executed",
+  "script": "/Users/normy/nfs-local-notary-xq_ym2f6/retry-notarization.command",
+  "scriptSha256": "095651202bb5d81daf8f62f5568a5e2c83a76907c9cc21430ddfee3ede9c7ffb",
+  "bashSyntaxExit": 0,
+  "sameSignedDiagnosticHashesVerified": true,
+  "credentialHandling": "User pastes directly into native notarytool hidden prompt; no credential capture or storage",
+  "scope": "Local signed arm64 development diagnostic only; not CI P12 import or official release",
+  "previousFailurePreserved": true
+}

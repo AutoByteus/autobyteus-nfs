@@ -13,6 +13,8 @@
 
 | DR-006 | User requests local build/sign/log diagnosis | DR005 Blocked after hosted signing failure | Local existing-identity diagnostic **Pass**; full Delivery remains **Blocked**, hosted cause unknown | delivery-evidence/dr-006/summary.md, local-result.json, checks.json; own reports |
 
+| DR-007 | User-requested local notarization retry; user updates GitHub password secret | DR006 local signing Pass / full Delivery Blocked | Local Apple notarization **Accepted / Pass**; full Delivery **Blocked** pending existing IR005 review/API/hosted/publication | delivery-evidence/dr-007/summary.md, verification.json, own reports |
+
 ## DR-001 — Build-only source staging baseline
 
 - Task: nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. **Large / High / Reviewed**, R2/SR002 Approved, SR003 Ready, ARCH-REV-001. CRR001 source Pass100 is not an API Pass or release qualification.
@@ -86,3 +88,17 @@
 - Result **Diagnostic completed / Pass; overall Delivery Blocked**, DR005 hosted failure remains unresolved. IR005 diagnostic patch/review and subsequent authorized hosted execution still required. No new source repair, full scorecard, API Pass, TaskDone or terminal claim.
 - All owned source/toolchain/build/cache/binary/HOME/TMP scratch removed; keychain search list unchanged. No live setup, source/candidate/PM/canonical changes or public effects. Own handoff/docs/release report updated with this bounded evidence; release notes unchanged/unpublished. No source finalization replay.
 - Provide this result once to existing Implementation local-fix owner under fresh rule so it can inform current recovery; not a duplicate dispatch or instruction to restart review. Field/user plan custody remains Delivery→terminalSD→requestingPM after actual release.
+
+## DR-007 — Real local Apple notarization and user-updated GitHub credential
+
+Result: **bounded diagnostic Pass; full Delivery Blocked**. Large/High/Reviewed and R3/SR004/ARCH002 remain. No official v0.1.0 release claim.
+
+The independently built/signed arm64 development diagnostic at input8317316 (IR005 product75f4dbe) was actually submitted to Apple by the user through a native hidden password prompt. Attempt1 exit1/HTTP401 remains preserved, not a binary rejection. Attempt2 at2026-10-19T04:57:21Z exited0 with Apple **Accepted**, submission16cd8853-b4f7-41a3-b676-e99029765633. Delivery read the saved JSON, matched submission/status/exit, rehashed the signed binary and exact submitted ZIP, and verified all9 preparation log hashes and signature/runtime/timestamp details. See verification.json and apple-accepted-response.json. Earlier local-result.json describes the preparation stage, not the final verdict.
+
+Read-only Ryan-profile Apple account/team verification matched the intended certificate team. User generated/copied/entered the replacement app-specific password personally; Delivery never read the password or clipboard. User then reported updating GitHub; metadata confirms APPLE_APP_SPECIFIC_PASSWORD updated2026-10-19T04:58:54Z. A timestamp does not prove secret-value equality or hosted authentication. No certificate/P12/other secret reprovisioning occurred by Delivery.
+
+Fresh origin/main7683494050b85a298ed08a55592e70f86a010a7a is already ancestor of current8317316. All127 non-ticket inputs still equal IR00575f4dbe. No base merge/product edits or repeat integrated test needed. IR005 targeted source review is already in progress per implementation handoff; current canonical source report remains CRR005/IR004 and API003 remains prior source. Do not publish unreviewed IR005 or reuse stale readiness/candidate. Continue existing review → affected API/new complete candidate → Delivery genuine readiness/current main/actual signed publication. No new architecture, approval or field-test loop.
+
+This local result does not test hosted P12/password import, ephemeral keychain, Intel signing, final release metadata or public bytes. It does not establish the original hosted failure cause. DR005 failed run remains failed. Actual both-Mac signing/Accepted, retained payload, immutable public release/OCI/download/signature/install receipts remain required; field/user tests remain Deferred until after publication.
+
+Signed diagnostic retained privately at /Users/normy/nfs-local-notary-xq_ym2f6/autobyteus-nfs (not an official release binary); ZIP/attempt receipts retained. Source/toolchain/cache were removed at preparation. No background notary command remains according to completed state/user output; user terminal may await Return. No host setup, storage change, keychain export, release/tag/push/TaskDone/Terminal. Canonical checkout/PM and other owners untouched.

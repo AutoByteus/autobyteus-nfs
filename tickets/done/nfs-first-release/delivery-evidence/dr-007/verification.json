@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-19T05:00:02.689701+00:00",
+  "inputCommit": "8317316a091165e1cb3758c0386f5c157ad62218",
+  "diagnosticProductCommit": "75f4dbe5527a7159f536bafcf9448bc2d6a01604",
+  "freshFetchedBase": "7683494050b85a298ed08a55592e70f86a010a7a",
+  "baseAlreadyAncestor": true,
+  "productDiffSinceIR005": [],
+  "additionalBaseRerun": "Not needed; no integrated source delta",
+  "buildSignVerificationLogHashesVerified": 9,
+  "appleReceipt": {
+    "message": "Processing complete",
+    "id": "16cd8853-b4f7-41a3-b676-e99029765633",
+    "status": "Accepted"
+  },
+  "receiptExit": 0,
+  "binarySha256": "c75fbcace7b803eec45e5717c78c1b2c59b1f0e9a0f0278694974a1e65d17322",
+  "archiveSha256": "6b0c7f5132f3efe56d8aa077608c8aa13769fb8c1c65f67c3d00b2a0856746c0",
+  "keychainSearchListUnchangedAtBuild": true,
+  "result": "Pass \u2014 bounded local existing-identity arm64 development diagnostic",
+  "fullDelivery": "Blocked \u2014 existing IR005 review/current API/candidate/hosted/publication gates incomplete",
+  "notProven": [
+    "CI P12/password import and ephemeral keychain",
+    "both hosted Mac signing/notary",
+    "official final v0.1.0 payload",
+    "public release/install/signature/OCI receipts",
+    "original hosted failure cause"
+  ],
+  "credentials": "No password/private key/clipboard read or credential value stored",
+  "cleanup": "Build source/toolchain/cache removed at preparation; signed diagnostic/archive intentionally retained; notary attempt completed; user terminal may await Return",
+  "firstFailedAttemptPreserved": true
+}

@@ -29,3 +29,7 @@ Main finalized7683494; publication39121007787 failed both Mac signing steps befo
 ## DR-006 — bounded local diagnostic update
 
 User-requested existing-identity signing succeeded on fresh local arm64 build at9fa4e69 (IR005 product75f4dbe). Own handoff/revision/release report record actual checks, cleanup and unknown hosted cause; no long-lived doc or release-note change needed because no published/support behavior changed. Hosted P12/password/import and Apple notarization remain unproven. Existing readiness is stale for IR005 changed production, not promoted by local signing. No source/guide/API report edits or history rewrite.
+
+## DR-007 — local Apple acceptance, current hosted gates retained
+
+Own handoff/release/revision records and dr007 evidence now record actual Accepted/exit0, preserved initial401, matched binary/archive/log identities and GitHub password-secret metadata update. No credential value stored or account data copied into release notes. Source/runtime/guides/public notes unchanged: diagnostic acceptance does not change published behavior. Existing readiness/candidate remains prior source and stale for IR005; no promotion. Current review/API/hosted/publication gates and approved deferred field/user custody remain explicit.

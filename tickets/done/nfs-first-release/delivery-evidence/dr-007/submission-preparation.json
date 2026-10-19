@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-18T11:19:20.791278+00:00",
+  "state": "Awaiting local credentials, no Apple submission yet",
+  "scratch": "/Users/normy/nfs-local-notary-xq_ym2f6",
+  "signedBinarySha256": "c75fbcace7b803eec45e5717c78c1b2c59b1f0e9a0f0278694974a1e65d17322",
+  "archiveSha256": "6b0c7f5132f3efe56d8aa077608c8aa13769fb8c1c65f67c3d00b2a0856746c0",
+  "script": "/Users/normy/nfs-local-notary-xq_ym2f6/submit-notarization.command",
+  "noKnownLocalProfileOrCredentialEnvironment": true,
+  "credentialMethod": "Official notarytool secure prompt in user Terminal; no password flag/value in script",
+  "removedCompletedBuildScratch": [
+    "source",
+    "go",
+    "home",
+    "tmp",
+    "go-cache",
+    "go1.27.2.darwin-arm64.tar.gz"
+  ],
+  "retention": "Signed diagnostic/archive retained for requested local notarization, not final release payload"
+}

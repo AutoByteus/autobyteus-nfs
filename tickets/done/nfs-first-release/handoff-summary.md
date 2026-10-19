@@ -1,5 +1,15 @@
 # Handoff Summary — nfs-first-release
 
+## Latest DR-007 — actual local notarization Accepted; official release pending
+
+Apple accepted the real local arm64 development diagnostic on attempt2 (exit0), submission `16cd8853-b4f7-41a3-b676-e99029765633`. Saved response/receipt, binary/ZIP and9 preparation log hashes verified. Attempt1 HTTP401 is preserved. User-generated new app-specific password worked locally; user reports updating GitHub and metadata confirms `APPLE_APP_SPECIFIC_PASSWORD` updated2026-10-19T04:58:54Z. Delivery read no secret value/clipboard/private key and cannot prove the GitHub value from its timestamp.
+
+**Diagnostic Pass; overall Delivery Blocked**, not official release or field/user verification. Fresh origin/main7683494 is already ancestor of8317316;127 product inputs still equal IR00575f4dbe. No integration delta or rerun. Current IR005 diagnostics await already-started targeted review and affected API/new candidate; previous API003/readiness cannot qualify changed production. Continue that existing sequence, then Delivery readiness/main/fresh hosted signing/publication/download checks. Do not restart source review or bypass it, replay prior finalization, speculate about P12, or request field/user approval. Hosted original cause still unknown; local Apple acceptance does not prove hosted import/keychain/both-Mac signing.
+
+Evidence: `delivery-evidence/dr-007/summary.md`, `verification.json`, `apple-accepted-response.json`, `notarization-result-attempt-002.json`, `github-secret-update-metadata.json`. Signed diagnostic/ZIP retained privately for user's local request; build scratch/toolchain/cache already removed. No source/test/guide/notes changes, remote push/tag/release/TaskDone/Terminal. R3/SR004 Approved/Ready, ARCH002, Large/High/Reviewed retained. No long-lived docs impact; no published behavior changed. The following older rounds remain historical, not current status.
+
+---
+
 ## Latest DR-006: local signing diagnostic Pass; full Delivery still Blocked
 
 User requested real local build/signing diagnosis. On macOS26.5.2arm64, fresh Go1.27.2 build from exact9fa4e69 (same127 non-ticket inputs as IR00575f4dbe) signed successfully using the existing Developer ID certificate/private key. Actual hardened-runtime/timestamp codesign, strict verification and signed version execution all passed. Before/after keychain list unchanged; no credential export/read/settings changes. Owned scratch/binary/toolchain removed.
