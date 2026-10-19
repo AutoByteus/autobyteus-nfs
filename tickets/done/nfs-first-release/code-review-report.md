@@ -2,183 +2,194 @@
 
 ## Review Round Meta
 
-- **2026-10-19 / CRR-011 / Implementation Review / round11 / Full Re-Audit of affected signing boundary.** IR007 is a bounded four-path Local Fix, but adds search-list configuration to the prior diagnostic correction; all24 structural checks and full10-category scorecard re-evaluated. No full runtime/architecture/field campaign.
-- Task autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch codex/nfs-first-release, target origin/main. Canonical archive `tickets/done/nfs-first-release`; archive is not completion.
-- Intake **bf6aea661f3551ee7aab2f35f8e537a23b59dce4**, source **3f67e36193c246ca08b49cda818be5c0f94eba51**, base **79e35392bfe4f795464fecd8c034670b622c1684**. All127 current non-ticket inputs equal tested source. Finalized main72b8a4/f830/768 ancestry preserved.
-- Context: requirements-doc.md **R3/SR004 Approved**, design-spec.md **SR004 Ready**, approval-record-sr004.md/postpublication-testing-plan.md; investigation-notes.md/solution-revision-record.md; design-review-report.md/architecture-review-revision-record.md **ARCH-REV-002 Pass**. Same authority; no new intended behavior or approval.
-- Implementation-handoff.md **Checks Run read before execution**, implementation-revision-record.md **IR007**, prior source CRR009/report/history and successful-test CRR010 reviewed. NFS AGENTS/DESIGN/TESTING, shared design principles/Example9 and reviewer template apply; no guideline conflict.
-- Trigger: Delivery **DR011**, run39210821088/1 at main72b8a4; both Mac receipts **sign/exit1/cleanupcomplete/unclassified**. Exact failing boundary: existing codesign --force --timestamp --options runtime --keychain ... --sign ... binary in fresh release mode. Delivery failure-assessment.json is independent evidence; notary/payload/publication not reached.
-- **Original DR011 cause remains unknown**, raw capture was deleted, not recovered. Current source review is not an API failure-origin request or successful-test gate. API005/prepublication95, CRR009 sourcePass100 and CRR010 testPass remain exact-input history, not current IR007 validation.
+- **2026-10-19 / CRR-013 / Implementation Review / round13 / Full Re-Audit** of affected SR005 identity/validation/publication path. Shared interfaces, data-flow spine and admission changed; all24 structural checks/full10 scorecard re-evaluated. Not a runtime/field campaign or successful-test review.
+- Task autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release`, branch codex/nfs-first-release, target origin/main. Canonical archive `tickets/done/nfs-first-release` (T); archived location is not completion.
+- Intake08dca3db37701b425219428de89f48caef81f96d; final source/tests22205cc84a29e6aa66ba5673b0a60c8db95ddc80, production4c665e0eb23adf1f9bb45363a496b7786e76b138. Full recovery delta against immutable P238bdc183e8affac99ffdee9be9cb333b0eb126f, not only last four tests. All130 current non-ticket inputs equal22205cc.
+- Read requirements R3/SR004 Approved, approval-record-sr004/postpublication plan, investigation E23–26, solution history SR005, design SR005 Ready D2–5/DS5, architecture report/history ARCH-REV-003 Pass. Implementation **Checks Run read first**, handoff/history IR008/009 and IMP09 evidence. Prior source CRR011 and separate test CRR012/history retained.
+- NFS AGENTS/DESIGN/TESTING/RELEASE/package release guide, shared principles/Example9/template applied. No closer applicable guideline or conflict. Source and other-owner docs read only; no shared skill/superrepo edit.
+- Trigger DR013 report/history/failure-assessment: run39215470944/1 created tag/draft417014769 then published-only lookup returned None. IR008 held repair for Design Impact; SR005/ARCH003 supplies corrected executor authority. Actual BOTH-Mac Developer ID/Accepted belongs to DR013; public release remains Blocked.
+- Relevant API006 is historical exact-input prepublication evidence, not IR009 acceptance. Current affected API N/A—pending. No failure-origin-only reclassification or attribution of deleted historical signing output.
 
 ## Routing Classification Review
 
-**Large / High / Reviewed confirmed.** Signed-release keychain lifecycle remains security-sensitive; independent source review required. **Pass100 — bounded source repair accepted**, not real hosted signing/release Pass. Failure classification N/A. Fresh source-Pass route to affected API/new complete current-source candidate.
+**Large / High / Reviewed confirmed.** Cross-owner source/admission contract and irreversible publication effects justify independent source review. **Pass100**, failure classification N/A. Normal affected API next; no new candidate/signing campaign solely for this bound executor repair and no direct publication.
 
 ## Review Scope
 
-Only packaging/sign-macos.sh, scripts/tests/test_nfs_release_signing.py, TESTING.md and packaging/RELEASE.md change. Reviewed capture/import/partition → configure owned membership → selected identity/codesign → strict verify/Accepted → exact restore/delete/receipt, plus workflow/payload gate applicability. No Go/runtime/host/engine/workflow/lock/readiness change from intake.
+Nineteen NFS-only non-ticket paths: workflow; facade; identity/candidate/readiness/payload/publication; new source_context/recovery; three guides; seven test/fixture files. Complete forward validation/effect path inspected. Source hash algorithm/input set, original release-lock/releases, signer, installer, Go/runtime/host consent/state, engine recipe/pins and licenses unchanged relative to P. No actual recovery authorization created.
 
-No app/frontend/Guide/superrepo/PM work, credential replacement, trust/default-keychain change, broad -A access, timestamp weakening, retry/unsigned fallback or speculative new machinery. Evidence-only probes are inspected for attribution, not reviewed as product code or rerun.
+Excluded: app/Guide/superrepo/PM, shared skills, closed filesystem/editor/extraction tasks, credentials/keychain/Apple, field/user/storage actions. Reviewer did not alter source/tests or retained assets, run product checks, fetch/push/dispatch/upload, or change other-owner authorities.
 
 ## Upstream Behavior And Production-Path Basis Confirmation
 
-**Confirmed.** Requirements demand the same genuine Developer ID/Accepted release and private cleanup. Keychain lookup repair implements that contract, not a new signing policy. No behavior-basis ambiguity prevents this bounded source decision; unknown original hosted cause remains a separate empirical limit.
+**Confirmed.** R3 publish-first intent and integrity/signing requirements unchanged. SR005 separates corrected tools from already-bound bytes, not a new payload/version. No new behavior or material ambiguity.
 
-| Behavior | Status | Current path / preserved outcome |
+| Behavior | Status | Current implementation/lifecycle evidence |
 | --- | --- | --- |
-| BEH001 | Confirmed | Manual candidate dispatch → current source/native4/engine/OCI → identified retained candidate. Hashed signer change invalidates prior candidate applicability. |
-| BEH002 | Confirmed | Current candidate/evidence → genuine readiness → exact source/engine admission; no old record relabel. |
-| BEH003 | Confirmed | Fresh release workflow → signer saved list/import/partition → owned membership → validated identity/signature/Accepted → exact cleanup → native archive/final payload → immutable publisher. Configuration/signing failures stop this chain. |
-| BEH004 | Confirmed | Public download/manifest admission/notice/version/install unchanged; no actual install executed here. |
-| BEH005 | Confirmed | Host/source/state/permissions/consent/detach and engine/runtime source byte-preserved. |
-| BEH006 | Confirmed | Guides explain lookup evidence and limits; final receipts and deferred-plan custody unchanged. |
+| BEH001 | Confirmed | Default candidate context remains current; changed E refuses old candidate. New unbound production still needs current candidate. |
+| BEH002 | Confirmed | SourceContext→current candidate/readiness/payload validators reads full P inputs; fixed P→H→E tree scope and H/E hash independently admit executor. Evidence hashes are not proof of human judgement. |
+| BEH003 | Confirmed | prepare/publish→tag-derived mode→recovery.admit→original envelopes/native/payload jobs→selected ID→exact assets/OCI/public downloads. Recover skips builds/sign/payload/bind; fresh E=P preserved. |
+| BEH004/005 | Confirmed | Installer/schema/host/source safety unchanged; public_downloads checks bytes before owned-HOME version. No live install/storage test here. |
+| BEH006 | Confirmed | External receipt distinguishes E/P/H/tag/authorization; original body/provenance untouched. Guides and deferred-plan custody coherent. |
+
+Spines: DS1 current dispatch→candidate; DS2 genuine evidence→readiness; DS3 fresh dispatch→signed payload→immutable outputs; DS4 download→install/version; DS5 reviewed correction/authorization→E/P resolution→original proof→ID assets/OCI→dual-identity receipt. DS5a inventory/direct ID and DS5b repeated guards/effects remain bounded publication-owned local flows.
 
 ## Supported Product Scenario And Reachability Gate
 
-| Scenario / contract | Actor/event and independent goal | Supported entry → forward path / lifecycle / consequence | Validity / use |
-| --- | --- | --- | --- |
-| SCN001 / REQ001/002 | Maintainer requests current candidate | Manual publish=false → exact checkout → native4/engine/OCI → retained candidate without public effects | Supported Normal Scenario; Use |
-| SCN002/003 / REQ004/006 / D3 | Maintainer requests genuine signed normal release | Authorized fresh dispatch → current readiness/final build → new temporary keychain/imported selected identity → codesign lookup/sign/strict verify/Accepted → payload/publish | Supported Normal Scenario; Use. Required signing journey exists independently of the probe. |
-| SCN003/007 / REQ004/010 / D3 cleanup | Release signer temporarily changes its process user's keychain lookup context | Saved original list → only own new keychain prepended → signing → saved entries restored exactly before own deletion; unrelated original entries survive | Supported Normal Scenario/cleanup contract; Use |
-| SCN005 / REQ006 / D3 fail-closed | Required configuration or signing command fails | Actual signer stage returns nonzero → EXIT cleanup → safe stage/code/diagnostic → native job failure, no notary/payload progression | Supported Explicit Edge Scenario; Use. Existing fail-closed contract and actual failed release, not invented concurrent activity. |
-| SCN007 / REQ010 / D3 privacy | Failed signing needs useful nonprivate evidence | Nonzero codesign → private bounded parser → exact literal identity-not-found or existing safe states → original exit/cleanup/receipt only | Supported Explicit Edge Scenario; Use. Exact observed local literal supports matching, not hosted causal attribution. |
-| SCN006/004/008 | Maintainer recovers publication; user downloads; Delivery transfers follow-up | Existing bound-payload retry, public admission and postpublication custody paths unchanged | Supported explicit edge/normal scenarios respectively; Use unchanged evidence |
+| Scenario/contract | Initiator/independent goal | Entry→production path/lifecycle | Expected consequence/evidence | Validity/use |
+| --- | --- | --- | --- | --- |
+| SCN001 / REQ001–002 | Maintainer requests nonpublic current candidate | Manual candidate dispatch→current checkout/hash/native/engine/record | Current-source strictness; approved existing workflow | Supported Normal Scenario / Use |
+| SCN002 / REQ003/006 | Release owner supplies genuine required evidence | Dispatch→fixed admission/full original validators | Exact source/evidence boundaries; no fabricated authority | Supported Normal Scenario / Use |
+| SCN005 / integrity contract | Required evidence/input is absent, stale or conflicts | context_for/admit/full verifiers refuse before effects | Fail-closed expressly retained by R3/SR005 | Supported Explicit Edge Scenario / Use |
+| SCN006 / MP001 / AC004/006 | Maintainer finishes actual interrupted signed v0.1.0 without changing bytes | DR013 tag+draft→reviewed H/current E→original P proof→same draft/assets/OCI | Original tag/signatures preserved; actual DR013 and SR005 establish need independently of tests | Supported Explicit Edge Scenario / Reachable / Use |
+| SCN006 / MP004 | Publisher observes its already-created owned draft | Write-token inventory→unique tag→selected ID→same draft; known ID missing refuses | Actual DR013 by-tag404 plus exact list/direct-ID observation | Supported Explicit Edge Scenario / Reachable / Use |
+| SCN005/006 / immutable-output contract | Conflict/expiry/ambiguous effect encountered during continuation | Full proof→guard E main/tag/release→nonclobber effect; ambiguous POST stops for manual reconciliation | No rollback/delete/recreate; approved R3/SR005 constraints, not hypothetical multi-writer coordination | Supported Explicit Edge Scenario / Use |
+| SCN004/007/008 | User downloads; Delivery reports/transfers deferred plan | Exact public bytes→owned-HOME version; receipt→Delivery→terminal SD→PM | Distribution/custody still required, no inferred field Pass | Supported Normal Scenario / Use unchanged obligations |
 
 ### Candidate Finding And Mechanism Gate
 
-| Candidate | Observation / mechanism | Independent trigger and lifecycle consequence | Evidence | Disposition / scope |
+| Candidate | Mechanism | Independent trigger→path/lifecycle/consequence | Evidence | Disposition/scope/response |
 | --- | --- | --- | --- | --- |
-| CG018 | Add only owned temporary keychain to preserved original search list | SCN003/REQ004 requires signing with an imported temporary identity. Normal create/import/partition precedes codesign. Missing search membership can prevent lookup despite explicit --keychain; preserving/restoring prior list is D3/REQ010 contract. | Real local IMP07-01/02/03; current script76–91; stateful fixture and omit/drop/swallow/restore mutants | Promote mechanism — this ticket; satisfactory bounded repair, no current finding |
-| CG019 | Recognize exact identity-prefixed no-identity message without leaking identity | SCN007/D3 requires safe failure evidence. Local real codesign emitted this form, previously unclassified. Match entire line using selected identity, emit fixed literal only; nonzero still authoritative. | IMP07-01/03 booleans and probe source; parser new match + shell allowlist; positive/prefix rejection tests | Promote mechanism — this ticket; satisfactory, no current finding |
+| CG020 | Git-proven P versus independently reviewed H/current E | MP001/SCN006 actual immutable tag cannot move but publisher needs correction→bounded snapshot→full current validators→fixed admission; original bytes preserved | SR005 D2–3, source_context/recovery propagation, IMP09-07 real retained bytes and ancestry/tree negatives | Promote mechanism / This ticket / Satisfactory; no finding |
+| CG021 | Unique publisher-visible ID replaces published-only absence | MP004/SCN006 real draft exists after create→inventory/direct ID→same ID upload; known missing ID stops | DR013 records, discover/reconcile_release/upload/verify_assets, endpoint-shaped controls | Promote mechanism / This ticket / Satisfactory; no clobber/new-draft fallback |
+| CG022 | Repeat proof/admission before effects; inspect grants no permission | REQ006/SCN005–006→prepare/publish reconstruct context→E main/tag/release guards; transport not authority | Full orchestration, six mutants, original job/Accepted hashes and inspection/admission negatives | Promote mechanism / This ticket / Satisfactory; actual API/recovery still required |
 
-The local synthetic reproduction establishes lookup behavior at that boundary, **not** that a self-signed identity is an approved release input or that DR011 had this cause. No real Developer ID/P12/password/Intel/timestamp/notary success is inferred. Unsupported concurrency or speculative credential/trust repair is not required.
-
-## Prior Finding Resolution
-
-| Reference | Prior | Current disposition / evidence |
-| --- | --- | --- |
-| CR-001 Mac empty array | Resolved | Still resolved; mandatory native argv/workflow unchanged. |
-| CR-002 unused imports | Resolved | Still resolved; touched shell/embedded/test bindings are used. |
-| DR009 diagnostic portion | CRR009 source accepted | Actual DR011 uploaded sanitized unclassified receipts; diagnostic pipeline ran, original codesign cause still unknown. |
-| DR011 lookup/diagnosis request (no CR ID) | Local Fix requested | IR007 lookup repair accepted on controlled native evidence plus source/local controls. Original hosted cause and real release remain unverified, not marked resolved. |
+No held finding or new hypothetical premise. No machinery/deduction from arbitrary legacy migration, contradictory concurrent operators, or deleted historical signing output. Tests confirm independently supported paths, not their own validity.
 
 ## Structural / Design Checks
 
-All24 checks reevaluated for this affected signing boundary; unchanged owners carry prior evidence with verified byte applicability.
-
-| Check | Result | Evidence | Required action |
+| Check | Result | Evidence | Action |
 | --- | --- | --- | --- |
-| Task design health assessment is present, evidence-backed, and preserved by the implementation | Pass | Existing signing owner handles local lookup correction; R3 decomposition and release-first authority unchanged. | None |
-| Implementation matches approved behavior-defining supplemental artifacts | Pass | R3 approval/postpublication plan preserved: actual Developer ID/Accepted required; field/user Deferred. | None |
-| Data-flow spine inventory clarity and preservation under shared principles | Pass | DS3 workflow→signer→lookup/codesign/Accepted→retained payload→publisher; failure/cleanup return traced separately. | None |
-| Ownership boundary preservation and clarity | Pass | Signer owns captured list, temporary keychain setup and restoration; no caller reaches its private snapshot. | None |
-| Off-spine concern clarity (off-spine concerns serve clear owners and stay off the main line) | Pass | JSON/argv translation and fixed diagnostic matching serve the signer only; no new coordinator. | None |
-| Existing capability/subsystem reuse check (no fresh helper where an existing subsystem should own it) | Pass | Reuses existing search.json, Python stdlib, EXIT cleanup and receipt upload. | None |
-| Reusable owned structures check (repeated structures extracted into the right owned file instead of copied across files) | Pass | One saved list used for configure and restore; one shared stateful signing fixture, no per-target copy. | None |
-| Shared-structure/data-model tightness check (no kitchen-sink base, no overlapping parallel shapes, specialization/composition used meaningfully) | Pass | One additional literal diagnostic; no new release/host schema, credential or readiness representation. | None |
-| Repeated coordination ownership check (shared policy has a clear owner instead of being repeated across callers) | Pass | One signer sequences configuration/lookup and owns cleanup, both Mac jobs call it. | None |
-| Empty indirection check (no pass-through-only boundary) | Pass | Embedded Python translates saved JSON into exact argv and replaces itself with security to preserve command status. | None |
-| Scope-appropriate separation of concerns and file responsibility clarity | Pass | 179-line signer remains one signing lifecycle; evidence-only native probes are not product code. | None |
-| Ownership-driven dependency check (no forbidden shortcuts or unjustified cycles) | Pass | No app, Go, engine or publisher coupling; existing system command boundary retained. | None |
-| Authoritative Boundary Rule check (callers do not depend on both an outer owner and that owner's internal manager/repository/helper/lower-level concern) | Pass | Workflow invokes signer and receives safe receipts; it does not independently manage the private keychain/list. | None |
-| File placement check (file/folder path matches owning concern or explicitly justified shared boundary) | Pass | Configuration beside keychain setup, diagnostic beside existing parser; appropriate packaging owner. | None |
-| Flat-vs-over-split layout judgment (layout is readable for the scope and not artificially fragmented) | Pass | Small local block is clearer than a new generic keychain service/helper framework. | None |
-| Interface/API/query/command/service-method boundary clarity (one subject, one responsibility, explicit identity shape) | Pass | Two-argument signer boundary unchanged; list entries supplied as separate argv, never evaluated shell text. | None |
-| Naming quality and naming-to-responsibility alignment check (files, folders, APIs, types, functions, parameters, variables) | Pass | configure-search-list stage and identity-not-found observation are specific; prior means the saved ordered list. | None |
-| No unjustified duplication of code / repeated structures in changed scope | Pass | Configure adds owned entry; cleanup restores prior only. Distinct operations, same authoritative snapshot. | None |
-| Patch-on-patch complexity control | Pass | Full affected-boundary re-audit: actual lookup repair replaces a missing setup step; no retry, trust override, fallback or broader diagnostic framework. | None |
-| Dead code removed in the touched files and modules (Core Principle 7) | Pass | json/os/sys and fixture shlex imports referenced; new stage/enum used; no dormant branches or wrappers. | None |
-| Relevant test scenarios and assertions are clear and requirement-aligned | Pass | Stateful fixture proves membership/order/exact restore/configure exit, timestamp/runtime preserved; observed literal privacy checks retained. | None |
-| Test fixtures/helpers are reasonably reusable and test structure remains coherent | Pass | Existing run_case/fake commands extended with JSON list state and shared temporary setup. | None |
-| No stale, duplicated, or compatibility-only tests are retained in changed scope | Pass | Prior diagnostic/Accepted/signal/no-clobber controls still apply; no disabled or compatibility alternative. | None |
-| API/E2E readiness for the next workflow stage | Pass | Exact-source full58/57executed/1skip,23overlap focused, four mutants and original-control evidence clear; fresh candidate remains required. | None |
+| Task design health assessment is present, evidence-backed, and preserved by the implementation | Pass | SR005 requires bounded identity-boundary refactor; source_context/recovery implement it, not a new framework. | None |
+| Implementation matches approved behavior-defining supplemental artifacts | Pass | R3 approval, SR005 D2–5, original DR013 binding and deferred-plan custody preserved. | None |
+| Data-flow spine inventory clarity and preservation under shared principles | Pass | DS1–4 preserved; DS5 E admission → P proof → selected-ID effects → public verification; local loops explicit. | None |
+| Ownership boundary preservation and clarity | Pass | Publication owns effects; SourceContext owns Git projection; recovery owns fixed admission. | None |
+| Off-spine concern clarity (off-spine concerns serve clear owners and stay off the main line) | Pass | Projection/evidence/transport serve the publication owner, not competing controllers. | None |
+| Existing capability/subsystem reuse check (no fresh helper where an existing subsystem should own it) | Pass | Existing candidate/readiness/payload/engine/OCI validators reused in full. | None |
+| Reusable owned structures check (repeated structures extracted into the right owned file instead of copied across files) | Pass | One SourceContext passed through affected owners; one discovery/reconciliation policy. | None |
+| Shared-structure/data-model tightness check (no kitchen-sink base, no overlapping parallel shapes, specialization/composition used meaningfully) | Pass | Executor and payload contexts distinguish subjects; separate authorization does not overwrite readiness. | None |
+| Repeated coordination ownership check (shared policy has a clear owner instead of being repeated across callers) | Pass | One fixed admission scope plus shared publication guard across effects; no caller-supplied allowlist. | None |
+| Empty indirection check (no pass-through-only boundary) | Pass | New files enforce substantive projection/admission policy, not forwarding-only layers. | None |
+| Scope-appropriate separation of concerns and file responsibility clarity | Pass | Projection/admission moved out; remaining publication sequencing is coherent at388nonempty lines. | None |
+| Ownership-driven dependency check (no forbidden shortcuts or unjustified cycles) | Pass | Workflow→facade→publication→recovery/context/validators; no reverse effect dependency. | None |
+| Authoritative Boundary Rule check (callers do not depend on both an outer owner and that owner's internal manager/repository/helper/lower-level concern) | Pass | Facade cannot bypass publication admission to perform uploads; record owners retain their invariants. | None |
+| File placement check (file/folder path matches owning concern or explicitly justified shared boundary) | Pass | All source under packaging; tests under scripts/tests; no app/runtime owner drift. | None |
+| Flat-vs-over-split layout judgment (layout is readable for the scope and not artificially fragmented) | Pass | Two coherent new owners; no generic plugins or gratuitous subsystem fragmentation. | None |
+| Interface/API/query/command/service-method boundary clarity (one subject, one responsibility, explicit identity shape) | Pass | prepare/inspect-bound/publish distinguish permission from inspection; E/P/H/version/ID explicit. | None |
+| Naming quality and naming-to-responsibility alignment check (files, folders, APIs, types, functions, parameters, variables) | Pass | Names align with subjects: SourceContext, admit, discover, owned_release and guard. | None |
+| No unjustified duplication of code / repeated structures in changed scope | Pass | Existing hash/parser reused; shared real-Git fixture replaces duplicated ancestry/commit mocks. | None |
+| Patch-on-patch complexity control | Pass | Old root conflation and published-only discovery replaced, not wrapped with fallback/hash exemptions. | None |
+| Dead code removed in the touched files and modules (Core Principle 7) | Pass | IMP09-11 unused-import audit and caller inspection clear; replaced release() lookup removed. | None |
+| Relevant test scenarios and assertions are clear and requirement-aligned | Pass | Full C/P/H/E and endpoint-shaped cases test SCN006; conflict and exact-byte assertions retained. | None |
+| Test fixtures/helpers are reasonably reusable and test structure remains coherent | Pass | Fixture owns synthetic Git/data; Remote owns endpoint doubles; current validators remain real. | None |
+| No stale, duplicated, or compatibility-only tests are retained in changed scope | Pass | Obsolete fixed-SHA/Git mocks removed; only reasoned standalone Go-child skip retained. | None |
+| API/E2E readiness for the next workflow stage | Pass | Current checks and retained-byte proof support affected API inspect-bound/admission, not publication Pass. | None |
 
 ## Source File Size And Structure Audit
 
-| Source file | Before nonempty | After | >500 | Added+deleted / >220 | Ownership/placement | Action |
-| --- | --- | --- | --- | --- | --- | --- |
-| packaging/sign-macos.sh | 169 | 179 | Pass | 11+1=12; below trigger | One signing lifecycle; configuration belongs beside creation/import and existing restoration | None |
+P238 baseline→22205cc; nonempty includes comments. Tests/fixtures/docs exempt; workflow included as production configuration. Publication306 additions/135 deletions exceeds220 signal: two substantive projection/admission policies were split out, remaining ordered effects are one concern, not an automatic splitting prescription.
 
-Base79e3539/current3f67e36; nonempty includes comments. Test/fixture/docs exempt. No forced split or generic helper needed.
+| Source | Before | After | >500 | Delta | SoC/Ownership | Placement | Action |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| .github/workflows/release-nfs.yml | 361 | 362 | Pass | 23 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release.py | 127 | 133 | Pass | 14 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/candidate.py | 268 | 273 | Pass | 35 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/identity.py | 138 | 138 | Pass | 2 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/payload.py | 123 | 125 | Pass | 22 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/publication.py | 235 | 388 | Pass | 441 — >220 assessed | Projection/admission split; release sequencing coherent | Pass | None |
+| packaging/release_support/readiness.py | 68 | 71 | Pass | 39 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/recovery.py | 0 | 59 | Pass | 64 — <=220 | Single existing or explicit owner | Pass | None |
+| packaging/release_support/source_context.py | 0 | 85 | Pass | 105 — <=220 | Single existing or explicit owner | Pass | None |
 
 ## Legacy / Backward-Compatibility Verdict
 
 | Check | Result | Notes |
 | --- | --- | --- |
-| No backward-compatibility mechanisms | Pass | One current setup path; no old signer fallback. |
-| No legacy old-behavior retention | Pass | Missing membership corrected directly, not retried conditionally. |
-| Dead code removed in touched scope | Pass | Changed imports/variables/enum referenced; no obsolete disabled branch/test. |
-| Approved persisted transition decision followed | Pass | Host state Not Affected. User search list is temporarily configured and restored; no schema migration. |
-| No version-specific dual reads/writes/fallback | Pass | Current private JSON list snapshot is one representation; no historical decoder. |
-| Transition mechanics match design | Pass | Changed source needs current candidate/readiness; old evidence preserved, not rewritten. |
+| No backward-compatibility mechanism | Pass | One current validator per record; explicit source identity, not old-version decoder. |
+| No legacy old-behavior retention | Pass | Published-only draft discovery/tag-addressed upload replaced; P code never imported/executed. |
+| Dead code removed in touched scope | Pass | Replaced lookup gone; current imports/callers inspected, IMP09-11 clear. |
+| Approved persisted transition followed | Pass | Original signed records Directly Usable—No Migration; host state Not Affected; snapshot disposable. |
+| No version-specific dual reads/writes/fallback | Pass | Fresh/resume/recover are current lifecycle states; no ROOT/hash bypass. |
+| Transition mechanics match design | Pass | Separate authorization; original lock/releases/readiness/payload unchanged. |
 
-## Dead / Obsolete Items Requiring Removal
+## Dead / Obsolete / Legacy Items Requiring Removal
 
-None found in touched scope. No unrelated cleanup expansion.
+None established in touched scope. No unrelated cleanup expansion.
 
 ## Docs-Impact Verdict
 
-**Yes, addressed** by TESTING.md and packaging/RELEASE.md. They state preserved list/order, configure-failure refusal, local synthetic reproduction, observed diagnostic rather than cause, unchanged actual signing requirements and private cleanup. No claim hosted failure was solved or field qualification completed.
+**Yes, addressed** by RELEASE.md, packaging/RELEASE.md, TESTING.md: E/P/H, stable authority, read-only inspection, ID semantics, original signing carry and no unnecessary candidate/signing repeat. Fresh mode remains separate. Delivery owns final public receipts/docs/custody. Earlier design pending-review notation is superseded by current ARCH003 report/history, not a missing review.
 
 ## Additional Material Premise Validation
 
-Architecture premises unchanged. **CG018 — new verified lookup premise**, not a newly invented product behavior:
-- Independent origin: SCN003/REQ004/D3 official signed-release requirement.
-- Concrete caller: fresh native Mac workflow invokes sign-macos.sh with final binary/receipt; script creates and imports own temporary keychain then selects identity/codesign.
-- State/consequence: new keychain may not be on user search list; real IMP07-01 reports creation without membership. IMP07-03 same synthetic imported/partitioned identity and explicit --keychain yields failure1 → owned+prior sign0/strict verify0/runtime true → removed-again failure1. Exact prior list restored.
-- Method inspected: each A/B/A stage signs a fresh copy, generated self-signed identity only, no real credentials. -v valid-identity query is false for that untrusted synthetic identity; non-v explicit query sees it. Probe uses --timestamp=none only to avoid Apple requests. It does **not** execute the complete production validation path or prove actual hosted credentials.
-- Supported Normal Scenario / Reachable for required temporary-identity lookup; proportionate response is preserving originals while adding own membership, then existing cleanup. Source retains actual --timestamp, Developer ID/team, strict verify, runtime and Accepted gates. Full hosted success still requires current execution.
-- CG019 merely records the exact observed diagnostic form; no claim the deleted DR011 output contained it.
+| Upstream premise | Status | Evidence/treatment |
+| --- | --- | --- |
+| MP001 interrupted publication needs corrected executor with original payload bound | Confirmed | Actual DR013 tag/draft/failure and SR005; P/H/E path implements existing recovery without weakening product identity. |
+| MP004 published-by-tag absence is not owned-draft absence | Confirmed | Saved DR013 observations; new ID path removes faulty mutation authority. No fresh remote observation claimed. |
+| MP002 physical prerequisite / MP003 installer claim separation | Unchanged disposition | Physical prerequisite superseded by R3; installer admission preserved, not reopened. |
+
+No new/reclassified initiating premise. Bounds, scope and guards implement already-approved contracts, not arbitrary deletion recovery or transactional remote writes.
 
 ## Review Scorecard
 
-**10.0/10 = 100.00/100**, simple mean for source-quality visibility, not API confidence or real release completion. No supported evidenced current source defect warrants a deduction.
+**10.0/10 = 100.00/100**, simple mean for source-quality visibility, not API confidence/release completion. All mandatory categories assessed; no supported evidenced source defect warrants deduction.
 
-| Priority | Category | Score | Why | Weakness holding down | Improvement |
+| Priority | Category | Score | Why | Weakness | Improvement |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Data-Flow Spine Inventory and Clarity | 10 | Complete signed-release path and configuration/failure/restore subpath explicit. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 2 | Ownership Clarity and Boundary Encapsulation | 10 | One signer owns temporary search-list lifecycle; no caller bypass. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 3 | API / Interface / Query / Command Clarity | 10 | Exact argv, same entrypoint, nonzero propagation; safe receipt vocabulary. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 4 | Separation of Concerns and File Placement | 10 | Bounded lookup setup in existing packaging owner. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10 | Single saved list/current diagnostic shape; shared stateful fixture. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 6 | Naming Quality and Local Readability | 10 | Specific configuration stage and observed literal, no causal overclaim. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 7 | API/E2E Readiness | 10 | Clear exact-input local evidence permits affected API; no claim current hosted gate is complete. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 8 | Runtime Correctness And Behavioral Fidelity | 10 | Membership/order/exit/restore supported by source and local controls; real hosted cause and success still unproven. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 9 | No Backward-Compatibility / No Legacy Retention | 10 | Single current path; no old behavior fallback or migration. | None established in reviewed source scope | None required; downstream execution retains stated limits |
-| 10 | Cleanup Completeness | 10 | Captured list restored before owned deletion; cleanup failure remains failure; original exit preserved. | None established in reviewed source scope | None required; downstream execution retains stated limits |
+| 1 | Data-Flow Spine Inventory and Clarity | 10 | DS1–5 and bounded ID/guard paths explicit; product and executor not conflated. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 2 | Ownership Clarity and Boundary Encapsulation | 10 | Projection, admission, record verification and public effects have distinct owners. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 3 | API / Interface / Query / Command Clarity | 10 | Tag-derived mode; inspection grants no permission; selected ID directs mutations. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 4 | Separation of Concerns and File Placement | 10 | Two substantive policies split from publication; all changed source below500. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 5 | Shared-Structure / Data-Model Tightness and Reusable Owned Structures | 10 | One SourceContext threads existing validators; original schemas preserved. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 6 | Naming Quality and Local Readability | 10 | E/P/H and operation names align with authority; no causal/verification overclaim. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 7 | API/E2E Readiness | 10 | Clear exact-input local checks; current real API/hosted proof still required. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 8 | Runtime Correctness And Behavioral Fidelity | 10 | CG020–022 satisfy supported immutable recovery and fail-closed contracts. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 9 | No Backward-Compatibility / No Legacy Retention | 10 | One current validator per shape; no old-code execution, migration or hash bypass. | None established in reviewed scope | None required; retain downstream evidence gates |
+| 10 | Cleanup Completeness | 10 | Context managers clean owned snapshots; no delete/clobber of original remote state. | None established in reviewed scope | None required; retain downstream evidence gates |
 
 ## Evidence And Checks
 
-Read implementation Checks Run first; source unchanged and results clear. **No reviewer product test/lint/build/keychain/Apple/hosted execution.** No new finding needed reproduction. Source/identity and own-artifact audits only.
+Read Checks Run first. **No product checks rerun by reviewer**: clear results/current exercised bytes reused. Only read-only source/identity/size and own-artifact audits; no new finding required reproduction. Evidence: code-review-evidence/crr-013/review-audit.json.
 
-| Evidence / owner | Result and attribution | Limit |
+| Evidence/owner | Result/reuse | Limits |
 | --- | --- | --- |
-| IMP-07-01/02/03 implementation | Real local empty/synthetic-keychain lookup, A/B/A; original list byte-exact restore and own scratch/keychain deletion recorded | Local macOS26.5.2arm64; synthetic identity, no trust change, no real Developer ID/P12/notary; no hosted-cause attribution |
-| IMP-07-04/05 implementation | Precommit identical product focused23; committed3f67e36 full58 collected57executed1 expected standalone Go-child skip, Pass | Fixtures execute real shell with external doubles; focused overlaps full |
-| IMP-07-06–11/14 implementation | Bash/ShellCheck/actionlint/hash/recipe pass; no-candidate expected refusal | No-candidate is not actual stale-candidate execution |
-| IMP-07-12/13 implementation | Four mutants detected: omit membership/drop originals/swallow config error/skip restore; original signer fails new stateful control | Intentional controls, not current product failures |
-| IMP-07-15/16/19/20 implementation | Copy identity/cleanup/import/size/history pass; precommit labels and bookkeeping corrections disclosed | Runner cleanup says no real-keychain access for fixture run only; native probes are separately attributed above |
-| DR011 Delivery | Both real Mac sign/exit1/cleanupcomplete/unclassified; no notary | Raw output deleted; actual cause unresolved |
-| CR-11-01 reviewer |127 current source bytes equal3f67e36; four paths;179nonempty/delta12; finalized-main ancestor preserved | Read-only review audit, not independent product execution |
+| IMP09-06 / Implementation4c665e0 | Raw72collected/71executed/1 expected standalone Go-childskip, full Python Pass. Actionlint, recorded Bash command/hash exit0. | Other code unchanged after run; Bash command not credited as two separate script parses. Python signing cases execute unchanged shell; no Go-parent execution this round. |
+| IMP09-10 / Implementation22205cc |15 publication tests Pass after four additional preserved controls | Overlaps06; not one full76-test rerun. Only this test file changed after06. |
+| IMP09-05 / Implementation | Six admission/full-tree/E-for-P/by-tag/known-draft/main mutants detected | Expected negatives; not current product failures/API acceptance. |
+| IMP09-07 / Implementation | Full current P validators read actual retained bytes; original hash/record/Accepted binary SHA match; missing real authorization refuses; snapshots removed | Jobs/draft endpoints are saved DR013 doubles, not fresh retention/API/signing. No actual authority created. |
+| IMP09-11 / Implementation | Scope/hash-algorithm/import/size/preservation/cleanup Pass | Static audit, not publication qualification. |
+| DR013 / Delivery | Both actual Mac DeveloperID/runtime/timestamp/strictverify/Accepted and downloaded retained binary identity; payloadjob117940491787 success | Whole run failed later at publisher; public distribution incomplete. No old-cause reattribution. |
+| CR13-01 / Reviewer |130 current non-ticket files equal22205cc;19-path delta; all9 changed source/config files below500 | Administrative/source audit, not rerun product tests. |
 
-Full commands/raw logs linked by implementation Checks Run. Reviewer first guessed absent IMP-07-20-metadata-notes.md, then listed/read actual IMP-07-20 evidence; read-only filename correction, no product/test failure. No copied cumulative manifest. Prior API005/CRR009/010 keep exact-input scope.
+Initial /var alias errors, user-interrupted run and superseded evidence are disclosed in IMP09-09; no verdict invented for interrupted run. Two raw unittest whitespace exceptions remain unchanged. Own artifact generator initially counted a Markdown separator as a25th structural row and stopped before report/history writes; corrected filter, no product impact. Before-size lookup of two added files produced expected absent-at-base diagnostics, treated as zero.
 
-## Findings / Follow-ups
+## Findings
 
-**None new.** No new finding ID, deduction or cause-specific prescription. CR-001/002 remain resolved. Existing postpublication-plan custody retained; no extra Task or notification.
+**None new or remaining.** CR-001 native argv / CR-002 unused imports remain resolved. IR008 Design Impact is addressed by SR005/ARCH003 and current context/admission code. DR013 source correction accepted for API validation, not a declaration of successful remote recovery.
 
-## Classification / Recommended Recipient
+## Follow-ups
 
-**Pass**, failure classification N/A. Fresh most-specific source-Pass rule → affected API/new complete current-source candidate. Then Delivery owns genuine current readiness/freshmain and real both-Mac signing/Accepted/publication. This is not a same-input blind rerun or permission to relabel API005.
+None. Existing postpublication plan/custody remains; no extra Task or dispatch.
+
+## Classification
+
+**Pass**, failure classification N/A; Large/High retained.
+
+## Recommended Recipient
+
+Fresh most-specific source-Pass rule→affected API/E2E. Current read-only inspect-bound and executor-admission/full-path API proof remain. No repeat successful candidate/native/signing/engine solely for executor repair, immediate publication, new approval loop or duplicate informational outcome under controlling single-recipient contract.
 
 ## Residual Risks
 
-- Preserved-engine sourcehash **7cb7b6d25794cbacbcf0286d9d0760347d9f15999eb51e981765e4ba8ed37a1a**, prior measured **0a209d1efe327e13feeabe426c90e411728813a7261467c0428271eeee1db8e3**; recipe **299db7012dcc543f8606632695d286548d1513c13ace8b108eb712984fd39274** unchanged. Future measured candidate identity governs readiness; no reproducibility equality assumption.
-- DR011/009/005 failed history remains. This repair addresses evidenced local lookup, not conclusively the original hosted cause. Both real Mac credentialed signing/Accepted, final payload/publication/public OCI/download/signature/install remain mandatory.
-- Six secrets provisioned; no speculative reprovision. DR007 development arm64 Accepted is not hosted P12/Intel/final payload proof.
-- Field/shared-filesystem/physical/user tests Deferred, not Passed or release/closure blockers. Approved custody Delivery → terminal SD → requesting PM unchanged.
-- No reviewer source/test writes, runtime resources, retained-candidate/localnotary access, credential/remote/push/dispatch/main replay/reset/tag/release/TaskDone/Terminal actions. NFS reviewer artifacts only.
+- DR013 remains actual publication Blocked. Current remote tag/draft visibility/expiry, ID upload and hosted same-byte recovery are not proven by fixtures/review.
+- Preserve P238bdc183e8affac99ffdee9be9cb333b0eb126f, tag objectf4a04fd0c80a6625708ba002b4cef5507a03f514, draft417014769, payload artifact12169472209/run39215470944/1/job117940491787/publicationSHA3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8. Retained API006 candidate and `/Users/normy/nfs-first-final-dr013-gmvotux9/payload` untouched.
+- Delivery judges genuine stable evidence for reviewed H, fresh-integrates E without executable drift, preserves finalized main ancestry and authorizes same-byte recovery. Parser/hash equality does not prove human judgement. Known draft absence/conflict/expiry blocks, never licenses replacement authority.
+- Both original Mac Accepted/signatures carry only for exact original bytes; no credential/keychain/signing campaign, new version/payload/tag move. Actual public complete OCI/bytes/signatures/install checks remain mandatory.
+- Guards and attempted-stage receipts are not transactions or automatic recovery from arbitrary external mutations. No clobber/delete/blind ambiguous POST retry.
+- Field/shared-filesystem/physical/user tests Deferred—not Passed and not release-task closure prerequisite. Delivery→terminal SD→requesting PM plan custody remains. No TaskDone/Terminal/release acceptance.
 
 ## Latest Authoritative Result
 
-**CRR-011 / Implementation Review / Pass100.00**. Supported-scenario and material-premise gates Pass. Bounded lookup repair accepted; original hosted cause and actual signing/release unverified. Canonical CRR010 successful-test and API/Delivery reports unchanged. Continue normal affected API, not architecture restart or immediate publication.
+**CRR-013 Pass100.00; Implementation Review; Full Re-Audit of affected SR005 recovery boundary.** Scenario/material-premise gates Pass; no findings/follow-ups. R3/SR004 Approved, SR005 Ready/ARCH003/IR009; affected API pending. Canonical test report remains separate CRR012 history.
+
+Final source/tests22205cc, production4c665e0; executor sourceHash e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21, distinct from original product3e1af43a…. NFS-only review artifacts, prior40189-byte history prefix retained. No source/test/other-owner changes, live resources or remote effects. Routing/receipt in code-review-evidence/crr-013.

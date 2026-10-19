@@ -1,0 +1,15 @@
+{
+  "review": "CRR-013",
+  "result": "Pass",
+  "productInputsUnchanged": 130,
+  "priorHistoryPrefixPreserved": true,
+  "otherOwnerAuthoritiesUnchanged": true,
+  "structuralRows": 24,
+  "scoreRows": 10,
+  "realRecoveryAuthorizationAbsent": true,
+  "productChecksRerun": false,
+  "reviewerRemoteOrRuntimeActions": false,
+  "ownedScratchCleanup": "Removed two reviewer artifact-generator files; no product runtime resources created",
+  "artifactAttempt": "Initial generator counted Markdown separator as row25; stopped before report/history writes; corrected, all final checks pass",
+  "statusBeforeStage": " M tickets/done/nfs-first-release/code-review-report.md\n M tickets/done/nfs-first-release/code-review-revision-record.md\n?? tickets/done/nfs-first-release/code-review-evidence/crr-013/\n"
+}
