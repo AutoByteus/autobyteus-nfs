@@ -15,6 +15,8 @@
 
 | DR-007 | User-requested local notarization retry; user updates GitHub password secret | DR006 local signing Pass / full Delivery Blocked | Local Apple notarization **Accepted / Pass**; full Delivery **Blocked** pending existing IR005 review/API/hosted/publication | delivery-evidence/dr-007/summary.md, verification.json, own reports |
 
+| DR-008 | API004 reviewed current source-availability request after CRR007/IR005 | DR007 bounded local notarization Pass / full Delivery Blocked | Prerequisite Completed; overall Delivery **Blocked / not yet eligible** | delivery-evidence/dr-008/staged-source-receipt.json; own reports |
+
 ## DR-001 — Build-only source staging baseline
 
 - Task: nfs-first-release / autobyteus-nfs-3 / project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5. **Large / High / Reviewed**, R2/SR002 Approved, SR003 Ready, ARCH-REV-001. CRR001 source Pass100 is not an API Pass or release qualification.
@@ -102,3 +104,13 @@ Fresh origin/main7683494050b85a298ed08a55592e70f86a010a7a is already ancestor of
 This local result does not test hosted P12/password import, ephemeral keychain, Intel signing, final release metadata or public bytes. It does not establish the original hosted failure cause. DR005 failed run remains failed. Actual both-Mac signing/Accepted, retained payload, immutable public release/OCI/download/signature/install receipts remain required; field/user tests remain Deferred until after publication.
 
 Signed diagnostic retained privately at /Users/normy/nfs-local-notary-xq_ym2f6/autobyteus-nfs (not an official release binary); ZIP/attempt receipts retained. Source/toolchain/cache were removed at preparation. No background notary command remains according to completed state/user output; user terminal may await Return. No host setup, storage change, keychain export, release/tag/push/TaskDone/Terminal. Canonical checkout/PM and other owners untouched.
+
+## DR-008 — IR005/CRR007 source staged for API004
+
+Execution prerequisite **Completed**; full Delivery **Blocked / not yet eligible**. Requested by API004 after IR005/CRR007 source Pass100, not an API result or publication handoff. Large/High/Reviewed, R3/SR004 Approved/Ready and ARCH002 unchanged.
+
+Fresh origin/main `7683494050b85a298ed08a55592e70f86a010a7a` already ancestor; no integration delta/rerun or main finalization replay. All127 non-ticket inputs equal IR005 `75f4dbe5527a7159f536bafcf9448bc2d6a01604`. Fast-forwarded ONLY origin/codex/nfs-first-release fromb599e476 to `44e2487b4b30da99797c149c17fa0c8bcaa6a87f`. Exact remote ref and GitHub workflow bytes verified: blob `dc9acc3b3390806b80db759fc38038c5b675bae8`, SHA256 `f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35`; workflow388178899 active. Current production source hash `bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62`.
+
+API dispatch inputs: ref `codex/nfs-first-release`, `release_tag=v0.1.0`, `source_sha=44e2487b4b30da99797c149c17fa0c8bcaa6a87f`, `publish=false`. API owns the NEW complete candidate dispatch and current affected validation, reusing unchanged IMP checks where evidenced. Delivery performed no candidate dispatch, main merge/push, readiness change, signing/notary, secret reprovisioning, publication, deployment, TaskDone or Terminal. Main/tags/releases unchanged. DR005 failed run and old API003 candidate remain historical; DR007 local Accepted does not prove hosted cause/import/both-Mac/final payload.
+
+API-owned uncommitted plan/report/progress untouched/unstaged; before/after API-doc hashes equal at push observation. Own reports and dr008 receipt remain uncommitted so exact requested HEAD stays fixed. No runtime scratch created; retain worktree/candidates. Field/user tests remain Deferred, not gates; current review/API, actual both-Mac signing/Accepted, final immutable payload/publication/download/custody gates retained. No new approval/review loop or duplicate recipient. Exact proof: `delivery-evidence/dr-008/staged-source-receipt.json`, `commands.json`, `verified-remote-workflow.yml`. No long-lived guide/notes impact for source availability. Earlier rounds below are history.

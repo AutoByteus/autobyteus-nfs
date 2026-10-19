@@ -1,5 +1,33 @@
 # Handoff Summary — nfs-first-release
 
+## Active DR-009 — API004 accepted; current signed release execution pending
+
+**Not Delivery Completed.** Latest completed prerequisite remains DR008; this section records the next owning gates in progress. Large/High/Reviewed, R3/SR004 Approved/Ready, ARCH002, CRR007 sourcePass100 and CRR008 testPass. API004 prepublicationPass95 accepted only for current API scope after following AC Proof→Cases→raw logs/reused IMP Checks Run.
+
+Initial fresh origin/main7683494050b85a298ed08a55592e70f86a010a7a already ancestor of intake5eba0339b0f8fa23feb42f653475eff979623b2f. No base merge/product delta. All127 product inputs matched IR00575f4dbe. Ten actual hosted raw-log hashes/summary lines checked; four native7packages/Python52(51executed/1expectedskip), reused52/17overlap and four detected mutants verified. Actual candidate/envelope/engine/OCI/native smoke/refusals/cleanup read and candidate reverified. See delivery-evidence/dr-009/verification.json.
+
+NEW candidate39202907777/1/artifact12165175911 at44e2487 is authoritative. Measured engine changes only both buildInventory SHA fields versus prior lock; recipe/package/source unchanged, no reproducible equality claim. Accepted sourceHashd5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd; engine manifestffeb62714b4853ae8f71b3bddd385451da407de21073de331f38e9bc96a8c179; OCIsha256:2ab8d6aa1ac7cd387f5a48bac17e6c9560c3b4a5b574474c4399c746a980b20e. Candidate retained /Users/normy/nfs-first-candidate-api004-a7bxyrbb/candidate; old candidates/history not relabelled.
+
+Stable readiness/native/control/source-review records and exact engine lock updated with genuine evidence; check-publish and new measured source hash pass. Authorization/approved plan/public notes unchanged. Independent current-source/readiness-data Python validation passed:52collected/51executed/1expected Go-childskip, exit0; private scratch removed. Evidence is sufficient for the guide-ordered main finalization before actual signing/publication. No implementation/test/guide/pin edits. README already accurately says signing/publication pending; no extra long-lived prose change needed yet.
+
+Remaining: fresh target verification; new ticket commit/push and guide --no-ff main fix-forward (do not replay completed7683494); actual publish=true on exact new main with candidate39202907777; real both-Mac P12/import/signing/Accepted, retained final payload before public effects, immutable normalv0.1.0/wholeOCI and public download/install/notice/version/signature checks. DR005 failure remains failed/causeunknown; DR007 local Accepted and user-updated secret do not prove hosted success. No extra credential request or field/user approval. Field/filesystem/physical/user tests remain Deferred, not gates. Plan custody Delivery→terminalSD→requestingPM after actual completion.
+
+Own data-test scratch is temporary and will be removed; active worktree/candidates/local diagnostic retained. No live storage setup/migration/application/PM change. Archive path is not a Terminal claim. Prior histories remain below.
+
+---
+
+## Latest DR-008 — reviewed source available for API004; publication pending
+
+Execution prerequisite **Completed**; full Delivery **Blocked / not yet eligible**. Requested by API004 after IR005/CRR007 source Pass100, not an API result or publication handoff. Large/High/Reviewed, R3/SR004 Approved/Ready and ARCH002 unchanged.
+
+Fresh origin/main `7683494050b85a298ed08a55592e70f86a010a7a` already ancestor; no integration delta/rerun or main finalization replay. All127 non-ticket inputs equal IR005 `75f4dbe5527a7159f536bafcf9448bc2d6a01604`. Fast-forwarded ONLY origin/codex/nfs-first-release fromb599e476 to `44e2487b4b30da99797c149c17fa0c8bcaa6a87f`. Exact remote ref and GitHub workflow bytes verified: blob `dc9acc3b3390806b80db759fc38038c5b675bae8`, SHA256 `f759931a10aaf88cbf43b49e37a0272c2acf2b06cf26a4fd6fa6bc0c902f6e35`; workflow388178899 active. Current production source hash `bf6b1732ad6561da15d610afb2c5e6b8d83982fbf23f20e0684eda18b9d1ba62`.
+
+API dispatch inputs: ref `codex/nfs-first-release`, `release_tag=v0.1.0`, `source_sha=44e2487b4b30da99797c149c17fa0c8bcaa6a87f`, `publish=false`. API owns the NEW complete candidate dispatch and current affected validation, reusing unchanged IMP checks where evidenced. Delivery performed no candidate dispatch, main merge/push, readiness change, signing/notary, secret reprovisioning, publication, deployment, TaskDone or Terminal. Main/tags/releases unchanged. DR005 failed run and old API003 candidate remain historical; DR007 local Accepted does not prove hosted cause/import/both-Mac/final payload.
+
+API-owned uncommitted plan/report/progress untouched/unstaged; before/after API-doc hashes equal at push observation. Own reports and dr008 receipt remain uncommitted so exact requested HEAD stays fixed. No runtime scratch created; retain worktree/candidates. Field/user tests remain Deferred, not gates; current review/API, actual both-Mac signing/Accepted, final immutable payload/publication/download/custody gates retained. No new approval/review loop or duplicate recipient. Exact proof: `delivery-evidence/dr-008/staged-source-receipt.json`, `commands.json`, `verified-remote-workflow.yml`. No long-lived guide/notes impact for source availability. Earlier rounds below are history.
+
+---
+
 ## Latest DR-007 — actual local notarization Accepted; official release pending
 
 Apple accepted the real local arm64 development diagnostic on attempt2 (exit0), submission `16cd8853-b4f7-41a3-b676-e99029765633`. Saved response/receipt, binary/ZIP and9 preparation log hashes verified. Attempt1 HTTP401 is preserved. User-generated new app-specific password worked locally; user reports updating GitHub and metadata confirms `APPLE_APP_SPECIFIC_PASSWORD` updated2026-10-19T04:58:54Z. Delivery read no secret value/clipboard/private key and cannot prove the GitHub value from its timestamp.

@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-19T05:25:18.481495+00:00",
+  "scratch": "/Users/normy/nfs-dr009-readiness-vf192ae3",
+  "inputHead": "5eba0339b0f8fa23feb42f653475eff979623b2f",
+  "fileCount": 127,
+  "modifiedReadinessCopied": true,
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_nfs_*.py",
+    "-v"
+  ]
+}

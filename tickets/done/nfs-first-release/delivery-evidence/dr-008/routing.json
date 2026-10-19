@@ -1,0 +1,8 @@
+{
+  "result": "Execution prerequisite Completed; full Delivery not eligible",
+  "freshRulesChecked": true,
+  "matchedRule": null,
+  "reason": "No new code/packaging defect, upstream gap or Delivery Completed result; this is the requesting API owner source-availability prerequisite",
+  "returnTo": "/software_engineering_team/api_e2e_engineer",
+  "duplicateRecipients": false
+}

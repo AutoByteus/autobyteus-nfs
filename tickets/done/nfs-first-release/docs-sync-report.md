@@ -33,3 +33,11 @@ User-requested existing-identity signing succeeded on fresh local arm64 build at
 ## DR-007 — local Apple acceptance, current hosted gates retained
 
 Own handoff/release/revision records and dr007 evidence now record actual Accepted/exit0, preserved initial401, matched binary/archive/log identities and GitHub password-secret metadata update. No credential value stored or account data copied into release notes. Source/runtime/guides/public notes unchanged: diagnostic acceptance does not change published behavior. Existing readiness/candidate remains prior source and stale for IR005; no promotion. Current review/API/hosted/publication gates and approved deferred field/user custody remain explicit.
+
+## DR-008 — source availability for current API004
+
+Own handoff/release/revision records and staging evidence updated for CRR007/IR005 exact reviewed ticket44e2487 remote availability. No long-lived docs/notes or readiness changes: staged source is not a new behavior/release result. Fresh main7683494 already ancestor, no integration delta or rerun needed. API-owned uncommitted work preserved; all own changes intentionally remain uncommitted to retain the requested dispatch SHA. No guide deviation or finalization replay.
+
+## Active DR-009 — current measured readiness
+
+Updated stable native-checks/release-controls/source-review/readiness JSON and engine lock to actual API004/CRR007/CRR008 evidence and candidate39202907777. Only two engine buildInventory SHA values differ; recipe/package/source pins unchanged. Authorization/approved postpublication plan/release notes untouched. README and package guide already accurately state preparation/signing/publication pending; no prose change until actual outcome. Own handoff/release report distinguish prepublication acceptance from unproven real hosted signing/public release, retain failed history and user-field deferral. One evidence-reader assumption about equal mutation assertion counts failed before writes; corrected to raw3single+1triple failure summaries, not a product failure or weakened assertion.

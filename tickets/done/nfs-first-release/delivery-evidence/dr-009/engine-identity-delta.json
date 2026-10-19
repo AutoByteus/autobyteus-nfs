@@ -1,0 +1,17 @@
+{
+  "changes": [
+    {
+      "current": "b61ff97a162e2ab7e5545be11cd7c376f489088c9e5c9ab5694074e4249b6e23",
+      "path": "/architectures/amd64/buildInventory/sha256",
+      "prior": "eea118eb6b34814f0ca67d6a7f9d5c24c385de85e348cc0fc459692f76734364"
+    },
+    {
+      "current": "d1ece1409d3bfaf167fdf1f243fd82998960f650a01c0352f0dc4d6345492fec",
+      "path": "/architectures/arm64/buildInventory/sha256",
+      "prior": "2bfee929a699be216e09874a250f679dad9ad43f16cd801ede2e6c68bef9e932"
+    }
+  ],
+  "newCandidateSourceHash": "d5aac8cd30dd41526436c52cbc73d74ee5e15b8fb701d07d8ccf8a0cf0e976fd",
+  "notReproducibleBuildEquality": true,
+  "recipePinsPackagesSourceUnchanged": true
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-19T05:26:28.140240+00:00",
+  "exit": 0,
+  "passed": true,
+  "collected": 52,
+  "executed": 51,
+  "expectedStandaloneGoChildSkip": 1,
+  "scope": "Independent current-source plus newly accepted real readiness/engine-lock data check; no Apple/field/publication",
+  "logSha256": "1f4b47a625278e3b8233d26a2a3e16dedf715aa5f57a2e191693b32c366c7486",
+  "scratchRemoved": true
+}

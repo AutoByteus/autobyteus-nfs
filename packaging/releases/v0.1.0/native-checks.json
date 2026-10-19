@@ -1,134 +1,134 @@
 {
-  "evidenceGitCommit": "e1addb8e96d3c0d32fb5c28e6e221b0a8d96eaf8",
-  "evidenceGitDirectory": "tickets/in-progress/nfs-first-release/evidence/api-e2e/api-rev-003",
+  "evidenceGitCommit": "587b1a9fb191297ca7928335a031a98b020df707",
+  "evidenceGitDirectory": "tickets/done/nfs-first-release/evidence",
   "jobs": [
     {
+      "conclusion": "success",
       "errors": [],
-      "explicitPythonSkips": [
-        "2026-10-18T10:25:34.3853970Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
-      ],
-      "jobId": 117650827602,
+      "excerpt": "R03-04-excerpt-117900833165.log",
+      "job": 117900833165,
+      "log": "R03-04-job-117900833165.log",
       "name": "binaries (macos-15, darwin, arm64)",
       "nativePackagePassLines": [
-        "2026-10-18T10:25:09.3707720Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.300s",
-        "2026-10-18T10:25:09.7207300Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.120s",
-        "2026-10-18T10:25:09.8372100Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.205s",
-        "2026-10-18T10:25:10.5346200Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.161s",
-        "2026-10-18T10:25:13.7586700Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.018s",
-        "2026-10-18T10:25:13.7587680Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.120s",
-        "2026-10-18T10:25:13.7588600Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.747s"
+        "2026-10-19T05:13:48.4933150Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.261s",
+        "2026-10-19T05:13:48.8717060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.094s",
+        "2026-10-19T05:13:48.9091280Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.070s",
+        "2026-10-19T05:13:49.6536500Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.156s",
+        "2026-10-19T05:13:52.6007900Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.722s",
+        "2026-10-19T05:13:52.6036560Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.130s",
+        "2026-10-19T05:13:52.6061030Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.385s"
       ],
       "pythonSummary": [
-        "2026-10-18T10:25:46.1301260Z Ran 45 tests in 13.085s",
-        "2026-10-18T10:25:46.1301870Z OK (skipped=1)"
+        "2026-10-19T05:14:29.7023200Z Ran 52 tests in 22.879s",
+        "2026-10-19T05:14:29.7024440Z OK (skipped=1)"
       ],
-      "result": "success",
-      "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+      "rawBodySha256": "d11fb3d377c3521ee7ef3759fa6d7ed37cc0eb1e850ffa74e3e32a0e17095bc0"
     },
     {
+      "conclusion": "success",
       "errors": [],
-      "explicitPythonSkips": [
-        "2026-10-18T10:24:51.4291741Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
-      ],
-      "jobId": 117650827631,
+      "excerpt": "R03-04-excerpt-117900833244.log",
+      "job": 117900833244,
+      "log": "R03-04-job-117900833244.log",
       "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
       "nativePackagePassLines": [
-        "2026-10-18T10:24:37.8788388Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.072s",
-        "2026-10-18T10:24:38.2283986Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.032s",
-        "2026-10-18T10:24:38.2284499Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.030s",
-        "2026-10-18T10:24:38.2285134Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
-        "2026-10-18T10:24:41.1371620Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.257s",
-        "2026-10-18T10:24:41.1372157Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
-        "2026-10-18T10:24:41.1372611Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.129s"
+        "2026-10-19T05:13:19.3982479Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.501s",
+        "2026-10-19T05:13:19.3982985Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.092s",
+        "2026-10-19T05:13:19.3983434Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.093s",
+        "2026-10-19T05:13:19.3984104Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+        "2026-10-19T05:13:22.5438306Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.235s",
+        "2026-10-19T05:13:22.5438833Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.013s",
+        "2026-10-19T05:13:22.5440674Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.124s"
       ],
       "pythonSummary": [
-        "2026-10-18T10:24:58.2357039Z Ran 45 tests in 7.498s",
-        "2026-10-18T10:24:58.2357268Z OK (skipped=1)"
+        "2026-10-19T05:13:46.8560514Z Ran 52 tests in 14.390s",
+        "2026-10-19T05:13:46.8561023Z OK (skipped=1)"
       ],
-      "result": "success",
-      "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+      "rawBodySha256": "dd0f1007ea1742f51b6e22f2c1a81adf43f366958bbce938c7f7f5addb1adf74"
     },
     {
+      "conclusion": "success",
       "errors": [],
-      "explicitPythonSkips": [
-        "2026-10-18T10:25:00.3040874Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
-      ],
-      "jobId": 117650827653,
-      "name": "binaries (ubuntu-24.04, linux, amd64)",
-      "nativePackagePassLines": [
-        "2026-10-18T10:24:41.9334834Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.159s",
-        "2026-10-18T10:24:42.6302748Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.254s",
-        "2026-10-18T10:24:42.6304369Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.252s",
-        "2026-10-18T10:24:42.6305232Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.204s",
-        "2026-10-18T10:24:45.2250881Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.289s",
-        "2026-10-18T10:24:45.2251548Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.014s",
-        "2026-10-18T10:24:45.2252014Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.160s"
-      ],
-      "pythonSummary": [
-        "2026-10-18T10:25:08.0133688Z Ran 45 tests in 8.271s",
-        "2026-10-18T10:25:08.0134234Z OK (skipped=1)"
-      ],
-      "result": "success",
-      "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
-    },
-    {
-      "errors": [],
-      "explicitPythonSkips": [
-        "2026-10-18T10:26:40.4888500Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'"
-      ],
-      "jobId": 117650827778,
+      "excerpt": "R03-04-excerpt-117900833252.log",
+      "job": 117900833252,
+      "log": "R03-04-job-117900833252.log",
       "name": "binaries (macos-15-intel, darwin, amd64)",
       "nativePackagePassLines": [
-        "2026-10-18T10:26:00.9308890Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.502s",
-        "2026-10-18T10:26:02.2677440Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.258s",
-        "2026-10-18T10:26:02.3804580Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.350s",
-        "2026-10-18T10:26:02.3885460Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.221s",
-        "2026-10-18T10:26:05.5093790Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.475s",
-        "2026-10-18T10:26:05.5137060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.135s",
-        "2026-10-18T10:26:05.5182800Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.323s"
+        "2026-10-19T05:14:44.0713710Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.383s",
+        "2026-10-19T05:14:44.8015780Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.172s",
+        "2026-10-19T05:14:44.9024070Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.212s",
+        "2026-10-19T05:14:44.9041780Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.156s",
+        "2026-10-19T05:14:48.4519760Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.358s",
+        "2026-10-19T05:14:48.4546380Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.187s",
+        "2026-10-19T05:14:48.4574980Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t2.154s"
       ],
       "pythonSummary": [
-        "2026-10-18T10:27:06.4826530Z Ran 45 tests in 28.532s",
-        "2026-10-18T10:27:06.4827440Z OK (skipped=1)"
+        "2026-10-19T05:15:50.2486200Z Ran 52 tests in 40.376s",
+        "2026-10-19T05:15:50.2486850Z OK (skipped=1)"
       ],
-      "result": "success",
-      "scope": "Hosted build/fixture/archive execution, not physical NFS/signing/user qualification"
+      "rawBodySha256": "6aaa7c3b1e46c4bfce7e66120c7e6ec3c4980278c71cadf2ac6ee7738fb588ec"
+    },
+    {
+      "conclusion": "success",
+      "errors": [],
+      "excerpt": "R03-04-excerpt-117900833294.log",
+      "job": 117900833294,
+      "log": "R03-04-job-117900833294.log",
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "nativePackagePassLines": [
+        "2026-10-19T05:13:23.2891634Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.095s",
+        "2026-10-19T05:13:23.8155209Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.041s",
+        "2026-10-19T05:13:23.8168636Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.044s",
+        "2026-10-19T05:13:23.8169556Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.024s",
+        "2026-10-19T05:13:26.4885428Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.196s",
+        "2026-10-19T05:13:26.4886392Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.012s",
+        "2026-10-19T05:13:26.4887305Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.124s"
+      ],
+      "pythonSummary": [
+        "2026-10-19T05:13:58.4165840Z Ran 52 tests in 17.351s",
+        "2026-10-19T05:13:58.4166268Z OK (skipped=1)"
+      ],
+      "rawBodySha256": "dcd735ce5c4e67d381912a148813f3af9efd8285f4b4b99016a5279355946b2d"
     }
   ],
   "rawLogs": [
     {
       "exactSummaryLinesConfirmed": true,
-      "file": "hosted-job-117650827602.log",
-      "jobId": 117650827602,
+      "jobId": 117900833165,
       "name": "binaries (macos-15, darwin, arm64)",
-      "sha256": "a3eee859dd2d7b4349036fbd7f517f0f3c95426efb29a1ca5860834bce0b5dc9"
+      "path": "tickets/done/nfs-first-release/evidence/R03-04-job-117900833165.log",
+      "rawBodySha256": "d11fb3d377c3521ee7ef3759fa6d7ed37cc0eb1e850ffa74e3e32a0e17095bc0",
+      "sha256": "8c1c4a03cf17a6f5c527646dab21382de4b6bf36a4222d0747580711f16ba037"
     },
     {
       "exactSummaryLinesConfirmed": true,
-      "file": "hosted-job-117650827631.log",
-      "jobId": 117650827631,
+      "jobId": 117900833244,
       "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
-      "sha256": "452231a8bf7c913b9e1d2f9ba1c9fcef5ff607d54be80ec52df6131dc86a341c"
+      "path": "tickets/done/nfs-first-release/evidence/R03-04-job-117900833244.log",
+      "rawBodySha256": "dd0f1007ea1742f51b6e22f2c1a81adf43f366958bbce938c7f7f5addb1adf74",
+      "sha256": "60ce3ce8dbb718a547f017e0bd3c65738af829af09b928b4588ac1fc89b68c46"
     },
     {
       "exactSummaryLinesConfirmed": true,
-      "file": "hosted-job-117650827653.log",
-      "jobId": 117650827653,
-      "name": "binaries (ubuntu-24.04, linux, amd64)",
-      "sha256": "6f4f3557ac80d6a68a6a74c36159c2a06d6f8f45beba31e2e141b19905055f23"
-    },
-    {
-      "exactSummaryLinesConfirmed": true,
-      "file": "hosted-job-117650827778.log",
-      "jobId": 117650827778,
+      "jobId": 117900833252,
       "name": "binaries (macos-15-intel, darwin, amd64)",
-      "sha256": "b737a7f60a941dd55360a2d95db9f22d86acd99d3d82a778a8eaf4ee7fab5809"
+      "path": "tickets/done/nfs-first-release/evidence/R03-04-job-117900833252.log",
+      "rawBodySha256": "6aaa7c3b1e46c4bfce7e66120c7e6ec3c4980278c71cadf2ac6ee7738fb588ec",
+      "sha256": "a36502a5c5e861737ef4108525b2a8bec189373b8b3a251045418da0e0c8d291"
+    },
+    {
+      "exactSummaryLinesConfirmed": true,
+      "jobId": 117900833294,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "path": "tickets/done/nfs-first-release/evidence/R03-04-job-117900833294.log",
+      "rawBodySha256": "dcd735ce5c4e67d381912a148813f3af9efd8285f4b4b99016a5279355946b2d",
+      "sha256": "52e0fa9b73203add65beb70595b7de2b1354804374656ced365a15c33c42c239"
     }
   ],
   "result": "passed",
   "runAttempt": 1,
-  "runId": 39118784695,
-  "scope": "Real hosted four-target race/vet/Python/build/version/archive, not field or signing qualification.",
-  "sourceCommit": "585d416c2746cf2963058d591b0753d0db8088f5",
-  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39118784695"
+  "runId": 39202907777,
+  "scope": "Actual four-native race/vet/Python52/build/version/archive; not signing or field qualification",
+  "sourceCommit": "44e2487b4b30da99797c149c17fa0c8bcaa6a87f",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39202907777"
 }
