@@ -224,3 +224,24 @@ P12/password/ephemeral hosted keychain, Intel signing and notary remain unproven
 DR005 actual cause unknown and full Delivery Blocked. Carry into existing source
 review/API continuation without restart, new source/approval, speculative secret
 changes or new IR classification. Only current handoff/history updated on receipt.
+
+#### IR-005 supplemental receipt — DR-007, no new implementation round
+
+Delivery14a5661 records actual local Apple Accepted/exit0 at2026-10-19T04:57:21Z,
+submission16cd8853-b4f7-41a3-b676-e99029765633, for the arm64 development diagnostic
+on unchanged75f4dbe product. Delivery verified binary/ZIP and9 preparation-log
+hashes; implementation only read the saved evidence. DR006 local signing evidence
+now has this supplemental local notary result; failed attempt1 HTTP401 is retained.
+User requests official-release continuation and reports updating GitHub password;
+metadata time04:58:54Z does not prove value equality or hosted authentication.
+See delivery-evidence/dr-007/summary.md, verification.json,
+apple-accepted-response.json and github-secret-update-metadata.json.
+
+Prior/current implementation result and Large/High/R3/ARCH002 classification are
+unchanged: IR005 diagnostics locally complete, existing targeted source review and
+current affected API/new complete candidate still required. No new code/tests/IR
+round or duplicate dispatch. DR005 original cause, hosted import/keychain and both
+Mac final signing/Accepted/publication remain unresolved; full Delivery Blocked.
+Retained local diagnostic/candidates, Delivery evidence and pushed main preserved;
+no credential read/change, remote action or field questionnaire. Only own handoff
+and revision record updated; supplemental receipt goes to the existing reviewer.

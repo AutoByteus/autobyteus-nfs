@@ -176,6 +176,41 @@ progress: this supplements it without restarting review, tests or dispatch. No n
 implementation checks/source changes were made on receipt; earlier Checks Run rows
 remain unchanged and reusable for their exact scope.
 
+## Supplemental Delivery Evidence — DR-007 (existing review continuation)
+
+Received Delivery commit14a5661c2e7bc87f5e06abef3aa2f255c86e81f7 on2026-10-19.
+The user requests continuation of the official signed release after updating the
+GitHub app-specific-password secret. No new implementation round or approval is
+needed. Non-ticket inputs at this receipt remain identical to source75f4dbe;
+IR005 local checks and the existing targeted source review retain their scope.
+
+Delivery/user evidence establishes actual Apple **Accepted**, exit0, for the local
+arm64 **development diagnostic**, submission16cd8853-b4f7-41a3-b676-e99029765633
+at2026-10-19T04:57:21Z. Delivery verified binary/ZIP hashes and9 preparation-log
+hashes; implementation read the saved receipts, not credentials or the local
+keychain. See delivery-evidence/dr-007/summary.md, verification.json and
+apple-accepted-response.json. This adds local notarization evidence to DR006;
+it is not an implementation-run test or a final v0.1.0 artifact. Failed attempt1
+HTTP401 remains historical. Retained diagnostic directory
+`/Users/normy/nfs-local-notary-xq_ym2f6` is untouched.
+
+User-reported GitHub password replacement is supported only by secret metadata
+updated2026-10-19T04:58:54Z in
+delivery-evidence/dr-007/github-secret-update-metadata.json. No secret value was
+read; timestamp does not establish equality with the locally accepted password or
+hosted authentication. The other five secret timestamps are unchanged. No P12 or
+other credential reprovisioning is inferred or requested.
+
+Original DR005 hosted failure remains unexplained and failed. Local acceptance
+does not prove hosted P12/password import, ephemeral keychain, Intel signing,
+final metadata, final payload, public downloads or OCI. Full Delivery remains
+Blocked pending the **existing IR005 targeted review → affected API/new complete
+current-source candidate → Delivery readiness/current-main/actual both-Mac signed
+and Accepted publication** sequence. CRR005/API003 remain prior-source results;
+no stale candidate/readiness promotion. Field/user tests stay Deferred, not a new
+release prerequisite. No new source edits, test execution, remote effects or
+TaskDone/Terminal claim on this receipt.
+
 ## Downstream Work / Remaining Blocker
 
 1. Targeted source review of IR005 against retained R3/ARCH002 signing and confidentiality
