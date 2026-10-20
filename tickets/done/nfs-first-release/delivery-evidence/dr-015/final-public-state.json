@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-20T06:42:00.114877+00:00",
+  "release": {
+    "id": 417014769,
+    "url": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0",
+    "draft": false,
+    "prerelease": false,
+    "publishedAt": "2026-10-19T09:58:23Z",
+    "latestId": 417014769,
+    "anonymousReadable": true,
+    "notesSha256": "880283840d03c54f5f86e9146a896e82da93a9f2d97a301926f17a17d182d916"
+  },
+  "tagObject": "f4a04fd0c80a6625708ba002b4cef5507a03f514",
+  "payloadSource": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "assetCount": 18,
+  "allAssetApiDigestsAndSizesEqualOriginal": true,
+  "main": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "releaseRun": "success"
+}

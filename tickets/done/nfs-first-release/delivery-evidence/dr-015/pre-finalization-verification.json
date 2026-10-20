@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-20T06:44:54.326391+00:00",
+  "freshMain": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "head": "91f8e841114a1d55a107ea4b1fb2a2af5ae80092",
+  "baseDelta": false,
+  "productFilesEqualEExceptREADME": 135,
+  "executorSourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+  "originalRevisionPrefixUnchanged": true,
+  "noIntegrationRerunReason": "No new base or executable delta; actual publication/public checks completed, push CI will run normally",
+  "canonicalBefore": {
+    "head": "7e375984be2bea7a4d536e43cc59d6bc2b116870",
+    "pm": {
+      "task-plans/board.md": "810bac8753d2f5f1924ac142076544a290e370ce28773e1ad79abaa3a92ab897"
+    }
+  },
+  "scope": "README + four Delivery docs + owned DR015 evidence; other owners/notes/authorities unchanged"
+}

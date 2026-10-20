@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-19T09:56:25.185758+00:00",
+  "authentication": "Anonymous registry token, no account credentials; token not persisted",
+  "status": 200,
+  "digest": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+  "header": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+  "manifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "manifests": [
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:17315b54c7276efafc893e75021549e1c2675d50d32d4ba9b0763788ab07b557",
+        "size": 1245,
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      },
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:93bb50f867a255a3b01652602ee95191263c9195ad32fd474dadbf738ddea42f",
+        "size": 1245,
+        "platform": {
+          "architecture": "arm64",
+          "os": "linux"
+        }
+      }
+    ]
+  },
+  "originalCandidateOci": {
+    "children": {
+      "linux-amd64": "sha256:17315b54c7276efafc893e75021549e1c2675d50d32d4ba9b0763788ab07b557",
+      "linux-arm64": "sha256:93bb50f867a255a3b01652602ee95191263c9195ad32fd474dadbf738ddea42f"
+    },
+    "index": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec"
+  },
+  "rootEqualsOriginal": true,
+  "limit": "Anonymous root index proven; full all-child/layer proof remains actual hosted publisher gate"
+}

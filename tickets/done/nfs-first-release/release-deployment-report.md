@@ -1,5 +1,40 @@
 # Delivery / Release / Deployment Report
 
+## DR-015 — normal v0.1.0 published and public distribution verified
+
+**Publication and evidence verification: Completed. Final documentation push/pipeline/cleanup receipt is recorded separately in `delivery-evidence/dr-015/finalization.json` when those operations finish; no premature Terminal or TaskDone.** Prior authoritative DR014 Blocked is preserved below. Task nfs-first-release/autobyteus-nfs-3/project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5, **Large/High/Reviewed**, R3/SR004 Approved, SR005 Ready/ARCH003. CRR013 sourcePass100, API007 affected executorPass95 and CRR014 testPass remain distinct, unchanged authorities.
+
+### Actual published result
+- Release: https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0 — ID417014769, normal/non-prerelease/latest, published2026-10-19T09:58:23Z, anonymous access verified. All18 assets match the original retained signed payload by size and SHA256, not only the GitHub API summary.
+- Authorized same-byte recovery run39233821032/attempt1 at **E3424f8dddef795d4a42e83ed8746268a4aab4d7d** completed success: prepare+publish2success,6intentional skipped jobs. No candidate/native/engine rebuild, re-sign, tag move or asset replacement. Prior failed runs remain failed history.
+- Original **P238bdc183e8affac99ffdee9be9cb333b0eb126f**, tagobjectf4a04fd0c80a6625708ba002b4cef5507a03f514, payload artifact12169472209/publicationSHA3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8 preserved. Reviewed **H6cb497f4a0bb83d52ddfc41b5aaad95a8e482440** and genuine recovery authorizationSHA8407e45e06536fb991bef75671dea4d1cf1e08156f31dfc12dbc49dd42695a66 remain separate from P. This is not a new product build or reproducibility claim.
+- Public image `ghcr.io/autobyteus/autobyteus-nfs:v0.1.0` at **sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec**, package version1408262377. Actual hosted publisher re-downloaded **all** OCI children/configs/layers with empty auth and preserve-digests, verified linux-amd64/linux-arm64 equality to candidate39213489075/artifact12168544425. Journal artifact12177168649 was independently downloaded and wrapper-hash checked. No synthetic R07 receipt is used as actual publication proof.
+
+### Public Mac and installer checks
+Both publicly downloaded Mac binaries passed strict Developer ID/team/runtime/timestamp checks and `codesign --verify --strict --verbose=4 --check-notarization -R=notarized`. Both returned0 and `explicit requirement satisfied`. Exact binaries equal original DR013 Apple Accepted receipts (ARM52450985-4e16-482e-b22a-d7b15b8791b7; Intel563db88f-7ded-48ba-9d90-bcdbf8705961). No new signing, keychain or credential operation occurred.
+
+Initial `spctl --assess --type execute` returned3 for both: valid code but not an app. This raw non-Pass is retained, not rewritten as acceptance. Apple documents a notarized requirement check for other signed code (https://developer.apple.com/videos/play/wwdc2019/703/ at31:05); the installed codesign manual documents --check-notarization as online checking. The appropriate CLI check passed on macOS26.5.2arm64. No security disable, quarantine removal, offline-first-use or fresh-empty-cache claim. Intel signature assessment is not native Intel execution.
+
+Public installer + explicit `version` succeeded in an isolated HOME on native Macarm64, stdout exactlyv0.1.0 and deferred-field notice on stderr; installed SHA equals signed original, no host configuration created. The real Ubuntuamd64 publisher separately passed public download/install/version. No public native Intel/Linuxarm64 installer execution or field/setup tests claimed. Original all4native checks remain attributed to candidate/final payload runs.
+
+### Verification, scope, authority and documentation
+Delivery read the AC→Cases→raw evidence and judged sufficient release proof, not score alone. Current actual journal/logs/public byte/signature/install results close API007's D01/D02 portions; original refusals and emulated controls remain accurately scoped. `verification.json` gives each AC judgment and precise proof. `public-download-verification.json`, `public-notarization-verification.json`, `actual-publication-receipt.json` and `final-public-state.json` are current facts.
+
+Specific NFS package visibility is now Public. The user separately and explicitly approved temporary organization Public-package enable → onlyNFS Public → restore original org restriction, after scope/irreversibility explanation. Native Chrome confirmed the requested profile. Original organization Publicoff/Privateon/Internaloff/inheritanceon restored. No other package/repository visibility or credentials changed. This explicit subsequent user authorization supplements the guide's package-only authority; no permanent org-wide expansion or undocumented guide edit.
+
+Initial fresh mainE was already an ancestor of local91f8; resumed fetch2026-10-20 stillE. No base delta, conflict or executable change; no redundant local full-suite/signing campaign. Root/packaging RELEASE.md revisionccf3d5b2a6603ab02d5bf6faa80856167af99140 followed. Remaining finalization is docs/evidence only, normal ticket push → freshmain --no-ff → mainpush and monitoring, not replay of completed source finalization/publication. Actual receipt appended after completion, outside its own hashed commit.
+
+README now states actual availability/verified distributions and bounded installer commands. Own handoff, docs-sync, release report/revision/evidence synchronized. Original release-notes.md/public notes, provenance, stable readiness/recovery authorities, lock, licensing, engine pins and upstream reports unchanged. No app/superrepo/Guide/source/test/PM edit. Current and prior historical records stay distinct.
+
+### Cleanup, follow-up custody and rollback
+Owned public-download/HOME/TMP and notary-extraction scratch removed. No storage/mount/export/firewall/setup/deployment or persisted-data migration performed. Canonical checkout/PM and extraction checkout remain untouched. Original candidate and finalpayload retained read-only for durable provenance; no new test resource left. Final safe branch cleanup and retained-detached-checkout decision belong in finalization receipt, not assumed complete now.
+
+**Field/shared-filesystem/physical and genuine user testing remain Deferred, not Passed and not release/closure prerequisites.** Approved `postpublication-testing-plan.md` is bound to the above release/source/assets/image and transfers Delivery→terminal SolutionDesigner→requesting `/project_task_manager`. PM owns assignment/resources and any follow-up dispatch. No duplicate task, questionnaire or direct PM notification. New defects use a reviewed/new authorized version; never replace this tag/assets/image or undo publication. Existing dashboardnfs-2 unrelated. No new findings/follow-ups in DR015.
+
+Own release notes were used, unchanged, in the actual published release. User verification not required for these proven distribution checks, and not claimed. Successful terminal is sent only after final docs/pipelines/cleanup receipts complete.
+
+---
+
 ## DR-014 — Source finalized; publication partial at anonymous container access
 
 **Result: Blocked — deployment-local access prerequisite. Not Delivery Completed / TaskDone / Terminal.** R3/SR004 Approved, SR005 Ready/ARCH003; Large/High/Reviewed. CRR013 sourcePass100, API007 affected executorPass95, CRR014 proportional testPass remain distinct from actual publication acceptance.

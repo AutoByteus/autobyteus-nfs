@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-20T06:43:35.144613+00:00",
+  "judgement": "Sufficient actual release evidence; remaining docs finalization/cleanup recorded separately before terminal",
+  "route": "Large/High/Reviewed",
+  "authority": "R3/SR004,SR005/ARCH003; CRR013 sourcePass100/API007 executorPass95/CRR014 testPass unchanged",
+  "acceptanceCriteria": {
+    "AC001": {
+      "judgement": "Proven within original candidate scope",
+      "proof": "API006 R03/R04, DR013 real native/payload jobs, API007 R03/R04 original-byte carry; original source identity not relabelled executor"
+    },
+    "AC002": {
+      "judgement": "Proven",
+      "proof": "API007 R01/R02/R07 refusal controls plus genuine stable recovery authorization/admission at E and actual DR015 prepare+publisher; no fixture authority"
+    },
+    "AC003": {
+      "judgement": "Proven",
+      "proof": "DR013 both actual DeveloperID/Accepted receipts; DR015 all public archive equality/strict signatures and public-notarization-verification.json both exit0"
+    },
+    "AC004": {
+      "judgement": "Proven",
+      "proof": "DR015 actual published journal/run, immutable original tag/P, ID417014769 normal/latest18assets; prior API007 no-clobber/known-missing/drift controls remain emulated"
+    },
+    "AC005": {
+      "judgement": "Proven with platform limits",
+      "proof": "DR01518 anonymous downloads exact; Macarm64 ownedHOME installer/version/deferred notice; actual Ubuntuamd64 publisher smoke. No native Intel/Linuxarm64 public install claimed; original negative controls carried"
+    },
+    "AC006": {
+      "judgement": "Proven",
+      "proof": "Actual hosted empty-auth completeOCI preserve-digests download+candidate.oci equality at e39b1b13; source attribution P versus E, final signatures match DR013; original candidate/payload not rebuilt"
+    },
+    "AC007": {
+      "judgement": "Release proven; terminal plan transfer next",
+      "proof": "Normalv0.1.0 public; approved postpublication-testing-plan.md exact release-bound and named SD\u2192PM custody; field/user Deferred"
+    },
+    "AC008": {
+      "judgement": "Docs/protection verified; final docs push/pipeline/branch receipt next",
+      "proof": "README/own reports synced, unchanged upstream/notes/authorities; public scratch removed, finalization.json records remaining operations"
+    }
+  },
+  "noUserCheckRequired": true,
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "rawEvidence": [
+    "actual-publication-receipt.json",
+    "publication-receipt-envelope.json",
+    "publication-execution-summary.json",
+    "publication-job-117997950939.log",
+    "publication-job-117998361281.log",
+    "public-download-verification.json",
+    "public-download-commands.json",
+    "public-notarization-verification.json",
+    "final-public-state.json"
+  ],
+  "notarizationAssessment": "spctl exit3 preserved as CLI-not-app; codesign strict notarized requirement/online check passes both, no security bypass",
+  "deployment": "Not required; no live storage",
+  "noExtraCycle": "No new source/native/signing/API campaign for external visibility or docs-only finalization"
+}

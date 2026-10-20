@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-19T09:56:22.098854+00:00",
+  "authority": "User explicitly confirmed changing visibility after temporary-org-policy proposal, public-package risk and irreversibility explained; latest user: Okay, can you please change that for me? Yeah, you can change that for me. Visibility.",
+  "tool": "CUA native Chrome, confirmed Nogret profile, GitHub ryan-zheng-teki",
+  "observedBefore": {
+    "package": "private",
+    "organizationPublic": false,
+    "organizationPrivate": true,
+    "organizationInternal": false,
+    "inheritSource": true
+  },
+  "actions": [
+    "Temporarily selected Public under organization Package creation; saved; UI confirmed settings updated and checked",
+    "Only autobyteus-nfs package: selected Public, typed exact name, confirmed; UI reports currently public",
+    "Restored organization Public checkbox to off; saved; UI confirmed settings updated; Private on, Internal off, inheritance on unchanged"
+  ],
+  "result": "Completed; only this package visibility changed, original org restriction restored",
+  "guideScope": "Specific package authorized by release guide; temporary org policy change separately user-approved, no permanent org-wide expansion",
+  "credentials": "No secret/keychain/token edits or credential reads/exports",
+  "earlierNavigation": "User foreground changes prevented initial attempts; no settings changed before confirmed correct page",
+  "release": "Not yet published by this operation"
+}

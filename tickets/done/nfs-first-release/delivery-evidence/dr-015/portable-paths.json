@@ -1,0 +1,5 @@
+{
+  "checked": 2216,
+  "result": "Pass",
+  "checks": "casefold uniqueness, portable components, no Windows-reserved characters/trailing-dot-space, component UTF8 bytes<=255"
+}
