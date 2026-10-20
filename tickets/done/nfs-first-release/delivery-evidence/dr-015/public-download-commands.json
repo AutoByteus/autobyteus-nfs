@@ -1,0 +1,515 @@
+[
+  {
+    "name": "public-download-LICENSE",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "34523",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/LICENSE",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/LICENSE"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-SHA256SUMS-nfs",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "1672",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/SHA256SUMS-nfs",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/SHA256SUMS-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-THIRD_PARTY_NOTICES",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "1920",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/THIRD_PARTY_NOTICES",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/THIRD_PARTY_NOTICES"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-0-1-0-darwin-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "6462906",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-0.1.0-darwin-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-0.1.0-darwin-amd64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-0-1-0-darwin-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "5935787",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-0.1.0-darwin-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-0.1.0-darwin-arm64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-0-1-0-linux-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "6954303",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-0.1.0-linux-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-0.1.0-linux-amd64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-0-1-0-linux-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "6351199",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-0.1.0-linux-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-0.1.0-linux-arm64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-engine-manifest-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "3237",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-engine-manifest.json",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-engine-manifest.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-ganesha-source-4-3-8ubuntu1+autobyteus1-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "1930260",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-ganesha-source-4-3-8ubuntu1+autobyteus1-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "1930260",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-install-sh",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "3946",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-install.sh",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-install.sh"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-autobyteus-nfs-manifest-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "3928",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-manifest.json",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-manifest.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-engine-COPYRIGHT-amd64",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "30807",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/engine-COPYRIGHT-amd64",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/engine-COPYRIGHT-amd64"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-engine-COPYRIGHT-arm64",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "30807",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/engine-COPYRIGHT-arm64",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/engine-COPYRIGHT-arm64"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-engine-build-amd64-txt",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "40381",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/engine-build-amd64.txt",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/engine-build-amd64.txt"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-engine-build-arm64-txt",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "40134",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/engine-build-arm64.txt",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/engine-build-arm64.txt"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-release-notes-md",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "1872",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/release-notes.md",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/release-notes.md"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-download-release-provenance-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--max-time",
+      "600",
+      "--max-filesize",
+      "4249",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/release-provenance.json",
+      "-o",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/release-provenance.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "public-darwin-arm64-codesign-verify",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=2",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs: valid on disk\n/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs: satisfies its Designated Requirement\n"
+  },
+  {
+    "name": "public-darwin-arm64-codesign-details",
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Executable=/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs\nIdentifier=autobyteus-nfs\nFormat=Mach-O thin (arm64)\nCodeDirectory v=20500 size=81786 flags=0x10000(runtime) hashes=2550+2 location=embedded\nVersionPlatform=1\nVersionMin=851968\nVersionSDK=1704448\nHash type=sha256 size=32\nCandidateCDHash sha256=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047a\nCandidateCDHashFull sha256=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047ad9a58cf900af8aacc9b86236\nHash choices=sha256\nCMSDigest=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047ad9a58cf900af8aacc9b86236\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=5767168\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=9a34a7e6285b6a3ffbcfa60225d4ac9b614c047a\nSignature size=9037\nAuthority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=19. Oct 2026 at 09:24:42\nInfo.plist=not bound\nTeamIdentifier=7Y86YBQ7B4\nRuntime Version=26.2.0\nSealed Resources=none\nInternal requirements count=1 size=176\n"
+  },
+  {
+    "name": "public-darwin-arm64-gatekeeper",
+    "argv": [
+      "spctl",
+      "--assess",
+      "--type",
+      "execute",
+      "--verbose=4",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 3,
+    "stdout": "",
+    "stderr": "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-arm64/autobyteus-nfs: rejected (the code is valid but does not seem to be an app)\n"
+  },
+  {
+    "name": "public-darwin-amd64-codesign-verify",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=2",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs: valid on disk\n/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs: satisfies its Designated Requirement\n"
+  },
+  {
+    "name": "public-darwin-amd64-codesign-details",
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Executable=/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs\nIdentifier=autobyteus-nfs\nFormat=Mach-O thin (x86_64)\nCodeDirectory v=20500 size=88282 flags=0x10000(runtime) hashes=2753+2 location=embedded\nVersionPlatform=1\nVersionMin=851968\nVersionSDK=1704448\nHash type=sha256 size=32\nCandidateCDHash sha256=4b9c0043fdf307baf7a5dc406b6196571cbe7853\nCandidateCDHashFull sha256=4b9c0043fdf307baf7a5dc406b6196571cbe78533f12d2b6bfea8d7d1ace5f6c\nHash choices=sha256\nCMSDigest=4b9c0043fdf307baf7a5dc406b6196571cbe78533f12d2b6bfea8d7d1ace5f6c\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=6410240\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=4b9c0043fdf307baf7a5dc406b6196571cbe7853\nSignature size=9036\nAuthority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=19. Oct 2026 at 09:27:43\nInfo.plist=not bound\nTeamIdentifier=7Y86YBQ7B4\nRuntime Version=26.2.0\nSealed Resources=none\nInternal requirements count=1 size=176\n"
+  },
+  {
+    "name": "public-darwin-amd64-gatekeeper",
+    "argv": [
+      "spctl",
+      "--assess",
+      "--type",
+      "execute",
+      "--verbose=4",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 3,
+    "stdout": "",
+    "stderr": "/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs: rejected (the code is valid but does not seem to be an app)\n"
+  },
+  {
+    "name": "public-owned-home-install-version",
+    "argv": [
+      "/bin/bash",
+      "/Users/normy/nfs-dr015-public-pbl06mwm/downloads/autobyteus-nfs-install.sh",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "v0.1.0\n",
+    "stderr": "Shared-filesystem/physical and user testing is deferred; distribution and signature checks are not field qualification.\n"
+  },
+  {
+    "name": "public-installed-version",
+    "argv": [
+      "/Users/normy/nfs-dr015-public-pbl06mwm/home/.local/bin/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "v0.1.0\n",
+    "stderr": ""
+  }
+]

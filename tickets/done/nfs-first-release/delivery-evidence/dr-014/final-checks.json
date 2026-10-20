@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-19T09:15:43.935165+00:00",
+  "initialTrackedFiles": 2103,
+  "onlyInitialChanges": [
+    "README.md",
+    "tickets/done/nfs-first-release/delivery-revision-record.md",
+    "tickets/done/nfs-first-release/docs-sync-report.md",
+    "tickets/done/nfs-first-release/handoff-summary.md",
+    "tickets/done/nfs-first-release/release-deployment-report.md"
+  ],
+  "priorDR001013PrefixPreserved": true,
+  "portablePaths": 2148,
+  "pipelineMonitor": "completed/exit0, all3runs terminal; release failure distinct from both developer success",
+  "liveResources": "No new test/runtime/storage or credentials; retained originals and worktree needed for pending recovery",
+  "publicHelpers": "Prepared not executed",
+  "routing": "Fresh rules: no codeLocalFix/DesignImpact/nondeployment/Completed match. Direct requesting-user access prerequisite; retain Delivery ownership.",
+  "checkpoint": "local only, no main/ticket remote push or release retry",
+  "scope": "No product/test/authority/history/PM/other-repo changes"
+}

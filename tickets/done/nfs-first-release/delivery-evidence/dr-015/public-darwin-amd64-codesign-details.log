@@ -1,0 +1,28 @@
+Executable=/Users/normy/nfs-dr015-public-pbl06mwm/darwin-amd64/autobyteus-nfs
+Identifier=autobyteus-nfs
+Format=Mach-O thin (x86_64)
+CodeDirectory v=20500 size=88282 flags=0x10000(runtime) hashes=2753+2 location=embedded
+VersionPlatform=1
+VersionMin=851968
+VersionSDK=1704448
+Hash type=sha256 size=32
+CandidateCDHash sha256=4b9c0043fdf307baf7a5dc406b6196571cbe7853
+CandidateCDHashFull sha256=4b9c0043fdf307baf7a5dc406b6196571cbe78533f12d2b6bfea8d7d1ace5f6c
+Hash choices=sha256
+CMSDigest=4b9c0043fdf307baf7a5dc406b6196571cbe78533f12d2b6bfea8d7d1ace5f6c
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=6410240
+Executable Segment flags=0x1
+Page size=4096
+CDHash=4b9c0043fdf307baf7a5dc406b6196571cbe7853
+Signature size=9036
+Authority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=19. Oct 2026 at 09:27:43
+Info.plist=not bound
+TeamIdentifier=7Y86YBQ7B4
+Runtime Version=26.2.0
+Sealed Resources=none
+Internal requirements count=1 size=176

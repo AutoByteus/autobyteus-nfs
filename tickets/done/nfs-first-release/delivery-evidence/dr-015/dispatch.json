@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-19T09:56:40.002770+00:00",
+  "argv": [
+    "gh",
+    "workflow",
+    "run",
+    "release-nfs.yml",
+    "--repo",
+    "AutoByteus/autobyteus-nfs",
+    "--ref",
+    "main",
+    "-f",
+    "release_tag=v0.1.0",
+    "-f",
+    "source_sha=3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+    "-f",
+    "candidate_run_id=39213489075",
+    "-f",
+    "publish=true"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "executor": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "payloadSource": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "candidateRun": 39213489075,
+  "workflowSha256": "c86062e3c07e931b4df290b5bb1372efbe2f95ae204190964bf171f5249695f9",
+  "workflowBytesEqual": true,
+  "reason": "Explicitly authorized scoped visibility now public/anonymous root verified; same-byte new recovery, no failed-job rerun",
+  "run": 39233821032,
+  "attempt": 1,
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/39233821032"
+}

@@ -3,15 +3,17 @@
 A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
-**Release status:** first normal **v0.1.0** release preparation is in progress;
-no successful public release is claimed yet. Current native/build, release-control,
-source-review and release-first authorization evidence has been accepted in
-[the stable v0.1.0 readiness record](packaging/releases/v0.1.0/readiness.json).
-Actual signing/notarization and public download receipts remain pending. Shared-filesystem/physical and user testing
-is **deferred until after publication**, not passed or a release prerequisite.
+**Release status:** normal **[v0.1.0 is published](https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0)**
+for macOS and Linux, ARM64 and x64. Both Mac binaries are Developer ID signed and
+Apple-notarized. All 18 public assets were downloaded and matched to the retained
+payload; the complete multi-architecture container is anonymously accessible.
+Public installer/version checks passed on native Mac ARM64 and Ubuntu x64.
+Mac x64 signature/notarization checks passed; this is not native Intel execution.
+Shared-filesystem/physical and user testing remains **deferred**, not passed.
 Distribution/signature checks are not field qualification.
 The application Guide stays disabled; internal CI candidates are not public
-installers. See [release procedure](packaging/RELEASE.md).
+installers. See [release procedure](packaging/RELEASE.md) and the
+[delivery record](tickets/done/nfs-first-release/handoff-summary.md).
 
 ## Validation boundary
 
@@ -49,13 +51,13 @@ Intended host floors above remain unchanged; compilation is not field validation
 Linux engine delivery uses the reviewed Noble backport `4.3-8ubuntu1+autobyteus1`,
 not unpatched stock4.3. The matching packages are embedded in Linux release
 binaries and shared with the Docker image; users need no compiler/PPA or extra
-package command. This distribution path is still under validation.
+package command. Package/OCI distribution integrity is verified; live storage operation remains deferred.
 
-## Versioned download (after publication is confirmed)
+## Versioned download
 
 Advertised CPU targets are ARM64 and x64 for native macOS26+ and Ubuntu24.04.
-The first release is normal v0.1.0, not beta. These are the exact intended versioned
-commands; **do not treat a missing/draft release as a working download**:
+The first release is normal v0.1.0, not beta. Download and inspect the versioned
+installer, then run only a version check:
 
 ```sh
 curl --fail --location --proto '=https' --tlsv1.2 \
@@ -80,9 +82,9 @@ manifest admission; `version` stdout remains the exact version.
 
 ## Intended first-use journey
 
-A published, versioned bootstrap will download a checksum-verified archive and
+The published, versioned bootstrap downloads a checksum-verified archive and
 manifest, validate archive members and the binary's embedded release metadata,
-then execute the installed binary immediately. It needs no Go, Node or Python on
+then executes the installed binary immediately. It needs no Go, Node or Python on
 the participant. It reads prompts from `/dev/tty` even when piped to Bash. The
 bootstrap does not change the invoking shell's PATH; it installs the user CLI at
 `~/.local/bin/autobyteus-nfs` and invokes its absolute versioned path.

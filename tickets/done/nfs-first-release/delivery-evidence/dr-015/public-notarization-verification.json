@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-20T06:40:43.223438+00:00",
+  "checks": [
+    {
+      "target": "darwin-arm64",
+      "binarySha256": "059bb7f282cb43cccb0e3c8a06a14c5f93372cdacb92eb79131177db6753c408",
+      "argv": [
+        "codesign",
+        "--verify",
+        "--strict",
+        "--verbose=4",
+        "--check-notarization",
+        "-R=notarized",
+        "/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-arm64/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-arm64/autobyteus-nfs: valid on disk\n/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-arm64/autobyteus-nfs: satisfies its Designated Requirement\n/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-arm64/autobyteus-nfs: explicit requirement satisfied\n"
+    },
+    {
+      "target": "darwin-amd64",
+      "binarySha256": "80f217c52d7d8a21fd18dba8ca18f02a3355e56d395f3d541309e289787f9a6e",
+      "argv": [
+        "codesign",
+        "--verify",
+        "--strict",
+        "--verbose=4",
+        "--check-notarization",
+        "-R=notarized",
+        "/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-amd64/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-amd64/autobyteus-nfs: valid on disk\n/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-amd64/autobyteus-nfs: satisfies its Designated Requirement\n/Users/normy/nfs-dr015-notary-me_d6dvm/darwin-amd64/autobyteus-nfs: explicit requirement satisfied\n"
+    }
+  ],
+  "cleanup": {
+    "root": "/Users/normy/nfs-dr015-notary-me_d6dvm",
+    "absent": true
+  },
+  "source": "https://developer.apple.com/videos/play/wwdc2019/703/",
+  "interpretation": "spctl execute app assessment returns3 valid-but-not-an-app for CLI. Preserve that observation, use Apple-documented notarized requirement for other signed code. No security disable, re-sign or credential access. --check-notarization permits online ticket lookup; no claim that cache was empty."
+}

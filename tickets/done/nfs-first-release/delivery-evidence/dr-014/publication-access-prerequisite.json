@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-19T09:12:28.193940+00:00",
+  "round": "DR-014",
+  "deliveryStatus": "Blocked \u2014 deployment-local access prerequisite",
+  "run": 39227507554,
+  "attempt": 1,
+  "executor": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "result": "failure",
+  "passed": "Genuine recovery admission, original tag/draft correlation, all18 assets uploaded and verified; no build/signing replay",
+  "failedBoundary": "Anonymous full OCI download, skopeo copy exit1 at publication.py:343",
+  "independentObservation": "Anonymous ghcr.io token pull request HTTP401 authentication required",
+  "visibility": "Not yet directly observed: local CLI lacks read:packages (403), Ryan browser is signed out. Do not claim package-private root cause until settings read.",
+  "userActionRequested": "Sign into GitHub in Ryan profile and open exact AutoByteus/autobyteus-nfs container settings; no Apple credential change or token escalation requested",
+  "partialEffects": "Original tag/P unchanged; draft417014769 remains draft with18 uploaded assets exact GitHub digest/size match. Publisher progressed past authenticated package/version/OCI-root verification; anonymous wholeOCI unproven. No public release/download/install yet.",
+  "retry": "Only after scoped public-download access resolved, new manual dispatch same E/version/original candidate. No tag move, asset clobber, rebuild, re-sign or readiness alteration.",
+  "classification": "Deployment-local external access prerequisite; retain Delivery ownership, no source/API/Designer rework dispatched",
+  "secrets": "No credential read/export/reprovision or private browser data persisted",
+  "evidence": [
+    "actual-publication-receipt.json",
+    "publication-execution-summary.json",
+    "publication-job-117977868173.log",
+    "anonymous-registry-observation.json",
+    "partial-remote-state.json"
+  ],
+  "allPipelinesCompleted": true,
+  "noMatchingHandoff": "No LocalFix/DesignImpact/nondeployment/classification/Completed condition; direct user continuation, retain Delivery ownership"
+}

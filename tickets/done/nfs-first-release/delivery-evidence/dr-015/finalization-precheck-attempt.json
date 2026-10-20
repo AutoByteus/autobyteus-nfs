@@ -1,0 +1,92 @@
+[
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "91f8e841114a1d55a107ea4b1fb2a2af5ae80092\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "exit": 0,
+    "stdout": "codex/nfs-first-release\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "fetch",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+  },
+  {
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "3424f8dddef795d4a42e83ed8746268a4aab4d7d\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit": 0,
+    "stdout": "README.md\ntickets/done/nfs-first-release/delivery-revision-record.md\ntickets/done/nfs-first-release/docs-sync-report.md\ntickets/done/nfs-first-release/handoff-summary.md\ntickets/done/nfs-first-release/release-deployment-report.md\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "README.md",
+      "tickets/done/nfs-first-release/handoff-summary.md",
+      "tickets/done/nfs-first-release/docs-sync-report.md",
+      "tickets/done/nfs-first-release/release-deployment-report.md",
+      "tickets/done/nfs-first-release/delivery-revision-record.md"
+    ],
+    "exit": 2,
+    "stdout": "tickets/done/nfs-first-release/delivery-revision-record.md:263: new blank line at EOF.\n",
+    "stderr": ""
+  }
+]

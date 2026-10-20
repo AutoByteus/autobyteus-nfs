@@ -1,0 +1,24 @@
+{
+  "artifact": {
+    "id": 12177168649,
+    "node_id": "MDg6QXJ0aWZhY3QxMjE3NzE2ODY0OQ==",
+    "name": "nfs-publication-receipt",
+    "size_in_bytes": 1233,
+    "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12177168649",
+    "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12177168649/zip",
+    "expired": false,
+    "digest": "sha256:abee285f1dfe8155904b5f792d4f49b9f84eb21a157cb5502176833358127a57",
+    "created_at": "2026-10-19T09:58:36Z",
+    "updated_at": "2026-10-19T09:58:36Z",
+    "expires_at": "2027-01-17T09:56:40Z",
+    "workflow_run": {
+      "id": 39233821032,
+      "repository_id": 1420699315,
+      "head_repository_id": 1420699315,
+      "head_branch": "main",
+      "head_sha": "3424f8dddef795d4a42e83ed8746268a4aab4d7d"
+    }
+  },
+  "wrapperSha256": "abee285f1dfe8155904b5f792d4f49b9f84eb21a157cb5502176833358127a57",
+  "receiptSha256": "04359c0ebfa39d48fe8ccea2458233207f2c57f0c331015bbff9188c5a4c86d8"
+}

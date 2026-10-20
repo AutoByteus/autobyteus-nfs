@@ -1,0 +1,6 @@
+{
+  "initialAttempt": "Stopped at history-prefix guard before revision/report JSON edits; used character offset for a byte-count baseline",
+  "correction": "Checked SHA256 of exact original byte prefix, unchanged; resumed only remaining docs edits",
+  "productOrTestFailure": false,
+  "finalizationPrecheck": "git diff --check refused one added blank line at revision EOF before commit/push; removed only added trailing blank; raw refusal preserved"
+}

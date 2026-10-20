@@ -1,0 +1,69 @@
+{
+  "authorization": {
+    "path": "packaging/recovery/v0.1.0/authorization.json",
+    "sha256": "8407e45e06536fb991bef75671dea4d1cf1e08156f31dfc12dbc49dd42695a66"
+  },
+  "executor": {
+    "commit": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+    "runAttempt": "1",
+    "runId": "39233821032",
+    "sourceHash": "e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21",
+    "workflow": ".github/workflows/release-nfs.yml",
+    "workflowCommit": "3424f8dddef795d4a42e83ed8746268a4aab4d7d"
+  },
+  "image": {
+    "anonymousPlatforms": [
+      "linux-amd64",
+      "linux-arm64"
+    ],
+    "digest": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+    "versionId": 1408262377
+  },
+  "installerSmoke": "owned HOME, explicit version only, Ubuntu amd64 publisher",
+  "mode": "recover",
+  "payload": {
+    "envelope": {
+      "artifactId": 12169472209,
+      "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+      "expiresAt": "2027-01-17T07:21:36Z",
+      "runAttempt": 1,
+      "runId": 39215470944,
+      "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+    },
+    "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+    "version": "v0.1.0"
+  },
+  "payloadSourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+  "releaseId": 417014769,
+  "releaseUrl": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0",
+  "remaining": "Delivery must verify other native installer/signature downloads on owned hosts",
+  "result": "published",
+  "reviewedCommit": "6cb497f4a0bb83d52ddfc41b5aaad95a8e482440",
+  "stages": [
+    "validating-before-effects",
+    "tag-confirmed; draft-reconciliation-attempted",
+    "draft-confirmed; asset-reconciliation-attempted",
+    "assets-confirmed; image-promotion-and-anonymous-read-attempted",
+    "image-public-confirmed; release-publication-attempted",
+    "release-published; public-download-verification-attempted"
+  ],
+  "tag": {
+    "binding": {
+      "envelope": {
+        "artifactId": 12169472209,
+        "digest": "sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336",
+        "expiresAt": "2027-01-17T07:21:36Z",
+        "runAttempt": 1,
+        "runId": 39215470944,
+        "workflowCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      },
+      "payloadSha256": "3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+      "version": "v0.1.0"
+    },
+    "object": "f4a04fd0c80a6625708ba002b4cef5507a03f514"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-19T09:56:22.098332+00:00",
+  "head": "91f8e841114a1d55a107ea4b1fb2a2af5ae80092",
+  "freshMain": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "baseAlreadyAncestor": true,
+  "integration": "No base delta; same completed executor E reused, no merge/reset/replay or redundant executable rerun",
+  "priorRevisionBytes": 53877,
+  "priorRevisionSha256": "f74ccdd0c2dc38988ac6fa838253ec8426e7814aa0d18178eb6920c2cc14511b",
+  "product": "unchanged from approved E/H; local91f8 checkpoint only README/ticket docs",
+  "task": "project_task_97c6ab09-83cb-46df-bf28-d07b39259dd5",
+  "classification": "Large/High/Reviewed; R3/SR004, SR005/ARCH003, IR009/CRR013/API007/CRR014 carried unchanged"
+}

@@ -1,5 +1,5 @@
 {
-  "judgement": "Sufficient for current reviewed executor authorization/finalization; not public release completion",
+  "judgement": "Blocked at actual anonymous OCI/public distribution; sufficient genuine executor acceptance and completed source finalization, not Delivery Completed",
   "acceptanceCriteria": {
     "AC001": "original candidate/current strictness preserved",
     "AC002": "Full P validators/readiness plus genuine H authorization prepared",
@@ -47,5 +47,20 @@
     "path": "packaging/recovery/v0.1.0/authorization.json",
     "sha256": "8407e45e06536fb991bef75671dea4d1cf1e08156f31dfc12dbc49dd42695a66"
   },
-  "noRepeatCampaign": "No new candidate/native/engine/keychain/signing/field campaign; fresh admission check after commit is relevant data check."
+  "noRepeatCampaign": "No new candidate/native/engine/keychain/signing/field campaign; fresh admission check after commit is relevant data check.",
+  "actualRecovery": {
+    "status": "incomplete",
+    "run": 39227507554,
+    "evidence": "publication-access-prerequisite.json",
+    "actualAssets": 18,
+    "originalSignatures": "carried exact; no new signing",
+    "publicOci": "refused anonymous access",
+    "publicReleaseInstall": "Not yet proven",
+    "classification": "Deployment-local access prerequisite; no source/design finding"
+  },
+  "pipelines": {
+    "release39227507554": "failure",
+    "main39227470979": "success",
+    "ticket39227446730": "success"
+  }
 }

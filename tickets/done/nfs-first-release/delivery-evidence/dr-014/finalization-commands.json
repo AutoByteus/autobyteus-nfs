@@ -1,0 +1,312 @@
+[
+  {
+    "at": "2026-10-19T09:05:20.804832+00:00",
+    "argv": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "exit": 0,
+    "stdout": "codex/nfs-first-release\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:20.821354+00:00",
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.526200+00:00",
+    "argv": [
+      "git",
+      "fetch",
+      "--no-tags",
+      "origin",
+      "refs/heads/main:refs/remotes/origin/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.541572+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "238bdc183e8affac99ffdee9be9cb333b0eb126f\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.565589+00:00",
+    "argv": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit": 0,
+    "stdout": "tickets/done/nfs-first-release/delivery-revision-record.md\ntickets/done/nfs-first-release/handoff-summary.md\ntickets/done/nfs-first-release/release-deployment-report.md\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.588047+00:00",
+    "argv": [
+      "git",
+      "ls-files",
+      "--others",
+      "--exclude-standard"
+    ],
+    "exit": 0,
+    "stdout": "tickets/done/nfs-first-release/delivery-evidence/dr-014/admission-d6587007cbc7e99f76075287ff7154faff239044.json\ntickets/done/nfs-first-release/delivery-evidence/dr-014/check-admission.py\ntickets/done/nfs-first-release/delivery-evidence/dr-014/finalization-commands.json\ntickets/done/nfs-first-release/delivery-evidence/dr-014/finalize-executor.py\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.605490+00:00",
+    "argv": [
+      "git",
+      "diff",
+      "--check",
+      "--",
+      "tickets/done/nfs-first-release/delivery-revision-record.md",
+      "tickets/done/nfs-first-release/handoff-summary.md",
+      "tickets/done/nfs-first-release/release-deployment-report.md"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.653771+00:00",
+    "argv": [
+      "git",
+      "add",
+      "--",
+      "tickets/done/nfs-first-release/delivery-revision-record.md",
+      "tickets/done/nfs-first-release/handoff-summary.md",
+      "tickets/done/nfs-first-release/release-deployment-report.md",
+      "tickets/done/nfs-first-release/delivery-evidence/dr-014/admission-d6587007cbc7e99f76075287ff7154faff239044.json",
+      "tickets/done/nfs-first-release/delivery-evidence/dr-014/check-admission.py",
+      "tickets/done/nfs-first-release/delivery-evidence/dr-014/finalize-executor.py"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.727327+00:00",
+    "argv": [
+      "git",
+      "commit",
+      "-m",
+      "docs(release): verify genuine same-payload executor admission"
+    ],
+    "exit": 0,
+    "stdout": "[codex/nfs-first-release c42176a] docs(release): verify genuine same-payload executor admission\n Committer: normy <normy@macbookpro.speedport.ip>\nYour name and email address were configured automatically based\non your username and hostname. Please check that they are accurate.\nYou can suppress this message by setting them explicitly. Run the\nfollowing command and follow the instructions in your editor to edit\nyour configuration file:\n\n    git config --global --edit\n\nAfter doing this, you may fix the identity used for this commit with:\n\n    git commit --amend --reset-author\n\n 6 files changed, 84 insertions(+)\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/admission-d6587007cbc7e99f76075287ff7154faff239044.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/check-admission.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/finalize-executor.py\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:21.744747+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "c42176afc6603a77c7e3d0e183015ebee407f043\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:24.392991+00:00",
+    "argv": [
+      "git",
+      "-c",
+      "push.followTags=false",
+      "push",
+      "--no-follow-tags",
+      "origin",
+      "c42176afc6603a77c7e3d0e183015ebee407f043:refs/heads/codex/nfs-first-release"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   8dfda0d..c42176a  c42176afc6603a77c7e3d0e183015ebee407f043 -> codex/nfs-first-release\n"
+  },
+  {
+    "at": "2026-10-19T09:05:24.814857+00:00",
+    "argv": [
+      "git",
+      "fetch",
+      "--no-tags",
+      "origin",
+      "refs/heads/main:refs/remotes/origin/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:24.831635+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "238bdc183e8affac99ffdee9be9cb333b0eb126f\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:24.909148+00:00",
+    "argv": [
+      "git",
+      "switch",
+      "-c",
+      "codex/nfs-first-release-finalize-dr014",
+      "origin/main"
+    ],
+    "exit": 0,
+    "stdout": "branch 'codex/nfs-first-release-finalize-dr014' set up to track 'origin/main'.\n",
+    "stderr": "Switched to a new branch 'codex/nfs-first-release-finalize-dr014'\n"
+  },
+  {
+    "at": "2026-10-19T09:05:25.037776+00:00",
+    "argv": [
+      "git",
+      "merge",
+      "--no-ff",
+      "codex/nfs-first-release",
+      "-m",
+      "Merge reviewed same-payload publication executor recovery"
+    ],
+    "exit": 0,
+    "stdout": "Merge made by the 'ort' strategy.\n .github/workflows/release-nfs.yml                  |   23 +-\n RELEASE.md                                         |   11 +-\n TESTING.md                                         |   30 +-\n packaging/RELEASE.md                               |  114 +-\n packaging/recovery/v0.1.0/architecture-review.json |   17 +\n packaging/recovery/v0.1.0/authorization.json       |   50 +\n .../recovery/v0.1.0/delivery-authorization.json    |   71 +\n packaging/recovery/v0.1.0/retained-signing.json    |   55 +\n packaging/recovery/v0.1.0/source-review.json       |   23 +\n packaging/recovery/v0.1.0/validation.json          |   81 +\n packaging/release.py                               |   14 +-\n packaging/release_support/candidate.py             |   35 +-\n packaging/release_support/identity.py              |    2 +-\n packaging/release_support/payload.py               |   22 +-\n packaging/release_support/publication.py           |  441 ++-\n packaging/release_support/readiness.py             |   39 +-\n packaging/release_support/recovery.py              |   64 +\n packaging/release_support/source_context.py        |  105 +\n scripts/tests/nfs_release_fixture.py               |   41 +-\n scripts/tests/test_nfs_packaging.py                |    5 +-\n scripts/tests/test_nfs_release_publication.py      |  435 ++-\n scripts/tests/test_nfs_release_records.py          |   23 +-\n scripts/tests/test_nfs_release_recovery.py         |  185 +\n scripts/tests/test_nfs_release_workflow.py         |    8 +-\n scripts/tests/test_nfs_source_identity.py          |   10 +\n .../api-e2e-coverage-investigation.md              |   44 +-\n .../api-e2e-execution-coverage-report.md           |  118 +-\n .../nfs-first-release/api-e2e-revision-record.md   |    9 +\n .../nfs-first-release/api-e2e-test-progress.md     |   22 +\n .../api-e2e-test-review-report.md                  |   86 +-\n .../architecture-review-revision-record.md         |   29 +\n .../code-review-evidence/crr-013/final-checks.json |   15 +\n .../crr-013/handoff-receipt.json                   |   13 +\n .../code-review-evidence/crr-013/review-audit.json |  121 +\n .../code-review-evidence/crr-013/routing.json      |   50 +\n .../code-review-evidence/crr-014/final-checks.json |   17 +\n .../crr-014/handoff-receipt.json                   |   14 +\n .../code-review-evidence/crr-014/review-audit.json |   29 +\n .../code-review-evidence/crr-014/routing.json      |   48 +\n .../done/nfs-first-release/code-review-report.md   |  247 +-\n .../code-review-revision-record.md                 |   45 +\n .../dr-013/actual-publication-receipt.json         |   23 +\n .../dr-013/collect-publication.py                  |   34 +\n .../dr-013/downloaded-darwin-amd64-codesign.log    |   30 +\n .../dr-013/downloaded-darwin-arm64-codesign.log    |   30 +\n .../delivery-evidence/dr-013/draft-by-id.json      |   42 +\n .../dr-013/draft-reconciliation-observation.json   |   93 +\n .../dr-013/failure-assessment.json                 |   50 +\n .../delivery-evidence/dr-013/final-checks.json     |   22 +\n .../dr-013/finalization-commands.json              |  393 ++\n .../dr-013/first-hosted-amd64-accepted.json        |   11 +\n .../dr-013/first-hosted-arm64-accepted.json        |   11 +\n .../dr-013/publication-artifacts-latest.json       |  185 +\n .../dr-013/publication-dispatch.json               |   29 +\n .../dr-013/publication-execution-summary.json      |  812 +++++\n .../dr-013/publication-final-artifacts.json        |  182 +\n .../dr-013/publication-final-jobs.json             |  944 +++++\n .../dr-013/publication-final-run.json              |  224 ++\n .../dr-013/publication-job-117938185371.log        |  285 ++\n .../dr-013/publication-job-117938369130.log        |  398 +++\n .../dr-013/publication-job-117938369163.log        |  419 +++\n .../dr-013/publication-job-117938369165.log        |  376 ++\n .../dr-013/publication-job-117938369382.log        |  376 ++\n .../dr-013/publication-job-117940491787.log        |  328 ++\n .../dr-013/publication-job-117940608133.log        |  272 ++\n .../dr-013/publication-jobs-latest.json            |  947 +++++\n .../dr-013/publication-observations.jsonl          |   15 +\n .../dr-013/publication-runs-after-dispatch.json    | 2245 ++++++++++++\n .../dr-013/publication-runs-before.json            | 2021 +++++++++++\n .../dr-013/publication-watch-complete.json         |  126 +\n .../dr-013/remote-after-attempt1.json              |   55 +\n .../dr-013/retain-final-payload.py                 |   21 +\n .../dr-013/retained-payload-ownership.json         |    6 +\n .../dr-013/retained-payload-verification.json      |   48 +\n .../delivery-evidence/dr-013/routing.json          |   27 +\n .../dr-013/run-39215443295-latest.json             |  224 ++\n .../dr-013/run-39215449472-latest.json             |  224 ++\n .../dr-013/run-39215470944-latest.json             |  224 ++\n .../dr-013/signing-artifact-receipts.json          |   36 +\n .../dr-013/signing-darwin-amd64-notary.json        |    6 +\n .../dr-013/signing-darwin-arm64-notary.json        |    6 +\n .../dr-013/source-finalization.json                |   19 +\n .../delivery-evidence/dr-013/watch-publication.py  |   19 +\n ...n-d6587007cbc7e99f76075287ff7154faff239044.json |   43 +\n .../dr-014/api-emulation-keys.json                 |   28 +\n .../delivery-evidence/dr-014/check-admission.py    |    9 +\n .../delivery-evidence/dr-014/finalize-executor.py  |   26 +\n .../dr-014/fresh-bound-state.json                  |   33 +\n .../delivery-evidence/dr-014/intake.json           | 2114 +++++++++++\n .../dr-014/interrupted-intake-attempt-001.json     | 2114 +++++++++++\n .../dr-014/interruption-note.json                  |    6 +\n .../delivery-evidence/dr-014/portable-paths.json   |    4 +\n .../dr-014/prepare-authorization.py                |   38 +\n .../delivery-evidence/dr-014/verification.json     |   51 +\n .../nfs-first-release/delivery-revision-record.md  |   42 +-\n .../done/nfs-first-release/design-review-report.md |  303 +-\n tickets/done/nfs-first-release/design-spec.md      |  333 +-\n tickets/done/nfs-first-release/docs-sync-report.md |    8 +-\n .../evidence/C01-07-artifact-checks.json           |   19 +\n .../nfs-first-release/evidence/C01-07-audit.py     |   46 +\n .../nfs-first-release/evidence/C01-07-cleanup.json |   39 +\n .../nfs-first-release/evidence/C01-07-finish.py    |  117 +\n .../evidence/C01-07-ownership.json                 |   78 +\n .../evidence/C01-07-remote-after.json              |   81 +\n .../nfs-first-release/evidence/C01-07-routing.json |   35 +\n .../evidence/IMP-08-01-recovery-probe.json         |   27 +\n .../evidence/IMP-08-01-recovery-probe.py           |   91 +\n .../evidence/IMP-08-02-design-impact.md            |  104 +\n .../evidence/IMP-08-03-audit.json                  |   17 +\n .../nfs-first-release/evidence/IMP-08-03-audit.py  |   29 +\n .../evidence/IMP-08-04-routing.json                |   10 +\n .../evidence/IMP-09-01-initial-publication.log     |   65 +\n .../evidence/IMP-09-02-initial-focused.log         |   67 +\n .../evidence/IMP-09-03-checks.json                 |   13 +\n .../evidence/IMP-09-03-python.log                  |   47 +\n .../evidence/IMP-09-03-run-checks.py               |   50 +\n .../evidence/IMP-09-04-retained-inputs.json        |  122 +\n .../evidence/IMP-09-04-retained-inputs.log         |  127 +\n .../evidence/IMP-09-04-retained-inputs.py          |   63 +\n .../evidence/IMP-09-05-mutations.json              |   54 +\n .../evidence/IMP-09-05-mutations.py                |   62 +\n .../evidence/IMP-09-05-omit-admission.log          |   20 +\n .../evidence/IMP-09-05-omit-full-tree-scope.log    |   20 +\n .../evidence/IMP-09-05-omit-main-freshness.log     |   20 +\n .../IMP-09-05-published-only-discovery.log         |   20 +\n .../evidence/IMP-09-05-recreate-known-draft.log    |   19 +\n .../IMP-09-05-verify-payload-at-executor.log       |   28 +\n .../evidence/IMP-09-06-actionlint.log              |    7 +\n .../nfs-first-release/evidence/IMP-09-06-bash.log  |    7 +\n .../evidence/IMP-09-06-checks.json                 |   67 +\n .../evidence/IMP-09-06-python.log                  |   85 +\n .../evidence/IMP-09-06-run-checks.py               |   50 +\n .../evidence/IMP-09-06-source-hash.log             |    7 +\n .../evidence/IMP-09-06-whitespace.log              |    7 +\n .../evidence/IMP-09-07-retained-inputs.json        |  122 +\n .../evidence/IMP-09-07-retained-inputs.log         |  127 +\n .../evidence/IMP-09-07-retained-inputs.py          |   63 +\n .../evidence/IMP-09-08-source-audit.json           |   50 +\n .../evidence/IMP-09-08-source-audit.py             |   72 +\n .../evidence/IMP-09-09-checks-and-limits.md        |   75 +\n .../evidence/IMP-09-10-actionlint.log              |    7 +\n .../nfs-first-release/evidence/IMP-09-10-bash.log  |    7 +\n .../evidence/IMP-09-10-checks.json                 |   67 +\n .../evidence/IMP-09-10-python.log                  |   26 +\n .../evidence/IMP-09-10-run-checks.py               |   50 +\n .../evidence/IMP-09-10-source-hash.log             |    7 +\n .../evidence/IMP-09-10-whitespace.log              |    7 +\n .../evidence/IMP-09-11-source-audit.json           |   50 +\n .../evidence/IMP-09-11-source-audit.py             |   72 +\n .../evidence/IMP-09-12-cleanup.json                |   23 +\n .../evidence/IMP-09-13-routing.json                |   11 +\n .../evidence/IMP-09-14-final-check.json            |   17 +\n .../evidence/R01-07-repository.py                  |   57 +\n .../nfs-first-release/evidence/R01-07-reuse.json   |   26 +\n .../evidence/R02-07-attempt-note.json              |   11 +\n .../evidence/R02-07-candidate-refusal.log          |    4 +\n .../evidence/R02-07-refusals.json                  |   56 +\n .../nfs-first-release/evidence/R02-07-resume.py    |   46 +\n .../nfs-first-release/evidence/R03-07-carried.json |   15 +\n .../nfs-first-release/evidence/R04-07-command.json |   21 +\n .../nfs-first-release/evidence/R04-07-inspect.py   |   27 +\n .../evidence/R04-07-inspection.json                |   33 +\n .../evidence/R04-07-inspection.log                 |    3 +\n .../evidence/R04-07-ownership.json                 |    9 +\n .../evidence/R04-07-verified.json                  |   42 +\n .../evidence/R05-07-carried-signatures.json        |   37 +\n .../nfs-first-release/evidence/R05-07-observe.py   |   59 +\n .../evidence/R06-07-observations.json              | 3736 ++++++++++++++++++++\n .../nfs-first-release/evidence/R07-07-cleanup.json |   10 +\n .../nfs-first-release/evidence/R07-07-console.log  |    4 +\n .../nfs-first-release/evidence/R07-07-result.json  |  947 +++++\n .../done/nfs-first-release/evidence/R07-07-run.py  |   28 +\n .../evidence/R07-07-validation-summary.json        |   73 +\n .../nfs-first-release/evidence/R07-07-worker.py    |  104 +\n .../design-recovery/sr005/artifact-check.json      |   23 +\n .../design-recovery/sr005/input-state.json         |   14 +\n .../evidence/design-recovery/sr005/routing.json    |   29 +\n tickets/done/nfs-first-release/handoff-summary.md  |   44 +-\n .../ir-008/prior-implementation-handoff-ir007.md   |  141 +\n .../nfs-first-release/implementation-handoff.md    |  297 +-\n .../implementation-revision-record.md              |   84 +\n .../done/nfs-first-release/investigation-notes.md  |   50 +\n .../nfs-first-release/release-deployment-report.md |   44 +-\n tickets/done/nfs-first-release/requirements-doc.md |    5 +\n .../nfs-first-release/solution-design-handoff.md   |   74 +-\n .../nfs-first-release/solution-revision-record.md  |   12 +\n 186 files changed, 27440 insertions(+), 1099 deletions(-)\n create mode 100644 packaging/recovery/v0.1.0/architecture-review.json\n create mode 100644 packaging/recovery/v0.1.0/authorization.json\n create mode 100644 packaging/recovery/v0.1.0/delivery-authorization.json\n create mode 100644 packaging/recovery/v0.1.0/retained-signing.json\n create mode 100644 packaging/recovery/v0.1.0/source-review.json\n create mode 100644 packaging/recovery/v0.1.0/validation.json\n create mode 100644 packaging/release_support/recovery.py\n create mode 100644 packaging/release_support/source_context.py\n create mode 100644 scripts/tests/test_nfs_release_recovery.py\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-013/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-013/handoff-receipt.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-013/review-audit.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-013/routing.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-014/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-014/handoff-receipt.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-014/review-audit.json\n create mode 100644 tickets/done/nfs-first-release/code-review-evidence/crr-014/routing.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/actual-publication-receipt.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/collect-publication.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/downloaded-darwin-amd64-codesign.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/downloaded-darwin-arm64-codesign.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/draft-by-id.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/draft-reconciliation-observation.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/failure-assessment.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/final-checks.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/finalization-commands.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/first-hosted-amd64-accepted.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/first-hosted-arm64-accepted.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-artifacts-latest.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-dispatch.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-execution-summary.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-final-artifacts.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-final-jobs.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-final-run.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117938185371.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117938369130.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117938369163.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117938369165.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117938369382.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117940491787.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-job-117940608133.log\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-jobs-latest.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-observations.jsonl\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-runs-after-dispatch.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-runs-before.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/publication-watch-complete.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/remote-after-attempt1.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/retain-final-payload.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/retained-payload-ownership.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/retained-payload-verification.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/routing.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/run-39215443295-latest.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/run-39215449472-latest.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/run-39215470944-latest.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/signing-artifact-receipts.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/signing-darwin-amd64-notary.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/signing-darwin-arm64-notary.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/source-finalization.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-013/watch-publication.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/admission-d6587007cbc7e99f76075287ff7154faff239044.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/api-emulation-keys.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/check-admission.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/finalize-executor.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/fresh-bound-state.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/intake.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/interrupted-intake-attempt-001.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/interruption-note.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/portable-paths.json\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/prepare-authorization.py\n create mode 100644 tickets/done/nfs-first-release/delivery-evidence/dr-014/verification.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-artifact-checks.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-audit.py\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-cleanup.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-finish.py\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-ownership.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-remote-after.json\n create mode 100644 tickets/done/nfs-first-release/evidence/C01-07-routing.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-01-recovery-probe.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-01-recovery-probe.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-02-design-impact.md\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-03-audit.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-03-audit.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-08-04-routing.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-01-initial-publication.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-02-initial-focused.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-03-checks.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-03-python.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-03-run-checks.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-04-retained-inputs.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-04-retained-inputs.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-04-retained-inputs.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-mutations.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-mutations.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-omit-admission.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-omit-full-tree-scope.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-omit-main-freshness.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-published-only-discovery.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-recreate-known-draft.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-05-verify-payload-at-executor.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-actionlint.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-bash.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-checks.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-python.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-run-checks.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-source-hash.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-06-whitespace.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-07-retained-inputs.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-07-retained-inputs.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-07-retained-inputs.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-08-source-audit.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-08-source-audit.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-09-checks-and-limits.md\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-actionlint.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-bash.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-checks.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-python.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-run-checks.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-source-hash.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-10-whitespace.log\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-11-source-audit.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-11-source-audit.py\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-12-cleanup.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-13-routing.json\n create mode 100644 tickets/done/nfs-first-release/evidence/IMP-09-14-final-check.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R01-07-repository.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R01-07-reuse.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-07-attempt-note.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-07-candidate-refusal.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-07-refusals.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R02-07-resume.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R03-07-carried.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-command.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-inspect.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-inspection.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-inspection.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-ownership.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R04-07-verified.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-07-carried-signatures.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R05-07-observe.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R06-07-observations.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-cleanup.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-console.log\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-result.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-run.py\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-validation-summary.json\n create mode 100644 tickets/done/nfs-first-release/evidence/R07-07-worker.py\n create mode 100644 tickets/done/nfs-first-release/evidence/design-recovery/sr005/artifact-check.json\n create mode 100644 tickets/done/nfs-first-release/evidence/design-recovery/sr005/input-state.json\n create mode 100644 tickets/done/nfs-first-release/evidence/design-recovery/sr005/routing.json\n create mode 100644 tickets/done/nfs-first-release/implementation-evidence/ir-008/prior-implementation-handoff-ir007.md\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:25.052288+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "3424f8dddef795d4a42e83ed8746268a4aab4d7d\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:25.067534+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "b0a99337ddae3fb2edbe99dc388c3ab458910375\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:25.082328+00:00",
+    "argv": [
+      "git",
+      "rev-parse",
+      "c42176afc6603a77c7e3d0e183015ebee407f043^{tree}"
+    ],
+    "exit": 0,
+    "stdout": "b0a99337ddae3fb2edbe99dc388c3ab458910375\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:35.256599+00:00",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-first-release/tickets/done/nfs-first-release/delivery-evidence/dr-014/check-admission.py"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"at\": \"2026-10-19T09:05:35.192185+00:00\",\n  \"passed\": true,\n  \"identities\": {\n    \"mode\": \"recover\",\n    \"executor\": {\n      \"commit\": \"3424f8dddef795d4a42e83ed8746268a4aab4d7d\",\n      \"sourceHash\": \"e3e814176d8315f0426df379035a995b6c0e6d5f89f82483f121b074c79eea21\",\n      \"workflow\": \".github/workflows/release-nfs.yml\",\n      \"workflowCommit\": \"3424f8dddef795d4a42e83ed8746268a4aab4d7d\",\n      \"runId\": null,\n      \"runAttempt\": null\n    },\n    \"payloadSourceCommit\": \"238bdc183e8affac99ffdee9be9cb333b0eb126f\",\n    \"tag\": {\n      \"object\": \"f4a04fd0c80a6625708ba002b4cef5507a03f514\",\n      \"binding\": {\n        \"envelope\": {\n          \"artifactId\": 12169472209,\n          \"digest\": \"sha256:b552faeaf6de1337ef8cf3056878b9bf0f1822faed5645033a8d5145fd1d0336\",\n          \"expiresAt\": \"2027-01-17T07:21:36Z\",\n          \"runAttempt\": 1,\n          \"runId\": 39215470944,\n          \"workflowCommit\": \"238bdc183e8affac99ffdee9be9cb333b0eb126f\"\n        },\n        \"payloadSha256\": \"3b0cbedd15782871e0c88c51b6847abcf276e7db00aab6f10c4dd387b4133dc8\",\n        \"repository\": \"AutoByteus/autobyteus-nfs\",\n        \"sourceCommit\": \"238bdc183e8affac99ffdee9be9cb333b0eb126f\",\n        \"version\": \"v0.1.0\"\n      }\n    },\n    \"reviewedCommit\": \"6cb497f4a0bb83d52ddfc41b5aaad95a8e482440\",\n    \"authorization\": {\n      \"path\": \"packaging/recovery/v0.1.0/authorization.json\",\n      \"sha256\": \"8407e45e06536fb991bef75671dea4d1cf1e08156f31dfc12dbc49dd42695a66\"\n    }\n  },\n  \"realCommittedAuthorityValidated\": true,\n  \"originalFullReadinessPayloadValidated\": true,\n  \"actualSelectedRelease\": 417014769,\n  \"draft\": true,\n  \"effects\": \"None; dispatch=False read-only admission/data validation, not fake hosted execution\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:35.714513+00:00",
+    "argv": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "238bdc183e8affac99ffdee9be9cb333b0eb126f\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:37.621944+00:00",
+    "argv": [
+      "git",
+      "-c",
+      "push.followTags=false",
+      "push",
+      "--no-follow-tags",
+      "origin",
+      "3424f8dddef795d4a42e83ed8746268a4aab4d7d:refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   238bdc1..3424f8d  3424f8dddef795d4a42e83ed8746268a4aab4d7d -> main\n"
+  },
+  {
+    "at": "2026-10-19T09:05:38.098411+00:00",
+    "argv": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main",
+      "refs/heads/codex/nfs-first-release",
+      "refs/tags/v0.1.0"
+    ],
+    "exit": 0,
+    "stdout": "c42176afc6603a77c7e3d0e183015ebee407f043\trefs/heads/codex/nfs-first-release\n3424f8dddef795d4a42e83ed8746268a4aab4d7d\trefs/heads/main\nf4a04fd0c80a6625708ba002b4cef5507a03f514\trefs/tags/v0.1.0\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:38.632091+00:00",
+    "argv": [
+      "gh",
+      "api",
+      "repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=3424f8dddef795d4a42e83ed8746268a4aab4d7d"
+    ],
+    "exit": 0,
+    "stdout": "{\"name\":\"release-nfs.yml\",\"path\":\".github/workflows/release-nfs.yml\",\"sha\":\"564691f4a9f7367620263d6e5a8a0b5d8d270c98\",\"size\":16953,\"url\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=3424f8dddef795d4a42e83ed8746268a4aab4d7d\",\"html_url\":\"https://github.com/AutoByteus/autobyteus-nfs/blob/3424f8dddef795d4a42e83ed8746268a4aab4d7d/.github/workflows/release-nfs.yml\",\"git_url\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs/564691f4a9f7367620263d6e5a8a0b5d8d270c98\",\"download_url\":\"https://raw.githubusercontent.com/AutoByteus/autobyteus-nfs/3424f8dddef795d4a42e83ed8746268a4aab4d7d/.github/workflows/release-nfs.yml\",\"type\":\"file\",\"content\":\"bmFtZTogQXV0b0J5dGV1cyBORlMgUmVsZWFzZQpvbjoKICB3b3JrZmxvd19k\\naXNwYXRjaDoKICAgIGlucHV0czoKICAgICAgcmVsZWFzZV90YWc6CiAgICAg\\nICAgZGVzY3JpcHRpb246ICdOb3JtYWwgTkZTIHZlcnNpb24gKGZpcnN0IHYw\\nLjEuMCk7IG5vIHByZS1jcmVhdGVkIHRhZy9yZWxlYXNlIHJlcXVpcmVkJwog\\nICAgICAgIHJlcXVpcmVkOiB0cnVlCiAgICAgICAgdHlwZTogc3RyaW5nCiAg\\nICAgIHNvdXJjZV9zaGE6CiAgICAgICAgZGVzY3JpcHRpb246ICdGdWxsIHJl\\ndmlld2VkIHNvdXJjZSBjb21taXQ7IGVtcHR5IHNlbGVjdHMgdGhpcyBkaXNw\\nYXRjaCBTSEEnCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNlCiAgICAgICAgdHlw\\nZTogc3RyaW5nCiAgICAgIGNhbmRpZGF0ZV9ydW5faWQ6CiAgICAgICAgZGVz\\nY3JpcHRpb246ICdFeGFjdCBjdXJyZW50IGJ1aWxkLW9ubHkgcnVuOyByZXF1\\naXJlZCBmb3IgcHVibGljYXRpb24nCiAgICAgICAgcmVxdWlyZWQ6IGZhbHNl\\nCiAgICAgICAgdHlwZTogc3RyaW5nCiAgICAgIHB1Ymxpc2g6CiAgICAgICAg\\nZGVzY3JpcHRpb246ICdBdXRob3JpemVkIHNpZ25lZCByZWxlYXNlOyBmaWVs\\nZCBhbmQgdXNlciB0ZXN0aW5nIGRlZmVycmVkJwogICAgICAgIGRlZmF1bHQ6\\nIGZhbHNlCiAgICAgICAgdHlwZTogYm9vbGVhbgpwZXJtaXNzaW9uczoKICBj\\nb250ZW50czogcmVhZAogIGFjdGlvbnM6IHJlYWQKY29uY3VycmVuY3k6CiAg\\nZ3JvdXA6ICR7eyBpbnB1dHMucHVibGlzaCAmJiAnbmZzLXJlcG9zaXRvcnkt\\ncHVibGljYXRpb24nIHx8IGZvcm1hdCgnbmZzLWNhbmRpZGF0ZS17MH0nLCBn\\naXRodWIucnVuX2lkKSB9fQogIGNhbmNlbC1pbi1wcm9ncmVzczogZmFsc2UK\\nam9iczoKICBwcmVwYXJlOgogICAgcnVucy1vbjogdWJ1bnR1LTI0LjA0CiAg\\nICBwZXJtaXNzaW9uczoKICAgICAgY29udGVudHM6IHJlYWQKICAgICAgYWN0\\naW9uczogcmVhZAogICAgICBwYWNrYWdlczogcmVhZAogICAgb3V0cHV0czoK\\nICAgICAgdGFnOiAke3sgc3RlcHMucHJlcGFyZS5vdXRwdXRzLnRhZyB9fQog\\nICAgICBleGVjdXRvcjogJHt7IHN0ZXBzLnByZXBhcmUub3V0cHV0cy5leGVj\\ndXRvciB9fQogICAgICBwYXlsb2FkX3NvdXJjZTogJHt7IHN0ZXBzLnByZXBh\\ncmUub3V0cHV0cy5wYXlsb2FkX3NvdXJjZSB9fQogICAgICBtb2RlOiAke3sg\\nc3RlcHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgfX0KICAgICAgYmFzZTogJHt7\\nIHN0ZXBzLnByZXBhcmUub3V0cHV0cy5iYXNlIH19CiAgICBzdGVwczoKICAg\\nICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QDExZDU5NjBhMzI2NzUwZDU4\\nMzgwNzhlMzZjZjM4Yjg1YWY2NzcyNjIKICAgICAgICB3aXRoOgogICAgICAg\\nICAgcmVmOiAke3sgaW5wdXRzLnNvdXJjZV9zaGEgfHwgZ2l0aHViLnNoYSB9\\nfQogICAgICAgICAgZmV0Y2gtZGVwdGg6IDAKICAgICAgICAgIHBlcnNpc3Qt\\nY3JlZGVudGlhbHM6IGZhbHNlCiAgICAgIC0gbmFtZTogUmVsZWFzZSBib3Vu\\nZGFyeSBjaGVja3MKICAgICAgICBydW46IHB5dGhvbjMgLW0gdW5pdHRlc3Qg\\nZGlzY292ZXIgLXMgc2NyaXB0cy90ZXN0cyAtcCAndGVzdF9uZnNfKi5weScg\\nLXYKICAgICAgLSBpZDogcHJlcGFyZQogICAgICAgIGVudjoKICAgICAgICAg\\nIFRBRzogJHt7IGlucHV0cy5yZWxlYXNlX3RhZyB9fQogICAgICAgICAgU09V\\nUkNFOiAke3sgaW5wdXRzLnNvdXJjZV9zaGEgfHwgZ2l0aHViLnNoYSB9fQog\\nICAgICAgICAgQ0FORElEQVRFX1JVTjogJHt7IGlucHV0cy5jYW5kaWRhdGVf\\ncnVuX2lkIH19CiAgICAgICAgICBXQU5UX1BVQkxJU0g6ICR7eyBpbnB1dHMu\\ncHVibGlzaCB9fQogICAgICAgICAgR0hfVE9LRU46ICR7eyBnaXRodWIudG9r\\nZW4gfX0KICAgICAgICBydW46IHwKICAgICAgICAgIHNldCAtZXVvIHBpcGVm\\nYWlsCiAgICAgICAgICBhcmdzPSgpCiAgICAgICAgICBpZiBbWyAiJFdBTlRf\\nUFVCTElTSCIgPT0gdHJ1ZSBdXTsgdGhlbiBhcmdzKz0oLS1ydW4taWQgIiRD\\nQU5ESURBVEVfUlVOIik7IGZpCiAgICAgICAgICBweXRob24zIHBhY2thZ2lu\\nZy9yZWxlYXNlLnB5IC0tb3BlcmF0aW9uIHByZXBhcmUgLS10YWcgIiRUQUci\\nIC0tc291cmNlLWNvbW1pdCAiJFNPVVJDRSIgLS1kaXJlY3Rvcnkgd29yayAi\\nJHthcmdzW0BdfSIKICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRp\\nZmFjdEBlYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAy\\nCiAgICAgICAgaWY6IHN0ZXBzLnByZXBhcmUub3V0cHV0cy5tb2RlICE9ICdj\\nYW5kaWRhdGUnCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1w\\ncmVmbGlnaHQKICAgICAgICAgIHBhdGg6IHdvcmsvCiAgICAgICAgICByZXRl\\nbnRpb24tZGF5czogOTAKICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5kOiBl\\ncnJvcgogIGVuZ2luZS1wYWNrYWdlczoKICAgIG5lZWRzOiBwcmVwYXJlCiAg\\nICBpZjogbmVlZHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0gJ2NhbmRpZGF0\\nZScKICAgIHN0cmF0ZWd5OgogICAgICBmYWlsLWZhc3Q6IGZhbHNlCiAgICAg\\nIG1hdHJpeDoKICAgICAgICBpbmNsdWRlOgogICAgICAgICAgLSB7cnVubmVy\\nOiB1YnVudHUtMjQuMDQsIGFyY2g6IGFtZDY0fQogICAgICAgICAgLSB7cnVu\\nbmVyOiB1YnVudHUtMjQuMDQtYXJtLCBhcmNoOiBhcm02NH0KICAgIHJ1bnMt\\nb246ICR7eyBtYXRyaXgucnVubmVyIH19CiAgICBzdGVwczoKICAgICAgLSB1\\nc2VzOiBhY3Rpb25zL2NoZWNrb3V0QDExZDU5NjBhMzI2NzUwZDU4MzgwNzhl\\nMzZjZjM4Yjg1YWY2NzcyNjIKICAgICAgICB3aXRoOgogICAgICAgICAgcmVm\\nOiAke3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLmV4ZWN1dG9yIH19CiAgICAg\\nICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAgICAtIG5hbWU6\\nIEJ1aWxkIG1lYXN1cmVkIGVuZ2luZSBwYWlyIGluIHBpbm5lZCBkaXNwb3Nh\\nYmxlIGJ1aWxkZXIKICAgICAgICBlbnY6CiAgICAgICAgICBCQVNFOiAke3sg\\nbmVlZHMucHJlcGFyZS5vdXRwdXRzLmJhc2UgfX0KICAgICAgICBydW46IHwK\\nICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBta2RpciAt\\ncCAiJFJVTk5FUl9URU1QL2VuZ2luZS1vdXRwdXQiCiAgICAgICAgICBkb2Nr\\nZXIgcnVuIC0tcm0gLWUgQkFTRT0iJEJBU0UiIFwKICAgICAgICAgICAgLXYg\\nIiRQV0QvcGFja2FnaW5nL2VuZ2luZTovcmVjaXBlOnJvIiBcCiAgICAgICAg\\nICAgIC12ICIkUlVOTkVSX1RFTVAvZW5naW5lLW91dHB1dDovb3V0cHV0IiAi\\nJEJBU0UiIGJhc2ggLWV1YyAnCiAgICAgICAgICAgICAgc2VkIC1pICJzL15U\\neXBlczogZGViJC9UeXBlczogZGViIGRlYi1zcmMvIiAvZXRjL2FwdC9zb3Vy\\nY2VzLmxpc3QuZC91YnVudHUuc291cmNlcwogICAgICAgICAgICAgIGFwdC1n\\nZXQgdXBkYXRlCiAgICAgICAgICAgICAgREVCSUFOX0ZST05URU5EPW5vbmlu\\ndGVyYWN0aXZlIGFwdC1nZXQgaW5zdGFsbCAteSAtLW5vLWluc3RhbGwtcmVj\\nb21tZW5kcyBidWlsZC1lc3NlbnRpYWwgZGV2c2NyaXB0cyBmYWtlcm9vdCBj\\ndXJsIGNhLWNlcnRpZmljYXRlcyBsc2ItcmVsZWFzZQogICAgICAgICAgICAg\\nIERFQklBTl9GUk9OVEVORD1ub25pbnRlcmFjdGl2ZSBhcHQtZ2V0IGJ1aWxk\\nLWRlcCAteSBuZnMtZ2FuZXNoYT00LjMtOHVidW50dTEKICAgICAgICAgICAg\\nICB1c2VyYWRkIC1tIC11IDEwMDEgYnVpbGRlcgogICAgICAgICAgICAgIGlu\\nc3RhbGwgLWQgLW8gYnVpbGRlciAtZyBidWlsZGVyIC93b3JrCiAgICAgICAg\\nICAgICAgc3UgYnVpbGRlciAtcyAvYmluL2Jhc2ggLWMgInB5dGhvbjMgL3Jl\\nY2lwZS9idWlsZC5weSAtLXdvcmsgL3dvcmsvc291cmNlLWJ1aWxkIC0tb3V0\\ncHV0IC93b3JrL291dHB1dCAtLWJhc2UgJEJBU0UiCiAgICAgICAgICAgICAg\\nY3AgLWEgL3dvcmsvb3V0cHV0Ly4gL291dHB1dC8KICAgICAgICAgICAgJwog\\nICAgICAtIHVzZXM6IGFjdGlvbnMvdXBsb2FkLWFydGlmYWN0QGVhMTY1Zjhk\\nNjViNmU3NWI1NDA0NDllOTJiNDg4NmY0MzYwN2ZhMDIKICAgICAgICB3aXRo\\nOgogICAgICAgICAgbmFtZTogbmZzLWVuZ2luZS1wYWNrYWdlLSR7eyBtYXRy\\naXguYXJjaCB9fQogICAgICAgICAgcGF0aDogJHt7IHJ1bm5lci50ZW1wIH19\\nL2VuZ2luZS1vdXRwdXQvCiAgICAgICAgICByZXRlbnRpb24tZGF5czogOTAK\\nICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5kOiBlcnJvcgogIGVuZ2luZS1p\\nbnB1dHM6CiAgICBuZWVkczogW3ByZXBhcmUsIGVuZ2luZS1wYWNrYWdlc10K\\nICAgIGlmOiAke3sgIWNhbmNlbGxlZCgpICYmIG5lZWRzLnByZXBhcmUucmVz\\ndWx0ID09ICdzdWNjZXNzJyAmJiBuZWVkcy5wcmVwYXJlLm91dHB1dHMubW9k\\nZSA9PSAnY2FuZGlkYXRlJyAmJiBuZWVkcy5lbmdpbmUtcGFja2FnZXMucmVz\\ndWx0ID09ICdzdWNjZXNzJyB9fQogICAgcnVucy1vbjogdWJ1bnR1LTI0LjA0\\nCiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QDEx\\nZDU5NjBhMzI2NzUwZDU4MzgwNzhlMzZjZjM4Yjg1YWY2NzcyNjIKICAgICAg\\nICB3aXRoOgogICAgICAgICAgcmVmOiAke3sgbmVlZHMucHJlcGFyZS5vdXRw\\ndXRzLmV4ZWN1dG9yIH19CiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxz\\nOiBmYWxzZQogICAgICAtIHVzZXM6IGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZh\\nY3RAZDNmODZhMTA2YTBiYWM0NWI5NzRhNjI4ODk2YzkwZGJkZjVjODA5Mwog\\nICAgICAgIHdpdGg6CiAgICAgICAgICBwYXR0ZXJuOiBuZnMtZW5naW5lLXBh\\nY2thZ2UtKgogICAgICAgICAgcGF0aDogZW5naW5lLXBhcnRzCiAgICAgIC0g\\ncnVuOiBweXRob24zIHBhY2thZ2luZy9lbmdpbmUvbWFuaWZlc3QucHkgbWVy\\nZ2UgLS1pbnB1dHMgZW5naW5lLXBhcnRzL25mcy1lbmdpbmUtcGFja2FnZS1h\\nbWQ2NCBlbmdpbmUtcGFydHMvbmZzLWVuZ2luZS1wYWNrYWdlLWFybTY0IC0t\\nb3V0cHV0IGVuZ2luZS1jYW5kaWRhdGUKICAgICAgLSB1c2VzOiBhY3Rpb25z\\nL3VwbG9hZC1hcnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4\\nODZmNDM2MDdmYTAyCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5m\\ncy1lbmdpbmUtaW5wdXRzCiAgICAgICAgICBwYXRoOiBlbmdpbmUtY2FuZGlk\\nYXRlLwogICAgICAgICAgcmV0ZW50aW9uLWRheXM6IDkwCiAgICAgICAgICBp\\nZi1uby1maWxlcy1mb3VuZDogZXJyb3IKICBlbmdpbmU6CiAgICBuZWVkczog\\nW3ByZXBhcmUsIGVuZ2luZS1pbnB1dHNdCiAgICBpZjogJHt7ICFjYW5jZWxs\\nZWQoKSAmJiBuZWVkcy5wcmVwYXJlLnJlc3VsdCA9PSAnc3VjY2VzcycgJiYg\\nbmVlZHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0gJ2NhbmRpZGF0ZScgJiYg\\nbmVlZHMuZW5naW5lLWlucHV0cy5yZXN1bHQgPT0gJ3N1Y2Nlc3MnIH19CiAg\\nICBydW5zLW9uOiB1YnVudHUtMjQuMDQKICAgIHN0ZXBzOgogICAgICAtIHVz\\nZXM6IGFjdGlvbnMvY2hlY2tvdXRAMTFkNTk2MGEzMjY3NTBkNTgzODA3OGUz\\nNmNmMzhiODVhZjY3NzI2MgogICAgICAgIHdpdGg6CiAgICAgICAgICByZWY6\\nICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMuZXhlY3V0b3IgfX0KICAgICAg\\nICAgIHBlcnNpc3QtY3JlZGVudGlhbHM6IGZhbHNlCiAgICAgIC0gdXNlczog\\nYWN0aW9ucy9kb3dubG9hZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3\\nNGE2Mjg4OTZjOTBkYmRmNWM4MDkzCiAgICAgICAgd2l0aDoKICAgICAgICAg\\nIG5hbWU6IG5mcy1lbmdpbmUtaW5wdXRzCiAgICAgICAgICBwYXRoOiBlbmdp\\nbmUtY2FuZGlkYXRlCiAgICAgIC0gdXNlczogZG9ja2VyL3NldHVwLXFlbXUt\\nYWN0aW9uQGM3YzUzNDY0NjI1YjMyYzdhN2U5NDRhZTYyYjNlMTdkMmI2MDAx\\nMzAKICAgICAgLSB1c2VzOiBkb2NrZXIvc2V0dXAtYnVpbGR4LWFjdGlvbkA4\\nZDI3NTBjNjhhNDI0MjJjMTRlODQ3ZmU2YzhhYzA0MDNiNGNiZDZmCiAgICAg\\nIC0gdXNlczogZG9ja2VyL2J1aWxkLXB1c2gtYWN0aW9uQDEwZTkwZTM2NDVl\\nYWUzNGYxZTYwZWViMDA1YmEzYTNkMzNmMTc4ZTgKICAgICAgICB3aXRoOgog\\nICAgICAgICAgY29udGV4dDogLgogICAgICAgICAgZmlsZTogcGFja2FnaW5n\\nL0RvY2tlcmZpbGUKICAgICAgICAgIHBsYXRmb3JtczogbGludXgvYW1kNjQs\\nbGludXgvYXJtNjQKICAgICAgICAgIHB1c2g6IGZhbHNlCiAgICAgICAgICBw\\ncm92ZW5hbmNlOiBmYWxzZQogICAgICAgICAgc2JvbTogZmFsc2UKICAgICAg\\nICAgIG91dHB1dHM6IHR5cGU9b2NpLGRlc3Q9ZW5naW5lLm9jaS50YXIKICAg\\nICAgICAgIGJ1aWxkLWFyZ3M6IHwKICAgICAgICAgICAgVUJVTlRVX0JBU0U9\\nJHt7IG5lZWRzLnByZXBhcmUub3V0cHV0cy5iYXNlIH19CiAgICAgIC0gcnVu\\nOiBweXRob24zIHBhY2thZ2luZy9yZWxlYXNlLnB5IC0tb3BlcmF0aW9uIG9j\\naSAtLWRpcmVjdG9yeSBlbmdpbmUub2NpLnRhcgogICAgICAtIHVzZXM6IGFj\\ndGlvbnMvdXBsb2FkLWFydGlmYWN0QGVhMTY1ZjhkNjViNmU3NWI1NDA0NDll\\nOTJiNDg4NmY0MzYwN2ZhMDIKICAgICAgICB3aXRoOgogICAgICAgICAgbmFt\\nZTogbmZzLW9jaQogICAgICAgICAgcGF0aDogZW5naW5lLm9jaS50YXIKICAg\\nICAgICAgIHJldGVudGlvbi1kYXlzOiA5MAogICAgICAgICAgaWYtbm8tZmls\\nZXMtZm91bmQ6IGVycm9yCiAgYmluYXJpZXM6CiAgICBuZWVkczogW3ByZXBh\\ncmUsIGVuZ2luZS1pbnB1dHMsIGVuZ2luZV0KICAgIGlmOiAke3sgIWNhbmNl\\nbGxlZCgpICYmIG5lZWRzLnByZXBhcmUucmVzdWx0ID09ICdzdWNjZXNzJyAm\\nJiAoKG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdjYW5kaWRhdGUn\\nICYmIG5lZWRzLmVuZ2luZS1pbnB1dHMucmVzdWx0ID09ICdzdWNjZXNzJyAm\\nJiBuZWVkcy5lbmdpbmUucmVzdWx0ID09ICdzdWNjZXNzJykgfHwgKG5lZWRz\\nLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdmcmVzaCcgJiYgbmVlZHMuZW5n\\naW5lLWlucHV0cy5yZXN1bHQgPT0gJ3NraXBwZWQnICYmIG5lZWRzLmVuZ2lu\\nZS5yZXN1bHQgPT0gJ3NraXBwZWQnKSkgfX0KICAgIHN0cmF0ZWd5OgogICAg\\nICBmYWlsLWZhc3Q6IGZhbHNlCiAgICAgIG1hdHJpeDoKICAgICAgICBpbmNs\\ndWRlOgogICAgICAgICAgLSB7cnVubmVyOiBtYWNvcy0xNSwgb3M6IGRhcndp\\nbiwgYXJjaDogYXJtNjR9CiAgICAgICAgICAtIHtydW5uZXI6IG1hY29zLTE1\\nLWludGVsLCBvczogZGFyd2luLCBhcmNoOiBhbWQ2NH0KICAgICAgICAgIC0g\\ne3J1bm5lcjogdWJ1bnR1LTI0LjA0LCBvczogbGludXgsIGFyY2g6IGFtZDY0\\nfQogICAgICAgICAgLSB7cnVubmVyOiB1YnVudHUtMjQuMDQtYXJtLCBvczog\\nbGludXgsIGFyY2g6IGFybTY0fQogICAgcnVucy1vbjogJHt7IG1hdHJpeC5y\\ndW5uZXIgfX0KICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hl\\nY2tvdXRAMTFkNTk2MGEzMjY3NTBkNTgzODA3OGUzNmNmMzhiODVhZjY3NzI2\\nMgogICAgICAgIHdpdGg6CiAgICAgICAgICByZWY6ICR7eyBuZWVkcy5wcmVw\\nYXJlLm91dHB1dHMuZXhlY3V0b3IgfX0KICAgICAgICAgIGZldGNoLWRlcHRo\\nOiAwCiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAg\\nICAtIHVzZXM6IGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZhY3RAZDNmODZhMTA2\\nYTBiYWM0NWI5NzRhNjI4ODk2YzkwZGJkZjVjODA5MwogICAgICAgIGlmOiBu\\nZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSA9PSAnY2FuZGlkYXRlJwogICAg\\nICAgIHdpdGg6CiAgICAgICAgICBuYW1lOiBuZnMtZW5naW5lLWlucHV0cwog\\nICAgICAgICAgcGF0aDogd29yay9jYW5kaWRhdGUvZW5naW5lCiAgICAgIC0g\\ndXNlczogYWN0aW9ucy9kb3dubG9hZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJh\\nYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRmNWM4MDkzCiAgICAgICAgaWY6IG5lZWRz\\nLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdjYW5kaWRhdGUnCiAgICAgICAg\\nd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1vY2kKICAgICAgICAgIHBhdGg6\\nIHdvcmsvY2FuZGlkYXRlCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9h\\nZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRm\\nNWM4MDkzCiAgICAgICAgaWY6IG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2Rl\\nID09ICdmcmVzaCcKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZTogbmZz\\nLXByZWZsaWdodAogICAgICAgICAgcGF0aDogd29yawogICAgICAtIHVzZXM6\\nIGFjdGlvbnMvc2V0dXAtZ29ANDBmMTU4MmIyNDg1MDg5ZGRlN2FiZDk3YzE1\\nMjlhYTc2OGUxYmFmZgogICAgICAgIHdpdGg6CiAgICAgICAgICBnby12ZXJz\\naW9uOiAnMS4yNy4yJwogICAgICAgICAgY2FjaGU6IGZhbHNlCiAgICAgIC0g\\nbmFtZTogTmF0aXZlIGNoZWNrcyBhbmQgZXhhY3QgZW5naW5lIG1ldGFkYXRh\\nIChub3QgcGh5c2ljYWwgcXVhbGlmaWNhdGlvbikKICAgICAgICBlbnY6CiAg\\nICAgICAgICBUQUc6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMudGFnIH19\\nCiAgICAgICAgICBNT0RFOiAke3sgbmVlZHMucHJlcGFyZS5vdXRwdXRzLm1v\\nZGUgfX0KICAgICAgICAgIFRBUkdFVDogJHt7IG1hdHJpeC5vcyB9fS0ke3sg\\nbWF0cml4LmFyY2ggfX0KICAgICAgICBydW46IHwKICAgICAgICAgIHNldCAt\\nZXVvIHBpcGVmYWlsCiAgICAgICAgICBpbWFnZT0kKHB5dGhvbjMgcGFja2Fn\\naW5nL3JlbGVhc2UucHkgLS1vcGVyYXRpb24gb2NpIC0tZGlyZWN0b3J5IHdv\\ncmsvY2FuZGlkYXRlL2VuZ2luZS5vY2kudGFyIHwgcHl0aG9uMyAtYyAnaW1w\\nb3J0IGpzb24sc3lzOyBwcmludCgiZ2hjci5pby9hdXRvYnl0ZXVzL2F1dG9i\\neXRldXMtbmZzQCIranNvbi5sb2FkKHN5cy5zdGRpbilbImluZGV4Il0pJykK\\nICAgICAgICAgICMgS2VlcCB0aGUgYXJyYXkgbm9uZW1wdHkgZm9yIE1hYyBz\\neXN0ZW0gQmFzaCAzLjIgdW5kZXIgbm91bnNldC4KICAgICAgICAgIGFyZ3M9\\nKC0tdGFnICIkVEFHIiAtLWVuZ2luZS1pbWFnZSAiJGltYWdlIiAtLWVuZ2lu\\nZS1tYW5pZmVzdCB3b3JrL2NhbmRpZGF0ZS9lbmdpbmUvZW5naW5lLW1hbmlm\\nZXN0Lmpzb24gLS1lbmdpbmUtYXJ0aWZhY3RzIHdvcmsvY2FuZGlkYXRlL2Vu\\nZ2luZSAtLXRhcmdldCAiJFRBUkdFVCIgLS1vdXRwdXQgY21kL2F1dG9ieXRl\\ndXMtbmZzL3JlbGVhc2UuanNvbikKICAgICAgICAgIGlmIFtbICIkTU9ERSIg\\nPT0gZnJlc2ggXV07IHRoZW4gYXJncys9KC0tcmVsZWFzZSAtLWNhbmRpZGF0\\nZSB3b3JrL2NhbmRpZGF0ZSk7IGZpCiAgICAgICAgICBweXRob24zIHBhY2th\\nZ2luZy9yZWxlYXNlLnB5ICIke2FyZ3NbQF19IgogICAgICAgICAgZ28gdGVz\\ndCAtcmFjZSAuLy4uLgogICAgICAgICAgZ28gdmV0IC4vLi4uCiAgICAgICAg\\nICBweXRob24zIC1tIHVuaXR0ZXN0IGRpc2NvdmVyIC1zIHNjcmlwdHMvdGVz\\ndHMgLXAgJ3Rlc3RfbmZzXyoucHknIC12CiAgICAgICAgICBta2RpciAtcCBv\\ndXQgbmF0aXZlCiAgICAgICAgICBDR09fRU5BQkxFRD0wIGdvIGJ1aWxkIC10\\ncmltcGF0aCAtbyBvdXQvYXV0b2J5dGV1cy1uZnMgLi9jbWQvYXV0b2J5dGV1\\ncy1uZnMKICAgICAgICAgIHB5dGhvbjMgLWMgJ2ltcG9ydCBvczsgYXNzZXJ0\\nIG9zLnBhdGguZ2V0c2l6ZSgib3V0L2F1dG9ieXRldXMtbmZzIikgPD0gMTAw\\nKjEwMjQqMTAyNCcKICAgICAgICAgIHRlc3QgIiQob3V0L2F1dG9ieXRldXMt\\nbmZzIHZlcnNpb24pIiA9ICIkVEFHIgogICAgICAgICAgY3AgY21kL2F1dG9i\\neXRldXMtbmZzL3JlbGVhc2UuanNvbiBMSUNFTlNFIFRISVJEX1BBUlRZX05P\\nVElDRVMgb3V0LwogICAgICAgICAgY2F0ICIkKGdvIGVudiBHT1JPT1QpL0xJ\\nQ0VOU0UiID4+IG91dC9USElSRF9QQVJUWV9OT1RJQ0VTCiAgICAgICAgICBp\\nZiBbWyAiJFRBUkdFVCIgPT0gbGludXgtKiBdXTsgdGhlbiBjYXQgIndvcmsv\\nY2FuZGlkYXRlL2VuZ2luZS8ke1RBUkdFVCNsaW51eC19L0NPUFlSSUdIVCIg\\nPj4gb3V0L1RISVJEX1BBUlRZX05PVElDRVM7IGZpCiAgICAgIC0gbmFtZTog\\nRGV2ZWxvcGVyIElEIGFuZCBBY2NlcHRlZCBub3Rhcml6YXRpb24gYmVmb3Jl\\nIHB1YmxpYyBlZmZlY3RzCiAgICAgICAgaWY6IG1hdHJpeC5vcyA9PSAnZGFy\\nd2luJyAmJiBuZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSA9PSAnZnJlc2gn\\nCiAgICAgICAgZW52OgogICAgICAgICAgQ0VSVElGSUNBVEU6ICR7eyBzZWNy\\nZXRzLk5GU19NQUNfQ0VSVElGSUNBVEVfUDEyX0JBU0U2NCB9fQogICAgICAg\\nICAgUEFTU1dPUkQ6ICR7eyBzZWNyZXRzLk5GU19NQUNfQ0VSVElGSUNBVEVf\\nUEFTU1dPUkQgfX0KICAgICAgICAgIElERU5USVRZOiAke3sgc2VjcmV0cy5O\\nRlNfTUFDX1NJR05JTkdfSURFTlRJVFkgfX0KICAgICAgICAgIEFQUExFX0lE\\nOiAke3sgc2VjcmV0cy5BUFBMRV9JRCB9fQogICAgICAgICAgQVBQTEVfQVBQ\\nX1NQRUNJRklDX1BBU1NXT1JEOiAke3sgc2VjcmV0cy5BUFBMRV9BUFBfU1BF\\nQ0lGSUNfUEFTU1dPUkQgfX0KICAgICAgICAgIEFQUExFX1RFQU1fSUQ6ICR7\\neyBzZWNyZXRzLkFQUExFX1RFQU1fSUQgfX0KICAgICAgICAgIFRBUkdFVDog\\nJHt7IG1hdHJpeC5vcyB9fS0ke3sgbWF0cml4LmFyY2ggfX0KICAgICAgICBy\\ndW46IGJhc2ggcGFja2FnaW5nL3NpZ24tbWFjb3Muc2ggb3V0L2F1dG9ieXRl\\ndXMtbmZzICJuYXRpdmUvJFRBUkdFVC1ub3RhcnkuanNvbiIKICAgICAgLSB1\\nc2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzVi\\nNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAgICAgaWY6ICR7eyBhbHdh\\neXMoKSAmJiBtYXRyaXgub3MgPT0gJ2RhcndpbicgJiYgbmVlZHMucHJlcGFy\\nZS5vdXRwdXRzLm1vZGUgPT0gJ2ZyZXNoJyB9fQogICAgICAgIHdpdGg6CiAg\\nICAgICAgICBuYW1lOiBuZnMtc2lnbmluZy0ke3sgbWF0cml4Lm9zIH19LSR7\\neyBtYXRyaXguYXJjaCB9fQogICAgICAgICAgcGF0aDogfAogICAgICAgICAg\\nICBuYXRpdmUvKi1ub3RhcnkuanNvbgogICAgICAgICAgICBuYXRpdmUvKi1u\\nb3RhcnktZmFpbHVyZS5qc29uCiAgICAgICAgICByZXRlbnRpb24tZGF5czog\\nOTAKICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5kOiB3YXJuCiAgICAgIC0g\\nbmFtZTogUGFja2FnZSBmb3VyIHJlZ3VsYXIgbWVtYmVycwogICAgICAgIGVu\\ndjoKICAgICAgICAgIFRBRzogJHt7IG5lZWRzLnByZXBhcmUub3V0cHV0cy50\\nYWcgfX0KICAgICAgICAgIFRBUkdFVDogJHt7IG1hdHJpeC5vcyB9fS0ke3sg\\nbWF0cml4LmFyY2ggfX0KICAgICAgICBydW46IHRhciAtY3pmICJuYXRpdmUv\\nYXV0b2J5dGV1cy1uZnMtJHtUQUcjdn0tJHtUQVJHRVR9LnRhci5neiIgLUMg\\nb3V0IExJQ0VOU0UgVEhJUkRfUEFSVFlfTk9USUNFUyBhdXRvYnl0ZXVzLW5m\\ncyByZWxlYXNlLmpzb24KICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1h\\ncnRpZmFjdEBlYTE2NWY4ZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdm\\nYTAyCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1uYXRpdmUt\\nJHt7IG1hdHJpeC5vcyB9fS0ke3sgbWF0cml4LmFyY2ggfX0KICAgICAgICAg\\nIHBhdGg6IG5hdGl2ZS8KICAgICAgICAgIHJldGVudGlvbi1kYXlzOiA5MAog\\nICAgICAgICAgaWYtbm8tZmlsZXMtZm91bmQ6IGVycm9yCiAgY2FuZGlkYXRl\\nOgogICAgbmVlZHM6IFtwcmVwYXJlLCBlbmdpbmUtaW5wdXRzLCBlbmdpbmUs\\nIGJpbmFyaWVzXQogICAgaWY6ICR7eyAhY2FuY2VsbGVkKCkgJiYgbmVlZHMu\\ncHJlcGFyZS5yZXN1bHQgPT0gJ3N1Y2Nlc3MnICYmIG5lZWRzLnByZXBhcmUu\\nb3V0cHV0cy5tb2RlID09ICdjYW5kaWRhdGUnICYmIG5lZWRzLmVuZ2luZS1p\\nbnB1dHMucmVzdWx0ID09ICdzdWNjZXNzJyAmJiBuZWVkcy5lbmdpbmUucmVz\\ndWx0ID09ICdzdWNjZXNzJyAmJiBuZWVkcy5iaW5hcmllcy5yZXN1bHQgPT0g\\nJ3N1Y2Nlc3MnIH19CiAgICBydW5zLW9uOiB1YnVudHUtMjQuMDQKICAgIHN0\\nZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAMTFkNTk2MGEz\\nMjY3NTBkNTgzODA3OGUzNmNmMzhiODVhZjY3NzI2MgogICAgICAgIHdpdGg6\\nCiAgICAgICAgICByZWY6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1dHMuZXhl\\nY3V0b3IgfX0KICAgICAgICAgIGZldGNoLWRlcHRoOiAwCiAgICAgICAgICBw\\nZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAgICAtIHVzZXM6IGFjdGlv\\nbnMvZG93bmxvYWQtYXJ0aWZhY3RAZDNmODZhMTA2YTBiYWM0NWI5NzRhNjI4\\nODk2YzkwZGJkZjVjODA5MwogICAgICAgIHdpdGg6CiAgICAgICAgICBuYW1l\\nOiBuZnMtZW5naW5lLWlucHV0cwogICAgICAgICAgcGF0aDogcmV0YWluZWQv\\nZW5naW5lCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9hZC1hcnRpZmFj\\ndEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRmNWM4MDkzCiAg\\nICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1vY2kKICAgICAgICAg\\nIHBhdGg6IHJldGFpbmVkCiAgICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9h\\nZC1hcnRpZmFjdEBkM2Y4NmExMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRm\\nNWM4MDkzCiAgICAgICAgd2l0aDoKICAgICAgICAgIHBhdHRlcm46IG5mcy1u\\nYXRpdmUtKgogICAgICAgICAgcGF0aDogcmV0YWluZWQvbmF0aXZlCiAgICAg\\nICAgICBtZXJnZS1tdWx0aXBsZTogdHJ1ZQogICAgICAtIGVudjoKICAgICAg\\nICAgIFRBRzogJHt7IG5lZWRzLnByZXBhcmUub3V0cHV0cy50YWcgfX0KICAg\\nICAgICAgIFNPVVJDRTogJHt7IG5lZWRzLnByZXBhcmUub3V0cHV0cy5leGVj\\ndXRvciB9fQogICAgICAgIHJ1bjogcHl0aG9uMyBwYWNrYWdpbmcvcmVsZWFz\\nZS5weSAtLW9wZXJhdGlvbiBjYW5kaWRhdGUgLS1kaXJlY3RvcnkgcmV0YWlu\\nZWQgLS10YWcgIiRUQUciIC0tc291cmNlLWNvbW1pdCAiJFNPVVJDRSIgLS13\\nb3JrZmxvdy1jb21taXQgIiRHSVRIVUJfU0hBIiAtLXJ1bi1pZCAiJEdJVEhV\\nQl9SVU5fSUQiIC0tYXR0ZW1wdCAiJEdJVEhVQl9SVU5fQVRURU1QVCIKICAg\\nICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBlYTE2NWY4ZDY1\\nYjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAgICAgd2l0aDoK\\nICAgICAgICAgIG5hbWU6IG5mcy1yZWxlYXNlLWNhbmRpZGF0ZQogICAgICAg\\nICAgcGF0aDogcmV0YWluZWQvCiAgICAgICAgICByZXRlbnRpb24tZGF5czog\\nOTAKICAgICAgICAgIGlmLW5vLWZpbGVzLWZvdW5kOiBlcnJvcgogIHBheWxv\\nYWQ6CiAgICBuZWVkczogW3ByZXBhcmUsIGJpbmFyaWVzXQogICAgaWY6ICR7\\neyAhY2FuY2VsbGVkKCkgJiYgbmVlZHMucHJlcGFyZS5yZXN1bHQgPT0gJ3N1\\nY2Nlc3MnICYmIG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdmcmVz\\naCcgJiYgbmVlZHMuYmluYXJpZXMucmVzdWx0ID09ICdzdWNjZXNzJyB9fQog\\nICAgcnVucy1vbjogdWJ1bnR1LTI0LjA0CiAgICBvdXRwdXRzOgogICAgICBh\\ncnRpZmFjdDogJHt7IHN0ZXBzLnJldGFpbi5vdXRwdXRzLmFydGlmYWN0LWlk\\nIH19CiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0\\nQDExZDU5NjBhMzI2NzUwZDU4MzgwNzhlMzZjZjM4Yjg1YWY2NzcyNjIKICAg\\nICAgICB3aXRoOgogICAgICAgICAgcmVmOiAke3sgbmVlZHMucHJlcGFyZS5v\\ndXRwdXRzLmV4ZWN1dG9yIH19CiAgICAgICAgICBmZXRjaC1kZXB0aDogMAog\\nICAgICAgICAgcGVyc2lzdC1jcmVkZW50aWFsczogZmFsc2UKICAgICAgLSB1\\nc2VzOiBhY3Rpb25zL2Rvd25sb2FkLWFydGlmYWN0QGQzZjg2YTEwNmEwYmFj\\nNDViOTc0YTYyODg5NmM5MGRiZGY1YzgwOTMKICAgICAgICB3aXRoOgogICAg\\nICAgICAgbmFtZTogbmZzLXByZWZsaWdodAogICAgICAgICAgcGF0aDogd29y\\nawogICAgICAtIHVzZXM6IGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZhY3RAZDNm\\nODZhMTA2YTBiYWM0NWI5NzRhNjI4ODk2YzkwZGJkZjVjODA5MwogICAgICAg\\nIHdpdGg6CiAgICAgICAgICBwYXR0ZXJuOiBuZnMtbmF0aXZlLSoKICAgICAg\\nICAgIHBhdGg6IG5hdGl2ZQogICAgICAgICAgbWVyZ2UtbXVsdGlwbGU6IHRy\\ndWUKICAgICAgLSBlbnY6CiAgICAgICAgICBTT1VSQ0U6ICR7eyBuZWVkcy5w\\ncmVwYXJlLm91dHB1dHMuZXhlY3V0b3IgfX0KICAgICAgICBydW46IHB5dGhv\\nbjMgcGFja2FnaW5nL3JlbGVhc2UucHkgLS1vcGVyYXRpb24gcGF5bG9hZCAt\\nLWRpcmVjdG9yeSB3b3JrL3BheWxvYWQgLS1jYW5kaWRhdGUgd29yay9jYW5k\\naWRhdGUgLS1uYXRpdmUgbmF0aXZlIC0tc291cmNlLWNvbW1pdCAiJFNPVVJD\\nRSIgLS1ydW4taWQgIiRHSVRIVUJfUlVOX0lEIiAtLWF0dGVtcHQgIiRHSVRI\\nVUJfUlVOX0FUVEVNUFQiCiAgICAgIC0gdXNlczogYWN0aW9ucy91cGxvYWQt\\nYXJ0aWZhY3RAZWExNjVmOGQ2NWI2ZTc1YjU0MDQ0OWU5MmI0ODg2ZjQzNjA3\\nZmEwMgogICAgICAgIGlkOiByZXRhaW4KICAgICAgICB3aXRoOgogICAgICAg\\nICAgbmFtZTogbmZzLXJlbGVhc2UtcGF5bG9hZAogICAgICAgICAgcGF0aDog\\nd29yay9wYXlsb2FkLwogICAgICAgICAgcmV0ZW50aW9uLWRheXM6IDkwCiAg\\nICAgICAgICBpZi1uby1maWxlcy1mb3VuZDogZXJyb3IKICBwdWJsaXNoOgog\\nICAgbmVlZHM6IFtwcmVwYXJlLCBiaW5hcmllcywgcGF5bG9hZF0KICAgIGlm\\nOiAke3sgIWNhbmNlbGxlZCgpICYmIG5lZWRzLnByZXBhcmUucmVzdWx0ID09\\nICdzdWNjZXNzJyAmJiAoKG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09\\nICdmcmVzaCcgJiYgbmVlZHMuYmluYXJpZXMucmVzdWx0ID09ICdzdWNjZXNz\\nJyAmJiBuZWVkcy5wYXlsb2FkLnJlc3VsdCA9PSAnc3VjY2VzcycpIHx8ICgo\\nbmVlZHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0gJ3Jlc3VtZScgfHwgbmVl\\nZHMucHJlcGFyZS5vdXRwdXRzLm1vZGUgPT0gJ3JlY292ZXInKSAmJiBuZWVk\\ncy5iaW5hcmllcy5yZXN1bHQgPT0gJ3NraXBwZWQnICYmIG5lZWRzLnBheWxv\\nYWQucmVzdWx0ID09ICdza2lwcGVkJykpIH19CiAgICBydW5zLW9uOiB1YnVu\\ndHUtMjQuMDQKICAgIHBlcm1pc3Npb25zOgogICAgICBjb250ZW50czogd3Jp\\ndGUKICAgICAgcGFja2FnZXM6IHdyaXRlCiAgICAgIGFjdGlvbnM6IHJlYWQK\\nICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAMTFk\\nNTk2MGEzMjY3NTBkNTgzODA3OGUzNmNmMzhiODVhZjY3NzI2MgogICAgICAg\\nIHdpdGg6CiAgICAgICAgICByZWY6ICR7eyBuZWVkcy5wcmVwYXJlLm91dHB1\\ndHMuZXhlY3V0b3IgfX0KICAgICAgICAgIGZldGNoLWRlcHRoOiAwCiAgICAg\\nICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAgICAtIHVzZXM6\\nIGFjdGlvbnMvZG93bmxvYWQtYXJ0aWZhY3RAZDNmODZhMTA2YTBiYWM0NWI5\\nNzRhNjI4ODk2YzkwZGJkZjVjODA5MwogICAgICAgIHdpdGg6CiAgICAgICAg\\nICBuYW1lOiBuZnMtcHJlZmxpZ2h0CiAgICAgICAgICBwYXRoOiB3b3JrCiAg\\nICAgIC0gdXNlczogYWN0aW9ucy9kb3dubG9hZC1hcnRpZmFjdEBkM2Y4NmEx\\nMDZhMGJhYzQ1Yjk3NGE2Mjg4OTZjOTBkYmRmNWM4MDkzCiAgICAgICAgaWY6\\nIG5lZWRzLnByZXBhcmUub3V0cHV0cy5tb2RlID09ICdmcmVzaCcKICAgICAg\\nICB3aXRoOgogICAgICAgICAgbmFtZTogbmZzLXJlbGVhc2UtcGF5bG9hZAog\\nICAgICAgICAgcGF0aDogd29yay9wYXlsb2FkCiAgICAgIC0gbmFtZTogSW5z\\ndGFsbCBkaWdlc3QtcHJlc2VydmluZyByZWdpc3RyeSB0cmFuc3BvcnQKICAg\\nICAgICBydW46IHwKICAgICAgICAgIHN1ZG8gYXB0LWdldCB1cGRhdGUKICAg\\nICAgICAgIHN1ZG8gYXB0LWdldCBpbnN0YWxsIC15IC0tbm8taW5zdGFsbC1y\\nZWNvbW1lbmRzIHNrb3BlbwogICAgICAgICAgc2tvcGVvIC0tdmVyc2lvbgog\\nICAgICAtIG5hbWU6IEJpbmQgcmV0YWluZWQgcGF5bG9hZCBhbmQgcmVjb25j\\naWxlIHB1YmxpY2F0aW9uCiAgICAgICAgZW52OgogICAgICAgICAgR0hfVE9L\\nRU46ICR7eyBnaXRodWIudG9rZW4gfX0KICAgICAgICAgIE1PREU6ICR7eyBu\\nZWVkcy5wcmVwYXJlLm91dHB1dHMubW9kZSB9fQogICAgICAgICAgQVJUSUZB\\nQ1Q6ICR7eyBuZWVkcy5wYXlsb2FkLm91dHB1dHMuYXJ0aWZhY3QgfX0KICAg\\nICAgICAgIFJFR0lTVFJZX0FVVEhfRklMRTogJHt7IHJ1bm5lci50ZW1wIH19\\nL25mcy1yZWdpc3RyeS1hdXRoLmpzb24KICAgICAgICBydW46IHwKICAgICAg\\nICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICB1bWFzayAwNzcKICAg\\nICAgICAgIHRyYXAgJ3JtIC1mICIkUkVHSVNUUllfQVVUSF9GSUxFIicgRVhJ\\nVAogICAgICAgICAgcHJpbnRmICclcycgIiRHSF9UT0tFTiIgfCBza29wZW8g\\nbG9naW4gLS1hdXRoZmlsZSAiJFJFR0lTVFJZX0FVVEhfRklMRSIgLS11c2Vy\\nbmFtZSAiJEdJVEhVQl9BQ1RPUiIgLS1wYXNzd29yZC1zdGRpbiBnaGNyLmlv\\nCiAgICAgICAgICBpZiBbWyAiJE1PREUiID09IGZyZXNoIF1dOyB0aGVuCiAg\\nICAgICAgICAgIHB5dGhvbjMgcGFja2FnaW5nL3JlbGVhc2UucHkgLS1vcGVy\\nYXRpb24gYmluZCAtLWRpcmVjdG9yeSB3b3JrL3BheWxvYWQgLS1jYW5kaWRh\\ndGUgd29yay9jYW5kaWRhdGUgLS1hcnRpZmFjdC1pZCAiJEFSVElGQUNUIiAt\\nLXJ1bi1pZCAiJEdJVEhVQl9SVU5fSUQiIC0tYXR0ZW1wdCAiJEdJVEhVQl9S\\nVU5fQVRURU1QVCIgLS1vdXRwdXQgd29yay9iaW5kaW5nLmpzb24KICAgICAg\\nICAgIGZpCiAgICAgICAgICBweXRob24zIHBhY2thZ2luZy9yZWxlYXNlLnB5\\nIC0tb3BlcmF0aW9uIHB1Ymxpc2ggLS1kaXJlY3Rvcnkgd29yay9wYXlsb2Fk\\nIC0tY2FuZGlkYXRlIHdvcmsvY2FuZGlkYXRlIC0tYmluZGluZyB3b3JrL2Jp\\nbmRpbmcuanNvbiAtLW91dHB1dCBwdWJsaWNhdGlvbi1yZWNlaXB0Lmpzb24K\\nICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1hcnRpZmFjdEBlYTE2NWY4\\nZDY1YjZlNzViNTQwNDQ5ZTkyYjQ4ODZmNDM2MDdmYTAyCiAgICAgICAgaWY6\\nIGFsd2F5cygpCiAgICAgICAgd2l0aDoKICAgICAgICAgIG5hbWU6IG5mcy1w\\ndWJsaWNhdGlvbi1yZWNlaXB0CiAgICAgICAgICBwYXRoOiBwdWJsaWNhdGlv\\nbi1yZWNlaXB0Lmpzb24KICAgICAgICAgIHJldGVudGlvbi1kYXlzOiA5MAog\\nICAgICAgICAgaWYtbm8tZmlsZXMtZm91bmQ6IHdhcm4K\\n\",\"encoding\":\"base64\",\"_links\":{\"self\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/contents/.github/workflows/release-nfs.yml?ref=3424f8dddef795d4a42e83ed8746268a4aab4d7d\",\"git\":\"https://api.github.com/repos/AutoByteus/autobyteus-nfs/git/blobs/564691f4a9f7367620263d6e5a8a0b5d8d270c98\",\"html\":\"https://github.com/AutoByteus/autobyteus-nfs/blob/3424f8dddef795d4a42e83ed8746268a4aab4d7d/.github/workflows/release-nfs.yml\"}}",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-19T09:05:38.696561+00:00",
+    "argv": [
+      "git",
+      "switch",
+      "codex/nfs-first-release"
+    ],
+    "exit": 0,
+    "stdout": "Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.\n  (use \"git pull\" to update your local branch)\n",
+    "stderr": "Switched to branch 'codex/nfs-first-release'\n"
+  },
+  {
+    "at": "2026-10-19T09:05:38.756357+00:00",
+    "argv": [
+      "git",
+      "merge",
+      "--ff-only",
+      "3424f8dddef795d4a42e83ed8746268a4aab4d7d"
+    ],
+    "exit": 0,
+    "stdout": "Updating c42176a..3424f8d\nFast-forward\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,205 @@
+{
+  "run": 39233821032,
+  "attempt": 1,
+  "conclusion": "success",
+  "source": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+  "jobs": [
+    {
+      "id": 117997950939,
+      "name": "prepare",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T09:56:43Z",
+          "completed_at": "2026-10-19T09:56:45Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T09:56:45Z",
+          "completed_at": "2026-10-19T09:56:47Z"
+        },
+        {
+          "name": "Release boundary checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T09:56:47Z",
+          "completed_at": "2026-10-19T09:57:22Z"
+        },
+        {
+          "name": "Run set -euo pipefail",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-19T09:57:22Z",
+          "completed_at": "2026-10-19T09:57:35Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T09:57:35Z",
+          "completed_at": "2026-10-19T09:57:40Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-19T09:57:40Z",
+          "completed_at": "2026-10-19T09:57:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-19T09:57:40Z",
+          "completed_at": "2026-10-19T09:57:40Z"
+        }
+      ],
+      "log": "publication-job-117997950939.log",
+      "sha256": "6216de123ed559562096b57c8ccd0a765968e1a1743208adabd0bd8d61fb05d4",
+      "packageLines": [],
+      "testSummary": [
+        "2026-10-19T09:57:22.6352259Z Ran 76 tests in 35.293s",
+        "2026-10-19T09:57:22.6352692Z OK (skipped=1)"
+      ],
+      "errors": []
+    },
+    {
+      "id": 117998361168,
+      "name": "engine-packages",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117998361281,
+      "name": "publish",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-19T09:57:45Z",
+          "completed_at": "2026-10-19T09:57:46Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-19T09:57:46Z",
+          "completed_at": "2026-10-19T09:57:48Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-19T09:57:48Z",
+          "completed_at": "2026-10-19T09:57:50Z"
+        },
+        {
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-19T09:57:50Z",
+          "completed_at": "2026-10-19T09:57:50Z"
+        },
+        {
+          "name": "Install digest-preserving registry transport",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-19T09:57:50Z",
+          "completed_at": "2026-10-19T09:57:56Z"
+        },
+        {
+          "name": "Bind retained payload and reconcile publication",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-19T09:57:56Z",
+          "completed_at": "2026-10-19T09:58:35Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-19T09:58:35Z",
+          "completed_at": "2026-10-19T09:58:36Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-19T09:58:36Z",
+          "completed_at": "2026-10-19T09:58:36Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-19T09:58:36Z",
+          "completed_at": "2026-10-19T09:58:36Z"
+        }
+      ],
+      "log": "publication-job-117998361281.log",
+      "sha256": "810f257575ba8cf8b6abcd4c7d16d91949e011724cef0c1395c5210b58c50f84",
+      "packageLines": [],
+      "testSummary": [],
+      "errors": []
+    },
+    {
+      "id": 117998361476,
+      "name": "engine-inputs",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117998362223,
+      "name": "binaries",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117998362283,
+      "name": "candidate",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117998362331,
+      "name": "engine",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    {
+      "id": 117998362356,
+      "name": "payload",
+      "conclusion": "skipped",
+      "steps": []
+    }
+  ],
+  "counts": {
+    "success": 2,
+    "failure": 0,
+    "cancelled": 0,
+    "skipped": 6
+  }
+}
