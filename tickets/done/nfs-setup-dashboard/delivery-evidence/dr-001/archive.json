@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-24T14:12:50.169048+00:00",
+  "from": "tickets/in-progress/nfs-setup-dashboard",
+  "to": "tickets/done/nfs-setup-dashboard",
+  "incomingHead": "58ee7ba146ea4c6288078560d924131037f52aaf",
+  "upstreamFilesByteIdentical": 384,
+  "historicalPaths": "Original executed in-progress paths retained; current documents use archive",
+  "otherTickets": "Untouched"
+}

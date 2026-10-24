@@ -38,6 +38,10 @@ no alternate root path is used. Idle administrative authorization expires after
    reported, not silently selected. A slow filesystem listing may wait; you can
    close the chooser and enter a path manually. It never opens file contents or
    creates a folder merely by browsing.
+   Typing in the path field is a draft: a background listing cannot replace it.
+   Choose **List folders** to check that path; **Use this folder** becomes available
+   only when the displayed listing matches it. Parent/child navigation deliberately
+   changes the path. Listing errors leave the draft available for correction.
 2. Enter this computer's private IPv4 and explicitly trusted client hosts/subnets.
    NFS is plaintext AUTH_SYS host trust, not per-user authentication. A subnet
    allows every host in that subnet. No firewall/router rules are changed.
@@ -104,3 +108,19 @@ double and separate owned native proof. Go binaries contain all assets, no CDN
 or runtime build tool. Local/virtual tests do not qualify physical deployments;
 independent field/shared-filesystem/user validation remains deferred to its
 separate task. No release/signing/installer policy is changed by this dashboard.
+
+## Implementation ownership
+
+The ordinary-user dashboard owns HTTP authorization, the chooser, browser launch
+and cached operation views. The private helper delegates typed operations to
+`admin.Session`; it does not run browser-provided commands. That administrative
+owner keeps each exact plan, lock and Docker handle together through review,
+commit/cancel and drain. `setup.Service` retains source/mount/backend invariants.
+
+Installed supervision also belongs to `admin.Session`: one serial attempt owns
+acquire, admission, reconnect and cleanup, followed by the completion-relative
+30-second retry wait. CLI/service entry points are adapters, not callback owners
+around a second lock acquisition. When adding another entry form, move the entire
+operation lifecycle into its governing owner rather than duplicating only the
+inner action. Existing stored configuration is directly usable; no migration or
+persistent dashboard readiness flag is introduced.
