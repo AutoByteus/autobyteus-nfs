@@ -1,0 +1,6 @@
+Delivery harness attempt1 stopped after three successful actual facade commands (envelope/fetch/verify).
+Traceback (most recent call last):
+  File "<stdin>", line 23, in <module>
+AssertionError
+The extra harness asserted measured candidate sourceHash equals the baseline hash computed with the old release engine manifest. That assumption is invalid: the hash covers measured build inventories. No candidate/native/product command failed and no public effects occurred.
+Fresh inspection finds ONLY two engine buildInventory SHA changes, with package/source/recipe/pin/size fields identical. Current facade --source-hash --engine-manifest <actual> equals candidate sourceHash. Resume from retained verified bytes; do not rerun/relabel candidate or weaken production validator.

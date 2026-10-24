@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-24T19:04:52.342536+00:00",
+  "result": "Pass current prepublication readiness, NOT release acceptance",
+  "command": [
+    "python3",
+    "-B",
+    "packaging/release.py",
+    "--check-publish",
+    "--candidate",
+    "/Users/normy/nfs-cli-release-vdwkpql_/candidate"
+  ],
+  "exit": 0,
+  "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+  "readiness": {
+    "path": "packaging/releases/v0.2.1/readiness.json",
+    "sha256": "a3019b80dcdfea3c9fd473c47e8304a5cf9ac0c582d82b67d7d25b61ee03dfe7"
+  },
+  "interveningTrackedPaths": [
+    "RELEASE.md",
+    "packaging/RELEASE.md",
+    "packaging/release-lock.json"
+  ],
+  "newStableRecords": [
+    "authorization.json",
+    "native-checks.json",
+    "postpublication-testing-plan.md",
+    "readiness.json",
+    "release-controls.json",
+    "release-notes.md",
+    "release-request-handoff.md",
+    "source-review.json"
+  ],
+  "oldVersionRecordsUntouched": true,
+  "openGates": [
+    "fresh main finalization",
+    "real both-Mac DeveloperID+Accepted",
+    "retained final signed payload",
+    "actual immutable publication",
+    "anonymous public/install/signature/feedback",
+    "cleanup/custody"
+  ]
+}

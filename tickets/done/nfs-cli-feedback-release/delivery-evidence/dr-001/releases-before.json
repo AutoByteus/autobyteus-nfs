@@ -1,0 +1,238 @@
+[
+  {
+    "id": 422823635,
+    "tag_name": "v0.2.0",
+    "draft": false,
+    "prerelease": false,
+    "html_url": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.0",
+    "published_at": "2026-10-24T15:53:23Z",
+    "assets": [
+      {
+        "id": 672662405,
+        "name": "autobyteus-nfs-0.2.0-darwin-amd64.tar.gz",
+        "size": 6935274,
+        "digest": "sha256:48499217bd64e71f6a1d237196b3c812e4f2a420e62b0a401e0c5fd2eba119b3"
+      },
+      {
+        "id": 672662527,
+        "name": "autobyteus-nfs-0.2.0-darwin-arm64.tar.gz",
+        "size": 6385666,
+        "digest": "sha256:416a1995d29da420930e6fd74ae9faf006be67f1fc54c65b72866085605d8397"
+      },
+      {
+        "id": 672662629,
+        "name": "autobyteus-nfs-0.2.0-linux-amd64.tar.gz",
+        "size": 7399533,
+        "digest": "sha256:5023e6eb1b6272c9e1c6a5261bfc4467c76e009f18af8e58122abc9146c7a8d7"
+      },
+      {
+        "id": 672662749,
+        "name": "autobyteus-nfs-0.2.0-linux-arm64.tar.gz",
+        "size": 6764290,
+        "digest": "sha256:6e74af143c9eed0a6e2e55a1ef4e90d46c1dabe15f0c21d651a64ef94d07afcd"
+      },
+      {
+        "id": 672662869,
+        "name": "autobyteus-nfs-engine-manifest.json",
+        "size": 3237,
+        "digest": "sha256:b02f4246f18464deb3c7520cfbb1ca7e4eb24e5092cb4ef08b9f79c12dd3ccf6"
+      },
+      {
+        "id": 672662955,
+        "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+        "size": 1930260,
+        "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+      },
+      {
+        "id": 672663052,
+        "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+        "size": 1930260,
+        "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+      },
+      {
+        "id": 672663204,
+        "name": "autobyteus-nfs-install.sh",
+        "size": 3946,
+        "digest": "sha256:d931abd3fc2b23eb39b86cb60d79952caae478546cb1f16110bb05e32553fc2c"
+      },
+      {
+        "id": 672663290,
+        "name": "autobyteus-nfs-manifest.json",
+        "size": 3928,
+        "digest": "sha256:d7dd5e022a6848842687f0d69f7dec45e30a8ad16b52e277a6cfc15649f32ef7"
+      },
+      {
+        "id": 672663524,
+        "name": "engine-build-amd64.txt",
+        "size": 40397,
+        "digest": "sha256:d16dc3df4070a03fe26d71fbfd0d3dc348312a0cd2b141d97c699cc9c8af6c91"
+      },
+      {
+        "id": 672663613,
+        "name": "engine-build-arm64.txt",
+        "size": 40150,
+        "digest": "sha256:539b3d1e1da4444cc938ccbc2af69885aa388c7ceab1acf1ae848e1e06269000"
+      },
+      {
+        "id": 672663370,
+        "name": "engine-COPYRIGHT-amd64",
+        "size": 30807,
+        "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+      },
+      {
+        "id": 672663445,
+        "name": "engine-COPYRIGHT-arm64",
+        "size": 30807,
+        "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+      },
+      {
+        "id": 672662199,
+        "name": "LICENSE",
+        "size": 34523,
+        "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "id": 672663705,
+        "name": "release-notes.md",
+        "size": 1156,
+        "digest": "sha256:c1a0890aa306299449f59b0d781985edc088f48804064ca1f201a9568e6f4ae9"
+      },
+      {
+        "id": 672663790,
+        "name": "release-provenance.json",
+        "size": 4249,
+        "digest": "sha256:40cd1cb1af47b3c8f39e7bb34d14102b2cc8c1fd5704e96f7cbc14911539db4b"
+      },
+      {
+        "id": 672662275,
+        "name": "SHA256SUMS-nfs",
+        "size": 1672,
+        "digest": "sha256:579e3ca5215fe5b7e193da553683490d6bc4e67e1bdb96aee8a078d0e9212414"
+      },
+      {
+        "id": 672662335,
+        "name": "THIRD_PARTY_NOTICES",
+        "size": 1920,
+        "digest": "sha256:06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+      }
+    ]
+  },
+  {
+    "id": 417014769,
+    "tag_name": "v0.1.0",
+    "draft": false,
+    "prerelease": false,
+    "html_url": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0",
+    "published_at": "2026-10-19T09:58:23Z",
+    "assets": [
+      {
+        "id": 655774122,
+        "name": "autobyteus-nfs-0.1.0-darwin-amd64.tar.gz",
+        "size": 6462906,
+        "digest": "sha256:785fe38550e253194b4d08fb75e8f89f740d1c504bd931989c36e47348a1c71b"
+      },
+      {
+        "id": 655774268,
+        "name": "autobyteus-nfs-0.1.0-darwin-arm64.tar.gz",
+        "size": 5935787,
+        "digest": "sha256:cb320f7b0ef66814ef17dc476582bb220738e1faf20d99600bb18056e7d5468d"
+      },
+      {
+        "id": 655774373,
+        "name": "autobyteus-nfs-0.1.0-linux-amd64.tar.gz",
+        "size": 6954303,
+        "digest": "sha256:da01ff1c52d00cd553ef752fb045db8789528247e53e9689c5309c18871c76d1"
+      },
+      {
+        "id": 655774533,
+        "name": "autobyteus-nfs-0.1.0-linux-arm64.tar.gz",
+        "size": 6351199,
+        "digest": "sha256:0f77da68b93dbedb5328d675ffa62c1fc6e9c80176db98f915b65cea08fd4343"
+      },
+      {
+        "id": 655774624,
+        "name": "autobyteus-nfs-engine-manifest.json",
+        "size": 3237,
+        "digest": "sha256:95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970"
+      },
+      {
+        "id": 655774713,
+        "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+        "size": 1930260,
+        "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+      },
+      {
+        "id": 655774826,
+        "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+        "size": 1930260,
+        "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+      },
+      {
+        "id": 655774956,
+        "name": "autobyteus-nfs-install.sh",
+        "size": 3946,
+        "digest": "sha256:65769690ada27db304d2e0e4bcd6716e6403f86650ca8f1905e26ebde86d25fa"
+      },
+      {
+        "id": 655775041,
+        "name": "autobyteus-nfs-manifest.json",
+        "size": 3928,
+        "digest": "sha256:e3e42b45f15747b38f0faaff8e757d6ecab6f11bd7606fe2321075d9daf5a298"
+      },
+      {
+        "id": 655775334,
+        "name": "engine-build-amd64.txt",
+        "size": 40381,
+        "digest": "sha256:929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86"
+      },
+      {
+        "id": 655775437,
+        "name": "engine-build-arm64.txt",
+        "size": 40134,
+        "digest": "sha256:1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509"
+      },
+      {
+        "id": 655775160,
+        "name": "engine-COPYRIGHT-amd64",
+        "size": 30807,
+        "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+      },
+      {
+        "id": 655775243,
+        "name": "engine-COPYRIGHT-arm64",
+        "size": 30807,
+        "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+      },
+      {
+        "id": 655773822,
+        "name": "LICENSE",
+        "size": 34523,
+        "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+      },
+      {
+        "id": 655775562,
+        "name": "release-notes.md",
+        "size": 1872,
+        "digest": "sha256:9d91aa6ff02d5ea496b7b43bbf6ff7da2c696c5de916b5ea5b37a1c52ba9fafb"
+      },
+      {
+        "id": 655775712,
+        "name": "release-provenance.json",
+        "size": 4249,
+        "digest": "sha256:2e990164ba08a596ad9e97a9c4eb89755b5bc77ed317e59402d87ba5556aab45"
+      },
+      {
+        "id": 655773930,
+        "name": "SHA256SUMS-nfs",
+        "size": 1672,
+        "digest": "sha256:8c8b4ba753130b24b5ce414194248b913dba115b99788b94904622b461e0296b"
+      },
+      {
+        "id": 655774017,
+        "name": "THIRD_PARTY_NOTICES",
+        "size": 1920,
+        "digest": "sha256:06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+      }
+    ]
+  }
+]

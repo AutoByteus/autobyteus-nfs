@@ -19,6 +19,10 @@ The separate `nfs-dashboard-release` / `autobyteus-nfs-5` user request authorize
 normal **v0.2.0** containing the finalized dashboard, after its own actual gates.
 The inherited R3/SR004 distribution-policy safeguards and deferred-field model
 apply; that reference is not a new SR approval or old permission for this version.
+The subsequent `nfs-cli-feedback-release` user instruction **“release please”**
+authorizes normal **v0.2.1** containing the merged terminal-feedback fix, subject
+to its own current gates. See [new permission](packaging/releases/v0.2.1/authorization.json);
+it does not alter the historical version permissions or field-test boundaries.
 Each version requires genuine version-specific user-authority evidence, candidate,
 readiness, signing and publication receipts; old artifacts are not relabeled.
 See [current authority](packaging/releases/v0.2.0/authorization.json) and its

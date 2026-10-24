@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-24T19:05:29.598783+00:00",
+  "base": "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+  "candidateReadiness": "Validated actual --check-publish exit0; all4current native checks pass, real signing/publication pending",
+  "stagedScope": "Only own release docs/stable v0.2.1 records/current measured lock/ticket archive",
+  "productRuntimeTestsRecipeSigningInstallerWorkflowDelta": [],
+  "oldReleaseRecordsUnchanged": true,
+  "sourceLockOtherFieldsUnchanged": true,
+  "rawWhitespaceCheckExit": 2,
+  "rawLogWhitespaceExceptions": 277,
+  "authoredWhitespaceExit": 0,
+  "crossOSFilenames": "Pass; no forbidden characters/trailing components",
+  "secretTokenPatternScan": "No live GitHub token pattern in staged files",
+  "archiveIsNotCompletion": true
+}

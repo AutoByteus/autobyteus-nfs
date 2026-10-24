@@ -1,0 +1,8 @@
+{
+  "artifactId": 12571548710,
+  "digest": "sha256:3c78c95ff417180c95583485235a8039b38d93531b90cc771e266d336b431b74",
+  "expiresAt": "2027-01-22T18:48:57Z",
+  "runAttempt": 1,
+  "runId": 40122429749,
+  "workflowCommit": "cf62eece7d1e8799a608d5d13b87dbd599db9a56"
+}

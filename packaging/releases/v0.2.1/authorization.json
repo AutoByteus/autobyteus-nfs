@@ -1,0 +1,30 @@
+{
+  "version": "v0.2.1",
+  "decision": "publish-before-field-testing",
+  "currentAuthority": {
+    "package": "nfs-cli-feedback-release",
+    "followsSourceTask": "autobyteus-nfs-7",
+    "taskId": null,
+    "date": "2026-10-24",
+    "userStatement": "release please",
+    "request": {
+      "path": "packaging/releases/v0.2.1/release-request-handoff.md",
+      "sha256": "e80dbe96a81632b2a00b813948957afa0a755ad8fc77ec2b5a7ade9dee823f8d"
+    },
+    "meaning": "New user publication permission after source completion, not a user test or previous-version permission reused."
+  },
+  "inheritedDistributionPolicy": {
+    "requirementsReference": "R3/SR004",
+    "origin": "nfs-first-release",
+    "originalPublicationPermission": "v0.1.0 only; v0.2.0 authority also does not authorize v0.2.1",
+    "meaning": "Unchanged distribution safeguards and deferred-field claim model adopted under this new instruction; not a new SR approval/schema",
+    "unchangedGates": [
+      "four current native targets",
+      "real both-Mac DeveloperID and Accepted notarization",
+      "exact current candidate/engine/complete OCI/readiness",
+      "immutable retained payload before public effects",
+      "public download/install/signature/feedback smoke"
+    ]
+  },
+  "limits": "No field/physical/user/real-password acceptance. Existing nfs-4 separate; no live-user upgrade/root/storage work."
+}
