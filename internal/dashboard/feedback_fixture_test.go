@@ -49,7 +49,18 @@ func TestFeedbackChild(t *testing.T) {
 		if mode == "lost" {
 			os.Exit(1)
 		}
-		reply := adminwire.Reply{Version: adminwire.Version, Kind: req.Kind, ID: req.ID, Data: json.RawMessage(`{"state":"` + mode + `","private":"PRIVATE_CONFIG_CANARY"}`)}
+		configuration := adminwire.Configuration{State: "empty", Source: "PRIVATE_CONFIG_CANARY"}
+		if mode == "configured" || mode == "pending" {
+			configuration.State, configuration.Role = mode, role
+		}
+		if mode == "opposite-role" {
+			configuration.State, configuration.Role = "configured", "server"
+			if role == "server" {
+				configuration.Role = "client"
+			}
+		}
+		data, _ := json.Marshal(configuration)
+		reply := adminwire.Reply{Version: adminwire.Version, Kind: req.Kind, ID: req.ID, Data: data}
 		if mode == "refused" {
 			reply.Error = &adminwire.Failure{Code: "private", Detail: "PRIVATE_ERROR_CANARY"}
 		}
