@@ -1,0 +1,41 @@
+{
+  "id": "CRR-02-origin-review",
+  "date": "2026-10-24T13:48:04.747968+00:00",
+  "entryPoint": "API/E2E Failure-Origin Review",
+  "inputHead": "042821aa5e26dec38a6a310fabdf34eb7574612c",
+  "sourceTests": "2445aabf61126b1bb64b05b5f925b140c67917b8",
+  "nonTicketDeltaAfterReviewedSource": [],
+  "mode": "Read current source and existing API reproduction/measurement; no reviewer product execution or reproduction",
+  "finding": "CR-001 / API-F001",
+  "mechanism": "Unconditional directory-path.value assignment on asynchronous listing completion while ordinary enabled-field keyboard input is in progress",
+  "responseGapMs": 502,
+  "completionDuringTyping": true,
+  "expected": "/home/admin/api-dashboard",
+  "actual": "/home/adminadmin/api-dashboard",
+  "settledControl": {
+    "expected": "/home/admin/api-dashboard",
+    "actual": "/home/admin/api-dashboard"
+  },
+  "introducedByTicket": true,
+  "sourceSha256": {
+    "internal/dashboard/web/forms.js": "201f217a13c9ee89aaed00618fc97cb89754d05d770f074a8c9fa29f2e03a2db",
+    "internal/dashboard/web/index.html": "ebabd22b56f830481dd2895c4cb8ef859877c3355bd1ddaec478dcd224e3da77",
+    "internal/dashboard/directories.go": "57091ea8a94b7aa4d9c8e761263346f5d195c13f86f4a82e8f3ed3d91629b9b7",
+    "internal/dashboard/__tests__/browser.cjs": "6b5a2ede7c4c2f0d29bbf0e6b4b2d7c6871683585069aa4b350a9d94bcf19b41"
+  },
+  "selectedEvidenceSha256": {
+    "API-07-finding.md": "21117e0e0059cf0e89e2bf7e2c8abcef99c231c42f354aa6433085a8bd0e2bf1",
+    "API-07-runtime.json": "b51885ecca8144b219699562a4fb1d5152cd6b87e5762a93354acea18de6a6f9",
+    "API-07-chooser.cjs": "79bf3bb119abe9970f0f754570ff422640d2890d54d44d68e997a31dd66e49aa",
+    "API-07-typing.png": "5d830a41e0f02cee5f431283465b62c74de1057c5581ce5a17332e1b24f652f6",
+    "API-06-cleanup.json": "18902003012fa286f0a2dae1da4db4f25d38c146d2c406a82de171b7a1f9c45b"
+  },
+  "priorRevisionRecordSha256": "e3208b8ab8a497536b8ccf65f12accc6b785dcb064a49c8d4dab33edda8fc3ee",
+  "priorRevisionRecordBytes": 2838,
+  "classification": "Local Fix \u2014 implementation",
+  "severity": "Medium",
+  "reviewGap": "CRR001 should have checked editable draft vs async listing ownership; settled chooser coverage did not cover typing before first completion.",
+  "limitations": "No storage plan submitted by API07; no directory writes or filesystem-data loss established; no field/release acceptance.",
+  "artifactAuthoringAttempt": "First apply_patch rejected delete+add of same report path before any report edit; corrected by single file replacement. No product or check failure.",
+  "priorRevisionRecordPrefixPreserved": true
+}

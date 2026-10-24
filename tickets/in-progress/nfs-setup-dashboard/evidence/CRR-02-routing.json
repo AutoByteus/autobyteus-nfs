@@ -1,0 +1,13 @@
+{
+  "review": "CRR-002",
+  "outcome": "Fail",
+  "finding": "CR-001 / API-F001",
+  "classification": "Local Fix — implementation",
+  "selectedRule": {
+    "when": "When API/E2E failure-origin review confirms that the owning problem is an implementation defect.",
+    "recipient_address": "/software_engineering_team/implementation_engineer"
+  },
+  "reason": "Focused API/E2E failure-origin implementation defect is more specific than the general source Local Fix rule.",
+  "dispatch": "Pending durable report commit",
+  "singleRecipient": true
+}
