@@ -3,7 +3,6 @@ package dashboard
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"os/exec"
 	"sync"
@@ -26,26 +25,32 @@ type helper struct {
 	closed     bool
 }
 
-func authorize(launch Launcher, role string, log io.Writer) (*helper, error) {
+// helperStartError identifies only local launch/plumbing failure, never an OS
+// approval outcome. Preserve the original error without exposing it in feedback.
+type helperStartError struct{ err error }
+
+func (e *helperStartError) Error() string { return e.err.Error() }
+func (e *helperStartError) Unwrap() error { return e.err }
+
+func authorize(launch Launcher, role string) (*helper, error) {
 	cmd, digest, err := launch()
 	if err != nil {
-		return nil, err
+		return nil, &helperStartError{err: err}
 	}
 	input, err := cmd.StdinPipe()
 	if err != nil {
-		return nil, err
+		return nil, &helperStartError{err: err}
 	}
 	output, err := cmd.StdoutPipe()
 	if err != nil {
 		input.Close()
-		return nil, err
+		return nil, &helperStartError{err: err}
 	}
 	if err = cmd.Start(); err != nil {
 		input.Close()
 		output.Close()
-		return nil, err
+		return nil, &helperStartError{err: err}
 	}
-	fmt.Fprintf(log, "Administrator approval/helper process PID %d started. Confirm only in this terminal; stopping waits for safe completion.\n", cmd.Process.Pid)
 	h := &helper{cmd: cmd, input: input, output: output, replies: make(chan adminwire.Reply, 2), done: make(chan struct{}), stopReader: make(chan struct{})}
 	go h.receive()
 	reply, err := h.read()

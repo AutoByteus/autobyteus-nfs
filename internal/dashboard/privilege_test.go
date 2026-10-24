@@ -2,7 +2,6 @@ package dashboard
 
 import (
 	"encoding/json"
-	"io"
 	"os"
 	"os/exec"
 	"testing"
@@ -39,7 +38,7 @@ func TestPrivateClientHandshakeAndCorrelation(t *testing.T) {
 				cmd.Env = append(os.Environ(), "NFS_TEST_HELPER="+mode)
 				return cmd, "measured-test-binary", nil
 			}
-			h, err := authorize(launch, "client", io.Discard)
+			h, err := authorize(launch, "client")
 			if mode == "mismatch" {
 				if err == nil {
 					h.close()

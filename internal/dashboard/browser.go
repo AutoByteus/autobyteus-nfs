@@ -2,7 +2,6 @@ package dashboard
 
 import (
 	"context"
-	"fmt"
 	"html"
 	"io"
 	"os"
@@ -43,7 +42,7 @@ func (s *Session) bootstrapFile() (string, error) {
 	return path, nil
 }
 func (s *Session) Run(ctx context.Context, log io.Writer) error {
-	s.log = log
+	s.terminal.setOutput(log)
 	path, err := s.bootstrapFile()
 	if err != nil {
 		s.listener.Close()
@@ -54,7 +53,7 @@ func (s *Session) Run(ctx context.Context, log io.Writer) error {
 	go func() { serverErr <- s.http.Serve(s.listener) }()
 	// Deliberate private terminal fallback is the only place that displays the
 	// one-time secret. Never place it in the opener's process argv/access logs.
-	fmt.Fprintln(log, "Local", s.role, "dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser:", fallback)
+	s.terminal.guidance("Local", s.role, "dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser:", fallback)
 	openerDone := make(chan struct{})
 	var opener *exec.Cmd
 	if runtime.GOOS == "darwin" {
@@ -66,16 +65,16 @@ func (s *Session) Run(ctx context.Context, log io.Writer) error {
 	}
 	if opener == nil {
 		close(openerDone)
-		fmt.Fprintln(log, "Browser opener unavailable; use the private URL above.")
+		s.terminal.guidance("Browser opener unavailable; use the private URL above.")
 	} else if openerErr := opener.Start(); openerErr != nil {
 		close(openerDone)
-		fmt.Fprintln(log, "Browser opener failed; use the private URL above.")
+		s.terminal.guidance("Browser opener failed; use the private URL above.")
 	} else {
 		// Opener lifetime is tracked, but does not authorize or stall HTTP serving.
 		go func() {
 			defer close(openerDone)
 			if e := opener.Wait(); e != nil {
-				fmt.Fprintln(log, "Browser association failed; use the private URL above.")
+				s.terminal.guidance("Browser association failed; use the private URL above.")
 			}
 		}()
 	}
@@ -86,7 +85,7 @@ func (s *Session) Run(ctx context.Context, log io.Writer) error {
 	case err = <-serverErr:
 		s.Stop()
 	}
-	fmt.Fprintln(log, "Stopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.")
+	s.terminal.print("Stopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.")
 	shutdown, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	_ = s.http.Shutdown(shutdown)
 	cancel()
@@ -94,7 +93,7 @@ func (s *Session) Run(ctx context.Context, log io.Writer) error {
 	select {
 	case <-openerDone:
 	default:
-		fmt.Fprintf(log, "Waiting for browser association process PID %d to exit; close that opener if needed. No browser or host operation will be force-killed.\n", opener.Process.Pid)
+		s.terminal.print("Waiting for browser association process PID", opener.Process.Pid, "to exit; close that opener if needed. No browser or host operation will be force-killed.")
 		<-openerDone
 	}
 	return err
