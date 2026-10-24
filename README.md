@@ -11,8 +11,8 @@ Public installer/version checks passed on native Mac ARM64 and Ubuntu x64.
 Mac x64 signature/notarization checks passed; this is not native Intel execution.
 Shared-filesystem/physical and user testing remains **deferred**, not passed.
 Distribution/signature checks are not field qualification.
-The application Guide stays disabled; internal CI candidates are not public
-installers. See [release procedure](packaging/RELEASE.md) and the
+Internal CI candidates are not public installers; application guides are maintained
+independently. See [release procedure](packaging/RELEASE.md) and the
 [delivery record](tickets/done/nfs-first-release/handoff-summary.md).
 
 ## Validation boundary
@@ -30,7 +30,7 @@ publication qualification. Its results remain historical, not promoted by this
 move. The [archived original delivery](https://github.com/AutoByteus/autobyteus-workspace/blob/3712cd9bf0db998501d162db7f8655f169e3def6/tickets/done/shared-network-workspaces/handoff-summary.md)
 records that bounded evidence. No old application/editor campaign is a gate for
 this repository extraction. Distribution readiness remains separate under
-[packaging/RELEASE.md](packaging/RELEASE.md); the app Guide stays unavailable.
+[packaging/RELEASE.md](packaging/RELEASE.md).
 
 ## Intended host modes and downloadable build targets
 
@@ -79,6 +79,32 @@ After installation choose create/connect explicitly with normal displayed consen
 no installation smoke authorizes storage changes on the user's computer. The
 installer emits a deferred-field/user-testing notice on stderr after successful
 manifest admission; `version` stdout remains the exact version.
+
+## Source-built local setup dashboard
+
+The current source adds two **ordinary-user terminal** commands:
+
+```sh
+autobyteus-nfs server   # share a folder from this computer
+autobyteus-nfs client   # connect this computer using the server’s JSON
+```
+
+These commands are **not in the published v0.1.0 binary**. Build this source to
+use them; this change does not publish an installer or update any release asset.
+The browser interface is embedded in the same executable, with no Node/web-server
+installation, network assets or application dependency. Run it without sudo in
+an interactive terminal. It opens a private local page (or prints a private
+one-time URL for manual opening), then requests administrator approval in that
+terminal only when you choose **Authorize administration**. Never enter a
+password into the page. Setup still requires a separate exact plan and consent.
+
+Existing configuration is inspected, not automatically checked or repaired.
+Choose **Check readiness**, **Review reconnect**, or a reviewed drained disconnect
+explicitly. **Stop dashboard** and closing the page do not detach storage.
+Operations waiting on hard NFS may continue until storage returns; no forced
+cancellation is promised. See [dashboard usage and safety](docs/dashboard.md).
+All existing terminal commands below remain supported and share the same
+administrative operation owner.
 
 ## Intended first-use journey
 

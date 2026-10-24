@@ -1,8 +1,8 @@
 # AutoByteus NFS design principles
 
 Implement supported behavior through existing owners; keep the smallest coherent
-change and explicit trust/ownership boundaries. `cmd` dispatches to `internal/cli`
-and setup; config owns bounded persisted data; platform/backend/docker own their
+change and explicit trust/ownership boundaries. `cmd` dispatches to `internal/cli`; terminal, helper and installed supervision
+share the root `internal/admin` operation owner; config owns bounded persisted data; platform/backend/docker own their
 existing system integrations. Do not add frameworks or fallback paths for
 speculative scenarios. Preserve refusal/security guarantees, not accidental
 repository coupling. Remove obsolete paths and dependencies when replacing them.
@@ -25,3 +25,11 @@ engine recipe/pin/provenance and publication readiness separate from field quali
 Validate at the affected boundary with owned scratch and truthful limitations.
 Cross-compilation, synthetic fixtures and historical results do not qualify
 runtime platforms. Follow TESTING/RELEASE; no silent expansion of approved scope.
+
+The embedded dashboard is private local **NFS management**, not an application
+readiness API. Its HTTP listener, directory chooser and opener are ordinary-user
+operations; only the same-binary private-pipe helper administers storage after
+terminal sudo approval. Keep the exact root plan and global lock together through
+review/commit/cancel. `admin.Session` owns complete serial service reconciliation
+and completion-relative retry as well as explicit operations; do not restore a
+callback driver or acquire a second lock around the shared setup reconnect.

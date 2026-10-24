@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoByteus NFS · Local setup</title>
+  <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header><div class="brand"><span class="mark" aria-hidden="true">N</span><div><strong>AutoByteus NFS</strong><span class="eyebrow">LOCAL SETUP DASHBOARD</span></div></div><button id="stop" class="quiet" disabled>Stop dashboard</button></header>
+  <main>
+    <section class="intro"><p class="eyebrow" id="role-label">THIS COMPUTER</p><h1 id="title">Connect your local dashboard</h1><p id="subtitle">Open the private one-time URL from the launching terminal.</p></section>
+    <div id="notice" class="notice" role="status" aria-live="polite">Connecting to this local session…</div>
+    <div id="error" class="error" role="alert" tabindex="-1" hidden></div>
+    <div class="layout">
+      <div class="primary">
+        <section id="authorization" class="card" hidden>
+          <p class="step">01 · ADMINISTRATOR APPROVAL</p><h2>Approve in your terminal</h2>
+          <p>The next step installs or uses this same root-owned control binary and requests OS administrator approval in the terminal that launched this page. Never enter a password here.</p>
+          <p>No storage changes are approved yet. You will review a separate, exact plan before applying it.</p>
+          <button id="authorize">Authorize administration</button>
+        </section>
+        <section id="configuration" class="card" hidden>
+          <p class="step">THIS COMPUTER</p><h2 id="configuration-title">Configuration not observed</h2>
+          <p id="configuration-detail"></p><p id="wrong-role" class="warning" hidden></p>
+          <div class="actions"><button id="inspect" class="secondary">Inspect configuration</button><button id="check" class="secondary" hidden>Check readiness</button><button id="reconnect" class="secondary" hidden>Review reconnect</button><button id="detach" class="danger" hidden>Review disconnect</button></div>
+          <div id="observed" hidden><h3>Last readiness observation</h3><p id="checked-at"></p><pre id="status-json"></pre></div>
+          <div id="connection-panel" hidden><h3>Connection details</h3><p>Share this nonsecret JSON with a trusted client. Configuration is not proof of readiness.</p><textarea id="connection-output" rows="7" readonly aria-label="Connection details JSON"></textarea><button id="copy" class="secondary">Copy connection details</button><span id="copy-result" role="status"></span></div>
+        </section>
+        <section id="setup" class="card" hidden>
+          <p class="step">02 · PREPARE A PLAN</p><h2 id="setup-title">Choose your storage</h2>
+          <form id="setup-form">
+            <div id="server-fields" hidden>
+              <label for="source">Folder to share</label><div class="field-action"><input id="source" name="source" placeholder="/path/to/shared-projects" autocomplete="off" spellcheck="false"><button type="button" id="browse" class="secondary">Browse folders</button></div>
+              <p class="hint">Existing files stay in place. Or choose one new child folder below an existing parent. Do not share your home, system, or private application directory.</p>
+              <label for="endpoint">Private IPv4 address of this computer</label><input id="endpoint" name="endpoint" placeholder="192.168.1.20" autocomplete="off" spellcheck="false">
+              <label for="allowlist">Trusted client addresses or subnets</label><input id="allowlist" name="allowlist" placeholder="192.168.1.21, 192.168.1.0/24" autocomplete="off" spellcheck="false">
+              <p class="hint">Every allowed host can access the export. Use a trusted private network; NFS traffic is plaintext.</p>
+              <label for="backend">Storage backend</label><select id="backend" name="backend"></select>
+              <div id="docker-fields" hidden><label for="docker-socket">Existing local Docker Unix socket</label><input id="docker-socket" name="dockerSocket" value="/var/run/docker.sock" autocomplete="off" spellcheck="false"><p class="hint">Advanced: this daemon hosts the storage engine, not application containers.</p></div>
+            </div>
+            <div id="client-fields" hidden><label for="connection-input">Connection JSON from the server</label><textarea id="connection-input" name="connection" rows="8" placeholder="Paste the complete connection JSON" autocomplete="off" spellcheck="false"></textarea><p class="hint">Use the server's exact connection. This tool does not discover or guess shared storage.</p></div>
+            <label for="mount-root">Local mount root</label><input id="mount-root" name="mountRoot" autocomplete="off" spellcheck="false"><p id="mount-hint" class="hint">An occupied directory will not be hidden or replaced.</p>
+            <button type="submit">Prepare review</button>
+          </form>
+        </section>
+        <section id="review" class="card review" hidden tabindex="-1">
+          <p class="step">03 · REVIEW BEFORE APPLYING</p><h2 id="review-title">Review this exact plan</h2>
+          <p id="review-deadline" class="warning"></p><p>Storage management is reserved during review. Cancel to release it. Nothing below is an editable plan.</p>
+          <pre id="review-summary"></pre><h3>Reviewed connection</h3><pre id="review-connection"></pre>
+          <label class="checkbox"><input type="checkbox" id="consent">I approve this exact plan and its administrator changes.</label>
+          <label id="drain-label" class="checkbox" hidden><input type="checkbox" id="drained">All local and remote users are drained, and I approve their interruption. Source files and private data must remain.</label>
+          <div class="actions"><button id="commit" disabled>Apply reviewed plan</button><button id="cancel" class="secondary">Cancel review</button></div>
+        </section>
+      </div>
+      <aside>
+        <section class="card safety"><p class="step">BEFORE YOU START</p><h2>Local control. Explicit changes.</h2><ul><li>This dashboard listens only on this computer. Keep its private URL to yourself.</li><li>Administrator approval stays in your terminal. Review and apply are separate steps.</li><li>Checks and changes can wait for unavailable storage. Restore storage and wait; there is no forced retry.</li><li>Stopping this dashboard does <strong>not</strong> disconnect storage. Use the reviewed disconnect action after draining users.</li></ul><p class="footnote">Field/shared-filesystem and user testing remain deferred. A build or signature is not field qualification.</p></section>
+      </aside>
+    </div>
+    <footer>Standalone host storage · No application or workspace integration</footer>
+  </main>
+  <dialog id="chooser" aria-labelledby="chooser-title">
+    <div class="dialog-heading"><h2 id="chooser-title">Choose a folder</h2><button id="close-chooser" class="quiet" aria-label="Close folder chooser">Close</button></div>
+    <p>Only directories readable by your ordinary user are listed. No files are opened or folders created.</p>
+    <form id="directory-form"><label for="directory-path">Absolute directory path</label><div class="field-action"><input id="directory-path" autocomplete="off" spellcheck="false"><button type="submit" class="secondary">List folders</button></div></form>
+    <p id="directory-message" role="status"></p><div id="directory-list"></div>
+    <div class="actions"><button id="directory-parent" class="secondary">Parent folder</button><button id="choose-directory" disabled>Use this folder</button></div><p class="hint">If a listing waits on storage, close this chooser and enter a path manually.</p>
+  </dialog>
+</body>
+</html>

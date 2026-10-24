@@ -9,8 +9,9 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/AutoByteus/autobyteus-nfs/internal/admin"
+	"github.com/AutoByteus/autobyteus-nfs/internal/adminwire"
 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
-	"github.com/AutoByteus/autobyteus-nfs/internal/docker"
 	"github.com/AutoByteus/autobyteus-nfs/internal/platform"
 	"github.com/AutoByteus/autobyteus-nfs/internal/service"
 	"github.com/AutoByteus/autobyteus-nfs/internal/setup"
@@ -28,6 +29,8 @@ func Run(args []string, release setup.Release) error {
 			}
 			fmt.Fprintln(os.Stderr, "Shared-filesystem/physical and user testing is deferred; distribution and signature checks are not field qualification.")
 			return nil
+		case "internal-dashboard-helper":
+			return runDashboardHelper(args[1:], release)
 		case "internal-install":
 			return InstallRoot(args[1:])
 		case "internal-probe":
@@ -58,6 +61,9 @@ func Run(args []string, release setup.Release) error {
 	if err = CheckHost(); err != nil {
 		return err
 	}
+	if o.Action == "server" || o.Action == "client" {
+		return runDashboard(o.Action)
+	}
 	terminal := OpenTerminal()
 	defer terminal.Close()
 	if os.Geteuid() != 0 {
@@ -66,124 +72,89 @@ func Run(args []string, release setup.Release) error {
 		}
 		return Elevate(args)
 	}
-	if err = platform.TrustedPath(config.BinaryPath(), false); err != nil {
-		return err
-	}
-	if err = platform.RootDirectory(config.PrivateDirectory(), 0700); err != nil {
-		return err
-	}
-	s := setup.Service{Store: config.Store{Directory: config.PrivateDirectory(), Owner: 0}, Binary: config.BinaryPath(), Release: release}
-	if o.Action == "service" {
-		ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
-		defer stop()
-		return service.Supervise(ctx, s.Store.Directory, os.Stderr, func(lock *os.File) error {
-			if err := config.CheckStandaloneState(s.Store); err != nil {
-				return err
-			}
-			s.Runner = platform.Commands{Lock: lock}
-			s.Lock = lock
-			openSavedDocker(&s)
-			if s.Docker != nil {
-				defer s.Docker.Close()
-			}
-			return s.Reconnect()
-		})
-	}
-	lock, err := platform.Lock(s.Store.Directory)
+	session, err := admin.New(release, setup.User{}, "")
 	if err != nil {
 		return err
 	}
-	defer lock.Close()
-	if err = config.CheckStandaloneState(s.Store); err != nil {
-		return err
+	defer session.Close()
+	if o.Action == "service" {
+		ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
+		defer stop()
+		return session.Supervise(ctx, os.Stderr)
 	}
-	s.Runner = platform.Commands{Lock: lock}
-	s.Lock = lock
-	var pending setup.Plan
-	pendingErr := s.Store.Read("pending-setup.json", &pending)
-	var existing config.Attachment
-	readErr := s.Store.Read("attachment.json", &existing)
 	if o.Action == "" {
-		if pendingErr == nil {
+		current, e := session.InspectConfiguration()
+		if e != nil {
+			return e
+		}
+		switch current.State {
+		case "pending":
 			o.Action, err = terminal.Ask("Setup is incomplete: review/retry saved setup (reconnect)", "reconnect")
-		} else if readErr == nil {
+		case "configured":
 			o.Action, err = terminal.Ask("Configured storage: status / reconnect / detach", "status")
-		} else if os.IsNotExist(readErr) {
+		default:
 			o.Action, err = terminal.Ask("Create storage or connect to existing storage (create/connect)", "")
-		} else {
-			return readErr
 		}
 		if err != nil {
 			return err
 		}
 	}
-	if o.Action == "status" || o.Action == "reconnect" || o.Action == "detach" {
-		openSavedDocker(&s)
-		if s.Docker != nil {
-			defer s.Docker.Close()
-		}
-		switch o.Action {
-		case "reconnect":
-			if pendingErr == nil {
-				fmt.Fprintln(os.Stderr, "Resuming the same source/UUID. Any recovery restores configuration only, NOT storage bytes.")
-				p, e := s.PendingPlan()
-				if e != nil {
-					return e
-				}
-				for _, line := range p.Summary {
-					fmt.Fprintln(os.Stderr, " -", line)
-				}
-				if err = s.Apply(p, o.Yes || terminal.Confirm("Apply this saved setup plan now?")); err != nil {
-					return err
-				}
-				result, e := s.Status()
-				printJSON(result)
-				return e
-			}
-			fmt.Fprintln(os.Stderr, "Checking saved source and reconnecting; hard NFS may wait for storage.")
-			if !o.Yes && !terminal.Confirm("Reconnect saved host storage?") {
-				return errors.New("reconnect declined; no changes")
-			}
-			if err = s.Reconnect(); err != nil {
-				return err
-			}
-			if err = platform.InstallJob(s.Runner); err != nil {
-				return err
-			}
-		case "detach":
-			consent := o.Yes && o.Drained
-			if !consent {
-				consent = terminal.Confirm("Drain all users of this export/attachment and permit their interruption and safe detach? Source, marker and private data remain")
-			}
-			if err = s.Detach(consent); err != nil {
-				return err
-			}
-			var receipt struct {
-				Retained string `json:"retained"`
-			}
-			if s.Store.Read("apple-detach-receipt.json", &receipt) == nil {
-				fmt.Fprintln(os.Stderr, receipt.Retained)
-			}
-			fmt.Fprintln(os.Stderr, "Detached; source, marker, private receipts preserved.")
-			return nil
-		}
+	switch o.Action {
+	case "status":
 		fmt.Fprintln(os.Stderr, "Checking actual host readiness; this may wait for storage.")
-		result, err := s.Status()
-		printJSON(result)
-		return err
-	}
-	if o.Action != "create" && o.Action != "connect" {
+		result, e := session.CheckReadiness()
+		if result.Status != nil {
+			printJSON(result.Status)
+		}
+		return e
+	case "reconnect", "detach":
+		var review adminwire.Review
+		if o.Action == "reconnect" {
+			review, err = session.BeginReconnect()
+		} else {
+			review, err = session.BeginDetach()
+		}
+		if err != nil {
+			return err
+		}
+		for _, line := range review.Summary {
+			fmt.Fprintln(os.Stderr, " -", line)
+		}
+		consent := o.Yes
+		if o.Action == "detach" {
+			consent = o.Yes && o.Drained
+		}
+		if !consent {
+			prompt := "Reconnect saved host storage?"
+			if review.Kind == "resume" {
+				prompt = "Apply this saved setup plan now?"
+			}
+			if o.Action == "detach" {
+				prompt = "Drain all users of this export/attachment and permit their interruption and safe detach? Source, marker and private data remain"
+			}
+			consent = terminal.Confirm(prompt)
+		}
+		if !consent {
+			return errors.New(o.Action + " declined; no changes")
+		}
+		result, e := session.Commit(adminwire.CommitInput{LeaseID: review.LeaseID, Consent: true, Drained: o.Action == "detach"})
+		if o.Action == "detach" {
+			if e == nil {
+				if result.Retained != "" {
+					fmt.Fprintln(os.Stderr, result.Retained)
+				}
+				fmt.Fprintln(os.Stderr, "Detached; source, marker, private receipts preserved.")
+			}
+			return e
+		}
+		if result.Status != nil {
+			printJSON(result.Status)
+		}
+		return e
+	case "create", "connect":
+		return runSetup(o, terminal, session)
+	default:
 		return errors.New("choose create or connect")
-	}
-	return runSetup(o, terminal, &s)
-}
-func openSavedDocker(s *setup.Service) {
-	s.Docker = nil
-	var endpoint struct {
-		Socket string `json:"socket"`
-	}
-	if s.Store.Read("docker-endpoint.json", &endpoint) == nil && endpoint.Socket != "" {
-		s.Docker, _ = docker.New(endpoint.Socket)
 	}
 }
 func printJSON(v any) {

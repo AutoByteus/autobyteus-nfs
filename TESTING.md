@@ -152,3 +152,55 @@ checks can carry for this executor-only repair; do not rerun native signing or
 build a new candidate solely to repair a bound publisher. New unbound product
 payloads still require current-source candidate/native evidence. Delivery owns
 actual hosted same-byte recovery and public download/install/signature receipts.
+
+## Source-built setup dashboard
+
+Ordinary Go race/vet tests cover admin ownership, exact leases, same-binary pipes,
+real local HTTP security, cached-operation responsiveness and directory-only
+selection with owned temporary inputs. The subprocess broken-pipe tests close
+real read ends and observe the held lock before/after drain. These do not invoke
+sudo or mount/export storage. The private transport is not an application API.
+Python `test_nfs_dashboard_packaging.py` checks JS/CSS hash inclusion and static
+embedding; compilation does not retroactively add the UI to published v0.1.0.
+
+For a rendered local feedback loop, use an **independent owned source copy** and
+private HOME/TMPDIR/cache. A dev-only Playwright1.64.1 installation and its Chromium/
+WebKit binaries can live in owned scratch; no Node dependency enters the Go build:
+
+```sh
+# In the independent source copy; outputs/dependencies are outside the checkout.
+go test -c -tags=dashboardpreview -o "$SCRATCH/dashboard-preview" ./internal/dashboard
+npm install --prefix "$SCRATCH/browser-tools" --no-audit --no-fund --ignore-scripts playwright@1.64.1
+PLAYWRIGHT_BROWSERS_PATH="$SCRATCH/browsers" node "$SCRATCH/browser-tools/node_modules/playwright/cli.js" install chromium webkit
+NFS_PLAYWRIGHT_MODULE="$SCRATCH/browser-tools/node_modules/playwright/index.js" \
+NFS_PREVIEW_BINARY="$SCRATCH/dashboard-preview" NFS_PREVIEW_SCRATCH="$SCRATCH" \
+NFS_PREVIEW_EVIDENCE="$SCRATCH/browser-evidence" PLAYWRIGHT_BROWSERS_PATH="$SCRATCH/browsers" \
+node internal/dashboard/__tests__/browser.cjs
+```
+
+The explicit build-tagged preview serves actual embedded HTTP/assets and uses a
+subprocess **root-protocol double**. It cannot install or mount. Both roles at
+1280/390, bootstrap/reload, keyboard, chooser, exact review/consent, read-only
+configuration, wrong-role/pending/errors, slow work, copy success/failure boundary
+and drained disconnect are exercised. Clipboard is doubled to avoid changing the
+operator's clipboard. Screenshots require actual inspection, not existence-only
+claims. Preview contexts/processes and directory fixtures are cleaned by the
+runner. No compiled fixture or dependency is committed.
+
+Native privilege/storage checks require task-owned disposable Mac26+ and
+Ubuntu24.04 guests; never run tests against operator root state. Verify public
+ordinary-user/TTY launches, actual sudo/identity/pipe/lock/EOF/signals, service
+without SUDO/TTY, and control-originated server/client/status/reconnect/drained
+detach using private guest-only sources and actual nonroot mounted bytes. Linux
+Docker storage must use its owned guest daemon, not Docker Desktop on the host.
+Record every resource, current executable/source identity, outcomes, failures and
+cleanup. Preserve source/marker/recovery evidence during detach. Hard-NFS calls
+are not force-cancelled to produce a cleanup claim.
+
+Native Linux development builds need actual freshly verified pinned engine
+packages and Ubuntu package metadata in a disposable build tree. Carry an actual
+current source hash, `version: development-dashboard`, empty `releaseTargets`,
+and deferred field statuses. Do not alter the repository lock or public
+metadata/installer to make that build admitted as a release. Reuse matching
+retained engine bytes read-only and distinguish cross-compilation from native
+execution. These virtual journeys are not the separate physical field campaign.
