@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "kind": "release-first",
+  "version": "v0.2.1",
+  "targets": [
+    "darwin-amd64",
+    "darwin-arm64",
+    "linux-amd64",
+    "linux-arm64"
+  ],
+  "candidate": {
+    "envelope": {
+      "artifactId": 12571548710,
+      "digest": "sha256:3c78c95ff417180c95583485235a8039b38d93531b90cc771e266d336b431b74",
+      "expiresAt": "2027-01-22T18:48:57Z",
+      "runAttempt": 1,
+      "runId": 40122429749,
+      "workflowCommit": "cf62eece7d1e8799a608d5d13b87dbd599db9a56"
+    },
+    "recordSha256": "668613d0374e219b597af9c7ee3107d88103e3caf93d1b4af1374f568c7393cd"
+  },
+  "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+  "engineManifestSha256": "69cfdb792a35ddfac1388956d8b57a61c7efdb271cd0a63c300d863fdead2bf2",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:2595b9e502cbd2b8ce23dfda55eb1f93ae3b10aa5a7039fa2b7724442a81aeca",
+      "linux-arm64": "sha256:5fff5d6e2fd39f791aaae33affea53575c62e1274baaa7a12014ac1148ae9e1e"
+    },
+    "index": "sha256:2d5e77ec5dbee63199af0f19611a88c1aecb6a0da619682d9e42f60d00a3b2c0"
+  },
+  "authorization": {
+    "kind": "publish-before-field-testing",
+    "requirementsRevision": "R3/SR004",
+    "version": "v0.2.1",
+    "evidence": {
+      "path": "packaging/releases/v0.2.1/authorization.json",
+      "sha256": "5e8d0682c150b83f3a84ca31b7b7c9323d5359efa5ce16204a1f192356fa19a9"
+    }
+  },
+  "checks": {
+    "native": {
+      "status": "passed",
+      "evidence": {
+        "path": "packaging/releases/v0.2.1/native-checks.json",
+        "sha256": "63f552b1201b75753735312d8b3b19f7be1a18b571284490232bd510bdcd5f91"
+      }
+    },
+    "releaseControls": {
+      "status": "passed",
+      "evidence": {
+        "path": "packaging/releases/v0.2.1/release-controls.json",
+        "sha256": "c55d1a610dbcb52e900269b555de108909688d43c4b706cdb782f9589a688742"
+      }
+    }
+  },
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "postpublicationPlan": {
+    "path": "packaging/releases/v0.2.1/postpublication-testing-plan.md",
+    "sha256": "679ecdff6be5b52e7a4d9eafca0b2a94d3e5aab627257075e3ffe8ddfbd448cf"
+  },
+  "review": {
+    "candidateCommit": "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+    "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+    "evidence": {
+      "path": "packaging/releases/v0.2.1/source-review.json",
+      "sha256": "5f81922ff175876890e6350879ce24f9ffa97c8438e863c4a282edaceb0da04c"
+    }
+  },
+  "releaseNotes": {
+    "path": "packaging/releases/v0.2.1/release-notes.md",
+    "sha256": "14be566501d2eb84a4e2527de438fa3fba195c3a3e980c89e377a3fc80fc79ed"
+  }
+}

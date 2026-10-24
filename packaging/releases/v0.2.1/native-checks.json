@@ -1,0 +1,77 @@
+{
+  "result": "Pass build-only, not signed/published",
+  "run": 40122429749,
+  "source": "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+  "successJobs": 10,
+  "expectedSkippedJobs": [
+    "payload",
+    "publish"
+  ],
+  "checks": [
+    {
+      "jobId": 120956687867,
+      "name": "prepare",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 0,
+      "signing": "Not applicable",
+      "other": "Native jobs include vet/build/version/archive; overlapping repeated suites not unique counts"
+    },
+    {
+      "jobId": 120958103285,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "signing": "Not applicable",
+      "other": "Native jobs include vet/build/version/archive; overlapping repeated suites not unique counts"
+    },
+    {
+      "jobId": 120958103297,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "signing": "Not applicable",
+      "other": "Native jobs include vet/build/version/archive; overlapping repeated suites not unique counts"
+    },
+    {
+      "jobId": 120958103349,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "signing": "Skipped build-only",
+      "other": "Native jobs include vet/build/version/archive; overlapping repeated suites not unique counts"
+    },
+    {
+      "jobId": 120958103408,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "signing": "Skipped build-only",
+      "other": "Native jobs include vet/build/version/archive; overlapping repeated suites not unique counts"
+    }
+  ],
+  "rawLogSHA256": "eac544a7bd14504d58e22d70e314da4ed24476718880989a63351311adf734ad",
+  "rawLogPath": "tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-run.log",
+  "targets": [
+    "darwin-amd64",
+    "darwin-arm64",
+    "linux-amd64",
+    "linux-arm64"
+  ],
+  "candidateSourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+  "limits": "Actual current native development/package checks only; signing intentionally skipped, not field/OS-password/publication proof; repeated suites overlap."
+}

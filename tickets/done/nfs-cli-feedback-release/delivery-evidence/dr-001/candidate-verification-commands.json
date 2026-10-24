@@ -1,0 +1,120 @@
+[
+  {
+    "label": "candidate-envelope",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "candidate-envelope",
+      "--artifact-id",
+      "12571548710",
+      "--run-id",
+      "40122429749",
+      "--attempt",
+      "1",
+      "--workflow-commit",
+      "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-feedback-release/tickets/in-progress/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "candidate-fetch",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "fetch-candidate",
+      "--envelope",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-feedback-release/tickets/in-progress/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.json",
+      "--directory",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-feedback-release/tickets/in-progress/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-reference.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "candidate-verify",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "verify-candidate",
+      "--directory",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-feedback-release/tickets/in-progress/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verified.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "measured-source-hash",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--source-hash",
+      "--engine-manifest",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate/engine/engine-manifest.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "old-readiness-refusal",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate"
+    ],
+    "exit": 1
+  },
+  {
+    "label": "candidate-version",
+    "argv": [
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate-smoke/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "candidate-admission-refusal",
+    "argv": [
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate-smoke/autobyteus-nfs",
+      "verify-release",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate-smoke/release.json"
+    ],
+    "exit": 1
+  },
+  {
+    "label": "engine-lock",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/engine/manifest.py",
+      "lock",
+      "--directory",
+      "/Users/normy/nfs-cli-release-vdwkpql_/candidate/engine",
+      "--release-lock",
+      "packaging/release-lock.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "current-source-hash",
+    "argv": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0
+  }
+]

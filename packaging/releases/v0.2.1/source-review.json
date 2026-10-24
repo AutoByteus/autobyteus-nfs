@@ -1,0 +1,56 @@
+{
+  "result": "accepted under actual source route",
+  "candidateCommit": "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+  "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+  "sourceTask": "autobyteus-nfs-7",
+  "sourceApproval": "R1/SR001 Approved, SR002 Ready",
+  "sourceRoute": "Small/Low/Direct; independent architecture/source review N/A and successful test-code review Not Required. No fabricated reviewer Pass.",
+  "implementationSelfReview": {
+    "path": "tickets/done/nfs-cli-approval-feedback/evidence/IMP-08-self-review.json",
+    "sha256": "40531fc4634bc6199bc4a132fac18549c3103e4d3907a9f74590138a1e8ddf65"
+  },
+  "implementationHandoff": {
+    "path": "tickets/done/nfs-cli-approval-feedback/implementation-handoff.md",
+    "sha256": "ad08027591bf7d3f7310c7c230059125416cb7fbea123584a9f6e3fdbca68f29"
+  },
+  "validation": {
+    "revision": "API001",
+    "confidence": 95.0,
+    "report": {
+      "path": "tickets/done/nfs-cli-approval-feedback/api-e2e-execution-coverage-report.md",
+      "sha256": "91c4e1fef49f6aa12284462e5bf6d99f304608913b92ad54edf0aa81872cac06"
+    },
+    "limits": "Six scoped feedback ACs proven; ordinary-user protocol child and PTY adapter, not real sudo/password/OS opener or physical storage. Invalid IMP07 Stop compiler-only control excluded; valid API02 control/mutant closes it."
+  },
+  "deliveryReview": {
+    "changedSincePriorReleaseSource": [
+      "README.md",
+      "TESTING.md",
+      "docs/dashboard.md",
+      "internal/dashboard/browser.go",
+      "internal/dashboard/feedback_fixture_test.go",
+      "internal/dashboard/feedback_test.go",
+      "internal/dashboard/privilege.go",
+      "internal/dashboard/privilege_test.go",
+      "internal/dashboard/session.go",
+      "internal/dashboard/terminal.go",
+      "internal/dashboard/terminal_test.go"
+    ],
+    "finding": "None. Personally read all4production-file diff: fixed synchronized presentation from existing validated hello/inspection/cleanup; Stop invalidates reminder, no changed authority/wire/root/storage. Source code/tests are finalized cf62eece and byte-identical to validated source inputs except prior documentation finalization.",
+    "candidateToPreparation": "Only new version authority/evidence/notes/plan, guide prose and exact measured engine/readiness lock. No runtime/test/recipe/signing/installer/workflow edit.",
+    "engineDelta": [
+      {
+        "path": "/architectures/amd64/buildInventory/sha256",
+        "prior": "d16dc3df4070a03fe26d71fbfd0d3dc348312a0cd2b141d97c699cc9c8af6c91",
+        "measured": "876da6b79bebb4c116742780f657cac9c0d6e204ce6892f71c87a96a8c9b12c2"
+      },
+      {
+        "path": "/architectures/arm64/buildInventory/sha256",
+        "prior": "539b3d1e1da4444cc938ccbc2af69885aa388c7ceab1acf1ae848e1e06269000",
+        "measured": "ca3aef1533dd01bfdb5465a576de3b0f7eaf155d4f7fb8efd2b1191a9b35fd14"
+      }
+    ],
+    "identityMeaning": "New measured sourceHash includes2new inventory hashes. Package/source/recipe/base/size fields unchanged; baseline old-engine hash is not current candidate identity. No reproducibility or old readiness claim."
+  },
+  "releaseOnly": "No new product design/review campaign; actual guide checks and current evidence govern new publication."
+}
