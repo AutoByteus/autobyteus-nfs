@@ -66,3 +66,16 @@ None — CRR001 had no code findings. CR-001 is new and Open, confirmed against 
 - New/remaining source findings and follow-ups: None. Earlier review gap remains recorded in CRR002 above, not erased.
 - Next: fresh primary source-Pass route to API/E2E only; affected chooser/control validation, preserving unchanged scoped native/storage proofs. No Designer/Delivery/implementation duplicate outcome notification under team's single-recipient rule.
 - Source-only NFS; no release, target merge/push/tag, TaskDone/user verification. Reviewer changes documents/evidence only; prior history byte prefix preserved by CRR03 audit.
+
+## CRR-004 — Successful API002 no-new-durable-delta gate
+
+| Revision | Canonical report | Entry / trigger | Prior result | Current result | Findings |
+|---|---|---|---|---|---|
+| CRR-004 | api-e2e-test-review-report.md | Successful API/E2E Test Review / API-REV-002 | No previous test-review result; CRR003 sourcePass100 | Not Applicable, successful gate complete | None |
+
+- Date: 2026-10-24. Large/High/Reviewed; R1/SR001 Approved, SR003/ARCH002, IR002, CRR003, API002 Pass95; DR N/A. Inputf71c4c3d26763a16a8b30fa09a1ce78e3c09ee0d, source/tests7b0577a4 unchanged; zero non-ticket delta since CRR003 receipt34afb80.
+- API authored no production/durable-test delta. Carried CRR003 proportional inspection of IR002 chooser.cjs/browser.cjs and unchanged CRR001 tests; no new full-source/size/score audit or product execution. Temporary natural-timing harness reviewed as evidence only.
+- Actual current API07 response completes510/512ms inside6042/6049ms typing at1280/390; exact draft retained, settled/navigation/error/selection/Stop controls pass. Inspected narrow typing image. Root inspect double and no storage/clipboard boundary explicit; not fresh native qualification.
+- API001 failure and CRR002 review gap stay historical. Current API002 owns executable closure of API-F001; source CR-001 closure remains CRR003. No new/remaining finding or follow-up.
+- API03–05 native/pending/client/expiry and cleanup carry with exact scopes; current cleanup removes only owned rootless resources. AC008 fresh integration/finalization stays Delivery-owned.
+- Next: fresh normal successful-test gate route to Delivery only. No release/tag/publication, target merge/push, other project change, TaskDone/user verification. Canonical source report unchanged.
