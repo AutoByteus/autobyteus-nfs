@@ -1,8 +1,8 @@
-# Implementation Handoff — IR-001 Ready for source review
+# Implementation Handoff — IR-002 Ready for targeted source review
 
 Task nfs-setup-dashboard / autobyteus-nfs-2 / project_task_f1264eb8-5a99-4a19-949f-09d141c955a1.
 Worktree `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard`,
-branch `codex/nfs-setup-dashboard`; target origin/main. Initial implementation and
+branch `codex/nfs-setup-dashboard`; target origin/main. Bounded Local Fix and
 implementation-scoped checks are complete; owned cleanup is complete. This is
 not independent source/API acceptance. No push, target merge, release, tag,
 publication, TaskDone or user-verification claim.
@@ -14,15 +14,30 @@ All paths below are relative to this ticket directory.
 - `investigation-notes.md`, `solution-revision-record.md`, `solution-design-handoff.md`.
 - ARCH-REV-002 Pass `design-review-report.md`, `architecture-review-revision-record.md`;
   review commit1a670d4c, source baseline52c17fb5. ARCH-F001 resolved by reviewed DS6.
+- Trigger: `code-review-report.md` / `code-review-revision-record.md` CRR002,
+  `api-e2e-execution-coverage-report.md` / `api-e2e-revision-record.md` API001,
+  and `evidence/API-07-finding.md`/runtime/reproducer.
 - No additional product decision or UI supplement; NFS-only, source-only scope.
 
 ## Current Implementation Summary
 
-Initial cycle; `implementation-revision-record.md` records IR-001 baseline.
-Triggering implementation finding: N/A (ARCH-F001 was resolved in upstream design).
-SR001–003 / ARCH001–002 apply; CRR/API/DR N/A for this task. No earlier result inferred.
-Production5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409 plus portable-test cleanup
-2445aabf61126b1bb64b05b5f925b140c67917b8; subsequent commits are own evidence only.
+Rework cycle **IR-002**, triggered by CRR-002 confirmed **CR-001 = API-F001**,
+Medium Local Fix. `implementation-revision-record.md` retains the IR001 baseline.
+R1/SR001 Approved, SR003/ARCH-REV-002 unchanged. CRR001 Pass100 is historical;
+latest CRR002 Fail and API-REV-001 Fail81.43 remain their owners' authorities until
+review/affected validation. DR N/A. No architecture/approval reopening.
+
+Current source/tests **7b0577a4f2637ddf12a74a0156e4243a41a3719c**, sourceHash
+`2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903`.
+Only `web/forms.js` production changed: explicit List/Browse/parent/child navigation
+seeds the path field; asynchronous listing rendering never replaces its draft.
+Selection is enabled only for the exact successfully listed path, not an unlisted
+edit or stale list. Added durable actual-UI response/typing regression and focused
+normal controls; TESTING documents the cases. No Go/admin/storage change.
+
+The cumulative implementation below remains as introduced by product5f8cabf plus
+portable tests2445aab; its unchanged backend/native results retain exact scope.
+IR002 checks and red/green evidence are IMP16–20, not a repeat native campaign.
 
 - Added ordinary-user `server` and `client`, fixed local listener and embedded UI.
 - Added typed bounded same-binary private-pipe helper after terminal OS approval.
@@ -48,7 +63,7 @@ No demonstrated requirement/design deviation; no migration or new release policy
 | Behavior | Actual production path | Current implementation evidence |
 |---|---|---|
 | BEH-001 / AC-001,007 | cli.Parse/Run → runDashboard → dashboard.Session.Run → embedded assets and browser auth | Both exact commands/no flags; nonroot+TTY; real renderer/HTTP and Linux native role/control |
-| BEH-002 / AC-002,006 | browser form → typed BeginServer → admin.acquire/retain → setup.Plan/Apply → Status | Actual Ubuntu native then Docker source/selfmount and Mac Apple source/selfmount, nonroot RW |
+| BEH-002 / AC-002,006 | browser form → typed BeginServer → admin.acquire/retain → setup.Plan/Apply → Status | Actual Ubuntu native then Docker source/selfmount and Mac Apple source/selfmount, nonroot RW; IR002 chooser draft/navigation regression |
 | BEH-003 / AC-003,006 | pasted Connection/override → BeginClient → config.ParseConnection → retained exact setup.Plan | Real parser/refusal and browser copy/manual/override; current Mac→LinuxDocker and Linux→Mac native client RW |
 | BEH-004 / AC-004,005,007 | inspect metadata / checkReadiness / reviewed reconnect or detach → shared setup methods | No automatic probe/repair; native busy refusal, reconnect, drained detach; pending/wrong-role rendered doubles labeled |
 | BEH-005 / AC-006,008 | exact local HTTP → strict adminwire → same-installed-binary helper → fixed admin owner | Real sockets, duplicate/unknown/trailing/bounds, real pipes/flock and isolated sudo/identity/denial |
@@ -117,6 +132,11 @@ attempts remain failed; a later passing attempt does not rewrite them.
 | IMP13 | preserved public CLI create/connect/status/reconnect/detach/version/noargs and direct root/no-SUDO status/detach | current5f8 binaries, both owned guests | Pass bounded continuations; IMP-13-{mac-observe,linux-client,mac-detach}-result.json and attempt2 successful create row; earlier overall failures remain Fail, explained in IMP-13-attempts.md |
 | IMP14 | public drained teardown, read-only process/job/mount/source inventory, guest shutdown→Tart deletion→own scratch removal | current5f8, both guests and owned host scratch | Complete; IMP-14-cleanup.json and both inventories; no task process/job/mount/engine left before removal |
 | IMP15 | final current-source/upstream scope, evidence privacy/whitespace audit | ticket branch after native work | IMP-15-final-audit.json; exact source hash unchanged, no private launch URL hits; raw log exceptions retained |
+| IMP16 | current TESTING/CRR002/API07 reproduction and local impact plan; private toolchain | input4abea65b, Mac26.5.2arm64 | IMP-16-plan.md/environment.json/preparation.log; Go1.27.2 checksum verified, no VM/native resources |
+| IMP17 | actual browser keyboard prefix→held actual GET response→completion→draft assertion | original product4abea65b with new durable test; Chromium1280 | **Fail expected (red)**, `background listing replaced the active draft`; IMP-17-red/result.json/log/PNG. Confirms supplied failure before fix |
+| IMP18 | same regression after fix, POST and GET delivery, keyboard/settled/List/parent/child/selection/error controls plus normal flows | exact7b0577a4 independent source; Chromium156/WebKit27.2,1280/390 | **Pass16/16**; IMP-18-green/result.json and PNGs; IMP-18-feedback.md. Actual UI/HTTP, controlled response timing and root/clipboard doubles |
+| IMP19 | `go test -race -timeout 90s ./internal/dashboard`, vet, focused embedding/hash Python | exact7b0577a4 independent copy, Macarm64 Go1.27.2/private HOME/TMP/cache | Pass race/vet,2Python tests/0skip; IMP-19-focused.log. Malformed initial timeout command failed before tests, retained IMP-19-attempt1.log |
+| IMP20 | exact independent input comparison, result audit and owned-resource removal | exact7b0577a4 and own IR002 scratch | IMP-20-checks-cleanup.json; no mismatches, cleanup Complete; no native/privileged or user resource touched |
 
 Linux full suite preceded only test-failure cleanup additions: affected native
 admin race rerun passed (`IMP-07-linux-drain-cleanup.log`). Mac final all suite
@@ -161,7 +181,7 @@ monitor remains. Original retained candidate/engine manifest remains unchanged.
 The disposable source fixtures were removed with the owned VMs only after the
 preservation proof; this is not product data deletion.
 
-Development metadata was generated only in scratch with actual current source
+IR001 development metadata was generated only in scratch with its then-current source
 hash and measured pinned engine/package inputs, `development-dashboard`, empty
 releaseTargets and deferred field status. Retained engine manifest
 95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970 was freshly checked,
@@ -170,17 +190,21 @@ The actual immutable Docker engine image remains as recorded in IMP-06 build.
 
 ### Input attribution and limits
 
-- Current product is5f8cabf, sourceHash
+- IR002 current product/test input is7b0577a4; IMP17 red and IMP18 green share the
+  durable browser regression. Changed JS is production-hashed; do not describe
+  historical native runs as newly run on this hash. All Go/storage/admin/engine
+  inputs remain unchanged; current embedding/race/vet and browser checks are scoped.
+- IR001 native product is5f8cabf, sourceHash
   `324bf4dbb24b8001324033a0abc131bc50a26e5d98284dcbb95d1be790e8cf13`.
-  Final source/test baseline2445aab; later commits contain implementation evidence/docs only.
+  Its final source/test baseline was2445aab; IR002 is the later bounded JS/test change.
 - IMP04 native isolation was a phase2 proof **before** enabling browser mutation.
   IMP06/09 native Linux server/Docker runs used earlier3a7fbf…555, preceding helper
   PID messages, complete review-Connection display and current-error banner.
   Those deltas have current browser/tests; current native Mac and Linux client/CLI
   use86bff169…e8e1/00351676…22e1. Do not describe every earlier native run as exact-current.
 - Final Go all/race on Mac includes2445; Linux all/race precedes test-only
-  failure-cleanup delta, and affected Linux admin rerun covers it. No production
-  change followed those full suites. Python Git-context requirements were honored
+  failure-cleanup delta, and affected Linux admin rerun covers it. No Go/admin/storage production
+  change followed those full suites; IR002 JS is covered separately. Python Git-context requirements were honored
   in a real independent clone, not bypassed. Initial attempt failures remain evidence.
 - Guest sudo was actual and TTY/identity/OS denial proved, but public fixture
   account uses NOPASSWD. No real interactive password entry, personal credentials,
@@ -192,7 +216,14 @@ The actual immutable Docker engine image remains as recorded in IMP-06 build.
 
 ### Downstream guidance
 
-Independent source review should trace DS1–6 through CLI/helper/supervision,
+**Current handoff is targeted CR-001 re-review**: inspect edit ownership,
+explicit navigation/selection and executable red→green coverage. Normal affected
+API continuation should reproduce the prior API07 user-keyboard case/control and
+check navigation; prior API03–05 native/pending/expiry/cleanup results retain their
+limits and need no whole-campaign repeat solely for this frontend change. API001
+is still Fail81.43 until its owner judges affected current proof.
+
+The original full source review traced DS1–6 through CLI/helper/supervision,
 particularly retained plan/global lock, privilege/start/EOF drain, exact browser
 security and single complete service-loop owner. Reuse unchanged checks where
 appropriate; inspect raw attempts and native input attribution, not just Pass labels.
@@ -207,13 +238,28 @@ prerequisite, follow-up or design/requirement gap was found.
 
 ## Selected Handoff
 
-Fresh `get_handoff_rules` on2026-10-24 selected the first rule: completed
-Large/High implementation with complete implementation-scoped validation, ready
-for independent source review → **/software_engineering_team/code_reviewer**.
+Fresh `get_handoff_rules` for IR002 selects the completed implementation-owned
+Local Fix, retained Large/High, returning for source review rule →
+**/software_engineering_team/code_reviewer**.
 Only that primary outcome is sent. No duplicate Designer/API/Delivery/PM dispatch.
 
-Durable implementation/evidence package: local commit
+Historical IR001 durable implementation/evidence package: local commit
 `98312bc85b7f32e0704d5a950dd4c08b106ad434` (includes complete IMP01–15 evidence and
-IR001 documents; this receipt is a documentation-only followup). Current product
-remains5f8cabf and test baseline2445aab. Tracked tree clean at package checkpoint;
+IR001 documents; this receipt is a documentation-only followup). That round’s product
+was5f8cabf and test baseline2445aab. Tracked tree clean at its package checkpoint;
 no remote update performed.
+
+
+## IR002 Rendered Feedback / Cleanup
+
+Actual deterministic rootless regression starts red on the unchanged buggy UI,
+then runs green without changing its typing sequence. Initial POST and later GET
+completion no longer own the edit field; focus/caret and typed suffix are retained.
+Explicit List and parent/child navigation intentionally update the field and only
+the actual listed directory is selectable. All16 focused/normal cases pass.
+Inspected current Chromium390 and WebKit390 screenshots: readable modal controls,
+focus and path-input scrolling, no horizontal overflow or extra layout changes.
+See IMP-18-feedback.md. No native/browser password or filesystem proof is claimed.
+IR002 private scratch/toolchain/preview/browser contexts are removed, no owned
+process left (IMP20). Initial invalid Go timeout argument is preserved as a harness
+failure; corrected affected command passes. No new product/design finding.

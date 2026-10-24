@@ -186,6 +186,12 @@ and drained disconnect are exercised. Clipboard is doubled to avoid changing the
 operator's clipboard. Screenshots require actual inspection, not existence-only
 claims. Preview contexts/processes and directory fixtures are cleaned by the
 runner. No compiled fixture or dependency is committed.
+The `chooser-poll` and `chooser-post` cases hold one **actual directory HTTP
+response** until keyboard prefix entry, then release it before typing the suffix.
+They check draft preservation, settled input, explicit List/parent/child/selection
+and listing errors; scheduling is controlled, not native storage latency proof.
+Run only those plus normal controls with
+`NFS_PREVIEW_SCENARIOS=chooser-poll,chooser-post,normal` on the same command.
 
 Native privilege/storage checks require task-owned disposable Mac26+ and
 Ubuntu24.04 guests; never run tests against operator root state. Verify public

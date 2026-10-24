@@ -1,0 +1,13 @@
+# IMP-19 | 2026-10-24 | source7b0577a4 | Macarm64 Go1.27.2 | corrected go test -race -timeout 90s ./internal/dashboard; vet; focused Python
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	5.453s
+race_exit=0
+vet_exit=0
+test_embedded_static_allowlist_is_self_contained (test_nfs_dashboard_packaging.DashboardPackagingTests) ... ok
+test_js_and_css_change_existing_source_identity (test_nfs_dashboard_packaging.DashboardPackagingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.081s
+
+OK
+python_exit=0
+2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903

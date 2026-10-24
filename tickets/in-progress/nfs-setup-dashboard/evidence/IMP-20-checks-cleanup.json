@@ -1,0 +1,32 @@
+{
+  "id": "IMP-20",
+  "date": "2026-10-24T13:54:39.402139+00:00",
+  "sourceCommit": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "independentSourceComparedNonTicketFiles": 166,
+  "mismatches": [],
+  "red": "actual UI regression failed original product as expected",
+  "green": {
+    "cases": 16,
+    "pass": 16,
+    "versions": {
+      "chromium": "156.0.8078.4",
+      "webkit": "27.2"
+    }
+  },
+  "focusedChecks": {
+    "dashboardRace": "Pass",
+    "dashboardVet": "Pass",
+    "packagingPython": {
+      "executed": 2,
+      "skipped": 0,
+      "result": "Pass"
+    }
+  },
+  "initialHarnessFailure": "IMP-19-attempt1.log malformed timeout flag; not product execution",
+  "ownedScratch": "/Users/normy/nfs-dashboard-ir002-izotexkc",
+  "ownedExecutablesBeforeRemoval": [],
+  "resourceScope": "No VM/sudo/root/NFS/Docker/installer/user profile/credentials; rootless preview and private browser contexts only",
+  "scratchRemoved": true,
+  "cleanup": "Complete"
+}

@@ -1,0 +1,11 @@
+# IMP-17 | 2026-10-24 | original4abea65b+chooser regression | actual Chromium/embedded preview | controlled GET response only
+AssertionError [ERR_ASSERTION]: background listing replaced the active draft
++ actual - expected
+
++ '/Users/normy/nfs-dashboard-ir002-izotexkc/view-T9LVqF'
+- '/Users/normy/nfs-dashboard-ir002-i'
+
+    at chooser (/Users/normy/nfs-dashboard-ir002-izotexkc/source/internal/dashboard/__tests__/chooser.cjs:34:12)
+    at async run (/Users/normy/nfs-dashboard-ir002-izotexkc/source/internal/dashboard/__tests__/browser.cjs:47:22)
+    at async /Users/normy/nfs-dashboard-ir002-izotexkc/source/internal/dashboard/__tests__/browser.cjs:135:132
+exit=1

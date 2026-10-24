@@ -1,0 +1,18 @@
+{
+  "versions": {
+    "chromium": "156.0.8078.4"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "role": "server",
+      "width": 1280,
+      "scenario": "chooser-poll",
+      "result": "Fail",
+      "error": "background listing replaced the active draft\n+ actual - expected\n\n+ '/Users/normy/nfs-dashboard-ir002-izotexkc/view-T9LVqF'\n- '/Users/normy/nfs-dashboard-ir002-i'\n",
+      "diagnostic": ""
+    }
+  ],
+  "boundary": "real embedded browser/HTTP, subprocess root-protocol double; no native NFS proof",
+  "cleanup": "owned contexts/preview processes/directory fixtures closed and removed"
+}
