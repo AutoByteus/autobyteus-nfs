@@ -69,17 +69,18 @@ func TestHelperBrokenOutputDrain(t *testing.T) {
 		defer signal.Stop(signals)
 		s := testSession(t)
 		save(t, s, "attachment.json", attachment())
-		s.runner = func(*os.File) platform.Runner {
-			return runnerFunc(func(string, ...string) ([]byte, error) {
-				os.WriteFile(os.Getenv("NFS_TEST_PIPE_DIR")+"/started", []byte(s.base.Store.Directory), 0600)
-				for {
-					if _, err := os.Stat(os.Getenv("NFS_TEST_PIPE_DIR") + "/finish"); err == nil {
-						break
-					}
-					time.Sleep(time.Millisecond)
+		// Pause at shared admission, after the real flock is held. Mount-table
+		// observation uses /proc directly on Linux and a command on Darwin;
+		// a Runner pause would not exercise the same in-flight boundary there.
+		s.admit = func(string, string) error {
+			os.WriteFile(os.Getenv("NFS_TEST_PIPE_DIR")+"/started", []byte(s.base.Store.Directory), 0600)
+			for {
+				if _, err := os.Stat(os.Getenv("NFS_TEST_PIPE_DIR") + "/finish"); err == nil {
+					break
 				}
-				return nil, io.EOF
-			})
+				time.Sleep(time.Millisecond)
+			}
+			return io.EOF
 		}
 		_ = s.ServePipe(context.Background(), os.Stdin, os.Stdout)
 		unlocked(t, s)
@@ -97,6 +98,15 @@ func TestHelperBrokenOutputDrain(t *testing.T) {
 	if err := cmd.Start(); err != nil {
 		t.Fatal(err)
 	}
+	defer func() {
+		// Test failure must also release the controlled child before cleanup.
+		os.WriteFile(dir+"/finish", nil, 0600)
+		in.Close()
+		out.Close()
+		if cmd.ProcessState == nil {
+			cmd.Wait()
+		}
+	}()
 	scanner := bufio.NewScanner(out)
 	if !scanner.Scan() {
 		t.Fatal("missing handshake")

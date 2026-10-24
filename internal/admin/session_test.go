@@ -201,19 +201,31 @@ func TestSupervisorStopDrainsOneInFlightAttempt(t *testing.T) {
 	save(t, s, "attachment.json", attachment())
 	entered := make(chan struct{})
 	release := make(chan struct{})
+	defer func() {
+		select {
+		case <-release:
+		default:
+			close(release)
+		}
+	}()
 	var calls atomic.Int32
-	s.runner = func(*os.File) platform.Runner {
-		return runnerFunc(func(string, ...string) ([]byte, error) {
-			calls.Add(1)
-			close(entered)
-			<-release
-			return nil, errors.New("controlled observation failure")
-		})
+	// Shared admission runs under the operation lock on both OSes. Do not
+	// depend on Darwin's command-based mount observation to pause Linux.
+	s.admit = func(string, string) error {
+		calls.Add(1)
+		close(entered)
+		<-release
+		return errors.New("controlled admission failure")
 	}
 	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 	done := make(chan error, 1)
 	go func() { done <- s.Supervise(ctx, io.Discard) }()
-	<-entered
+	select {
+	case <-entered:
+	case <-time.After(5 * time.Second):
+		t.Fatal("attempt never reached shared admission")
+	}
 	cancel()
 	select {
 	case <-done:
