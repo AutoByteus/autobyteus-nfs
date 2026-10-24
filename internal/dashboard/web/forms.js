@@ -22,12 +22,13 @@ export function setupInput(role) {
 }
 export function chooser(home, reportError) {
   const dialog = byID('chooser'); let listing = null, timer;
+  const selection = () => { byID('choose-directory').disabled = !listing || listing.state !== 'complete' || !!listing.error || byID('directory-path').value !== listing.path; };
+  byID('directory-path').oninput = selection;
   const render = value => {
     listing = value;
     const running = value.state === 'running';
-    byID('directory-path').value = value.path || home;
     text('directory-message', running ? 'Listing directories; a filesystem read may wait. Manual path entry remains available.' : value.error || (value.tooMany ? 'First 200 entries only. Enter a more specific path to continue.' : 'Choose this directory, or open a child directory.'));
-    byID('choose-directory').disabled = running || !!value.error || value.state !== 'complete';
+    selection();
     byID('directory-parent').disabled = running || !value.parent || value.parent === value.path;
     const buttons = (value.names || []).map(name => {
       const button = document.createElement('button'); button.className = 'secondary'; button.textContent = name;
@@ -37,7 +38,14 @@ export function chooser(home, reportError) {
     clearTimeout(timer);
     if (running && dialog.open) timer = setTimeout(async () => { try { render(await request('/api/directories')); } catch (e) { reportError(e); } }, 500);
   };
-  const list = async path => { try { render(await request('/api/directories', { path })); } catch (e) { text('directory-message', e.message); } };
+  const list = async path => {
+    // Only explicit navigation/submission seeds the field; background results
+    // own the listing, never the user's editable path draft.
+    byID('directory-path').value = path;
+    listing = null; selection();
+    byID('directory-parent').disabled = true; byID('directory-list').replaceChildren();
+    try { render(await request('/api/directories', { path })); } catch (e) { text('directory-message', e.message); }
+  };
   byID('browse').onclick = () => { dialog.showModal(); list(byID('source').value || home); };
   byID('close-chooser').onclick = () => dialog.close(); dialog.onclose = () => clearTimeout(timer);
   byID('directory-form').onsubmit = e => { e.preventDefault(); list(byID('directory-path').value); };

@@ -5,6 +5,7 @@ const { mkdtemp, readFile, rm, access, mkdir } = require('node:fs/promises');
 const { join } = require('node:path');
 const { pathToFileURL } = require('node:url');
 const assert = require('node:assert/strict');
+const chooser = require('./chooser.cjs');
 const playwright = createRequire(process.env.NFS_PLAYWRIGHT_MODULE)(process.env.NFS_PLAYWRIGHT_MODULE);
 const root = process.env.NFS_PREVIEW_SCRATCH, binary = process.env.NFS_PREVIEW_BINARY, output = process.env.NFS_PREVIEW_EVIDENCE;
 if (!root || !binary || !output) throw new Error('Explicit owned scratch, preview binary and evidence directory required');
@@ -30,7 +31,7 @@ async function run(browser, engine, role, width, scenario) {
  page.on('pageerror', error => errors.push(error.message));
  // Browser clipboard boundary double; never alter the operator's OS clipboard.
  await page.addInitScript(() => { window.copied = ''; Object.defineProperty(navigator, 'clipboard', { value: { writeText: async text => { if (window.denyCopy) throw new Error('fixture denial'); window.copied = text; } } }); });
- let session;
+ let session, chooserResult;
  try {
    session = await eventually(async () => JSON.parse(await readFile(file, 'utf8')));
    await page.goto(pathToFileURL(session.bootstrap).href);
@@ -41,7 +42,10 @@ async function run(browser, engine, role, width, scenario) {
    await page.reload(); await shown(page, 'authorization');
    await page.locator('#authorize').focus(); await page.keyboard.press('Enter');
    await shown(page, 'configuration');
-   if (scenario === 'wrong-role') {
+   if (scenario === 'chooser-post' || scenario === 'chooser-poll') {
+     await shown(page, 'setup');
+     chooserResult = await chooser(page, dir, scenario === 'chooser-post' ? 'POST' : 'GET', eventually);
+   } else if (scenario === 'wrong-role') {
      await shown(page, 'wrong-role'); await hidden(page, 'setup'); await hidden(page, 'detach'); await hidden(page, 'reconnect'); await hidden(page, 'check');
    } else if (scenario === 'pending') {
      await includes(page, 'configuration-title', 'incomplete'); await hidden(page, 'setup');
@@ -104,15 +108,17 @@ async function run(browser, engine, role, width, scenario) {
    const calls = (await readFile(file+'.calls','utf8')).trim().split('\n').map(line => JSON.parse(line));
    assert.equal(calls.filter(c => c.kind === 'inspect').length, 1, 'reload repeated authorization/inspection');
    assert.ok(calls.filter(c => c.kind === 'commit').length <= 2, 'replayed commit');
+   if (await page.locator('#chooser').isVisible()) await page.locator('#close-chooser').click();
    await page.locator('#stop').click(); await includes(page, 'notice', 'Storage is NOT disconnected');
    assert.equal(await page.evaluate(() => sessionStorage.getItem('autobyteus-nfs-dashboard')), null);
    const ended = await Promise.race([exited, sleep(5000).then(() => ({ timeout: true }))]); assert.equal(ended.code, 0, diagnostic);
-   results.push({ engine, role, width, scenario, result: 'Pass', calls: calls.map(c => c.kind) });
+   results.push({ engine, role, width, scenario, result: 'Pass', ...(chooserResult ? {chooser:chooserResult} : {}), calls: calls.map(c => c.kind) });
  } catch (e) {
    await page.screenshot({ path: join(output, `${engine}-${role}-${width}-${scenario}-failure.png`), fullPage: true }).catch(() => {});
    results.push({ engine, role, width, scenario, result: 'Fail', error: e.message, diagnostic }); throw e;
  } finally {
    // Only our rootless test fixture, not the product or any storage child.
+   if (await page.locator('#chooser').isVisible()) await page.locator('#close-chooser').click().catch(() => {});
    await page.locator('#stop').click({timeout:500}).catch(() => {});
    if (child.exitCode === null) { child.kill('SIGTERM'); await exited; }
    await context.close(); await rm(dir, { recursive: true, force: true });
@@ -124,8 +130,9 @@ async function run(browser, engine, role, width, scenario) {
    for (const engine of ['chromium', 'webkit']) {
      const browser = await playwright[engine].launch(); versions[engine] = browser.version();
      try {
-       const selected = (process.env.NFS_PREVIEW_SCENARIOS || 'normal,pending,wrong-role,error,expired,slow,stop-running').split(',');
+       const selected = (process.env.NFS_PREVIEW_SCENARIOS || 'normal,pending,wrong-role,error,expired,slow,stop-running,chooser-post,chooser-poll').split(',');
        if (selected.includes('normal')) for (const role of ['server', 'client']) for (const width of [1280, 390]) await run(browser, engine, role, width, 'normal');
+       for (const scenario of ['chooser-poll', 'chooser-post'].filter(s => selected.includes(s))) for (const width of [1280, 390]) await run(browser, engine, 'server', width, scenario);
        for (const scenario of ['pending', 'wrong-role', 'error', 'expired', 'slow', 'stop-running'].filter(s => selected.includes(s))) await run(browser, engine, 'client', 390, scenario);
      } finally { await browser.close(); }
    }
