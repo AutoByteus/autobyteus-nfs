@@ -1,0 +1,19 @@
+{
+  "case": "API-04",
+  "date": "2026-10-24T17:19:00.296799+00:00",
+  "round": "API-REV-001",
+  "result": "Pass",
+  "confidence": 95.0,
+  "classification": {
+    "task_size": "Small",
+    "architectural_risk": "Low",
+    "route": "Direct Low-Risk"
+  },
+  "testReview": "Not Required \u2014 direct low-risk route",
+  "rulesSource": "fresh get_handoff_rules after completed result",
+  "selectedWhen": "When API/E2E validation passes on the direct route, the carried classification is task_size=Small or Medium and architectural_risk=Low, no durable test-code review is required by policy, and the complete validated package is ready for delivery, documentation sync, finalization, or release work.",
+  "recipient_address": "/software_engineering_team/delivery_engineer",
+  "singleRecipient": true,
+  "releaseAuthorized": false,
+  "dispatchStatus": "Prepared; message transport receipt follows committed package"
+}

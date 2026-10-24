@@ -1,0 +1,32 @@
+{
+  "case": "API-01",
+  "date": "2026-10-24T17:15:37.586906+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "environment": "API local read-only audit; reused execution Mac26.5.2arm64 Go1.27.2/Python3.9.6",
+  "command": "python3 evidence/API-01-audit.py from NFS worktree",
+  "reused": "IMP02/03/04/05; actual raw results and durable assertions inspected",
+  "productionDeltaSinceChecks": [],
+  "finalTestDelta": [],
+  "earlierTestOnlyDelta": [
+    "internal/dashboard/feedback_fixture_test.go"
+  ],
+  "counts": {
+    "baselineRed": 12,
+    "adaptedGreen": 12,
+    "racePackages": 10,
+    "finalRoleOutcomes": 20
+  },
+  "python": {
+    "collected": 78,
+    "executed": 77,
+    "expectedChildSkip": 1
+  },
+  "sourceHash": "fbc95116f926879d24075493d82426226e08cec33508c13e7423c2719ad1ae46",
+  "result": "Pass",
+  "limits": [
+    "No Go/Python/browser suite rerun by API",
+    "Four targets compile only; Macarm64 runtime only",
+    "Protocol children are ordinary-user doubles, not OS approval/storage qualification"
+  ],
+  "inspectionAttempt": "Initial interactive grep treated a dash-prefixed pattern as an option and failed before inspecting counts; this audit uses Python regex. No test/product failure."
+}

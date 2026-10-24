@@ -1,0 +1,29 @@
+{
+  "case": "API-04",
+  "date": "2026-10-24T17:17:22.949497+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "command": "python3 evidence/API-04-cleanup.py from worktree",
+  "environment": "Macarm64 own source/toolchain/cache; no browser/native/privileged resources",
+  "verifiedCurrentInputs": 179,
+  "mismatches": [],
+  "sourceHash": "fbc95116f926879d24075493d82426226e08cec33508c13e7423c2719ad1ae46",
+  "changedNonTicketPaths": [
+    "TESTING.md",
+    "docs/dashboard.md",
+    "internal/dashboard/browser.go",
+    "internal/dashboard/feedback_fixture_test.go",
+    "internal/dashboard/feedback_test.go",
+    "internal/dashboard/privilege.go",
+    "internal/dashboard/privilege_test.go",
+    "internal/dashboard/session.go",
+    "internal/dashboard/terminal.go",
+    "internal/dashboard/terminal_test.go"
+  ],
+  "unmodifiedProtectedOwners": "admin/adminwire/CLI/config/setup/service/platform/backend/docker/assets/HTTP/installer/workflows/locks",
+  "ownedProcessesBeforeRemoval": [],
+  "ownedScratch": "/Users/normy/nfs-feedback-api-bgwkoluo",
+  "scratchRemoved": true,
+  "implementationScratchStillAbsent": true,
+  "result": "Pass",
+  "cleanup": "Restored mutant, verified all inputs, removed only own private source/Go/build/cache/HOME/TMP. No operator/installed/PM/canonical/retained assets touched."
+}

@@ -1,0 +1,49 @@
+{
+  "case": "API-03",
+  "date": "2026-10-24T17:17:20.531333+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "executionSource": "459c02f; no production delta through current",
+  "environment": "Reused IMP06 Mac26.5.2arm64 PTY/Chromium156.0.8078.4;1100x900",
+  "command": "Inspect IMP06 source/PTY/browser drivers, six raw transcripts/results and two screenshots",
+  "cases": [
+    {
+      "role": "server",
+      "mode": "success",
+      "transcript": "IMP-06-server-success-transcript.log",
+      "result": "Pass"
+    },
+    {
+      "role": "client",
+      "mode": "success",
+      "transcript": "IMP-06-client-success-transcript.log",
+      "result": "Pass"
+    },
+    {
+      "role": "server",
+      "mode": "denied",
+      "transcript": "IMP-06-server-denied-transcript.log",
+      "result": "Pass"
+    },
+    {
+      "role": "client",
+      "mode": "refused",
+      "transcript": "IMP-06-client-refused-transcript.log",
+      "result": "Pass"
+    },
+    {
+      "role": "server",
+      "mode": "hold-hello",
+      "transcript": "IMP-06-server-hold-hello-transcript.log",
+      "result": "Pass"
+    },
+    {
+      "role": "client",
+      "mode": "hold-inspect",
+      "transcript": "IMP-06-client-hold-inspect-transcript.log",
+      "result": "Pass"
+    }
+  ],
+  "renderedInspection": "Personally viewed server/client ready PNGs: distinct role titles, metadata-only explanation, expected forms, Stop/Inspect and safety text; no visible overlap. No layout change. Images are retained, not a new live browser run.",
+  "limits": "Current Session/HTTP/assets and real PTY; ordinary-user root protocol double and fixture signal/Stop adapter. NOT Run/OS opener, sudo/password/cache/denial, storage/field proof. Failed attempts1/2 preserved; absolute argv0 correction only.",
+  "result": "Pass"
+}

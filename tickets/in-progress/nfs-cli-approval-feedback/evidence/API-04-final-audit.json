@@ -1,0 +1,13 @@
+{
+  "case": "API-04",
+  "date": "2026-10-24T17:18:40.533829+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "command": "read-only Git scope/JSON/Python parse/private capability URL audit",
+  "environment": "Macarm64 local artifacts only",
+  "newOwnedFiles": 15,
+  "changedTrackedInputs": [],
+  "upstreamEvidenceUnchanged": true,
+  "cleanupConfirmed": true,
+  "result": "Pass",
+  "rawLogException": "API-02-mutant.log preserves Go assertion blank-line indentation; no source/doc whitespace exemption"
+}

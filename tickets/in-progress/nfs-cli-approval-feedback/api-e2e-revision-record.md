@@ -1,0 +1,9 @@
+# API/E2E revision record — nfs-cli-approval-feedback / autobyteus-nfs-7
+
+## API-REV-001 — 2026-10-24 initial direct validation
+- Input IR0014cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa; production459c02f; finaltests e15e5e8. R1/SR001 Approved, SR002 Ready, Small/Low/Direct. ARCH/CRR/priorAPI/DR N/A; no UUID inferred.
+- **Pass95.00%**; postrepository92.86. Required realistic PTY/page evidence satisfied by unchanged valid IMP06 reuse, no needless rerun. Current full/focused/canary/timer/security evidence reused with actual logs/assertions/input audit, not reattributed as API execution.
+- API01 repository proof; API02 lifecycle/timer/negative sensitivity; API03 actual six PTY/page journeys; API04 identity/privacy/protected boundaries/cleanup. All six ACs proven with explicit OS/root/Run/field limitations.
+- Evidence correction: IMP07 Stop mutant was compilation failure, not assertion kill. Excluded from confidence, raw history unchanged. Personally ran focused current Stop test (all3stages Pass), syntactically valid isolated mutant (all3 intended late-phase assertions Fail), restored exact source then removed scratch. Valid IMP07 known-dead control carried. No production bug/durable-test edit/new design loop.
+- Own179file source/toolchain/cache/private HOME/tmp/build scratch removed; no matching process. No VM/browser/OS sudo/storage/credentials/installed-user or other project resources touched. Initial API grep inspection syntax error and upstream PTY harness failures disclosed, no false test pass.
+- Canonical plan/report/progress own current truth; Cases and AC Proof carry exact scopes/raw references. Successful test review **Not Required — direct low-risk route**. Fresh rules select normal Delivery after this committed package; no release/target action/TaskDone/user verification by API.

@@ -1,0 +1,25 @@
+{
+  "case": "API-02",
+  "date": "2026-10-24T17:16:57.022375+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "environment": "reused current Macarm64 race tests + new Macarm64 Go1.27.2 native focused control (no race repeat)",
+  "command": "read IMP04/07 raw results/assertions; python3 evidence/API-02-control.py",
+  "reusedTests": [
+    "TestHeldPhasesDedupAndExplicitNewAttempt",
+    "TestStopSuppressesFeedbackButDrainsAdmittedWork",
+    "TestInspectionCleanupPrecedesRetryGuidance",
+    "TestKnownDeadHelperCannotReportReady",
+    "TestHeldApprovalTenSecondReminderIsNotAuthority",
+    "TestTerminalReminderGenerationAndStop",
+    "TestTerminalConcurrentOutputAndStop",
+    "TestTerminalWriteFailureDoesNotControlOperation"
+  ],
+  "realHeldHelloReminderSeconds": 10.003424333,
+  "manualScheduler": "other phase/generation reminders; no forced root timeout",
+  "mutationDisposition": {
+    "IMP07Stop": "Invalid: syntax/build failure, excluded",
+    "IMP07KnownDead": "Valid: intended TestKnownDeadHelperCannotReportReady assertion",
+    "API02Stop": "Valid fresh current0 versus mutant1/late phase after Stop; all3 stages; restored bytes"
+  },
+  "result": "Pass"
+}
