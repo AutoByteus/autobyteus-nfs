@@ -263,3 +263,7 @@ See IMP-18-feedback.md. No native/browser password or filesystem proof is claime
 IR002 private scratch/toolchain/preview/browser contexts are removed, no owned
 process left (IMP20). Initial invalid Go timeout argument is preserved as a harness
 failure; corrected affected command passes. No new product/design finding.
+
+IR002 durable evidence/docs package: `88c27bc14471fadb299350bd9d4b47c2300fe4ad`;
+source/tests `7b0577a4f2637ddf12a74a0156e4243a41a3719c`. This receipt changes only
+this handoff; no product delta after the passing affected checks.
