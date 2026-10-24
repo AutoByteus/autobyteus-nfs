@@ -1,0 +1,30 @@
+# API-06 round2 | 2026-10-24 | current34afb80/7b0577a4 | Macarm64 private scratch | command in adjacent script/environment; original output follows
+{
+  "case": "API-06",
+  "round": "API-REV-002",
+  "date": "2026-10-24T14:04:04.263832+00:00",
+  "commit": "34afb80caa80afa293cabc1d2786618a3c9516bc",
+  "command": "python3 evidence/API-06-02-cleanup.py",
+  "environment": "Macarm64 own rootless preview only",
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "verifiedInputs": 166,
+  "mismatches": [],
+  "matchingProcessesBeforeRemoval": [],
+  "probeExit": [
+    {
+      "exit": 0,
+      "signal": null,
+      "diagnostic": "PASS\n"
+    },
+    {
+      "exit": 0,
+      "signal": null,
+      "diagnostic": "PASS\n"
+    }
+  ],
+  "ownedScratch": "/Users/normy/nfs-dashboard-api002-ldtr6ine",
+  "nativeResourcesCreated": false,
+  "otherResources": "No VM/sudo/root/NFS/Docker/installer/clipboard/provider/user profile/retained engine access or mutation",
+  "scratchRemoved": true,
+  "result": "Pass"
+}

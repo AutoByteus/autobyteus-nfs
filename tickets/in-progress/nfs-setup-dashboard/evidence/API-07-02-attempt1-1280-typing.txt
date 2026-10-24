@@ -1,0 +1,69 @@
+API07 round2; 2026-10-24T14:02:11.185Z; 34afb80caa80afa293cabc1d2786618a3c9516bc; Mac Chrome156.0.8078.47; actual DOM
+N
+AutoByteus NFS
+LOCAL SETUP DASHBOARD
+Stop dashboard
+
+SERVER · SHARE FROM THIS COMPUTER
+
+Set up shared storage
+
+Choose a folder, review the plan, then share it on your private network.
+
+Not configured. Prepare a server or client plan below.
+
+THIS COMPUTER
+
+No storage configured
+
+Inspect reads private metadata only. It does not check mounted storage or reconnect it.
+
+Inspect configuration
+
+02 · PREPARE A PLAN
+
+Share a folder from this computer
+Folder to share
+Browse folders
+
+Existing files stay in place. Or choose one new child folder below an existing parent. Do not share your home, system, or private application directory.
+
+Private IPv4 address of this computer
+Trusted client addresses or subnets
+
+Every allowed host can access the export. Use a trusted private network; NFS traffic is plaintext.
+
+Storage backend
+Native macOS NFS
+Local mount root
+
+An occupied directory will not be hidden or replaced.
+
+Prepare review
+
+BEFORE YOU START
+
+Local control. Explicit changes.
+This dashboard listens only on this computer. Keep its private URL to yourself.
+Administrator approval stays in your terminal. Review and apply are separate steps.
+Checks and changes can wait for unavailable storage. Restore storage and wait; there is no forced retry.
+Stopping this dashboard does not disconnect storage. Use the reviewed disconnect action after draining users.
+
+Field/shared-filesystem and user testing remain deferred. A build or signature is not field qualification.
+
+Standalone host storage · No application or workspace integration
+Choose a folder
+Close
+
+Only directories readable by your ordinary user are listed. No files are opened or folders created.
+
+Absolute directory path
+List folders
+
+Choose this directory, or open a child directory.
+
+visible-folder
+Parent folder
+Use this folder
+
+If a listing waits on storage, close this chooser and enter a path manually.

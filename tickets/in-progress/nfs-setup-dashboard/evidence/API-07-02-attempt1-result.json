@@ -1,0 +1,250 @@
+{
+  "case": "API-07",
+  "round": "API-REV-002",
+  "date": "2026-10-24T14:02:11.185Z",
+  "commit": "34afb80caa80afa293cabc1d2786618a3c9516bc",
+  "command": [
+    "/Users/normy/.hermes/node/bin/node",
+    "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-02-browser.cjs"
+  ],
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "source": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+    "previewSHA256": "99d8291bc475165a69111d1bfea9a186eb4feb751c6c56fd7f97b1063e5f8e3f",
+    "rootBoundary": "subprocess root-protocol double, inspect only; real ordinary-user directory IO",
+    "browser": "new private sandboxed Chrome profile",
+    "clipboard": "unused",
+    "timing": "actual responses; no route/response/clock double",
+    "browserVersion": "156.0.8078.47",
+    "sandboxProcessEvidence": [
+      "58610 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/Users/normy/nfs-dashboard-api002-ldtr6ine/tmp/playwright_chromiumdev_profile-QsPldn --remote-debugging-pipe --no-startup-window",
+      "58618 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless --enable-unsafe-swiftshader --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api002-ldtr6ine/tmp/playwright_chromiumdev_profile-QsPldn --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,2460337775007543804,9614191312340558480,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,2782164490922053501,8198135941222884301,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=29",
+      "58619 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=de --service-sandbox-type=network --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api002-ldtr6ine/tmp/playwright_chromiumdev_profile-QsPldn --shared-files --field-trial-handle=1718379636,r,2460337775007543804,9614191312340558480,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,2782164490922053501,8198135941222884301,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=27",
+      "58620 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=de --service-sandbox-type=service --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api002-ldtr6ine/tmp/playwright_chromiumdev_profile-QsPldn --shared-files --field-trial-handle=1718379636,r,2460337775007543804,9614191312340558480,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,2782164490922053501,8198135941222884301,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=55",
+      "58621 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (Alerts).app/Contents/MacOS/Google Chrome Helper (Alerts) --type=utility --utility-sub-type=mac_notifications.mojom.MacNotificationProvider --lang=de --service-sandbox-type=none --mute-audio --message-loop-type-ui --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api002-ldtr6ine/tmp/playwright_chromiumdev_profile-QsPldn --shared-files --field-trial-handle=1718379636,r,2460337775007543804,9614191312340558480,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,2782164490922053501,8198135941222884301,4 --trace-process-track-uuid=3190708990997080739"
+    ]
+  },
+  "runs": [
+    {
+      "width": 1280,
+      "steps": [
+        {
+          "name": "original-natural-keyboard-edit-preserved",
+          "result": "Pass",
+          "expected": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+          "actual": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder"
+        },
+        {
+          "name": "same-settled-native-key-control",
+          "result": "Pass"
+        },
+        {
+          "name": "explicit-list-exact-draft",
+          "result": "Pass"
+        },
+        {
+          "name": "parent-directory-only-navigation",
+          "result": "Pass"
+        },
+        {
+          "name": "child-selection-exact-source",
+          "result": "Pass"
+        },
+        {
+          "name": "reopen-selected-source",
+          "result": "Pass"
+        },
+        {
+          "name": "failed-list-preserves-correctable-draft",
+          "result": "Pass"
+        },
+        {
+          "name": "correction-requires-explicit-list",
+          "result": "Pass"
+        },
+        {
+          "name": "no-browser-errors-or-overflow",
+          "result": "Pass"
+        }
+      ],
+      "responses": [
+        {
+          "at": 1792850538411,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850538916,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine",
+            "names": [
+              "visible-folder"
+            ],
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850550477,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850550977,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850551027,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850551528,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine",
+            "names": [
+              "visible-folder"
+            ],
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850551576,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850552078,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850552160,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850552662,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850552693,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/not-created",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850553195,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/not-created",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false,
+            "error": "lstat /Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/not-created: no such file or directory"
+          }
+        },
+        {
+          "at": 1792850553226,
+          "method": "POST",
+          "status": 202,
+          "body": {
+            "state": "running",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "tooMany": false
+          }
+        },
+        {
+          "at": 1792850553728,
+          "method": "GET",
+          "status": 200,
+          "body": {
+            "state": "complete",
+            "path": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io",
+            "parent": "/Users/normy/nfs-dashboard-api002-ldtr6ine",
+            "names": [
+              "visible-folder"
+            ],
+            "tooMany": false
+          }
+        }
+      ],
+      "typing": {
+        "expected": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+        "actual": "/Users/normy/nfs-dashboard-api002-ldtr6ine/natural-CS99io/visible-folder",
+        "began": 1792850538408,
+        "finished": 1792850544364,
+        "nativeKeyboardDelayMs": 80
+      },
+      "result": "Fail",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '[redacted expired preview token]'\n- null\n\n    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-02-browser.cjs:54:12",
+      "terminal": {
+        "exit": 0,
+        "signal": null,
+        "diagnostic": "PASS\n"
+      },
+      "directoryRemoved": true
+    }
+  ],
+  "result": "Fail",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '[redacted expired preview token]'\n- null\n\n    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-02-browser.cjs:54:12",
+  "cleanup": "own browser contexts/preview subprocesses/directory fixtures closed; toolchain/source scratch pending API06"
+}

@@ -1,0 +1,24 @@
+{
+  "case": "API-06",
+  "round": "API-REV-002",
+  "date": "2026-10-24T14:05:49.863541+00:00",
+  "result": "Pass",
+  "confidence": 95.0,
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High",
+    "route": "Reviewed"
+  },
+  "rulesSource": "fresh get_handoff_rules after completed API002 result",
+  "selectedWhen": "When API/E2E validation passes, the carried classification is task_size=Large or architectural_risk=High, and the cumulative evidence package requires proportional test-code review.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "requestedAction": "Proportional successful-test review, not failure-origin or full source rereview",
+  "durableCoveragePaths": [
+    "internal/dashboard/__tests__/chooser.cjs",
+    "internal/dashboard/__tests__/browser.cjs"
+  ],
+  "apiOwnedDurableChanges": [],
+  "singleRecipient": true,
+  "dispatchStatus": "Prepared; transport receipt follows committed evidence",
+  "noOtherOutcomeDispatch": true
+}
