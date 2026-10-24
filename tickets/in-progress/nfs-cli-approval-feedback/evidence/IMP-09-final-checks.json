@@ -1,0 +1,34 @@
+{
+  "check": "IMP-09",
+  "date": "2026-10-24",
+  "head": "e15e5e8b00b37ccf1c36f17b87a140ab2ff1bade",
+  "production": "459c02f666e7d988adb87ba1a351f7289d3e8790",
+  "productWhitespace": "pass",
+  "stagedNonLogWhitespace": "pass",
+  "rawLogWhitespaceException": {
+    "count": 93,
+    "paths": [
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-04-go-race.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-attempt2-console.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-attempt2-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-hold-inspect-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-hold-inspect.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-refused-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-refused.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-success-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-client-success.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-denied-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-denied.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-hold-hello-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-hold-hello.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-success-transcript.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-server-success.log",
+      "tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-07-mutation-dead-helper.log"
+    ],
+    "reason": "Preserve exact Go flag help/blank diagnostic indentation and actual PTY CRLF output; no code/doc whitespace exception."
+  },
+  "stagedExistingOwnerFilesModified": [],
+  "ownedScratchAbsent": true,
+  "taskClassification": "Small/Low",
+  "result": "Implementation checks complete; ready for direct API/E2E; no release or OS/storage acceptance"
+}

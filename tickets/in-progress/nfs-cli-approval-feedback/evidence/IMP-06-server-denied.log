@@ -1,0 +1,8 @@
+# IMP-06 | IR001 source | Macarm64 PTY/current Session, no sudo | 2026-10-24
+Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+Administrator access was not confirmed. Approval may have been denied/cancelled or the helper failed to start. Review the terminal diagnostic, then reopen and authorize again.
+Fixture stopping admission; draining current Session. Storage is NOT disconnected.
+Fixture drain complete.
+
+submitted
+browser-complete

@@ -1,0 +1,10 @@
+# IMP-06 attempt2 | 459c02f | owned Macarm64 | 2026-10-24
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-approval-feedback/tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-pty.py", line 36, in <module>
+    wait(lambda:'Fixture drain complete.' in output)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-approval-feedback/tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-pty.py", line 23, in wait
+    if time.monotonic()>end:raise AssertionError('fixture wait timed out; '+output)
+AssertionError: fixture wait timed out; Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+Could not start the administrator helper. Reopen this command as an ordinary user in an interactive terminal and authorize again; review the terminal diagnostic.
+
+# exit=1

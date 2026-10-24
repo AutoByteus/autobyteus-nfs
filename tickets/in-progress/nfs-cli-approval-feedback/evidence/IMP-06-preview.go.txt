@@ -1,0 +1,44 @@
+// IMP-06 | current IR001 source | 2026-10-24 | Macarm64 owned PTY/browser fixture
+// Copied only into independent clone, not a product/OS-approval path.
+//go:build dashboardpreview
+
+package dashboard
+import (
+ "context"
+ "encoding/json"
+ "os"
+ "os/exec"
+ "os/signal"
+ "path/filepath"
+ "testing"
+ "time"
+ "github.com/AutoByteus/autobyteus-nfs/internal/adminwire"
+)
+func TestFeedbackPreview(t *testing.T) {
+ dir:=os.Getenv("NFS_FB_DIR");if dir==""{t.Fatal("owned private fixture directory required")}
+ mode,role:=os.Getenv("NFS_FB_MODE"),os.Getenv("NFS_FB_ROLE")
+ if os.Getenv("NFS_FB_CHILD")=="1"{
+  signal.Ignore(os.Interrupt) // controlled admitted work survives parent PTY Ctrl-C
+  wait:=func(name string){for{if _,err:=os.Stat(filepath.Join(dir,name));err==nil{return};time.Sleep(10*time.Millisecond)}}
+  wait("hello");if mode=="denied"{os.Exit(1)}
+  hello,_:=json.Marshal(adminwire.Hello{Role:role,Digest:"preview-only"})
+  adminwire.Write(os.Stdout,adminwire.Reply{Version:1,Kind:"hello",Data:hello},adminwire.ReplyLimit)
+  scan:=adminwire.NewReader(os.Stdin,adminwire.RequestLimit)
+  for scan.Scan(){var req adminwire.Request;if adminwire.Decode(scan.Bytes(),&req)!=nil||req.Kind!="inspect"{os.Exit(3)}
+   wait("inspect");reply:=adminwire.Reply{Version:1,ID:req.ID,Kind:req.Kind,Data:json.RawMessage(`{"state":"empty"}`)}
+   if mode=="refused"{reply.Error=&adminwire.Failure{Code:"fixture",Detail:"Controlled inspection refusal"}}
+   adminwire.Write(os.Stdout,reply,adminwire.ReplyLimit)
+  };os.Exit(0)
+ }
+ launch:=func()(*exec.Cmd,string,error){cmd:=exec.Command(os.Args[0],"-test.run=^TestFeedbackPreview$");cmd.Env=append(os.Environ(),"NFS_FB_CHILD=1");cmd.Stderr=os.Stderr;return cmd,"preview-only",nil}
+ s,err:=New(role,launch);if err!=nil{t.Fatal(err)}
+ s.terminal.setOutput(os.Stderr)
+ go s.http.Serve(s.listener)
+ // Private URL never enters the PTY transcript or durable result.
+ data,_:=json.Marshal(map[string]string{"url":s.origin+"/#"+s.secret})
+ if err=os.WriteFile(filepath.Join(dir,"connection.json"),data,0600);err!=nil{t.Fatal(err)}
+ ctx,cancel:=signal.NotifyContext(context.Background(),os.Interrupt);defer cancel()
+ select{case <-ctx.Done():s.Stop();case <-s.stop:}
+ s.terminal.print("Fixture stopping admission; draining current Session. Storage is NOT disconnected.")
+ shutdown,done:=context.WithTimeout(context.Background(),5*time.Second);s.http.Shutdown(shutdown);done();s.Drain();s.terminal.print("Fixture drain complete.")
+}

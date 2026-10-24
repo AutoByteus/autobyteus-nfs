@@ -1,0 +1,41 @@
+{
+  "check": "IMP-08",
+  "date": "2026-10-24",
+  "commit": "459c02f666e7d988adb87ba1a351f7289d3e8790",
+  "base": "cb9475d9ab6b49392ad2ba7fe1ed1338f02cacd2",
+  "classification": "Small/Low confirmed",
+  "scopeFiles": [
+    "TESTING.md",
+    "docs/dashboard.md",
+    "internal/dashboard/browser.go",
+    "internal/dashboard/feedback_fixture_test.go",
+    "internal/dashboard/feedback_test.go",
+    "internal/dashboard/privilege.go",
+    "internal/dashboard/privilege_test.go",
+    "internal/dashboard/session.go",
+    "internal/dashboard/terminal.go",
+    "internal/dashboard/terminal_test.go"
+  ],
+  "productionNonemptyLines": {
+    "internal/dashboard/browser.go": 98,
+    "internal/dashboard/privilege.go": 132,
+    "internal/dashboard/session.go": 225,
+    "internal/dashboard/terminal.go": 92
+  },
+  "protectedAreasDelta": "",
+  "upstreamTicketDelta": "",
+  "independentCloneClean": true,
+  "findings": [],
+  "observations": [
+    "Session remains only authorization/operation owner; terminal observer never calls operations",
+    "Original launch/hello/version/role/digest/correlation/pipe-close/wait logic preserved; only known local start errors wrapped",
+    "One-shot10s timer is invalidated by transition/Stop, writer serializes parent feedback; OS stderr unchanged",
+    "Stop lock order Session then terminal; callback never takes Session lock and Timer.Stop never joins callback",
+    "Original HTTP/operation schema and metadata-only inspect call unchanged",
+    "Removed PID-only transport log/log parameter/raw Session writer and dead fmt/io imports; no compatibility adapter",
+    "No source file over500 nonempty lines or changed production delta over220",
+    "Visual browser source unchanged; inspected both1100x900 ready captures and six terminal/current-page journeys; no in-scope visual defect"
+  ],
+  "finalTestCommit": "e15e5e8b00b37ccf1c36f17b87a140ab2ff1bade",
+  "testRefinement": "Typed Configuration now models actual configured opposite-role metadata rather than using a synthetic state label; all affected dashboard race tests rerun."
+}

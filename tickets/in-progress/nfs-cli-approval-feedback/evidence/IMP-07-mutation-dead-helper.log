@@ -1,0 +1,11 @@
+# IMP-07 | 459c02f + named disposable mutation | Macarm64 | 2026-10-24
+# /Users/normy/nfs-feedback-imp-2yx9e38n/go/bin/go test ./internal/dashboard -run ^TestKnownDeadHelperCannotReportReady$ -count=1 -timeout=30s
+--- FAIL: TestKnownDeadHelperCannotReportReady (0.01s)
+    feedback_test.go:232: Dashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.
+        Setup controls are ready; this has not created a share, connected storage or checked storage readiness.
+        
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	0.454s
+FAIL
+
+# exit=1

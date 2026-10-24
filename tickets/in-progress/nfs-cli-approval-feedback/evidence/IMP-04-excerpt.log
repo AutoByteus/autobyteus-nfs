@@ -1,0 +1,16 @@
+# IMP-04 excerpt | 459c02f | Macarm64 Go1.27.2 | 2026-10-24
+# Full verbose result: IMP-04-go-race.log
+# IMP-04-go-race | 459c02f666e7d988adb87ba1a351f7289d3e8790 | Mac26.5.2arm64 Go1.27.2 independent clone | 2026-10-24
+# command: /Users/normy/nfs-feedback-imp-2yx9e38n/go/bin/go test -race -count=1 -v ./...
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/admin	2.865s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.963s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	2.417s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	2.585s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	3.042s
+    feedback_test.go:249: actual held-hello reminder after 10.01391175s; still running, not authorized
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	41.315s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	6.015s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	11.348s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	5.354s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	5.424s
+# exit=0

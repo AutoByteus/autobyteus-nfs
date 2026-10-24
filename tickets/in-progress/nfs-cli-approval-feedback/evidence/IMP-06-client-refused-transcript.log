@@ -1,0 +1,7 @@
+# IMP-06 | 459c02f | current Session/PTY fixture | 2026-10-24
+Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+Administrator access confirmed.
+Preparing setup controls—reading saved configuration…
+Administrator access is confirmed, but saved configuration could not be read. Review the dashboard error and use Inspect configuration before retrying setup.
+Fixture stopping admission; draining current Session. Storage is NOT disconnected.
+Fixture drain complete.

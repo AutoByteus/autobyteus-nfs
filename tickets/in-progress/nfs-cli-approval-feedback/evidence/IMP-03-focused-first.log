@@ -1,0 +1,132 @@
+# IMP-03 | cb9475d9 + working implementation (product equals459c02f), supplied probe capture adapted | Macarm64 Go1.27.2 | 2026-10-24
+# command: go test -race ./internal/dashboard -count=1 -v; actual exit0
+=== RUN   TestApprovalFeedbackProbeChild
+--- PASS: TestApprovalFeedbackProbeChild (0.00s)
+=== RUN   TestApprovalFeedbackProbe
+=== RUN   TestApprovalFeedbackProbe/server/empty
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/server/configured
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/server/pending
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/server/inspect-error
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nAdministrator access is confirmed, but saved configuration could not be read. Review the dashboard error and use Inspect configuration before retrying setup.\n"
+=== RUN   TestApprovalFeedbackProbe/server/denied
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access was not confirmed. Approval may have been denied/cancelled or the helper failed to start. Review the terminal diagnostic, then reopen and authorize again.\n"
+=== RUN   TestApprovalFeedbackProbe/server/mismatch
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access was not confirmed. Approval may have been denied/cancelled or the helper failed to start. Review the terminal diagnostic, then reopen and authorize again.\n"
+=== RUN   TestApprovalFeedbackProbe/client/empty
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/client/configured
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/client/pending
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nDashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.\nSetup controls are ready; this has not created a share, connected storage or checked storage readiness.\n"
+=== RUN   TestApprovalFeedbackProbe/client/inspect-error
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=true terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access confirmed.\nPreparing setup controls—reading saved configuration…\nAdministrator access is confirmed, but saved configuration could not be read. Review the dashboard error and use Inspect configuration before retrying setup.\n"
+=== RUN   TestApprovalFeedbackProbe/client/denied
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access was not confirmed. Approval may have been denied/cancelled or the helper failed to start. Review the terminal diagnostic, then reopen and authorize again.\n"
+=== RUN   TestApprovalFeedbackProbe/client/mismatch
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.\nAdministrator access was not confirmed. Approval may have been denied/cancelled or the helper failed to start. Review the terminal diagnostic, then reopen and authorize again.\n"
+--- PASS: TestApprovalFeedbackProbe (10.38s)
+    --- PASS: TestApprovalFeedbackProbe/server/empty (1.03s)
+    --- PASS: TestApprovalFeedbackProbe/server/configured (1.04s)
+    --- PASS: TestApprovalFeedbackProbe/server/pending (1.04s)
+    --- PASS: TestApprovalFeedbackProbe/server/inspect-error (1.02s)
+    --- PASS: TestApprovalFeedbackProbe/server/denied (0.01s)
+    --- PASS: TestApprovalFeedbackProbe/server/mismatch (1.02s)
+    --- PASS: TestApprovalFeedbackProbe/client/empty (1.03s)
+    --- PASS: TestApprovalFeedbackProbe/client/configured (1.04s)
+    --- PASS: TestApprovalFeedbackProbe/client/pending (1.04s)
+    --- PASS: TestApprovalFeedbackProbe/client/inspect-error (1.04s)
+    --- PASS: TestApprovalFeedbackProbe/client/denied (0.03s)
+    --- PASS: TestApprovalFeedbackProbe/client/mismatch (1.03s)
+=== RUN   TestFeedbackChild
+--- PASS: TestFeedbackChild (0.00s)
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/empty
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/configured
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/pending
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/opposite-role
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/refused
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/denied
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/digest
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/role
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/version
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/server/lost
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/empty
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/configured
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/pending
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/opposite-role
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/refused
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/denied
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/digest
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/role
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/version
+=== RUN   TestAuthorizationFeedbackBothRolesAndOutcomes/client/lost
+--- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes (16.48s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/empty (1.04s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/configured (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/pending (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/opposite-role (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/refused (1.04s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/denied (0.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/digest (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/role (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/version (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/server/lost (0.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/empty (1.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/configured (1.02s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/pending (1.02s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/opposite-role (1.02s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/refused (1.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/denied (0.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/digest (1.01s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/role (1.02s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/version (1.03s)
+    --- PASS: TestAuthorizationFeedbackBothRolesAndOutcomes/client/lost (0.02s)
+=== RUN   TestLocalHelperStartFailureCategory
+=== RUN   TestLocalHelperStartFailureCategory/launch
+=== RUN   TestLocalHelperStartFailureCategory/stdin
+=== RUN   TestLocalHelperStartFailureCategory/stdout
+=== RUN   TestLocalHelperStartFailureCategory/start
+--- PASS: TestLocalHelperStartFailureCategory (0.01s)
+    --- PASS: TestLocalHelperStartFailureCategory/launch (0.00s)
+    --- PASS: TestLocalHelperStartFailureCategory/stdin (0.00s)
+    --- PASS: TestLocalHelperStartFailureCategory/stdout (0.00s)
+    --- PASS: TestLocalHelperStartFailureCategory/start (0.00s)
+=== RUN   TestHeldPhasesDedupAndExplicitNewAttempt
+--- PASS: TestHeldPhasesDedupAndExplicitNewAttempt (2.03s)
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/hello
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup
+--- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork (2.11s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/hello (1.03s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect (1.04s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup (0.04s)
+=== RUN   TestInspectionCleanupPrecedesRetryGuidance
+--- PASS: TestInspectionCleanupPrecedesRetryGuidance (0.01s)
+=== RUN   TestKnownDeadHelperCannotReportReady
+--- PASS: TestKnownDeadHelperCannotReportReady (1.02s)
+=== RUN   TestRealHTTPAuthorizationOriginAndBounds
+--- PASS: TestRealHTTPAuthorizationOriginAndBounds (0.01s)
+=== RUN   TestSubmissionDeduplicatesAndNoAutomaticStorageWork
+--- PASS: TestSubmissionDeduplicatesAndNoAutomaticStorageWork (1.03s)
+=== RUN   TestPrivateBootstrapAndDirectoryOnlyChooser
+--- PASS: TestPrivateBootstrapAndDirectoryOnlyChooser (0.00s)
+=== RUN   TestPrivateClientHandshakeAndCorrelation
+=== RUN   TestPrivateClientHandshakeAndCorrelation/current
+=== RUN   TestPrivateClientHandshakeAndCorrelation/mismatch
+=== RUN   TestPrivateClientHandshakeAndCorrelation/wrong-id
+--- PASS: TestPrivateClientHandshakeAndCorrelation (3.07s)
+    --- PASS: TestPrivateClientHandshakeAndCorrelation/current (1.02s)
+    --- PASS: TestPrivateClientHandshakeAndCorrelation/mismatch (1.02s)
+    --- PASS: TestPrivateClientHandshakeAndCorrelation/wrong-id (1.02s)
+=== RUN   TestTerminalReminderGenerationAndStop
+--- PASS: TestTerminalReminderGenerationAndStop (0.00s)
+=== RUN   TestTerminalConcurrentOutputAndStop
+--- PASS: TestTerminalConcurrentOutputAndStop (0.00s)
+=== RUN   TestTerminalWriteFailureDoesNotControlOperation
+--- PASS: TestTerminalWriteFailureDoesNotControlOperation (1.01s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	38.564s

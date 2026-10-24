@@ -1,0 +1,10 @@
+{
+  "id": "IMP-01",
+  "date": "2026-10-24T17:00:48.711261+00:00",
+  "scratch": "/Users/normy/nfs-feedback-imp-2yx9e38n",
+  "input": "cb9475d9ab6b49392ad2ba7fe1ed1338f02cacd2",
+  "host": "Mac26.5.2arm64",
+  "go": "1.27.2",
+  "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5",
+  "scope": "rootless Go subprocess/HTTP/PTY; no sudo/storage/user profile"
+}

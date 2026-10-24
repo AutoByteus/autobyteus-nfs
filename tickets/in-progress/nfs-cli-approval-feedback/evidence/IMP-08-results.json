@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-24",
+  "productionCommit": "459c02f666e7d988adb87ba1a351f7289d3e8790",
+  "finalTests": "e15e5e8b00b37ccf1c36f17b87a140ab2ff1bade",
+  "checks": {
+    "IMP-04-build.log": "exit0",
+    "IMP-04-version.log": "exit0",
+    "IMP-04-compile-darwin-amd64.log": "exit0",
+    "IMP-04-dashboard-final.log": "exit0",
+    "IMP-04-compile-linux-amd64.log": "exit0",
+    "IMP-04-go-race.log": "exit0",
+    "IMP-04-compile-darwin-arm64.log": "exit0",
+    "IMP-04-go-vet.log": "exit0",
+    "IMP-04-compile-linux-arm64.log": "exit0",
+    "IMP-05-python.log": "exit0",
+    "IMP-05-shell.log": "exit0",
+    "IMP-05-source-hash.log": "exit0",
+    "IMP-05-source-hash-final.log": "exit0",
+    "IMP-06-console.log": "exit0"
+  },
+  "goRacePackages": 10,
+  "pythonCollected": 78,
+  "pythonExecuted": 77,
+  "pythonExpectedSkips": 1,
+  "ptyBrowserCases": 6,
+  "mutationControlsKilled": 2,
+  "baselineRedCases": 12,
+  "adaptedProbeGreenCases": 12,
+  "scope": "implementation checks, not API or OS approval/storage qualification"
+}

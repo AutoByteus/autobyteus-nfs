@@ -1,0 +1,8 @@
+# IMP-06 | 459c02f | Macarm64, owned fixture/PTY/browser | 2026-10-24
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-approval-feedback/tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-pty.py", line 34, in <module>
+    wait(lambda:'Fixture drain complete.' in output)
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-cli-approval-feedback/tickets/in-progress/nfs-cli-approval-feedback/evidence/IMP-06-pty.py", line 21, in wait
+    if time.monotonic()>end:raise AssertionError('fixture wait timed out')
+AssertionError: fixture wait timed out
+# exit=1

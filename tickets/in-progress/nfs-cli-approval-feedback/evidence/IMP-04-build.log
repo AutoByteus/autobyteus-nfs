@@ -1,0 +1,3 @@
+# IMP-04-build | 459c02f666e7d988adb87ba1a351f7289d3e8790 | Mac26.5.2arm64 Go1.27.2 independent clone | 2026-10-24
+# command: /Users/normy/nfs-feedback-imp-2yx9e38n/go/bin/go build -o /Users/normy/nfs-feedback-imp-2yx9e38n/autobyteus-nfs ./cmd/autobyteus-nfs
+# exit=0
