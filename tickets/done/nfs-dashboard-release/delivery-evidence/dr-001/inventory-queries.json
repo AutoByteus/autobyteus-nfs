@@ -1,0 +1,52 @@
+[
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/releases?per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/tags?per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?status=queued&per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?status=in_progress&per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?status=waiting&per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?status=requested&per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs/actions/runs?status=pending&per_page=100",
+    "exit": 0,
+    "error": null
+  },
+  {
+    "endpoint": "orgs/AutoByteus/packages/container/autobyteus-nfs",
+    "exit": 1,
+    "error": "gh: You need at least read:packages scope to get a package. (HTTP 403)"
+  },
+  {
+    "endpoint": "repos/AutoByteus/autobyteus-nfs",
+    "exit": 0,
+    "error": null
+  }
+]

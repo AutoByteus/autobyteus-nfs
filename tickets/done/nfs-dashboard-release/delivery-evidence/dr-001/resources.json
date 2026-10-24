@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-24T15:14:58.044998+00:00",
+  "root": "/Users/normy/nfs-dashboard-release-ytwviz3y",
+  "mode": "0o700",
+  "ownerTask": "project_task_212d1619-636c-4ac2-a811-f3224bb1dd22",
+  "purpose": "New owned candidate/final payload/public-download custody and isolated smoke tools; never old candidates or user HOME",
+  "retention": "Keep actual candidate/final payload through publication/recovery. Remove own smoke caches/browser/runtime after gates.",
+  "resources": [],
+  "preparation": {
+    "playwright": "1.64.1",
+    "nativeMac": "26.5.2",
+    "arch": "arm64",
+    "sandboxExecDenyOpenPreparationExit": 0,
+    "notes": "Chromium installed in own directory. Planned public-role smoke will deny only opener execution to keep user browser untouched; actual unmodified public executable, real private terminal/HTTP/browser; never authorize administration or call storage operations. This tests documented fallback, not auto-open success."
+  }
+}

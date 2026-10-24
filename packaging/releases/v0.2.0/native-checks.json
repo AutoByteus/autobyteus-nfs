@@ -1,0 +1,78 @@
+{
+  "result": "passed",
+  "run": 40105960980,
+  "attempt": 1,
+  "sourceCommit": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "workflowCommit": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40105960980",
+  "checks": [
+    {
+      "id": 120908883540,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedSkipped": 1,
+      "skip": "Go-child-only bootstrap regression",
+      "seconds": "47.276",
+      "goRacePackages": 10,
+      "other": "vet, final candidate metadata/build/version and four-member archive passed; individual Go counts unavailable in nonverbose logs",
+      "signing": "Intentionally skipped: build-only"
+    },
+    {
+      "id": 120908883556,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedSkipped": 1,
+      "skip": "Go-child-only bootstrap regression",
+      "seconds": "167.926",
+      "goRacePackages": 10,
+      "other": "vet, final candidate metadata/build/version and four-member archive passed; individual Go counts unavailable in nonverbose logs",
+      "signing": "Intentionally skipped: build-only"
+    },
+    {
+      "id": 120908883564,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedSkipped": 1,
+      "skip": "Go-child-only bootstrap regression",
+      "seconds": "58.958",
+      "goRacePackages": 10,
+      "other": "vet, final candidate metadata/build/version and four-member archive passed; individual Go counts unavailable in nonverbose logs",
+      "signing": "Intentionally skipped: build-only"
+    },
+    {
+      "id": 120908883600,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "result": "success",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedSkipped": 1,
+      "skip": "Go-child-only bootstrap regression",
+      "seconds": "235.418",
+      "goRacePackages": 10,
+      "other": "vet, final candidate metadata/build/version and four-member archive passed; individual Go counts unavailable in nonverbose logs",
+      "signing": "Intentionally skipped: build-only"
+    }
+  ],
+  "rawLog": {
+    "path": "tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate.log",
+    "sha256": "fdf887685d2a0c76bc508cfbb2520e209ace1f95588e558046f2c4a97a7a7b06"
+  },
+  "candidateReference": {
+    "envelope": {
+      "artifactId": 12564664059,
+      "digest": "sha256:ee1b4c1d17aabc781fa155a7f959600bdb362f97576ec58b973e9be2b49ede8c",
+      "expiresAt": "2027-01-22T15:13:08Z",
+      "runAttempt": 1,
+      "runId": 40105960980,
+      "workflowCommit": "74e70809446ce29bb157fb89ebf913388688b63b"
+    },
+    "recordSha256": "a8fe379598ba3397fb9c4e0cd354bc3ed0c7e7cef5bca0ab4a3d3a198b8caa2b"
+  },
+  "meaning": "Current actual4 native build-only checks. Signing steps deliberately skipped; no field/physical/user acceptance."
+}

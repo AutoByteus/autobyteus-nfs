@@ -1,0 +1,73 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Release refused: Release readiness version/targets differ\n"
+  },
+  {
+    "command": [
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate-smoke/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "v0.2.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate-smoke/autobyteus-nfs",
+      "verify-release",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate-smoke/release.json"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "AutoByteus NFS incomplete: this release does not admit the current computer/CPU; no installation performed\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/engine/manifest.py",
+      "lock",
+      "--directory",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate/engine",
+      "--release-lock",
+      "packaging/release-lock.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "exit": 0,
+    "stdout": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

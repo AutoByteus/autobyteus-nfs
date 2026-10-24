@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-24T15:30:44.084828+00:00",
+  "from": "tickets/in-progress/nfs-dashboard-release",
+  "to": "tickets/done/nfs-dashboard-release",
+  "reason": "Guide-verified readiness before source finalization; publication/Task closure not complete",
+  "base": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "pathChecks": "Pass max200/component portability",
+  "oldArtifacts": "v0.1.0 release/recovery13files unchanged; predecessor source archive untouched",
+  "generatedCandidate": "Outside repository, retained own0700 root",
+  "staging": "Explicit new ticket+version evidence and two guide prose files+exact measured lock only"
+}

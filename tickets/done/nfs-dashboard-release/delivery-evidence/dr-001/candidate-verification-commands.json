@@ -1,0 +1,58 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "candidate-envelope",
+      "--artifact-id",
+      "12564664059",
+      "--run-id",
+      "40105960980",
+      "--attempt",
+      "1",
+      "--workflow-commit",
+      "74e70809446ce29bb157fb89ebf913388688b63b",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release/tickets/in-progress/nfs-dashboard-release/delivery-evidence/dr-001/candidate-envelope.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "fetch-candidate",
+      "--envelope",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release/tickets/in-progress/nfs-dashboard-release/delivery-evidence/dr-001/candidate-envelope.json",
+      "--directory",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release/tickets/in-progress/nfs-dashboard-release/delivery-evidence/dr-001/candidate-reference.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--operation",
+      "verify-candidate",
+      "--directory",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate",
+      "--output",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release/tickets/in-progress/nfs-dashboard-release/delivery-evidence/dr-001/candidate-verified.json"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

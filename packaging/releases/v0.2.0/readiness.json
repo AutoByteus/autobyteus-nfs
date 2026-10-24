@@ -1,0 +1,76 @@
+{
+  "authorization": {
+    "evidence": {
+      "path": "packaging/releases/v0.2.0/authorization.json",
+      "sha256": "ef3355c2983a2f2ace35fa3153c67d5cbd04d3195de7115dd7b63bb1adcfcb92"
+    },
+    "kind": "publish-before-field-testing",
+    "requirementsRevision": "R3/SR004",
+    "version": "v0.2.0"
+  },
+  "candidate": {
+    "envelope": {
+      "artifactId": 12564664059,
+      "digest": "sha256:ee1b4c1d17aabc781fa155a7f959600bdb362f97576ec58b973e9be2b49ede8c",
+      "expiresAt": "2027-01-22T15:13:08Z",
+      "runAttempt": 1,
+      "runId": 40105960980,
+      "workflowCommit": "74e70809446ce29bb157fb89ebf913388688b63b"
+    },
+    "recordSha256": "a8fe379598ba3397fb9c4e0cd354bc3ed0c7e7cef5bca0ab4a3d3a198b8caa2b"
+  },
+  "checks": {
+    "native": {
+      "evidence": {
+        "path": "packaging/releases/v0.2.0/native-checks.json",
+        "sha256": "baeb9823ed3e61a3c33b0897f1a82738afa67fc8243ed06a95b56b85357cfc2a"
+      },
+      "status": "passed"
+    },
+    "releaseControls": {
+      "evidence": {
+        "path": "packaging/releases/v0.2.0/release-controls.json",
+        "sha256": "f4e5ceb0fe3b62b265811fccfacb045eed729d111788877778b7982c925c5018"
+      },
+      "status": "passed"
+    }
+  },
+  "engineManifestSha256": "b02f4246f18464deb3c7520cfbb1ca7e4eb24e5092cb4ef08b9f79c12dd3ccf6",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "kind": "release-first",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:1214ce14d7ba41ed391233088f0d4ea55a08e82c70ed83525f65eb04a4069e10",
+      "linux-arm64": "sha256:63030f467782575aa0558fcef215363aceb7a5def90cac280d1b22a967e0ce6e"
+    },
+    "index": "sha256:a3ab84ca0f6ee14b2e0f26c45bbaa4fa82338ebcd37545cdf5fabf3fb2bc3076"
+  },
+  "postpublicationPlan": {
+    "path": "packaging/releases/v0.2.0/postpublication-testing-plan.md",
+    "sha256": "9e3118b93e3e804bfc8ff1fcb48a937c2de42524d0f6592a763d1f4f52d154dd"
+  },
+  "releaseNotes": {
+    "path": "packaging/releases/v0.2.0/release-notes.md",
+    "sha256": "e83af65b15eee437a3876d6af795634e1a7b065c750cea787a11e2a7b7e11045"
+  },
+  "review": {
+    "candidateCommit": "74e70809446ce29bb157fb89ebf913388688b63b",
+    "evidence": {
+      "path": "packaging/releases/v0.2.0/source-review.json",
+      "sha256": "3921e0da04364b4479289603630a0c8f314269474f2e0c24ef1842b89df69ee8"
+    },
+    "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb"
+  },
+  "schema": 1,
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "targets": [
+    "darwin-amd64",
+    "darwin-arm64",
+    "linux-amd64",
+    "linux-arm64"
+  ],
+  "version": "v0.2.0"
+}

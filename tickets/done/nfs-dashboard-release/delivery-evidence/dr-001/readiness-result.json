@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-24T15:29:00.225659+00:00",
+  "result": "Prepublication readiness passed; NOT signing/publication",
+  "version": "v0.2.0",
+  "readiness": {
+    "path": "packaging/releases/v0.2.0/readiness.json",
+    "sha256": "2eba2823301b44836976fd99e57c10c505fb0563874fb05165e9cc1df98b1468"
+  },
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "candidate": {
+    "envelope": {
+      "artifactId": 12564664059,
+      "digest": "sha256:ee1b4c1d17aabc781fa155a7f959600bdb362f97576ec58b973e9be2b49ede8c",
+      "expiresAt": "2027-01-22T15:13:08Z",
+      "runAttempt": 1,
+      "runId": 40105960980,
+      "workflowCommit": "74e70809446ce29bb157fb89ebf913388688b63b"
+    },
+    "recordSha256": "a8fe379598ba3397fb9c4e0cd354bc3ed0c7e7cef5bca0ab4a3d3a198b8caa2b"
+  },
+  "oldReadinessRefused": true,
+  "newReadinessAdmitted": true,
+  "realSigningAndPublicGates": "Pending",
+  "candidateRetained": "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate",
+  "notes": "Reviewed functional notes; exact mandatory disclosure appended by existing publisher, not duplicated in input prose."
+}

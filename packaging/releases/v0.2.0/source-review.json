@@ -1,0 +1,57 @@
+{
+  "result": "passed",
+  "candidateCommit": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "productCommit": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+  "sourceReview": {
+    "revision": "CRR003",
+    "commit": "c223dcb9bf61d196d7f4bd165ff2ca62a8923c9a",
+    "score": 100,
+    "path": "tickets/done/nfs-setup-dashboard/code-review-report.md",
+    "sha256": "7fdc353f60ad57b61cffe231344e4a2853caca73ac0bbd2be3785728c492d18d"
+  },
+  "validation": {
+    "revision": "API002",
+    "score": 95,
+    "path": "tickets/done/nfs-setup-dashboard/api-e2e-execution-coverage-report.md",
+    "sha256": "0f185e0aaa24f25010777c93350ac241133fbdc9816d4480ce3a83cc4290565f",
+    "limits": "Composite client/NOPASSWD/clipboard/virtual native and field limits unchanged; not a release Pass"
+  },
+  "successfulTestGate": {
+    "revision": "CRR004",
+    "commit": "3e652f1e92c590893d929f2e32861ed7f9144fc9",
+    "result": "Not Applicable, no new durable API delta; satisfied",
+    "sha256": "2d8b579d87ad140362c9ba12ea034988db55dbfa2e66d13f96e52d9ab5c6937c"
+  },
+  "interveningChangeReview": {
+    "sourceToCandidateNonTicketPaths": [
+      "TESTING.md",
+      "docs/dashboard.md"
+    ],
+    "candidateToPreparation": "Approved guide prose/new version authority/evidence/notes/plan and exact measured engine lock only. No executable/runtime/test/recipe/signing/installer/workflow drift.",
+    "engineDelta": [
+      {
+        "path": "/architectures/amd64/buildInventory/sha256",
+        "prior": "929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86",
+        "measured": "d16dc3df4070a03fe26d71fbfd0d3dc348312a0cd2b141d97c699cc9c8af6c91"
+      },
+      {
+        "path": "/architectures/amd64/buildInventory/size",
+        "prior": 40381,
+        "measured": 40397
+      },
+      {
+        "path": "/architectures/arm64/buildInventory/sha256",
+        "prior": "1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509",
+        "measured": "539b3d1e1da4444cc938ccbc2af69885aa388c7ceab1acf1ae848e1e06269000"
+      },
+      {
+        "path": "/architectures/arm64/buildInventory/size",
+        "prior": 40134,
+        "measured": 40150
+      }
+    ],
+    "engineMeaning": "Package versions/bytes, corresponding sources, source pins/recipe/patch/base unchanged; two build inventories have actual changed hashes and sizes. WholeOCI actual new identity retained, no reproducibility/old-readiness promotion."
+  },
+  "publicationPermission": "New autobyteus-nfs-5; see current authorization. Original R3/SR004 approval v0.1.0 only, adopted policy not old permission."
+}
