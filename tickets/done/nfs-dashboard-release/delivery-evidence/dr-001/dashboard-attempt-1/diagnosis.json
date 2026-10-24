@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-24T15:56:17.859539+00:00",
+  "result": "Harness assertion failure, not product defect",
+  "cause": "State.Operation is json operation,omitempty. No operation emits absent property/undefined, not null. Actual authorized=false matched before failing expectation. Correct assertion requires absent field; no assertion about a real operation is relaxed.",
+  "source": "internal/dashboard/session.go:43",
+  "nativePID": 72633,
+  "nativeObservedAbsentNow": true,
+  "ownedBrowserProcesses": [],
+  "firstCleanup": "Initial5sec graceful wait did not obtain waitstatus; subsequent own PTY closure/process exit observed. Not claimed clean exit0 for failed attempt. No storage/admin request was sent.",
+  "scratch": "role-server moved to role-server-attempt1 for final owned cleanup; no bootstrap HTML remains"
+}

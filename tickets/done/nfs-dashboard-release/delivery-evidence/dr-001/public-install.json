@@ -1,0 +1,15 @@
+{
+  "result": "Pass",
+  "at": "2026-10-24T15:55:38.170098+00:00",
+  "version": "v0.2.0",
+  "installedBinary": "/Users/normy/nfs-dashboard-release-ytwviz3y/public/home/.local/lib/autobyteus-nfs/v0.2.0/autobyteus-nfs",
+  "home": "/Users/normy/nfs-dashboard-release-ytwviz3y/public/home",
+  "binarySHA256": "3644ec83ae438d8df1c689a405213d2fd840b02b7d4f91c421b2a66d547eae12",
+  "installerExit": 0,
+  "stdout": "v0.2.0\n",
+  "stderr": "Shared-filesystem/physical and user testing is deferred; distribution and signature checks are not field qualification.\n",
+  "installedVersionExit": 0,
+  "noStorageConfiguration": true,
+  "installerScratchRemoved": true,
+  "limits": "Private HOME native Mac ARM64 public install/version only; no user installation or storage setup"
+}

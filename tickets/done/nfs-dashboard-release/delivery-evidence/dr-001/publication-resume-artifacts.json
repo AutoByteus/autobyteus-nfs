@@ -1,0 +1,45 @@
+{
+  "total_count": 2,
+  "artifacts": [
+    {
+      "id": 12566130784,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU2NjEzMDc4NA==",
+      "name": "nfs-publication-receipt",
+      "size_in_bytes": 1112,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12566130784",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12566130784/zip",
+      "expired": false,
+      "digest": "sha256:26312d102f38fba878b94e887e53125019813855d05e66f93ed21844bf00a2a9",
+      "created_at": "2026-10-24T15:53:44Z",
+      "updated_at": "2026-10-24T15:53:44Z",
+      "expires_at": "2027-01-22T15:49:37Z",
+      "workflow_run": {
+        "id": 40108736167,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+      }
+    },
+    {
+      "id": 12565538731,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU2NTUzODczMQ==",
+      "name": "nfs-preflight",
+      "size_in_bytes": 160300861,
+      "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12565538731",
+      "archive_download_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/actions/artifacts/12565538731/zip",
+      "expired": false,
+      "digest": "sha256:53664a9ec6e5b9d283aefe869dd24635501de4c9f06e5801ab8f8b46b21a632a",
+      "created_at": "2026-10-24T15:50:56Z",
+      "updated_at": "2026-10-24T15:50:56Z",
+      "expires_at": "2027-01-22T15:49:37Z",
+      "workflow_run": {
+        "id": 40108736167,
+        "repository_id": 1420699315,
+        "head_repository_id": 1420699315,
+        "head_branch": "main",
+        "head_sha": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-24T15:31:41.631669+00:00",
+  "status": "Release source/readiness finalized; actual signing/publication and final cleanup pending",
+  "base": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "ticket": "95070b28e62cc43f08b6f9d11e7598055c2380f4",
+  "merge": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "tree": "4dbed4c161d2cf9c3ac5fa79e617fc80d66eea78",
+  "parents": [
+    "74e70809446ce29bb157fb89ebf913388688b63b",
+    "95070b28e62cc43f08b6f9d11e7598055c2380f4"
+  ],
+  "remoteRefs": {
+    "refs/heads/main": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+    "refs/heads/codex/nfs-dashboard-release": "95070b28e62cc43f08b6f9d11e7598055c2380f4"
+  },
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "version": "v0.2.0",
+  "candidateRun": 40105960980,
+  "readiness": {
+    "path": "packaging/releases/v0.2.0/readiness.json",
+    "sha256": "2eba2823301b44836976fd99e57c10c505fb0563874fb05165e9cc1df98b1468"
+  },
+  "guideRevision": "ccf3d5b original rules plus approved authority-prose clarification in current ticket",
+  "noPublicEffects": "No tag/release/signing/publish yet; both ordinary source CI runs must be monitored"
+}

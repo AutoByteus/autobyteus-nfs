@@ -1,0 +1,42 @@
+[
+  {
+    "label": "ticket",
+    "run": 40107371147,
+    "head": "95070b28e62cc43f08b6f9d11e7598055c2380f4",
+    "result": "success",
+    "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40107371147",
+    "jobs": [
+      {
+        "id": 120911741358,
+        "name": "checks (ubuntu-24.04)",
+        "result": "success"
+      },
+      {
+        "id": 120911741504,
+        "name": "checks (macos-15)",
+        "result": "success"
+      }
+    ],
+    "rawLogSHA256": "4ea74650ff806eac23e46a7c32cb39f6681542b8e72e8194f1d717593e22c062"
+  },
+  {
+    "label": "main",
+    "run": 40107380865,
+    "head": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+    "result": "success",
+    "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40107380865",
+    "jobs": [
+      {
+        "id": 120911770128,
+        "name": "checks (ubuntu-24.04)",
+        "result": "success"
+      },
+      {
+        "id": 120911770241,
+        "name": "checks (macos-15)",
+        "result": "success"
+      }
+    ],
+    "rawLogSHA256": "518450c0119f8ebacb07d8bbf50227ad14bf559e116eae0748e67a4e73b591ec"
+  }
+]

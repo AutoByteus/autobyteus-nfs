@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-24T15:31:38.997625+00:00",
+  "merge": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "ticket": "95070b28e62cc43f08b6f9d11e7598055c2380f4",
+  "treeEqual": true,
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "checks": [
+    "Independent exact Git clone current readiness admission",
+    "2 embedding/source-identity tests"
+  ],
+  "result": "Pass",
+  "nonTicketDiffFromCandidate": [
+    "RELEASE.md",
+    "packaging/RELEASE.md",
+    "packaging/release-lock.json",
+    "packaging/releases/v0.2.0/authorization.json",
+    "packaging/releases/v0.2.0/native-checks.json",
+    "packaging/releases/v0.2.0/postpublication-testing-plan.md",
+    "packaging/releases/v0.2.0/readiness.json",
+    "packaging/releases/v0.2.0/release-authority-clarification.md",
+    "packaging/releases/v0.2.0/release-controls.json",
+    "packaging/releases/v0.2.0/release-notes.md",
+    "packaging/releases/v0.2.0/release-request-handoff.md",
+    "packaging/releases/v0.2.0/source-review.json"
+  ],
+  "rawLogSHA256": "8cc70366de0d192f6e5c408677b1ed2e169e7d899996d3a3eb9b959a8bc3ad62",
+  "scratchRemoved": [
+    "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-home",
+    "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-tmp"
+  ],
+  "releaseStage": "Prepublication only"
+}

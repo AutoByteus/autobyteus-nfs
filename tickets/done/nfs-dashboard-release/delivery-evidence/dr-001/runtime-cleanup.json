@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-24T15:57:20.108180+00:00",
+  "result": "Complete for own runtime/smoke/dependencies",
+  "ownedProcesses": [],
+  "removed": [
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/browser-tools",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/browsers",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/npm-cache",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/home",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/tmp",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/public",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/role-server",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/role-client",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/role-server-attempt1",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/final-inspection/candidate",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/publication-receipt-attempt1",
+      "absent": true
+    },
+    {
+      "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/publication-final-receipt.zip",
+      "absent": true
+    }
+  ],
+  "retained": [
+    "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate",
+    "/Users/normy/nfs-dashboard-release-ytwviz3y/final-inspection/payload"
+  ],
+  "retention": "Required immutable candidate/final payload through receipt and recovery; not running resources",
+  "scope": "Only this task0700 root. No user installation/config/storage, credentials/keychain settings, canonical/PM/app/superrepo or inherited candidates altered. Worktree/branches pending safe post-finalization cleanup."
+}

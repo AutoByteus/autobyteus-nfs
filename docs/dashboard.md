@@ -1,8 +1,9 @@
-# Local NFS setup dashboard (source-built)
+# Local NFS setup dashboard (v0.2.0+)
 
-The dashboard is embedded in the current source build. **Published v0.1.0 does
-not have these commands.** This source change is not a new release or platform
-qualification. You still need a supported native macOS26+ or Ubuntu24.04 host,
+The dashboard is embedded in the **published v0.2.0 executable**; no separate web
+installation is required. Published v0.1.0 does not have these commands. See the
+[versioned download instructions](../README.md#versioned-download). Publication is
+not field/platform qualification. You still need a native macOS26+ or Ubuntu24.04 host,
 an ordinary local user, an interactive terminal and OS administrator approval.
 No application, Node runtime, separate web server or remote account is needed.
 

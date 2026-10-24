@@ -1,0 +1,10 @@
+{
+  "result": "Harness Fail, not full public validation",
+  "at": "2026-10-24T15:55:31.320733+00:00",
+  "stage": "First Mac app-style spctl assessment",
+  "exit": 3,
+  "observation": "rejected (the code is valid but does not seem to be an app)",
+  "completed": "18 actual anonymous downloads equal retained payload; ARM strict signature/details passed",
+  "notReached": "Intel signature/online checks, installer, dashboard launch",
+  "correction": "App assessment is not the appropriate standalone CLI notarization check. Apple DTS Testing a Notarised Product specifies codesign with notarized requirement/online checking for other code. Preserve raw nonzero result; require strict identity + actual online notarized requirement for both binaries; no security setting change, quarantine removal or product edit."
+}

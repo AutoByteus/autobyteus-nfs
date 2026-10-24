@@ -1,0 +1,92 @@
+{
+  "result": "All4 final native checks and actual bothMac signing Pass; original publisher separately failed",
+  "checks": [
+    {
+      "job": "prepare",
+      "jobId": 120912830001,
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedChildSkip": 1,
+      "summary": [
+        "prepare\tRelease boundary checks\t2026-10-24T15:37:29.4967239Z Ran 78 tests in 59.858s",
+        "prepare\tRelease boundary checks\t2026-10-24T15:37:29.4967611Z OK (skipped=1)"
+      ],
+      "goRacePackages": 0,
+      "signingSteps": []
+    },
+    {
+      "job": "binaries (macos-15, darwin, arm64)",
+      "jobId": 120913138217,
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedChildSkip": 1,
+      "summary": [
+        "binaries (macos-15, darwin, arm64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:41:34.5160010Z Ran 78 tests in 133.674s",
+        "binaries (macos-15, darwin, arm64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:41:34.5160810Z OK (skipped=1)"
+      ],
+      "goRacePackages": 10,
+      "signingSteps": [
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "job": "binaries (ubuntu-24.04, linux, amd64)",
+      "jobId": 120913138247,
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedChildSkip": 1,
+      "summary": [
+        "binaries (ubuntu-24.04, linux, amd64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:39:15.0415916Z Ran 78 tests in 40.505s",
+        "binaries (ubuntu-24.04, linux, amd64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:39:15.0416134Z OK (skipped=1)"
+      ],
+      "goRacePackages": 10,
+      "signingSteps": [
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "job": "binaries (macos-15-intel, darwin, amd64)",
+      "jobId": 120913138321,
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedChildSkip": 1,
+      "summary": [
+        "binaries (macos-15-intel, darwin, amd64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:45:00.4778330Z Ran 78 tests in 308.376s",
+        "binaries (macos-15-intel, darwin, amd64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:45:00.4867810Z OK (skipped=1)"
+      ],
+      "goRacePackages": 10,
+      "signingSteps": [
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "job": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "jobId": 120913138430,
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedChildSkip": 1,
+      "summary": [
+        "binaries (ubuntu-24.04-arm, linux, arm64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:39:26.2114195Z Ran 78 tests in 49.838s",
+        "binaries (ubuntu-24.04-arm, linux, arm64)\tNative checks and exact engine metadata (not physical qualification)\t2026-10-24T15:39:26.2114431Z OK (skipped=1)"
+      ],
+      "goRacePackages": 10,
+      "signingSteps": [
+        {
+          "name": "Developer ID and Accepted notarization before public effects",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ],
+  "logSHA256": "391f49daf605cbe4d44a28ea7740399fdcd8e5f5af487042f8e9ed3c0d0f2981",
+  "limits": "Overlapping repeated Python suites; no individual Go count; no independent field/user testing."
+}

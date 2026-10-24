@@ -1,0 +1,15 @@
+{
+  "darwin-arm64": {
+    "notary": {
+      "binarySha256": "3644ec83ae438d8df1c689a405213d2fd840b02b7d4f91c421b2a66d547eae12",
+      "status": "Accepted",
+      "submissionId": "98bbf2c4-7b24-40fd-8097-d8563723c093",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "strictSignatureExit": 0,
+    "DeveloperIdTeamTimestampRuntime": true,
+    "gatekeeperExit": 3,
+    "gatekeeperOutput": "/Users/normy/nfs-dashboard-release-ytwviz3y/public/darwin-arm64/autobyteus-nfs: rejected (the code is valid but does not seem to be an app)\n",
+    "limits": "Static signature and online assessment on macOS26.5.2 ARM64; not native Intel execution"
+  }
+}

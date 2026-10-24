@@ -1,0 +1,39 @@
+{
+  "result": "Pass retained final signed payload, NOT public release",
+  "source": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "tag": {
+    "binding": {
+      "envelope": {
+        "artifactId": 12565288864,
+        "digest": "sha256:58a6e84a5a7d397e55527b7b2549c6423db92c2041df890e739c2a1e9623d712",
+        "expiresAt": "2027-01-22T15:36:23Z",
+        "runAttempt": 1,
+        "runId": 40107739742,
+        "workflowCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+      },
+      "payloadSha256": "fbde9886b6369e6ea234c951acfc820a9c04d52487f95b0a126497951216e5f0",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+      "version": "v0.2.0"
+    },
+    "object": "51e84a18e9283c9f6dda9be5d396dcb4b1b6f75f"
+  },
+  "payloadJob": 120914984608,
+  "signing": {
+    "darwin-amd64": {
+      "binarySha256": "a7fade2e1484c083b8239ad6137632dba2e2e21a08726b36e9b08d03bc0deba0",
+      "status": "Accepted",
+      "submissionId": "127d30c2-22ac-4864-8597-67b3f93a6d24",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "darwin-arm64": {
+      "binarySha256": "3644ec83ae438d8df1c689a405213d2fd840b02b7d4f91c421b2a66d547eae12",
+      "status": "Accepted",
+      "submissionId": "98bbf2c4-7b24-40fd-8097-d8563723c093",
+      "teamId": "7Y86YBQ7B4"
+    }
+  },
+  "path": "/Users/normy/nfs-dashboard-release-ytwviz3y/final-inspection/payload",
+  "members": 18,
+  "limits": "Real hosted both-Mac Accepted carries by actual signed binary hashes and full immutable payload/job verification; not public download or native Intel local execution."
+}

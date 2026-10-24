@@ -153,7 +153,7 @@ build a new candidate solely to repair a bound publisher. New unbound product
 payloads still require current-source candidate/native evidence. Delivery owns
 actual hosted same-byte recovery and public download/install/signature receipts.
 
-## Source-built setup dashboard
+## Setup dashboard — source tests and published launch
 
 Ordinary Go race/vet tests cover admin ownership, exact leases, same-binary pipes,
 real local HTTP security, cached-operation responsiveness and directory-only
@@ -162,6 +162,10 @@ real read ends and observe the held lock before/after drain. These do not invoke
 sudo or mount/export storage. The private transport is not an application API.
 Python `test_nfs_dashboard_packaging.py` checks JS/CSS hash inclusion and static
 embedding; compilation does not retroactively add the UI to published v0.1.0.
+The dashboard is distributed starting with v0.2.0. Release launch checks use an
+actual downloaded installed binary, private HOME/TTY and an owned sandboxed
+browser without authorizing administration; they do not replace native storage
+or field testing.
 
 For a rendered local feedback loop, use an **independent owned source copy** and
 private HOME/TMPDIR/cache. A dev-only Playwright1.64.1 installation and its Chromium/
@@ -210,3 +214,20 @@ and deferred field statuses. Do not alter the repository lock or public
 metadata/installer to make that build admitted as a release. Reuse matching
 retained engine bytes read-only and distinguish cross-compilation from native
 execution. These virtual journeys are not the separate physical field campaign.
+
+## Downloaded standalone Mac CLI verification
+
+For the exact public binary, require strict signature/DeveloperID/team/runtime/
+timestamp and equality to its genuine Accepted notary receipt, then run:
+
+```sh
+codesign --verify --strict --verbose=4 --check-notarization -R=notarized /owned/path/autobyteus-nfs
+```
+
+This forces an online notarization requirement. Apple DTS distinguishes this
+[other-code check from app assessment](https://developer.apple.com/forums/thread/130560).
+App-style `spctl --assess --type execute` may report valid code that is not an app
+for this standalone CLI; retain that observation, not a false Gatekeeper Pass.
+Never disable security policy or clear quarantine to manufacture a pass. Online
+code checks and the advertised curl/CLI install are not fresh quarantined-Finder,
+offline, independent-host or physical/user qualification.
