@@ -1,0 +1,13 @@
+# API02 current | 2026-10-24T17:16:12.420966+00:00 | 4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa | Macarm64 Go1.27.2 | command ['/Users/normy/nfs-feedback-api-bgwkoluo/tools/go/bin/go', 'test', './internal/dashboard', '-run', '^TestStopSuppressesFeedbackButDrainsAdmittedWork$', '-count=1', '-timeout=60s', '-v']
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/hello
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup
+--- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork (0.09s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/hello (0.02s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect (0.03s)
+    --- PASS: TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup (0.03s)
+PASS
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	1.388s
+
+# exit=0

@@ -1,0 +1,9 @@
+# IMP-07 | 459c02f + named disposable mutation | Macarm64 | 2026-10-24
+# /Users/normy/nfs-feedback-imp-2yx9e38n/go/bin/go test ./internal/dashboard -run ^TestStopSuppressesFeedbackButDrainsAdmittedWork$ -count=1 -timeout=30s
+# github.com/AutoByteus/autobyteus-nfs/internal/dashboard [github.com/AutoByteus/autobyteus-nfs/internal/dashboard.test]
+internal/dashboard/session.go:217:2: syntax error: unexpected newline in argument list; possibly missing comma or )
+internal/dashboard/session.go:220:19: syntax error: unexpected name Drain at end of statement
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/dashboard [build failed]
+FAIL
+
+# exit=1

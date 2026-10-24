@@ -8,7 +8,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"errors"
-	"io"
 	"net"
 	"net/http"
 	"os"
@@ -46,7 +45,7 @@ type Session struct {
 	mu                                      sync.Mutex
 	role, home, host, origin, secret, token string
 	launch                                  Launcher
-	log                                     io.Writer
+	terminal                                *terminalFeedback
 	helper                                  *helper
 	operation                               *Operation
 	fingerprint                             [32]byte
@@ -82,7 +81,7 @@ func New(role string, launch Launcher) (*Session, error) {
 	if err != nil {
 		return nil, err
 	}
-	s := &Session{role: role, home: home, host: listener.Addr().String(), secret: secret(), launch: launch, log: io.Discard, listener: listener, stop: make(chan struct{})}
+	s := &Session{role: role, home: home, host: listener.Addr().String(), secret: secret(), launch: launch, terminal: newTerminalFeedback(), listener: listener, stop: make(chan struct{})}
 	s.origin = "http://" + s.host
 	s.http = &http.Server{Handler: http.NewCrossOriginProtection().Handler(http.HandlerFunc(s.serve)), ReadHeaderTimeout: 5 * time.Second, ReadTimeout: 10 * time.Second, WriteTimeout: 10 * time.Second, IdleTimeout: 30 * time.Second, MaxHeaderBytes: 8 << 10}
 	return s, nil
@@ -140,6 +139,9 @@ func (s *Session) submit(request Submission) (Operation, error) {
 	operation := Operation{ID: secret(), RequestID: request.ID, Kind: request.Kind, State: "running", StartedAt: time.Now()}
 	s.operation = &operation
 	s.fingerprint = fingerprint
+	if request.Kind == "authorize" {
+		s.terminal.phase(approvalWaiting, approvalReminder)
+	}
 	s.workers.Add(1)
 	go s.perform(request)
 	return operation, nil
@@ -153,9 +155,19 @@ func (s *Session) perform(request Submission) {
 			s.helper.close()
 		}
 		var child *helper
-		child, err = authorize(s.launch, s.role, s.log)
+		child, err = authorize(s.launch, s.role)
 		s.mu.Lock()
 		s.helper = child
+		if err == nil {
+			s.terminal.phase(controlsPreparing, controlsReminder)
+		} else {
+			var startError *helperStartError
+			if errors.As(err, &startError) {
+				s.terminal.phase(helperStartFailed, "")
+			} else {
+				s.terminal.phase(approvalUnconfirmed, "")
+			}
+		}
 		s.mu.Unlock()
 		// Authorization reads metadata, never probes readiness or mutates storage.
 		if err == nil {
@@ -165,10 +177,18 @@ func (s *Session) perform(request Submission) {
 		reply, err = s.helper.call(request.Kind, request.Payload)
 	}
 	if err != nil && s.helper != nil {
+		if request.Kind == "authorize" {
+			s.mu.Lock()
+			s.terminal.phase(controlsDraining, "")
+			s.mu.Unlock()
+		}
 		s.helper.close()
 	}
 	s.mu.Lock()
 	defer s.mu.Unlock()
+	if request.Kind == "authorize" && s.helper != nil {
+		s.authorizationFeedback(reply, err)
+	}
 	now := time.Now()
 	s.operation.CompletedAt = &now
 	s.operation.Data = reply.Data
@@ -181,8 +201,19 @@ func (s *Session) perform(request Submission) {
 		s.operation.State = "incomplete"
 	}
 }
+
+// authorizationFeedback observes only the initial inspection, under Session.mu.
+func (s *Session) authorizationFeedback(reply adminwire.Reply, err error) {
+	if err != nil || !s.helper.alive() {
+		s.terminal.phase(controlsUnavailable, "")
+	} else if reply.Error != nil {
+		s.terminal.phase(inspectionRefused, "")
+	} else {
+		s.terminal.phase(controlsReady, "")
+	}
+}
 func (s *Session) Stop() {
-	s.stopOnce.Do(func() { s.mu.Lock(); s.closing = true; s.mu.Unlock(); close(s.stop) })
+	s.stopOnce.Do(func() { s.mu.Lock(); s.closing = true; s.terminal.stop(); s.mu.Unlock(); close(s.stop) })
 }
 
 // Drain is called after HTTP shutdown. It does not cancel committed host work.

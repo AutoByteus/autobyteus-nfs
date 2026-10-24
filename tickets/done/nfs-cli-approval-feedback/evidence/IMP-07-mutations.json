@@ -1,0 +1,12 @@
+[
+  {
+    "mutation": "stop",
+    "exit": 1,
+    "killed": true
+  },
+  {
+    "mutation": "dead-helper",
+    "exit": 1,
+    "killed": true
+  }
+]

@@ -1,0 +1,4 @@
+# IMP-05-source-hash | 459c02f666e7d988adb87ba1a351f7289d3e8790 | Mac26.5.2arm64 Go1.27.2 independent clone | 2026-10-24
+# command: python3 packaging/release.py --source-hash
+fbc95116f926879d24075493d82426226e08cec33508c13e7423c2719ad1ae46
+# exit=0

@@ -31,6 +31,30 @@ export storage. Denied or expired approval requires a new explicit authorization
 no alternate root path is used. Idle administrative authorization expires after
 15 minutes without work (an active review completes its own lifetime first).
 
+### Terminal feedback in the current source
+
+This feedback improvement is source-only; the published v0.2.0 binary does not
+contain it. After explicit authorization, the terminal reports waiting for OS
+approval/helper startup. **Administrator access confirmed** means the same-binary,
+same-role helper handshake was admitted; it does not imply a password was entered
+(cached approval may need none). **Preparing setup controls** means private saved
+configuration is being read. **Dashboard ready—continue in your browser** follows
+successful inspection, including empty, configured or pending state. Keep the
+launching terminal open and use its private URL if necessary. This readiness is
+for setup controls only: it has not created a share, connected storage or checked
+storage health. Read the browser's configuration/role/pending guidance before
+choosing any action.
+
+After 10 seconds in either pending phase, one reminder explains what is still
+awaited. It is not a timeout, a diagnosis or permission to start a second attempt.
+OS approval retries/diagnostics remain in the terminal. If access was not
+confirmed, approval may have been denied/cancelled or helper startup failed;
+review those diagnostics rather than assuming a bad password. Confirmed access
+followed by an inspection refusal is reported separately: read the browser error
+and use **Inspect configuration** before retrying setup. Transport failure waits
+for safe helper completion before suggesting reopening. Stop suppresses later
+ready/reminder invitations but still drains already-admitted work.
+
 ## Server: share a folder
 
 1. Choose an ordinary project folder, or type one new child below an existing

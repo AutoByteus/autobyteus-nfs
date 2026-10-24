@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-24T17:20:59.587246+00:00",
+  "ticket": "autobyteus-nfs-7",
+  "taskUUID": "Not supplied",
+  "input": "afc8950eeca852075bab0f583f52277ae5b6e219",
+  "initialFetchCommand": "git fetch origin main",
+  "base": "456e5808e828d224804f9d4ce65c4cf740816eca",
+  "mergeCommand": "git merge --no-edit origin/main",
+  "integration": "Already up to date; no new base commits",
+  "preEditState": "tracked and untracked clean",
+  "postIntegrationRerun": "No duplicate product suite: latest main already ancestor; all179 non-ticket inputs byte-identical to API tested input. Ordinary hosted ticket/main CI will verify finalized trees.",
+  "productInputs": 179,
+  "inputMismatches": [],
+  "sourceHashCommand": "python3 -B packaging/release.py --source-hash",
+  "sourceHash": "fbc95116f926879d24075493d82426226e08cec33508c13e7423c2719ad1ae46",
+  "sourceHashExit": 0,
+  "releaseGuideBlob": "3da1d1faef3c1a510083e19161e2e07ab4fa586a",
+  "testingGuideBlob": "862c86bcf8b7458e5f63e4dbeecbe27c37416a3b",
+  "portability": {
+    "trackedPaths": 2881,
+    "invalidOrCaseCollisions": []
+  },
+  "selectedCriticalEvidenceSHA256": {
+    "IMP-04-go-race.log": "3ef349fc7e0031634252f5e39d8d13bc51da72862aa16ce5f5606222ca866f12",
+    "IMP-04-dashboard-final.log": "3c7fb8ff15a6c02c972d4db804d752038c164951229995db6a65fa5d6916594c",
+    "IMP-04-go-vet.log": "a23b45832bb78c522f264b1e0e96ceb2d8b3c8815e1771dc5d118bf5de24a707",
+    "IMP-04-build.log": "b291d6f9d9a836469f187d62d3f06a2fc3b4e273c971d6c6e914d5545295a9b4",
+    "IMP-04-version.log": "8568d570818de5a5d07935afb85829accffa690f0a1ec7826b5cdd2adff1a185",
+    "IMP-05-python.log": "77ca1433f699f596bfd8255431832350d7c0c4bd3019f32dc1f8223dbd231b94",
+    "API-02-current.log": "46ff2f8b3c410c7bd72502fd2ed323ad2364282420533550d703a13e3dac6846",
+    "API-02-mutant.log": "14c45f7392a7571ec2c2a974fa1b9c2dae656b1fcc0348faad6ee381cd6197b6",
+    "IMP-06-result.json": "467d948f5213b53d9c30a70e554f475206b5abd55155978741f3776ce827f5e5",
+    "API-04-cleanup.json": "82e24130c1ac076370a10e2e01344000da474b87378cfef465fd5910e0413ea0"
+  },
+  "upstreamScratchAbsent": {
+    "/Users/normy/nfs-feedback-api-bgwkoluo": true,
+    "/Users/normy/nfs-feedback-imp-2yx9e38n": true
+  },
+  "newProductChanges": false,
+  "releaseDecision": "No release"
+}

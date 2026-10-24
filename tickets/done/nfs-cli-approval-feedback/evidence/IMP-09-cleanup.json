@@ -1,0 +1,13 @@
+{
+  "check": "IMP-09",
+  "date": "2026-10-24",
+  "production": "459c02f666e7d988adb87ba1a351f7289d3e8790",
+  "tests": "e15e5e8b00b37ccf1c36f17b87a140ab2ff1bade",
+  "ownedRoot": "/Users/normy/nfs-feedback-imp-2yx9e38n",
+  "mode": "0o700",
+  "remainingProcessesBeforeRemoval": [],
+  "ownedRootRemoved": true,
+  "resources": "All check sessions returned; six final fixture/browser processes exited0; failed fixture attempts waited and gates/private connection files removed. Private toolchain, clones, build outputs, browser profile/tools/binaries, mutation tree, HOME/TMP/cache removed.",
+  "unowned": "Assigned worktree retained. Canonical/PM/other worktrees/candidates/installed CLI/user root storage untouched.",
+  "noClaim": "No root/sudo/native Linux/storage/field/user verification/release"
+}

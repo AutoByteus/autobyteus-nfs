@@ -1,0 +1,8 @@
+# IMP-06 | 459c02f | current Session/PTY fixture | 2026-10-24
+Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+Administrator access confirmed.
+Preparing setup controls—reading saved configuration…
+Dashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.
+Setup controls are ready; this has not created a share, connected storage or checked storage readiness.
+Fixture stopping admission; draining current Session. Storage is NOT disconnected.
+Fixture drain complete.

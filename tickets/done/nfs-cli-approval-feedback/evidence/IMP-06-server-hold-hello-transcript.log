@@ -1,0 +1,4 @@
+# IMP-06 | 459c02f | current Session/PTY fixture | 2026-10-24
+Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+^CFixture stopping admission; draining current Session. Storage is NOT disconnected.
+Fixture drain complete.

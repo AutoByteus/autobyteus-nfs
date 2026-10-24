@@ -1,0 +1,32 @@
+# API02 mutant | 2026-10-24T17:16:12.420966+00:00 | 4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa | Macarm64 Go1.27.2 | command ['/Users/normy/nfs-feedback-api-bgwkoluo/tools/go/bin/go', 'test', './internal/dashboard', '-run', '^TestStopSuppressesFeedbackButDrainsAdmittedWork$', '-count=1', '-timeout=60s', '-v']
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/hello
+    feedback_test.go:200: late phase after Stop Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+        Administrator access confirmed.
+        Preparing setup controls—reading saved configuration…
+        Dashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.
+        Setup controls are ready; this has not created a share, connected storage or checked storage readiness.
+        
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect
+    feedback_test.go:200: late phase after Stop Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+        Administrator access confirmed.
+        Preparing setup controls—reading saved configuration…
+        Dashboard ready—continue in your browser. Keep this terminal open. If needed, use the private URL above.
+        Setup controls are ready; this has not created a share, connected storage or checked storage readiness.
+        
+=== RUN   TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup
+    feedback_test.go:200: late phase after Stop Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+        Administrator access confirmed.
+        Preparing setup controls—reading saved configuration…
+        Setup controls could not be initialized. Waiting for the helper to finish safely; do not retry yet.
+        Setup controls unavailable. Reopen the dashboard and inspect configuration before deciding how to retry.
+        
+--- FAIL: TestStopSuppressesFeedbackButDrainsAdmittedWork (0.09s)
+    --- FAIL: TestStopSuppressesFeedbackButDrainsAdmittedWork/hello (0.02s)
+    --- FAIL: TestStopSuppressesFeedbackButDrainsAdmittedWork/inspect (0.03s)
+    --- FAIL: TestStopSuppressesFeedbackButDrainsAdmittedWork/cleanup (0.03s)
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	1.009s
+FAIL
+
+# exit=1

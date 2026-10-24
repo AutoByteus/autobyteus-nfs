@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "456e5808e828d224804f9d4ce65c4cf740816eca",
+  "command": [
+    "/Users/normy/nfs-feedback-probe-2tp40to6/tools/go/bin/go",
+    "test",
+    "./internal/dashboard",
+    "-run",
+    "^TestApprovalFeedbackProbe$",
+    "-v",
+    "-count=1",
+    "-timeout=45s"
+  ],
+  "exitCode": 1,
+  "scope": "real Session.submit/perform/authorize/inspect via subprocess protocol double; no sudo or real administrative/storage work",
+  "expected": "12 baseline feedback assertion failures; controls must reach expected existing operation states"
+}

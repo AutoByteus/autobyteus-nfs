@@ -215,6 +215,25 @@ metadata/installer to make that build admitted as a release. Reuse matching
 retained engine bytes read-only and distinguish cross-compilation from native
 execution. These virtual journeys are not the separate physical field campaign.
 
+### Terminal approval-feedback checks
+
+The ordinary dashboard Go tests cover both roles, real child pipes with controlled
+hello/inspection completion, fixed safe failure categories, duplicate/new attempt
+feedback, helper drain, dead-helper refusal of ready text and Stop races. A
+private scheduler exercises obsolete/one-shot reminders; one held-hello test
+observes the actual 10-second reminder without treating it as authority. No test
+reads a password, invokes sudo, or changes OS approval policy/storage. Writer
+failures do not control host operations. These are not OS cached-consent proof.
+
+A focused current-page/PTY journey may use the build-tagged feedback fixture recorded in implementation evidence, in
+an owned preview binary, private HOME and browser profile. This serves actual
+Session/HTTP/assets with an ordinary-user protocol child and signal/Stop driver;
+it deliberately does not invoke the OS opener or the installed privileged CLI.
+Keep the private launch URL/token out of durable transcripts. Browser visual
+layout is unchanged; check authorize/progress/result/Stop alongside terminal
+ordering. Native root/storage campaigns are not required solely for terminal
+presentation changes; preserve their separate evidence boundaries.
+
 ## Downloaded standalone Mac CLI verification
 
 For the exact public binary, require strict signature/DeveloperID/team/runtime/

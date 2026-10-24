@@ -1,0 +1,50 @@
+# API02 | 2026-10-24 | 4cf2eaa | Macarm64 Go1.27.2 private source | python3 evidence/API-02-control.py
+{
+  "case": "API-02",
+  "date": "2026-10-24T17:16:12.420966+00:00",
+  "input": "4cf2eaa69d49d5908b2c59ca8718fa6bb1dd83aa",
+  "environment": "Macarm64 private source/HOME/TMP/cache; ordinary subprocess double",
+  "scratch": "/Users/normy/nfs-feedback-api-bgwkoluo",
+  "attempts": [
+    {
+      "name": "current",
+      "command": [
+        "/Users/normy/nfs-feedback-api-bgwkoluo/tools/go/bin/go",
+        "test",
+        "./internal/dashboard",
+        "-run",
+        "^TestStopSuppressesFeedbackButDrainsAdmittedWork$",
+        "-count=1",
+        "-timeout=60s",
+        "-v"
+      ],
+      "cwd": "/Users/normy/nfs-feedback-api-bgwkoluo/source",
+      "exit": 0,
+      "log": "API-02-current.log"
+    },
+    {
+      "name": "mutant",
+      "command": [
+        "/Users/normy/nfs-feedback-api-bgwkoluo/tools/go/bin/go",
+        "test",
+        "./internal/dashboard",
+        "-run",
+        "^TestStopSuppressesFeedbackButDrainsAdmittedWork$",
+        "-count=1",
+        "-timeout=60s",
+        "-v"
+      ],
+      "cwd": "/Users/normy/nfs-feedback-api-bgwkoluo/source",
+      "exit": 1,
+      "log": "API-02-mutant.log"
+    }
+  ],
+  "invalidPriorControl": "IMP07 Stop mutant failed compilation; not an assertion kill",
+  "Go": {
+    "url": "https://go.dev/dl/go1.27.2.darwin-arm64.tar.gz",
+    "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5"
+  },
+  "result": "Pass",
+  "proof": "current passes; syntactically valid mutation fails late phase after Stop",
+  "mutantRestored": true
+}

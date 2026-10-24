@@ -1,0 +1,3 @@
+# IMP-06 attempt3 | 459c02f | Macarm64 current Session + actual PTY/browser, fixture argv0 corrected | 2026-10-24
+[{"role": "server", "mode": "success", "fixtureExit": 0, "browserExit": 0, "result": "pass"}, {"role": "client", "mode": "success", "fixtureExit": 0, "browserExit": 0, "result": "pass"}, {"role": "server", "mode": "denied", "fixtureExit": 0, "browserExit": 0, "result": "pass"}, {"role": "client", "mode": "refused", "fixtureExit": 0, "browserExit": 0, "result": "pass"}, {"role": "server", "mode": "hold-hello", "fixtureExit": 0, "browserExit": 0, "result": "pass"}, {"role": "client", "mode": "hold-inspect", "fixtureExit": 0, "browserExit": 0, "result": "pass"}]
+# exit=0

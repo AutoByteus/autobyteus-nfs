@@ -1,0 +1,49 @@
+{
+  "check": "IMP-06",
+  "date": "2026-10-24",
+  "scope": "Current Session/HTTP/assets+PTY and owned Chromium; signal/Stop fixture driver, NOT Run/OS opener/sudo/password/storage proof",
+  "cases": [
+    {
+      "role": "server",
+      "mode": "success",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    },
+    {
+      "role": "client",
+      "mode": "success",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    },
+    {
+      "role": "server",
+      "mode": "denied",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    },
+    {
+      "role": "client",
+      "mode": "refused",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    },
+    {
+      "role": "server",
+      "mode": "hold-hello",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    },
+    {
+      "role": "client",
+      "mode": "hold-inspect",
+      "fixtureExit": 0,
+      "browserExit": 0,
+      "result": "pass"
+    }
+  ]
+}

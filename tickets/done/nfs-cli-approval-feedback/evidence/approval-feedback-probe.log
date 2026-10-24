@@ -1,0 +1,59 @@
+=== RUN   TestApprovalFeedbackProbe
+=== RUN   TestApprovalFeedbackProbe/server/empty
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34683 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/server/configured
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34684 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/server/pending
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34685 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/server/inspect-error
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=true terminal="Administrator approval/helper process PID 34686 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+=== RUN   TestApprovalFeedbackProbe/server/denied
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Administrator approval/helper process PID 34687 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+=== RUN   TestApprovalFeedbackProbe/server/mismatch
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Administrator approval/helper process PID 34688 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+=== RUN   TestApprovalFeedbackProbe/client/empty
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34689 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/client/configured
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34690 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/client/pending
+    approval_feedback_probe_test.go:49: operation=succeeded authorized=true terminal="Administrator approval/helper process PID 34691 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:51: missing actual administrator confirmation
+    approval_feedback_probe_test.go:52: missing setup-controls readiness/next action
+=== RUN   TestApprovalFeedbackProbe/client/inspect-error
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=true terminal="Administrator approval/helper process PID 34692 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+=== RUN   TestApprovalFeedbackProbe/client/denied
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Administrator approval/helper process PID 34693 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+=== RUN   TestApprovalFeedbackProbe/client/mismatch
+    approval_feedback_probe_test.go:49: operation=incomplete authorized=false terminal="Administrator approval/helper process PID 34694 started. Confirm only in this terminal; stopping waits for safe completion.\n"
+    approval_feedback_probe_test.go:54: no terminal failure outcome beyond helper launch
+--- FAIL: TestApprovalFeedbackProbe (0.10s)
+    --- FAIL: TestApprovalFeedbackProbe/server/empty (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/server/configured (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/server/pending (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/server/inspect-error (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/server/denied (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/server/mismatch (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/empty (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/configured (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/pending (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/inspect-error (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/denied (0.01s)
+    --- FAIL: TestApprovalFeedbackProbe/client/mismatch (0.01s)
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	0.432s
+FAIL
