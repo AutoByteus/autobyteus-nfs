@@ -17,8 +17,8 @@ Executed self-checks (not independent API/E2E acceptance):
   and1expected childskip. A two-test OS-fixture error and unavailable-compiler
   preparation failure are retained, not relabeled. Test-only failure cleanup
   was added after full run; affected native admin rerun recorded separately.
-- Mac Python independent archive had1 Git-context error; proper independent
-  Git clone rerun is in progress, no release test softened.
+- Mac Python independent archive had1 Git-context error; the proper independent
+  Git clone rerun passed78collected77executed1expectedskip. No release test softened.
 - Real Chromium/WebKit embedded rendering: full18 scenarios at first UI snapshot,
   current10 normal/stop scenarios and2 final error scenarios; root/clipboard
   doubles explicitly labeled. Direct image inspection supports feedback notes.
@@ -40,3 +40,8 @@ untouched. No cleanup-complete, API Pass, TaskDone or release claim.
 
 Check evidence is by IMP ID under this directory. Failed attempt logs and exact
 source-copy/compile inputs remain. Current upstream documents are unchanged.
+
+12:46Z update: actual Linux installed-service remount proof Pass: after an
+owned, drained, ordinary (not force/lazy) unmount, the same systemd process
+restored the exact NFS4.1 source at18.611s; no dashboard or explicit reconnect
+was used. Sentinel hashes unchanged. IMP-09-linux-service-result.json.
