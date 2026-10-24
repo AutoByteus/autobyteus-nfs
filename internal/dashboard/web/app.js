@@ -4,6 +4,19 @@ let snapshot, configuration = null, review = null, observation = null;
 let sequence = 0, seen = '', submitting = false, stopped = false, timer, closeChooser = () => {};
 const names = { authorize: 'Awaiting administrator approval in your terminal', inspect: 'Inspecting saved configuration', beginServer: 'Preparing server plan', beginClient: 'Preparing client plan', beginReconnect: 'Preparing reconnect review', beginDetach: 'Preparing disconnect review', checkReadiness: 'Checking actual host readiness', cancelReview: 'Cancelling uncommitted review', commit: 'Applying reviewed host operation' };
 function error(e) { text('error', e.message || String(e)); show('error', true); byID('error').focus(); }
+function notice(running, authorized, expired) {
+  if (stopped) return 'Dashboard stopped. Storage is NOT disconnected. Any admitted host work will drain in the launching terminal.';
+  const op = snapshot.operation;
+  if (running) return `${names[op?.kind] || 'Submitting operation'}… This can wait for storage; do not start another operation.`;
+  if (!authorized) return 'Not authorized. Use the terminal approval step below. Idle authorization expires; no storage is disconnected.';
+  if (review) return expired ? 'Review expired. Cancel or inspect configuration and prepare a fresh plan.' : 'Plan prepared — waiting for your explicit approval.';
+  if (op?.state === 'incomplete') return 'Operation incomplete. Read the error and inspect saved configuration before deciding how to recover. No rollback is implied.';
+  if (configuration?.state === 'pending') return 'Setup is incomplete. Review the saved plan to resume; no automatic repair has run.';
+  if (observation?.status?.hostReady) return `Ready at ${new Date(observation.checkedAt).toLocaleString()} — a past observation, not continuous monitoring.`;
+  if (configuration?.state === 'empty') return 'Not configured. Prepare a server or client plan below.';
+  if (configuration) return 'Configured — readiness is unchecked or incomplete. Check explicitly when ready.';
+  return 'Authorized. Inspect configuration to read its current state.';
+}
 function render() {
   if (!snapshot) return;
   const op = snapshot.operation;
@@ -12,7 +25,7 @@ function render() {
   const wrongRole = configuration?.role && configuration.role !== snapshot.role;
   const configured = configuration && configuration.state !== 'empty';
   const expired = review && Date.now() >= Date.parse(review.expiresAt);
-  text('notice', stopped ? 'Dashboard stopped. Storage is NOT disconnected. Any admitted host work will drain in the launching terminal.' : running ? `${names[op?.kind] || 'Submitting operation'}… This can wait for storage; do not start another operation.` : !authorized ? 'Not authorized. Use the terminal approval step below. Idle authorization expires; no storage is disconnected.' : review ? (expired ? 'Review expired. Cancel or inspect configuration and prepare a fresh plan.' : 'Plan prepared — waiting for your explicit approval.') : configuration?.state === 'pending' ? 'Setup is incomplete. Review the saved plan to resume; no automatic repair has run.' : observation?.status?.hostReady ? `Ready at ${new Date(observation.checkedAt).toLocaleString()} — a past observation, not continuous monitoring.` : configured ? 'Configured — readiness is unchecked or incomplete. Check explicitly when ready.' : configuration?.state === 'empty' ? 'Not configured. Prepare a server or client plan below.' : 'Authorized. Inspect configuration to read its current state.');
+  text('notice', notice(running, authorized, expired));
   if (!authorized) review = null;
   show('authorization', !authorized && !stopped);
   show('configuration', authorized && !stopped);

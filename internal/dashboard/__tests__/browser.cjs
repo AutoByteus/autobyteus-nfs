@@ -59,7 +59,7 @@ async function run(browser, engine, role, width, scenario) {
      }
      await controls(page, role); await page.locator('#setup-form button[type=submit]').click();
      if (scenario === 'error') {
-       await shown(page, 'error'); assert.equal(await page.locator('#error img').count(), 0); await includes(page, 'error', '<img');
+       await shown(page, 'error'); await includes(page, 'notice', 'Operation incomplete'); assert.equal(await page.locator('#error img').count(), 0); await includes(page, 'error', '<img');
        assert.equal(await page.evaluate(() => document.activeElement.id), 'error');
      } else {
        await shown(page, 'review'); assert.equal(await page.locator('#commit').isEnabled(), false);
