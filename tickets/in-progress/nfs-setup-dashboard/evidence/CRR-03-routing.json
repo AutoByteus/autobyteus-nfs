@@ -46,5 +46,12 @@
     "recipient_address": "/software_engineering_team/api_e2e_engineer"
   },
   "selectionReason": "Source re-review of completed implementation-owned chooser fix passes; affected API execution follows. Single most-specific rule/recipient under higher-priority team instructions; no informational duplicate dispatch.",
-  "dispatch": "Pending"
+  "dispatch": "Delivered",
+  "reviewCommit": "c223dcb",
+  "receipt": {
+    "accepted": true,
+    "code": "DELIVERED",
+    "message": "Delivered message to /software_engineering_team/api_e2e_engineer.",
+    "target_agent_run_id": "api_e2e_engineer_4b3516b0eb7d448586471bee29383f50"
+  }
 }
