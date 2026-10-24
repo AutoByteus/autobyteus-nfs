@@ -1,0 +1,7 @@
+{
+  "result": "Unchanged executable/runtime/installer/engine/workflow/lock; new authority/notes/plan and approved guide prose only",
+  "oldReleaseAndRecoveryFilesUnchanged": 13,
+  "originalSourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "sourceSnapshot": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "note": "New measured candidate identity may differ through actual engine build inventory; do not label legacy-engine hash as candidate identity."
+}

@@ -4,8 +4,8 @@
       "amd64": {
         "buildInventory": {
           "file": "engine-build-amd64.txt",
-          "sha256": "929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86",
-          "size": 40381
+          "sha256": "d16dc3df4070a03fe26d71fbfd0d3dc348312a0cd2b141d97c699cc9c8af6c91",
+          "size": 40397
         },
         "correspondingSource": {
           "file": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
@@ -34,8 +34,8 @@
       "arm64": {
         "buildInventory": {
           "file": "engine-build-arm64.txt",
-          "sha256": "1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509",
-          "size": 40134
+          "sha256": "539b3d1e1da4444cc938ccbc2af69885aa388c7ceab1acf1ae848e1e06269000",
+          "size": 40150
         },
         "correspondingSource": {
           "file": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
@@ -88,10 +88,10 @@
       "version": "4.3-8ubuntu1"
     }
   },
-  "note": "v0.1.0 actual API006/CRR012 release-first readiness; field/filesystem/user validation deferred, not passed.",
+  "note": "v0.2.0 actual four-target candidate40105960980 and current release-control readiness; new autobyteus-nfs-5 authority adopts inherited R3/SR004 policy, not old permission. Field/filesystem/user validation deferred, not passed.",
   "releaseReadiness": {
-    "path": "packaging/releases/v0.1.0/readiness.json",
-    "sha256": "f321921a1c7000dae7a5fb4e0d2b88e6f4c43b10d908c23dddaf463df7b295cc"
+    "path": "packaging/releases/v0.2.0/readiness.json",
+    "sha256": "2eba2823301b44836976fd99e57c10c505fb0563874fb05165e9cc1df98b1468"
   },
   "ubuntuBaseImage": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
   "ubuntuPackages": {

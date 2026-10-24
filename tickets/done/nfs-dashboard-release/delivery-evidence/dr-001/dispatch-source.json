@@ -1,0 +1,10 @@
+{
+  "sourceAndWorkflowCommit": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "localDocsHead": "1e57c7c0f3a576fe1ecfc9cb4519efb1d75a2004",
+  "workflowSHA256": "c86062e3c07e931b4df290b5bb1372efbe2f95ae204190964bf171f5249695f9",
+  "remoteWorkflowBytesEqual": true,
+  "nonTicketDiff": [],
+  "releaseTag": "v0.2.0",
+  "sourceAvailability": "Reviewed source already remotely finalized on main; no ticket/main push required to dispatch build-only",
+  "authority": "release-authority-clarification.md; inherited R3/SR004 safeguards distinct from new autobyteus-nfs-5 permission"
+}

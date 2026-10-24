@@ -13,9 +13,17 @@ Archive evidence and clean only owned scratch/worktrees after durable receipts.
 
 ## Publication authorization
 
-Source finalization alone does **not** authorize publication or deployment. The
-`nfs-first-release` task explicitly authorizes the first **normal v0.1.0** release
-once its existing readiness gates are met. Normal `vMAJOR.MINOR.PATCH` only; no
+Source finalization alone does **not** authorize publication or deployment.
+The original `nfs-first-release` authorization was for normal **v0.1.0** only.
+The separate `nfs-dashboard-release` / `autobyteus-nfs-5` user request authorizes
+normal **v0.2.0** containing the finalized dashboard, after its own actual gates.
+The inherited R3/SR004 distribution-policy safeguards and deferred-field model
+apply; that reference is not a new SR approval or old permission for this version.
+Each version requires genuine version-specific user-authority evidence, candidate,
+readiness, signing and publication receipts; old artifacts are not relabeled.
+See [current authority](packaging/releases/v0.2.0/authorization.json) and its
+Solution Designer applicability clarification. The original first-release history
+and immutable release/recovery records remain unchanged. Normal `vMAJOR.MINOR.PATCH` only; no
 beta/prerelease or build suffix. The manual workflow defaults to build-only and
 ordinary push/PR checks never publish. Do not pre-create a version tag or release.
 
@@ -25,8 +33,9 @@ executable evidence; Delivery judges sufficiency, records audited readiness, fin
 current main, executes the authorized release and verifies public receipts. A
 build, source-review Pass, configured secret or permission to release is **not**
 independent physical testing, actual user verification or Accepted notarization.
-The user explicitly requests signed v0.1.0 **before** field/user testing; those
-tests are deferred, not passed and not publication/closure prerequisites. Retain
+The original first-release instruction requested signed v0.1.0 **before** field/user
+testing. This release adopts that deferred-field policy under its separate new
+authority: those tests are deferred, not passed and not publication/closure prerequisites. Retain
 current native/release-control/source-review checks, real signing/notary, exact
 payload integrity and public download checks. Delivery transfers the scoped
 postpublication test/fix-forward plan via terminal Solution Designer to the

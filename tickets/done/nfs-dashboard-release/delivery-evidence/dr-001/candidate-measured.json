@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-24T15:27:54.903158+00:00",
+  "candidateDirectory": "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate",
+  "files": 19,
+  "bytes": 129909706,
+  "recordSHA256": "a8fe379598ba3397fb9c4e0cd354bc3ed0c7e7cef5bca0ab4a3d3a198b8caa2b",
+  "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+  "engineManifestSHA256": "b02f4246f18464deb3c7520cfbb1ca7e4eb24e5092cb4ef08b9f79c12dd3ccf6",
+  "oci": {
+    "children": {
+      "linux-amd64": "sha256:1214ce14d7ba41ed391233088f0d4ea55a08e82c70ed83525f65eb04a4069e10",
+      "linux-arm64": "sha256:63030f467782575aa0558fcef215363aceb7a5def90cac280d1b22a967e0ce6e"
+    },
+    "index": "sha256:a3ab84ca0f6ee14b2e0f26c45bbaa4fa82338ebcd37545cdf5fabf3fb2bc3076"
+  },
+  "engineDelta": [
+    {
+      "path": "/architectures/amd64/buildInventory/sha256",
+      "prior": "929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86",
+      "measured": "d16dc3df4070a03fe26d71fbfd0d3dc348312a0cd2b141d97c699cc9c8af6c91"
+    },
+    {
+      "path": "/architectures/amd64/buildInventory/size",
+      "prior": 40381,
+      "measured": 40397
+    },
+    {
+      "path": "/architectures/arm64/buildInventory/sha256",
+      "prior": "1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509",
+      "measured": "539b3d1e1da4444cc938ccbc2af69885aa388c7ceab1acf1ae848e1e06269000"
+    },
+    {
+      "path": "/architectures/arm64/buildInventory/size",
+      "prior": 40134,
+      "measured": 40150
+    }
+  ],
+  "judgment": "Actual candidate verified by current facade: external run/attempt/wrapper + bounded members, all native metadata, measured engine and wholeOCI. No reproducibility claim or old-readiness promotion."
+}

@@ -1,0 +1,39 @@
+# NFS dashboard release — Delivery progress
+
+Task **nfs-dashboard-release / autobyteus-nfs-5 / project_task_212d1619-636c-4ac2-a811-f3224bb1dd22**. Entry **Release Requested**, already-finalized software; no new design/implementation classification. Predecessor Large/High/Reviewed authorities remain historical scoped source proof. First release-stage round, prior result N/A. **Not completed or published.**
+
+## Authority and guide
+User explicitly requests a new normal public version containing the dashboard, via release-request-handoff.md. No new approval questionnaire. Root RELEASE.md and packaging/RELEASE.md at guide revision ccf3d5b2a6603ab02d5bf6faa80856167af99140 govern. Release-only skill applies: no new implementation handoff/docs-sync scorecard or Verify From Evidence campaign; guide checks are release verification. No guide changed or gate waived.
+
+## Fresh intake and remote inventory
+Clean codex/nfs-dashboard-release at3f7cf58778b844ad02721b3af29a0c2f32a1f277. Fetch and merge origin/main74e70809446ce29bb157fb89ebf913388688b63b Already up to date before edits, no checkpoint needed; outside ticket no diff. SourceHash2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903 confirmed; new candidate may measure different engine inventories and must use actual identities. No base integration rerun needed for unchanged source; release-native checks remain mandatory.
+
+Read-only GitHub inventory: only public normalv0.1.0,18assets; no draft/newv0.2.0 tag or active queued/in-progress/waiting/requested/pending run observed. Old annotated tagf4a04fd0c80a6625708ba002b4cef5507a03f514 targets238bdc183e8affac99ffdee9be9cb333b0eb126f. Existing anonymous v0.1.0 OCI index returns200 and e39b1b13…; not a new whole-image verification. Local GitHub token package REST read returned403 missing read:packages; this is local inventory capability, not proof hosted workflow package access fails. No secret/token/permission changes. Six expected secret names/timestamps present, not usable-signing proof. See intake-inventory.json, inventory-queries.json, secret-metadata.json. Initial inventory reader stopped on403 before result; repeated with failure explicit and anonymous read only. Source-reader nonexistent filename guesses had no effect.
+
+## Version and current interpretation gate
+Proposed **v0.2.0**: additive dashboard from only normalv0.1.0, strict normal parser accepts it, no narrower bump rule found. Not a tag reservation or publication.
+
+Current readiness validator hardcodes kind release-first and authorization.requirementsRevision R3/SR004. That ID is from the original v0.1.0 approval, while new handoff has no new SR. Asked Solution Designer whether this can truthfully remain the inherited distribution-policy schema identity alongside new actual task/user/version authorization, or requires a narrowly owned packaging change. Do not silently relabel old approval, fabricate an SR, or change product code. No candidate/signing/publication while this authority interpretation is unresolved; no user reapproval requested.
+
+## Remaining release gates
+1. Resolve legacy schema-identity interpretation, refresh remote state and select normal version.
+2. New complete four-target build-only candidate at reviewed current source; verify immutable Actions envelope, all19 members/engine/wholeOCI/native metadata and current check evidence. Retain own candidate through publication.
+3. Genuine stable current readiness records/actual engine lock, new authorization and reviewed notes; carry predecessor exact source/evidence honestly, no synthetic approvals. Fresh main source finalization per --no-ff guide and impact checks.
+4. Authorized publish=true exact main/current candidate: both Mac DeveloperID and Accepted notary, all native final checks, retained signed payload before tag/image/release effects. Monitor all jobs; preserve partial effects and fix forward, never clobber oldversion.
+5. Verify exact public assets/checksums/provenance/wholeOCI and both-Mac signatures, owned-HOME install/version/deferral notice and bounded distributed dashboard launch with no admin/storage operation. No user upgrade or field campaign.
+6. Update release availability guidance truthfully only when actual publication supports it, final release report/revision/notes, archive/finalization/cleanup, terminal SD receipt and existing field-plan custody (no duplicate Task/dispatch).
+
+## Scope, cleanup and limits
+NFS only. Current source task closed; old v0.1.0 tag/assets/readiness/history, predecessor candidates/worktrees and canonical/PM/app/superrepo data untouched. No native runtime created; only new task-local progress/evidence. Do not delete inherited resources. Source client proof composite, native clipboard doubled/NOPASSWD; physical/field/general-user qualification deferred, not passed. Existing autobyteus-nfs-4 unchanged. No publication/build-success/TaskDone/user-verification claim. No rollback needed; subsequent release effects must remain immutable.
+
+## Authority resolved; current execution
+Solution Designer release-authority-clarification.md accepts v0.2.0 and inherited R3/SR004 **requirements-policy reference**, not schema/new approval/old permission. New stable authorization/handoff/clarification/plan/notes are version-specific; no old release/recovery evidence changed. Root and packaging guide prose updated only to separate original authorization from adopted safeguards as explicitly directed by that clarification; executable gates unchanged. Reviewed source already exists on remote main74e7080, so no staged ticket/main push needed for build-only. Current remote workflow bytes independently match (dispatch-source.json). Candidate dispatch receipt governs actual run; no signing/publication yet.
+
+## Actual candidate and current readiness — Pass (prepublication only)
+Run40105960980/1 at reviewed main/workflow74e7080 completed10success/2expected payload+publish skips. Four native Go1.27.2 race10packages/vet/Python78collected77executed1expectedGochildskip/build/version/archive passed, plus prepare78/77/1. Repeats overlap; signing deliberately skipped. Actual candidate artifact12564664059 wrapper sha256:ee1b4c1d17aabc781fa155a7f959600bdb362f97576ec58b973e9be2b49ede8c expires2027-01-22T15:13:08Z. Exact19files129909706bytes retained at /Users/normy/nfs-dashboard-release-ytwviz3y/candidate.
+
+Measured production identity **9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb**, engineManifestb02f4246f18464deb3c7520cfbb1ca7e4eb24e5092cb4ef08b9f79c12dd3ccf6, wholeOCIsha256:a3ab84ca0f6ee14b2e0f26c45bbaa4fa82338ebcd37545cdf5fabf3fb2bc3076. Only both build-inventory hashes/sizes differ from prior engine; recipe/source/packages/base/pins unchanged. Old2703d4bf identity is not new candidate identity; no reproducibility claim.
+
+Current facade verifies actual Actions envelope/wrapper, all members, all native metadata, engine and full OCI. Actual downloaded unsigned Macarm64 v0.2.0 runs version, rejects candidate release admission with no HOME writes; smoke scratch removed. Oldv0.1.0 readiness refuses this candidate. New genuine v0.2.0 authorization/native/control/source-review/plan/notes/readiness accepted by unchanged validator. Inherited safeguards versus current user permission explicitly distinguished. No synthetic authority, old receipt promotion, secret reprovision or production/test edit. Notes receive mandatory deterministic field disclosure from publisher.
+
+Root-guide source finalization pending: archive then explicit commit/push, fresh --no-ff target, independent exact-Git-clone readiness/embedding checks, main push. Only afterward authorized exact-main publication. Real both-Mac signing/Accepted, retained signed payload, tag/draft/assets/image/public verification/install/launch, final docs/cleanup remain NOT proven. This archive is not Task closure. No new source/reviewer/API campaign or questionnaire.

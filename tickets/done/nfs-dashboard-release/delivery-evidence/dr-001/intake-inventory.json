@@ -1,0 +1,271 @@
+{
+  "at": "2026-10-24T15:11:27.251131+00:00",
+  "head": "3f7cf58778b844ad02721b3af29a0c2f32a1f277",
+  "freshBase": "74e70809446ce29bb157fb89ebf913388688b63b",
+  "integration": "fetch/merge Already up to date before edits; non-ticket diff empty",
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "repository": {
+    "full_name": "AutoByteus/autobyteus-nfs",
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  "releases": [
+    {
+      "id": 417014769,
+      "tag": "v0.1.0",
+      "draft": false,
+      "prerelease": false,
+      "publishedAt": "2026-10-19T09:58:23Z",
+      "url": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0",
+      "assets": [
+        {
+          "id": 655774122,
+          "name": "autobyteus-nfs-0.1.0-darwin-amd64.tar.gz",
+          "size": 6462906,
+          "digest": "sha256:785fe38550e253194b4d08fb75e8f89f740d1c504bd931989c36e47348a1c71b"
+        },
+        {
+          "id": 655774268,
+          "name": "autobyteus-nfs-0.1.0-darwin-arm64.tar.gz",
+          "size": 5935787,
+          "digest": "sha256:cb320f7b0ef66814ef17dc476582bb220738e1faf20d99600bb18056e7d5468d"
+        },
+        {
+          "id": 655774373,
+          "name": "autobyteus-nfs-0.1.0-linux-amd64.tar.gz",
+          "size": 6954303,
+          "digest": "sha256:da01ff1c52d00cd553ef752fb045db8789528247e53e9689c5309c18871c76d1"
+        },
+        {
+          "id": 655774533,
+          "name": "autobyteus-nfs-0.1.0-linux-arm64.tar.gz",
+          "size": 6351199,
+          "digest": "sha256:0f77da68b93dbedb5328d675ffa62c1fc6e9c80176db98f915b65cea08fd4343"
+        },
+        {
+          "id": 655774624,
+          "name": "autobyteus-nfs-engine-manifest.json",
+          "size": 3237,
+          "digest": "sha256:95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970"
+        },
+        {
+          "id": 655774713,
+          "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+          "size": 1930260,
+          "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+        },
+        {
+          "id": 655774826,
+          "name": "autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+          "size": 1930260,
+          "digest": "sha256:9444146ccb128a85def5c2349b6805ffdfad6d79dadf3a3565767b7925dcdc91"
+        },
+        {
+          "id": 655774956,
+          "name": "autobyteus-nfs-install.sh",
+          "size": 3946,
+          "digest": "sha256:65769690ada27db304d2e0e4bcd6716e6403f86650ca8f1905e26ebde86d25fa"
+        },
+        {
+          "id": 655775041,
+          "name": "autobyteus-nfs-manifest.json",
+          "size": 3928,
+          "digest": "sha256:e3e42b45f15747b38f0faaff8e757d6ecab6f11bd7606fe2321075d9daf5a298"
+        },
+        {
+          "id": 655775334,
+          "name": "engine-build-amd64.txt",
+          "size": 40381,
+          "digest": "sha256:929625515dd7d6bac4642e4e0cba35ad29b88e6954dcf4202995bb898b4dfe86"
+        },
+        {
+          "id": 655775437,
+          "name": "engine-build-arm64.txt",
+          "size": 40134,
+          "digest": "sha256:1bb995375e740c80afc421838a829f8744a10e43697b4a6f78b7c699402fd509"
+        },
+        {
+          "id": 655775160,
+          "name": "engine-COPYRIGHT-amd64",
+          "size": 30807,
+          "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+        },
+        {
+          "id": 655775243,
+          "name": "engine-COPYRIGHT-arm64",
+          "size": 30807,
+          "digest": "sha256:f005d5cee9e5c771ac65f2cd2401a7259fc0cf71961275044adfd804d6b66bf7"
+        },
+        {
+          "id": 655773822,
+          "name": "LICENSE",
+          "size": 34523,
+          "digest": "sha256:0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "id": 655775562,
+          "name": "release-notes.md",
+          "size": 1872,
+          "digest": "sha256:9d91aa6ff02d5ea496b7b43bbf6ff7da2c696c5de916b5ea5b37a1c52ba9fafb"
+        },
+        {
+          "id": 655775712,
+          "name": "release-provenance.json",
+          "size": 4249,
+          "digest": "sha256:2e990164ba08a596ad9e97a9c4eb89755b5bc77ed317e59402d87ba5556aab45"
+        },
+        {
+          "id": 655773930,
+          "name": "SHA256SUMS-nfs",
+          "size": 1672,
+          "digest": "sha256:8c8b4ba753130b24b5ce414194248b913dba115b99788b94904622b461e0296b"
+        },
+        {
+          "id": 655774017,
+          "name": "THIRD_PARTY_NOTICES",
+          "size": 1920,
+          "digest": "sha256:06b53b841895bae1dad788729c3546095801ee80463a74311eecf0d666de3c60"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "v0.1.0",
+      "zipball_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/zipball/refs/tags/v0.1.0",
+      "tarball_url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/tarball/refs/tags/v0.1.0",
+      "commit": {
+        "sha": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+        "url": "https://api.github.com/repos/AutoByteus/autobyteus-nfs/commits/238bdc183e8affac99ffdee9be9cb333b0eb126f"
+      },
+      "node_id": "REF_kwDOVK4ms7ByZWZzL3RhZ3MvdjAuMS4w"
+    }
+  ],
+  "activeRuns": [],
+  "recentRuns": [
+    {
+      "id": 40101698192,
+      "name": "NFS Developer Checks",
+      "head": "74e70809446ce29bb157fb89ebf913388688b63b",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 40101689178,
+      "name": "NFS Developer Checks",
+      "head": "9fc6fe2061404f632d868cbe150d1f172fe1e45d",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39382196474,
+      "name": "NFS Developer Checks",
+      "head": "52c17fb5480d23b89752a8ae201419e356b4c3fc",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39382193343,
+      "name": "NFS Developer Checks",
+      "head": "661bec8da2998acd1f7c357c2452621b393e5979",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39233821032,
+      "name": "AutoByteus NFS Release",
+      "head": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "workflow_dispatch"
+    },
+    {
+      "id": 39227507554,
+      "name": "AutoByteus NFS Release",
+      "head": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "workflow_dispatch"
+    },
+    {
+      "id": 39227470979,
+      "name": "NFS Developer Checks",
+      "head": "3424f8dddef795d4a42e83ed8746268a4aab4d7d",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39227446730,
+      "name": "NFS Developer Checks",
+      "head": "c42176afc6603a77c7e3d0e183015ebee407f043",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39215470944,
+      "name": "AutoByteus NFS Release",
+      "head": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "workflow_dispatch"
+    },
+    {
+      "id": 39215449472,
+      "name": "NFS Developer Checks",
+      "head": "238bdc183e8affac99ffdee9be9cb333b0eb126f",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39215443295,
+      "name": "NFS Developer Checks",
+      "head": "8dfda0d151cfada1c28534584e2dbd1fa3e46bd9",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push"
+    },
+    {
+      "id": 39213489075,
+      "name": "AutoByteus NFS Release",
+      "head": "7bd486e2e27743441a870f7cd8db1f6c4ee0b493",
+      "status": "completed",
+      "conclusion": "success",
+      "event": "workflow_dispatch"
+    }
+  ],
+  "packageRead": {
+    "unavailable": "gh: You need at least read:packages scope to get a package. (HTTP 403)"
+  },
+  "anonymousExistingImage": {
+    "status": 200,
+    "digest": "sha256:e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+    "bodySHA256": "e39b1b13d09c6c6c604de470023a8c3d6ba834d127f2df5e2dbb79e931a585ec",
+    "platforms": [
+      {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      {
+        "architecture": "arm64",
+        "os": "linux"
+      }
+    ],
+    "limits": "Anonymous existing v0.1.0 index only; not new whole-OCI or package association proof. Token held in memory, not recorded."
+  },
+  "remoteRefs": "74e70809446ce29bb157fb89ebf913388688b63b\trefs/heads/main\nf4a04fd0c80a6625708ba002b4cef5507a03f514\trefs/tags/v0.1.0\n238bdc183e8affac99ffdee9be9cb333b0eb126f\trefs/tags/v0.1.0^{}\n",
+  "proposedVersion": "v0.2.0",
+  "versionReason": "Additive server/client dashboard, next normal minor after only publishedv0.1.0; normal parser accepts any strict normal version, no stricter increment rule in current guides",
+  "authorizationConcern": "Awaiting SD interpretation of legacy R3/SR004 field; no code change or old-approval relabeling",
+  "effects": "Read-only remote inventory; no source push/candidate/tag/release/publication/signing; task-local records only",
+  "attempts": [
+    "Initial broad reader stopped on local token missing read:packages (403) before writing result. Retried with permission failure retained as bounded unknown, anonymous existing registry index checked; no credential/permission changes.",
+    "Initial source lookup guessed nonexistent workflow.py; corrected to listed release facade/publication.py; read-only, no product effect."
+  ]
+}

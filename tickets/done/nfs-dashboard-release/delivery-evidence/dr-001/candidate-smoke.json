@@ -1,0 +1,10 @@
+{
+  "version": "v0.2.0",
+  "versionExit": 0,
+  "candidateAdmissionExit": 1,
+  "candidateAdmissionError": "AutoByteus NFS incomplete: this release does not admit the current computer/CPU; no installation performed",
+  "homeWrites": [],
+  "binarySHA256": "e7b9a85a232102309b2ae9cedbc1e82ac3aa1f36054ead0ab46c291c1a707a6e",
+  "meaning": "Actual downloaded unsigned Darwinarm64 candidate; not signed/public installation",
+  "scratchRemoved": true
+}

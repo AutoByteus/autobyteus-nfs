@@ -2,10 +2,17 @@
 
 Normal versions only, first **v0.1.0**. No desktop version coupling, pre-created tag,
 public beta or automatic publication on push/tag. Follow root [RELEASE.md](../RELEASE.md).
-The current lock binds the [audited v0.1.0 readiness record](releases/v0.1.0/readiness.json)
-and exact current candidate. This accepts prepublication checks only; actual
-signing/notarization and public release/download receipts remain separate gates.
-The user requests signed normal v0.1.0 first, then field/user testing and fixes.
+The lock's `releaseReadiness` reference selects the exact current version's audited
+record and candidate. The [v0.1.0 readiness](releases/v0.1.0/readiness.json) remains
+historical and immutable; a new version cannot reuse its permission or pass claims.
+The current v0.2.0 request adopts the unchanged R3/SR004 distribution-policy
+requirements under [separate new publication authority](releases/v0.2.0/authorization.json).
+That requirements reference is not the schema version or a new R3 approval.
+Readiness accepts prepublication checks only; actual signing/notarization and
+public release/download receipts remain separate gates.
+The original first-release user direction requested signed normal v0.1.0 first,
+then field/user testing and fixes; later versions need separate permission and
+current evidence, as recorded above for v0.2.0.
 Shared-filesystem/physical and user tests are deferred, not publication or closure
 prerequisites; build availability is not field-qualified support.
 
@@ -62,7 +69,7 @@ engine `manifest.py lock` clears it. No qualifiedTargets, qualifiedSourceHash,
 physicalEvidence, userVerified or qualification compatibility path exists.
 
 Delivery prepares **actual**, reviewed and sanitized records in stable
-`packaging/releases/v0.1.0/` after new API checks, not synthetic fixture copies or
+`packaging/releases/<normal-version>/` after applicable current checks, not synthetic fixture copies or
 moving tickets/in-progress paths. A reference is `{path,sha256}` to a nonempty
 bounded regular in-repo file, without links/traversal. Human review establishes
 meaning/truth; parser checks only integrity/applicability. See singular owner
@@ -73,8 +80,11 @@ meaning/truth; parser checks only integrity/applicability. See singular owner
 - `candidate`: actual candidate-reference output above; `sourceHash`,
   `engineManifestSha256`, `oci`: exact measured candidate identities.
 - `authorization`: kind `publish-before-field-testing`, requirementsRevision
-  `R3/SR004`, matching version, evidence reference to genuine user direction.
-  Permission to publish does not claim a user test was executed.
+  `R3/SR004` (the adopted existing distribution-policy requirements), matching
+  version and evidence reference to genuine current user direction. New-version
+  evidence must distinguish inherited safeguards from new publication permission;
+  do not copy the old approval as new authority. Schema is the separate `schema:1`
+  field. Permission to publish does not claim a user test was executed.
 - `checks`: exactly native and releaseControls, each `{status:"passed",evidence}`
   referencing actual current CI/API records. Skipped/failed checks do not pass.
 - `fieldValidation`: exactly `{filesystem:"deferred",user:"deferred"}`. No

@@ -1,0 +1,48 @@
+{
+  "result": "passed",
+  "ownership": "Delivery release-only project-guide verification; no new API revision or source rescore",
+  "currentHostedPrepare": {
+    "id": 120907588280,
+    "name": "prepare",
+    "result": "success",
+    "pythonCollected": 78,
+    "pythonExecuted": 77,
+    "expectedSkipped": 1,
+    "skip": "Go-child-only bootstrap regression",
+    "seconds": "40.638"
+  },
+  "currentNativePython": "All4 native jobs execute same78collected77executed1expectedGochildskip; repeat counts overlap",
+  "artifactVerification": {
+    "path": "tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-verification-commands.json",
+    "sha256": "aa7879fad1f80ffb87b9b5ad56dfc17d514dbab2403e4eaa51e44a74197eb060",
+    "wrapper": "sha256:ee1b4c1d17aabc781fa155a7f959600bdb362f97576ec58b973e9be2b49ede8c",
+    "record": "a8fe379598ba3397fb9c4e0cd354bc3ed0c7e7cef5bca0ab4a3d3a198b8caa2b",
+    "members": 19,
+    "bytes": 129909706,
+    "result": "Actual current facade run/attempt/envelope/wrapper/member/engine/native/wholeOCI validation passed"
+  },
+  "candidateVersionAdmission": {
+    "version": "v0.2.0",
+    "versionExit": 0,
+    "candidateAdmissionExit": 1,
+    "candidateAdmissionError": "AutoByteus NFS incomplete: this release does not admit the current computer/CPU; no installation performed",
+    "homeWrites": [],
+    "binarySHA256": "e7b9a85a232102309b2ae9cedbc1e82ac3aa1f36054ead0ab46c291c1a707a6e",
+    "meaning": "Actual downloaded unsigned Darwinarm64 candidate; not signed/public installation"
+  },
+  "oldReadinessRefusal": {
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Release refused: Release readiness version/targets differ\n"
+  },
+  "sourceBoundary": "No runtime/test/workflow/installer/signing/recipe change since reviewed dashboard main74e7080; adopted policy uses new actual release authority. Current source/race/Python tests remain exact.",
+  "limits": "Fixture signing/publication controls are not actual Apple/registry/public proof; those remain real fresh-publication gates."
+}
