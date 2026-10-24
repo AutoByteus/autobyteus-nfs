@@ -1,0 +1,7 @@
+API-07; 2026-10-24; source5f8cabf8/final2445aabf, reviewed deeea2f; owned Mac/Ubuntu validation; command/attempt mapped in report and matching harness. Raw output follows.
+actual-loopback-unauthorized-refusal
+manual-private-bootstrap-consumed-no-auto-privilege
+native-sudo-pipes-authorized
+actual-native-key-chooser-observation
+dashboard-stop-terminal-drained
+Fail Initial directory listing completion replaced an in-progress user path edit; settled control retains identical native-key input

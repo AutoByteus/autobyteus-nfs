@@ -1,0 +1,25 @@
+{
+  "case": "API-06",
+  "date": "2026-10-24T13:44:11.181209+00:00",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "command": "context headers + private capability URL scan + explicit own paths audit",
+  "textLogsHeaderAdded": [
+    "API-03-attempt1-console.log",
+    "API-03-attempt3-cleanup.log",
+    "API-04-console.log",
+    "API-07-console.log",
+    "API-03-browser-prepare.log",
+    "API-03-attempt2-console.log",
+    "API-04-docker-prepare.log",
+    "API-05-console.log",
+    "API-03-attempt3-console.log",
+    "API-03-console.log",
+    "API-06-console.log",
+    "API-03-boot.log",
+    "API-05-attempt1-console.log"
+  ],
+  "privateCapabilityLeaks": [],
+  "sourceChanges": [],
+  "rawWhitespacePolicy": "raw console/package logs preserved; markdown/scripts checked separately",
+  "result": "Pass"
+}

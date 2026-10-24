@@ -1,0 +1,191 @@
+{
+  "case": "API-05",
+  "date": "2026-10-24T13:37:37.319Z",
+  "command": "/Users/normy/.hermes/node/bin/node /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs client",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "environment": {
+    "host": "Mac Chrome isolated profile",
+    "guest": "192.168.64.8",
+    "transport": "SSH forwards exact guest loopback port, no LAN listener; public role actual TTY/sudo/pipes; clipboard double only",
+    "browser": "156.0.8078.47",
+    "browserProcesses": [
+      "66189 66168 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-v12FgT --remote-debugging-pipe --no-startup-window",
+      "66509 66189 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless --enable-unsafe-swiftshader --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-v12FgT --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,17977191811691379591,10148649814716650182,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,1124700692382021612,1238215513274514064,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=14",
+      "66510 66189 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=de --service-sandbox-type=network --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-v12FgT --shared-files --field-trial-handle=1718379636,r,17977191811691379591,10148649814716650182,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,1124700692382021612,1238215513274514064,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=13",
+      "66511 66189 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=de --service-sandbox-type=service --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-v12FgT --shared-files --field-trial-handle=1718379636,r,17977191811691379591,10148649814716650182,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,1124700692382021612,1238215513274514064,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=46",
+      "66512 66189 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (Alerts).app/Contents/MacOS/Google Chrome Helper (Alerts) --type=utility --utility-sub-type=mac_notifications.mojom.MacNotificationProvider --lang=de --service-sandbox-type=none --mute-audio --message-loop-type-ui --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-v12FgT --shared-files --field-trial-handle=1718379636,r,17977191811691379591,10148649814716650182,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,1124700692382021612,1238215513274514064,4 --trace-process-track-uuid=3190708990997080739"
+    ]
+  },
+  "steps": [
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "client",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:43215      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=8010,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "client",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "v2u7cSVi58oDKRxJSd_sdkZnxuNn92Q6E3QwhGBbHGI",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:37:45.255972865Z",
+          "completedAt": "2026-10-24T13:37:45.316867395Z",
+          "data": {
+            "state": "empty"
+          }
+        }
+      }
+    },
+    {
+      "name": "malformed-connection-no-effects",
+      "result": "Pass",
+      "operation": {
+        "id": "UIxG-CJGSC44-1TXutZCmgNieSf1kRKAZYCZ4gcAUJ8",
+        "requestId": 2,
+        "kind": "beginClient",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T13:37:46.10219838Z",
+        "completedAt": "2026-10-24T13:37:46.102814921Z",
+        "data": {
+          "leaseId": "",
+          "kind": "",
+          "expiresAt": "0001-01-01T00:00:00Z",
+          "summary": null,
+          "configuration": {
+            "state": ""
+          }
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "invalid character 'b' looking for beginning of object key string",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      }
+    },
+    {
+      "name": "occupied-target-refused-and-preserved",
+      "result": "Pass",
+      "operation": {
+        "id": "c-Gj8cnvNPQq2VEJAuhHEGHMu2hJZZRTG7PZXIoU4X4",
+        "requestId": 3,
+        "kind": "beginClient",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T13:37:47.03279953Z",
+        "completedAt": "2026-10-24T13:37:47.039161775Z",
+        "data": {
+          "leaseId": "",
+          "kind": "",
+          "expiresAt": "0001-01-01T00:00:00Z",
+          "summary": null,
+          "configuration": {
+            "state": ""
+          }
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "existing unmounted target must be root-owned and nonwritable; choose an empty alternative",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      },
+      "observation": {
+        "command": "cat /Volumes/api-occupied/sentinel",
+        "exit": 0,
+        "stdout": "occupied-original\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "client-exact-paste-override-review",
+      "result": "Pass",
+      "review": {
+        "leaseId": "35f5bb23-0bc3-4f47-ae14-ec4d9c9f87c7",
+        "kind": "setup",
+        "expiresAt": "2026-10-24T13:42:48.001205731Z",
+        "summary": [
+          "Attach 192.168.64.8:/autobyteus/ced07702-2029-4d05-9790-f784e23f800d at /Volumes/api-client-override",
+          "Install fixed root-owned launchd/systemd service",
+          "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+          "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline",
+          "Install exact Ubuntu NFS package versions from this release, if needed"
+        ],
+        "configuration": {
+          "state": "configured",
+          "role": "client",
+          "connection": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "endpoint": "192.168.64.8",
+            "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+            "protocol": "4.1",
+            "mountRoot": "/Volumes/api-client-override"
+          }
+        }
+      }
+    },
+    {
+      "name": "independent-CLI-busy-during-review",
+      "result": "Pass",
+      "observation": {
+        "command": "sudo -- /usr/libexec/autobyteus-nfs/autobyteus-nfs status",
+        "exit": 1,
+        "stdout": "",
+        "stderr": "Checking actual host readiness; this may wait for storage.\nAutoByteus NFS incomplete: another administrative operation is checking/incomplete; restore storage and wait: resource temporarily unavailable\n"
+      }
+    },
+    {
+      "name": "reload-preserves-review-not-consent",
+      "result": "Pass"
+    },
+    {
+      "name": "actual-review-expiry-no-cli-lock",
+      "result": "Pass",
+      "observation": {
+        "command": "sudo -- /usr/libexec/autobyteus-nfs/autobyteus-nfs status",
+        "exit": 1,
+        "stdout": "{\n  \"storageId\": \"\",\n  \"mountRoot\": \"\",\n  \"hostReady\": false,\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n}\n",
+        "stderr": "Checking actual host readiness; this may wait for storage.\nAutoByteus NFS incomplete: no such file or directory\n"
+      },
+      "elapsedMs": 301990
+    },
+    {
+      "name": "expired-review-cleared",
+      "result": "Pass"
+    },
+    {
+      "name": "dashboard-stop-terminal-drained",
+      "result": "Pass",
+      "terminal": {
+        "exit": 0,
+        "terminal": "Local client dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 8172 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+      }
+    }
+  ],
+  "cliBusyObservation": {
+    "command": "sudo -- /usr/libexec/autobyteus-nfs/autobyteus-nfs status",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Checking actual host readiness; this may wait for storage.\nAutoByteus NFS incomplete: another administrative operation is checking/incomplete; restore storage and wait: resource temporarily unavailable\n"
+  },
+  "result": "Pass",
+  "terminal": [
+    {
+      "exit": 0,
+      "terminal": "Local client dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 8172 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ]
+}

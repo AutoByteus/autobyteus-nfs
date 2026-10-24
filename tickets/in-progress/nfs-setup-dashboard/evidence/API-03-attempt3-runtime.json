@@ -1,0 +1,76 @@
+{
+  "case": "API-03",
+  "date": "2026-10-24T13:32:11.323Z",
+  "command": "/Users/normy/.hermes/node/bin/node /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs native",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "environment": {
+    "host": "Mac Chrome isolated profile",
+    "guest": "192.168.64.8",
+    "transport": "SSH forwards exact guest loopback port, no LAN listener; public role actual TTY/sudo/pipes; clipboard double only",
+    "browser": "156.0.8078.47",
+    "browserProcesses": [
+      "47078 47056 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-SLxJLZ --remote-debugging-pipe --no-startup-window",
+      "47084 47078 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless --enable-unsafe-swiftshader --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-SLxJLZ --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,16758207390487428984,9669017017283840426,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,10841926262893075798,9546348164319950932,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=27",
+      "47085 47078 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=de --service-sandbox-type=network --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-SLxJLZ --shared-files --field-trial-handle=1718379636,r,16758207390487428984,9669017017283840426,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,10841926262893075798,9546348164319950932,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=24",
+      "47086 47078 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=de --service-sandbox-type=service --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-SLxJLZ --shared-files --field-trial-handle=1718379636,r,16758207390487428984,9669017017283840426,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,10841926262893075798,9546348164319950932,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=41",
+      "47087 47078 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (Alerts).app/Contents/MacOS/Google Chrome Helper (Alerts) --type=utility --utility-sub-type=mac_notifications.mojom.MacNotificationProvider --lang=de --service-sandbox-type=none --mute-audio --message-loop-type-ui --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-SLxJLZ --shared-files --field-trial-handle=1718379636,r,16758207390487428984,9669017017283840426,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,10841926262893075798,9546348164319950932,4 --trace-process-track-uuid=3190708990997080739"
+    ]
+  },
+  "steps": [
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "server",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:41925      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=1469,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "server",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "6djQ9yHfmTqj_xkdCwe8-yO7UzkroaORNVgSq4EGERA",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:32:13.584929239Z",
+          "completedAt": "2026-10-24T13:32:13.694419885Z",
+          "data": {
+            "state": "empty"
+          }
+        }
+      }
+    }
+  ],
+  "result": "Fail",
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok((await page.locator('#directory-list').innerText()).includes('data'))\n\n    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:52:231\n    at async until (/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:10:76)\n    at async /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:52:203",
+  "lastState": {
+    "role": "server",
+    "platform": "linux",
+    "home": "/home/admin",
+    "authorized": true,
+    "closing": false,
+    "operation": {
+      "id": "6djQ9yHfmTqj_xkdCwe8-yO7UzkroaORNVgSq4EGERA",
+      "requestId": 1,
+      "kind": "authorize",
+      "state": "succeeded",
+      "startedAt": "2026-10-24T13:32:13.584929239Z",
+      "completedAt": "2026-10-24T13:32:13.694419885Z",
+      "data": {
+        "state": "empty"
+      }
+    }
+  },
+  "cleanupWait": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#stop')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"stop\" class=\"quiet\">Stop dashboard</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"chooser\" aria-labelledby=\"chooser-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"chooser\" aria-labelledby=\"chooser-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"chooser\" aria-labelledby=\"chooser-title\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+  "terminal": []
+}

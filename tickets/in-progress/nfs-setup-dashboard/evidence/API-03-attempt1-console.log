@@ -1,0 +1,6 @@
+API-03; 2026-10-24; source5f8cabf8/final2445aabf, reviewed deeea2f; owned Mac/Ubuntu validation; command/attempt mapped in report and matching harness. Raw output follows.
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(result.environment.browserProcesses.length)
+
+    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:39:424

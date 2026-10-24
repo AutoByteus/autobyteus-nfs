@@ -1,0 +1,17 @@
+{
+  "case": "API-01",
+  "date": "2026-10-24T13:24:25.739345+00:00",
+  "command": "inspect IMP02/07 raw results and git diff 2445aabf HEAD -- . :!tickets",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "kind": "Reused",
+  "owner": "Implementation",
+  "productDelta": [],
+  "evidence": [
+    "IMP-02-phase4-final-all.json",
+    "IMP-07-final-builds.json",
+    "IMP-07-mac-python-clone.json",
+    "IMP-07-linux-drain-cleanup.log"
+  ],
+  "result": "Pass",
+  "limits": "10 Mac race packages/vet; Linux full plus affected final admin cleanup rerun; four targets compile only; Python Go-child skip explicit; no new runtime run"
+}

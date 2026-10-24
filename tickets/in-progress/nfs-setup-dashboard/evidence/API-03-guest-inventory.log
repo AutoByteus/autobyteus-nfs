@@ -1,0 +1,19 @@
+API-03; deeea2f current5f8cabf source; owned Ubuntu inventory 2026-10-24
+uid=1000(admin) gid=109(admin) groups=109(admin)
+Linux ubuntu 7.0.0-38-generic #38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 17:12:37 UTC 2 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+ROOT_STATE_ABSENT
+00351676d59a03f944359cf60b7f8b133a28317f3fd4a36bf7b142fbe5bd22e1  /home/admin/api-dashboard/autobyteus-nfs
+development-dashboard

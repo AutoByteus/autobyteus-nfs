@@ -1,0 +1,85 @@
+API-06 native guest preservation/inventory; current deeea2f; 2026-10-24
+{
+  "uid": 1000,
+  "files": {
+    "original.txt": "3bf40ee3fb5e334227036d836ef022411243088262fa9ccc47bfd053299eb1fa",
+    "browser-write.txt": "544cce95a5e38cc2fe0a8738fc6a85cc7589f0dece5f36fd1b49d9863e9abde6",
+    ".autobyteus-nfs/storage.json": "4dccdbf3e716cf0411d3b7722f4c0ae1f864be8ca67165c71c4816237f5b88ae"
+  },
+  "marker": {
+    "storageId": "ced07702-2029-4d05-9790-f784e23f800d"
+  },
+  "binarySHA256": "00351676d59a03f944359cf60b7f8b133a28317f3fd4a36bf7b142fbe5bd22e1",
+  "mounts": {
+    "argv": [
+      "findmnt",
+      "-rn",
+      "-t",
+      "nfs,nfs4"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "containers": {
+    "argv": [
+      "sudo",
+      "docker",
+      "ps",
+      "-aq"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "productProcesses": [],
+  "jobs": {
+    "argv": [
+      "systemctl",
+      "list-units",
+      "--all",
+      "--no-legend",
+      "autobyteus-nfs*"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "privateInventory": {
+    "argv": [
+      "sudo",
+      "find",
+      "/var/lib/autobyteus-nfs",
+      "-maxdepth",
+      "2",
+      "-printf",
+      "%m %u %p\n"
+    ],
+    "exit": 0,
+    "stdout": "700 root /var/lib/autobyteus-nfs\n600 root /var/lib/autobyteus-nfs/operation.lock\n700 root /var/lib/autobyteus-nfs/ganesha\n600 root /var/lib/autobyteus-nfs/ganesha/engine.log\n700 root /var/lib/autobyteus-nfs/ganesha/recovery\n",
+    "stderr": ""
+  },
+  "occupiedSentinel": {
+    "argv": [
+      "cat",
+      "/Volumes/api-occupied/sentinel"
+    ],
+    "exit": 0,
+    "stdout": "occupied-original\n",
+    "stderr": ""
+  },
+  "dockerStop": {
+    "argv": [
+      "sudo",
+      "systemctl",
+      "stop",
+      "docker.service",
+      "docker.socket"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "result": "Pass"
+}
+

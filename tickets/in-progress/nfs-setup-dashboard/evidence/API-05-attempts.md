@@ -1,0 +1,3 @@
+# API-05, 2026-10-24, current deeea2f/native Ubuntu
+
+Initial client run correctly reached review and an independent CLI returned nonzero, but the harness expected generic busy/lock/progress words. The actual Lock owner uses `another administrative operation is checking/incomplete; restore storage and wait`. Initial stderr was not saved before the assertion; do not infer its bytes. Preserve failure; rerun with raw CLI observation captured and exact documented/source owner diagnostic assertion. No product or assertion meaning changed. Dashboard stopped normally, releasing review; no client mount/apply occurred.

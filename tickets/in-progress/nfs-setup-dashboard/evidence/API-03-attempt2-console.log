@@ -1,0 +1,13 @@
+API-03; 2026-10-24; source5f8cabf8/final2445aabf, reviewed deeea2f; owned Mac/Ubuntu validation; command/attempt mapped in report and matching harness. Raw output follows.
+AssertionError [ERR_ASSERTION]: no session Traceback (most recent call last):
+  File "/home/admin/api-dashboard/pty.py", line 3, in <module>
+    import os,pty,threading,re,time,sys,json,pathlib,signal
+  File "/home/admin/api-dashboard/pty.py", line 5, in <module>
+    pid,fd=pty.fork()
+           ^^^^^^^^
+AttributeError: partially initialized module 'pty' has no attribute 'fork' (most likely due to a circular import)
+
+    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:18:38
+    at until (/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:10:82)
+    at async start (/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:18:14)
+    at async /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:40:2

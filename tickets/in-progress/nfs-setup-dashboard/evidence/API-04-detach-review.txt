@@ -1,0 +1,41 @@
+Case API-04; 2026-10-24T13:36:15.888Z; current deeea2f5826304d2d6fd20f5d91b7ce577d94b41; actual DOM
+N
+AutoByteus NFS
+LOCAL SETUP DASHBOARD
+Stop dashboard
+
+SERVER · SHARE FROM THIS COMPUTER
+
+Set up shared storage
+
+Choose a folder, review the plan, then share it on your private network.
+
+Preparing disconnect review… This can wait for storage; do not start another operation.
+
+THIS COMPUTER
+
+Server configuration
+
+192.168.64.8:/autobyteus/ced07702-2029-4d05-9790-f784e23f800d → /Volumes/api-docker · Source: /home/admin/api-dashboard/data
+
+Inspect configuration
+Check readiness
+Review reconnect
+Review disconnect
+Connection details
+
+Share this nonsecret JSON with a trusted client. Configuration is not proof of readiness.
+
+Copy connection details
+
+BEFORE YOU START
+
+Local control. Explicit changes.
+This dashboard listens only on this computer. Keep its private URL to yourself.
+Administrator approval stays in your terminal. Review and apply are separate steps.
+Checks and changes can wait for unavailable storage. Restore storage and wait; there is no forced retry.
+Stopping this dashboard does not disconnect storage. Use the reviewed disconnect action after draining users.
+
+Field/shared-filesystem and user testing remain deferred. A build or signature is not field qualification.
+
+Standalone host storage · No application or workspace integration

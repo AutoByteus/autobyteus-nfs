@@ -1,0 +1,11 @@
+API-03; 2026-10-24; source5f8cabf8/final2445aabf, reviewed deeea2f; owned Mac/Ubuntu validation; command/attempt mapped in report and matching harness. Raw output follows.
+actual-loopback-unauthorized-refusal
+manual-private-bootstrap-consumed-no-auto-privilege
+native-sudo-pipes-authorized
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok((await page.locator('#directory-list').innerText()).includes('data'))
+
+    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:52:231
+    at async until (/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:10:76)
+    at async /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs:52:203

@@ -1,0 +1,460 @@
+{
+  "case": "API-04",
+  "date": "2026-10-24T13:35:48.413Z",
+  "command": "/Users/normy/.hermes/node/bin/node /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-03-browser.cjs docker",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "environment": {
+    "host": "Mac Chrome isolated profile",
+    "guest": "192.168.64.8",
+    "transport": "SSH forwards exact guest loopback port, no LAN listener; public role actual TTY/sudo/pipes; clipboard double only",
+    "browser": "156.0.8078.47",
+    "browserProcesses": [
+      "58436 58415 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-FJ9UWS --remote-debugging-pipe --no-startup-window",
+      "58443 58436 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) --type=gpu-process --gpu-recent-crash-count=0 --disable-breakpad --headless --enable-unsafe-swiftshader --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-FJ9UWS --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAAQAAAAAAAAAADAAAAAAAAADgAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAoAAAAAAAAAAgAAAAAAAAADAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=1718379636,r,11925509100416345109,18244140165166369679,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,5772621031945195744,16576796788394919784,4 --trace-process-track-uuid=3190708988185955192 --seatbelt-client=27",
+      "58444 58436 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=de --service-sandbox-type=network --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-FJ9UWS --shared-files --field-trial-handle=1718379636,r,11925509100416345109,18244140165166369679,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,5772621031945195744,16576796788394919784,4 --trace-process-track-uuid=3190708989122997041 --seatbelt-client=27",
+      "58445 58436 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=de --service-sandbox-type=service --mute-audio --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-FJ9UWS --shared-files --field-trial-handle=1718379636,r,11925509100416345109,18244140165166369679,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,5772621031945195744,16576796788394919784,4 --trace-process-track-uuid=3190708990060038890 --seatbelt-client=51",
+      "58446 58436 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/156.0.8078.47/Helpers/Google Chrome Helper (Alerts).app/Contents/MacOS/Google Chrome Helper (Alerts) --type=utility --utility-sub-type=mac_notifications.mojom.MacNotificationProvider --lang=de --service-sandbox-type=none --mute-audio --message-loop-type-ui --noerrdialogs --user-data-dir=/Users/normy/nfs-dashboard-api-w47yo5sg/tmp/playwright_chromiumdev_profile-FJ9UWS --shared-files --field-trial-handle=1718379636,r,11925509100416345109,18244140165166369679,262144 --enable-features=CDPScreenshotNewSurface --disable-features=AimEnabled,AutoDeElevate,AvoidCorsURLLoaderRestartOnRedirect,AvoidUnnecessaryBeforeUnloadCheckSync,BlockOriginHeaderModificationOnRedirect,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,NetworkTimeServiceQuerying,OptimizationHints,PaintHolding,ThirdPartyStoragePartitioning,Translate,msEdgeUpdateLaunchServicesPreferredVersion,msForceBrowserSignIn --variations-seed-version --pseudonymization-salt-handle=1935764596,r,5772621031945195744,16576796788394919784,4 --trace-process-track-uuid=3190708990997080739"
+    ]
+  },
+  "steps": [
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "server",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:46467      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=5889,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "server",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "xIc2ZIjNNZGKgdZrzpypfgXFfOxBb0zSkV4enANFGGI",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:35:50.437108655Z",
+          "completedAt": "2026-10-24T13:35:50.494970686Z",
+          "data": {
+            "state": "empty"
+          }
+        }
+      }
+    },
+    {
+      "name": "ordinary-user-directory-only-chooser",
+      "result": "Pass"
+    },
+    {
+      "name": "exact-native-plan-before-consent",
+      "result": "Pass",
+      "review": {
+        "leaseId": "fb603f08-24b3-45ed-9514-96885e727e44",
+        "kind": "setup",
+        "expiresAt": "2026-10-24T13:40:53.524349717Z",
+        "summary": [
+          "Ganesha NFSv4.1 TCP2049 only; persistent private recovery state",
+          "Export chosen source in place: /home/admin/api-dashboard/data",
+          "Map ALL clients to nonroot 1000:109; no recursive ownership change",
+          "Trust private hosts/subnets: 192.168.64.8",
+          "Attach 192.168.64.8:/autobyteus/ced07702-2029-4d05-9790-f784e23f800d at /Volumes/api-docker",
+          "Install fixed root-owned launchd/systemd service",
+          "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+          "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline",
+          "Install exact Ubuntu NFS package versions from this release, if needed"
+        ],
+        "configuration": {
+          "state": "configured",
+          "role": "server",
+          "connection": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "endpoint": "192.168.64.8",
+            "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+            "protocol": "4.1",
+            "mountRoot": "/Volumes/api-docker"
+          },
+          "source": "/home/admin/api-dashboard/data",
+          "backend": "ganesha-docker"
+        }
+      }
+    },
+    {
+      "name": "cancel-no-mount",
+      "result": "Pass"
+    },
+    {
+      "name": "owned-daemon-unavailable-after-review",
+      "result": "Pass",
+      "observation": {
+        "command": "sudo systemctl stop docker.service docker.socket",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "actual-failed-apply-retains-pending",
+      "result": "Pass",
+      "operation": {
+        "id": "jmHE5gkInpwP5dsMJUeBZvNkWTVaXun0aJkGvFBK_b4",
+        "requestId": 5,
+        "kind": "commit",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T13:35:55.866704994Z",
+        "completedAt": "2026-10-24T13:35:56.121570642Z",
+        "data": {
+          "configuration": {
+            "state": "pending",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          },
+          "effectsMayHaveStarted": true
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "Get \"http://docker/v1.47/info\": dial unix /var/run/docker.sock: connect: connection refused",
+          "truncated": false,
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "saved-pending-fresh-review-same-identity",
+      "result": "Pass",
+      "review": {
+        "leaseId": "f76676a4-b196-461d-93b8-497da8a14d1d",
+        "kind": "resume",
+        "expiresAt": "2026-10-24T13:40:58.145744334Z",
+        "summary": [
+          "Ganesha NFSv4.1 TCP2049 only; persistent private recovery state",
+          "Export chosen source in place: /home/admin/api-dashboard/data",
+          "Map ALL clients to nonroot 1000:109; no recursive ownership change",
+          "Trust private hosts/subnets: 192.168.64.8",
+          "Attach 192.168.64.8:/autobyteus/ced07702-2029-4d05-9790-f784e23f800d at /Volumes/api-docker",
+          "Install fixed root-owned launchd/systemd service",
+          "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+          "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline",
+          "Install exact Ubuntu NFS package versions from this release, if needed"
+        ],
+        "configuration": {
+          "state": "pending",
+          "role": "server",
+          "connection": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "endpoint": "192.168.64.8",
+            "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+            "protocol": "4.1",
+            "mountRoot": "/Volumes/api-docker"
+          },
+          "source": "/home/admin/api-dashboard/data",
+          "backend": "ganesha-docker"
+        }
+      }
+    },
+    {
+      "name": "apply-returned",
+      "result": "Pass",
+      "operation": {
+        "id": "ZU9bQZ1x9vqHdULBFzsDX26aRvIh_qoggIGr0awbXC4",
+        "requestId": 8,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:35:58.999488697Z",
+        "completedAt": "2026-10-24T13:36:08.136809162Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          },
+          "status": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "mountRoot": "/Volumes/api-docker",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T13:36:08.136635578Z",
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "browser-to-actual-nonroot-mounted-bytes",
+      "result": "Pass",
+      "observation": {
+        "command": "python3 - <<'PY'\nfrom pathlib import Path\nimport os,json,hashlib\np=Path('/Volumes/api-docker'); assert (p/'original.txt').read_text()=='api-original-sentinel\\n'\nwith (p/'browser-write.txt').open('w') as f:f.write('native-browser-'+ 'docker'+'\\n');f.flush();os.fsync(f.fileno())\nassert Path('/home/admin/api-dashboard/data/browser-write.txt').read_text()=='native-browser-docker\\n'\nprint(json.dumps({'uid':os.getuid(),'mount':str(p),'sourceAndMountedExact':True,'sha256':hashlib.sha256((p/'browser-write.txt').read_bytes()).hexdigest()}))\nPY",
+        "exit": 0,
+        "stdout": "{\"uid\": 1000, \"mount\": \"/Volumes/api-docker\", \"sourceAndMountedExact\": true, \"sha256\": \"544cce95a5e38cc2fe0a8738fc6a85cc7589f0dece5f36fd1b49d9863e9abde6\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "connection-copy-and-denial",
+      "result": "Pass",
+      "boundary": "clipboard doubled; exact rendered JSON"
+    },
+    {
+      "name": "inspect-not-fake-ready",
+      "result": "Pass"
+    },
+    {
+      "name": "explicit-readiness",
+      "result": "Pass",
+      "operation": {
+        "id": "BW_D38kR5Ni9qOR4fW4fETFPod8Ms7czGHw5kPCBoTs",
+        "requestId": 10,
+        "kind": "checkReadiness",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:36:09.350135046Z",
+        "completedAt": "2026-10-24T13:36:09.382574934Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          },
+          "status": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "mountRoot": "/Volumes/api-docker",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T13:36:09.382413434Z",
+          "effectsMayHaveStarted": false
+        }
+      }
+    },
+    {
+      "name": "reviewed-reconnect",
+      "result": "Pass",
+      "operation": {
+        "id": "zJJMlI86fG_q_rJ7utfO9tBc60G8iZNeurveGsyhk10",
+        "requestId": 12,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:36:11.201689492Z",
+        "completedAt": "2026-10-24T13:36:11.60165793Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          },
+          "status": {
+            "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+            "mountRoot": "/Volumes/api-docker",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T13:36:11.601468138Z",
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "actual-native-narrow-surface",
+      "result": "Pass",
+      "errors": []
+    },
+    {
+      "name": "dashboard-stop-terminal-drained",
+      "result": "Pass",
+      "terminal": {
+        "exit": 0,
+        "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 6048 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+      }
+    },
+    {
+      "name": "stop-keeps-storage",
+      "result": "Pass",
+      "observation": {
+        "command": "cat /Volumes/api-docker/browser-write.txt",
+        "exit": 0,
+        "stdout": "native-browser-docker\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "client",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:36267      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=6984,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "client",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "nyH64WhZgist3f3xJnk5b2ngq1XpnXMOFuVRgJcr_xA",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:36:13.032189166Z",
+          "completedAt": "2026-10-24T13:36:13.094762986Z",
+          "data": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          }
+        }
+      }
+    },
+    {
+      "name": "actual-wrong-role-ui-blocks-mutation",
+      "result": "Pass"
+    },
+    {
+      "name": "dashboard-stop-terminal-drained",
+      "result": "Pass",
+      "terminal": {
+        "exit": 0,
+        "terminal": "Local client dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 7147 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+      }
+    },
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "server",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:46143      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=7211,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "server",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "nbavxdpU0lz0B4D_LnF8c3-X-XhS8opqVLrMNDtVEcY",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:36:15.068239786Z",
+          "completedAt": "2026-10-24T13:36:15.125863068Z",
+          "data": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "ced07702-2029-4d05-9790-f784e23f800d",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/ced07702-2029-4d05-9790-f784e23f800d",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/api-docker"
+            },
+            "source": "/home/admin/api-dashboard/data",
+            "backend": "ganesha-docker"
+          }
+        }
+      }
+    },
+    {
+      "name": "restart-direct-saved-state-no-migration",
+      "result": "Pass"
+    },
+    {
+      "name": "drained-detach-preserves-source-marker",
+      "result": "Pass",
+      "observation": {
+        "command": "cat /home/admin/api-dashboard/data/original.txt /home/admin/api-dashboard/data/browser-write.txt; sha256sum /home/admin/api-dashboard/data/.autobyteus-nfs/storage.json; findmnt -rn /Volumes/api-docker",
+        "exit": 1,
+        "stdout": "api-original-sentinel\nnative-browser-docker\n4dccdbf3e716cf0411d3b7722f4c0ae1f864be8ca67165c71c4816237f5b88ae  /home/admin/api-dashboard/data/.autobyteus-nfs/storage.json\n",
+        "stderr": ""
+      },
+      "operation": {
+        "id": "rHIDjQav0VJt18Gy2wrQxTd9rOLWH22Y6IizqxmopRY",
+        "requestId": 3,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:36:16.83126769Z",
+        "completedAt": "2026-10-24T13:36:17.245958783Z",
+        "data": {
+          "configuration": {
+            "state": "empty"
+          },
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "dashboard-stop-terminal-drained",
+      "result": "Pass",
+      "terminal": {
+        "exit": 0,
+        "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 7370 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+      }
+    }
+  ],
+  "result": "Pass",
+  "terminal": [
+    {
+      "exit": 0,
+      "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 7370 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ]
+}

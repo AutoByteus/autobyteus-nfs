@@ -1,0 +1,111 @@
+{
+  "case": "API-07",
+  "date": "2026-10-24T13:34:45.581Z",
+  "command": "/Users/normy/.hermes/node/bin/node /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-chooser.cjs",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "environment": {
+    "host": "Mac Chrome isolated profile",
+    "guest": "192.168.64.8",
+    "transport": "SSH forwards exact guest loopback port, no LAN listener; public role actual TTY/sudo/pipes; clipboard double only",
+    "browser": "156.0.8078.47"
+  },
+  "steps": [
+    {
+      "name": "actual-loopback-unauthorized-refusal",
+      "result": "Pass"
+    },
+    {
+      "name": "manual-private-bootstrap-consumed-no-auto-privilege",
+      "result": "Pass",
+      "role": "server",
+      "uid": "uid=1000(admin) gid=109(admin) groups=109(admin)\n",
+      "listener": "LISTEN 0      4096       127.0.0.1:35745      0.0.0.0:*    users:((\"autobyteus-nfs\",pid=4549,fd=7))\n"
+    },
+    {
+      "name": "native-sudo-pipes-authorized",
+      "result": "Pass",
+      "state": {
+        "role": "server",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": true,
+        "closing": false,
+        "operation": {
+          "id": "JZGaY6VXat5TyjqLCBpPymBHM29Y31cmgUWrXcs9WYI",
+          "requestId": 1,
+          "kind": "authorize",
+          "state": "succeeded",
+          "startedAt": "2026-10-24T13:34:47.418805143Z",
+          "completedAt": "2026-10-24T13:34:47.478777618Z",
+          "data": {
+            "state": "empty"
+          }
+        }
+      }
+    },
+    {
+      "name": "actual-native-key-chooser-observation",
+      "result": "Pass",
+      "expected": "/home/admin/api-dashboard",
+      "actual": "/home/adminadmin/api-dashboard"
+    },
+    {
+      "name": "dashboard-stop-terminal-drained",
+      "result": "Pass",
+      "terminal": {
+        "exit": 0,
+        "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 4708 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+      }
+    }
+  ],
+  "typing": {
+    "expected": "/home/admin/api-dashboard",
+    "actual": "/home/adminadmin/api-dashboard",
+    "began": 1792848888229,
+    "finished": 1792848891336,
+    "nativeKeyboardDelayMs": 80,
+    "responses": [
+      {
+        "at": 1792848888226,
+        "method": "POST",
+        "request": "{\"path\":\"/home/admin\"}",
+        "status": 202,
+        "body": {
+          "state": "running",
+          "path": "/home/admin",
+          "tooMany": false
+        }
+      },
+      {
+        "at": 1792848888728,
+        "method": "GET",
+        "request": null,
+        "status": 200,
+        "body": {
+          "state": "complete",
+          "path": "/home/admin",
+          "parent": "/home",
+          "names": [
+            ".cache",
+            ".ssh",
+            "api-dashboard",
+            "~administrator"
+          ],
+          "tooMany": false
+        }
+      }
+    ]
+  },
+  "settledControl": {
+    "expected": "/home/admin/api-dashboard",
+    "actual": "/home/admin/api-dashboard"
+  },
+  "result": "Fail",
+  "finding": "Initial directory listing completion replaced an in-progress user path edit; settled control retains identical native-key input",
+  "terminal": [
+    {
+      "exit": 0,
+      "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nAdministrator approval/helper process PID 4708 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ]
+}
