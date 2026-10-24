@@ -3,17 +3,20 @@
 A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
-**Release status:** normal **[v0.1.0 is published](https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.1.0)**
-for macOS and Linux, ARM64 and x64. Both Mac binaries are Developer ID signed and
-Apple-notarized. All 18 public assets were downloaded and matched to the retained
-payload; the complete multi-architecture container is anonymously accessible.
-Public installer/version checks passed on native Mac ARM64 and Ubuntu x64.
-Mac x64 signature/notarization checks passed; this is not native Intel execution.
+**Release status:** normal **[v0.2.0 is published](https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.0)**,
+including the standalone **server/client setup dashboard**, for macOS and Linux,
+ARM64 and x64. Both Mac binaries are Developer ID signed and Apple-notarized;
+downloaded signatures and online notarization checks passed. All18 public assets
+match the retained signed payload; the whole multi-architecture container is
+anonymously accessible. Public installer/version checks passed on Mac ARM64 and
+Ubuntu x64. Both distributed dashboard roles were launched/stopped in an isolated
+Mac ARM64 HOME without requesting administration or changing storage.
+Mac x64 signature/notarization verification is not local Intel execution.
 Shared-filesystem/physical and user testing remains **deferred**, not passed.
-Distribution/signature checks are not field qualification.
-Internal CI candidates are not public installers; application guides are maintained
-independently. See [release procedure](packaging/RELEASE.md) and the
-[delivery record](tickets/done/nfs-first-release/handoff-summary.md).
+Distribution/signature/launch checks are not field qualification. The original
+v0.1.0 release remains unchanged; it does not include the dashboard.
+See [release procedure](packaging/RELEASE.md) and the
+[current delivery record](tickets/done/nfs-dashboard-release/release-deployment-report.md).
 
 ## Validation boundary
 
@@ -56,12 +59,12 @@ package command. Package/OCI distribution integrity is verified; live storage op
 ## Versioned download
 
 Advertised CPU targets are ARM64 and x64 for native macOS26+ and Ubuntu24.04.
-The first release is normal v0.1.0, not beta. Download and inspect the versioned
+The current release is normal v0.2.0, not beta. Download and inspect the versioned
 installer, then run only a version check:
 
 ```sh
 curl --fail --location --proto '=https' --tlsv1.2 \
-  https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.1.0/autobyteus-nfs-install.sh \
+  https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.0/autobyteus-nfs-install.sh \
   -o autobyteus-nfs-install.sh
 less autobyteus-nfs-install.sh
 bash autobyteus-nfs-install.sh version
@@ -80,17 +83,17 @@ no installation smoke authorizes storage changes on the user's computer. The
 installer emits a deferred-field/user-testing notice on stderr after successful
 manifest admission; `version` stdout remains the exact version.
 
-## Source-built local setup dashboard
+## Local setup dashboard (v0.2.0+)
 
-The current source adds two **ordinary-user terminal** commands:
+The published executable includes two **ordinary-user terminal** commands:
 
 ```sh
 autobyteus-nfs server   # share a folder from this computer
 autobyteus-nfs client   # connect this computer using the server’s JSON
 ```
 
-These commands are **not in the published v0.1.0 binary**. Build this source to
-use them; this change does not publish an installer or update any release asset.
+These commands are included in **v0.2.0 and later**, not the original v0.1.0
+binary. Install the current version explicitly; no automatic upgrade is performed.
 The browser interface is embedded in the same executable, with no Node/web-server
 installation, network assets or application dependency. Run it without sudo in
 an interactive terminal. It opens a private local page (or prints a private
@@ -128,7 +131,8 @@ an explicit empty alternative. Setup prints the actual root. Select a project
 beneath it as an ordinary AutoByteus workspace. Each other computer still runs its
 own connection flow. Closing AutoByteus does not stop this service.
 
-Installed commands: `create`, `connect`, `status`, `reconnect`, `detach`, `version`.
+Installed commands: `server`, `client`, `create`, `connect`, `status`, `reconnect`,
+`detach`, `version`.
 No arguments selects first-use setup or configured status/actions. Noninteractive
 setup requires explicit inputs and administration consent (`--yes`). Detach
 requires drained export/mount users (`--drained` with `--yes`). Connection input is never evaluated as shell.

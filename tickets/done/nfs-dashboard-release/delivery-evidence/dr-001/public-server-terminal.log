@@ -1,0 +1,3 @@
+Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: http://127.0.0.1:[owned-port]/#[redacted]
+Browser opener failed; use the private URL above.
+Stopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.

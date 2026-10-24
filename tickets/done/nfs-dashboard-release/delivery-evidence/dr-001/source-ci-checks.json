@@ -1,0 +1,98 @@
+{
+  "result": "Pass",
+  "checks": [
+    {
+      "branch": "ticket",
+      "platform": "ubuntu-24.04",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "rawExcerpts": [
+        "2026-10-24T15:32:17.6879607Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/admin\t2.175s",
+        "2026-10-24T15:32:17.6880447Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/adminwire\t1.012s",
+        "2026-10-24T15:32:17.6881281Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.062s",
+        "2026-10-24T15:32:17.6882373Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.034s",
+        "2026-10-24T15:32:17.6883276Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.056s",
+        "2026-10-24T15:32:21.8469091Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/dashboard\t5.070s",
+        "2026-10-24T15:32:21.8470077Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.018s",
+        "2026-10-24T15:32:21.8470996Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.250s",
+        "2026-10-24T15:32:21.8471832Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.013s",
+        "2026-10-24T15:32:21.8472763Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.125s",
+        "2026-10-24T15:32:37.6245343Z development",
+        "2026-10-24T15:33:37.3930579Z Ran 78 tests in 59.540s",
+        "2026-10-24T15:33:37.3930857Z OK (skipped=1)"
+      ]
+    },
+    {
+      "branch": "ticket",
+      "platform": "macos-15",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "rawExcerpts": [
+        "2026-10-24T15:32:36.1546060Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/admin\t2.395s",
+        "2026-10-24T15:32:36.1549700Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/adminwire\t1.050s",
+        "2026-10-24T15:32:36.1550280Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.212s",
+        "2026-10-24T15:32:36.2444710Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.071s",
+        "2026-10-24T15:32:36.5278330Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.254s",
+        "2026-10-24T15:32:41.7482130Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/dashboard\t5.411s",
+        "2026-10-24T15:32:41.7487650Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.232s",
+        "2026-10-24T15:32:41.7489030Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t4.470s",
+        "2026-10-24T15:32:41.7490400Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.088s",
+        "2026-10-24T15:32:41.7491750Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.928s",
+        "2026-10-24T15:32:58.2917830Z development",
+        "2026-10-24T15:35:37.0993690Z Ran 78 tests in 158.570s",
+        "2026-10-24T15:35:37.0994150Z OK (skipped=1)"
+      ]
+    },
+    {
+      "branch": "main",
+      "platform": "ubuntu-24.04",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "rawExcerpts": [
+        "2026-10-24T15:32:15.5815673Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/admin\t2.416s",
+        "2026-10-24T15:32:15.5816166Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/adminwire\t1.011s",
+        "2026-10-24T15:32:15.5816533Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.073s",
+        "2026-10-24T15:32:15.5816882Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.030s",
+        "2026-10-24T15:32:15.5821041Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.035s",
+        "2026-10-24T15:32:19.5902650Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/dashboard\t5.059s",
+        "2026-10-24T15:32:19.5903263Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.017s",
+        "2026-10-24T15:32:19.5903831Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.168s",
+        "2026-10-24T15:32:19.5904278Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.009s",
+        "2026-10-24T15:32:19.5904668Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.111s",
+        "2026-10-24T15:32:30.2125336Z development",
+        "2026-10-24T15:33:12.7968610Z Ran 78 tests in 42.482s",
+        "2026-10-24T15:33:12.7968756Z OK (skipped=1)"
+      ]
+    },
+    {
+      "branch": "main",
+      "platform": "macos-15",
+      "pythonCollected": 78,
+      "pythonExecuted": 77,
+      "expectedGoChildSkip": 1,
+      "goRacePackages": 10,
+      "rawExcerpts": [
+        "2026-10-24T15:32:29.0267510Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/admin\t2.273s",
+        "2026-10-24T15:32:29.0268580Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/adminwire\t1.099s",
+        "2026-10-24T15:32:29.0269240Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/backend\t1.419s",
+        "2026-10-24T15:32:29.2421870Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/cli\t1.115s",
+        "2026-10-24T15:32:29.5439470Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/config\t1.048s",
+        "2026-10-24T15:32:34.3350540Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/dashboard\t5.267s",
+        "2026-10-24T15:32:34.3352590Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/docker\t1.095s",
+        "2026-10-24T15:32:34.3354380Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/platform\t3.691s",
+        "2026-10-24T15:32:34.3356030Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/service\t1.045s",
+        "2026-10-24T15:32:34.3357860Z ok  \tgithub.com/AutoByteus/autobyteus-nfs/internal/setup\t1.331s",
+        "2026-10-24T15:32:45.1498940Z development",
+        "2026-10-24T15:35:14.9889800Z Ran 78 tests in 149.539s",
+        "2026-10-24T15:35:14.9890620Z OK (skipped=1)"
+      ]
+    }
+  ],
+  "limits": "Repeated overlapping controls; native packages10 each, no individual Go test counts from nonverbose logs; no field proof"
+}

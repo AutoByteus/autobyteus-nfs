@@ -1,0 +1,362 @@
+[
+  {
+    "at": "2026-10-24T15:31:30.500280+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "95070b28e62cc43f08b6f9d11e7598055c2380f4\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:30.518177+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:30.533829+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:31.142834+00:00",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-24T15:31:31.159798+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "74e70809446ce29bb157fb89ebf913388688b63b\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:33.346794+00:00",
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:refs/heads/codex/nfs-dashboard-release"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "remote: \nremote: Create a pull request for 'codex/nfs-dashboard-release' on GitHub by visiting:        \nremote:      https://github.com/AutoByteus/autobyteus-nfs/pull/new/codex/nfs-dashboard-release        \nremote: \nTo https://github.com/AutoByteus/autobyteus-nfs.git\n * [new branch]      HEAD -> codex/nfs-dashboard-release\n"
+  },
+  {
+    "at": "2026-10-24T15:31:33.761882+00:00",
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/codex/nfs-dashboard-release"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "95070b28e62cc43f08b6f9d11e7598055c2380f4\trefs/heads/codex/nfs-dashboard-release\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.260342+00:00",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-24T15:31:34.282318+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "74e70809446ce29bb157fb89ebf913388688b63b\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.322391+00:00",
+    "command": [
+      "git",
+      "switch",
+      "-c",
+      "finalize/nfs-dashboard-release",
+      "origin/main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "branch 'finalize/nfs-dashboard-release' set up to track 'origin/main'.\n",
+    "stderr": "Switched to a new branch 'finalize/nfs-dashboard-release'\n"
+  },
+  {
+    "at": "2026-10-24T15:31:34.402331+00:00",
+    "command": [
+      "git",
+      "merge",
+      "--no-ff",
+      "--no-edit",
+      "-m",
+      "Merge v0.2.0 dashboard release readiness",
+      "codex/nfs-dashboard-release"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "Merge made by the 'ort' strategy.\n RELEASE.md                                         |    19 +-\n packaging/RELEASE.md                               |    24 +-\n packaging/release-lock.json                        |    14 +-\n packaging/releases/v0.2.0/authorization.json       |    34 +\n packaging/releases/v0.2.0/native-checks.json       |    78 +\n .../v0.2.0/postpublication-testing-plan.md         |    11 +\n packaging/releases/v0.2.0/readiness.json           |    76 +\n .../v0.2.0/release-authority-clarification.md      |    37 +\n packaging/releases/v0.2.0/release-controls.json    |    48 +\n packaging/releases/v0.2.0/release-notes.md         |     9 +\n .../releases/v0.2.0/release-request-handoff.md     |    50 +\n packaging/releases/v0.2.0/source-review.json       |    57 +\n .../dr-001/archive-and-precommit.json              |    11 +\n .../dr-001/browser-preparation.log                 |    55 +\n .../dr-001/candidate-artifacts.json                |     1 +\n .../delivery-evidence/dr-001/candidate-checks.json |    79 +\n .../dr-001/candidate-dispatch.json                 |    29 +\n .../dr-001/candidate-envelope.json                 |     8 +\n .../delivery-evidence/dr-001/candidate-jobs.json   |  1171 ++\n .../dr-001/candidate-measured.json                 |    39 +\n .../dr-001/candidate-monitor.json                  |  1190 ++\n .../dr-001/candidate-reference.json                |    11 +\n .../delivery-evidence/dr-001/candidate-run.json    |   224 +\n .../delivery-evidence/dr-001/candidate-smoke.json  |    10 +\n .../dr-001/candidate-verification-commands.json    |    58 +\n .../dr-001/candidate-verified.json                 |    97 +\n .../delivery-evidence/dr-001/candidate.log         | 14419 +++++++++++++++++++\n .../delivery-evidence/dr-001/dispatch-source.json  |    10 +\n .../delivery-evidence/dr-001/intake-inventory.json |   271 +\n .../dr-001/inventory-queries.json                  |    52 +\n .../dr-001/preparation-scope.json                  |     7 +\n .../dr-001/public-dashboard-browser.cjs            |    50 +\n .../dr-001/public-dashboard-smoke.py               |    57 +\n .../delivery-evidence/dr-001/readiness-checks.json |    73 +\n .../delivery-evidence/dr-001/readiness-result.json |    26 +\n .../delivery-evidence/dr-001/resources.json        |    16 +\n .../delivery-evidence/dr-001/secret-metadata.json  |    33 +\n .../release-authority-clarification.md             |    37 +\n .../release-deployment-report.md                   |    39 +\n .../done/nfs-dashboard-release/release-notes.md    |     9 +\n .../release-request-handoff.md                     |    50 +\n 41 files changed, 18570 insertions(+), 19 deletions(-)\n create mode 100644 packaging/releases/v0.2.0/authorization.json\n create mode 100644 packaging/releases/v0.2.0/native-checks.json\n create mode 100644 packaging/releases/v0.2.0/postpublication-testing-plan.md\n create mode 100644 packaging/releases/v0.2.0/readiness.json\n create mode 100644 packaging/releases/v0.2.0/release-authority-clarification.md\n create mode 100644 packaging/releases/v0.2.0/release-controls.json\n create mode 100644 packaging/releases/v0.2.0/release-notes.md\n create mode 100644 packaging/releases/v0.2.0/release-request-handoff.md\n create mode 100644 packaging/releases/v0.2.0/source-review.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/archive-and-precommit.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/browser-preparation.log\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-artifacts.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-checks.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-dispatch.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-envelope.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-jobs.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-measured.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-monitor.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-reference.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-run.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-smoke.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-verification-commands.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate-verified.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/candidate.log\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/dispatch-source.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/intake-inventory.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/inventory-queries.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/preparation-scope.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/public-dashboard-browser.cjs\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/public-dashboard-smoke.py\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/readiness-checks.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/readiness-result.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/resources.json\n create mode 100644 tickets/done/nfs-dashboard-release/delivery-evidence/dr-001/secret-metadata.json\n create mode 100644 tickets/done/nfs-dashboard-release/release-authority-clarification.md\n create mode 100644 tickets/done/nfs-dashboard-release/release-deployment-report.md\n create mode 100644 tickets/done/nfs-dashboard-release/release-notes.md\n create mode 100644 tickets/done/nfs-dashboard-release/release-request-handoff.md\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.416263+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "448cef839b4919a1e3ae0489e8d86ae36f5cee33\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.433951+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD^{tree}"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "4dbed4c161d2cf9c3ac5fa79e617fc80d66eea78\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.448983+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "95070b28e62cc43f08b6f9d11e7598055c2380f4^{tree}"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "4dbed4c161d2cf9c3ac5fa79e617fc80d66eea78\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:34.464497+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--name-only",
+      "74e70809446ce29bb157fb89ebf913388688b63b",
+      "HEAD",
+      "--",
+      ":(exclude)tickets/**"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "RELEASE.md\npackaging/RELEASE.md\npackaging/release-lock.json\npackaging/releases/v0.2.0/authorization.json\npackaging/releases/v0.2.0/native-checks.json\npackaging/releases/v0.2.0/postpublication-testing-plan.md\npackaging/releases/v0.2.0/readiness.json\npackaging/releases/v0.2.0/release-authority-clarification.md\npackaging/releases/v0.2.0/release-controls.json\npackaging/releases/v0.2.0/release-notes.md\npackaging/releases/v0.2.0/release-request-handoff.md\npackaging/releases/v0.2.0/source-review.json\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:35.916722+00:00",
+    "command": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "--no-checkout",
+      "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Cloning into '/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check'...\ndone.\n"
+  },
+  {
+    "at": "2026-10-24T15:31:36.477735+00:00",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "HEAD is now at 448cef8 Merge v0.2.0 dashboard release readiness\n"
+  },
+  {
+    "at": "2026-10-24T15:31:36.703877+00:00",
+    "command": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:37.086521+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--source-hash"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:37.731470+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "packaging/release.py",
+      "--check-publish",
+      "--candidate",
+      "/Users/normy/nfs-dashboard-release-ytwviz3y/candidate"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:37.996588+00:00",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_nfs_dashboard_packaging.py",
+      "-v"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_embedded_static_allowlist_is_self_contained (test_nfs_dashboard_packaging.DashboardPackagingTests) ... ok\ntest_js_and_css_change_existing_source_identity (test_nfs_dashboard_packaging.DashboardPackagingTests) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.074s\n\nOK\n"
+  },
+  {
+    "at": "2026-10-24T15:31:38.281567+00:00",
+    "command": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "cwd": "/Users/normy/nfs-dashboard-release-ytwviz3y/integrated-check",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:39.509882+00:00",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+  },
+  {
+    "at": "2026-10-24T15:31:39.528452+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "74e70809446ce29bb157fb89ebf913388688b63b\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:41.212767+00:00",
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:refs/heads/main"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   74e7080..448cef8  HEAD -> main\n"
+  },
+  {
+    "at": "2026-10-24T15:31:41.630921+00:00",
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main",
+      "refs/heads/codex/nfs-dashboard-release"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "95070b28e62cc43f08b6f9d11e7598055c2380f4\trefs/heads/codex/nfs-dashboard-release\n448cef839b4919a1e3ae0489e8d86ae36f5cee33\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "at": "2026-10-24T15:31:41.655717+00:00",
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%P",
+      "HEAD"
+    ],
+    "cwd": "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-dashboard-release",
+    "exit": 0,
+    "stdout": "74e70809446ce29bb157fb89ebf913388688b63b 95070b28e62cc43f08b6f9d11e7598055c2380f4\n",
+    "stderr": ""
+  }
+]

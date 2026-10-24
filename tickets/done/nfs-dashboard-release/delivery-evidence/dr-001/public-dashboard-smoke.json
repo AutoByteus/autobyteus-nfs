@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-24T15:56:19.372990+00:00",
+  "binarySHA256": "3644ec83ae438d8df1c689a405213d2fd840b02b7d4f91c421b2a66d547eae12",
+  "version": "v0.2.0",
+  "roles": [
+    {
+      "role": "server",
+      "pid": 74507,
+      "exit": 0,
+      "browserExit": 0,
+      "result": "Pass",
+      "bootstrapFilesRemaining": 0,
+      "sandbox": "Deny only OS opener exec; actual manual fallback; no admin request/elevation/storage"
+    },
+    {
+      "role": "client",
+      "pid": 74541,
+      "exit": 0,
+      "browserExit": 0,
+      "result": "Pass",
+      "bootstrapFilesRemaining": 0,
+      "sandbox": "Deny only OS opener exec; actual manual fallback; no admin request/elevation/storage"
+    }
+  ],
+  "limits": "Current Mac ARM64 published install launch only; no root/storage/field proof"
+}

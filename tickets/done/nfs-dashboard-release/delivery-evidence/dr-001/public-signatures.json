@@ -1,0 +1,32 @@
+{
+  "darwin-arm64": {
+    "notary": {
+      "binarySha256": "3644ec83ae438d8df1c689a405213d2fd840b02b7d4f91c421b2a66d547eae12",
+      "status": "Accepted",
+      "submissionId": "98bbf2c4-7b24-40fd-8097-d8563723c093",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "strictSignatureExit": 0,
+    "DeveloperIdTeamTimestampRuntime": true,
+    "gatekeeperExit": 3,
+    "gatekeeperOutput": "/Users/normy/nfs-dashboard-release-ytwviz3y/public/darwin-arm64/autobyteus-nfs: rejected (the code is valid but does not seem to be an app)\n",
+    "limits": "Static signature and online assessment on macOS26.5.2 ARM64; not native Intel execution",
+    "onlineNotarizedRequirementExit": 0,
+    "appAssessmentInterpretation": "Not an app: observed exit3 is not a Gatekeeper Pass; appropriate standalone-code online notarized requirement is mandatory and passed."
+  },
+  "darwin-amd64": {
+    "notary": {
+      "binarySha256": "a7fade2e1484c083b8239ad6137632dba2e2e21a08726b36e9b08d03bc0deba0",
+      "status": "Accepted",
+      "submissionId": "127d30c2-22ac-4864-8597-67b3f93a6d24",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "strictSignatureExit": 0,
+    "DeveloperIdTeamTimestampRuntime": true,
+    "gatekeeperExit": 3,
+    "gatekeeperOutput": "/Users/normy/nfs-dashboard-release-ytwviz3y/public/darwin-amd64/autobyteus-nfs: rejected (the code is valid but does not seem to be an app)\n",
+    "limits": "Static signature and online assessment on macOS26.5.2 ARM64; not native Intel execution",
+    "onlineNotarizedRequirementExit": 0,
+    "appAssessmentInterpretation": "Not an app: observed exit3 is not a Gatekeeper Pass; appropriate standalone-code online notarized requirement is mandatory and passed."
+  }
+}

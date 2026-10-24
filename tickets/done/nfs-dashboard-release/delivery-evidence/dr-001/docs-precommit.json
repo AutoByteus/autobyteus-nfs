@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-24T15:59:16.449694+00:00",
+  "base": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "changedOutsideTicket": [],
+  "portableNamesAndCaseCollisions": "Pass",
+  "newFilesWithinOwnTicket": 3,
+  "publishedBytesNotChanged": true,
+  "scope": "README/TESTING/dashboard availability + own current evidence only; no runtime/test/lock/readiness/workflow delta"
+}

@@ -30,8 +30,8 @@ const { chromium } = require(process.env.NFS_SMOKE_PLAYWRIGHT);
       const token=sessionStorage.getItem('autobyteus-nfs-dashboard');
       return await (await fetch('/api/state',{headers:{Authorization:'Bearer '+token}})).json();
     });
-    assert.equal(state.role,input.role);assert.equal(state.authorized,false);assert.equal(state.operation,null);assert.equal(state.home,input.home);
-    result.state={role:state.role,authorized:state.authorized,operation:state.operation,ownedHome:true};
+    assert.equal(state.role,input.role);assert.equal(state.authorized,false);assert.equal(Object.hasOwn(state,'operation'),false);assert.equal(state.home,input.home);
+    result.state={role:state.role,authorized:state.authorized,operation:null,operationPropertyAbsent:true,ownedHome:true};
     for (const width of [1280,390]) {
       await page.setViewportSize({width,height:900});
       const metrics=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:innerWidth}));

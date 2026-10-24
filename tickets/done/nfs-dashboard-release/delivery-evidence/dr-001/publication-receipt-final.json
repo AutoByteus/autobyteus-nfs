@@ -1,0 +1,66 @@
+{
+  "authorization": null,
+  "executor": {
+    "commit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+    "runAttempt": "1",
+    "runId": "40108736167",
+    "sourceHash": "9b6e429252421eba35c7757fe1eaf309642dba119e0cccbb35c764f358c484eb",
+    "workflow": ".github/workflows/release-nfs.yml",
+    "workflowCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+  },
+  "image": {
+    "anonymousPlatforms": [
+      "linux-amd64",
+      "linux-arm64"
+    ],
+    "digest": "sha256:a3ab84ca0f6ee14b2e0f26c45bbaa4fa82338ebcd37545cdf5fabf3fb2bc3076",
+    "versionId": 1440088373
+  },
+  "installerSmoke": "owned HOME, explicit version only, Ubuntu amd64 publisher",
+  "mode": "resume",
+  "payload": {
+    "envelope": {
+      "artifactId": 12565288864,
+      "digest": "sha256:58a6e84a5a7d397e55527b7b2549c6423db92c2041df890e739c2a1e9623d712",
+      "expiresAt": "2027-01-22T15:36:23Z",
+      "runAttempt": 1,
+      "runId": 40107739742,
+      "workflowCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+    },
+    "payloadSha256": "fbde9886b6369e6ea234c951acfc820a9c04d52487f95b0a126497951216e5f0",
+    "repository": "AutoByteus/autobyteus-nfs",
+    "sourceCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+    "version": "v0.2.0"
+  },
+  "payloadSourceCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "releaseId": 422823635,
+  "releaseUrl": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.0",
+  "remaining": "Delivery must verify other native installer/signature downloads on owned hosts",
+  "result": "published",
+  "reviewedCommit": null,
+  "stages": [
+    "validating-before-effects",
+    "tag-confirmed; draft-reconciliation-attempted",
+    "draft-confirmed; asset-reconciliation-attempted",
+    "assets-confirmed; image-promotion-and-anonymous-read-attempted",
+    "image-public-confirmed; release-publication-attempted",
+    "release-published; public-download-verification-attempted"
+  ],
+  "tag": {
+    "binding": {
+      "envelope": {
+        "artifactId": 12565288864,
+        "digest": "sha256:58a6e84a5a7d397e55527b7b2549c6423db92c2041df890e739c2a1e9623d712",
+        "expiresAt": "2027-01-22T15:36:23Z",
+        "runAttempt": 1,
+        "runId": 40107739742,
+        "workflowCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33"
+      },
+      "payloadSha256": "fbde9886b6369e6ea234c951acfc820a9c04d52487f95b0a126497951216e5f0",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+      "version": "v0.2.0"
+    },
+    "object": "51e84a18e9283c9f6dda9be5d396dcb4b1b6f75f"
+  }
+}

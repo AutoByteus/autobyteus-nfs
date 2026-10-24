@@ -1,0 +1,153 @@
+{
+  "run": 40107739742,
+  "attempt": 1,
+  "source": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "conclusion": "failure",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40107739742",
+  "jobs": [
+    {
+      "id": 120912830001,
+      "name": "prepare",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120913138217,
+      "name": "binaries (macos-15, darwin, arm64)",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120913138247,
+      "name": "binaries (ubuntu-24.04, linux, amd64)",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120913138321,
+      "name": "binaries (macos-15-intel, darwin, amd64)",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120913138430,
+      "name": "binaries (ubuntu-24.04-arm, linux, arm64)",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120913138604,
+      "name": "engine-packages",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120913139191,
+      "name": "engine-inputs",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120913139594,
+      "name": "engine",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120914984608,
+      "name": "payload",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120914985798,
+      "name": "candidate",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120915042435,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "failure",
+      "active": []
+    }
+  ],
+  "logFetchExit": 0,
+  "logSHA256": "391f49daf605cbe4d44a28ea7740399fdcd8e5f5af487042f8e9ed3c0d0f2981",
+  "artifacts": [
+    {
+      "id": 12565995395,
+      "name": "nfs-publication-receipt",
+      "digest": "sha256:b20001c30bc26565372f7fcbe9276939cabe8f79225eaf689b61e7c3f5fae94a",
+      "size": 812,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565577787,
+      "name": "nfs-native-darwin-amd64",
+      "digest": "sha256:70d8e9ca97c8836d960a0297fbeb165e21f04c584159e25b6640066447325ed2",
+      "size": 6921942,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565487762,
+      "name": "nfs-native-darwin-arm64",
+      "digest": "sha256:675b7eed0506f90e297efffecc9ebf7f403deed7b6f835e70ac9b2df98d2feff",
+      "size": 6372077,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565482141,
+      "name": "nfs-preflight",
+      "digest": "sha256:e74ef444a1470291bb0d3543e02c8c90bf1a3c18f8fe751b37f7a12eb8117d39",
+      "size": 128931253,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565457413,
+      "name": "nfs-native-linux-arm64",
+      "digest": "sha256:9e41701b2a158937bfea05b2ee83a26a888dfc98657e7eeb5e674c734da19c24",
+      "size": 6760398,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565288864,
+      "name": "nfs-release-payload",
+      "digest": "sha256:58a6e84a5a7d397e55527b7b2549c6423db92c2041df890e739c2a1e9623d712",
+      "size": 31368625,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12565074515,
+      "name": "nfs-signing-darwin-amd64",
+      "digest": "sha256:82ad5d05ec390e5d74b67ec22f45163fa0575d92aafb56a697a4eb3888ead949",
+      "size": 314,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12564964485,
+      "name": "nfs-signing-darwin-arm64",
+      "digest": "sha256:b07feded39df2901bf7025c9c18dc48a2957410b317ae21731b4ff7e8507ac55",
+      "size": 315,
+      "expires_at": "2027-01-22T15:36:23Z"
+    },
+    {
+      "id": 12564519653,
+      "name": "nfs-native-linux-amd64",
+      "digest": "sha256:c55101e41813e255c767ccdf6e82ca2ca9c06f4eaf10446d47eb558644183ec2",
+      "size": 7396095,
+      "expires_at": "2027-01-22T15:36:23Z"
+    }
+  ]
+}

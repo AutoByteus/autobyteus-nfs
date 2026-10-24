@@ -1,0 +1,83 @@
+{
+  "run": 40108736167,
+  "attempt": 1,
+  "source": "448cef839b4919a1e3ae0489e8d86ae36f5cee33",
+  "conclusion": "success",
+  "url": "https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40108736167",
+  "jobs": [
+    {
+      "id": 120915790390,
+      "name": "prepare",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120916095022,
+      "name": "engine-packages",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120916095307,
+      "name": "engine-inputs",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120916095432,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "success",
+      "active": []
+    },
+    {
+      "id": 120916095599,
+      "name": "engine",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120916095791,
+      "name": "binaries",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120916095996,
+      "name": "payload",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    },
+    {
+      "id": 120916096504,
+      "name": "candidate",
+      "status": "completed",
+      "conclusion": "skipped",
+      "active": []
+    }
+  ],
+  "logFetchExit": 0,
+  "logSHA256": "f1633d6973f98e5277e3b936c2eb8e94556af1b004462d5f1f9de34cce68e4b1",
+  "artifacts": [
+    {
+      "id": 12566130784,
+      "name": "nfs-publication-receipt",
+      "digest": "sha256:26312d102f38fba878b94e887e53125019813855d05e66f93ed21844bf00a2a9",
+      "size": 1112,
+      "expires_at": "2027-01-22T15:49:37Z"
+    },
+    {
+      "id": 12565538731,
+      "name": "nfs-preflight",
+      "digest": "sha256:53664a9ec6e5b9d283aefe869dd24635501de4c9f06e5801ab8f8b46b21a632a",
+      "size": 160300861,
+      "expires_at": "2027-01-22T15:49:37Z"
+    }
+  ]
+}
