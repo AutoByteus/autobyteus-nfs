@@ -1,0 +1,12 @@
+{
+  "ownedRoot": "/Users/normy/nfs-feedback-probe-2tp40to6",
+  "removed": true,
+  "activeProcessesBeforeRemoval": [],
+  "preservedEvidenceSHA256": {
+    "approval-feedback-probe.go.txt": "2a305aaeffee3b7cd12c83eda19dc54886733d171523daaad720457fcb1dedcd",
+    "approval-feedback-probe.log": "5ccf6863aca098590602bafaef222aa802169a00ac378b2096836fa271fdf634",
+    "approval-feedback-probe-result.json": "e534b462e54ff4e9f1214a7f5cf3205b4823f94f1af5a7a7c9986327cc092f6b",
+    "probe-toolchain.json": "9651ce14b57bd2e8b7423f3c1d95b3df6c9f009ecd6d63feec0de88345cc6ba5"
+  },
+  "scope": "independent diagnostic source/test/toolchain/cache/HOME only; no root/sudo/live storage/browser used"
+}

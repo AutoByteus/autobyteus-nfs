@@ -1,0 +1,59 @@
+package dashboard
+
+import (
+ "bytes"
+ "encoding/json"
+ "os"
+ "os/exec"
+ "strings"
+ "testing"
+
+ "github.com/AutoByteus/autobyteus-nfs/internal/adminwire"
+)
+
+// Independent ordinary-user protocol double: no sudo, credentials, root, or storage.
+func TestApprovalFeedbackProbeChild(t *testing.T) {
+ mode:=os.Getenv("NFS_FEEDBACK_PROBE_MODE"); if mode=="" { return }
+ if mode=="denied" { os.Exit(1) }
+ digest:="probe-digest"; if mode=="mismatch" {digest="not-the-requested-binary"}
+ data,_:=json.Marshal(adminwire.Hello{Role:os.Getenv("NFS_FEEDBACK_PROBE_ROLE"),Digest:digest})
+ adminwire.Write(os.Stdout,adminwire.Reply{Version:1,Kind:"hello",Data:data},adminwire.ReplyLimit)
+ scanner:=adminwire.NewReader(os.Stdin,adminwire.RequestLimit)
+ for scanner.Scan() {
+  var req adminwire.Request; if adminwire.Decode(scanner.Bytes(),&req)!=nil {os.Exit(3)}
+  if req.Kind!="inspect" {os.Exit(4)}
+  r:=adminwire.Reply{Version:1,ID:req.ID,Kind:req.Kind,Data:json.RawMessage(`{"state":"`+mode+`"}`)}
+  if mode=="inspect-error" {r.Data=nil;r.Error=&adminwire.Failure{Code:"refused-or-incomplete",Detail:"controlled metadata refusal"}}
+  adminwire.Write(os.Stdout,r,adminwire.ReplyLimit)
+ }
+ os.Exit(0)
+}
+
+func TestApprovalFeedbackProbe(t *testing.T) {
+ for _,role:=range []string{"server","client"} {
+  for _,mode:=range []string{"empty","configured","pending","inspect-error","denied","mismatch"} {
+   t.Run(role+"/"+mode,func(t *testing.T) {
+    launch:=func()(*exec.Cmd,string,error){
+     cmd:=exec.Command(os.Args[0],"-test.run=^TestApprovalFeedbackProbeChild$")
+     cmd.Env=append(os.Environ(),"NFS_FEEDBACK_PROBE_MODE="+mode,"NFS_FEEDBACK_PROBE_ROLE="+role)
+     return cmd,"probe-digest",nil
+    }
+    s,err:=New(role,launch);if err!=nil {t.Fatal(err)}
+    defer s.Drain();defer s.listener.Close()
+    var terminal bytes.Buffer;s.log=&terminal
+    _,err=s.submit(Submission{ID:1,Kind:"authorize",Payload:json.RawMessage(`{}`)});if err!=nil {t.Fatal(err)}
+    s.workers.Wait();state:=s.snapshot()
+    complete:=mode=="empty"||mode=="configured"||mode=="pending"
+    expected:="incomplete";if complete {expected="succeeded"}
+    if state.Operation==nil||state.Operation.State!=expected {t.Fatalf("unexpected control result: %+v",state.Operation)}
+    t.Logf("operation=%s authorized=%v terminal=%q",state.Operation.State,state.Authorized,terminal.String())
+    if complete {
+     if !strings.Contains(terminal.String(),"Administrator access confirmed.") {t.Error("missing actual administrator confirmation")}
+     if !strings.Contains(terminal.String(),"Dashboard ready") {t.Error("missing setup-controls readiness/next action")}
+    } else if strings.Count(strings.TrimSpace(terminal.String()),"\n")==0 {
+     t.Error("no terminal failure outcome beyond helper launch")
+    }
+   })
+  }
+ }
+}
