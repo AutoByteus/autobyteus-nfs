@@ -5,6 +5,7 @@
 | Revision ID | Review Round / Trigger | Related Solution Revision IDs | Prior Decision | Current Decision | Affected Finding IDs |
 | --- | --- | --- | --- | --- | --- |
 | ARCH-REV-001 | 1 / Architecture Design Complete, 2026-10-24 | SR-001, SR-002 | N/A | Fail — Design Impact | ARCH-F001 |
+| ARCH-REV-002 | 2 / SR003 affected re-review, 2026-10-24 | SR-001, SR-003 | Fail — Design Impact | Pass | ARCH-F001 resolved |
 
 ## Revision Entries
 
@@ -29,3 +30,28 @@ None.
 - Routing applied: fresh `get_handoff_rules` on 2026-10-24 returned the Fail/Blocked with Design Impact rule to `/software_engineering_team/solution_designer`; that single rule matches this outcome. Both Pass rules do not match.
 - Remaining risks/uncertainty: real browser, sudo/TTY/pipes/signals, isolated host/backends and embedded build evidence remain downstream and unexecuted. No field campaign, release or live-user actions. No prerequisite/follow-up identified.
 - Review activity: read-only source/caller/primary-contract inspection, then reviewer-owned report/history. No tests or runtime resources created. Upstream five files and product source unchanged.
+
+
+### ARCH-REV-002 — Installed supervision fully under the admin owner
+
+- Canonical design review report: `design-review-report.md` in this ticket, latest complete result.
+- Review round and trigger: 2; Solution Designer SR003 affected re-review after ARCH-REV-001 / ARCH-F001.
+- Triggering role/report: Solution Designer, `solution-design-handoff.md`, SR003 at `f57dc52e779c37ad5a16aa393b0d020d49144f4b`.
+- Relevant solution revision IDs: SR-001 (R1 Approved, unchanged), SR-003 (revised design); SR-002 is the previous reviewed basis.
+- Prior authoritative decision: Fail — Design Impact.
+- Current authoritative decision: **Pass**, **Large / High**.
+- Review delta: re-established unchanged R1/current-source basis, compared the four-document delta, and redrew DS6 from fixed job entry through serial attempt, cleanup, report and retry/stop. Reopened the sole production caller/old supervisor plus active Reconnect. Other ARCH001 evidence remains applicable; no repeat full source/native/browser campaign.
+
+#### Prior Finding Resolution
+
+| Finding ID | Prior Status | Current Status | Related Revision References | Verification Evidence |
+| --- | --- | --- | --- | --- |
+| ARCH-F001 | Open, Medium Design Impact | **Resolved** | SR003; ARCH001 → ARCH002 | Design:124–137 defines direct admin.Supervise(ctx,log), private reconcileOnce, one shared acquire/admit/Docker/active-Reconnect/cleanup sequence, 30s completion-relative wait and drain; :147 forbids reverse imports; :174–177 maps new loop/deletion/tests; :200–202 removes old driver/callback; :216 migrates together; :227 maps real service proof. Current run.go:76–90 and service/supervisor.go:15–30 confirm the old sequence and sole caller. setup/lifecycle.go:13–62 confirms active pending refusal and stored-user probe, distinct from explicit InstallJob/Status continuation. |
+
+- No new or remaining finding IDs. No new approved behavior, migration, prerequisite or field campaign.
+- Material classification changes: target service ownership/path now Confirmed; shared structural verdicts Pass. Material-premise gate remains Pass.
+- Recommended recipient: Implementation Engineer under fresh primary Pass rule. Single outcome dispatch per team instruction; no duplicate implementation/API/Delivery/PM work.
+- Remaining risks/uncertainty: actual Go/browser/sudo/TTY/pipe/native service/storage checks are unperformed. E14/helper-only broken-pipe guidance fits existing DS4 drain contract; not a new global signal policy. Isolated resource availability must be established downstream without live-user fallback; public v0.1.0 is not the future UI build. No release authorization.
+- Review activity: read-only affected source/document tracing, then only canonical reviewer report/history updated. Requirements, four SD docs and product source unchanged by reviewer. No process/resource/test/remote action.
+
+- Routing applied: fresh `get_handoff_rules` on 2026-10-24 selects the primary architecture-Pass/implementation-ready rule to `/software_engineering_team/implementation_engineer`. Apply the team instruction's single-recipient outcome route; no duplicate forwarding.
