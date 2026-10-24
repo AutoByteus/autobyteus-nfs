@@ -1,162 +1,152 @@
-# Code Review Report — nfs-setup-dashboard
+# Code Review Report — CRR-003
 
-## Latest Authoritative Result
+## Review Round Meta
 
-**Fail — CRR-002 / focused API/E2E failure-origin review.** Confirmed
-**CR-001 = API-F001**, Medium, **implementation-owned Local Fix**: the new
-chooser's asynchronous directory-list completion overwrites an active path edit.
-No NFS runtime defect or filesystem-data loss is established.
+- Date: 2026-10-24. Task **nfs-setup-dashboard / autobyteus-nfs-2 / project_task_f1264eb8-5a99-4a19-949f-09d141c955a1**.
+- Entry: **Implementation Review**, round3, **Targeted Delta Review**.
+- Trigger: IR-002 completed implementation-owned Local Fix for **CR-001 = API-F001**.
+- Prior result: CRR-002 Fail (focused failure origin); CRR-001 full-source Pass100 remains historical.
+- Latest authoritative source result: **CRR-003 Pass, 100/100**. This is not an API/E2E Pass.
+- Basis: R1/SR001 approved `requirements-doc.md`; SR003 `design-spec.md`, `solution-revision-record.md`, `investigation-notes.md`; ARCH-REV-002 `design-review-report.md` and `architecture-review-revision-record.md`. Unchanged context carries from CRR001/002; affected chooser contract rechecked.
+- Current implementation: `implementation-handoff.md` Checks Run read first; IR002 in `implementation-revision-record.md`. Reviewer history: `code-review-revision-record.md`.
+- Triggering API context: API-REV-001 / API07 in `api-e2e-execution-coverage-report.md`, coverage investigation and revision record; `evidence/API-07-finding.md` and runtime trace. Delivery revision: **N/A**.
+- Worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard`, branch `codex/nfs-setup-dashboard`, target origin/main.
+- Intake629f7f008f6ada3f539ca854a1add82ca08f7dbd; source/tests7b0577a4f2637ddf12a74a0156e4243a41a3719c; evidence88c27bc14471fadb299350bd9d4b47c2300fe4ad.
+- Recorded current sourceHash: `2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903` (IMP19/20).
 
-Task **autobyteus-nfs-2 / project_task_f1264eb8-5a99-4a19-949f-09d141c955a1**.
-**Large / High / Reviewed** unchanged. R1/SR001 Approved, SR003/ARCH-REV-002 Pass.
-No new approval, architecture campaign or unrelated follow-up is needed.
+## Routing Classification / Review Scope
 
-## Review Round Meta And Scope
+**Large / High confirmed; independent source review required.** The complete dashboard still crosses browser, private transport, privilege and shared lifecycle owners. A small corrective delta does not change the task classification.
 
-- Date: 2026-10-24; round2; scope **N/A — failure-origin only**, not a new full implementation audit or successful-test review.
-- Worktree: `/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard`, branch `codex/nfs-setup-dashboard`; target `origin/main` untouched.
-- Trigger: API/E2E Engineer's **API-REV-001 Fail81.43%**, case **API-07 / API-F001 / REQ-009 / AC-007**.
-- Intake `042821aa5e26dec38a6a310fabdf34eb7574612c`; API evidence `c2095979e823dc886be4ebdd3a479d275329db87`.
-- Validated product `5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409`; source/tests `2445aabf61126b1bb64b05b5f925b140c67917b8`, identical non-ticket tree at this review. Recorded sourceHash `324bf4dbb24b8001324033a0abc131bc50a26e5d98284dcbb95d1be790e8cf13` is unchanged, not claimed as a new runtime check.
-- Prior **CRR-001 Pass100/100** at `d9beb0f796894c37a371217768b9e33afcde315a` and receipt `deeea2f5826304d2d6fd20f5d91b7ce577d94b41` remains historical. This report supersedes its clean verdict for the confirmed defect; prior full structural review is not rerun.
-- Read current API investigation, execution report (Cases/Acceptance-Criteria Proof), API revision record, R1 scope/REQ009/AC007/SCN002, design Local chooser, implementation Checks Run and prior reviewer report/history. Applicable TESTING.md and updated reviewer skill/finding-the-cause/ticket-scope/Example7/handoff read; no testing-guideline conflict.
-- Revisions: SR001–003, ARCH-REV-002, IR-001, CRR-001, API-REV-001; delivery **N/A**. No production/durable-test changes by API or reviewer.
-- Focused source: forms.js, chooser HTML, ordinary directory-list producer and existing browser coverage's waiting sequence. No storage/backend, privilege, release or app/editor re-review.
+Exactly four non-ticket paths changed since CRR002: `internal/dashboard/web/forms.js`, new `internal/dashboard/__tests__/chooser.cjs`, its existing `browser.cjs` runner, and `TESTING.md`. The only production change is chooser-local edit/listing ownership. No shared interfaces, serialized shapes, backend or data-flow spine changed; targeted review is justified. Between checked7b0577a4 and intake, only TESTING.md adds focused instructions; executable source/tests are identical. See `evidence/CRR-03-delta-review.json`.
 
-## Approved Behavior And Scenario Basis
+Rechecked the prior unresolved finding first, the actual input/HTTP/listing/selection path, durable regression and recorded results. Unaffected CRR001 structural/security/service conclusions carry for byte-unchanged owners, not as newly executed checks. Full baseline report remains in commit d9beb0f796894c37a371217768b9e33afcde315a; CRR002 in4abea65b56791801db40ccf22d9693c3df791379.
 
-**Supported Normal Scenario — SCN-002 / BEH-002**, grounded independently in
-R1 UC-002 folder selection, REQ009 labelled keyboard/path-entry contract, DEC004
-directory-only chooser plus explicit path entry, and design Local chooser.
-A user selecting a server folder opens Browse folders and types an absolute
-directory into its enabled field. The field is not documented or implemented as
-unavailable until the first listing returns; current status even says manual
-path entry remains available.
+Excluded: new source audit of storage/admin/IPC/service, old app/editor/release tasks, native VM reruns and physical/field campaigns. NFS repository only. No reviewer implementation/test edits or product test reruns.
 
-Expected: ordinary typing is retained while background listing updates its
-results. Explicit List folders, child/parent navigation and selection retain
-their existing meanings. This is one coherent user's normal workflow, not
-imagined multi-tab concurrency, contradictory actions or arbitrary timing.
+## Upstream Behavior And Production-Path Basis
 
-| Behavior | Current disposition | Evidence |
+Approved requirement authority remains R1 UC002, REQ009/AC007 and DEC004: ordinary-user directory-only chooser plus explicit path entry, keyboard interaction and narrow layout. No behavior decision, design revision or approval needed. Persisted data remains **Directly Usable — No Migration**; this correction is ephemeral UI state only.
+
+| Behavior | Status | Current path / evidence |
 |---|---|---|
-| BEH002 / SCN002 folder selection, REQ009/AC007 keyboard path entry | **Contradicted in this bounded part** | actual enabled-field typing and late completion overwrite; forms.js:28,38 |
-| Other previously confirmed behaviors | Not reopened | no product delta or evidence tying this failure to another owner/backend; API scoped passed cases retain their attribution |
+| BEH002 / SCN002 folder selection; REQ009/AC007 | Confirmed at source-review boundary | Browse → explicit list(source/home) → ordinary-user HTTP DirectoryListing → background render updates listing/message/buttons only → active text retained → explicit List verifies path → Choose copies listed path to source → existing prepare/review flow |
+| BEH001,003–007 / DS1–6 | Confirmed, unchanged evidence carried | No Go/admin/wire/setup/config/backend/service/CLI or remaining UI file changes since CRR001/API001. Prior native and renderer proof keep their exact-input limits. |
+
+### Supported Product Scenario And Reachability Gate
+
+| Scenario / contract | Kind / actor | Independent goal and entry | Shape / lifecycle | Expected consequence | Evidence / disposition |
+|---|---|---|---|---|---|
+| SCN002 / BEH002 / REQ009 / AC007 / DEC004 | User, server operator | Choose a share folder through Browse and its enabled absolute-path field | Supported Normal Scenario: begin typing while initial listing completes; then deliberately list/select a folder | Preserve exact draft, never silently select an unrelated listed path; explicit parent/child/List remains usable | Approved chooser contract, API07 real failure/control, current forms.js:23–55, directories.go and HTML. **Use**. |
+
+The original source review missed this normal edit path. That acknowledged gap remains in CRR002 history; it is not erased by the fix or represented as a storage defect.
 
 ### Candidate Finding And Mechanism Gate
 
 | Candidate | Independent trigger / contract | Forward path / lifecycle / consequence | Evidence | Disposition / scope |
 |---|---|---|---|---|
-| CG-008 — asynchronous listing replaces path draft | SCN002 normal user opens chooser and types; REQ009/AC007 and DEC004 | Browse → list(source/home) → POST running render → enabled input receives keys → scheduled GET complete → render assigns old listing path → remaining keys append to replacement | API07 real response timing/native-key control, forms.js:25–43, index.html:64, directories.go | **Promote / This ticket**, CR-001 |
+| CG-008 / CR-001 resolution | SCN002 typing during ordinary listing completion | render no longer assigns editable value; only deliberate navigation seeds it; later keys append to unchanged prefix | forms.js:25–46; IMP17 red/IMP18 green, original API07 | **Promote / This ticket**, correction verified; finding resolved at source boundary |
+| CG-009 / selection consistency | Same SCN002 user corrects/types a folder then chooses it; selector must represent that folder | oninput/render recalculate eligibility; null/running/error/differing path disables Choose, successful explicit matching List enables it | forms.js:25–26,31,44–46,53; chooser.cjs exact assertions | **Promote / This ticket**, proportionate local invariant; no new finding |
 
-Scenario/reachability gate **Pass**; material-premise gate **Pass**. Cause is
-established, not held for more evidence. No new behavior ID or upstream
-requirements change is invented.
+Both gates Pass. No new/reclassified upstream material premise; existing ARCH002 decisions remain confirmed within unchanged scope. No unsupported recovery/concurrency framework, follow-up or held candidate.
 
-## Failure Evidence And Reproduction
+## Prior Finding Resolution
 
-Primary evidence: `evidence/API-07-finding.md`, `API-07-runtime.json`,
-`API-07-chooser.cjs`, `API-07-typing.png` and report API07 row. Reviewer inspected
-the screenshot and response trace, not only the summary.
+**CR-001 (Medium, implementation Local Fix): Resolved in source.** The unconditional render setter was removed, not masked by disabling required typing or delaying it in the test. `list` seeds text only for Browse, explicit List, parent and child navigation. `selection` separates successful listing identity from editable text. Errors retain the user's correction and keep selection disabled.
 
-Recorded exact executable command:
+API-F001 / API001 Fail81.43 remains API-owned pending affected validation. Local green checks and this source Pass do not overwrite it. No remaining source finding.
 
-```sh
-/Users/normy/.hermes/node/bin/node /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-chooser.cjs
-```
+## Structural / Design Checks
 
-Run from the NFS worktree with private `HOME=$S/home TMPDIR=$S/tmp`;
-historical `S=/Users/normy/nfs-dashboard-api-w47yo5sg` was removed. Native rerun
-requires fresh owned resources from the linked API03 builders/resources/PTY
-driver and updated harness scratch/IP/key paths. Transfer `API-03-pty.py` as
-`driver.py`, not `pty.py` (which shadows stdlib). Do not run against operator
-state or blindly reuse removed resource paths.
+All unaffected rows carry the CRR001 basis after bounded Git impact verification; affected chooser/test rows are revalidated here. No action required in any row.
 
-API's actual boundary: current public server, ordinary UID1000/GID109, real
-loopback HTTP/private sudo helper and guest directory I/O; sandboxed
-Chrome156.0.8078.47 reached the exact loopback port through test-only SSH.
-Clipboard was doubled for host safety; directory responses, clock and keyboard
-sequence were not replaced. No chooser storage plan was submitted.
+| Check | Result | Evidence | Required action |
+|---|---|---|---|
+| Task design health assessment present, evidence-backed and preserved | Pass | Existing admin/DS6 refactor untouched; correction stays in local chooser owner | None |
+| Approved behavior-defining supplements matched | Pass | DEC004 keyboard/path entry restored, no new product semantics | None |
+| Data-flow spine inventory clarity/preservation | Pass | Same Browse→directory HTTP→listing→explicit selection→setup path; no new spine | None |
+| Ownership boundary preservation/clarity | Pass | Draft belongs to input; listing belongs to response; explicit navigation owns seed | None |
+| Off-spine concern clarity | Pass | No new production helper owner or coordinator | None |
+| Existing capability/subsystem reuse | Pass | Existing chooser/listDirectories reused | None |
+| Reusable owned structures | Pass | Single selection rule shared by input/render; test scenario reused across methods/engines | None |
+| Shared data-model tightness | Pass | DirectoryListing shape unchanged; no redundant shared state added | None |
+| Repeated coordination ownership | Pass | chooser alone owns navigation/render/selection; admin ownership unaffected | None |
+| Empty indirection | Pass | selection derives eligibility, not a pass-through layer | None |
+| Separation of concerns/file responsibility | Pass | forms.js remains UI form/chooser behavior; test separated by coherent scenario | None |
+| Ownership-driven dependencies | Pass | UI still uses request boundary; no imports/cycles into privilege/backend | None |
+| Authoritative Boundary Rule | Pass | No direct filesystem/root access in browser; directory producer and admin boundaries unchanged | None |
+| File placement | Pass | Existing dashboard web owner and adjacent __tests__ directory | None |
+| Flat versus over-split layout | Pass | No production fragmentation; one reusable browser scenario | None |
+| Interface/query/command/service-method clarity | Pass | Existing path request and DirectoryListing response unchanged | None |
+| Naming and vocabulary | Pass | list/render/selection and directory-path describe distinct existing responsibilities | None |
+| No unjustified duplication | Pass | Selection rule not repeated; POST/GET tests parameterized | None |
+| Patch-on-patch complexity | Pass | Removes destructive setter, adds simple eligibility invariant; no version/fallback flags | None |
+| Dead code removed in touched scope | Pass | Replaced old setter/eligibility logic removed; current imports/handlers used | None |
+| Relevant test scenarios/assertions | Pass | Prefix before delivery, exact draft/suffix/focus, settled control and explicit selection | None |
+| Test fixtures/helpers reusable/coherent | Pass | Existing real embedded preview reused; scheduling helper serves one normal chooser journey | None |
+| No stale/duplicated/compatibility-only tests | Pass | Original normal flows retained; new cases cover previously absent initial POST/later GET boundary | None |
+| API/E2E readiness | Pass | Durable red/green and current identity available; affected API remains required | None |
 
-| Observation | Recorded value |
-|---|---|
-| POST /api/directories |202/running, path /home/admin, time1792848888226 |
-| Typing began |1792848888229; focus, Meta+A, /home/admin/api-dashboard,80ms/key |
-| GET completion |200/complete, same path /home/admin, time1792848888728;502ms after POST |
-| Expected final text |`/home/admin/api-dashboard` |
-| Actual text |`/home/adminadmin/api-dashboard` |
-| Same keyboard sequence after listing settled |exact expected text retained |
-| Overall API07 |Fail; observation substep's Pass means capture completed, not functional acceptance |
+## Source File Size And Structure
 
-The API reproduction proves the real user boundary and control. Review
-attribution is **Read**: current source plus API's **Reproduced/Measured**
-evidence. No additional reproduction, instrumentation, browser/VM creation or
-product check was necessary; no reviewer execution is claimed.
+| Changed source | Nonempty task-base | Prior round | Current | >500 | >220 delta | Ownership / placement | Classification / action |
+|---|---:|---:|---:|---|---|---|---|
+| internal/dashboard/web/forms.js |0 (new in task)|47|55|Pass|11 added/3 removed this round; cumulative55, below trigger|Cohesive existing form/chooser owner|N/A / None|
 
-## Confirmed Origin / CR-001
+Test files are not subject to source size thresholds. Unchanged CRR001 max236 and operations240-added structural judgement carry; no expansion of those owners.
 
-**Medium / Local Fix / implementation / open.**
+## Legacy / Persisted Data / Cleanup Verdict
 
-1. `forms.js:41` opens the chooser and lists source/home.
-2. `render` at25–28 assigns `directory-path.value = value.path || home` on
-   every response, not only deliberate navigation/initialization.
-3. Line38 schedules another render after the running response. Input remains
-   enabled (`index.html:64`); no edit ownership is checked before assignment.
-4. Real completion occurs inside the recorded typing interval. It resets the
-   partial edit to `/home/admin`; subsequent keys produce the corrupted path.
-   Settled control rules out inherent Meta+A/keyboard failure. Backend returns
-   the correct requested directory.
+| Check | Result | Notes |
+|---|---|---|
+| No backward-compatibility mechanism | Pass | One current chooser behavior |
+| No old-behavior retention | Pass | Async input assignment removed |
+| Dead code removed | Pass | Touched imports/handlers/functions used; no obsolete branch |
+| Approved persisted transition followed | Pass | Existing records/readers/writers untouched; no migration |
+| No dual reads/writes or old-shape fallback | Pass | No wire/storage shape change |
+| Transition mechanics match design | Pass | No migration mechanics required or introduced |
 
-forms.js is new in this ticket (absent at base52c17fb5, introduced by502205f),
-and unchanged since CRR001/API execution. This is neither a change after review
-nor an old surrounding-code bug. UC002/REQ009/AC007 fail in changed functionality,
-so it is **this ticket**, not a prerequisite or follow-up. Working main-form
-fallback does not make this enabled input correct.
+Dead/obsolete items requiring removal: **None**. Cleanup: IMP20 records private preview/browser/toolchain removal and no owned executables. Reviewer created no runtime resources/scratch and changed only review documents/evidence; no cleanup action needed.
 
-Consequence: loss/corruption of active chooser path edit and unreliable keyboard
-folder navigation. No file-content loss, storage mutation, wrong export,
-privilege bypass or backend failure demonstrated; do not inflate the finding.
+## Checks / Evidence Reuse And Rendered Result
 
-### Earlier review gap
+| Evidence | Exact scope and result | Review judgement |
+|---|---|---|
+| IMP17 red/result.json | Original4abea65b plus new test: Chromium1280 fails `background listing replaced the active draft` | Correct baseline assertion, not harness failure |
+| IMP18 green/result.json + feedback | Checked7b0577a4; Macarm64 Chromium156/WebKit27.2 at1280/390; 8chooser +8normal =16/16 Pass | Actual UI/HTTP; holds real POST/GET response delivery, does not forge contents/status. Root protocol and clipboard doubled. Not native storage proof. |
+| IMP19 focused.log | Exact checked source; dashboard race/vet and2 embedding/hash Python checks Pass | Reused; initial malformed timeout command is retained setup failure, not a test/product failure |
+| IMP20 checks-cleanup.json |166 copied inputs verified; private scratch/toolchain/processes removed | Read with current Git check; later non-ticket delta is TESTING instructions only |
+| CRR001 + API001 passed cases | Unchanged owners and scoped native storage/pending/expiry/service/CLI evidence | Carry with recorded limits; do not promote the overall failed API001 to Pass |
 
-**This should have been caught in CRR001.** The unconditional input assignment
-on the asynchronous render path was visible, and normal manual path entry was
-already in scope. Existing `browser.cjs:53–58` waits until Use this folder is
-enabled before navigating/selecting; it did not exercise editing while the first
-listing completes. That passing coverage was too narrow for the blanket chooser
-behavioral-fidelity conclusion. Current evidence corrects the affected Runtime
-Correctness/Behavioral Fidelity rationale and adds CR-001. No new composite
-source score/full structural audit is assigned for this failure-origin-only
-round; CRR001's100 is historical, not a current clean verdict.
+Read the durable runner's actual trigger and assertions, including original normal flows and cleanup. Inspected retained `IMP-18-green/webkit-server-390-chooser-poll.png`: usable labelled input, visible focus, buttons and status in narrow modal; long path remains input-scrollable. This is retained-image inspection, not a new browser execution. No new Linux browser or native/AMD64/field/physical/user/release qualification is claimed.
 
-## Bounded Required Correction And Validation
+No recorded check was rerun merely for independent credit. Reviewer performed source/evidence read, Git scope/size audit and retained-image inspection only.
 
-- Preserve active path edits across background listing completion. Keep explicit
-  list submission, child/parent navigation, displayed listing and selected
-  directory coherent. Fix the chooser owner, not storage/backend/shared admin
-  architecture; no generic cross-session machinery requested.
-- Start from supplied failing case and add a durable regression entering the
-  normal chooser, typing before initial completion and asserting exact retained
-  text. A controlled rootless browser fixture may hold a response for deterministic
-  timing if labelled; exercise actual UI, do not claim fresh native storage proof.
-  Do not hide failure by waiting for completion before typing, testing only
-  settled input, or removing required manual-path behavior.
-- Check settled typing and affected explicit navigation/selection alongside the
-  regression. Reuse unchanged checks; no whole Go/native/Docker campaign solely
-  for a bounded frontend correction without material affected inputs.
-- Return Local Fix for targeted source review, then affected API/E2E validation.
-  API owns resolution of API-F001 and its execution verdict.
+## Docs Impact
 
-## Evidence Preservation / Cleanup / Handoff
+**Yes, addressed:** TESTING.md adds focused chooser scenarios/selector and controlled-timing limits. No release/runtime/API policy or public usage contract changed. General final documentation synchronization remains Delivery-owned after executable acceptance.
 
-`evidence/CRR-02-origin-review.json` records source equality and response interval.
-No diagnostic edits, tests, resources or scratch created by reviewer; only
-reviewer documents/evidence change. API06 cleanup remains API-owned proof.
-Prior storage/pending/expiry/CLI/service successes remain scoped evidence, not a
-new blanket API Pass. No unrelated defect or follow-up added.
+## Review Scorecard
 
-Recommended owner: **/software_engineering_team/implementation_engineer**,
-selected by the fresh most-specific API/E2E failure-origin implementation-defect
-rule in `evidence/CRR-02-routing.json`. No Delivery advancement, Designer/PM notification
-or new approval loop. Source-only NFS task: no target merge/push/tag/release,
-field/physical/user-verification/TaskDone claim.
+10.0/10 = **100/100**, simple mean for visibility, not an acceptance substitute. Current bounded review finds no unresolved source issue; unchanged categories carry CRR001 evidence. The earlier CRR002 failure remains in history.
+
+| Priority | Category | Score | Rationale | Weakness / required improvement |
+|---|---|---:|---|---|
+|1|Data-Flow Spine Inventory and Clarity|10|Existing path preserved and explicitly traced|None established|
+|2|Ownership Clarity and Boundary Encapsulation|10|Draft/listing authority no longer conflated|None established|
+|3|API / Interface / Query / Command Clarity|10|No contract change or bypass|None established|
+|4|Separation of Concerns and File Placement|10|Bounded fix in current owner|None established|
+|5|Shared-Structure / Data-Model Tightness and Reusable Owned Structures|10|No shared shape growth; coherent eligibility/test reuse|None established|
+|6|Naming Quality and Local Readability|10|Small explicit edit-versus-result distinction|None established|
+|7|API/E2E Readiness|10|Current red/green and controls available for affected execution|API execution still required, not a source defect|
+|8|Runtime Correctness And Behavioral Fidelity|10|Prior normal typing defect addressed with exact regression and selection controls|API-owned closure pending|
+|9|No Backward-Compatibility / No Legacy Retention|10|Destructive old path removed; no migration/fallback|None established|
+|10|Cleanup Completeness|10|Owned test resources removed; no reviewer runtime resources|None established|
+
+## Latest Authoritative Result / Routing / Residual Limits
+
+- **Pass**, Implementation Review / CRR-003. Supported-scenario and material-premise gates **Pass**. No current failure classification or new findings/follow-ups.
+- CR-001 resolved at source boundary; **API001 Fail81.43 remains until its owner validates the correction**.
+- Fresh most-specific source-Pass route: API/E2E Engineer (recorded in `evidence/CRR-03-routing.json`). Request affected chooser validation and controls, using existing valid checks. No whole storage/field campaign absent material impact; no new approval loop.
+- Single primary recipient only under the team's higher-priority handoff instruction; do not additionally dispatch an informational outcome to implementation.
+- No source/test fixes by reviewer, target merge/push/tag/release, TaskDone, terminal completion or user verification. Source-only NFS task; no other project touched.
