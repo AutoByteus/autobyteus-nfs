@@ -1,0 +1,17 @@
+{
+  "id": "IMP-02",
+  "date": "2026-10-24T12:35:51.320687+00:00",
+  "baseCommit": "5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409",
+  "workingDelta": " internal/admin/pipe_test.go    | 30 ++++++++++++++++++++----------\n internal/admin/session_test.go | 28 ++++++++++++++++++++--------\n 2 files changed, 40 insertions(+), 18 deletions(-)\n",
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase4-drain-cleanup",
+  "command": [
+    "go",
+    "test",
+    "-race",
+    "-timeout",
+    "90s",
+    "./internal/admin"
+  ],
+  "environment": "Darwin arm64 Go1.27.2/private HOME/TMP/cache",
+  "exit": 0
+}

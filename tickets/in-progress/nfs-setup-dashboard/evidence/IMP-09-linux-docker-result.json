@@ -1,0 +1,217 @@
+{
+  "id": "IMP-09",
+  "date": "2026-10-24T12:30:24.016670+00:00",
+  "platform": "Linux ubuntu 7.0.0-38-generic #38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 17:12:37 UTC 2 aarch64 aarch64 aarch64 GNU/Linux",
+  "binarySha256": "3a7fbf9796c6c5c097da3bdfda0c815223778638e1cc94c6d09cfda8f06fb555",
+  "cases": [
+    {
+      "name": "busy-native-detach-refused-with-configuration-retained",
+      "result": "Pass",
+      "operation": {
+        "id": "TK4HqKDgGK9Ba5RQYonFwiP3-xEfw5r_XtmlaOULVvA",
+        "requestId": 3,
+        "kind": "commit",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T12:30:24.601500287Z",
+        "completedAt": "2026-10-24T12:30:24.61057603Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-native"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-native"
+          },
+          "effectsMayHaveStarted": true
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "umount failed: exit status 16: umount.nfs4: /Volumes/dashboard-native: device is busy\n",
+          "truncated": false,
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "drained-native-detach-preserves-bytes-marker",
+      "result": "Pass",
+      "operation": {
+        "id": "_6Gbtk-ChwzeoZlK6ZtzRHuPmUPOc1DZxilDYZU5TsM",
+        "requestId": 6,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:30:25.358639062Z",
+        "completedAt": "2026-10-24T12:30:25.870210481Z",
+        "data": {
+          "configuration": {
+            "state": "empty"
+          },
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "Linux-Docker-create-via-current-HTTP-native-RW",
+      "result": "Pass",
+      "review": {
+        "id": "QYG6j1Nc3vl9IXYKCrYswEiaExyzfrzMuwi7guUG0og",
+        "requestId": 7,
+        "kind": "beginServer",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:30:26.112679574Z",
+        "completedAt": "2026-10-24T12:30:26.11914321Z",
+        "data": {
+          "leaseId": "159634d5-79c9-49b5-973d-d42915197cb6",
+          "kind": "setup",
+          "expiresAt": "2026-10-24T12:35:26.11892975Z",
+          "summary": [
+            "Ganesha NFSv4.1 TCP2049 only; persistent private recovery state",
+            "Export chosen source in place: /home/admin/dashboard-data",
+            "Map ALL clients to nonroot 1000:109; no recursive ownership change",
+            "Trust private hosts/subnets: 192.168.64.0/24",
+            "Attach 192.168.64.8:/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570 at /Volumes/dashboard-docker",
+            "Install fixed root-owned launchd/systemd service",
+            "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+            "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline",
+            "Install exact Ubuntu NFS package versions from this release, if needed"
+          ],
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-docker"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-docker"
+          }
+        }
+      },
+      "operation": {
+        "id": "4mggoYtKT6HiXcwV5r1ce2cZJAWbb0FdsLY10yfUzhQ",
+        "requestId": 8,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:30:26.368921814Z",
+        "completedAt": "2026-10-24T12:30:42.254968038Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-docker"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-docker"
+          },
+          "status": {
+            "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+            "mountRoot": "/Volumes/dashboard-docker",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T12:30:42.254811912Z",
+          "effectsMayHaveStarted": true
+        }
+      },
+      "uid": 1000,
+      "gid": 109
+    },
+    {
+      "name": "owned-immutable-engine-running",
+      "result": "Pass",
+      "observation": {
+        "argv": [
+          "/usr/bin/sudo",
+          "--",
+          "/usr/bin/docker",
+          "ps",
+          "--format",
+          "{{.ID}} {{.Image}} {{.Names}}"
+        ],
+        "exit": 0,
+        "stdout": "4ee5f7faff7a e39b1b13d09c autobyteus-nfs-storage-e64c024a-1be9-4290-88a8-e97c7903bc4e\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "Docker-explicit-reconnect",
+      "result": "Pass",
+      "operation": {
+        "id": "6-uKUacOK_nbj8Exk2RoUD2i_SE8NMRlUmq7P7mXuVc",
+        "requestId": 11,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:30:43.055776147Z",
+        "completedAt": "2026-10-24T12:30:43.420009957Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-docker"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-docker"
+          },
+          "status": {
+            "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+            "mountRoot": "/Volumes/dashboard-docker",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T12:30:43.419854165Z",
+          "effectsMayHaveStarted": true
+        }
+      }
+    }
+  ],
+  "retained": {
+    "source": "/home/admin/dashboard-data",
+    "connection": {
+      "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+      "endpoint": "192.168.64.8",
+      "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+      "protocol": "4.1",
+      "mountRoot": "/Volumes/dashboard-docker"
+    },
+    "reason": "owned Docker server for subsequent separate Mac client; final drained detach pending"
+  },
+  "result": "Pass (bounded native Linux Docker mode; Mac/client/cleanup pending)",
+  "dashboardProcesses": [
+    {
+      "pid": 9863,
+      "close": null,
+      "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE LOCAL URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ],
+  "state": {
+    "argv": [
+      "/usr/bin/sudo",
+      "--",
+      "/bin/ls",
+      "-la",
+      "/var/lib/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "total 24\ndrwx------  3 root root 4096 Oct 24 12:30 .\ndrwxr-xr-x 47 root root 4096 Oct 24 12:28 ..\n-rw-------  1 root root  314 Oct 24 12:30 attachment.json\n-rw-------  1 root root   39 Oct 24 12:30 docker-endpoint.json\ndrwx------  3 root root 4096 Oct 24 12:30 ganesha\n-rw-------  1 root root  460 Oct 24 12:30 hosted-filesystem.json\n-rw-------  1 root root    0 Oct 24 11:58 operation.lock\n",
+    "stderr": ""
+  }
+}

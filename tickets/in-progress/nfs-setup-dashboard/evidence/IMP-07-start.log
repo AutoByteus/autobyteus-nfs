@@ -1,0 +1,4 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 setsid nohup bash /home/admin/dashboard-probe/linux-checks.sh > /home/admin/dashboard-probe/linux-checks-console.log 2>&1 < /dev/null & pid=$!; sleep 2; echo owned-check-pid=$pid
+admin@192.168.64.8's password: 
+owned-check-pid=4306
+Connection to 192.168.64.8 closed.

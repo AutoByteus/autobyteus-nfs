@@ -1,0 +1,9 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 chmod 700 ~/dashboard-probe/alternate; python3 ~/dashboard-probe/probe.py --resume
+admin@192.168.64.8's password: 
+{"id": "IMP-04", "date": "2026-10-24T11:59:32Z", "platform": "Linux ubuntu 7.0.0-38-generic #38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 17:12:37 UTC 2 aarch64 aarch64 aarch64 GNU/Linux", "binarySha256": "0d99fb8015aebca032fe4f5ea959e56727089281332586546798e1c51863a45a", "cases": [{"name": "installed-identity-drift-refused", "result": "Pass", "reply": {"version": 1, "id": 1, "kind": "inspect", "data": {"state": ""}, "error": {"code": "refused-or-incomplete", "detail": "control binary changed; close and authorize again", "truncated": false, "effectsMayHaveStarted": false}}, "actualInstallerChange": {"argv": ["/usr/bin/sudo", "--", "/home/admin/dashboard-probe/alternate", "internal-install", "version"], "exit": 0, "stdout": "development\n", "stderr": ""}, "actualInstallerRestore": {"argv": ["/usr/bin/sudo", "--", "/home/admin/dashboard-probe/autobyteus-nfs", "internal-install", "version"], "exit": 0, "stdout": "development\n", "stderr": ""}}], "result": "Fail", "error": "NameError(\"name 'connection' is not defined\")"}
+Traceback (most recent call last):
+  File "/home/admin/dashboard-probe/probe.py", line 39, in <module>
+    p=start();review=request(p,'beginClient',{'connection':json.dumps(connection)});assert not review.get('error');p.stdout.close();seq+=1;p.stdin.write(json.dumps({'version':1,'id':seq,'kind':'inspect','payload':{}})+'\n');p.stdin.flush();code=p.wait(timeout=15);p.stdin.close()
+                                                                      ^^^^^^^^^^
+NameError: name 'connection' is not defined
+Connection to 192.168.64.8 closed.

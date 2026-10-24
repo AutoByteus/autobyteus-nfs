@@ -1,0 +1,4 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 setsid nohup python3 /home/admin/dashboard-probe/docker-ui.py > /home/admin/dashboard-probe/docker-ui-console.log 2>&1 < /dev/null & pid=$!; sleep 2; echo owned-docker-driver-pid=$pid
+admin@192.168.64.8's password: 
+owned-docker-driver-pid=9860
+Connection to 192.168.64.8 closed.

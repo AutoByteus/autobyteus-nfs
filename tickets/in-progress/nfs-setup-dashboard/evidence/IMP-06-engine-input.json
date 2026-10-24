@@ -1,0 +1,14 @@
+{
+  "id": "IMP-06",
+  "date": "2026-10-24T12:21:32.806139+00:00",
+  "source": "/Users/normy/nfs-first-candidate-api006-a8aune30/candidate/engine",
+  "ownedCopy": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/measured-engine",
+  "engineManifestSha256": "95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970",
+  "result": "Pass",
+  "checks": [
+    "current recipe/source identity",
+    "all both-architecture exact package/source/inventory size+hash",
+    "current release-lock engine equality"
+  ],
+  "scope": "read-only retained engine reuse in development build; no candidate/release evidence promotion"
+}

@@ -1,0 +1,9 @@
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/alternate-linux admin@192.168.64.8:dashboard-probe/alternate
+admin@192.168.64.8's password: 
+alternate-linux                                 0%    0     0.0KB/s   --:-- ETAalternate-linux                               100%   10MB 391.5MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-04-guest-helper.py admin@192.168.64.8:dashboard-probe/probe.py
+admin@192.168.64.8's password: 
+IMP-04-guest-helper.py                          0%    0     0.0KB/s   --:-- ETAIMP-04-guest-helper.py                        100% 5629    10.0MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.8:dashboard-probe/result.json tickets/in-progress/nfs-setup-dashboard/evidence/IMP-04-ubuntu-resume-result.json
+admin@192.168.64.8's password: 
+result.json                                     0%    0     0.0KB/s   --:-- ETAresult.json                                   100% 1417     2.2MB/s   00:00    

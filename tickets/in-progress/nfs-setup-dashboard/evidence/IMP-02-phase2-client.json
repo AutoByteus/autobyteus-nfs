@@ -1,0 +1,18 @@
+{
+  "id": "IMP-02",
+  "date": "2026-10-24T11:53:54.631726+00:00",
+  "baseCommit": "1a670d4c62281786523cbf870adcd1c1b2796f5c",
+  "workingDelta": " internal/cli/inputs.go            |  27 -------\n internal/cli/interactive-setup.go |  43 +++++-----\n internal/cli/run.go               | 162 +++++++++++++++-----------------------\n internal/service/supervisor.go    |  31 --------\n 4 files changed, 87 insertions(+), 176 deletions(-)\n",
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase2-client",
+  "command": [
+    "go",
+    "test",
+    "-race",
+    "-timeout",
+    "90s",
+    "./internal/dashboard",
+    "./internal/cli"
+  ],
+  "environment": "Darwin arm64 Go1.27.2/private HOME/TMP/cache",
+  "exit": 0
+}

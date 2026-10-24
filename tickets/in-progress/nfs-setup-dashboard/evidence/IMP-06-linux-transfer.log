@@ -1,0 +1,6 @@
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/native-ui-build-linux admin@192.168.64.8:/home/admin/dashboard-probe/autobyteus-nfs-ui
+admin@192.168.64.8's password: 
+native-ui-build-linux                           0%    0     0.0KB/s   --:-- ETAnative-ui-build-linux                         100%   11MB 156.0MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-06-guest-ui.py admin@192.168.64.8:/home/admin/dashboard-probe/native-ui.py
+admin@192.168.64.8's password: 
+IMP-06-guest-ui.py                              0%    0     0.0KB/s   --:-- ETAIMP-06-guest-ui.py                            100% 6947    11.2MB/s   00:00    

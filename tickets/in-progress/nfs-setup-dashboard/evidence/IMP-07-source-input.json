@@ -1,0 +1,7 @@
+{
+  "id": "IMP-07",
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase4-all",
+  "archive": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/linux-check-source.tar",
+  "sha256": "d64bc4cca7e9bb117f5e24c272dc37cd59f7d9a17c8a0ec7faba628a11bb7ba3",
+  "scope": "actual current uncommitted phase4 source; no root or host effects in checks"
+}

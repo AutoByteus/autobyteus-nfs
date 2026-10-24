@@ -1,0 +1,359 @@
+{
+  "id": "IMP-06",
+  "date": "2026-10-24T12:24:01.957035+00:00",
+  "platform": "Linux ubuntu 7.0.0-38-generic #38~24.04.4-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep 14 17:12:37 UTC 2 aarch64 aarch64 aarch64 GNU/Linux",
+  "binarySha256": "3a7fbf9796c6c5c097da3bdfda0c815223778638e1cc94c6d09cfda8f06fb555",
+  "cases": [
+    {
+      "name": "no-TTY-server",
+      "result": "Pass",
+      "observation": {
+        "argv": [
+          "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+          "server"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "AutoByteus NFS incomplete: launch server/client as an ordinary user in a terminal, not under sudo\n"
+      }
+    },
+    {
+      "name": "no-TTY-client",
+      "result": "Pass",
+      "observation": {
+        "argv": [
+          "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+          "client"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "AutoByteus NFS incomplete: launch server/client as an ordinary user in a terminal, not under sudo\n"
+      }
+    },
+    {
+      "name": "root-dashboard-refused",
+      "result": "Pass",
+      "observation": {
+        "argv": [
+          "/usr/bin/sudo",
+          "--",
+          "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+          "server"
+        ],
+        "exit": 1,
+        "stdout": "",
+        "stderr": "AutoByteus NFS incomplete: launch server/client as an ordinary user in a terminal, not under sudo\n"
+      }
+    },
+    {
+      "name": "public-server-loopback-no-auto-admin",
+      "result": "Pass",
+      "state": {
+        "role": "server",
+        "platform": "linux",
+        "home": "/home/admin",
+        "authorized": false,
+        "closing": false
+      }
+    },
+    {
+      "name": "public-authorize-private-helper-metadata",
+      "result": "Pass",
+      "operation": {
+        "id": "D287vfnaiPc3O-kawTDhaGc4MFZyNLo79dGW2JwbR-c",
+        "requestId": 1,
+        "kind": "authorize",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:24:02.051947202Z",
+        "completedAt": "2026-10-24T12:24:02.14336249Z",
+        "data": {
+          "state": "empty"
+        }
+      }
+    },
+    {
+      "name": "invalid-source-no-effects",
+      "result": "Pass",
+      "operation": {
+        "id": "keAVfT9Kg-IfgkxFMPEPOQCGv6D6nbv8pC8h6LO6NIw",
+        "requestId": 2,
+        "kind": "beginServer",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T12:24:02.305165063Z",
+        "completedAt": "2026-10-24T12:24:02.311415148Z",
+        "data": {
+          "leaseId": "",
+          "kind": "",
+          "expiresAt": "0001-01-01T00:00:00Z",
+          "summary": null,
+          "configuration": {
+            "state": ""
+          }
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "source cannot be root/home/ancestor of home or overlap the mount target",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      }
+    },
+    {
+      "name": "actual-Linux-native-create-through-HTTP",
+      "result": "Pass",
+      "review": {
+        "id": "86Wp3S15WLmLIdEmT5c6c2sp0oN4pwrSqtVIAThOrWc",
+        "requestId": 3,
+        "kind": "beginServer",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:24:02.561450197Z",
+        "completedAt": "2026-10-24T12:24:02.568051317Z",
+        "data": {
+          "leaseId": "211ff49b-e8f6-44ee-a357-219e7c67b809",
+          "kind": "setup",
+          "expiresAt": "2026-10-24T12:29:02.567835238Z",
+          "summary": [
+            "Ganesha NFSv4.1 TCP2049 only; persistent private recovery state",
+            "Export chosen source in place: /home/admin/dashboard-data",
+            "Map ALL clients to nonroot 1000:109; no recursive ownership change",
+            "Trust private hosts/subnets: 192.168.64.0/24",
+            "Attach 192.168.64.8:/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570 at /Volumes/dashboard-native",
+            "Install fixed root-owned launchd/systemd service",
+            "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+            "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline",
+            "Install exact Ubuntu NFS package versions from this release, if needed"
+          ],
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-native"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-native"
+          }
+        }
+      },
+      "missingConsent": {
+        "id": "e8qv2f89jA_Z1OeKlX5outTligA0nt_Q_oge0w6cYXA",
+        "requestId": 4,
+        "kind": "commit",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T12:24:02.813601995Z",
+        "completedAt": "2026-10-24T12:24:02.813961363Z",
+        "data": {
+          "effectsMayHaveStarted": false
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "explicit plan consent and required drain acknowledgment are missing",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      },
+      "operation": {
+        "id": "IbmRfgLxnJO09B9xBBPH9daJ3KWRHM9_Twq0O80O9YQ",
+        "requestId": 5,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:24:03.065658258Z",
+        "completedAt": "2026-10-24T12:24:22.140505111Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-native"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-native"
+          },
+          "status": {
+            "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+            "mountRoot": "/Volumes/dashboard-native",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T12:24:22.14031899Z",
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "native-mounted-nonroot-read-write",
+      "result": "Pass",
+      "uid": 1000,
+      "gid": 109,
+      "connection": {
+        "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+        "endpoint": "192.168.64.8",
+        "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+        "protocol": "4.1",
+        "mountRoot": "/Volumes/dashboard-native"
+      },
+      "originalSHA256": "57aa59e60d9aa0f26f4d63a4988fcf108659db1f8f6617b5b3ecd2251685ef29"
+    },
+    {
+      "name": "explicit-current-readiness",
+      "result": "Pass",
+      "operation": {
+        "id": "VCAcy7Xz0bhgjH0JymcKf4POxTcbAo85rmZNlKdw3Jw",
+        "requestId": 6,
+        "kind": "checkReadiness",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:24:22.263252015Z",
+        "completedAt": "2026-10-24T12:24:22.288276187Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-native"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-native"
+          },
+          "status": {
+            "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+            "mountRoot": "/Volumes/dashboard-native",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T12:24:22.28810144Z",
+          "effectsMayHaveStarted": false
+        }
+      }
+    },
+    {
+      "name": "actual-wrong-role-no-mutation",
+      "result": "Pass",
+      "operation": {
+        "id": "plLLHwL_1gA6lKawjAcj1FYzHQREwX4bCwYrOpcRAFA",
+        "requestId": 2,
+        "kind": "beginReconnect",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T12:24:22.838528146Z",
+        "completedAt": "2026-10-24T12:24:22.844917864Z",
+        "data": {
+          "leaseId": "",
+          "kind": "",
+          "expiresAt": "0001-01-01T00:00:00Z",
+          "summary": null,
+          "configuration": {
+            "state": ""
+          }
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "configured role differs; open autobyteus-nfs server",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      }
+    },
+    {
+      "name": "explicit-reconnect-status-continuation",
+      "result": "Pass",
+      "operation": {
+        "id": "gQXk_SwhEKXvpq5XgZyfI7ZvNMgV_klqICDnTL83qf0",
+        "requestId": 8,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T12:24:23.450355103Z",
+        "completedAt": "2026-10-24T12:24:23.840616653Z",
+        "data": {
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "endpoint": "192.168.64.8",
+              "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+              "protocol": "4.1",
+              "mountRoot": "/Volumes/dashboard-native"
+            },
+            "source": "/home/admin/dashboard-data",
+            "backend": "ganesha-native"
+          },
+          "status": {
+            "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+            "mountRoot": "/Volumes/dashboard-native",
+            "hostReady": true,
+            "limitation": "Hard NFS checks may stall; no outage deadline or local substitute"
+          },
+          "checkedAt": "2026-10-24T12:24:23.84045632Z",
+          "effectsMayHaveStarted": true
+        }
+      }
+    },
+    {
+      "name": "installed-no-SUDO-service-active",
+      "result": "Pass",
+      "observation": {
+        "argv": [
+          "/usr/bin/sudo",
+          "--",
+          "/usr/bin/systemctl",
+          "show",
+          "autobyteus-nfs.service",
+          "--property=ActiveState,SubState,MainPID,ExecStart"
+        ],
+        "exit": 0,
+        "stdout": "MainPID=3815\nExecStart={ path=/usr/libexec/autobyteus-nfs/autobyteus-nfs ; argv[]=/usr/libexec/autobyteus-nfs/autobyteus-nfs service ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }\nActiveState=active\nSubState=running\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "dashboard-stop-keeps-host-storage",
+      "result": "Pass"
+    }
+  ],
+  "retained": {
+    "source": "/home/admin/dashboard-data",
+    "connection": {
+      "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+      "endpoint": "192.168.64.8",
+      "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+      "protocol": "4.1",
+      "mountRoot": "/Volumes/dashboard-native"
+    },
+    "reason": "owned Ubuntu native server for required separate guest client; stop/drained detach pending after that journey"
+  },
+  "result": "Pass (bounded Linux native server only; separate client/Mac/Docker pending)",
+  "dashboardProcesses": [
+    {
+      "pid": 2268,
+      "close": null,
+      "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE LOCAL URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    },
+    {
+      "pid": 3832,
+      "close": null,
+      "terminal": "Local client dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE LOCAL URL REDACTED]\r\nBrowser opener unavailable; use the private URL above.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ],
+  "state": {
+    "argv": [
+      "/usr/bin/sudo",
+      "--",
+      "/bin/ls",
+      "-la",
+      "/var/lib/autobyteus-nfs"
+    ],
+    "exit": 0,
+    "stdout": "total 24\ndrwx------  3 root root 4096 Oct 24 12:24 .\ndrwxr-xr-x 44 root root 4096 Oct 24 12:24 ..\n-rw-------  1 root root  314 Oct 24 12:24 attachment.json\n-rw-------  1 root root   19 Oct 24 12:24 docker-endpoint.json\ndrwx------  3 root root 4096 Oct 24 12:24 ganesha\n-rw-------  1 root root  460 Oct 24 12:24 hosted-filesystem.json\n-rw-------  1 root root    0 Oct 24 11:58 operation.lock\n",
+    "stderr": ""
+  }
+}

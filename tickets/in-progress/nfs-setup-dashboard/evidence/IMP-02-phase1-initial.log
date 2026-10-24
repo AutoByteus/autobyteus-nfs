@@ -1,0 +1,13 @@
+IMP-02 | 2026-10-24T11:49:41.841573+00:00 | input1a670d4c + current phase1 admin delta
+Darwin arm64 / Go1.27.2 / independent APFS source + private HOME/TMP/cache
+Command: go test -race ./...
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+?   	github.com/AutoByteus/autobyteus-nfs/internal/admin	[no test files]
+?   	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.639s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.495s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.919s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	3.169s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	8.077s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	2.166s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	4.126s

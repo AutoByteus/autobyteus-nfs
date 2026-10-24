@@ -1,0 +1,200 @@
+{
+  "id": "IMP-09",
+  "date": "2026-10-24T12:39:24.951293+00:00",
+  "step": "existing installed no-SUDO systemd service resumes owned drained self-mount without dashboard/explicit reconnect",
+  "observations": [
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/systemctl",
+        "show",
+        "autobyteus-nfs.service",
+        "--property=ActiveState,SubState,MainPID,Environment"
+      ],
+      "exit": 0,
+      "stdout": "MainPID=10277\nEnvironment=\nActiveState=active\nSubState=running\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/umount",
+        "/Volumes/dashboard-docker"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/systemctl",
+        "show",
+        "autobyteus-nfs.service",
+        "--property=ActiveState,SubState,MainPID,Environment"
+      ],
+      "exit": 0,
+      "stdout": "MainPID=10277\nEnvironment=\nActiveState=active\nSubState=running\n",
+      "stderr": ""
+    }
+  ],
+  "mountObservations": [
+    {
+      "afterSeconds": 0.0,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 0.501,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 1.003,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 1.507,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 2.011,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 2.517,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 3.019,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 3.52,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 4.021,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 4.523,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 5.025,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 5.527,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 6.029,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 6.531,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 7.037,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 7.542,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 8.047,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 8.553,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 9.054,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 9.555,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 10.056,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 10.561,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 11.065,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 11.566,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 12.071,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 12.576,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 13.078,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 13.58,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 14.085,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 14.589,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 15.09,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 15.592,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 16.096,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 16.597,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 17.099,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 17.603,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 18.109,
+      "mountEntry": null
+    },
+    {
+      "afterSeconds": 18.611,
+      "mountEntry": "386 36 0:56 / /Volumes/dashboard-docker rw,relatime shared:325 - nfs4 192.168.64.8:/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570 rw,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,acregmin=1,acregmax=1,acdirmin=1,acdirmax=1,hard,fatal_neterrors=none,proto=tcp,timeo=50,retrans=2,sec=sys,clientaddr=192.168.64.8,local_lock=none,addr=192.168.64.8"
+    }
+  ],
+  "result": "Pass",
+  "scope": "actual service remount/identity and read-only sentinel check; bounded fixture, no boot/outage qualification"
+}

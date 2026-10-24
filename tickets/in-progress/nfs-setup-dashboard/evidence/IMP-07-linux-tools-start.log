@@ -1,0 +1,4 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 setsid nohup sudo -n /bin/bash -c "apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential docker.io" > /home/admin/dashboard-probe/owned-tools-install.log 2>&1 < /dev/null & pid=$!; sleep 2; echo owned-prepare-pid=$pid
+admin@192.168.64.8's password: 
+owned-prepare-pid=4621
+Connection to 192.168.64.8 closed.

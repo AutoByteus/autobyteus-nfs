@@ -1,0 +1,5 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 test ! -f /home/admin/dashboard-probe/native-ui-result.json || cat /home/admin/dashboard-probe/native-ui-result.json; ps -p 2118 -o pid,stat,etime,command; sudo systemctl is-active autobyteus-nfs.service || true
+admin@192.168.64.8's password: 
+    PID STAT     ELAPSED COMMAND
+inactive
+Connection to 192.168.64.8 closed.
