@@ -1,0 +1,23 @@
+{
+  "case": "API-06",
+  "round": "API-REV-002",
+  "date": "2026-10-24T14:05:28.691373+00:00",
+  "commit": "34afb80caa80afa293cabc1d2786618a3c9516bc",
+  "environment": "Macarm64 artifact/source/cleanup audit only",
+  "command": "git diff input scope; JSON parse; node --check; Python compile without pycache; capability URL scan",
+  "nonTicketWorkingChanges": [],
+  "newEvidenceFilesChecked": 27,
+  "priorFailureRawUnchanged": true,
+  "ownedScratchAbsent": true,
+  "caseCount": 7,
+  "freshNaturalWidths": [
+    1280,
+    390
+  ],
+  "checkpoints": [
+    10,
+    10
+  ],
+  "result": "Pass",
+  "limits": "No product suite rerun/CI qualification; short-lived test token assertion diagnostics redacted in retained attempt1 only"
+}

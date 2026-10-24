@@ -1,0 +1,157 @@
+{
+  "id": "IMP-08",
+  "inputCommit": "2445aabf61126b1bb64b05b5f925b140c67917b8",
+  "base": "52c17fb5480d23b89752a8ae201419e356b4c3fc",
+  "sourceSizes": [
+    {
+      "path": "internal/admin/operations.go",
+      "nonemptyLines": 236,
+      "added": "240",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/admin/pipe.go",
+      "nonemptyLines": 152,
+      "added": "155",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/admin/session.go",
+      "nonemptyLines": 162,
+      "added": "171",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/admin/state.go",
+      "nonemptyLines": 114,
+      "added": "118",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/admin/supervisor.go",
+      "nonemptyLines": 40,
+      "added": "42",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/adminwire/protocol.go",
+      "nonemptyLines": 138,
+      "added": "144",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/adminwire/types.go",
+      "nonemptyLines": 46,
+      "added": "49",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/cli/dashboard.go",
+      "nonemptyLines": 100,
+      "added": "105",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/cli/inputs.go",
+      "nonemptyLines": 140,
+      "added": "6",
+      "deleted": "27"
+    },
+    {
+      "path": "internal/cli/interactive-setup.go",
+      "nonemptyLines": 57,
+      "added": "23",
+      "deleted": "20"
+    },
+    {
+      "path": "internal/cli/run.go",
+      "nonemptyLines": 162,
+      "added": "69",
+      "deleted": "98"
+    },
+    {
+      "path": "internal/dashboard/assets.go",
+      "nonemptyLines": 27,
+      "added": "30",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/browser.go",
+      "nonemptyLines": 99,
+      "added": "101",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/directories.go",
+      "nonemptyLines": 83,
+      "added": "86",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/http.go",
+      "nonemptyLines": 151,
+      "added": "154",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/privilege.go",
+      "nonemptyLines": 129,
+      "added": "133",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/session.go",
+      "nonemptyLines": 195,
+      "added": "200",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/web/api.js",
+      "nonemptyLines": 27,
+      "added": "27",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/web/app.js",
+      "nonemptyLines": 121,
+      "added": "121",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/web/forms.js",
+      "nonemptyLines": 47,
+      "added": "47",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/web/index.html",
+      "nonemptyLines": 69,
+      "added": "69",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/dashboard/web/styles.css",
+      "nonemptyLines": 15,
+      "added": "15",
+      "deleted": "0"
+    },
+    {
+      "path": "internal/service/probe.go",
+      "nonemptyLines": 155,
+      "added": "1",
+      "deleted": "1"
+    }
+  ],
+  "unchangedOwners": {
+    "internal/config": [],
+    "internal/setup": [],
+    "internal/backend": [],
+    "internal/docker": [],
+    "packaging": [],
+    "scripts/public": [],
+    ".github/workflows": []
+  },
+  "oldServiceSupervisorRemoved": true,
+  "reverseAdminImports": [],
+  "scope": "read-only source audit; not native/API proof"
+}

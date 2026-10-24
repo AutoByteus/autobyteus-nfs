@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-24T14:11:28.716588+00:00",
+  "head": "58ee7ba146ea4c6288078560d924131037f52aaf",
+  "base": "52c17fb5480d23b89752a8ae201419e356b4c3fc",
+  "initialStatus": "clean codex/nfs-setup-dashboard; fetch then merge origin/main Already up to date,25/0 ahead/behind",
+  "source": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+  "apiInput": "f71c4c3d26763a16a8b30fa09a1ce78e3c09ee0d",
+  "apiExecutedInput": "34afb80caa80afa293cabc1d2786618a3c9516bc",
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "guideRevision": "ccf3d5b2a6603ab02d5bf6faa80856167af99140",
+  "classification": "Large/High/Reviewed",
+  "authorities": "R1/SR001 Approved, SR003/ARCH002; CRR003 sourcePass100; API002 Pass95; CRR004 no new durable API delta gate N/A satisfied",
+  "impactPlan": {
+    "API01_02": "Still valid: current IMP18/19 and earlier exact-scope Go/native owner results",
+    "API03_05": "Still valid scoped carry: unchanged Go/admin/storage; original binaries, composite client and clipboard/SSH limits retained",
+    "API07": "Still valid exact current JS/directory/HTTP probe; no product drift",
+    "API06": "Still valid; roots rechecked before final handoff",
+    "mergeCheck": "Root RELEASE requires affected integrated checks: run2 embedding/source-hash Python tests in fresh independent exact non-ticket archive; no privileged/browser/native campaign"
+  },
+  "ownerBoundary": "NFS task worktree only; no canonical/PM/app/superrepo/old task or retained engine/candidate modification",
+  "release": "No release"
+}

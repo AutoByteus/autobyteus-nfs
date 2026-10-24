@@ -1,0 +1,22 @@
+{
+  "id": "IMP-14",
+  "date": "2026-10-24T13:11:10.187249+00:00",
+  "commit": "fd8575a4daabde5c570fac60953529229e2b6921",
+  "sourceCommit": "5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409",
+  "ownedScratch": "/Users/normy/nfs-dashboard-imp-1ed_m7l0",
+  "preRemovalOwnedExecutables": [],
+  "guestEvidence": [
+    "IMP-14-mac-inventory.json",
+    "IMP-14-linux-inventory.json"
+  ],
+  "shutdown": "guest sudo shutdown -h now after public drained detach and no task process/job/mount; Tart reports both stopped",
+  "vmRemoval": "Tart delete dashboard-mac dashboard-ubuntu in isolated TART_HOME succeeded",
+  "hostChanges": "No host sudo/mount/export/config/Docker/firewall/bridge/sysctl or credentials change; guest peer routes vanish with guests",
+  "retainedEngine": "/Users/normy/nfs-first-candidate-api006-a8aune30/candidate/engine/engine-manifest.json",
+  "retainedEngineManifestSHA256": "95d275cff765d48d18978fef12d5a2c9f3d986998c9ff60836eb0ebcd86c5970",
+  "sourceAndMarkers": "Preserved and hashed after public detach in both guests; disposable fixture data subsequently removed only with owned VMs",
+  "limits": "No API/E2E signoff, field/physical/user qualification or release",
+  "ownedScratchRemoved": true,
+  "retainedEngineUnchanged": true,
+  "result": "Complete"
+}

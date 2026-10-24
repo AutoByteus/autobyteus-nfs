@@ -1,0 +1,25 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-transfer.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/current-native-build-darwin admin@192.168.64.2:/Users/admin/dashboard-probe/autobyteus-nfs-ui
+(admin@192.168.64.2) Password:
+current-native-build-darwin                     0%    0     0.0KB/s   --:-- ETAcurrent-native-build-darwin                   100%   11MB 293.0MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/linux-connection.json admin@192.168.64.2:/Users/admin/dashboard-probe/linux-connection.json
+(admin@192.168.64.2) Password:
+linux-connection.json                           0%    0     0.0KB/s   --:-- ETAlinux-connection.json                         100%  205   239.2KB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/mac-ip.txt admin@192.168.64.2:/Users/admin/dashboard-probe/mac-ip.txt
+(admin@192.168.64.2) Password:
+mac-ip.txt                                      0%    0     0.0KB/s   --:-- ETAmac-ip.txt                                    100%   13    28.7KB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-10-guest-mac.py admin@192.168.64.2:/Users/admin/dashboard-probe/guest-mac.py
+(admin@192.168.64.2) Password:
+IMP-10-guest-mac.py                             0%    0     0.0KB/s   --:-- ETAIMP-10-guest-mac.py                           100% 7642     9.7MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.2:/Users/admin/dashboard-probe/mac-ui-result.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-10-attempt1/result.json
+(admin@192.168.64.2) Password:
+mac-ui-result.json                              0%    0     0.0KB/s   --:-- ETAmac-ui-result.json                            100%  893     1.1MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-10-guest-mac.py admin@192.168.64.2:/Users/admin/dashboard-probe/guest-mac.py
+(admin@192.168.64.2) Password:
+IMP-10-guest-mac.py                             0%    0     0.0KB/s   --:-- ETAIMP-10-guest-mac.py                           100% 7665    14.7MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.2:/Users/admin/dashboard-probe/mac-ui-result.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-10-mac-native-result.json
+(admin@192.168.64.2) Password:
+mac-ui-result.json                              0%    0     0.0KB/s   --:-- ETAmac-ui-result.json                            100%   16KB  12.7MB/s   00:00    

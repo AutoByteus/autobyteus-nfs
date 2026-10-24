@@ -1,0 +1,56 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 tail -100 /home/admin/dashboard-checks/go-race2.log; cat /home/admin/dashboard-probe/linux-checks-console2.log
+admin@192.168.64.8's password: 
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+--- FAIL: TestHelperBrokenOutputDrain (5.06s)
+    pipe_test.go:118: child operation not started
+panic: test timed out after 2m0s
+	running tests:
+		TestSupervisorStopDrainsOneInFlightAttempt (1m55s)
+
+goroutine 53 [running]:
+testing.(*M).startAlarm.func1()
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2961 +0x490
+created by time.goFunc
+	/home/admin/dashboard-checks/tools/go/src/time/sleep.go:182 +0x44
+
+goroutine 1 [chan receive]:
+testing.(*T).Run(0xc00017a248, {0x51561d, 0x2a}, 0x90c520)
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2268 +0x7dc
+testing.runTests.func1(0xc00017a248)
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2744 +0x78
+testing.tRunner(0xc00017a248, 0xc00018da28)
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2195 +0x168
+testing.runTests({0x511ab3, 0x24}, {0x51970a, 0x33}, 0xc00012a1e0, {0x96d238, 0xa, 0xa}, {0x0?, 0xc000146308?, ...})
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2742 +0x7a4
+testing.(*M).Run(0xc000128b40)
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2602 +0xb3c
+main.main()
+	_testmain.go:64 +0x104
+
+goroutine 38 [chan receive]:
+github.com/AutoByteus/autobyteus-nfs/internal/admin.TestSupervisorStopDrainsOneInFlightAttempt(0xc000382488)
+	/home/admin/dashboard-checks/src/internal/admin/session_test.go:216 +0x318
+testing.tRunner(0xc000382488, 0x90c520)
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2195 +0x168
+created by testing.(*T).Run in goroutine 1
+	/home/admin/dashboard-checks/tools/go/src/testing/testing.go:2260 +0x7c0
+
+goroutine 39 [select]:
+github.com/AutoByteus/autobyteus-nfs/internal/admin.(*Session).Supervise(0xc0002fbcc0, {0x90b158, 0xc00017e6e0}, {0x908648, 0x99d000})
+	/home/admin/dashboard-checks/src/internal/admin/supervisor.go:23 +0x148
+github.com/AutoByteus/autobyteus-nfs/internal/admin.TestSupervisorStopDrainsOneInFlightAttempt.func2()
+	/home/admin/dashboard-checks/src/internal/admin/session_test.go:215 +0x60
+created by github.com/AutoByteus/autobyteus-nfs/internal/admin.TestSupervisorStopDrainsOneInFlightAttempt in goroutine 38
+	/home/admin/dashboard-checks/src/internal/admin/session_test.go:215 +0x30c
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/admin	120.044s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.018s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.506s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.109s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.078s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	5.076s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.019s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.253s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.066s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	2.410s
+FAIL
+Connection to 192.168.64.8 closed.

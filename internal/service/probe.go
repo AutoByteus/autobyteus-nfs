@@ -1,4 +1,4 @@
-// Package service owns serial reconciliation and exact nonroot readiness probes.
+// Package service owns exact nonroot readiness probes and source creation.
 package service
 
 import (

@@ -1,0 +1,18 @@
+# API-07 round2 | 2026-10-24 | current34afb80/7b0577a4 | Macarm64 private scratch | command in adjacent script/environment; original output follows
+1280 original-natural-keyboard-edit-preserved
+1280 same-settled-native-key-control
+1280 explicit-list-exact-draft
+1280 parent-directory-only-navigation
+1280 child-selection-exact-source
+1280 reopen-selected-source
+1280 failed-list-preserves-correctable-draft
+1280 correction-requires-explicit-list
+1280 no-browser-errors-or-overflow
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '[redacted expired preview token]'
+- null
+
+    at /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-02-browser.cjs:54:12
+Fail

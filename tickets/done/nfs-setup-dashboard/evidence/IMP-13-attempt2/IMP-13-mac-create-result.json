@@ -1,0 +1,65 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:07:14.526244+00:00",
+  "phase": "mac-create",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "checks": [
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "create",
+        "--source",
+        "/Users/admin/dashboard-data",
+        "--endpoint",
+        "192.168.64.2",
+        "--allow",
+        "192.168.64.0/24",
+        "--backend",
+        "apple",
+        "--mount-root",
+        "/Volumes/dashboard-cli-server",
+        "--yes",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"connection\": {\n    \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n    \"endpoint\": \"192.168.64.2\",\n    \"export\": \"/Users/admin/dashboard-data\",\n    \"protocol\": \"3\",\n    \"mountRoot\": \"/Volumes/dashboard-cli-server\"\n  },\n  \"status\": {\n    \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n    \"mountRoot\": \"/Volumes/dashboard-cli-server\",\n    \"hostReady\": true,\n    \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n  }\n}\n",
+      "stderr": "Detected private addresses: 192.168.64.2\nAutoByteus NFS plan:\n - Apple nfsd: TCP2049 + RPC111 + mountd20048; exact export/settings to apply:\n# BEGIN AutoByteus NFS b30d6a90-458e-4e4a-b63c-4efa341bf7b1\n\"/Users/admin/dashboard-data\" -mapall=501:20 -network 192.168.64.0 -mask 255.255.255.0\n# END AutoByteus NFS b30d6a90-458e-4e4a-b63c-4efa341bf7b1\n# BEGIN AutoByteus NFS b30d6a90-458e-4e4a-b63c-4efa341bf7b1\nnfs.server.mount.port=20048\nnfs.server.bonjour=0\nnfs.server.udp=0\nnfs.server.mount.require_resv_port=0\n# END AutoByteus NFS b30d6a90-458e-4e4a-b63c-4efa341bf7b1\n\n - Export chosen source in place: /Users/admin/dashboard-data\n - Map ALL clients to nonroot 501:20; no recursive ownership change\n - Trust private hosts/subnets: 192.168.64.0/24\n - Attach 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-server\n - Install fixed root-owned launchd/systemd service\n - NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed\n - Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/env",
+        "-u",
+        "SUDO_UID",
+        "-u",
+        "SUDO_GID",
+        "-u",
+        "SUDO_USER",
+        "/Library/AutoByteusNFS/libexec/autobyteus-nfs",
+        "status"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Checking actual host readiness; this may wait for storage.\nAutoByteus NFS incomplete: another administrative operation is checking/incomplete; restore storage and wait: resource temporarily unavailable\n"
+    }
+  ],
+  "connection": {
+    "storageId": "cf69b3a4-5645-4c7d-be5b-f49cc6aed740",
+    "endpoint": "192.168.64.2",
+    "export": "/Users/admin/dashboard-data",
+    "protocol": "3",
+    "mountRoot": "/Volumes/dashboard-cli-server"
+  },
+  "result": "Fail",
+  "error": "AssertionError({'argv': ['/usr/bin/sudo', '--', '/usr/bin/env', '-u', 'SUDO_UID', '-u', 'SUDO_GID', '-u', 'SUDO_USER', '/Library/AutoByteusNFS/libexec/autobyteus-nfs', 'status'], 'exit': 1, 'stdout': '', 'stderr': 'Checking actual host readiness; this may wait for storage.\\nAutoByteus NFS incomplete: another administrative operation is checking/incomplete; restore storage and wait: resource temporarily unavailable\\n'})"
+}

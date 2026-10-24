@@ -1,0 +1,9 @@
+{
+  "case": "API-06",
+  "date": "2026-10-24T13:43:47.779585+00:00",
+  "command": "git diff 2445aabf --name-only -- . :!tickets; inspect cleanup",
+  "commit": "deeea2f5826304d2d6fd20f5d91b7ce577d94b41",
+  "productDelta": [],
+  "durableTestsChanged": [],
+  "result": "Pass"
+}

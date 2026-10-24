@@ -1,0 +1,10 @@
+{
+  "pathsChecked": 2646,
+  "maxCharacters": 200,
+  "longest": 143,
+  "invalid": [],
+  "names": "Windows-invalid, reserved components and trailing dot/space checked",
+  "ownProseWhitespaceExit": 0,
+  "rawEvidence": "Historical PTY whitespace retained, not silently normalized",
+  "licenseAndCriticalInputsUnchanged": true
+}

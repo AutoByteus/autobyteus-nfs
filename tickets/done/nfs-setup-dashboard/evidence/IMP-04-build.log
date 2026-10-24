@@ -1,0 +1,4 @@
+IMP-04 | 2026-10-24 | input1a670d4c + admin/IPC phase | Go1.27.2
+Independent source; CGO_ENABLED=0 builds for native guest proof, not runtime qualification
+['go', 'build', '-o', '/Users/normy/nfs-dashboard-imp-1ed_m7l0/helper-linux', './cmd/autobyteus-nfs']
+['go', 'build', '-o', '/Users/normy/nfs-dashboard-imp-1ed_m7l0/helper-darwin', './cmd/autobyteus-nfs']

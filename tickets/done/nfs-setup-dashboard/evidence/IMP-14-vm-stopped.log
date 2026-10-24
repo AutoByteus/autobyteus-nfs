@@ -1,0 +1,11 @@
+# IMP-14 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-14-vm-stopped.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+Source Name                                                                                                        Disk  Size  Accessed       State  
+local  dashboard-mac                                                                                               50 GB 33 GB vor 10 Minuten stopped
+local  dashboard-ubuntu                                                                                            20 GB 7 GB  vor 8 Minuten  stopped
+OCI    ghcr.io/cirruslabs/macos-tahoe-base:latest                                                                  50 GB 32 GB vor 11 Minuten stopped
+OCI    ghcr.io/cirruslabs/macos-tahoe-base@sha256:4aaa751fa7538902d73c767f27a066fc87e83f183069da4e4b5022863abd4c77 50 GB 32 GB vor 11 Minuten stopped
+OCI    ghcr.io/cirruslabs/ubuntu:24.04                                                                             20 GB 5 GB  vor 1 Stunde   stopped
+OCI    ghcr.io/cirruslabs/ubuntu@sha256:3acc11bebedcbcb813fb17dd0a4671a8c2e6baed537f3caa7922e170ed8a04ed           20 GB 5 GB  vor 1 Stunde   stopped

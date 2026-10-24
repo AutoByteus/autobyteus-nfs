@@ -1,0 +1,101 @@
+{
+  "result": "Sufficient; AC008 delivery gates pending actual finalization",
+  "criteria": {
+    "AC001": "Proven: API03/04/05 public nonroot terminal roles, actual loopback/manual bootstrap/no automatic privilege; IMP10 root/noTTY refusals and embedded checks. OS automatic-opening success not universal; fallback proven.",
+    "AC002": "Proven: API03 native/API04 Docker exact consent plans and UID1000 mounted/fsynced bytes matching source; IMP10 Mac native server carries exact binary. Copy boundary doubled, actual Connection fields verified.",
+    "AC003": "Proven at composite boundary: API05 actual paste/override/malformed/occupied-target + carried IMP10 Mac-to-LinuxDocker and IMP11 Linux-to-Mac native mounts/reconnect/detach. Not a fresh complete browser/client-to-peer campaign.",
+    "AC004": "Proven: actual daemon loss causes pending/incomplete; restored daemon and fresh review resume same storageId. Metadata vs fresh readiness, restart/wrong-role and current operation states honest.",
+    "AC005": "Proven: required consent/drain, busy refusal, stop preserves mounted bytes, public detach preserves original/sentinel/marker; pre-VM-removal inventory confirms task mounts/jobs/containers/processes absent.",
+    "AC006": "Proven at scoped real HTTP/pipe/race and native sudo/identity/binary/lock/EOF boundaries. Actual unauthorized loopback and301990ms lease expiry releases global lock. NOPASSWD fixture, no password-entry claim.",
+    "AC007": "Proven: API07 current natural keyboard/unheld GET completes510/512ms within6042/6049ms typing, exact draft/focus/navigation/error/Stop at1280/390; current16 controlled Chromium/WebKit cases reused. Original failed API001/red retained.",
+    "AC008": "API-owned proof sufficient: preserved CLI/service and directly usable current saved records, Go race/vet/four compile targets/embedding controls. Delivery docs synchronized; final source/CI/cleanup remains owning gate until finalization.json."
+  },
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "rawEvidence": [
+    {
+      "path": "API-07-02-result.json",
+      "sha256": "226c38460c0a8911a5742e2f3143f07c398db0a115ca1527c4acb4dbf8c95fa0"
+    },
+    {
+      "path": "API-07-02-browser.cjs",
+      "sha256": "88fe50ca79a30eb6ab4097cfb714b5ecc44ae928ee7214c409e2a6e7a1137628"
+    },
+    {
+      "path": "API-03-runtime.json",
+      "sha256": "46b4b7107300cf5cc738537e3e5ea1d2ef49ec152b95772d37db53a7d4e37f1c"
+    },
+    {
+      "path": "API-04-runtime.json",
+      "sha256": "98ad9896d141dac89edff2e0dd8ec49b6f82a40a1d96ab569b7829af832191c7"
+    },
+    {
+      "path": "API-05-runtime.json",
+      "sha256": "7dee5cbfa82214bbe0150b141bf7a2435901ea0e857796cbba14a3e99aba76c1"
+    },
+    {
+      "path": "API-06-cleanup.json",
+      "sha256": "18902003012fa286f0a2dae1da4db4f25d38c146d2c406a82de171b7a1f9c45b"
+    },
+    {
+      "path": "API-06-02-cleanup.json",
+      "sha256": "c875c7a956c97b60bdda8b7c4fb179b3a7e69456ed3d53cc0c2e924b6d680754"
+    },
+    {
+      "path": "API-06-guest-inventory.json",
+      "sha256": "5e00d813202f71c5a6cda04adea75ad27b15c050108527be8b232fd59f66bb23"
+    },
+    {
+      "path": "IMP-19-focused.log",
+      "sha256": "821b0af2a83db135846ddc5b9bb74b7f92814ec4a0bee644a22b935aa315da54"
+    },
+    {
+      "path": "IMP-02-phase4-final-all.log",
+      "sha256": "f92fa7e0fc53abc92962276f7e6ea46a87541faf91b45a5eee47bda48060170a"
+    },
+    {
+      "path": "IMP-10-mac-native-result.json",
+      "sha256": "bbf6da18400aa75824410db906dc0d1687727bb1e04490a1dfec2efaf6c3f789"
+    },
+    {
+      "path": "IMP-11-linux-client-result.json",
+      "sha256": "f64ec83177674e04b56a4315afffc59b1f9e9fe35285286b9eba5345e1aa60aa"
+    },
+    {
+      "path": "IMP-12-mac-service-detach-result.json",
+      "sha256": "59a849ffa20f14eb63fc33dfce7373c685fa4bbecc6498a68aea3f7be3968705"
+    },
+    {
+      "path": "IMP-04-ubuntu-final-result.json",
+      "sha256": "322b2834e2edf580636cfd878515f97f3a64e58719ca1ac566f11705858492c1"
+    }
+  ],
+  "currentChooser": [
+    {
+      "width": 1280,
+      "getAfterTypingStartMs": 510,
+      "typingSpanMs": 6042,
+      "checkpoints": 10
+    },
+    {
+      "width": 390,
+      "getAfterTypingStartMs": 512,
+      "typingSpanMs": 6049,
+      "checkpoints": 10
+    }
+  ],
+  "screenshotsPersonallyInspected": [
+    "API-07-02-390-typing.png",
+    "API-03-review.png",
+    "API-04-pending-error.png"
+  ],
+  "userCheckNeeded": false,
+  "limits": [
+    "Virtual native arm64, not physical/field/general-user or AMD64 NFS runtime",
+    "API07 root inspect double; no HTTP/clock/keyboard interception",
+    "Native API03-05 clipboard double/loopback SSH test transport; not product LAN management",
+    "Client acceptance composite with native binary attribution; no whole-new current storage campaign",
+    "Original API001Fail81.43, preparation/async-stop/IMP failures preserved"
+  ],
+  "confidence": "API00295/CRR003100; CRR004 no new durable API delta gate satisfied; no Delivery rescore",
+  "newFindings": []
+}

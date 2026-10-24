@@ -1,0 +1,7 @@
+{
+  "id": "IMP-08",
+  "date": "2026-10-24T12:38:50.046998+00:00",
+  "step": "scan current own text evidence for actual private launch URL; native drivers redact before persistence",
+  "privateURLHits": [],
+  "limits": "not a credential detector; no credentials/real UI bearer values intentionally retained"
+}

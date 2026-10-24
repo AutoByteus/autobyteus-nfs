@@ -1,0 +1,5 @@
+{
+  "attempt1": "Metadata-only Delivery reader expected directory state succeeded; StopIteration before verification.json. Raw response correctly says complete. No product execution/failure or evidence edit.",
+  "correction": "Read actual response schema and use complete; calculated510/512ms and6042/6049ms unchanged.",
+  "result": "Reader audit passed"
+}

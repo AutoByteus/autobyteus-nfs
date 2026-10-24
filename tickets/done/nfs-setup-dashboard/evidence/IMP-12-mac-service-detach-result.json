@@ -1,0 +1,303 @@
+{
+  "id": "IMP-12",
+  "date": "2026-10-24T13:04:57.502401+00:00",
+  "platform": "Darwin Manageds-Virtual-Machine.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:16:43 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_VMAPPLE arm64",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "cases": [
+    {
+      "name": "actual-Mac-same-service-restores-drained-selfmount",
+      "result": "Pass",
+      "pid": "1127",
+      "unmount": {
+        "argv": [
+          "/usr/bin/sudo",
+          "--",
+          "/sbin/umount",
+          "/Volumes/dashboard-apple"
+        ],
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "observations": [
+        {
+          "afterSeconds": 0.024,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 0.543,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 1.062,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 1.582,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 2.095,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 2.607,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 3.116,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 3.635,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 4.151,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 4.669,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 5.186,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 5.701,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 6.217,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 6.734,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 7.25,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 7.77,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 8.286,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 8.802,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 9.318,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 9.841,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 10.357,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 10.875,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 11.391,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 11.907,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 12.423,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 12.938,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 13.448,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 13.964,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 14.481,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 14.996,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 15.511,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 16.024,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 16.533,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 17.048,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 17.556,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 18.078,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 18.594,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 19.109,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 19.625,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 20.141,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 20.657,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 21.165,
+          "mountEntry": null
+        },
+        {
+          "afterSeconds": 21.682,
+          "mountEntry": "192.168.64.2:/Users/admin/dashboard-data on /Volumes/dashboard-apple (nfs)"
+        }
+      ]
+    },
+    {
+      "name": "Mac-drained-detach-preserves-source-marker-peer-write",
+      "result": "Pass",
+      "review": {
+        "id": "2aMc_PaF0Ixd5OBQtw86lfN_n40TaCfKUpvGoBEZ2dI",
+        "requestId": 2,
+        "kind": "beginDetach",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:05:19.650022Z",
+        "completedAt": "2026-10-24T13:05:19.658386Z",
+        "data": {
+          "leaseId": "ae17bb67-686d-4cad-b7f5-9744548735f0",
+          "kind": "detach",
+          "expiresAt": "2026-10-24T13:10:19.65807Z",
+          "summary": [
+            "detach saved host attachment 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-apple",
+            "Hard NFS may wait for storage; this is not data recovery",
+            "Drain all users and permit interruption; no forced unmount. Source, marker and private recovery data remain.",
+            "Stop ALL remote users of export /Users/admin/dashboard-data first; this program cannot discover or prove their drain."
+          ],
+          "configuration": {
+            "state": "configured",
+            "role": "server",
+            "connection": {
+              "storageId": "cf69b3a4-5645-4c7d-be5b-f49cc6aed740",
+              "endpoint": "192.168.64.2",
+              "export": "/Users/admin/dashboard-data",
+              "protocol": "3",
+              "mountRoot": "/Volumes/dashboard-apple"
+            },
+            "source": "/Users/admin/dashboard-data",
+            "backend": "apple"
+          }
+        }
+      },
+      "missingDrain": {
+        "id": "gucedJfSBgRqEKebnPPlJ0F0cpH50blz-P8G4dNGni8",
+        "requestId": 3,
+        "kind": "commit",
+        "state": "incomplete",
+        "startedAt": "2026-10-24T13:05:19.910175Z",
+        "completedAt": "2026-10-24T13:05:19.911104Z",
+        "data": {
+          "effectsMayHaveStarted": false
+        },
+        "error": {
+          "code": "refused-or-incomplete",
+          "detail": "explicit plan consent and required drain acknowledgment are missing",
+          "truncated": false,
+          "effectsMayHaveStarted": false
+        }
+      },
+      "operation": {
+        "id": "FrH4zzARsu3xz2feZsmEx5rpyrEBqBe89tf06s_PEUM",
+        "requestId": 4,
+        "kind": "commit",
+        "state": "succeeded",
+        "startedAt": "2026-10-24T13:05:20.171874Z",
+        "completedAt": "2026-10-24T13:05:20.320931Z",
+        "data": {
+          "configuration": {
+            "state": "empty"
+          },
+          "retained": "Owned export/settings removed; Apple nfsd remains OS-owned and was not disabled",
+          "effectsMayHaveStarted": true
+        }
+      },
+      "sourceHashes": {
+        "sentinel-mac-self.txt": "fc74050a8c53009b191c48fabf38d43b957327bc09d6fce51a8b084b5b8447ec",
+        "sentinel-mac-original.txt": "d9b45eba3741f17096a02d428ed8a67383404e0b28ebf8ab45a24ec621664c4d",
+        "sentinel-from-linux-client.txt": "a4721f93a880fdf027b362f37f86b4ca6cb186927a4055feced170427dac3c5d"
+      },
+      "removedJob": {
+        "argv": [
+          "/usr/bin/sudo",
+          "--",
+          "/bin/launchctl",
+          "print",
+          "system/com.autobyteus.nfs"
+        ],
+        "exit": 113,
+        "stdout": "",
+        "stderr": "Bad request.\nCould not find service \"com.autobyteus.nfs\" in domain for system\n"
+      }
+    }
+  ],
+  "result": "Pass (Mac storage safely detached; no task mounts/job remain; owned VM removal still pending)",
+  "dashboardProcesses": [
+    {
+      "pid": 1488,
+      "close": null,
+      "terminal": "Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: [PRIVATE LOCAL URL REDACTED]\r\nAdministrator approval/helper process PID 1491 started. Confirm only in this terminal; stopping waits for safe completion.\r\nStopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.\r\n"
+    }
+  ],
+  "state": {
+    "argv": [
+      "/usr/bin/sudo",
+      "--",
+      "/bin/ls",
+      "-la",
+      "/Library/Application Support/AutoByteusNFS"
+    ],
+    "exit": 0,
+    "stdout": "total 16\ndrwx------   5 root  admin  160 Oct 24 13:05 .\ndrwxr-xr-x  12 root  admin  384 Oct 24 13:01 ..\n-rw-------   1 root  admin  100 Oct 24 13:05 apple-detach-receipt.json\n-rw-------   1 root  admin    0 Oct 24 13:01 operation.lock\n-rw-r--r--   1 root  admin  152 Oct 24 13:03 service.log\n",
+    "stderr": ""
+  }
+}

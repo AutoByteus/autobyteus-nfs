@@ -1,0 +1,79 @@
+{
+  "id": "IMP-07",
+  "date": "2026-10-24T12:32:50.829063+00:00",
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase4-all",
+  "records": [
+    {
+      "name": "vet",
+      "command": [
+        "go",
+        "vet",
+        "./..."
+      ],
+      "exit": 0
+    },
+    {
+      "name": "python",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_nfs_*.py",
+        "-v"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "darwin-arm64",
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/compile-darwin-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "scope": "compile only"
+    },
+    {
+      "name": "darwin-amd64",
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/compile-darwin-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "scope": "compile only"
+    },
+    {
+      "name": "linux-arm64",
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/compile-linux-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "scope": "compile only"
+    },
+    {
+      "name": "linux-amd64",
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/compile-linux-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "exit": 0,
+      "scope": "compile only"
+    }
+  ]
+}

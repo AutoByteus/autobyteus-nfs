@@ -1,0 +1,8 @@
+# IMP-13 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-13-mac-detach-console.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /usr/bin/python3 /Users/admin/dashboard-probe/native-cli.py mac-detach
+(admin@192.168.64.2) Password:
+{"id": "IMP-13", "date": "2026-10-24T13:06:46.965493+00:00", "phase": "mac-detach", "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1", "checks": [{"argv": ["/Users/admin/dashboard-probe/autobyteus-nfs-ui", "version"], "exit": 0, "stdout": "development-dashboard\n", "stderr": ""}], "result": "Fail", "error": "FileNotFoundError(2, 'No such file or directory')"}
+Connection to 192.168.64.2 closed.

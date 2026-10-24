@@ -1,0 +1,57 @@
+{
+  "review": "CRR-003",
+  "entry": "Implementation Review",
+  "scope": "Targeted Delta Review",
+  "date": "2026-10-24T13:59:36.466387+00:00",
+  "intake": "629f7f008f6ada3f539ca854a1add82ca08f7dbd",
+  "sourceTests": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+  "priorFinding": "CR-001 / API-F001",
+  "priorReviewCommit": "4abea65b56791801db40ccf22d9693c3df791379",
+  "changedNonTicketPaths": [
+    "TESTING.md",
+    "internal/dashboard/__tests__/browser.cjs",
+    "internal/dashboard/__tests__/chooser.cjs",
+    "internal/dashboard/web/forms.js"
+  ],
+  "postCheckNonTicketDelta": [
+    "TESTING.md"
+  ],
+  "postCheckInterpretation": "Only TESTING.md gained focused chooser instructions; source and tests equal checked7b0577a4. No runtime change requiring rerun.",
+  "sourceSizes": {
+    "forms.js": {
+      "taskBase": 0,
+      "priorRound": 47,
+      "current": 55,
+      "deltaAdded": 11,
+      "deltaDeleted": 3
+    }
+  },
+  "currentSelectedHashes": {
+    "TESTING.md": "2ba415656852c7cfb683f90e9c68b9e2601602ccb7f534a35b9c8a3997fbf448",
+    "internal/dashboard/web/forms.js": "302c2c9e33c537cad82ff801f1ad665b93024eda7b0d5a4615bd12ced4899dc2",
+    "internal/dashboard/__tests__/chooser.cjs": "07390723f68b0d8fde65cf12432c1d331e4ceb6ebb020de11c8b8859e9971a33",
+    "internal/dashboard/__tests__/browser.cjs": "75dc2c35e1abd0e85f63c5430758bb15778bbdb46727f18ed10491885bc2977f"
+  },
+  "priorRevisionRecord": {
+    "bytes": 5458,
+    "sha256": "eaa7762f86f7011392af7fcdce9b8056a62602b623120ea4fd684a75f7860969"
+  },
+  "reusedChecks": [
+    "IMP17 expected red on prior product",
+    "IMP18 16/16 current Mac Chromium/WebKit cases",
+    "IMP19 dashboard race/vet and two embedding/hash tests",
+    "IMP20 exact copy audit and cleanup"
+  ],
+  "reviewerActions": [
+    "Read current owner/callers, diff, contracts and evidence",
+    "Read-only Git size/scope comparisons",
+    "Inspected retained WebKit390 chooser-poll image"
+  ],
+  "reviewerProductExecutions": [],
+  "resourcesCreated": [],
+  "notes": [
+    "No API verdict assigned; affected execution remains API-owned",
+    "Expected git show absent task-base forms.js diagnostic: new file has zero base lines, not a product/check failure",
+    "No unrelated source or other project changed"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "IMP-07",
+  "source": "https://go.dev/dl/?mode=json&include=all",
+  "version": "go1.27.2",
+  "file": {
+    "filename": "go1.27.2.linux-arm64.tar.gz",
+    "os": "linux",
+    "arch": "arm64",
+    "version": "go1.27.2",
+    "sha256": "94f3e30b8e374bc285e7dadc11e0865726b9bc6e85b841ccceaabc0214c6b7c8",
+    "size": 67076180,
+    "kind": "archive"
+  }
+}

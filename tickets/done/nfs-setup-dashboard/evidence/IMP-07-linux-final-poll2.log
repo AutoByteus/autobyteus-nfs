@@ -1,0 +1,7 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 cat /home/admin/dashboard-checks/final-result.json 2>/dev/null || true; tail -3 /home/admin/dashboard-checks/python-final.log
+admin@192.168.64.8's password: 
+{"raceExit":0,"vetExit":0,"pythonExit":0}
+Ran 78 tests in 51.941s
+
+OK (skipped=1)
+Connection to 192.168.64.8 closed.

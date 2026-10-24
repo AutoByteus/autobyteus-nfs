@@ -1,0 +1,248 @@
+{
+  "versions": {
+    "chromium": "156.0.8078.4",
+    "webkit": "27.2"
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "role": "server",
+      "width": 1280,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginServer",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "server",
+      "width": 390,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginServer",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 1280,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "pending",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginReconnect",
+        "cancelReview"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "wrong-role",
+      "result": "Pass",
+      "calls": [
+        "inspect"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "error",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "expired",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "client",
+      "width": 390,
+      "scenario": "slow",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "server",
+      "width": 1280,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginServer",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "server",
+      "width": 390,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginServer",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 1280,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "normal",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "pending",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginReconnect",
+        "cancelReview"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "wrong-role",
+      "result": "Pass",
+      "calls": [
+        "inspect"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "error",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "expired",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "role": "client",
+      "width": 390,
+      "scenario": "slow",
+      "result": "Pass",
+      "calls": [
+        "inspect",
+        "beginClient",
+        "commit",
+        "checkReadiness",
+        "beginDetach",
+        "commit"
+      ]
+    }
+  ],
+  "boundary": "real embedded browser/HTTP, subprocess root-protocol double; no native NFS proof",
+  "cleanup": "owned contexts/preview processes/directory fixtures closed and removed"
+}

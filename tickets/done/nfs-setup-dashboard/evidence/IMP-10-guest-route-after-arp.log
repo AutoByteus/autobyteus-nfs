@@ -1,0 +1,46 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-guest-route-after-arp.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /sbin/route -n get 192.168.64.8; /usr/sbin/netstat -rn -f inet; sudo /usr/sbin/arp -d 192.168.64.8; /sbin/route -n get 192.168.64.8; /sbin/ping -c 2 192.168.64.8
+(admin@192.168.64.2) Password:
+   route to: 192.168.64.8
+destination: 192.168.64.8
+  interface: en0
+      flags: <UP,HOST,REJECT,DONE,LLINFO,WASCLONED,IFSCOPE,IFREF>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0         0         0         0      1500         0 
+Routing tables
+
+Internet:
+Destination        Gateway            Flags               Netif Expire
+default            192.168.64.1       UGScg                 en0       
+127                127.0.0.1          UCS                   lo0       
+127.0.0.1          127.0.0.1          UH                    lo0       
+169.254            link#5             UCS                   en0      !
+192.168.64         link#5             UCS                   en0      !
+192.168.64.1/32    link#5             UCS                   en0      !
+192.168.64.1       be:d0:74:32:81:64  UHLWIir               en0   1104
+192.168.64.2/32    link#5             UCS                   en0      !
+192.168.64.8       192.168.64.1       UGHS                  en0       
+192.168.64.8       link#5             UHRLWIi               en0      !
+192.168.64.255     ff:ff:ff:ff:ff:ff  UHLWbI                en0      !
+224.0.0/4          link#5             UmCS                  en0      !
+224.0.0.251        1:0:5e:0:0:fb      UHmLWI                en0       
+255.255.255.255/32 link#5             UCS                   en0      !
+192.168.64.8 (192.168.64.8) deleted
+   route to: 192.168.64.8
+destination: 192.168.64.8
+    gateway: 192.168.64.1
+  interface: en0
+      flags: <UP,GATEWAY,HOST,DONE,STATIC>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0         0         0         0      1500         0 
+PING 192.168.64.8 (192.168.64.8): 56 data bytes
+64 bytes from 192.168.64.8: icmp_seq=0 ttl=63 time=0.758 ms
+64 bytes from 192.168.64.8: icmp_seq=1 ttl=63 time=0.660 ms
+
+--- 192.168.64.8 ping statistics ---
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.660/0.709/0.758/0.049 ms
+Connection to 192.168.64.2 closed.

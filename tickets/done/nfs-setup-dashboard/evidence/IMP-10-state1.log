@@ -1,0 +1,12 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-state1.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 ps -p 794 -o pid,etime,command; /bin/ps -axo pid,ppid,comm | /usr/bin/grep -E "(nfs|mount|python)"; /sbin/mount | /usr/bin/grep dashboard || true; /usr/bin/sudo -- /bin/ls -la "/Library/Application Support/AutoByteusNFS"
+(admin@192.168.64.2) Password:
+  PID ELAPSED COMMAND
+  794   00:14 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.fr
+  371     1 automountd
+  798   794 /Users/admin/dashboard-probe/autobyteus-nfs-ui
+ls: /Library/Application Support/AutoByteusNFS: No such file or directory
+Connection to 192.168.64.2 closed.

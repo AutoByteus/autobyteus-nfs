@@ -1,0 +1,4 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 cd /home/admin/dashboard-checks/final-src && HOME=/home/admin/dashboard-checks/home TMPDIR=/home/admin/dashboard-checks/tmp GOCACHE=/home/admin/dashboard-checks/cache GOTOOLCHAIN=local /home/admin/dashboard-checks/tools/go/bin/go test -race -timeout 60s ./internal/admin
+admin@192.168.64.8's password: 
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/admin	2.455s
+Connection to 192.168.64.8 closed.

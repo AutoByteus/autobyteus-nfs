@@ -1,0 +1,33 @@
+{
+  "cases": [
+    "API-01",
+    "API-02"
+  ],
+  "round": "API-REV-002",
+  "date": "2026-10-24T14:01:08.366587+00:00",
+  "command": "Git input diff + read original actual tests/results; no suite rerun",
+  "environment": "Mac arm64 local source/evidence audit",
+  "commit": "34afb80caa80afa293cabc1d2786618a3c9516bc",
+  "fromAPI001Delta": [
+    "TESTING.md",
+    "internal/dashboard/__tests__/browser.cjs",
+    "internal/dashboard/__tests__/chooser.cjs",
+    "internal/dashboard/web/forms.js"
+  ],
+  "fromIMP18_19CheckedDelta": [
+    "TESTING.md"
+  ],
+  "sourceHash": "2703d4bf972ab2070fcfbc0f1b175fd70c258963c706fffad591cd5dc70d6903",
+  "reusedChecks": {
+    "IMP17": "original failing regression expected red",
+    "IMP18": {
+      "cases": 16,
+      "pass": 16,
+      "scope": "Chromium/WebKit1280/390 actual HTTP, held response scheduling, root/clipboard doubles"
+    },
+    "IMP19": "dashboard race/vet +2Python embedding/hash Pass",
+    "API03_05": "unchanged native/admin/storage execution; affected chooser separately rerun API07; exact original limits retained"
+  },
+  "result": "Pass",
+  "priorFailure": "API-F001 not execution-closed until API07 rerun"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "IMP-20",
+  "date": "2026-10-24T13:55:48.785172+00:00",
+  "source": "7b0577a4f2637ddf12a74a0156e4243a41a3719c",
+  "deltaAgainst": "4abea65b56791801db40ccf22d9693c3df791379",
+  "productionChanged": [
+    "internal/dashboard/web/forms.js"
+  ],
+  "formsNonemptyLines": 55,
+  "unchangedDomains": "No Go/admin/config/setup/platform/backend/Docker/release/installer changes",
+  "privateURLHits": [],
+  "rawWhitespaceExceptions": [],
+  "result": "Pass"
+}

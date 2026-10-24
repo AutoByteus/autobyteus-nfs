@@ -1,0 +1,24 @@
+# IMP-13 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-13-transfer.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-native-cli.py admin@192.168.64.2:/Users/admin/dashboard-probe/native-cli.py
+(admin@192.168.64.2) Password:
+IMP-13-native-cli.py                            0%    0     0.0KB/s   --:-- ETAIMP-13-native-cli.py                          100% 4360     3.2MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.2:/Users/admin/dashboard-probe/cli-mac-create-result.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-mac-create-result.json
+(admin@192.168.64.2) Password:
+cli-mac-create-result.json                      0%    0     0.0KB/s   --:-- ETAcli-mac-create-result.json                    100% 1561     1.7MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/nfs-dashboard-imp-1ed_m7l0/mac-cli-connection.json admin@192.168.64.8:/home/admin/dashboard-probe/mac-cli-connection.json
+/usr/bin/scp: stat local "/Users/normy/nfs-dashboard-imp-1ed_m7l0/mac-cli-connection.json": No such file or directory
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-native-cli.py admin@192.168.64.8:/home/admin/dashboard-probe/native-cli.py
+admin@192.168.64.8's password: 
+IMP-13-native-cli.py                            0%    0     0.0KB/s   --:-- ETAIMP-13-native-cli.py                          100% 4360   411.9KB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.8:/home/admin/dashboard-probe/cli-linux-client-result.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-linux-client-result.json
+admin@192.168.64.8's password: 
+cli-linux-client-result.json                    0%    0     0.0KB/s   --:-- ETAcli-linux-client-result.json                  100%  474   117.3KB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.2:/Users/admin/dashboard-probe/cli-mac-detach-result.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-mac-detach-result.json
+(admin@192.168.64.2) Password:
+cli-mac-detach-result.json                      0%    0     0.0KB/s   --:-- ETAcli-mac-detach-result.json                    100%  473   651.5KB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts tickets/in-progress/nfs-setup-dashboard/evidence/IMP-13-native-cli.py admin@192.168.64.2:/Users/admin/dashboard-probe/native-cli.py
+(admin@192.168.64.2) Password:
+IMP-13-native-cli.py                            0%    0     0.0KB/s   --:-- ETAIMP-13-native-cli.py                          100% 4414     2.6MB/s   00:00    

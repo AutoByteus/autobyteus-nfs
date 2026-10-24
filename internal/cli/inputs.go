@@ -6,10 +6,8 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"os/user"
 	"path/filepath"
 	"runtime"
-	"strconv"
 	"strings"
 
 	"github.com/AutoByteus/autobyteus-nfs/internal/config"
@@ -26,6 +24,12 @@ func Parse(args []string) (Options, error) {
 	if len(args) > 0 && !strings.HasPrefix(args[0], "-") {
 		o.Action = args[0]
 		args = args[1:]
+	}
+	if o.Action == "server" || o.Action == "client" {
+		if len(args) != 0 {
+			return o, errors.New("server/client dashboard launches accept no flags or additional arguments")
+		}
+		return o, nil
 	}
 	f := flag.NewFlagSet("autobyteus-nfs", flag.ContinueOnError)
 	f.StringVar(&o.Source, "source", "", "chosen source folder (existing files stay in place)")
@@ -50,31 +54,6 @@ func Parse(args []string) (Options, error) {
 		return o, errors.New("unknown action")
 	}
 	return o, nil
-}
-func initiatingUser() (setup.User, error) {
-	id := os.Getenv("SUDO_UID")
-	if id == "" && os.Getuid() != 0 {
-		id = strconv.Itoa(os.Getuid())
-	}
-	if id == "" {
-		return setup.User{}, errors.New("run as an ordinary user; setup requests sudo itself")
-	}
-	u, err := user.LookupId(id)
-	if err != nil {
-		return setup.User{}, err
-	}
-	uid, err := strconv.ParseUint(u.Uid, 10, 32)
-	if err != nil {
-		return setup.User{}, err
-	}
-	gid, err := strconv.ParseUint(u.Gid, 10, 32)
-	if err != nil {
-		return setup.User{}, err
-	}
-	if uid == 0 || gid == 0 {
-		return setup.User{}, errors.New("root cannot be the data owner")
-	}
-	return setup.User{UID: uint32(uid), GID: uint32(gid), Home: u.HomeDir}, nil
 }
 func parseOSRelease(data string) map[string]string {
 	m := map[string]string{}

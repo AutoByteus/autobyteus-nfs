@@ -1,0 +1,8 @@
+{"id": "IMP-02", "date": "2026-10-24T11:52:19.575429+00:00", "baseCommit": "1a670d4c62281786523cbf870adcd1c1b2796f5c", "workingDelta": " internal/cli/inputs.go            |  27 -------\n internal/cli/interactive-setup.go |  43 +++++-----\n internal/cli/run.go               | 162 +++++++++++++++-----------------------\n internal/service/supervisor.go    |  31 --------\n 4 files changed, 87 insertions(+), 176 deletions(-)\n", "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase2-focused", "command": ["go", "test", "-race", "-timeout", "90s", "./internal/admin", "./internal/adminwire", "./internal/cli"], "environment": "Darwin arm64 Go1.27.2/private HOME/TMP/cache"}
+--- FAIL: TestHelperBrokenOutputDrain (0.08s)
+    pipe_test.go:129: SIGPIPE killed helper before drain signal: broken pipe
+FAIL
+FAIL	github.com/AutoByteus/autobyteus-nfs/internal/admin	1.633s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.477s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.942s
+FAIL

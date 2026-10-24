@@ -1,0 +1,14 @@
+{
+  "id": "IMP-01",
+  "date": "2026-10-24T11:48:06.163020+00:00",
+  "commit": "1a670d4c62281786523cbf870adcd1c1b2796f5c",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "scratch": "/Users/normy/nfs-dashboard-imp-1ed_m7l0",
+  "command": "download pinned Go from official metadata, verify SHA256, unpack to owned scratch; no host install",
+  "download": {
+    "url": "https://go.dev/dl/go1.27.2.darwin-arm64.tar.gz",
+    "sha256": "76812b213b1b2302c978d28fa52fa92d541704b9e7d9d5db8002c50e4018c4c5"
+  },
+  "go": "go version go1.27.2 darwin/arm64",
+  "result": "Pass"
+}

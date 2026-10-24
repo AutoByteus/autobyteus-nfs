@@ -1,0 +1,10 @@
+# IMP-14 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-14-linux-transfer.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-14-guest-inventory.py admin@192.168.64.8:/home/admin/dashboard-probe/final-inventory.py
+admin@192.168.64.8's password: 
+IMP-14-guest-inventory.py                       0%    0     0.0KB/s   --:-- ETAIMP-14-guest-inventory.py                     100% 2151     5.3MB/s   00:00    
+spawn /usr/bin/scp -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts admin@192.168.64.8:/home/admin/dashboard-probe/final-inventory.json /Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/IMP-14-linux-inventory.json
+admin@192.168.64.8's password: 
+final-inventory.json                            0%    0     0.0KB/s   --:-- ETAfinal-inventory.json                          100% 9425    10.5MB/s   00:00    

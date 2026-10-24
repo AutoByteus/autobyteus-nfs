@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_nfs_*.py",
+    "-v"
+  ],
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/final-check-source",
+  "head": "5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409",
+  "exit": 0,
+  "date": "2026-10-24T12:40:23.528885+00:00"
+}

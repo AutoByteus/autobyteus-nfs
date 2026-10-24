@@ -1,0 +1,40 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:06:12.224930+00:00",
+  "phase": "mac-create",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "checks": [
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "create",
+        "--source",
+        "/Users/admin/dashboard-data",
+        "--endpoint",
+        "192.168.64.2",
+        "--allow",
+        "192.168.64.0/24",
+        "--backend",
+        "apple",
+        "--mount-root",
+        "/Volumes/dashboard-cli-server",
+        "--yes",
+        "--json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Detected private addresses: 192.168.64.2\nAutoByteus NFS incomplete: required TCP 2049 is occupied; no existing service will be stopped\nAutoByteus NFS incomplete: exit status 1\n"
+    }
+  ],
+  "result": "Fail",
+  "error": "AssertionError({'argv': ['/Users/admin/dashboard-probe/autobyteus-nfs-ui', 'create', '--source', '/Users/admin/dashboard-data', '--endpoint', '192.168.64.2', '--allow', '192.168.64.0/24', '--backend', 'apple', '--mount-root', '/Volumes/dashboard-cli-server', '--yes', '--json'], 'exit': 1, 'stdout': '', 'stderr': 'Detected private addresses: 192.168.64.2\\nAutoByteus NFS incomplete: required TCP 2049 is occupied; no existing service will be stopped\\nAutoByteus NFS incomplete: exit status 1\\n'})"
+}

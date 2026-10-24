@@ -1,0 +1,8 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 cat /home/admin/dashboard-probe/native-ui-console.log; ls -l /home/admin/dashboard-probe/native-ui.py; setsid nohup python3 /home/admin/dashboard-probe/native-ui.py > /home/admin/dashboard-probe/native-ui-console2.log 2>&1 < /dev/null & pid=$!; sleep 2; echo owned-driver-pid=$pid; ps -p $pid -o pid,stat,command
+admin@192.168.64.8's password: 
+cat: /home/admin/dashboard-probe/native-ui-console.log: No such file or directory
+-rw-r--r-- 1 admin admin 6947 Oct 24 12:23 /home/admin/dashboard-probe/native-ui.py
+owned-driver-pid=2249
+    PID STAT COMMAND
+   2249 Ssl  python3 /home/admin/dashboard-probe/native-ui.py
+Connection to 192.168.64.8 closed.

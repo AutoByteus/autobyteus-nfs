@@ -1,0 +1,51 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:09:54.885349+00:00",
+  "phase": "mac-detach",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "checks": [
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "reconnect",
+        "--yes"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "{\n  \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n  \"mountRoot\": \"/Volumes/dashboard-cli-server\",\n  \"hostReady\": true,\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n}\n",
+      "stderr": " - reconnect saved host attachment 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-server\n - Hard NFS may wait for storage; this is not data recovery\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/env",
+        "-u",
+        "SUDO_UID",
+        "-u",
+        "SUDO_GID",
+        "-u",
+        "SUDO_USER",
+        "/Library/AutoByteusNFS/libexec/autobyteus-nfs",
+        "detach",
+        "--yes",
+        "--drained"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "",
+      "stderr": " - detach saved host attachment 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-server\n - Hard NFS may wait for storage; this is not data recovery\n - Drain all users and permit interruption; no forced unmount. Source, marker and private recovery data remain.\n - Stop ALL remote users of export /Users/admin/dashboard-data first; this program cannot discover or prove their drain.\nOwned export/settings removed; Apple nfsd remains OS-owned and was not disabled\nDetached; source, marker, private receipts preserved.\n"
+    }
+  ],
+  "result": "Pass (bounded native preserved CLI entry forms)"
+}

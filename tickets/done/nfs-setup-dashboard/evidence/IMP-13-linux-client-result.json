@@ -1,0 +1,80 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:09:50.691940+00:00",
+  "phase": "linux-client",
+  "binarySha256": "00351676d59a03f944359cf60b7f8b133a28317f3fd4a36bf7b142fbe5bd22e1",
+  "checks": [
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "connect",
+        "--connection",
+        "{\"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\", \"endpoint\": \"192.168.64.2\", \"export\": \"/Users/admin/dashboard-data\", \"protocol\": \"3\", \"mountRoot\": \"/Volumes/dashboard-cli-server\"}",
+        "--mount-root",
+        "/Volumes/dashboard-cli-client",
+        "--yes",
+        "--json"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "{\n  \"connection\": {\n    \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n    \"endpoint\": \"192.168.64.2\",\n    \"export\": \"/Users/admin/dashboard-data\",\n    \"protocol\": \"3\",\n    \"mountRoot\": \"/Volumes/dashboard-cli-client\"\n  },\n  \"status\": {\n    \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n    \"mountRoot\": \"/Volumes/dashboard-cli-client\",\n    \"hostReady\": true,\n    \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n  }\n}\n",
+      "stderr": "AutoByteus NFS plan:\n - Attach 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-client\n - Install fixed root-owned launchd/systemd service\n - NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed\n - Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline\n - Install exact Ubuntu NFS package versions from this release, if needed\n"
+    },
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "status",
+        "--yes"
+      ],
+      "attempt": 1,
+      "exit": 1,
+      "stdout": "",
+      "stderr": "AutoByteus NFS incomplete: another administrative operation is checking/incomplete; restore storage and wait: resource temporarily unavailable\nAutoByteus NFS incomplete: exit status 1\n"
+    },
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "status",
+        "--yes"
+      ],
+      "attempt": 2,
+      "exit": 0,
+      "stdout": "{\n  \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n  \"mountRoot\": \"/Volumes/dashboard-cli-client\",\n  \"hostReady\": true,\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n}\n",
+      "stderr": "Checking actual host readiness; this may wait for storage.\n"
+    },
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "reconnect",
+        "--yes"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "{\n  \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n  \"mountRoot\": \"/Volumes/dashboard-cli-client\",\n  \"hostReady\": true,\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n}\n",
+      "stderr": " - reconnect saved host attachment 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-client\n - Hard NFS may wait for storage; this is not data recovery\n"
+    },
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "detach",
+        "--yes",
+        "--drained"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "",
+      "stderr": " - detach saved host attachment 192.168.64.2:/Users/admin/dashboard-data at /Volumes/dashboard-cli-client\n - Hard NFS may wait for storage; this is not data recovery\n - Drain all users and permit interruption; no forced unmount. Source, marker and private recovery data remain.\nDetached; source, marker, private receipts preserved.\n"
+    }
+  ],
+  "result": "Pass (bounded native preserved CLI entry forms)"
+}

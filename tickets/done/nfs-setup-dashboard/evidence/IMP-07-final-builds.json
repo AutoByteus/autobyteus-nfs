@@ -1,0 +1,64 @@
+{
+  "id": "IMP-07",
+  "commit": "2445aabf61126b1bb64b05b5f925b140c67917b8",
+  "source": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/phase4-final-all",
+  "date": "2026-10-24T12:37:44.721828+00:00",
+  "checks": [
+    {
+      "target": "darwin-arm64",
+      "exit": 0,
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/final-compile-darwin-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "scope": "compile only"
+    },
+    {
+      "target": "darwin-amd64",
+      "exit": 0,
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/final-compile-darwin-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "scope": "compile only"
+    },
+    {
+      "target": "linux-arm64",
+      "exit": 0,
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/final-compile-linux-arm64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "scope": "compile only"
+    },
+    {
+      "target": "linux-amd64",
+      "exit": 0,
+      "command": [
+        "go",
+        "build",
+        "-o",
+        "/Users/normy/nfs-dashboard-imp-1ed_m7l0/final-compile-linux-amd64",
+        "./cmd/autobyteus-nfs"
+      ],
+      "scope": "compile only"
+    },
+    {
+      "command": [
+        "go",
+        "vet",
+        "./..."
+      ],
+      "exit": 0
+    }
+  ]
+}

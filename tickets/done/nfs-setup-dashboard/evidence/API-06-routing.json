@@ -1,0 +1,26 @@
+{
+  "case": "API-06",
+  "round": "API-REV-001",
+  "timestamp": "2026-10-24T13:46:05.739993+00:00",
+  "result": "Fail",
+  "confidence": 81.43,
+  "classification": {
+    "task_size": "Large",
+    "architectural_risk": "High",
+    "route": "Reviewed"
+  },
+  "evidenceCommit": "c2095979e823dc886be4ebdd3a479d275329db87",
+  "rulesSource": "fresh get_handoff_rules after completed validation",
+  "selectedWhen": "When API/E2E validation fails and the complete failure package requires focused failure-origin review by the code reviewer.",
+  "recipient_address": "/software_engineering_team/code_reviewer",
+  "finding": "API-F001",
+  "failingCase": "API-07",
+  "acceptanceCriteria": [
+    "AC007"
+  ],
+  "preliminaryOrigin": "Local Fix: new chooser input overwritten by listing completion",
+  "requestedAction": "Focused failure-origin review, not successful-test review",
+  "singleRecipient": true,
+  "dispatchStatus": "Prepared; send_message_to transport receipt follows this committed routing record",
+  "noDeliveryOrDesignerDispatch": true
+}

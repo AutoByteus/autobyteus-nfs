@@ -7,7 +7,7 @@ nonroot permissions, allowlist and busy-detach safety remain internal obligation
 Docker is only an optional Linux Ganesha storage-engine backend.
 
 The boundary to every consumer is an ordinary filesystem directory. There is no
-application attachment protocol, server JS probe, HTTP readiness API, launcher
+application attachment protocol, server JS probe, application HTTP readiness API, launcher
 query, selected-node discovery or automatic container recreation. No application
 checkout, consumer fixture pin or test-time network lookup is needed.
 
@@ -25,6 +25,13 @@ Changing old specially attached deployments requires explicit operator drain and
 reconfiguration outside this source task. No live deployment/migration is run.
 
 The local source hash attests this service's declared files and engine inputs,
-not application bytes or readiness. Qualification remains empty. Historical
+not application bytes or readiness. Release readiness is separate from deferred
+field/filesystem/user validation. Historical
 filesystem evidence, fixture checks and cross-compilation are not new runtime or
 physical/publication qualification. See ../packaging/RELEASE.md.
+
+Source-built `server`/`client` dashboards are local NFS-management entry forms,
+not consumer admission APIs. They preserve the same host-state/source/permission
+and detach boundaries. Their authenticated loopback listener is ordinary-user;
+terminal approval starts the root-installed same-binary private helper. See
+[dashboard usage](dashboard.md). Published v0.1.0 does not contain this UI.

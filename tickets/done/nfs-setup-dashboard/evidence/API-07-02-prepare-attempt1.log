@@ -1,0 +1,5 @@
+# API-07 round2 | 2026-10-24 | current34afb80/7b0577a4 | Macarm64 private scratch | command in adjacent script/environment; original output follows
+Traceback (most recent call last):
+  File "/Users/normy/autobyteus_org/autobyteus-nfs-worktrees/nfs-setup-dashboard/tickets/in-progress/nfs-setup-dashboard/evidence/API-07-02-prepare.py", line 19, in <module>
+    with tarfile.open(archive) as t:t.extractall(r/'tools',filter='data')
+TypeError: extractall() got an unexpected keyword argument 'filter'

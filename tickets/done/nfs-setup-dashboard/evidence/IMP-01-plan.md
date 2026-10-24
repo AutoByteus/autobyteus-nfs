@@ -1,0 +1,6 @@
+# IMP-01 implementation impact / phased checks
+2026-10-24, input1a670d4c, macOS26.5.2 arm64. R1/SR001 + SR003/ARCH002 Large/High.
+
+No current product reproduction exists; designer read parser rejection and measured only nonroot pipe/flock primitives. First add an exact role-command rejection witness, then implement it at the helper phase. Refactor admin first: current setup/config/backend policy and tests retained, current terminal/service call sites replaced together. Run native owned-archive Go race/vet and new scope/supervisor regressions; every new phase invalidates affected checks. Real privilege/pipe/identity/global-lock proof in isolated hosts precedes browser mutation controls. Browser/local HTTP proof and owned host integrations remain separate from unit fixtures. No live-user sudo/storage/Docker, old VM campaign, release or app/skills edits.
+
+Toolchain is pinned Go1.27.2 verified against official download SHA256, extracted into owned APFS scratch; private HOME/TMP/cache, no host install. No VM tool on current PATH/standard locations; inventory is preliminary, not proof resources unavailable. Resource preparation remains to establish. Source builds are not released metadata or native engine qualification.

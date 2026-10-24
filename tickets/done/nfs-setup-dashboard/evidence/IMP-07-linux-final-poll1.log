@@ -1,0 +1,17 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 tail -18 /home/admin/dashboard-checks/go-final.log; cat /home/admin/dashboard-checks/final-result.json 2>/dev/null || true; tail -4 /home/admin/dashboard-checks/python-final.log
+admin@192.168.64.8's password: 
+?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/admin	2.504s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.019s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.426s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.070s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.135s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	5.092s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.018s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.378s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.058s
+ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	2.580s
+test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest.test_all_six_missing_placeholder_values_fail_before_keychain) ... ok
+test_cleanup_failure_cannot_succeed_or_hide_primary_failure (test_nfs_release_signing.SigningTest.test_cleanup_failure_cannot_succeed_or_hide_primary_failure) ... ok
+test_codesign_capture_bound_and_decode_failure_preserve_exit (test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit) ... ok
+test_codesign_diagnostics_are_allowlisted_not_private_output (test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output) ... Connection to 192.168.64.8 closed.

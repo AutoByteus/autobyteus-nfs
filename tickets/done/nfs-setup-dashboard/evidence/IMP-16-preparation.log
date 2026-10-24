@@ -1,0 +1,65 @@
+# IMP-16 | 2026-10-24 | private Go/Playwright preparation; input4abea65b; Mac26.5.2arm64
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    76  100    76    0     0    275      0 --:--:-- --:--:-- --:--:--   276
+  3 65.0M    3 2495k    0     0  3247k      0  0:00:20 --:--:--  0:00:20 3247k 16 65.0M   16 10.9M    0     0  6200k      0  0:00:10  0:00:01  0:00:09 8366k 27 65.0M   27 17.9M    0     0  6675k      0  0:00:09  0:00:02  0:00:07 8000k 41 65.0M   41 26.7M    0     0  7297k      0  0:00:09  0:00:03  0:00:06 8337k 54 65.0M   54 35.5M    0     0  7654k      0  0:00:08  0:00:04  0:00:04 8503k 67 65.0M   67 43.8M    0     0  7795k      0  0:00:08  0:00:05  0:00:03 8495k 83 65.0M   83 54.2M    0     0  8225k      0  0:00:08  0:00:06  0:00:02 8969k 99 65.0M   99 64.8M    0     0  8556k      0  0:00:07  0:00:07 --:--:-- 9592k100 65.0M  100 65.0M    0     0  8564k      0  0:00:07  0:00:07 --:--:-- 9749k
+/Users/normy/nfs-dashboard-ir002-izotexkc/go.tar.gz: OK
+
+added 2 packages in 2s
+npm notice
+npm notice New major version of npm available! 10.9.8 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+Downloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248)[2m from https://cdn.playwright.dev/builds/cft/156.0.8078.4/mac-arm64/chrome-mac-arm64.zip[22m
+|                                                                                |   0% of 185.8 MiB
+|■■■■■■■■                                                                        |  10% of 185.8 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 185.8 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 185.8 MiB
+Chrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to /Users/normy/nfs-dashboard-ir002-izotexkc/browsers/chromium-1248
+Downloading FFmpeg (playwright ffmpeg v1013)[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-mac-arm64.zip[22m
+|                                                                                |   1% of 1.4 MiB
+|■■■■■■■■                                                                        |  10% of 1.4 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  81% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 1.4 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 1.4 MiB
+FFmpeg (playwright ffmpeg v1013) downloaded to /Users/normy/nfs-dashboard-ir002-izotexkc/browsers/ffmpeg-1013
+Downloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248)[2m from https://cdn.playwright.dev/builds/cft/156.0.8078.4/mac-arm64/chrome-headless-shell-mac-arm64.zip[22m
+|                                                                                |   0% of 99 MiB
+|■■■■■■■■                                                                        |  10% of 99 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 99 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 99 MiB
+Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to /Users/normy/nfs-dashboard-ir002-izotexkc/browsers/chromium_headless_shell-1248
+Downloading WebKit 27.2 (playwright webkit v2370)[2m from https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2370/webkit-mac-26-arm64.zip[22m
+|                                                                                |   0% of 78.9 MiB
+|■■■■■■■■                                                                        |  10% of 78.9 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 78.9 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 78.9 MiB
+WebKit 27.2 (playwright webkit v2370) downloaded to /Users/normy/nfs-dashboard-ir002-izotexkc/browsers/webkit-2370

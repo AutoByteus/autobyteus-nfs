@@ -1,0 +1,4 @@
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 setsid nohup /bin/bash -c "cd /home/admin/dashboard-checks/src && export HOME=/home/admin/dashboard-checks/home TMPDIR=/home/admin/dashboard-checks/tmp GOCACHE=/home/admin/dashboard-checks/cache GOTOOLCHAIN=local CGO_ENABLED=1 PYTHONDONTWRITEBYTECODE=1 PATH=/home/admin/dashboard-checks/tools/go/bin:/usr/local/bin:/usr/bin:/bin && cc --version > ../cc-version.log && go test -race -timeout 120s ./... > ../go-race2.log 2>&1 && go vet ./... > ../go-vet.log 2>&1 && python3 -m unittest discover -s scripts/tests -p test_nfs_\\*.py -v > ../python.log 2>&1 && echo Passed > ../result" > /home/admin/dashboard-probe/linux-checks-console2.log 2>&1 < /dev/null & pid=$!; sleep 2; echo owned-check-pid=$pid
+admin@192.168.64.8's password: 
+owned-check-pid=6274
+Connection to 192.168.64.8 closed.

@@ -1,0 +1,70 @@
+Case API-03; 2026-10-24T13:33:26.955Z; current deeea2f5826304d2d6fd20f5d91b7ce577d94b41; actual DOM
+N
+AutoByteus NFS
+LOCAL SETUP DASHBOARD
+Stop dashboard
+
+SERVER · SHARE FROM THIS COMPUTER
+
+Set up shared storage
+
+Choose a folder, review the plan, then share it on your private network.
+
+Plan prepared — waiting for your explicit approval.
+
+THIS COMPUTER
+
+No storage configured
+
+Inspect reads private metadata only. It does not check mounted storage or reconnect it.
+
+Inspect configuration
+
+03 · REVIEW BEFORE APPLYING
+
+Review this exact plan
+
+Review expires 15:38:26. The administrative lock is held until apply, cancel, or expiry.
+
+Storage management is reserved during review. Cancel to release it. Nothing below is an editable plan.
+
+Ganesha NFSv4.1 TCP2049 only; persistent private recovery state
+
+Export chosen source in place: /home/admin/api-dashboard/data
+
+Map ALL clients to nonroot 1000:109; no recursive ownership change
+
+Trust private hosts/subnets: 192.168.64.8
+
+Attach 192.168.64.8:/autobyteus/9696d731-86f2-4d65-b9a7-0436f59b6d55 at /Volumes/api-native
+
+Install fixed root-owned launchd/systemd service
+
+NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed
+
+Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline
+
+Install exact Ubuntu NFS package versions from this release, if needed
+Reviewed connection
+{
+  "storageId": "9696d731-86f2-4d65-b9a7-0436f59b6d55",
+  "endpoint": "192.168.64.8",
+  "export": "/autobyteus/9696d731-86f2-4d65-b9a7-0436f59b6d55",
+  "protocol": "4.1",
+  "mountRoot": "/Volumes/api-native"
+}
+I approve this exact plan and its administrator changes.
+Apply reviewed plan
+Cancel review
+
+BEFORE YOU START
+
+Local control. Explicit changes.
+This dashboard listens only on this computer. Keep its private URL to yourself.
+Administrator approval stays in your terminal. Review and apply are separate steps.
+Checks and changes can wait for unavailable storage. Restore storage and wait; there is no forced retry.
+Stopping this dashboard does not disconnect storage. Use the reviewed disconnect action after draining users.
+
+Field/shared-filesystem and user testing remain deferred. A build or signature is not field qualification.
+
+Standalone host storage · No application or workspace integration

@@ -1,0 +1,11 @@
+{
+  "id": "IMP-03",
+  "date": "2026-10-24T11:50:44.929967+00:00",
+  "step": "Provision task-owned Tart tool only; no existing VM or host admin mutation",
+  "source": "https://tart.run/integrations/vm-management/",
+  "result": "Pass",
+  "release": "2.41.1",
+  "sha256": "e680a734febccfce7d4e910c1f7f13fc3b00f19a181c945e2d746de3214c32c2",
+  "binary": "/Users/normy/nfs-dashboard-imp-1ed_m7l0/tart-tool/tart.app/Contents/MacOS/tart",
+  "version": "2.41.1"
+}

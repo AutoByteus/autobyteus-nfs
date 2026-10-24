@@ -1,0 +1,50 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:09:48.915784+00:00",
+  "phase": "mac-observe-existing",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "checks": [
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/sudo",
+        "--",
+        "/usr/bin/env",
+        "-u",
+        "SUDO_UID",
+        "-u",
+        "SUDO_GID",
+        "-u",
+        "SUDO_USER",
+        "/Library/AutoByteusNFS/libexec/autobyteus-nfs",
+        "status"
+      ],
+      "attempt": 1,
+      "exit": 0,
+      "stdout": "{\n  \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\n  \"mountRoot\": \"/Volumes/dashboard-cli-server\",\n  \"hostReady\": true,\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\n}\n",
+      "stderr": "Checking actual host readiness; this may wait for storage.\n"
+    },
+    {
+      "step": "actual no-args configured terminal selects status",
+      "exit": 0,
+      "terminal": "Install/use the root-owned AutoByteus NFS control binary and request OS administrator approval? Storage changes get a separate plan (type yes) [no]: yes\r\nConfigured storage: status / reconnect / detach [status]: \r\nChecking actual host readiness; this may wait for storage.\r\n{\r\n  \"storageId\": \"cf69b3a4-5645-4c7d-be5b-f49cc6aed740\",\r\n  \"mountRoot\": \"/Volumes/dashboard-cli-server\",\r\n  \"hostReady\": true,\r\n  \"limitation\": \"Hard NFS checks may stall; no outage deadline or local substitute\"\r\n}\r\n"
+    }
+  ],
+  "connection": {
+    "storageId": "cf69b3a4-5645-4c7d-be5b-f49cc6aed740",
+    "endpoint": "192.168.64.2",
+    "export": "/Users/admin/dashboard-data",
+    "protocol": "3",
+    "mountRoot": "/Volumes/dashboard-cli-server"
+  },
+  "result": "Pass (bounded native preserved CLI entry forms)"
+}
