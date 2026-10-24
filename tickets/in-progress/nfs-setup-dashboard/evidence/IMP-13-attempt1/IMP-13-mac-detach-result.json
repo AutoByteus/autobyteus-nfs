@@ -1,0 +1,19 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:06:46.965493+00:00",
+  "phase": "mac-detach",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "checks": [
+    {
+      "argv": [
+        "/Users/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    }
+  ],
+  "result": "Fail",
+  "error": "FileNotFoundError(2, 'No such file or directory')"
+}

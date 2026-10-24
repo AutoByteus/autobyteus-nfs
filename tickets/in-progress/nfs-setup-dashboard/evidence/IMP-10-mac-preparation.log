@@ -1,0 +1,18 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-mac-preparation.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /usr/bin/sw_vers; /usr/bin/uname -m; /usr/bin/id; /usr/bin/sudo -n true; echo sudo=$?; command -v python3; /usr/bin/python3 --version; /usr/bin/test ! -e "/Library/Application Support/AutoByteusNFS"; echo empty_state=$?; mkdir -p /Users/admin/dashboard-probe; chmod 700 /Users/admin/dashboard-probe
+Warning: Permanently added '192.168.64.2' (ED25519) to the list of known hosts.
+(admin@192.168.64.2) Password:
+ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83
+arm64
+uid=501(admin) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),264(_webdeveloper),701(com.apple.sharepoint.group.1),33(_appstore),98(_lpadmin),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh),400(com.apple.access_remote_ae)
+sudo=0
+/usr/bin/python3
+Python 3.9.6
+zsh:1: no such file or directory: /usr/bin/test
+empty_state=127
+Connection to 192.168.64.2 closed.

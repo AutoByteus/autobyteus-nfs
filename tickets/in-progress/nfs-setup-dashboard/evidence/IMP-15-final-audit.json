@@ -1,0 +1,333 @@
+{
+  "id": "IMP-15",
+  "date": "2026-10-24T13:12:25.743872+00:00",
+  "inputHead": "fd8575a4daabde5c570fac60953529229e2b6921",
+  "productCommit": "5f8cabf8ee31318a38aa9c0ed94e9c6960b9c409",
+  "sourceAndTestCommit": "2445aabf61126b1bb64b05b5f925b140c67917b8",
+  "sourceHash": "324bf4dbb24b8001324033a0abc131bc50a26e5d98284dcbb95d1be790e8cf13",
+  "productionDeltaAfterFinalChecks": [],
+  "upstreamAuthorityUnchanged": {
+    "requirements-doc.md": true,
+    "investigation-notes.md": true,
+    "solution-revision-record.md": true,
+    "solution-design-handoff.md": true,
+    "design-spec.md": true,
+    "design-review-report.md": true,
+    "architecture-review-revision-record.md": true
+  },
+  "privateLaunchURLHits": [],
+  "nonportableEvidenceNames": [],
+  "rawWhitespaceExceptions": [
+    {
+      "path": "evidence/IMP-14-linux-inventory-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-10-network-host-observation.log",
+      "rawTrailingWhitespaceLines": 1
+    },
+    {
+      "path": "evidence/IMP-14-linux-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-resume-transfer.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-10-state1.log",
+      "rawTrailingWhitespaceLines": 8
+    },
+    {
+      "path": "evidence/IMP-10-guest-route-after-arp.log",
+      "rawTrailingWhitespaceLines": 42
+    },
+    {
+      "path": "evidence/IMP-14-mac-shutdown.log",
+      "rawTrailingWhitespaceLines": 21
+    },
+    {
+      "path": "evidence/IMP-07-linux-final-poll2.log",
+      "rawTrailingWhitespaceLines": 7
+    },
+    {
+      "path": "evidence/IMP-10-network-mac.log",
+      "rawTrailingWhitespaceLines": 33
+    },
+    {
+      "path": "evidence/IMP-13-transfer-current.log",
+      "rawTrailingWhitespaceLines": 21
+    },
+    {
+      "path": "evidence/IMP-07-linux-final-poll1.log",
+      "rawTrailingWhitespaceLines": 17
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-final-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-07-start.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-07-linux-tools-poll.log",
+      "rawTrailingWhitespaceLines": 12
+    },
+    {
+      "path": "evidence/IMP-13-linux-client-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-transfer.log",
+      "rawTrailingWhitespaceLines": 20
+    },
+    {
+      "path": "evidence/IMP-10-guest-route-proof.log",
+      "rawTrailingWhitespaceLines": 18
+    },
+    {
+      "path": "evidence/IMP-07-final-collect.log",
+      "rawTrailingWhitespaceLines": 17
+    },
+    {
+      "path": "evidence/IMP-09-service-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-13-mac-observe-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-11-launch.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-09-result-transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-transfer.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-14-mac-inventory-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-10-attempt1-stop.log",
+      "rawTrailingWhitespaceLines": 34
+    },
+    {
+      "path": "evidence/IMP-11-result-transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-12-poll1.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-07-collect-attempt1.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-07-linux-drain-cleanup.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-09-service-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-07-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-final-console.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-10-network-linux.log",
+      "rawTrailingWhitespaceLines": 19
+    },
+    {
+      "path": "evidence/IMP-12-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-06-linux-start2.log",
+      "rawTrailingWhitespaceLines": 8
+    },
+    {
+      "path": "evidence/IMP-07-linux-restart.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-14-vm-delete.log",
+      "rawTrailingWhitespaceLines": 1
+    },
+    {
+      "path": "evidence/IMP-07-final-launch.log",
+      "rawTrailingWhitespaceLines": 7
+    },
+    {
+      "path": "evidence/IMP-13-mac-detach-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-12-launch.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-07-linux-poll2.log",
+      "rawTrailingWhitespaceLines": 56
+    },
+    {
+      "path": "evidence/IMP-10-transfer.log",
+      "rawTrailingWhitespaceLines": 21
+    },
+    {
+      "path": "evidence/IMP-11-poll1.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-10-mac-preparation.log",
+      "rawTrailingWhitespaceLines": 14
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-inventory.log",
+      "rawTrailingWhitespaceLines": 19
+    },
+    {
+      "path": "evidence/IMP-11-transfer.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-10-launch2.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-owned-daemon-preparation.log",
+      "rawTrailingWhitespaceLines": 5
+    },
+    {
+      "path": "evidence/IMP-10-launch.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-09-transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-07-final-transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-06-linux-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-06-linux-environment.log",
+      "rawTrailingWhitespaceLines": 26
+    },
+    {
+      "path": "evidence/IMP-06-linux-result-transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-10-mount-observation.log",
+      "rawTrailingWhitespaceLines": 34
+    },
+    {
+      "path": "evidence/IMP-14-mac-transfer.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-07-linux-poll.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-10-poll1.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-09-start.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-14-linux-shutdown.log",
+      "rawTrailingWhitespaceLines": 8
+    },
+    {
+      "path": "evidence/IMP-14-vm-stopped.log",
+      "rawTrailingWhitespaceLines": 1
+    },
+    {
+      "path": "evidence/IMP-06-linux-poll1.log",
+      "rawTrailingWhitespaceLines": 5
+    },
+    {
+      "path": "evidence/IMP-10-poll2.log",
+      "rawTrailingWhitespaceLines": 7
+    },
+    {
+      "path": "evidence/IMP-09-poll1.log",
+      "rawTrailingWhitespaceLines": 221
+    },
+    {
+      "path": "evidence/IMP-07-linux-tools-start.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-10-poll3.log",
+      "rawTrailingWhitespaceLines": 6
+    },
+    {
+      "path": "evidence/IMP-06-linux-start.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-06-linux-poll2.log",
+      "rawTrailingWhitespaceLines": 364
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-attempt1/IMP-04-ubuntu-console.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-13-attempt1/IMP-13-mac-create-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-attempt1/IMP-13-linux-client-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-attempt1/IMP-13-mac-detach-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-04-ubuntu-attempt2/IMP-04-ubuntu-resume-console.log",
+      "rawTrailingWhitespaceLines": 9
+    },
+    {
+      "path": "evidence/IMP-13-attempt2/IMP-13-mac-create-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-attempt2/transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    },
+    {
+      "path": "evidence/IMP-13-attempt3/IMP-13-mac-observe-console.log",
+      "rawTrailingWhitespaceLines": 4
+    },
+    {
+      "path": "evidence/IMP-13-attempt3/transfer.log",
+      "rawTrailingWhitespaceLines": 3
+    }
+  ],
+  "cleanupResult": "Complete",
+  "scope": "Final own evidence/source audit, not credential detector, independent API verdict or release proof",
+  "result": "Pass"
+}

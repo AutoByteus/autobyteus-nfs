@@ -1,0 +1,5 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-mac-boot.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+guest has stopped the virtual machine

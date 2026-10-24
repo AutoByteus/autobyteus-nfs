@@ -1,0 +1,10 @@
+# IMP-11 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-11-poll1.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 if test -f /home/admin/dashboard-probe/linux-client-result.json; then python3 -c 'import json; d=json.load(open("/home/admin/dashboard-probe/linux-client-result.json"));print(d["result"]);print(d.get("error"));print([c["name"] for c in d["cases"]])'; else ps -eo pid,ppid,comm | grep -E "(nfs|mount|python)"; fi
+admin@192.168.64.8's password: 
+Pass (native Linux client; Linux storage/client drained; Mac server remains for cleanup)
+None
+['Docker-drained-detach-preserves-source-and-peer-write', 'Linux-native-client-Mac-source-mounted-RW', 'Linux-client-explicit-reconnect', 'Linux-client-busy-detach-refusal', 'Linux-client-drained-detach', 'Linux-owned-mounts-engine-removed']
+Connection to 192.168.64.8 closed.

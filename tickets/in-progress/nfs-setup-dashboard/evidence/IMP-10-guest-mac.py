@@ -5,7 +5,7 @@ root=pathlib.Path.home()/'dashboard-probe';binary=root/'autobyteus-nfs-ui'
 record={'id':'IMP-10','date':datetime.datetime.now(datetime.timezone.utc).isoformat(),'platform':subprocess.check_output(['uname','-a'],text=True).strip(),'binarySha256':hashlib.sha256(binary.read_bytes()).hexdigest(),'cases':[]}
 active=[]
 def command(args):
- p=subprocess.run(args,capture_output=True,text=True);return {'argv':args,'exit':p.returncode,'stdout':p.stdout,'stderr':p.stderr}
+ p=subprocess.run(args,capture_output=True,text=True,start_new_session=True);return {'argv':args,'exit':p.returncode,'stdout':p.stdout,'stderr':p.stderr}
 class UI:
  def __init__(self,role):
   self.output='';self.seq=0;self.token='';self.done=False;self.base='';self.secret=''

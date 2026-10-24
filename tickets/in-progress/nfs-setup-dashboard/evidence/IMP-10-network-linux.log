@@ -1,0 +1,23 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-network-linux.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 ip -brief address; ip route; ping -c 2 192.168.64.2; sudo docker ps --format "{{.ID}} {{.Status}}"; sudo ss -lnpt | grep 2049
+admin@192.168.64.8's password: 
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s1           UP             192.168.64.8/24 metric 100 fd91:5d53:a507:b06c:74f1:5cff:fe15:848c/64 fe80::74f1:5cff:fe15:848c/64 
+docker0          DOWN           172.17.0.1/16 
+default via 192.168.64.1 dev enp0s1 proto dhcp src 192.168.64.8 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.64.0/24 dev enp0s1 proto kernel scope link src 192.168.64.8 metric 100 
+192.168.64.1 dev enp0s1 proto dhcp scope link src 192.168.64.8 metric 100 
+PING 192.168.64.2 (192.168.64.2) 56(84) bytes of data.
+From 192.168.64.8 icmp_seq=1 Destination Host Unreachable
+From 192.168.64.8 icmp_seq=2 Destination Host Unreachable
+
+--- 192.168.64.2 ping statistics ---
+2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1035ms
+pipe 2
+4ee5f7faff7a Up 31 minutes
+LISTEN 0      4096               *:2049             *:*    users:(("ganesha.nfsd",pid=10130,fd=12))                  
+Connection to 192.168.64.8 closed.

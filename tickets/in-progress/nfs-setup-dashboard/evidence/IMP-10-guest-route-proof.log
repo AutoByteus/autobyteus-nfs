@@ -1,0 +1,22 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-guest-route-proof.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.8 sudo ip route add 192.168.64.2/32 via 192.168.64.1; ip route get 192.168.64.2
+admin@192.168.64.8's password: 
+192.168.64.2 via 192.168.64.1 dev enp0s1 src 192.168.64.8 uid 1000 
+    cache 
+Connection to 192.168.64.8 closed.
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 sudo /sbin/route -n add -host 192.168.64.8 192.168.64.1; /sbin/ping -c 2 192.168.64.8; /bin/ps -p 917 -o pid,etime,comm; /sbin/mount | /usr/bin/grep dashboard || true
+(admin@192.168.64.2) Password:
+add host 192.168.64.8: gateway 192.168.64.1
+PING 192.168.64.8 (192.168.64.8): 56 data bytes
+ping: sendto: Host is down
+ping: sendto: Host is down
+Request timeout for icmp_seq 0
+
+--- 192.168.64.8 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+  PID ELAPSED COMM
+  917   01:34 /sbin/mount_nfs
+Connection to 192.168.64.2 closed.

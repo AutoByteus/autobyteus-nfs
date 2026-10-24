@@ -1,0 +1,38 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-mount-observation.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /bin/ps -p 917 -o pid,etime,command; /sbin/ping -c 2 192.168.64.8; /usr/bin/sudo -- /usr/sbin/lsof -nP -a -p 917 -i; /usr/bin/sudo -- /bin/cat "/Library/Application Support/AutoByteusNFS/pending-setup.json"
+(admin@192.168.64.2) Password:
+  PID ELAPSED COMMAND
+  917   00:21 /sbin/mount_nfs -o hard,tcp,vers=4.1,actimeo=1 192.168.64.8:/auto
+PING 192.168.64.8 (192.168.64.8): 56 data bytes
+ping: sendto: Host is down
+ping: sendto: Host is down
+Request timeout for icmp_seq 0
+
+--- 192.168.64.8 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+{
+  "Attachment": {
+    "storageId": "b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+    "endpoint": "192.168.64.8",
+    "export": "/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570",
+    "protocol": "4.1",
+    "mountRoot": "/Volumes/dashboard-linux-client",
+    "installationId": "05563f88-127c-4a5f-aaca-1e470d1ec01c",
+    "userUid": 501,
+    "userGid": 20
+  },
+  "Hosted": null,
+  "Apple": null,
+  "DockerSocket": "",
+  "NewSource": false,
+  "Summary": [
+    "Attach 192.168.64.8:/autobyteus/b3a91031-215a-4ba7-ba7d-5cc704e6c570 at /Volumes/dashboard-linux-client",
+    "Install fixed root-owned launchd/systemd service",
+    "NFS is unencrypted host trust, NOT individual-user authentication; no router or firewall rules changed",
+    "Hard NFS may stall file operations, previews and unrelated work; no local fallback or outage deadline"
+  ]
+}
+Connection to 192.168.64.2 closed.

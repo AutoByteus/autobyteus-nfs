@@ -1,0 +1,19 @@
+{
+  "id": "IMP-13",
+  "date": "2026-10-24T13:06:33.287334+00:00",
+  "phase": "linux-client",
+  "binarySha256": "00351676d59a03f944359cf60b7f8b133a28317f3fd4a36bf7b142fbe5bd22e1",
+  "checks": [
+    {
+      "argv": [
+        "/home/admin/dashboard-probe/autobyteus-nfs-ui",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "development-dashboard\n",
+      "stderr": ""
+    }
+  ],
+  "result": "Fail",
+  "error": "FileNotFoundError(2, 'No such file or directory')"
+}

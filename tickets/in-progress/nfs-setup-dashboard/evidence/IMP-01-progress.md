@@ -45,3 +45,13 @@ source-copy/compile inputs remain. Current upstream documents are unchanged.
 owned, drained, ordinary (not force/lazy) unmount, the same systemd process
 restored the exact NFS4.1 source at18.611s; no dashboard or explicit reconnect
 was used. Sentinel hashes unchanged. IMP-09-linux-service-result.json.
+
+13:12Z completion: current Mac26.6.2 native client/server, separate current Linux
+client and bothOS shared installed service restoration now passed (IMP10–12).
+Bounded preserved public CLI forms also passed (IMP13); failed fixture preparation,
+lock-observation and noargs-consent attempts remain disclosed. All source/marker/
+sentinels survived public drained detach. Final inventories found no task mounts,
+jobs, helpers/UI or Docker engine. Both guests shut down normally and were deleted
+from isolated TART_HOME; complete owned scratch removed (IMP14). Original retained
+engine/candidates and all operator/canonical/app/PM resources untouched. This is
+initial implementation Ready for source review, not independent API acceptance.

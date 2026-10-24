@@ -1,0 +1,38 @@
+# IMP-10 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-10-attempt1-stop.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /bin/kill -TERM 798; sleep 3; cat /Users/admin/dashboard-probe/mac-ui-result.json; /bin/ps -p 794,798 -o pid,comm || true
+(admin@192.168.64.2) Password:
+{
+  "id": "IMP-10",
+  "date": "2026-10-24T13:00:50.958885+00:00",
+  "platform": "Darwin Manageds-Virtual-Machine.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:16:43 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_VMAPPLE arm64",
+  "binarySha256": "86bff169b13221e02718c29ab1ed82a2017061f9d42a006400eb80483956e8e1",
+  "cases": [],
+  "osVersion": {
+    "argv": [
+      "/usr/bin/sw_vers"
+    ],
+    "exit": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+    "stderr": ""
+  },
+  "result": "Fail",
+  "error": "AssertionError()",
+  "dashboardProcesses": [],
+  "state": {
+    "argv": [
+      "/usr/bin/sudo",
+      "--",
+      "/bin/ls",
+      "-la",
+      "/Library/Application Support/AutoByteusNFS"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ls: /Library/Application Support/AutoByteusNFS: No such file or directory\n"
+  }
+}
+  PID COMM
+Connection to 192.168.64.2 closed.

@@ -1,0 +1,9 @@
+# IMP-13 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-13-owned-daemon-preparation.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /usr/bin/python3 -c 'import pathlib; p=pathlib.Path("/etc/exports"); s=p.read_text() if p.exists() else ""; assert not any(l.strip() and not l.strip().startswith("#") for l in s.splitlines()); print("no active exports; task fixture only")' && sudo /sbin/nfsd disable && sudo /sbin/nfsd stop; /usr/bin/sudo -- /usr/sbin/lsof -nP -iTCP:2049 -sTCP:LISTEN || true
+(admin@192.168.64.2) Password:
+no active exports; task fixture only
+The nfsd service is not running.
+Connection to 192.168.64.2 closed.

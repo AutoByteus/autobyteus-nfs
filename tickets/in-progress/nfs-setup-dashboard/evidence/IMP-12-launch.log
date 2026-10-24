@@ -1,0 +1,8 @@
+# IMP-12 | 2026-10-24 | Raw owned-resource command/transfer/observation log: IMP-12-launch.log
+# Source: production5f8cabf / current test2445aab unless the paired attempt/result explicitly identifies an earlier binary; transfer/preparation is not execution proof.
+# Environment: owned Mac26.6.2arm64 or Ubuntu24.04arm64 guest via task scratch on Mac26.5.2arm64; exact command follows.
+# Raw bytes below are preserved (PTY CR/trailing diagnostics intentionally retained).
+spawn /usr/bin/ssh -tt -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/Users/normy/nfs-dashboard-imp-1ed_m7l0/known_hosts -o ConnectTimeout=15 admin@192.168.64.2 /usr/bin/python3 -c 'import subprocess; f=open("/Users/admin/dashboard-probe/mac-cleanup-console.log","w"); p=subprocess.Popen(["/usr/bin/python3","/Users/admin/dashboard-probe/guest-mac-cleanup.py"],stdin=subprocess.DEVNULL,stdout=f,stderr=subprocess.STDOUT,start_new_session=True); print("owned-pid=",p.pid)'
+(admin@192.168.64.2) Password:
+owned-pid= 1400
+Connection to 192.168.64.2 closed.
