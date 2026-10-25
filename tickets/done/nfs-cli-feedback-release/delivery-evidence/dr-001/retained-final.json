@@ -1,0 +1,33 @@
+{
+  "authorization": null,
+  "executor": {
+    "commit": "77632d13c414276140f0390e559600cf4a7b40a3",
+    "runAttempt": null,
+    "runId": null,
+    "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+    "workflow": ".github/workflows/release-nfs.yml",
+    "workflowCommit": "77632d13c414276140f0390e559600cf4a7b40a3"
+  },
+  "executorPublicationAdmission": "not performed",
+  "mode": "resume",
+  "payloadSourceCommit": "77632d13c414276140f0390e559600cf4a7b40a3",
+  "reviewedCommit": null,
+  "tag": {
+    "binding": {
+      "envelope": {
+        "artifactId": 12572518441,
+        "digest": "sha256:d6040fcbd5167d4d0743c22fa27ca27f7b71bb3127394edc37a868f2087b8d4d",
+        "expiresAt": "2027-01-22T19:06:02Z",
+        "runAttempt": 1,
+        "runId": 40123737340,
+        "workflowCommit": "77632d13c414276140f0390e559600cf4a7b40a3"
+      },
+      "payloadSha256": "d4807c3bf7cb522c69f64c44298edbaf9e7fcb180aef6b70fed60cb43676a4e0",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "77632d13c414276140f0390e559600cf4a7b40a3",
+      "version": "v0.2.1"
+    },
+    "object": "110df500cb8438975271109d7feccc64f87cd2e2"
+  },
+  "verifiedPayloadJobId": 120962911793
+}

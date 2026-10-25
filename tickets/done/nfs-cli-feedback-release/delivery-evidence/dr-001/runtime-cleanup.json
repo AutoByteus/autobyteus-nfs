@@ -1,0 +1,51 @@
+{
+  "at": "2026-10-25T20:29:19.353239+00:00",
+  "result": "Runtime cleanup Complete; Git branch cleanup after final docs CI",
+  "ownedRoot": "/Users/normy/nfs-cli-release-vdwkpql_",
+  "matchingRuntimeProcessesBeforeRemoval": [],
+  "excludedCheckerAncestorPids": [
+    1,
+    14682,
+    15592,
+    15867,
+    24983,
+    25587
+  ],
+  "firstGuardAttempt": "Refused before deletion because parent orchestrating shell24361 contained literal scratch path in its script argv. Corrected by excluding only current checker/ancestor PIDs; no runtime exemption or kill.",
+  "ownedEntriesBefore": [
+    "browser-home",
+    "browser-tools",
+    "browsers",
+    "candidate",
+    "candidate-smoke",
+    "final-inspection",
+    "home",
+    "public",
+    "role-client",
+    "role-server",
+    "tmp"
+  ],
+  "removed": [
+    "home",
+    "role-server",
+    "candidate-smoke",
+    "browser-home",
+    "browsers",
+    "public",
+    "role-client",
+    "tmp",
+    "browser-tools",
+    "final-inspection/candidate",
+    "final-inspection/inspection.json"
+  ],
+  "retained": [
+    "/Users/normy/nfs-cli-release-vdwkpql_/candidate",
+    "/Users/normy/nfs-cli-release-vdwkpql_/final-inspection/payload"
+  ],
+  "candidateRecordSHA256": "668613d0374e219b597af9c7ee3107d88103e3caf93d1b4af1374f568c7393cd",
+  "publicationSHA256": "d4807c3bf7cb522c69f64c44298edbaf9e7fcb180aef6b70fed60cb43676a4e0",
+  "reason": "Retain verified provenance/payload, remove browser/deps/cache/private install/HOME/TMP/downloads/duplicate candidate. No user install/root/storage or historical artifacts touched.",
+  "temporaryCommitLog": "/tmp/nfs-cli-feedback-release-commit-output.txt already moved to own evidence and removed",
+  "privateBootstrap": "Both role scripts confirmed0remaining and exit0; URLs sanitized, input tokens removed",
+  "noForcedHostCleanup": true
+}

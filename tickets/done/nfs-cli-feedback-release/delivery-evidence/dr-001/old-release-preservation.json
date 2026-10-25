@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-25T20:29:56.184552+00:00",
+  "oldReleases": [
+    {
+      "id": 422823635,
+      "tag": "v0.2.0",
+      "immutableAssetsUnchanged": true,
+      "assetCount": 18
+    },
+    {
+      "id": 417014769,
+      "tag": "v0.1.0",
+      "immutableAssetsUnchanged": true,
+      "assetCount": 18
+    }
+  ],
+  "oldTagsUnchanged": true,
+  "newVersionPublishedSeparately": "v0.2.1",
+  "noPreviousVersionOverwrite": true
+}

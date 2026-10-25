@@ -1,0 +1,5 @@
+Local server dashboard. If the HTML association does not open a browser, open this PRIVATE one-time URL in a browser: http://127.0.0.1:[owned-port]/#[redacted]
+Browser opener failed; use the private URL above.
+Waiting for administrator approval and setup helper. Complete any approval prompt only in this terminal.
+Could not start the administrator helper. Reopen this command as an ordinary user in an interactive terminal and authorize again; review the terminal diagnostic.
+Stopping dashboard admission. Waiting for any admitted host operation/directory read to finish; restore storage if it is waiting. Storage is NOT disconnected.

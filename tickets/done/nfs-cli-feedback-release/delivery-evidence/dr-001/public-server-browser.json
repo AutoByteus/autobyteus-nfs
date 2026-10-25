@@ -1,0 +1,91 @@
+{
+  "role": "server",
+  "version": "v0.2.1",
+  "browser": "156.0.8078.4",
+  "observedSandbox": true,
+  "browserProcesses": [
+    "23493 /Users/normy/nfs-cli-release-vdwkpql_/browsers/chromium_headless_shell-1248/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/Users/normy/nfs-cli-release-vdwkpql_/role-server/tmp/playwright_chromiumdev_profile-9Z5LJV --remote-debugging-pipe --no-startup-window"
+  ],
+  "widths": [
+    {
+      "width": 1280,
+      "metrics": {
+        "scroll": 1280,
+        "viewport": 1280
+      },
+      "screenshot": "public-server-1280.png"
+    },
+    {
+      "width": 390,
+      "metrics": {
+        "scroll": 390,
+        "viewport": 390
+      },
+      "screenshot": "public-server-390.png"
+    }
+  ],
+  "limits": "Actual published executable/embedded HTTP/UI. OS opener and sudo exec denied by enclosing sandbox. Explicit authorize request exercises only failed local helper startup; no sudo process, approval or storage work. This is public distribution launch, not setup/storage/field qualification.",
+  "state": {
+    "role": "server",
+    "authorized": false,
+    "operation": null,
+    "operationPropertyAbsent": true,
+    "ownedHome": true
+  },
+  "controlledFailure": {
+    "authorized": false,
+    "kind": "authorize",
+    "state": "incomplete",
+    "helperBoundary": "Sandbox denied local process-exec; not OS consent denial"
+  },
+  "result": "Pass",
+  "sandboxDeniedAdminExecution": true,
+  "stopAndTokenRemoval": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "method": "GET",
+      "path": "/styles.css"
+    },
+    {
+      "method": "GET",
+      "path": "/app.js"
+    },
+    {
+      "method": "GET",
+      "path": "/api.js"
+    },
+    {
+      "method": "GET",
+      "path": "/forms.js"
+    },
+    {
+      "method": "POST",
+      "path": "/api/session"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    },
+    {
+      "method": "POST",
+      "path": "/api/operations"
+    },
+    {
+      "method": "GET",
+      "path": "/api/state"
+    },
+    {
+      "method": "POST",
+      "path": "/api/stop"
+    }
+  ],
+  "errors": []
+}

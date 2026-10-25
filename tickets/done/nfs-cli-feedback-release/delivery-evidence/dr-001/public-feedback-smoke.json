@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-25T20:27:47.530691+00:00",
+  "binarySHA256": "51b61fdb86bb62f789356453c63951b56b826a68c3598771931bc986f639255b",
+  "version": "v0.2.1",
+  "roles": [
+    {
+      "role": "server",
+      "pid": 23489,
+      "exit": 0,
+      "browserExit": 0,
+      "result": "Pass",
+      "bootstrapFilesRemaining": 0,
+      "sandbox": "Deny OS opener and sudo exec; explicit authorization request fails locally before child starts; no elevation/storage"
+    },
+    {
+      "role": "client",
+      "pid": 23591,
+      "exit": 0,
+      "browserExit": 0,
+      "result": "Pass",
+      "bootstrapFilesRemaining": 0,
+      "sandbox": "Deny OS opener and sudo exec; explicit authorization request fails locally before child starts; no elevation/storage"
+    }
+  ],
+  "limits": "Current Mac ARM64 published install launch only; no root/storage/field proof"
+}

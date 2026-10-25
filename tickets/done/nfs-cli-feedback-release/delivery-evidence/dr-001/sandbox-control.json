@@ -1,0 +1,21 @@
+{
+  "result": "Pass",
+  "profile": "(version 1)(allow default)(deny process-exec (literal \"/usr/bin/open\"))(deny process-exec (literal \"/usr/bin/sudo\"))",
+  "checks": [
+    {
+      "binary": "/usr/bin/sudo",
+      "harmlessArg": "-V",
+      "exit": 71,
+      "stdout": "",
+      "stderr": "sandbox-exec: execvp() of '/usr/bin/sudo' failed: Operation not permitted\n"
+    },
+    {
+      "binary": "/usr/bin/open",
+      "harmlessArg": "-h",
+      "exit": 71,
+      "stdout": "",
+      "stderr": "sandbox-exec: execvp() of '/usr/bin/open' failed: Operation not permitted\n"
+    }
+  ],
+  "meaning": "Per-process test restriction refuses both exec paths before any child runs. No persistent policy/sudo-cache change. Not OS approval denial proof."
+}

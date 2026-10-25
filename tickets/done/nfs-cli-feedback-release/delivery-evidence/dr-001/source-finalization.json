@@ -1,0 +1,130 @@
+{
+  "at": "2026-10-24T19:05:34.695109+00:00",
+  "base": "cf62eece7d1e8799a608d5d13b87dbd599db9a56",
+  "ticket": "e055164d25c36c46d07aaa3a4b4aaea595de8684",
+  "target": "77632d13c414276140f0390e559600cf4a7b40a3",
+  "tree": "7e5d225b526ad314db0c4063c8e26b58c1a29313",
+  "treeEqualsTicket": true,
+  "remoteRefs": "e055164d25c36c46d07aaa3a4b4aaea595de8684\trefs/heads/codex/nfs-cli-feedback-release\n77632d13c414276140f0390e559600cf4a7b40a3\trefs/heads/main",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "e055164d25c36c46d07aaa3a4b4aaea595de8684\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "fetch",
+        "origin",
+        "main"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/AutoByteus/autobyteus-nfs\n * branch            main       -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "cf62eece7d1e8799a608d5d13b87dbd599db9a56\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "switch",
+        "-c",
+        "codex/finalize-nfs-cli-feedback-release",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "branch 'codex/finalize-nfs-cli-feedback-release' set up to track 'origin/main'.\n",
+      "stderr": "Switched to a new branch 'codex/finalize-nfs-cli-feedback-release'\n"
+    },
+    {
+      "argv": [
+        "git",
+        "merge",
+        "--no-ff",
+        "--no-edit",
+        "codex/nfs-cli-feedback-release"
+      ],
+      "exit": 0,
+      "stdout": "Merge made by the 'ort' strategy.\n RELEASE.md                                         |     4 +\n packaging/RELEASE.md                               |     2 +\n packaging/release-lock.json                        |   116 +-\n packaging/releases/v0.2.1/authorization.json       |    30 +\n packaging/releases/v0.2.1/native-checks.json       |    77 +\n .../v0.2.1/postpublication-testing-plan.md         |    30 +\n packaging/releases/v0.2.1/readiness.json           |    76 +\n packaging/releases/v0.2.1/release-controls.json    |    59 +\n packaging/releases/v0.2.1/release-notes.md         |    23 +\n .../releases/v0.2.1/release-request-handoff.md     |    46 +\n packaging/releases/v0.2.1/source-review.json       |    56 +\n .../dr-001/browser-preparation.log                 |    46 +\n .../dr-001/candidate-admission-refusal.log         |     3 +\n .../dr-001/candidate-artifacts.json                |   205 +\n .../delivery-evidence/dr-001/candidate-checks.json |    68 +\n .../dr-001/candidate-dispatch.json                 |     7 +\n .../dr-001/candidate-envelope.json                 |     8 +\n .../dr-001/candidate-envelope.log                  |     2 +\n .../delivery-evidence/dr-001/candidate-fetch.log   |     2 +\n .../delivery-evidence/dr-001/candidate-jobs.json   |  1171 ++\n .../dr-001/candidate-measured.json                 |    37 +\n .../dr-001/candidate-reference.json                |    11 +\n .../delivery-evidence/dr-001/candidate-run.json    |   224 +\n .../delivery-evidence/dr-001/candidate-run.log     | 14478 +++++++++++++++++++\n .../dr-001/candidate-verification-attempt1.txt     |     6 +\n .../dr-001/candidate-verification-commands.json    |   120 +\n .../dr-001/candidate-verified.json                 |    97 +\n .../delivery-evidence/dr-001/candidate-verify.log  |     2 +\n .../delivery-evidence/dr-001/candidate-version.log |     3 +\n .../dr-001/current-source-hash.log                 |     3 +\n .../delivery-evidence/dr-001/engine-lock.log       |     2 +\n .../dr-001/measured-source-hash.log                |     3 +\n .../dr-001/old-readiness-refusal.log               |     3 +\n .../delivery-evidence/dr-001/precommit-check.json  |    15 +\n .../delivery-evidence/dr-001/preflight.json        |    47 +\n .../dr-001/public-feedback-browser.cjs             |    61 +\n .../dr-001/public-feedback-smoke.py                |    67 +\n .../delivery-evidence/dr-001/readiness-check.log   |     2 +\n .../delivery-evidence/dr-001/readiness-result.json |    42 +\n .../delivery-evidence/dr-001/releases-before.json  |   238 +\n .../delivery-evidence/dr-001/resources.json        |    11 +\n .../delivery-evidence/dr-001/tags-before.txt       |     4 +\n .../delivery-evidence/dr-001/verify-public.py      |    56 +\n .../release-deployment-report.md                   |    51 +\n .../done/nfs-cli-feedback-release/release-notes.md |    23 +\n .../release-request-handoff.md                     |    46 +\n 46 files changed, 17625 insertions(+), 58 deletions(-)\n create mode 100644 packaging/releases/v0.2.1/authorization.json\n create mode 100644 packaging/releases/v0.2.1/native-checks.json\n create mode 100644 packaging/releases/v0.2.1/postpublication-testing-plan.md\n create mode 100644 packaging/releases/v0.2.1/readiness.json\n create mode 100644 packaging/releases/v0.2.1/release-controls.json\n create mode 100644 packaging/releases/v0.2.1/release-notes.md\n create mode 100644 packaging/releases/v0.2.1/release-request-handoff.md\n create mode 100644 packaging/releases/v0.2.1/source-review.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/browser-preparation.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-admission-refusal.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-artifacts.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-checks.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-dispatch.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-fetch.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-jobs.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-measured.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-reference.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-run.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-run.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verification-attempt1.txt\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verification-commands.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verified.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verify.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-version.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/current-source-hash.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/engine-lock.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/measured-source-hash.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/old-readiness-refusal.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/precommit-check.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/preflight.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/public-feedback-browser.cjs\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/public-feedback-smoke.py\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/readiness-check.log\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/readiness-result.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/releases-before.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/resources.json\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/tags-before.txt\n create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/verify-public.py\n create mode 100644 tickets/done/nfs-cli-feedback-release/release-deployment-report.md\n create mode 100644 tickets/done/nfs-cli-feedback-release/release-notes.md\n create mode 100644 tickets/done/nfs-cli-feedback-release/release-request-handoff.md\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "77632d13c414276140f0390e559600cf4a7b40a3\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "exit": 0,
+      "stdout": "7e5d225b526ad314db0c4063c8e26b58c1a29313\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "e055164d25c36c46d07aaa3a4b4aaea595de8684^{tree}"
+      ],
+      "exit": 0,
+      "stdout": "7e5d225b526ad314db0c4063c8e26b58c1a29313\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/main"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "To https://github.com/AutoByteus/autobyteus-nfs.git\n   cf62eec..77632d1  HEAD -> main\n"
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main",
+        "refs/heads/codex/nfs-cli-feedback-release"
+      ],
+      "exit": 0,
+      "stdout": "e055164d25c36c46d07aaa3a4b4aaea595de8684\trefs/heads/codex/nfs-cli-feedback-release\n77632d13c414276140f0390e559600cf4a7b40a3\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ],
+  "result": "Source availability finalized; actual release still pending"
+}
