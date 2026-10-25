@@ -1,0 +1,26 @@
+{
+  "darwin-arm64": {
+    "notary": {
+      "binarySha256": "51b61fdb86bb62f789356453c63951b56b826a68c3598771931bc986f639255b",
+      "status": "Accepted",
+      "submissionId": "8cc3f70a-f818-4122-854a-f6c818fd6761",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "strictSignatureExit": 0,
+    "DeveloperIdTeamTimestampRuntime": true,
+    "onlineNotarizedRequirementExit": 0,
+    "limits": "Actual current Mac ARM64 static/online standalone-code checks; not Intel execution/Finder/offline/field qualification"
+  },
+  "darwin-amd64": {
+    "notary": {
+      "binarySha256": "1dfc8bde37bbb55e986b76f19b8dab23fd89b87870bff1f87cb22020d44afe59",
+      "status": "Accepted",
+      "submissionId": "3e5316b6-0318-4d48-97c2-38de6474c2d8",
+      "teamId": "7Y86YBQ7B4"
+    },
+    "strictSignatureExit": 0,
+    "DeveloperIdTeamTimestampRuntime": true,
+    "onlineNotarizedRequirementExit": 0,
+    "limits": "Actual current Mac ARM64 static/online standalone-code checks; not Intel execution/Finder/offline/field qualification"
+  }
+}

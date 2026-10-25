@@ -1,0 +1,607 @@
+checks (ubuntu-24.04)	UNKNOWN STEP	﻿2026-10-24T19:05:38.6232231Z Current runner version: '2.338.0'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6269581Z ##[group]Runner Image Provisioner
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6271107Z Hosted Compute Agent
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6272166Z Version: 20261021.618
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6274228Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6275591Z Build Date: 2026-10-21T00:45:21Z
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6276966Z Worker ID: {023275cc-faea-4d08-8285-6a3d3d9a09ad}
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6278349Z Region: eastus2
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6279361Z Cloud: Azure
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6280493Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6282920Z ##[group]Operating System
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6284347Z Ubuntu
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6285438Z 24.04.5
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6286451Z LTS
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6287372Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6288350Z ##[group]Runner Image
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6289533Z Image: ubuntu-24.04
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6290550Z Version: 20261012.334.1
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6292766Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6295814Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6297793Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6299912Z ##[group]GITHUB_TOKEN Permissions
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6302911Z Contents: read
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6305032Z Metadata: read
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6306131Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6309263Z Secret source: Actions
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6310960Z Cache mode: write
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6312378Z Prepare workflow directory
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6813915Z Prepare all required actions
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.6888378Z Getting action download info
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.8599087Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:38.9696439Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.3310149Z Complete job name: checks (ubuntu-24.04)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4186745Z ##[group]Run actions/checkout@v4
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4187659Z with:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4188129Z   repository: AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4191785Z   token: ***
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4192225Z   ssh-strict: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4192667Z   ssh-user: git
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4193125Z   persist-credentials: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4193881Z   clean: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4194344Z   sparse-checkout-cone-mode: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4194868Z   fetch-depth: 1
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4195313Z   fetch-tags: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4195766Z   show-progress: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4196209Z   lfs: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4196621Z   submodules: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4197073Z   set-safe-directory: true
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4197630Z   allow-unsafe-pr-checkout: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.4198431Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5216635Z Syncing repository: AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5219194Z ##[group]Getting Git version info
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5220522Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5222340Z [command]/usr/bin/git version
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5291249Z git version 2.55.0
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5317751Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5333097Z Temporarily overriding HOME='/home/runner/work/_temp/2fc0ffbe-60cd-4763-8f8e-49c98d76ac99' before making global git config changes
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5336149Z Adding repository directory to the temporary git global config as a safe directory
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5339347Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5398399Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5402869Z ##[group]Initializing the repository
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5407079Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5531432Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5533191Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5535700Z hint: to use in all of your new repositories, which will suppress this warning,
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5537296Z hint: call:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5537931Z hint:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5538818Z hint: 	git config --global init.defaultBranch <name>
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5539870Z hint:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5540782Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5542305Z hint: 'development'. The just-created branch can be renamed via this command:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5543811Z hint:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5544465Z hint: 	git branch -m <name>
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5545209Z hint:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5546238Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5548066Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5550714Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5602472Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5603939Z ##[group]Disabling automatic garbage collection
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5606626Z [command]/usr/bin/git config --local gc.auto 0
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5641789Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5642926Z ##[group]Setting up auth
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5648958Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.5687489Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6146205Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6187880Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6438432Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6482924Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6747952Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6804393Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6805847Z ##[group]Fetching the repository
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:39.6816092Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +77632d13c414276140f0390e559600cf4a7b40a3:refs/remotes/origin/main
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9579776Z From https://github.com/AutoByteus/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9605178Z  * [new ref]         77632d13c414276140f0390e559600cf4a7b40a3 -> origin/main
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9616782Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9618172Z ##[group]Determining the checkout info
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9619715Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9620646Z [command]/usr/bin/git sparse-checkout disable
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9655229Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9700933Z ##[group]Checking out the ref
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:40.9705925Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.2714886Z Switched to a new branch 'main'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.2719832Z branch 'main' set up to track 'origin/main'.
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.2741631Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.2792847Z [command]/usr/bin/git log -1 --format=%H
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.2824483Z 77632d13c414276140f0390e559600cf4a7b40a3
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3173565Z ##[group]Run actions/setup-go@v5
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3174699Z with:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3175465Z   go-version: 1.27.2
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3176331Z   cache: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3177164Z   check-latest: false
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3187106Z   token: ***
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.3187950Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.4485651Z Setup go version spec 1.27.2
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.4497097Z Attempting to download 1.27.2...
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.4609251Z (node:2267) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:41.4612143Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:42.0125134Z matching 1.27.2...
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:42.0162456Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-linux-x64.tar.gz
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:42.5399384Z Extracting Go...
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:42.5527457Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/fb68e432-d6a3-4253-a746-6e05d8c41ae3 -f /home/runner/work/_temp/7afb1add-a40f-4845-a7cf-735a33e4657a
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:44.2686381Z Successfully extracted go to /home/runner/work/_temp/fb68e432-d6a3-4253-a746-6e05d8c41ae3
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:44.2687003Z Adding to the cache ...
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9437100Z Successfully cached go to /opt/hostedtoolcache/go/1.27.2/x64
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9440519Z Added go to the path
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9443581Z Successfully set up Go version 1.27.2
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9699680Z go version go1.27.2 linux/amd64
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9700078Z 
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:50.9700541Z ##[group]go env
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5515900Z AR='ar'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5516847Z CC='gcc'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5517671Z CGO_CFLAGS='-O2 -g'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5518133Z CGO_CPPFLAGS=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5518546Z CGO_CXXFLAGS='-O2 -g'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5518978Z CGO_ENABLED='1'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5521150Z CGO_FFLAGS='-O2 -g'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5521676Z CGO_LDFLAGS='-O2 -g'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5522212Z CXX='g++'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5522691Z GCCGO='gccgo'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5523140Z GO111MODULE=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5523865Z GOAMD64='v1'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5524369Z GOARCH='amd64'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5524850Z GOAUTH='netrc'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5525334Z GOBIN='/home/runner/go/bin'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5525983Z GOCACHE='/home/runner/.cache/go-build'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5526763Z GOCACHEPROG=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5527315Z GODEBUG=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5527876Z GOENV='/home/runner/.config/go/env'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5528554Z GOEXE=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5529143Z GOEXPERIMENT=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5529674Z GOFIPS140='off'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5530169Z GOFLAGS=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5531766Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build3583475308=/tmp/go-build -gno-record-gcc-switches'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5533018Z GOHOSTARCH='amd64'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5533914Z GOHOSTOS='linux'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5534272Z GOINSECURE=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5534867Z GOMOD='/home/runner/work/autobyteus-nfs/autobyteus-nfs/go.mod'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5535657Z GOMODCACHE='/home/runner/go/pkg/mod'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5536136Z GONOPROXY=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5536591Z GONOSUMDB=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5537134Z GOOS='linux'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5537491Z GOPACKAGESDRIVER=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5537915Z GOPATH='/home/runner/go'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5538320Z GOPRIVATE=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5538831Z GOPROXY='https://proxy.golang.org,direct'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5539584Z GOROOT='/opt/hostedtoolcache/go/1.27.2/x64'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5611048Z GOSUMDB='sum.golang.org'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5611566Z GOTELEMETRY='local'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5612148Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5612788Z GOTMPDIR=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5613198Z GOTOOLCHAIN='auto'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5614099Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.2/x64/pkg/tool/linux_amd64'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5614764Z GOVCS=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5615614Z GOVERSION='go1.27.2'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5616116Z GOWORK=''
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5616352Z PKG_CONFIG='pkg-config'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5616513Z 
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5616903Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5864473Z ##[group]Run go test -race ./...
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5864880Z [36;1mgo test -race ./...[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5865182Z [36;1mgo vet ./...[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5865757Z [36;1mgo build -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5866192Z [36;1mout/autobyteus-nfs version[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5866664Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.5867178Z [36;1mbash -n scripts/public/nfs/install.sh[0m
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.6169894Z shell: /usr/bin/bash -e {0}
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:05:51.6170247Z ##[endgroup]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:13.4055037Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:16.0909017Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/admin	2.162s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:16.0909968Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.015s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:16.0910791Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.067s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:16.0911713Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.033s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:16.0912487Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.035s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:53.7468166Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	38.418s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:53.7469106Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.019s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:53.7469892Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	3.216s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:53.7470670Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.017s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:06:53.7471416Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.131s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.3622105Z development
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.5744894Z test_embedded_static_allowlist_is_self_contained (test_nfs_dashboard_packaging.DashboardPackagingTests.test_embedded_static_allowlist_is_self_contained) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.6377306Z test_js_and_css_change_existing_source_identity (test_nfs_dashboard_packaging.DashboardPackagingTests.test_js_and_css_change_existing_source_identity) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.6495004Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.6497367Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.6909573Z test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.8813216Z test_measured_engine_lock_clears_readiness_and_preserves_pins (test_nfs_engine_packaging.EnginePackagingTest.test_measured_engine_lock_clears_readiness_and_preserves_pins) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.8886974Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:09.8889630Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.2792223Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.2793864Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.3540936Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.3565158Z test_missing_readiness_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_missing_readiness_cannot_publish) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.3567601Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.4297134Z test_removed_qualified_flag_is_not_an_alias (test_nfs_packaging.NfsPackagingTest.test_removed_qualified_flag_is_not_an_alias) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.4312307Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:10.8046945Z test_api_404_only_explicit_read_missing_is_absence (test_nfs_release_publication.PublicationTest.test_api_404_only_explicit_read_missing_is_absence) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:11.2005499Z test_assets_use_id_list_state_and_content_never_embedded_array (test_nfs_release_publication.PublicationTest.test_assets_use_id_list_state_and_content_never_embedded_array) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:11.5770070Z test_draft_create_response_and_ambiguous_effects_never_retry (test_nfs_release_publication.PublicationTest.test_draft_create_response_and_ambiguous_effects_never_retry) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:12.0427787Z test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest.test_exact_oci_copy_and_anonymous_all_children) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:13.4769499Z test_failed_promotion_preserves_draft_then_same_byte_retry (test_nfs_release_publication.PublicationTest.test_failed_promotion_preserves_draft_then_same_byte_retry) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:17.9982303Z test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest.test_fresh_resume_completed_and_stage_drift) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:18.3753799Z test_matching_size_corrupt_remote_asset_refuses_before_upload (test_nfs_release_publication.PublicationTest.test_matching_size_corrupt_remote_asset_refuses_before_upload) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:18.7681768Z test_payload_jobs_duplicate_failure_wrong_attempt_and_signing (test_nfs_release_publication.PublicationTest.test_payload_jobs_duplicate_failure_wrong_attempt_and_signing) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:19.6552640Z test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects (test_nfs_release_publication.PublicationTest.test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:20.0412316Z test_public_download_checks_bytes_before_owned_home_version (test_nfs_release_publication.PublicationTest.test_public_download_checks_bytes_before_owned_home_version) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:20.4170354Z test_published_only_404_does_not_hide_draft (test_nfs_release_publication.PublicationTest.test_published_only_404_does_not_hide_draft) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:20.7990167Z test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects (test_nfs_release_publication.PublicationTest.test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:22.2305961Z test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest.test_resume_prepare_inspect_and_lost_payload) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:22.6058448Z test_tag_object_and_annotation_conflicts_refuse (test_nfs_release_publication.PublicationTest.test_tag_object_and_annotation_conflicts_refuse) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:22.9928283Z test_unique_paginated_inventory_known_missing_and_direct_correlation (test_nfs_release_publication.PublicationTest.test_unique_paginated_inventory_known_missing_and_direct_correlation) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:23.1679176Z test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest.test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:23.3379332Z test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest.test_actions_zip_paths_and_duplicate_files) ... /usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'a'
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:23.3380529Z   return self._open_to_write(zinfo, force_zip64=force_zip64)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:23.3583144Z ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:23.6074290Z test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest.test_candidate_mutations_refused) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:24.1272614Z test_complete_candidate_readiness_payload (test_nfs_release_records.ReleaseRecordsTest.test_complete_candidate_readiness_payload) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:24.6152852Z test_executed_workflow_and_release_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest.test_executed_workflow_and_release_metadata_cannot_drift) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:25.0233678Z test_new_executables_invalidate_production_hash_not_readiness (test_nfs_release_records.ReleaseRecordsTest.test_new_executables_invalidate_production_hash_not_readiness) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:25.2033549Z test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest.test_oci_graph_not_just_declared_digest) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:25.6400788Z test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest.test_payload_refuses_missing_checksums_signature_and_member) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:26.3298544Z test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest.test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:27.2802249Z test_readiness_missing_failed_stale_false_claims_and_authority (test_nfs_release_records.ReleaseRecordsTest.test_readiness_missing_failed_stale_false_claims_and_authority) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:27.5303247Z test_readiness_references_are_hashed_regular_stable_and_nonempty (test_nfs_release_records.ReleaseRecordsTest.test_readiness_references_are_hashed_regular_stable_and_nonempty) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:27.7052368Z test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest.test_strict_version_paths_json_and_sizes) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:29.6737795Z test_corrected_full_path_reuses_original_bytes_and_known_id (test_nfs_release_recovery.RecoveryTest.test_corrected_full_path_reuses_original_bytes_and_known_id) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:30.7976856Z test_distinct_git_context_full_chain_and_fresh_refusal (test_nfs_release_recovery.RecoveryTest.test_distinct_git_context_full_chain_and_fresh_refusal) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:37.1815963Z test_exact_authority_schema_binding_and_evidence (test_nfs_release_recovery.RecoveryTest.test_exact_authority_schema_binding_and_evidence) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:37.9073220Z test_excluded_generated_drift_is_rejected_by_admission (test_nfs_release_recovery.RecoveryTest.test_excluded_generated_drift_is_rejected_by_admission) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:39.0615190Z test_full_tree_scope_and_original_lock_readiness_immutable (test_nfs_release_recovery.RecoveryTest.test_full_tree_scope_and_original_lock_readiness_immutable) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:40.1419989Z test_missing_authorization_blocks_effects_but_inspection_is_read_only (test_nfs_release_recovery.RecoveryTest.test_missing_authorization_blocks_effects_but_inspection_is_read_only) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:42.8999237Z test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest.test_missing_known_draft_wrong_job_and_main_dispatch_refuse) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:43.8935225Z test_scope_allows_only_named_repair_and_later_docs (test_nfs_release_recovery.RecoveryTest.test_scope_allows_only_named_repair_and_later_docs) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:44.6409138Z test_source_projection_bounds_links_missing_tamper_and_cleanup (test_nfs_release_recovery.RecoveryTest.test_source_projection_bounds_links_missing_tamper_and_cleanup) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:46.9334510Z test_transport_cannot_supply_changed_binding_or_payload (test_nfs_release_recovery.RecoveryTest.test_transport_cannot_supply_changed_binding_or_payload) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:47.5271461Z test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest.test_accepted_and_sanitized_receipt) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:47.5726827Z test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest.test_all_six_missing_placeholder_values_fail_before_keychain) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:49.4562341Z test_cleanup_failure_cannot_succeed_or_hide_primary_failure (test_nfs_release_signing.SigningTest.test_cleanup_failure_cannot_succeed_or_hide_primary_failure) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:50.3283772Z test_codesign_capture_bound_and_decode_failure_preserve_exit (test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:56.3818801Z test_codesign_diagnostics_are_allowlisted_not_private_output (test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:56.8188853Z test_codesign_parser_failure_does_not_hide_signing_exit (test_nfs_release_signing.SigningTest.test_codesign_parser_failure_does_not_hide_signing_exit) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:07:57.4116786Z test_codesign_success_does_not_turn_warning_into_failure (test_nfs_release_signing.SigningTest.test_codesign_success_does_not_turn_warning_into_failure) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:01.1973240Z test_command_failures_report_exact_stage_and_exit (test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:01.4619783Z test_failure_receipt_never_clobbers_existing_evidence (test_nfs_release_signing.SigningTest.test_failure_receipt_never_clobbers_existing_evidence) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:01.7254557Z test_import_failure_receipt_and_secret_safety (test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:04.3293804Z test_rejected_or_pending_notary_retains_known_receipt_but_fails (test_nfs_release_signing.SigningTest.test_rejected_or_pending_notary_retains_known_receipt_but_fails) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:04.6756345Z test_search_list_configuration_failure_stops_before_signing (test_nfs_release_signing.SigningTest.test_search_list_configuration_failure_stops_before_signing) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:05.0942627Z test_signal_reports_current_stage_and_cleans_up (test_nfs_release_signing.SigningTest.test_signal_reports_current_stage_and_cleans_up) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:05.7017738Z test_temporary_keychain_preserves_existing_search_entries_and_order (test_nfs_release_signing.SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.2936449Z test_validation_failures_are_not_credential_dumps (test_nfs_release_signing.SigningTest.test_validation_failures_are_not_credential_dumps) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.7720789Z test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest.test_candidate_and_fresh_metadata_argv) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.8961629Z test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest.test_metadata_failure_stops_step) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9622187Z test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest.test_nounset_and_oci_pipefail_stop_before_metadata) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9649951Z test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_all_modes) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9757338Z test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failure_cancellation_and_unexpected_skip_never_publish) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9792487Z test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_legitimate_skips_do_not_accept_failures) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9802629Z test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_and_permissions) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:08.9823125Z test_signing_upload_retains_only_sanitized_receipts_on_failure (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_signing_upload_retains_only_sanitized_receipts_on_failure) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.1094775Z test_declared_owned_boundary_and_default_readiness (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_readiness) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.2719090Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6785483Z test_owned_input_changes_invalidate_readiness (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_readiness) ... ok
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6787049Z 
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6787393Z ----------------------------------------------------------------------
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6788108Z Ran 78 tests in 60.104s
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6788365Z 
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.6788488Z OK (skipped=1)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.7135826Z Post job cleanup.
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.8378252Z (node:22315) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.8379763Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.8598382Z Post job cleanup.
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9488251Z [command]/usr/bin/git version
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9533085Z git version 2.55.0
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9574976Z Temporarily overriding HOME='/home/runner/work/_temp/db8d3541-d385-4b58-ba3f-7bda938b1bff' before making global git config changes
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9576281Z Adding repository directory to the temporary git global config as a safe directory
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9581374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9621302Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9668697Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9919749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9945367Z http.https://github.com/.extraheader
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:09.9958501Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:10.0026131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:10.0319093Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:10.0352641Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:10.0820087Z Cleaning up orphan processes
+checks (ubuntu-24.04)	UNKNOWN STEP	2026-10-24T19:08:10.1208347Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+checks (macos-15)	UNKNOWN STEP	﻿2026-10-24T19:05:42.0823430Z Current runner version: '2.338.0'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0849390Z ##[group]Runner Image Provisioner
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0850110Z Hosted Compute Agent
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0850530Z Version: 20260828.587
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0850950Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0851440Z Build Date: 2026-08-28T16:44:25Z
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0851880Z Worker ID: {7882cf81-5252-4f70-a9b9-14dd8ae3dc0a}
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0852340Z Azure Region: westus
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0852710Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0853660Z ##[group]Operating System
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0854060Z macOS
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0854410Z 15.7.9
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0854760Z 24G830
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0855110Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0855480Z ##[group]Runner Image
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0855890Z Image: macos-15-arm64
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0856290Z Version: 20260907.0337.1
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0857250Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0858320Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0859010Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0859780Z ##[group]GITHUB_TOKEN Permissions
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0861290Z Contents: read
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0861670Z Metadata: read
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0862050Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0863600Z Secret source: Actions
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0864180Z Cache mode: write
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.0864690Z Prepare workflow directory
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.1330630Z Prepare all required actions
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.1402290Z Getting action download info
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:42.6690730Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.1138540Z Download action repository 'actions/setup-go@v5' (SHA:40f1582b2485089dde7abd97c1529aa768e1baff)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.7557170Z Complete job name: checks (macos-15)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8274690Z ##[group]Run actions/checkout@v4
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8278290Z with:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8279640Z   repository: AutoByteus/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8289290Z   token: ***
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8290540Z   ssh-strict: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8291660Z   ssh-user: git
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8292750Z   persist-credentials: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8295550Z   clean: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8297360Z   sparse-checkout-cone-mode: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8299280Z   fetch-depth: 1
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8300510Z   fetch-tags: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8301590Z   show-progress: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8302880Z   lfs: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8304230Z   submodules: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8305680Z   set-safe-directory: true
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8307230Z   allow-unsafe-pr-checkout: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:43.8313370Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3048260Z Syncing repository: AutoByteus/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3051920Z ##[group]Getting Git version info
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3058580Z Working directory is '/Users/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3063700Z [command]/opt/homebrew/bin/git version
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3877630Z git version 2.55.0
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3888250Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3893100Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/e8478a0c-40a6-4770-a623-297217bf045f/.gitconfig'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3894740Z Temporarily overriding HOME='/Users/runner/work/_temp/e8478a0c-40a6-4770-a623-297217bf045f' before making global git config changes
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3898210Z Adding repository directory to the temporary git global config as a safe directory
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.3899880Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4077330Z Deleting the contents of '/Users/runner/work/autobyteus-nfs/autobyteus-nfs'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4079610Z ##[group]Initializing the repository
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4081630Z [command]/opt/homebrew/bin/git init /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4410440Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4411710Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4412550Z hint: to use in all of your new repositories, which will suppress this warning,
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4413540Z hint: call:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4415920Z hint:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4418520Z hint: 	git config --global init.defaultBranch <name>
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4459560Z hint:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4463150Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4465760Z hint: 'development'. The just-created branch can be renamed via this command:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4467750Z hint:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4469090Z hint: 	git branch -m <name>
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4470460Z hint:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4472120Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4475330Z Initialized empty Git repository in /Users/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4480750Z [command]/opt/homebrew/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4564370Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4565130Z ##[group]Disabling automatic garbage collection
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4573530Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4706430Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4709540Z ##[group]Setting up auth
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4712310Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.4817980Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.6332430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.6434550Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.8008550Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.8013150Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.9541260Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.9711800Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.9713270Z ##[group]Fetching the repository
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:44.9718560Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +77632d13c414276140f0390e559600cf4a7b40a3:refs/remotes/origin/main
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6102290Z From https://github.com/AutoByteus/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6107210Z  * [new ref]         77632d13c414276140f0390e559600cf4a7b40a3 -> origin/main
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6117570Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6121020Z ##[group]Determining the checkout info
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6124730Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6131500Z [command]/opt/homebrew/bin/git sparse-checkout disable
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6334550Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6533940Z ##[group]Checking out the ref
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:46.6558180Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.7030600Z Switched to a new branch 'main'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.7075960Z branch 'main' set up to track 'origin/main'.
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.7416280Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.7658660Z [command]/opt/homebrew/bin/git log -1 --format=%H
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.7714860Z 77632d13c414276140f0390e559600cf4a7b40a3
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8671960Z ##[group]Run actions/setup-go@v5
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8673610Z with:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8674510Z   go-version: 1.27.2
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8676950Z   cache: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8680090Z   check-latest: false
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8690460Z   token: ***
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:47.8691290Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.1912070Z Setup go version spec 1.27.2
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.2040160Z Attempting to download 1.27.2...
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.2217970Z (node:5224) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.2313610Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.9411280Z matching 1.27.2...
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:48.9554950Z Acquiring 1.27.2 from https://github.com/actions/go-versions/releases/download/1.27.2-37875086547/go-1.27.2-darwin-arm64.tar.gz
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:50.0257850Z Extracting Go...
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:50.0469070Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/08abca15-760b-4b46-a10e-8d1498b8b555 -f /Users/runner/work/_temp/632ba1d2-24cb-41d7-87aa-bd86fafc41a8
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:56.5922050Z Successfully extracted go to /Users/runner/work/_temp/08abca15-760b-4b46-a10e-8d1498b8b555
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:05:56.6001020Z Adding to the cache ...
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:13.8744410Z Successfully cached go to /Users/runner/hostedtoolcache/go/1.27.2/arm64
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:13.8766830Z Added go to the path
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:13.8768820Z Successfully set up Go version 1.27.2
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:14.1839930Z go version go1.27.2 darwin/arm64
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:14.1843420Z 
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:14.1846630Z ##[group]go env
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4035230Z AR='ar'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4039270Z CC='clang'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4082360Z CGO_CFLAGS='-O2 -g'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4143010Z CGO_CPPFLAGS=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4247220Z CGO_CXXFLAGS='-O2 -g'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4269220Z CGO_ENABLED='1'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4270430Z CGO_FFLAGS='-O2 -g'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4271640Z CGO_LDFLAGS='-O2 -g'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4277540Z CXX='clang++'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4279300Z GCCGO='gccgo'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4280080Z GO111MODULE=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4280590Z GOARCH='arm64'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4281160Z GOARM64='v8.0'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4281770Z GOAUTH='netrc'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4282450Z GOBIN='/Users/runner/go/bin'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4283170Z GOCACHE='/Users/runner/Library/Caches/go-build'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4283680Z GOCACHEPROG=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4284160Z GODEBUG=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4284620Z GOENV='/Users/runner/Library/Application Support/go/env'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4286710Z GOEXE=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4289600Z GOEXPERIMENT=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4291580Z GOFIPS140='off'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4297910Z GOFLAGS=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4303200Z GOGCCFLAGS='-fPIC -arch arm64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -ffile-prefix-map=/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/go-build1863796340=/tmp/go-build -gno-record-gcc-switches -fno-common'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4317190Z GOHOSTARCH='arm64'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4319060Z GOHOSTOS='darwin'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4320410Z GOINSECURE=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4324280Z GOMOD='/Users/runner/work/autobyteus-nfs/autobyteus-nfs/go.mod'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4325050Z GOMODCACHE='/Users/runner/go/pkg/mod'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4325530Z GONOPROXY=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4326060Z GONOSUMDB=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4326490Z GOOS='darwin'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4327110Z GOPACKAGESDRIVER=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4330050Z GOPATH='/Users/runner/go'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4330730Z GOPRIVATE=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4332850Z GOPROXY='https://proxy.golang.org,direct'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4335250Z GOROOT='/Users/runner/hostedtoolcache/go/1.27.2/arm64'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4336680Z GOSUMDB='sum.golang.org'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4337520Z GOTELEMETRY='local'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4339030Z GOTELEMETRYDIR='/Users/runner/Library/Application Support/go/telemetry'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4340980Z GOTMPDIR=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4341440Z GOTOOLCHAIN='auto'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4411810Z GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.27.2/arm64/pkg/tool/darwin_arm64'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4429710Z GOVCS=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4431090Z GOVERSION='go1.27.2'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4432650Z GOWORK=''
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4439250Z PKG_CONFIG='pkg-config'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4440070Z 
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.4449510Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5238100Z ##[group]Run go test -race ./...
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5238550Z [36;1mgo test -race ./...[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5238920Z [36;1mgo vet ./...[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5239330Z [36;1mgo build -o out/autobyteus-nfs ./cmd/autobyteus-nfs[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5239750Z [36;1mout/autobyteus-nfs version[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5240310Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5240780Z [36;1mbash -n scripts/public/nfs/install.sh[0m
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5662010Z shell: /bin/bash -e {0}
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:17.5663650Z ##[endgroup]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:48.2445450Z ?   	github.com/AutoByteus/autobyteus-nfs/cmd/autobyteus-nfs	[no test files]
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:51.2692020Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/admin	2.373s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:51.2756350Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/adminwire	1.102s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:51.2869870Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/backend	1.370s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:51.6325070Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/cli	1.324s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:06:51.9170690Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/config	1.246s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:07:33.8541800Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/dashboard	41.904s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:07:33.8545320Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/docker	1.172s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:07:33.8549040Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/platform	4.686s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:07:33.8556300Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/service	1.146s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:07:33.8582550Z ok  	github.com/AutoByteus/autobyteus-nfs/internal/setup	1.666s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:01.7840780Z development
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.4788790Z test_embedded_static_allowlist_is_self_contained (test_nfs_dashboard_packaging.DashboardPackagingTests.test_embedded_static_allowlist_is_self_contained) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.5975670Z test_js_and_css_change_existing_source_identity (test_nfs_dashboard_packaging.DashboardPackagingTests.test_js_and_css_change_existing_source_identity) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.6829930Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.6861450Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.7323060Z test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:02.9891720Z test_measured_engine_lock_clears_readiness_and_preserves_pins (test_nfs_engine_packaging.EnginePackagingTest.test_measured_engine_lock_clears_readiness_and_preserves_pins) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:03.0043810Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:03.0046520Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.2042650Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.2044270Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.4496250Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.4724620Z test_missing_readiness_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_missing_readiness_cannot_publish) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.4730990Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.6824010Z test_removed_qualified_flag_is_not_an_alias (test_nfs_packaging.NfsPackagingTest.test_removed_qualified_flag_is_not_an_alias) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:04.6938710Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:05.8025020Z test_api_404_only_explicit_read_missing_is_absence (test_nfs_release_publication.PublicationTest.test_api_404_only_explicit_read_missing_is_absence) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:07.1476740Z test_assets_use_id_list_state_and_content_never_embedded_array (test_nfs_release_publication.PublicationTest.test_assets_use_id_list_state_and_content_never_embedded_array) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:08.2540310Z test_draft_create_response_and_ambiguous_effects_never_retry (test_nfs_release_publication.PublicationTest.test_draft_create_response_and_ambiguous_effects_never_retry) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:09.6792020Z test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest.test_exact_oci_copy_and_anonymous_all_children) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:17.4774620Z test_failed_promotion_preserves_draft_then_same_byte_retry (test_nfs_release_publication.PublicationTest.test_failed_promotion_preserves_draft_then_same_byte_retry) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:44.6202630Z test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest.test_fresh_resume_completed_and_stage_drift) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:46.0680240Z test_matching_size_corrupt_remote_asset_refuses_before_upload (test_nfs_release_publication.PublicationTest.test_matching_size_corrupt_remote_asset_refuses_before_upload) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:48.3649020Z test_payload_jobs_duplicate_failure_wrong_attempt_and_signing (test_nfs_release_publication.PublicationTest.test_payload_jobs_duplicate_failure_wrong_attempt_and_signing) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:52.9951730Z test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects (test_nfs_release_publication.PublicationTest.test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:54.5856350Z test_public_download_checks_bytes_before_owned_home_version (test_nfs_release_publication.PublicationTest.test_public_download_checks_bytes_before_owned_home_version) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:55.9195280Z test_published_only_404_does_not_hide_draft (test_nfs_release_publication.PublicationTest.test_published_only_404_does_not_hide_draft) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:08:57.0511260Z test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects (test_nfs_release_publication.PublicationTest.test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:05.9396150Z test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest.test_resume_prepare_inspect_and_lost_payload) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:07.2928070Z test_tag_object_and_annotation_conflicts_refuse (test_nfs_release_publication.PublicationTest.test_tag_object_and_annotation_conflicts_refuse) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:08.5770040Z test_unique_paginated_inventory_known_missing_and_direct_correlation (test_nfs_release_publication.PublicationTest.test_unique_paginated_inventory_known_missing_and_direct_correlation) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:09.3859190Z test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest.test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:10.1078440Z test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest.test_actions_zip_paths_and_duplicate_files) ... /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/zipfile/__init__.py:1730: UserWarning: Duplicate name: 'a'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:10.1089770Z   return self._open_to_write(zinfo, force_zip64=force_zip64)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:10.1704980Z ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:11.1363810Z test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest.test_candidate_mutations_refused) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:12.5008760Z test_complete_candidate_readiness_payload (test_nfs_release_records.ReleaseRecordsTest.test_complete_candidate_readiness_payload) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:13.7039050Z test_executed_workflow_and_release_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest.test_executed_workflow_and_release_metadata_cannot_drift) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:14.7228990Z test_new_executables_invalidate_production_hash_not_readiness (test_nfs_release_records.ReleaseRecordsTest.test_new_executables_invalidate_production_hash_not_readiness) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:15.3694490Z test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest.test_oci_graph_not_just_declared_digest) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:16.7292870Z test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest.test_payload_refuses_missing_checksums_signature_and_member) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:18.6523870Z test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest.test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:20.9853690Z test_readiness_missing_failed_stale_false_claims_and_authority (test_nfs_release_records.ReleaseRecordsTest.test_readiness_missing_failed_stale_false_claims_and_authority) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:21.8902070Z test_readiness_references_are_hashed_regular_stable_and_nonempty (test_nfs_release_records.ReleaseRecordsTest.test_readiness_references_are_hashed_regular_stable_and_nonempty) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:22.6172780Z test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest.test_strict_version_paths_json_and_sizes) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:34.2152550Z test_corrected_full_path_reuses_original_bytes_and_known_id (test_nfs_release_recovery.RecoveryTest.test_corrected_full_path_reuses_original_bytes_and_known_id) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:09:40.4935530Z test_distinct_git_context_full_chain_and_fresh_refusal (test_nfs_release_recovery.RecoveryTest.test_distinct_git_context_full_chain_and_fresh_refusal) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:10:32.2450910Z test_exact_authority_schema_binding_and_evidence (test_nfs_release_recovery.RecoveryTest.test_exact_authority_schema_binding_and_evidence) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:10:36.1102330Z test_excluded_generated_drift_is_rejected_by_admission (test_nfs_release_recovery.RecoveryTest.test_excluded_generated_drift_is_rejected_by_admission) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:10:43.1949590Z test_full_tree_scope_and_original_lock_readiness_immutable (test_nfs_release_recovery.RecoveryTest.test_full_tree_scope_and_original_lock_readiness_immutable) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:10:50.2660560Z test_missing_authorization_blocks_effects_but_inspection_is_read_only (test_nfs_release_recovery.RecoveryTest.test_missing_authorization_blocks_effects_but_inspection_is_read_only) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:06.9040310Z test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest.test_missing_known_draft_wrong_job_and_main_dispatch_refuse) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:14.3034800Z test_scope_allows_only_named_repair_and_later_docs (test_nfs_release_recovery.RecoveryTest.test_scope_allows_only_named_repair_and_later_docs) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:17.9393680Z test_source_projection_bounds_links_missing_tamper_and_cleanup (test_nfs_release_recovery.RecoveryTest.test_source_projection_bounds_links_missing_tamper_and_cleanup) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:35.1460040Z test_transport_cannot_supply_changed_binding_or_payload (test_nfs_release_recovery.RecoveryTest.test_transport_cannot_supply_changed_binding_or_payload) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:36.6674270Z test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest.test_accepted_and_sanitized_receipt) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:36.8307020Z test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest.test_all_six_missing_placeholder_values_fail_before_keychain) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:41.2864690Z test_cleanup_failure_cannot_succeed_or_hide_primary_failure (test_nfs_release_signing.SigningTest.test_cleanup_failure_cannot_succeed_or_hide_primary_failure) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:43.2429830Z test_codesign_capture_bound_and_decode_failure_preserve_exit (test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:55.5602000Z test_codesign_diagnostics_are_allowlisted_not_private_output (test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:11:59.1117890Z test_codesign_parser_failure_does_not_hide_signing_exit (test_nfs_release_signing.SigningTest.test_codesign_parser_failure_does_not_hide_signing_exit) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:00.5180850Z test_codesign_success_does_not_turn_warning_into_failure (test_nfs_release_signing.SigningTest.test_codesign_success_does_not_turn_warning_into_failure) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:09.6199170Z test_command_failures_report_exact_stage_and_exit (test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:10.1299350Z test_failure_receipt_never_clobbers_existing_evidence (test_nfs_release_signing.SigningTest.test_failure_receipt_never_clobbers_existing_evidence) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:10.5702190Z test_import_failure_receipt_and_secret_safety (test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:15.3003220Z test_rejected_or_pending_notary_retains_known_receipt_but_fails (test_nfs_release_signing.SigningTest.test_rejected_or_pending_notary_retains_known_receipt_but_fails) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:16.0069020Z test_search_list_configuration_failure_stops_before_signing (test_nfs_release_signing.SigningTest.test_search_list_configuration_failure_stops_before_signing) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:16.8954710Z test_signal_reports_current_stage_and_cleans_up (test_nfs_release_signing.SigningTest.test_signal_reports_current_stage_and_cleans_up) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:18.3147720Z test_temporary_keychain_preserves_existing_search_entries_and_order (test_nfs_release_signing.SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:23.7649610Z test_validation_failures_are_not_credential_dumps (test_nfs_release_signing.SigningTest.test_validation_failures_are_not_credential_dumps) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:24.8858420Z test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest.test_candidate_and_fresh_metadata_argv) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.1532470Z test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest.test_metadata_failure_stops_step) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.2740690Z test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest.test_nounset_and_oci_pipefail_stop_before_metadata) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.2797710Z test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_all_modes) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.2910850Z test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failure_cancellation_and_unexpected_skip_never_publish) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.2969500Z test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_legitimate_skips_do_not_accept_failures) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.2988290Z test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_and_permissions) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.3037460Z test_signing_upload_retains_only_sanitized_receipts_on_failure (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_signing_upload_retains_only_sanitized_receipts_on_failure) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:25.6591690Z test_declared_owned_boundary_and_default_readiness (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_readiness) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.0920870Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9568500Z test_owned_input_changes_invalidate_readiness (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_readiness) ... ok
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9570420Z 
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9570790Z ----------------------------------------------------------------------
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9592260Z Ran 78 tests in 264.478s
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9592460Z 
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:26.9592520Z OK (skipped=1)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:27.1556430Z Post job cleanup.
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:27.9214790Z (node:27836) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:27.9217160Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:27.9576610Z Post job cleanup.
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1693930Z [command]/opt/homebrew/bin/git version
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1887480Z git version 2.55.0
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1952270Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/3e868511-48aa-481c-91f3-3d1c2ca06b8e/.gitconfig'
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1962770Z Temporarily overriding HOME='/Users/runner/work/_temp/3e868511-48aa-481c-91f3-3d1c2ca06b8e' before making global git config changes
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1963670Z Adding repository directory to the temporary git global config as a safe directory
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.1966380Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/autobyteus-nfs/autobyteus-nfs
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.2068960Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.2200570Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.4080540Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.4140500Z http.https://github.com/.extraheader
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.4156840Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.4288590Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.6267690Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.6350680Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:28.8444220Z Cleaning up orphan processes
+checks (macos-15)	UNKNOWN STEP	2026-10-24T19:12:31.5558110Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-go@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

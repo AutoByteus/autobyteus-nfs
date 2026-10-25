@@ -1,0 +1,58 @@
+[codex/nfs-cli-feedback-release e055164] release(nfs): prepare authorized v0.2.1 feedback patch
+ Committer: normy <normy@macbookpro.speedport.ip>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 46 files changed, 17579 insertions(+), 58 deletions(-)
+ create mode 100644 packaging/releases/v0.2.1/authorization.json
+ create mode 100644 packaging/releases/v0.2.1/native-checks.json
+ create mode 100644 packaging/releases/v0.2.1/postpublication-testing-plan.md
+ create mode 100644 packaging/releases/v0.2.1/readiness.json
+ create mode 100644 packaging/releases/v0.2.1/release-controls.json
+ create mode 100644 packaging/releases/v0.2.1/release-notes.md
+ rename {tickets/in-progress/nfs-cli-feedback-release => packaging/releases/v0.2.1}/release-request-handoff.md (100%)
+ create mode 100644 packaging/releases/v0.2.1/source-review.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/browser-preparation.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-admission-refusal.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-artifacts.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-checks.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-dispatch.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-envelope.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-fetch.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-jobs.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-measured.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-reference.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-run.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-run.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verification-attempt1.txt
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verification-commands.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verified.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-verify.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/candidate-version.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/current-source-hash.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/engine-lock.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/measured-source-hash.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/old-readiness-refusal.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/precommit-check.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/preflight.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/public-feedback-browser.cjs
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/public-feedback-smoke.py
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/readiness-check.log
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/readiness-result.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/releases-before.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/resources.json
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/tags-before.txt
+ create mode 100644 tickets/done/nfs-cli-feedback-release/delivery-evidence/dr-001/verify-public.py
+ create mode 100644 tickets/done/nfs-cli-feedback-release/release-deployment-report.md
+ create mode 100644 tickets/done/nfs-cli-feedback-release/release-notes.md
+ create mode 100644 tickets/done/nfs-cli-feedback-release/release-request-handoff.md

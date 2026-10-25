@@ -1,0 +1,393 @@
+[
+  {
+    "name": "download-LICENSE",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/LICENSE",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/LICENSE"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-SHA256SUMS-nfs",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/SHA256SUMS-nfs",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/SHA256SUMS-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-THIRD_PARTY_NOTICES",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/THIRD_PARTY_NOTICES",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/THIRD_PARTY_NOTICES"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-0-2-1-darwin-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-0.2.1-darwin-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-0.2.1-darwin-amd64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-0-2-1-darwin-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-0.2.1-darwin-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-0.2.1-darwin-arm64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-0-2-1-linux-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-0.2.1-linux-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-0.2.1-linux-amd64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-0-2-1-linux-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-0.2.1-linux-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-0.2.1-linux-arm64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-engine-manifest-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-engine-manifest.json",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-engine-manifest.json"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-ganesha-source-4-3-8ubuntu1+autobyteus1-amd64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-amd64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-ganesha-source-4-3-8ubuntu1+autobyteus1-arm64-tar-gz",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-ganesha-source-4.3-8ubuntu1+autobyteus1-arm64.tar.gz"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-install-sh",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-install.sh",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-install.sh"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-autobyteus-nfs-manifest-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-manifest.json",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-manifest.json"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-engine-COPYRIGHT-amd64",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/engine-COPYRIGHT-amd64",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/engine-COPYRIGHT-amd64"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-engine-COPYRIGHT-arm64",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/engine-COPYRIGHT-arm64",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/engine-COPYRIGHT-arm64"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-engine-build-amd64-txt",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/engine-build-amd64.txt",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/engine-build-amd64.txt"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-engine-build-arm64-txt",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/engine-build-arm64.txt",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/engine-build-arm64.txt"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-release-notes-md",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/release-notes.md",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/release-notes.md"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "download-release-provenance-json",
+    "argv": [
+      "curl",
+      "--fail",
+      "--location",
+      "--proto",
+      "=https",
+      "--tlsv1.2",
+      "--silent",
+      "--show-error",
+      "https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/release-provenance.json",
+      "-o",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/release-provenance.json"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-arm64-strict-signature",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=4",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-arm64-signature-details",
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-arm64-online-notary",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=4",
+      "--check-notarization",
+      "-R=notarized",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-arm64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-amd64-strict-signature",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=4",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-amd64-signature-details",
+    "argv": [
+      "codesign",
+      "-d",
+      "--verbose=4",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "darwin-amd64-online-notary",
+    "argv": [
+      "codesign",
+      "--verify",
+      "--strict",
+      "--verbose=4",
+      "--check-notarization",
+      "-R=notarized",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-amd64/autobyteus-nfs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "public-mac-install-version",
+    "argv": [
+      "/bin/bash",
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/downloads/autobyteus-nfs-install.sh",
+      "version"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "public-mac-installed-version",
+    "argv": [
+      "/Users/normy/nfs-cli-release-vdwkpql_/public/home/.local/lib/autobyteus-nfs/v0.2.1/autobyteus-nfs",
+      "version"
+    ],
+    "exit": 0
+  }
+]

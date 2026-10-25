@@ -1,0 +1,575 @@
+prepare	Set up job	﻿2026-10-25T20:23:16.1140302Z Current runner version: '2.338.0'
+prepare	Set up job	2026-10-25T20:23:16.1167670Z ##[group]Runner Image Provisioner
+prepare	Set up job	2026-10-25T20:23:16.1168779Z Hosted Compute Agent
+prepare	Set up job	2026-10-25T20:23:16.1169411Z Version: 20261021.618
+prepare	Set up job	2026-10-25T20:23:16.1170103Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+prepare	Set up job	2026-10-25T20:23:16.1170871Z Build Date: 2026-10-21T00:45:21Z
+prepare	Set up job	2026-10-25T20:23:16.1171537Z Worker ID: {197ccd31-b79c-454d-9eff-eb09587b30dc}
+prepare	Set up job	2026-10-25T20:23:16.1172309Z Region: westus2
+prepare	Set up job	2026-10-25T20:23:16.1172856Z Cloud: Azure
+prepare	Set up job	2026-10-25T20:23:16.1173418Z ##[endgroup]
+prepare	Set up job	2026-10-25T20:23:16.1175041Z ##[group]Operating System
+prepare	Set up job	2026-10-25T20:23:16.1175733Z Ubuntu
+prepare	Set up job	2026-10-25T20:23:16.1176350Z 24.04.5
+prepare	Set up job	2026-10-25T20:23:16.1176861Z LTS
+prepare	Set up job	2026-10-25T20:23:16.1177881Z ##[endgroup]
+prepare	Set up job	2026-10-25T20:23:16.1178518Z ##[group]Runner Image
+prepare	Set up job	2026-10-25T20:23:16.1179122Z Image: ubuntu-24.04
+prepare	Set up job	2026-10-25T20:23:16.1179738Z Version: 20261012.334.1
+prepare	Set up job	2026-10-25T20:23:16.1180826Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+prepare	Set up job	2026-10-25T20:23:16.1182754Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+prepare	Set up job	2026-10-25T20:23:16.1183722Z ##[endgroup]
+prepare	Set up job	2026-10-25T20:23:16.1185462Z ##[group]GITHUB_TOKEN Permissions
+prepare	Set up job	2026-10-25T20:23:16.1187944Z Actions: read
+prepare	Set up job	2026-10-25T20:23:16.1188697Z Contents: read
+prepare	Set up job	2026-10-25T20:23:16.1189258Z Metadata: read
+prepare	Set up job	2026-10-25T20:23:16.1189882Z Packages: read
+prepare	Set up job	2026-10-25T20:23:16.1190452Z ##[endgroup]
+prepare	Set up job	2026-10-25T20:23:16.1192559Z Secret source: Actions
+prepare	Set up job	2026-10-25T20:23:16.1193632Z Cache mode: write
+prepare	Set up job	2026-10-25T20:23:16.1194345Z Prepare workflow directory
+prepare	Set up job	2026-10-25T20:23:16.1594099Z Prepare all required actions
+prepare	Set up job	2026-10-25T20:23:16.1643324Z Getting action download info
+prepare	Set up job	2026-10-25T20:23:16.5082103Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+prepare	Set up job	2026-10-25T20:23:16.6109441Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+prepare	Set up job	2026-10-25T20:23:16.8192750Z Complete job name: prepare
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-25T20:23:16.9090946Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9092049Z with:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9092525Z   ref: 77632d13c414276140f0390e559600cf4a7b40a3
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9093104Z   fetch-depth: 0
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9093565Z   persist-credentials: false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9094105Z   repository: AutoByteus/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9098015Z   token: ***
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9098461Z   ssh-strict: true
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9098916Z   ssh-user: git
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9099368Z   clean: true
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9099813Z   sparse-checkout-cone-mode: true
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9100337Z   fetch-tags: false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9100776Z   show-progress: true
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9101216Z   lfs: false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9101626Z   submodules: false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9102068Z   set-safe-directory: true
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9102572Z   allow-unsafe-pr-checkout: false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:16.9103363Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0167530Z Syncing repository: AutoByteus/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0170765Z ##[group]Getting Git version info
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0172188Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0174163Z [command]/usr/bin/git version
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0259870Z git version 2.55.0
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0290320Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0299085Z Temporarily overriding HOME='/home/runner/work/_temp/4b91e972-abed-4621-993b-fed7b4912afa' before making global git config changes
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0300759Z Adding repository directory to the temporary git global config as a safe directory
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0301987Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0350987Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0355235Z ##[group]Initializing the repository
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0361265Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0522007Z hint: Using 'master' as the name for the initial branch. This default branch name
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0523594Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0524803Z hint: to use in all of your new repositories, which will suppress this warning,
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0525721Z hint: call:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0526210Z hint:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0526835Z hint: 	git config --global init.defaultBranch <name>
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0527914Z hint:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0528633Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0529811Z hint: 'development'. The just-created branch can be renamed via this command:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0530751Z hint:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0531248Z hint: 	git branch -m <name>
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0531832Z hint:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0532605Z hint: Disable this message with "git config set advice.defaultBranchName false"
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0537808Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0551285Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0623565Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0624932Z ##[group]Disabling automatic garbage collection
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0628596Z [command]/usr/bin/git config --local gc.auto 0
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0667875Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0669239Z ##[group]Setting up auth
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0675729Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.0719571Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1109650Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1151548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1383199Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1425360Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1659451Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1704421Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1705870Z ##[group]Fetching the repository
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:17.1716472Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7191424Z From https://github.com/AutoByteus/autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7193652Z  * [new branch]      codex/extract-autobyteus-nfs -> origin/codex/extract-autobyteus-nfs
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7195818Z  * [new branch]      codex/nfs-cli-approval-feedback -> origin/codex/nfs-cli-approval-feedback
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7198310Z  * [new branch]      codex/nfs-cli-feedback-release -> origin/codex/nfs-cli-feedback-release
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7199949Z  * [new branch]      codex/nfs-dashboard-release -> origin/codex/nfs-dashboard-release
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7201073Z  * [new branch]      codex/nfs-first-release -> origin/codex/nfs-first-release
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7202156Z  * [new branch]      codex/nfs-setup-dashboard -> origin/codex/nfs-setup-dashboard
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7203139Z  * [new branch]      main                    -> origin/main
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7203949Z  * [new tag]         v0.1.0                  -> v0.1.0
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7204669Z  * [new tag]         v0.2.0                  -> v0.2.0
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7205404Z  * [new tag]         v0.2.1                  -> v0.2.1
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7209470Z [command]/usr/bin/git rev-parse --verify --quiet 77632d13c414276140f0390e559600cf4a7b40a3^{object}
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7253092Z 77632d13c414276140f0390e559600cf4a7b40a3
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7273393Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7274869Z ##[group]Determining the checkout info
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7276571Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7277829Z [command]/usr/bin/git sparse-checkout disable
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7341834Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7382399Z ##[group]Checking out the ref
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:18.7386872Z [command]/usr/bin/git checkout --progress --force 77632d13c414276140f0390e559600cf4a7b40a3
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0414985Z Note: switching to '77632d13c414276140f0390e559600cf4a7b40a3'.
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0416312Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0417402Z You are in 'detached HEAD' state. You can look around, make experimental
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0419281Z changes and commit them, and you can discard any commits you make in this
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0421159Z state without impacting any branches by switching back to a branch.
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0422083Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0422673Z If you want to create a new branch to retain commits you create, you may
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0424183Z do so (now or later) by using -c with the switch command. Example:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0425111Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0425525Z   git switch -c <new-branch-name>
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0426172Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0426547Z Or undo this operation with:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0427297Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0427683Z   git switch -
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0428153Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0428969Z Turn off this advice by setting config variable advice.detachedHead to false
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0430162Z 
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0431415Z HEAD is now at 77632d1 Merge branch 'codex/nfs-cli-feedback-release' into codex/finalize-nfs-cli-feedback-release
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0441095Z ##[endgroup]
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0487590Z [command]/usr/bin/git log -1 --format=%H
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0517276Z 77632d13c414276140f0390e559600cf4a7b40a3
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0529506Z ##[group]Removing auth
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0533321Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0571158Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0803192Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0833136Z http.https://github.com/.extraheader
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0844198Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.0882819Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.1113063Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.1149134Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prepare	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:23:19.1377514Z ##[endgroup]
+prepare	Release boundary checks	﻿2026-10-25T20:23:19.1640240Z ##[group]Run python3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v
+prepare	Release boundary checks	2026-10-25T20:23:19.1642946Z [36;1mpython3 -m unittest discover -s scripts/tests -p 'test_nfs_*.py' -v[0m
+prepare	Release boundary checks	2026-10-25T20:23:19.1926695Z shell: /usr/bin/bash -e {0}
+prepare	Release boundary checks	2026-10-25T20:23:19.1928361Z ##[endgroup]
+prepare	Release boundary checks	2026-10-25T20:23:19.3525594Z test_embedded_static_allowlist_is_self_contained (test_nfs_dashboard_packaging.DashboardPackagingTests.test_embedded_static_allowlist_is_self_contained) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.4166127Z test_js_and_css_change_existing_source_identity (test_nfs_dashboard_packaging.DashboardPackagingTests.test_js_and_css_change_existing_source_identity) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.4284689Z test_artifact_mutations_fail_before_embed (test_nfs_engine_packaging.EnginePackagingTest.test_artifact_mutations_fail_before_embed) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.4287925Z test_backport_is_only_two_fields_with_correct_provenance (test_nfs_engine_packaging.EnginePackagingTest.test_backport_is_only_two_fields_with_correct_provenance) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.4695750Z test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets (test_nfs_engine_packaging.EnginePackagingTest.test_engine_bytes_part_of_source_hash_and_candidate_has_no_release_targets) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.6598636Z test_measured_engine_lock_clears_readiness_and_preserves_pins (test_nfs_engine_packaging.EnginePackagingTest.test_measured_engine_lock_clears_readiness_and_preserves_pins) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.6717550Z test_merge_embed_same_bytes_and_reject_mixed_inputs (test_nfs_engine_packaging.EnginePackagingTest.test_merge_embed_same_bytes_and_reject_mixed_inputs) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:19.6719623Z test_pipeline_pair_reuse_and_size_gate (test_nfs_engine_packaging.EnginePackagingTest.test_pipeline_pair_reuse_and_size_gate) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.0820474Z test_corrupt_or_unsafe_archive_never_executes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_corrupt_or_unsafe_archive_never_executes) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.0822937Z test_directory_modes_with_go_fixture (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_directory_modes_with_go_fixture) ... skipped 'invoked by Go platform bootstrap regression'
+prepare	Release boundary checks	2026-10-25T20:23:20.1568743Z test_valid_fixture_installs_and_immediately_invokes (test_nfs_installer_fixture.NfsInstallerFixtureTest.test_valid_fixture_installs_and_immediately_invokes) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.1592099Z test_missing_readiness_cannot_publish (test_nfs_packaging.NfsPackagingTest.test_missing_readiness_cannot_publish) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.1593433Z test_nfs_workflow_build_only_never_pushes_or_publishes (test_nfs_packaging.NfsPackagingTest.test_nfs_workflow_build_only_never_pushes_or_publishes) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.2323783Z test_removed_qualified_flag_is_not_an_alias (test_nfs_packaging.NfsPackagingTest.test_removed_qualified_flag_is_not_an_alias) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.2339590Z test_unpublished_installer_fails_before_download (test_nfs_packaging.NfsPackagingTest.test_unpublished_installer_fails_before_download) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:20.6176976Z test_api_404_only_explicit_read_missing_is_absence (test_nfs_release_publication.PublicationTest.test_api_404_only_explicit_read_missing_is_absence) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:21.0111971Z test_assets_use_id_list_state_and_content_never_embedded_array (test_nfs_release_publication.PublicationTest.test_assets_use_id_list_state_and_content_never_embedded_array) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:21.3873761Z test_draft_create_response_and_ambiguous_effects_never_retry (test_nfs_release_publication.PublicationTest.test_draft_create_response_and_ambiguous_effects_never_retry) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:21.8479529Z test_exact_oci_copy_and_anonymous_all_children (test_nfs_release_publication.PublicationTest.test_exact_oci_copy_and_anonymous_all_children) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:23.2638605Z test_failed_promotion_preserves_draft_then_same_byte_retry (test_nfs_release_publication.PublicationTest.test_failed_promotion_preserves_draft_then_same_byte_retry) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:27.7503608Z test_fresh_resume_completed_and_stage_drift (test_nfs_release_publication.PublicationTest.test_fresh_resume_completed_and_stage_drift) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:28.1329071Z test_matching_size_corrupt_remote_asset_refuses_before_upload (test_nfs_release_publication.PublicationTest.test_matching_size_corrupt_remote_asset_refuses_before_upload) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:28.5071269Z test_payload_jobs_duplicate_failure_wrong_attempt_and_signing (test_nfs_release_publication.PublicationTest.test_payload_jobs_duplicate_failure_wrong_attempt_and_signing) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:29.3833053Z test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects (test_nfs_release_publication.PublicationTest.test_post_create_direct_404_and_upload_ambiguity_stop_without_more_effects) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:29.7631126Z test_public_download_checks_bytes_before_owned_home_version (test_nfs_release_publication.PublicationTest.test_public_download_checks_bytes_before_owned_home_version) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:30.1343359Z test_published_only_404_does_not_hide_draft (test_nfs_release_publication.PublicationTest.test_published_only_404_does_not_hide_draft) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:30.5108227Z test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects (test_nfs_release_publication.PublicationTest.test_raw_upload_validates_exact_origin_id_encodes_name_and_never_redirects) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:31.9106909Z test_resume_prepare_inspect_and_lost_payload (test_nfs_release_publication.PublicationTest.test_resume_prepare_inspect_and_lost_payload) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:32.2747921Z test_tag_object_and_annotation_conflicts_refuse (test_nfs_release_publication.PublicationTest.test_tag_object_and_annotation_conflicts_refuse) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:32.6509417Z test_unique_paginated_inventory_known_missing_and_direct_correlation (test_nfs_release_publication.PublicationTest.test_unique_paginated_inventory_known_missing_and_direct_correlation) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:32.8239103Z test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry (test_nfs_release_records.ReleaseRecordsTest.test_actions_envelope_checks_real_attempt_source_conclusion_and_expiry) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:32.9984555Z test_actions_zip_paths_and_duplicate_files (test_nfs_release_records.ReleaseRecordsTest.test_actions_zip_paths_and_duplicate_files) ... /usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'a'
+prepare	Release boundary checks	2026-10-25T20:23:32.9986532Z   return self._open_to_write(zinfo, force_zip64=force_zip64)
+prepare	Release boundary checks	2026-10-25T20:23:33.0171738Z ok
+prepare	Release boundary checks	2026-10-25T20:23:33.2692984Z test_candidate_mutations_refused (test_nfs_release_records.ReleaseRecordsTest.test_candidate_mutations_refused) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:33.8010809Z test_complete_candidate_readiness_payload (test_nfs_release_records.ReleaseRecordsTest.test_complete_candidate_readiness_payload) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:34.2810234Z test_executed_workflow_and_release_metadata_cannot_drift (test_nfs_release_records.ReleaseRecordsTest.test_executed_workflow_and_release_metadata_cannot_drift) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:34.6708937Z test_new_executables_invalidate_production_hash_not_readiness (test_nfs_release_records.ReleaseRecordsTest.test_new_executables_invalidate_production_hash_not_readiness) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:34.8467603Z test_oci_graph_not_just_declared_digest (test_nfs_release_records.ReleaseRecordsTest.test_oci_graph_not_just_declared_digest) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:35.2706414Z test_payload_refuses_missing_checksums_signature_and_member (test_nfs_release_records.ReleaseRecordsTest.test_payload_refuses_missing_checksums_signature_and_member) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:35.9319021Z test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away (test_nfs_release_records.ReleaseRecordsTest.test_payload_semantic_disclosure_and_provenance_cannot_be_rehashed_away) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:36.9099172Z test_readiness_missing_failed_stale_false_claims_and_authority (test_nfs_release_records.ReleaseRecordsTest.test_readiness_missing_failed_stale_false_claims_and_authority) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:37.1522420Z test_readiness_references_are_hashed_regular_stable_and_nonempty (test_nfs_release_records.ReleaseRecordsTest.test_readiness_references_are_hashed_regular_stable_and_nonempty) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:37.3272787Z test_strict_version_paths_json_and_sizes (test_nfs_release_records.ReleaseRecordsTest.test_strict_version_paths_json_and_sizes) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:39.2741693Z test_corrected_full_path_reuses_original_bytes_and_known_id (test_nfs_release_recovery.RecoveryTest.test_corrected_full_path_reuses_original_bytes_and_known_id) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:40.3663944Z test_distinct_git_context_full_chain_and_fresh_refusal (test_nfs_release_recovery.RecoveryTest.test_distinct_git_context_full_chain_and_fresh_refusal) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:46.6330405Z test_exact_authority_schema_binding_and_evidence (test_nfs_release_recovery.RecoveryTest.test_exact_authority_schema_binding_and_evidence) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:47.3387468Z test_excluded_generated_drift_is_rejected_by_admission (test_nfs_release_recovery.RecoveryTest.test_excluded_generated_drift_is_rejected_by_admission) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:48.4590521Z test_full_tree_scope_and_original_lock_readiness_immutable (test_nfs_release_recovery.RecoveryTest.test_full_tree_scope_and_original_lock_readiness_immutable) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:49.5537029Z test_missing_authorization_blocks_effects_but_inspection_is_read_only (test_nfs_release_recovery.RecoveryTest.test_missing_authorization_blocks_effects_but_inspection_is_read_only) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:52.2455592Z test_missing_known_draft_wrong_job_and_main_dispatch_refuse (test_nfs_release_recovery.RecoveryTest.test_missing_known_draft_wrong_job_and_main_dispatch_refuse) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:53.2098945Z test_scope_allows_only_named_repair_and_later_docs (test_nfs_release_recovery.RecoveryTest.test_scope_allows_only_named_repair_and_later_docs) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:53.9356586Z test_source_projection_bounds_links_missing_tamper_and_cleanup (test_nfs_release_recovery.RecoveryTest.test_source_projection_bounds_links_missing_tamper_and_cleanup) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:56.1754943Z test_transport_cannot_supply_changed_binding_or_payload (test_nfs_release_recovery.RecoveryTest.test_transport_cannot_supply_changed_binding_or_payload) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:56.7489863Z test_accepted_and_sanitized_receipt (test_nfs_release_signing.SigningTest.test_accepted_and_sanitized_receipt) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:56.7940843Z test_all_six_missing_placeholder_values_fail_before_keychain (test_nfs_release_signing.SigningTest.test_all_six_missing_placeholder_values_fail_before_keychain) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:58.6079141Z test_cleanup_failure_cannot_succeed_or_hide_primary_failure (test_nfs_release_signing.SigningTest.test_cleanup_failure_cannot_succeed_or_hide_primary_failure) ... ok
+prepare	Release boundary checks	2026-10-25T20:23:59.4511872Z test_codesign_capture_bound_and_decode_failure_preserve_exit (test_nfs_release_signing.SigningTest.test_codesign_capture_bound_and_decode_failure_preserve_exit) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:05.3602399Z test_codesign_diagnostics_are_allowlisted_not_private_output (test_nfs_release_signing.SigningTest.test_codesign_diagnostics_are_allowlisted_not_private_output) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:05.8014279Z test_codesign_parser_failure_does_not_hide_signing_exit (test_nfs_release_signing.SigningTest.test_codesign_parser_failure_does_not_hide_signing_exit) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:06.3828676Z test_codesign_success_does_not_turn_warning_into_failure (test_nfs_release_signing.SigningTest.test_codesign_success_does_not_turn_warning_into_failure) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:10.0835357Z test_command_failures_report_exact_stage_and_exit (test_nfs_release_signing.SigningTest.test_command_failures_report_exact_stage_and_exit) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:10.3455980Z test_failure_receipt_never_clobbers_existing_evidence (test_nfs_release_signing.SigningTest.test_failure_receipt_never_clobbers_existing_evidence) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:10.6166413Z test_import_failure_receipt_and_secret_safety (test_nfs_release_signing.SigningTest.test_import_failure_receipt_and_secret_safety) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:13.1503835Z test_rejected_or_pending_notary_retains_known_receipt_but_fails (test_nfs_release_signing.SigningTest.test_rejected_or_pending_notary_retains_known_receipt_but_fails) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:13.4814992Z test_search_list_configuration_failure_stops_before_signing (test_nfs_release_signing.SigningTest.test_search_list_configuration_failure_stops_before_signing) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:13.8890217Z test_signal_reports_current_stage_and_cleans_up (test_nfs_release_signing.SigningTest.test_signal_reports_current_stage_and_cleans_up) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:14.4871067Z test_temporary_keychain_preserves_existing_search_entries_and_order (test_nfs_release_signing.SigningTest.test_temporary_keychain_preserves_existing_search_entries_and_order) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.0031361Z test_validation_failures_are_not_credential_dumps (test_nfs_release_signing.SigningTest.test_validation_failures_are_not_credential_dumps) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.4678571Z test_candidate_and_fresh_metadata_argv (test_nfs_release_workflow.NativeMetadataShellTest.test_candidate_and_fresh_metadata_argv) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.5841615Z test_metadata_failure_stops_step (test_nfs_release_workflow.NativeMetadataShellTest.test_metadata_failure_stops_step) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6478610Z test_nounset_and_oci_pipefail_stop_before_metadata (test_nfs_release_workflow.NativeMetadataShellTest.test_nounset_and_oci_pipefail_stop_before_metadata) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6506344Z test_all_modes (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_all_modes) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6613805Z test_failure_cancellation_and_unexpected_skip_never_publish (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_failure_cancellation_and_unexpected_skip_never_publish) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6650929Z test_legitimate_skips_do_not_accept_failures (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_legitimate_skips_do_not_accept_failures) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6662495Z test_manual_only_and_permissions (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_manual_only_and_permissions) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.6683349Z test_signing_upload_retains_only_sanitized_receipts_on_failure (test_nfs_release_workflow.ReleaseWorkflowGatesTest.test_signing_upload_retains_only_sanitized_receipts_on_failure) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.7906886Z test_declared_owned_boundary_and_default_readiness (test_nfs_source_identity.SourceIdentityTest.test_declared_owned_boundary_and_default_readiness) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:17.9483328Z test_every_declared_input_is_required (test_nfs_source_identity.SourceIdentityTest.test_every_declared_input_is_required) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:18.3411880Z test_owned_input_changes_invalidate_readiness (test_nfs_source_identity.SourceIdentityTest.test_owned_input_changes_invalidate_readiness) ... ok
+prepare	Release boundary checks	2026-10-25T20:24:18.3413156Z 
+prepare	Release boundary checks	2026-10-25T20:24:18.3413792Z ----------------------------------------------------------------------
+prepare	Release boundary checks	2026-10-25T20:24:18.3414767Z Ran 78 tests in 58.989s
+prepare	Release boundary checks	2026-10-25T20:24:18.3415119Z 
+prepare	Release boundary checks	2026-10-25T20:24:18.3415282Z OK (skipped=1)
+prepare	Run set -euo pipefail	﻿2026-10-25T20:24:18.3689742Z ##[group]Run set -euo pipefail
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3690071Z [36;1mset -euo pipefail[0m
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3690307Z [36;1margs=()[0m
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3690631Z [36;1mif [[ "$WANT_PUBLISH" == true ]]; then args+=(--run-id "$CANDIDATE_RUN"); fi[0m
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3691365Z [36;1mpython3 packaging/release.py --operation prepare --tag "$TAG" --source-commit "$SOURCE" --directory work "${args[@]}"[0m
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3756879Z shell: /usr/bin/bash -e {0}
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3757362Z env:
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3757560Z   TAG: v0.2.1
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3757790Z   SOURCE: 77632d13c414276140f0390e559600cf4a7b40a3
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3758133Z   CANDIDATE_RUN: 40122429749
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3758366Z   WANT_PUBLISH: true
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3760761Z   GH_TOKEN: ***
+prepare	Run set -euo pipefail	2026-10-25T20:24:18.3760972Z ##[endgroup]
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3452672Z {
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3453081Z   "tag": "v0.2.1",
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3453504Z   "executor": "77632d13c414276140f0390e559600cf4a7b40a3",
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3454104Z   "payload_source": "77632d13c414276140f0390e559600cf4a7b40a3",
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3454707Z   "mode": "resume",
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3455333Z   "base": "ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55"
+prepare	Run set -euo pipefail	2026-10-25T20:24:42.3456045Z }
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	﻿2026-10-25T20:24:42.3661330Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3661762Z with:
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3661960Z   name: nfs-preflight
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3662175Z   path: work/
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3662367Z   retention-days: 90
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3662586Z   if-no-files-found: error
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3662989Z   compression-level: 6
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3663200Z   overwrite: false
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3663417Z   include-hidden-files: false
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.3663656Z ##[endgroup]
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.5233298Z (node:15830) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.5234239Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.5379312Z With the provided path, there will be 40 files uploaded
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.5407809Z Artifact name is valid!
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.5408277Z Root directory input is valid!
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:42.9134557Z Beginning upload of artifact content to blob storage
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:43.1990323Z (node:15830) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.0921471Z Uploaded bytes 8388608
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.3912165Z Uploaded bytes 16777216
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.5407169Z Uploaded bytes 25165824
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.5927499Z Uploaded bytes 33554432
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.8172906Z Uploaded bytes 41943040
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:44.9424650Z Uploaded bytes 50331648
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:45.1098320Z Uploaded bytes 58720256
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:45.3935572Z Uploaded bytes 67108864
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:45.5838646Z Uploaded bytes 75497472
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:45.8599247Z Uploaded bytes 83886080
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:46.1124575Z Uploaded bytes 92274688
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:46.3562463Z Uploaded bytes 100663296
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:46.5803681Z Uploaded bytes 109051904
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:46.8543979Z Uploaded bytes 117440512
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:47.1157399Z Uploaded bytes 125829120
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:47.4259120Z Uploaded bytes 134217728
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:47.5960526Z Uploaded bytes 142606336
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:47.8351581Z Uploaded bytes 150994944
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.1174544Z Uploaded bytes 159383552
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.2250863Z Uploaded bytes 160361649
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.3003478Z Finished uploading artifact content to blob storage!
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.3008397Z SHA256 digest of uploaded artifact zip is 55a4cbbf8735d3c8b5afa8144545394b3e5d71d45316486beb348bd82ae99045
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.3010461Z Finalizing artifact upload
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.8955326Z Artifact nfs-preflight.zip successfully finalized. Artifact ID 12613075812
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.8956373Z Artifact nfs-preflight has been successfully uploaded! Final size is 160361649 bytes. Artifact ID is 12613075812
+prepare	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:24:48.8966418Z Artifact download URL: https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40230515652/artifacts/12613075812
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-25T20:24:48.9214742Z Post job cleanup.
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0074722Z [command]/usr/bin/git version
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0119801Z git version 2.55.0
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0163634Z Temporarily overriding HOME='/home/runner/work/_temp/21c722c2-4bd6-4c27-a744-1b46068df356' before making global git config changes
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0164543Z Adding repository directory to the temporary git global config as a safe directory
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0169168Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0210729Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0246959Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0494911Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0543539Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0801863Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prepare	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:49.0837545Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prepare	Complete job	﻿2026-10-25T20:24:49.1252822Z Evaluate and set job outputs
+prepare	Complete job	2026-10-25T20:24:49.1260169Z Set output 'tag'
+prepare	Complete job	2026-10-25T20:24:49.1261834Z Set output 'executor'
+prepare	Complete job	2026-10-25T20:24:49.1262476Z Set output 'payload_source'
+prepare	Complete job	2026-10-25T20:24:49.1262815Z Set output 'mode'
+prepare	Complete job	2026-10-25T20:24:49.1263275Z Set output 'base'
+prepare	Complete job	2026-10-25T20:24:49.1263911Z Cleaning up orphan processes
+prepare	Complete job	2026-10-25T20:24:49.1658024Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+publish	Set up job	﻿2026-10-25T20:24:54.3631984Z Current runner version: '2.338.0'
+publish	Set up job	2026-10-25T20:24:54.3657632Z ##[group]Runner Image Provisioner
+publish	Set up job	2026-10-25T20:24:54.3658558Z Hosted Compute Agent
+publish	Set up job	2026-10-25T20:24:54.3659207Z Version: 20261021.618
+publish	Set up job	2026-10-25T20:24:54.3659869Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+publish	Set up job	2026-10-25T20:24:54.3660692Z Build Date: 2026-10-21T00:45:21Z
+publish	Set up job	2026-10-25T20:24:54.3661439Z Worker ID: {78b6adf4-241d-4c78-b24b-5d0a48f2fb4b}
+publish	Set up job	2026-10-25T20:24:54.3662204Z Region: eastus2
+publish	Set up job	2026-10-25T20:24:54.3662767Z Cloud: Azure
+publish	Set up job	2026-10-25T20:24:54.3663324Z ##[endgroup]
+publish	Set up job	2026-10-25T20:24:54.3665477Z ##[group]Operating System
+publish	Set up job	2026-10-25T20:24:54.3666319Z Ubuntu
+publish	Set up job	2026-10-25T20:24:54.3666835Z 24.04.5
+publish	Set up job	2026-10-25T20:24:54.3667446Z LTS
+publish	Set up job	2026-10-25T20:24:54.3668029Z ##[endgroup]
+publish	Set up job	2026-10-25T20:24:54.3668624Z ##[group]Runner Image
+publish	Set up job	2026-10-25T20:24:54.3669221Z Image: ubuntu-24.04
+publish	Set up job	2026-10-25T20:24:54.3669847Z Version: 20261012.334.1
+publish	Set up job	2026-10-25T20:24:54.3671425Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+publish	Set up job	2026-10-25T20:24:54.3673294Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+publish	Set up job	2026-10-25T20:24:54.3674495Z ##[endgroup]
+publish	Set up job	2026-10-25T20:24:54.3675815Z ##[group]GITHUB_TOKEN Permissions
+publish	Set up job	2026-10-25T20:24:54.3678126Z Actions: read
+publish	Set up job	2026-10-25T20:24:54.3678743Z Contents: write
+publish	Set up job	2026-10-25T20:24:54.3679415Z Metadata: read
+publish	Set up job	2026-10-25T20:24:54.3679980Z Packages: write
+publish	Set up job	2026-10-25T20:24:54.3680569Z ##[endgroup]
+publish	Set up job	2026-10-25T20:24:54.3682622Z Secret source: Actions
+publish	Set up job	2026-10-25T20:24:54.3683906Z Cache mode: write
+publish	Set up job	2026-10-25T20:24:54.3684911Z Prepare workflow directory
+publish	Set up job	2026-10-25T20:24:54.4017755Z Prepare all required actions
+publish	Set up job	2026-10-25T20:24:54.4065832Z Getting action download info
+publish	Set up job	2026-10-25T20:24:54.6407173Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+publish	Set up job	2026-10-25T20:24:54.7394567Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+publish	Set up job	2026-10-25T20:24:54.9417644Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+publish	Set up job	2026-10-25T20:24:55.1668887Z Complete job name: publish
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-25T20:24:55.2604841Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2606038Z with:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2606564Z   ref: 77632d13c414276140f0390e559600cf4a7b40a3
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2607209Z   fetch-depth: 0
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2607698Z   persist-credentials: false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2608275Z   repository: AutoByteus/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2612386Z   token: ***
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2612855Z   ssh-strict: true
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2613329Z   ssh-user: git
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2613970Z   clean: true
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2614462Z   sparse-checkout-cone-mode: true
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2615023Z   fetch-tags: false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2615499Z   show-progress: true
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2616059Z   lfs: false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2616819Z   submodules: false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2617345Z   set-safe-directory: true
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2617901Z   allow-unsafe-pr-checkout: false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.2618802Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3646250Z Syncing repository: AutoByteus/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3649496Z ##[group]Getting Git version info
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3651068Z Working directory is '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3685715Z [command]/usr/bin/git version
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3859068Z git version 2.55.0
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3886434Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3905273Z Temporarily overriding HOME='/home/runner/work/_temp/8c0bfa01-5e94-4241-a591-823795e0936d' before making global git config changes
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3908918Z Adding repository directory to the temporary git global config as a safe directory
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.3912520Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4000187Z Deleting the contents of '/home/runner/work/autobyteus-nfs/autobyteus-nfs'
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4003162Z ##[group]Initializing the repository
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4005550Z [command]/usr/bin/git init /home/runner/work/autobyteus-nfs/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4179522Z hint: Using 'master' as the name for the initial branch. This default branch name
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4187536Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4189996Z hint: to use in all of your new repositories, which will suppress this warning,
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4192043Z hint: call:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4193321Z hint:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4195145Z hint: 	git config --global init.defaultBranch <name>
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4196842Z hint:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4198523Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4200900Z hint: 'development'. The just-created branch can be renamed via this command:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4203357Z hint:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4205043Z hint: 	git branch -m <name>
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4206466Z hint:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4208337Z hint: Disable this message with "git config set advice.defaultBranchName false"
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4211452Z Initialized empty Git repository in /home/runner/work/autobyteus-nfs/autobyteus-nfs/.git/
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4216987Z [command]/usr/bin/git remote add origin https://github.com/AutoByteus/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4296548Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4298646Z ##[group]Disabling automatic garbage collection
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4300294Z [command]/usr/bin/git config --local gc.auto 0
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4327156Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4329666Z ##[group]Setting up auth
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4331529Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4366858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4766139Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.4805415Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5049240Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5088855Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5314667Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5357530Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5369522Z ##[group]Fetching the repository
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:55.5372121Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9210397Z From https://github.com/AutoByteus/autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9212635Z  * [new branch]      codex/extract-autobyteus-nfs -> origin/codex/extract-autobyteus-nfs
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9214767Z  * [new branch]      codex/nfs-cli-approval-feedback -> origin/codex/nfs-cli-approval-feedback
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9216686Z  * [new branch]      codex/nfs-cli-feedback-release -> origin/codex/nfs-cli-feedback-release
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9218442Z  * [new branch]      codex/nfs-dashboard-release -> origin/codex/nfs-dashboard-release
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9220302Z  * [new branch]      codex/nfs-first-release -> origin/codex/nfs-first-release
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9222310Z  * [new branch]      codex/nfs-setup-dashboard -> origin/codex/nfs-setup-dashboard
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9224687Z  * [new branch]      main                    -> origin/main
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9226158Z  * [new tag]         v0.1.0                  -> v0.1.0
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9227686Z  * [new tag]         v0.2.0                  -> v0.2.0
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9228868Z  * [new tag]         v0.2.1                  -> v0.2.1
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9232394Z [command]/usr/bin/git rev-parse --verify --quiet 77632d13c414276140f0390e559600cf4a7b40a3^{object}
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9254461Z 77632d13c414276140f0390e559600cf4a7b40a3
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9262572Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9265308Z ##[group]Determining the checkout info
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9268357Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9270192Z [command]/usr/bin/git sparse-checkout disable
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9327772Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9364377Z ##[group]Checking out the ref
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:56.9367158Z [command]/usr/bin/git checkout --progress --force 77632d13c414276140f0390e559600cf4a7b40a3
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2412261Z Note: switching to '77632d13c414276140f0390e559600cf4a7b40a3'.
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2413416Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2414466Z You are in 'detached HEAD' state. You can look around, make experimental
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2415769Z changes and commit them, and you can discard any commits you make in this
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2417021Z state without impacting any branches by switching back to a branch.
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2417709Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2418248Z If you want to create a new branch to retain commits you create, you may
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2419859Z do so (now or later) by using -c with the switch command. Example:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2420531Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2420979Z   git switch -c <new-branch-name>
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2421509Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2421911Z Or undo this operation with:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2422458Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2422864Z   git switch -
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2423308Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2424068Z Turn off this advice by setting config variable advice.detachedHead to false
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2424715Z 
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2425376Z HEAD is now at 77632d1 Merge branch 'codex/nfs-cli-feedback-release' into codex/finalize-nfs-cli-feedback-release
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2452474Z ##[endgroup]
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2507610Z [command]/usr/bin/git log -1 --format=%H
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2538258Z 77632d13c414276140f0390e559600cf4a7b40a3
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2550587Z ##[group]Removing auth
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2556487Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2597364Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2845733Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2876302Z http.https://github.com/.extraheader
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2886326Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.2922894Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.3153416Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.3177676Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:24:57.3400246Z ##[endgroup]
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	﻿2026-10-25T20:24:57.3693452Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3694254Z with:
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3694473Z   name: nfs-preflight
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3694703Z   path: work
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3694911Z   merge-multiple: false
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3695169Z   repository: AutoByteus/autobyteus-nfs
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3695452Z   run-id: 40230515652
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.3695661Z ##[endgroup]
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.5143172Z Downloading single artifact
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.5288124Z (node:2368) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.5289415Z (Use `node --trace-deprecation ...` to show where the warning was created)
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.6214290Z Preparing to download the following artifacts:
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.6215567Z - nfs-preflight (ID: 12613075812, Size: 160361649, Expected Digest: sha256:55a4cbbf8735d3c8b5afa8144545394b3e5d71d45316486beb348bd82ae99045)
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.7555731Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/b6c51787-e0b9-4e64-ae8a-cb76e5eda9d2/workflow-job-run-acd9180a-a6f2-5b4b-894a-be34091ef995/artifacts/1356632f2bda9b3b2acf159f4f7d4c37f28eccc621e9795cdc63c3e7a42a4d4b.zip
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.7557673Z Starting download of artifact to: /home/runner/work/autobyteus-nfs/autobyteus-nfs/work
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:57.8539334Z (node:2368) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:59.7992816Z SHA256 digest of downloaded artifact is 55a4cbbf8735d3c8b5afa8144545394b3e5d71d45316486beb348bd82ae99045
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:59.7993968Z Artifact download completed successfully.
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:59.7994363Z Total of 1 artifact(s) downloaded
+publish	Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093	2026-10-25T20:24:59.8002127Z Download artifact has finished successfully
+publish	Install digest-preserving registry transport	﻿2026-10-25T20:24:59.8187575Z ##[group]Run sudo apt-get update
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.8187934Z [36;1msudo apt-get update[0m
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.8188328Z [36;1msudo apt-get install -y --no-install-recommends skopeo[0m
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.8188701Z [36;1mskopeo --version[0m
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.8465322Z shell: /usr/bin/bash -e {0}
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.8465641Z ##[endgroup]
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9416828Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9697390Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9706927Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9733846Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9735132Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+publish	Install digest-preserving registry transport	2026-10-25T20:24:59.9749653Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.0902595Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1400 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1064047Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1087707Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1706 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1187153Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1216921Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1334583Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1617383Z Get:13 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [661 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1754825Z Get:14 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.1780017Z Get:15 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [598 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.2686068Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1146 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.2741813Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.2757956Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.2813241Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.3233024Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:00.3314601Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+publish	Install digest-preserving registry transport	2026-10-25T20:25:03.4652049Z Fetched 12.6 MB in 1s (10.1 MB/s)
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.4029714Z Reading package lists...
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.4344969Z Reading package lists...
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.6193081Z Building dependency tree...
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.6200797Z Reading state information...
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.7724210Z skopeo is already the newest version (1.13.3+ds1-2ubuntu0.24.04.3).
+publish	Install digest-preserving registry transport	2026-10-25T20:25:04.7725065Z 0 upgraded, 0 newly installed, 0 to remove and 100 not upgraded.
+publish	Install digest-preserving registry transport	2026-10-25T20:25:06.2794171Z skopeo version 1.13.3
+publish	Bind retained payload and reconcile publication	﻿2026-10-25T20:25:06.2874331Z ##[group]Run set -euo pipefail
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2874706Z [36;1mset -euo pipefail[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2874964Z [36;1mumask 077[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2875224Z [36;1mtrap 'rm -f "$REGISTRY_AUTH_FILE"' EXIT[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2875835Z [36;1mprintf '%s' "$GH_TOKEN" | skopeo login --authfile "$REGISTRY_AUTH_FILE" --username "$GITHUB_ACTOR" --password-stdin ghcr.io[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2876429Z [36;1mif [[ "$MODE" == fresh ]]; then[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2877312Z [36;1m  python3 packaging/release.py --operation bind --directory work/payload --candidate work/candidate --artifact-id "$ARTIFACT" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" --output work/binding.json[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2878163Z [36;1mfi[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2878879Z [36;1mpython3 packaging/release.py --operation publish --directory work/payload --candidate work/candidate --binding work/binding.json --output publication-receipt.json[0m
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2941472Z shell: /usr/bin/bash -e {0}
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2941756Z env:
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2944548Z   GH_TOKEN: ***
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2944779Z   MODE: resume
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2944972Z   ARTIFACT: 
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2945286Z   REGISTRY_AUTH_FILE: /home/runner/work/_temp/nfs-registry-auth.json
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.2945651Z ##[endgroup]
+publish	Bind retained payload and reconcile publication	2026-10-25T20:25:06.5129575Z Login Succeeded!
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	﻿2026-10-25T20:26:42.6407270Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6407715Z with:
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6407928Z   name: nfs-publication-receipt
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6408202Z   path: publication-receipt.json
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6408458Z   retention-days: 90
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6408676Z   if-no-files-found: warn
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6408902Z   compression-level: 6
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6409112Z   overwrite: false
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6409326Z   include-hidden-files: false
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.6409561Z ##[endgroup]
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.7986259Z (node:4366) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.7987595Z (Use `node --trace-deprecation ...` to show where the warning was created)
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.8063821Z With the provided path, there will be 1 file uploaded
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.8065633Z Artifact name is valid!
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:42.8066258Z Root directory input is valid!
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.0217768Z Beginning upload of artifact content to blob storage
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.0411494Z (node:4366) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.0826566Z Uploaded bytes 1113
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.1022456Z Finished uploading artifact content to blob storage!
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.1023865Z SHA256 digest of uploaded artifact zip is 5b0af4c63519c380be73f9032b95a04f27725748c9939c0c47cc852936793899
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.1026059Z Finalizing artifact upload
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.5714538Z Artifact nfs-publication-receipt.zip successfully finalized. Artifact ID 12612659888
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.5715968Z Artifact nfs-publication-receipt has been successfully uploaded! Final size is 1113 bytes. Artifact ID is 12612659888
+publish	Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02	2026-10-25T20:26:43.5717478Z Artifact download URL: https://github.com/AutoByteus/autobyteus-nfs/actions/runs/40230515652/artifacts/12612659888
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	﻿2026-10-25T20:26:43.5918726Z Post job cleanup.
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6771371Z [command]/usr/bin/git version
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6815701Z git version 2.55.0
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6857067Z Temporarily overriding HOME='/home/runner/work/_temp/8ac9f533-37bb-4ee5-8db8-b612ae9a9001' before making global git config changes
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6858796Z Adding repository directory to the temporary git global config as a safe directory
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6863304Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/autobyteus-nfs/autobyteus-nfs
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6903917Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.6941869Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.7206920Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.7245524Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.7528927Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish	Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-25T20:26:43.7566027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish	Complete job	﻿2026-10-25T20:26:43.7986882Z Cleaning up orphan processes
+publish	Complete job	2026-10-25T20:26:43.8343711Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

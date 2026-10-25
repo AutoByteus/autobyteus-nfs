@@ -1,0 +1,30 @@
+Executable=/Users/normy/nfs-cli-release-vdwkpql_/public/darwin-amd64/autobyteus-nfs
+Identifier=autobyteus-nfs
+Format=Mach-O thin (x86_64)
+CodeDirectory v=20500 size=95674 flags=0x10000(runtime) hashes=2984+2 location=embedded
+VersionPlatform=1
+VersionMin=851968
+VersionSDK=1704448
+Hash type=sha256 size=32
+CandidateCDHash sha256=909c8f1b751b6d32648cf43141b057954303b512
+CandidateCDHashFull sha256=909c8f1b751b6d32648cf43141b057954303b51265bd7b922b6c2f4ace533d0f
+Hash choices=sha256
+CMSDigest=909c8f1b751b6d32648cf43141b057954303b51265bd7b922b6c2f4ace533d0f
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=6963200
+Executable Segment flags=0x1
+Page size=4096
+CDHash=909c8f1b751b6d32648cf43141b057954303b512
+Signature size=9037
+Authority=Developer ID Application: YU ZHENG (7Y86YBQ7B4)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=24. Oct 2026 at 21:15:26
+Info.plist=not bound
+TeamIdentifier=7Y86YBQ7B4
+Runtime Version=26.2.0
+Sealed Resources=none
+Internal requirements count=1 size=176
+
+exit=0

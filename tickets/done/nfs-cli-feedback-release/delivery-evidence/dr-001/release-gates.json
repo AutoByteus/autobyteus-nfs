@@ -1,0 +1,53 @@
+{
+  "version": "v0.2.1",
+  "publication": "Complete",
+  "publicURL": "https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.1",
+  "releaseId": 422931518,
+  "payloadSource": "77632d13c414276140f0390e559600cf4a7b40a3",
+  "tag": {
+    "binding": {
+      "envelope": {
+        "artifactId": 12572518441,
+        "digest": "sha256:d6040fcbd5167d4d0743c22fa27ca27f7b71bb3127394edc37a868f2087b8d4d",
+        "expiresAt": "2027-01-22T19:06:02Z",
+        "runAttempt": 1,
+        "runId": 40123737340,
+        "workflowCommit": "77632d13c414276140f0390e559600cf4a7b40a3"
+      },
+      "payloadSha256": "d4807c3bf7cb522c69f64c44298edbaf9e7fcb180aef6b70fed60cb43676a4e0",
+      "repository": "AutoByteus/autobyteus-nfs",
+      "sourceCommit": "77632d13c414276140f0390e559600cf4a7b40a3",
+      "version": "v0.2.1"
+    },
+    "object": "110df500cb8438975271109d7feccc64f87cd2e2"
+  },
+  "sourceHash": "ca0e207ab0efd06bbe7b5811af59efec7af7403a8d0efcc7ad434f9dce794b6d",
+  "candidateRun": 40122429749,
+  "originalRun": 40123737340,
+  "originalOutcome": "Failed draft confirmation; native/signing/payload success",
+  "resumeRun": 40230515652,
+  "resumeOutcome": "Success same bytes",
+  "bothMacAccepted": true,
+  "bothMacDownloadedStrictAndOnlineChecks": true,
+  "publicAssets": 18,
+  "archiveTargets": [
+    "darwin-arm64",
+    "darwin-amd64",
+    "linux-arm64",
+    "linux-amd64"
+  ],
+  "publicInstall": [
+    "Ubuntu amd64 publisher",
+    "Mac arm64 isolated HOME"
+  ],
+  "actualDownloadedFeedback": "Both-role Run/HTTP/PTY waiting/local-start-failure/Stop under explicit sudo/open sandbox deny; not OS approval proof",
+  "fieldValidation": {
+    "filesystem": "deferred",
+    "user": "deferred"
+  },
+  "followUps": [
+    "FU-001 nonblocking, SD custody"
+  ],
+  "runtimeCleanup": "Complete, retained exact provenance only",
+  "postDocFinalization": "Pending"
+}

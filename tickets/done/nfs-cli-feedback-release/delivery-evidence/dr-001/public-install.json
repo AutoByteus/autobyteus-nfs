@@ -1,0 +1,12 @@
+{
+  "result": "Pass",
+  "version": "v0.2.1",
+  "installedBinary": "/Users/normy/nfs-cli-release-vdwkpql_/public/home/.local/lib/autobyteus-nfs/v0.2.1/autobyteus-nfs",
+  "home": "/Users/normy/nfs-cli-release-vdwkpql_/public/home",
+  "binarySHA256": "51b61fdb86bb62f789356453c63951b56b826a68c3598771931bc986f639255b",
+  "installerExit": 0,
+  "installedVersionExit": 0,
+  "noStorageConfiguration": true,
+  "installerScratchRemoved": true,
+  "limits": "Owned HOME public install/version; not user upgrade/storage"
+}

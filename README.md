@@ -3,20 +3,23 @@
 A standalone, app-independent service for sharing **one chosen project folder**
 between trusted computers. It does not sync, copy or back up projects.
 
-**Release status:** normal **[v0.2.0 is published](https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.0)**,
-including the standalone **server/client setup dashboard**, for macOS and Linux,
+**Release status:** normal **[v0.2.1 is published](https://github.com/AutoByteus/autobyteus-nfs/releases/tag/v0.2.1)**,
+including clearer terminal approval/waiting/failure feedback for both dashboard roles.
+The standalone **server/client setup dashboard** is available for macOS and Linux,
 ARM64 and x64. Both Mac binaries are Developer ID signed and Apple-notarized;
-downloaded signatures and online notarization checks passed. All18 public assets
-match the retained signed payload; the whole multi-architecture container is
-anonymously accessible. Public installer/version checks passed on Mac ARM64 and
-Ubuntu x64. Both distributed dashboard roles were launched/stopped in an isolated
-Mac ARM64 HOME without requesting administration or changing storage.
-Mac x64 signature/notarization verification is not local Intel execution.
+actual downloaded signatures and online notarization checks passed. All18 public
+assets match the original retained signed payload; the complete multi-architecture
+container is anonymously accessible. Public installer/version checks passed on
+Mac ARM64 and Ubuntu x64. Both downloaded dashboard roles were launched/stopped
+in an isolated Mac ARM64 HOME; a test sandbox denied helper/opener execution to
+verify waiting and local-start-failure feedback without administration/storage.
+This is not real password/cache approval or a diagnosis of the original password
+outcome. Mac x64 signature/notarization verification is not local Intel execution.
 Shared-filesystem/physical and user testing remains **deferred**, not passed.
-Distribution/signature/launch checks are not field qualification. The original
-v0.1.0 release remains unchanged; it does not include the dashboard.
+Distribution/signature/feedback checks are not field qualification. Existing
+v0.1.0 and v0.2.0 assets remain unchanged; publication does not upgrade your install.
 See [release procedure](packaging/RELEASE.md) and the
-[current delivery record](tickets/done/nfs-dashboard-release/release-deployment-report.md).
+[current delivery record](tickets/done/nfs-cli-feedback-release/release-deployment-report.md).
 
 ## Validation boundary
 
@@ -59,12 +62,12 @@ package command. Package/OCI distribution integrity is verified; live storage op
 ## Versioned download
 
 Advertised CPU targets are ARM64 and x64 for native macOS26+ and Ubuntu24.04.
-The current release is normal v0.2.0, not beta. Download and inspect the versioned
+The current release is normal v0.2.1, not beta. Download and inspect the versioned
 installer, then run only a version check:
 
 ```sh
 curl --fail --location --proto '=https' --tlsv1.2 \
-  https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.0/autobyteus-nfs-install.sh \
+  https://github.com/AutoByteus/autobyteus-nfs/releases/download/v0.2.1/autobyteus-nfs-install.sh \
   -o autobyteus-nfs-install.sh
 less autobyteus-nfs-install.sh
 bash autobyteus-nfs-install.sh version

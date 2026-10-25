@@ -31,10 +31,10 @@ export storage. Denied or expired approval requires a new explicit authorization
 no alternate root path is used. Idle administrative authorization expires after
 15 minutes without work (an active review completes its own lifetime first).
 
-### Terminal feedback in the current source
+### Terminal feedback (v0.2.1+)
 
-This feedback improvement is source-only; the published v0.2.0 binary does not
-contain it. After explicit authorization, the terminal reports waiting for OS
+This feedback improvement is included in published v0.2.1 and later; the
+v0.2.0 binary does not contain it. After explicit authorization, the terminal reports waiting for OS
 approval/helper startup. **Administrator access confirmed** means the same-binary,
 same-role helper handshake was admitted; it does not imply a password was entered
 (cached approval may need none). **Preparing setup controls** means private saved

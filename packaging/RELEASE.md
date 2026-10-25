@@ -5,7 +5,7 @@ public beta or automatic publication on push/tag. Follow root [RELEASE.md](../RE
 The lock's `releaseReadiness` reference selects the exact current version's audited
 record and candidate. The [v0.1.0 readiness](releases/v0.1.0/readiness.json) remains
 historical and immutable; a new version cannot reuse its permission or pass claims.
-The current v0.2.0 request adopts the unchanged R3/SR004 distribution-policy
+The earlier v0.2.0 request adopted the unchanged R3/SR004 distribution-policy
 requirements under [separate new publication authority](releases/v0.2.0/authorization.json).
 That requirements reference is not the schema version or a new R3 approval.
 The later normal v0.2.1 feedback patch has [its own new user authority](releases/v0.2.1/authorization.json)

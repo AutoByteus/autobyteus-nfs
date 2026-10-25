@@ -1,0 +1,52 @@
+[
+  {
+    "run": 40123701043,
+    "label": "ticket",
+    "head": "e055164d25c36c46d07aaa3a4b4aaea595de8684",
+    "result": "success",
+    "checks": [
+      {
+        "name": "checks (macos-15)",
+        "result": "success",
+        "goRacePackages": 10,
+        "pythonCollected": 78,
+        "pythonExecuted": 77,
+        "expectedGoChildSkip": 1
+      },
+      {
+        "name": "checks (ubuntu-24.04)",
+        "result": "success",
+        "goRacePackages": 10,
+        "pythonCollected": 78,
+        "pythonExecuted": 77,
+        "expectedGoChildSkip": 1
+      }
+    ],
+    "rawSHA256": "cc996442d776a8d068cb2ca83ec2e45924f0ed2ab8bda5c8bb560d1eee29db6d"
+  },
+  {
+    "run": 40123703942,
+    "label": "main",
+    "head": "77632d13c414276140f0390e559600cf4a7b40a3",
+    "result": "success",
+    "checks": [
+      {
+        "name": "checks (ubuntu-24.04)",
+        "result": "success",
+        "goRacePackages": 10,
+        "pythonCollected": 78,
+        "pythonExecuted": 77,
+        "expectedGoChildSkip": 1
+      },
+      {
+        "name": "checks (macos-15)",
+        "result": "success",
+        "goRacePackages": 10,
+        "pythonCollected": 78,
+        "pythonExecuted": 77,
+        "expectedGoChildSkip": 1
+      }
+    ],
+    "rawSHA256": "6db25ede7dd28a527bc040e2971533e7821292aa373901573df81efe79da411c"
+  }
+]

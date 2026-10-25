@@ -25,8 +25,9 @@ to its own current gates. See [new permission](packaging/releases/v0.2.1/authori
 it does not alter the historical version permissions or field-test boundaries.
 Each version requires genuine version-specific user-authority evidence, candidate,
 readiness, signing and publication receipts; old artifacts are not relabeled.
-See [current authority](packaging/releases/v0.2.0/authorization.json) and its
-Solution Designer applicability clarification. The original first-release history
+See [current feedback-release authority](packaging/releases/v0.2.1/authorization.json).
+The earlier dashboard authority and Solution Designer applicability clarification
+remain historical under packaging/releases/v0.2.0. The original first-release history
 and immutable release/recovery records remain unchanged. Normal `vMAJOR.MINOR.PATCH` only; no
 beta/prerelease or build suffix. The manual workflow defaults to build-only and
 ordinary push/PR checks never publish. Do not pre-create a version tag or release.

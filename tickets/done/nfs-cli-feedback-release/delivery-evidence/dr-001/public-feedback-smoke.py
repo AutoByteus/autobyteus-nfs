@@ -8,6 +8,7 @@ assert receipt['result']=='Pass' and receipt['version']=='v0.2.1'
 binary=pathlib.Path(receipt['installedBinary']);home=pathlib.Path(receipt['home'])
 assert binary.is_relative_to(S) and home.is_relative_to(S)
 assert hashlib.sha256(binary.read_bytes()).hexdigest()==receipt['binarySHA256']
+sandbox=json.loads((E/'sandbox-control.json').read_text());assert sandbox['result']=='Pass'
 results=[]
 for role in ('server','client'):
     private=S/('role-'+role);private.mkdir(mode=0o700);tmp=private/'tmp';tmp.mkdir(mode=0o700)
@@ -15,7 +16,7 @@ for role in ('server','client'):
     pid,fd=pty.fork()
     if pid==0:
         os.chdir(private)
-        os.execve('/usr/bin/sandbox-exec',['sandbox-exec','-p','(version 1)(allow default)(deny process-exec (literal "/usr/bin/open"))(deny process-exec (literal "/usr/bin/sudo"))',str(binary),role],env)
+        os.execve('/usr/bin/sandbox-exec',['sandbox-exec','-p',sandbox['profile'],str(binary),role],env)
     raw=b'';status=None;url=None;start=time.monotonic();browser_exit=None
     try:
         while time.monotonic()-start<30:
